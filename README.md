@@ -2,14 +2,14 @@
 #the code of huangyg.
 
 ##指南
-1. 先了解一下我的<a name="model" id="model">个人领域模型</a>。
+1. 先了解一下我的[个人领域模型](#model)。
 1. 浏览[契约清单](https://github.com/hyg/ego/blob/master/%E5%A5%91%E7%BA%A6%E6%B8%85%E5%8D%95.md)。
-1. 加入契约。（接受信息源、加入俱乐部、或者现有项目）
+1. 加入契约。（接收信息源、加入俱乐部、或者现有项目）  
 
 ---
 
 
-##[个人领域模型](#model)
+##个人领域模型<a name="model" id="model"></a>
 
 个人领域模型是《[readme](http://blog.sina.com.cn/s/blog_591ac3040100pnci.html)》的升级版本，它最终会以【软件+文档】形式发布。
 自用为主，开放共享。
