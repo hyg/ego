@@ -22,3 +22,24 @@ div {
     background-color: transparent;
 }
 
+.u0_line {
+    background-image: url('../菜单框架_files/u0_line.png');
+}
+
+.u0_line {
+    position:absolute;
+    left:0px;
+    top:4px;
+    width:1024px;
+    height:3px;
+}
+
+.u0 {
+    position:absolute;
+    left:128px;
+    top:59px;
+    width:1024px;
+    height:10px;
+    
+}
+

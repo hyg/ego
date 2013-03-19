@@ -23,7 +23,7 @@ div {
 }
 
 .u0_line {
-    background-image: url('../信息源_files/u0_line.png');
+    background-image: url('../契约详情_files/u0_line.png');
 }
 
 .u0_line {
@@ -46,9 +46,9 @@ div {
 .u1 {
     position:absolute;
     left:128px;
-    top:32px;
-    width:421px;
-    height:32px;
+    top:0px;
+    width:291px;
+    height:64px;
     ;
     ;
     ;
