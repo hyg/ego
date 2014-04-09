@@ -2,17 +2,31 @@
 
 
 ##字典
-1. cod = COmunity Deployment
-2. com = COmunity Model
+1. com = COmunity Model
+2. cod = COmunity Deployment
 
 ##com
 1. com
 	1. GET /0.1/com
-	2. GET /0.1/com/[version]
+		1. 读取com的版本信息。
+		2. 返回：所有版本号。 
+	2. GET /0.1/com/[lastest or version]
+		1. 读取某版本的详细信息，lastest自动读取最新版本信息。
+		2. 返回：
+			* com ID
+			* git repo url
+			* com file  
+			* role go url
+			* asset go url
+			* record go url
+			* code go url
+			* alloc go url
 
 2. cod
 	1. GET /0.1/cod
+		1.  
 	2. PUT /0.1/register/[cod url]
+
 
 ##cod
 1. cod/com
@@ -71,4 +85,5 @@
 ##问题
 1. 怎么确定自然人的身份？一个人参与各个cod成为member，然后去他人的ego那里查看账目，ego怎么确认这个人的权限？
 >	用ego ID，而不使用自然人的ID。任何关系都是基于ego的，一个人可以部署多个ego。 
+
 2. 
