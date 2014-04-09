@@ -1,8 +1,14 @@
 #API接口
 
+
+##字典
+1. cod = COmunity Deployment
+2. com = COmunity Model
+
 ##com
 1. com
 	1. GET /0.1/com
+	2. GET /0.1/com/[version]
 
 2. cod
 	1. GET /0.1/cod
@@ -12,7 +18,8 @@
 1. cod/com
 	1. GET /0.1/cod 
 	2. GET /0.1/com
-	3. GET /0.1/com/[com ID]
+	3. PUT /0.1/com/register/[com url]
+	4. GET /0.1/com/[com ID]
 
 2. asset
 	1. GET /0.1/asset
@@ -60,10 +67,6 @@
 	3. GET /0.1/task/cod/[cod ID]
 	4. GET /0.1/task/[all or level n]/[all or cod ID]/[begin time]/[end time] 
 	5. PUT /0.1/task/[task info]
-
-##字典
-1. cod = COmunity Deployment
-2. com = COmunity Model
 
 ##问题
 1. 怎么确定自然人的身份？一个人参与各个cod成为member，然后去他人的ego那里查看账目，ego怎么确认这个人的权限？
