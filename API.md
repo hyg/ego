@@ -1,5 +1,13 @@
 #API接口
 
+##com
+1. com
+	1. GET /0.1/com
+
+2. cod
+	1. GET /0.1/cod
+	2. PUT /0.1/register/[cod url]
+
 ##cod
 1. cod/com
 	1. GET /0.1/cod 
@@ -20,8 +28,8 @@
 4. member
 	1. GET /0.1/member
 	2. GET /0.1/member/[ego ID]
-	3. PUT /0.1/member/[add or edit]/[member info]
-	4. PUT /0.1/member/remove
+	3. PUT /0.1/member/register/[ego url]
+	4. PUT /0.1/member/remove/[ego ID]
 
 5. task
 	1. GET /0.1/task
@@ -31,11 +39,13 @@
 ##ego
 1. ego
 	1. GET /0.1/ego
-	2. PUT /0.1/ego/register/[ego info] 
+	2. PUT /0.1/ego/edit/[ego info] 
+	3. PUT /0.1/ego/register/[ego url]
 
 2. cod/com
 	1. GET /0.1/cod
-	2. PUT /0.1/register/[cod info]
+	2. GET /0.1/com
+	3. PUT /0.1/register/[cod url]
 	
 3. asset
 	1. GET /0.1/asset
