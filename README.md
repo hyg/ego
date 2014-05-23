@@ -3,8 +3,8 @@
 
 个人领域模型是《[readme](http://blog.sina.com.cn/s/blog_591ac3040100pnci.html)》的升级版本，它最终会以【软件+文档】形式发布。  
 
-* [COM设计方案](com.md)
-* [COD部署方案](cod.md)
+* [COM设计方案](com.md)(COmunity Model：共同体的模型)
+* [COD部署方案](cod.md)(COmunity Deployment：共同体的具体部署）
 
 ###要点
 1. 以“共同体”模型规范多方协作，提高调动外部资源的能力。
