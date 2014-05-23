@@ -9,8 +9,9 @@
 ###换算公式
 <table>
 <tr><th>层次</th><th>资产种类</th><th>标准</th><th>成就点</th><th>备注</th></tr>
-<tr><td rowspan="3">第零层</td><td>人民币</td><td></td><td>1</td><td></td></tr>
-<tr><td>时间</td><td></td><td>400</td><td>单位：成就点/小时</td></tr>
+<tr><td rowspan="4">第零层</td><td>人民币</td><td></td><td>1</td><td></td></tr>
+<tr><td>时间</td><td><12小时/天</td><td>0</td><td>不可换算</td></tr>
+<tr><td>时间</td><td>>12小时/天</td><td>400</td><td>单位：成就点/小时</td></tr>
 <tr><td>cod评估报告</td><td>处罚中剥夺权利</td><td>400</td><td>均要求cod内未察觉，下同。</td></tr>
 
 <tr><td rowspan="5">第一层</td><td>人民币</td><td></td><td>1</td><td></td></tr>
