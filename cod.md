@@ -4,7 +4,8 @@
 
 ###部署
 1. 部署者：黄勇刚
-2. 域名：ego.mars22.com
+2. COM：[EGO](readme.md).[COM](com.md)
+3. 域名：ego.mars22.com
 
 ###换算公式
 <table>
