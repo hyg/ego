@@ -2,8 +2,8 @@
 
 
 ##字典
-1. com = COmunity Model
-2. cod = COmunity Deployment
+1. com = COmmunity Model
+2. cod = COmmunity Deployment
 
 ##com
 1. com
