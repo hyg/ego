@@ -60,18 +60,6 @@ modeling</panel_attributes>
     <additional_attributes>30;70;30;30</additional_attributes>
   </element>
   <element>
-    <type>com.umlet.element.custom.State</type>
-    <coordinates>
-      <x>550</x>
-      <y>150</y>
-      <w>100</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>初始化
-init</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>180</x>
@@ -97,13 +85,13 @@ run</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>620</x>
+      <x>470</x>
       <y>140</y>
-      <w>140</w>
+      <w>290</w>
       <h>90</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>120;70;120;30;30;30</additional_attributes>
+    <additional_attributes>270;70;270;30;30;30</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.custom.State</type>
@@ -116,17 +104,6 @@ run</panel_attributes>
     <panel_attributes>部署
 deploy</panel_attributes>
     <additional_attributes/>
-  </element>
-  <element>
-    <type>com.umlet.element.Relation</type>
-    <coordinates>
-      <x>470</x>
-      <y>140</y>
-      <w>100</w>
-      <h>50</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>80;30;30;30</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.custom.State</type>
@@ -436,29 +413,6 @@ stop</panel_attributes>
   <element>
     <type>com.umlet.element.custom.SendSignal</type>
     <coordinates>
-      <x>550</x>
-      <y>60</y>
-      <w>100</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>产生
-初始化参数</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <type>com.umlet.element.Relation</type>
-    <coordinates>
-      <x>570</x>
-      <y>70</y>
-      <w>50</w>
-      <h>100</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;.</panel_attributes>
-    <additional_attributes>30;30;30;80</additional_attributes>
-  </element>
-  <element>
-    <type>com.umlet.element.custom.SendSignal</type>
-    <coordinates>
       <x>200</x>
       <y>200</y>
       <w>100</w>
@@ -499,7 +453,7 @@ plan</panel_attributes>
       <w>100</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>总结
+    <panel_attributes>决算
 sum</panel_attributes>
     <additional_attributes/>
   </element>
@@ -685,7 +639,7 @@ sum</panel_attributes>
       <h>40</h>
     </coordinates>
     <panel_attributes>产生
-COD评估报告
+评估报告
 </panel_attributes>
     <additional_attributes/>
   </element>
