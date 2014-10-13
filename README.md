@@ -1,5 +1,4 @@
 #the code of huangyg.
-=======
 
 <a name="model" id="model"></a>
 ##个人领域模型
