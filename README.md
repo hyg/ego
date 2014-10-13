@@ -1,4 +1,7 @@
 #the code of huangyg.
+=======
+
+<a name="model" id="model"></a>
 ##个人领域模型
 
 个人领域模型是《[readme](http://blog.sina.com.cn/s/blog_591ac3040100pnci.html)》的升级版本，它最终会以【软件+文档】形式发布。  
