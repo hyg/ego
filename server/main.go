@@ -54,6 +54,7 @@ func welcome(w http.ResponseWriter, r *http.Request) {
 func GithubPush(w http.ResponseWriter, r *http.Request) {
 	r.ParseForm() //解析参数，默认是不会解析的
 	log.Printf("r:", r)
+	log.Printf("r:", r.Form)
 	fmt.Println("method", r.Method)
 	fmt.Println("path", r.URL.Path)
 
