@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"html/template"
+	"io/ioutil"
 	"log"
 	"net/http"
 	"strings"
@@ -53,7 +54,6 @@ func welcome(w http.ResponseWriter, r *http.Request) {
 
 func GithubPush(w http.ResponseWriter, r *http.Request) {
 	r.ParseForm() //解析参数，默认是不会解析的
-	log.Printf("r.Body:", r.Body)
 	fmt.Println("method", r.Method)
 	fmt.Println("path", r.URL.Path)
 
@@ -61,6 +61,10 @@ func GithubPush(w http.ResponseWriter, r *http.Request) {
 		fmt.Println("key:", k)
 		fmt.Println("val:", strings.Join(v, ""))
 	}
+
+	defer r.Body.Close()
+	body, _ := ioutil.ReadAll(r.Body)
+	fmt.Println(string(body))
 
 }
 
