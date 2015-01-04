@@ -1,5 +1,5 @@
 ##COD部署
-ego 个人领域模型
+egonet
 
 ###部署
 1. 部署者：[黄勇刚](mailto:huangyg@mars22.com)
@@ -29,8 +29,10 @@ ego 个人领域模型
 ###资源价格
 <table>
 <tr><th>资源池</th><th>资产</th><th>约束条件</th><th>Token</th></tr>
-<tr><td rowspan="2">raw</td><td>人民币（元）</td><td></td><td>1</td></tr>
-<tr><td>时间（分钟）</td><td>>720分钟（12小时）/天</td><td>1</td></tr>
+<tr><td rowspan="4">raw</td><td>人民币（元）</td><td></td><td>1</td></tr>
+<tr><td>1类时间（分钟）</td><td>每天12小时</td><td>1</td></tr>
+<tr><td>2类时间（分钟）</td><td>每天4小时</td><td>4</td></tr>
+<tr><td>3类时间（分钟）</td><td>每天8小时</td><td>16</td></tr>
 
 <tr><td rowspan="2">p1</td><td>人民币（元）</td><td></td><td>1</td></tr>
 <tr><td>时间（分钟）</td><td></td><td>4</td></tr>
