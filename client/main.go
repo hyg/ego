@@ -86,9 +86,9 @@ func makejson() {
 
 	RMB := AssetType{"人民币", "RMB"}
 	Token := AssetType{"Token", "个人领域模型的内部记账单位。"}
-	Time1 := AssetType{"Time1", "1类时间:每天供应12小时。"}
-	Time2 := AssetType{"Time2", "2类时间;每天供应4小时。"}
-	Time3 := AssetType{"Time3", "3类时间:每天供应8小时。"}
+	Time1 := AssetType{"Time1", "1类时间:每天供应8小时。"}
+	Time2 := AssetType{"Time2", "2类时间;每天供应6小时。"}
+	Time3 := AssetType{"Time3", "3类时间:每天供应10小时。"}
 	COMFile := AssetType{"共同体模型", "COmmunity Model"}
 	CODFile := AssetType{"部署方案", "COmmunity Deployment"}
 	raw := AssetPoolType{"raw", "原生资源池，是时间资源的注入池", Naturalperson, "Huang Yonggang"}
