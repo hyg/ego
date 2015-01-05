@@ -37,8 +37,18 @@ func main() {
 	openbrowser("http://127.0.0.1")
 
 	//设置访问的路由
-	// web pages
+	//web pages
 	http.HandleFunc("/", welcome)
+	http.HandleFunc("/com/", COMList)
+	http.HandleFunc("/com/detail", COMDetail)
+	http.HandleFunc("/com/new", NewCOM)
+	http.HandleFunc("/cod", CODList)
+	http.HandleFunc("/cod/detail", CODDetail)
+	http.HandleFunc("/cod/new", NewCOD)
+	http.HandleFunc("/asset/alloc", AssetAlloc)
+	http.HandleFunc("/asset/exchange", AssetExchange)
+	http.HandleFunc("/asset/reg", AssetReg)
+	http.HandleFunc("/contract/reg", ContractReg)
 
 	// static files
 	http.HandleFunc("/static/", func(w http.ResponseWriter, req *http.Request) {
@@ -146,5 +156,8 @@ func makejson() {
 	log.Print(string(jsonbyte))
 
 	jsonbyte, _ = json.Marshal(client)
+	log.Print(string(jsonbyte))
+
+	jsonbyte, _ = json.MarshalIndent(client, "", "  ")
 	log.Print(string(jsonbyte))
 }
