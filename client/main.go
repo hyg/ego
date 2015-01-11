@@ -32,7 +32,7 @@ func serveFile(pattern string, filename string) {
 }
 
 func main() {
-	makejson()
+	//makejson()
 
 	openbrowser("http://127.0.0.1")
 
@@ -49,6 +49,10 @@ func main() {
 	http.HandleFunc("/asset/exchange", AssetExchange)
 	http.HandleFunc("/asset/reg", AssetReg)
 	http.HandleFunc("/contract/reg", ContractReg)
+	http.HandleFunc("/ticket/", TicketList)
+	http.HandleFunc("/ticket/new", NewTicket)
+	http.HandleFunc("/ticket/detail", TicketDetail)
+	http.HandleFunc("/ticket/close", CloseTicket)
 
 	// static files
 	http.HandleFunc("/static/", func(w http.ResponseWriter, req *http.Request) {
