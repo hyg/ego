@@ -15,24 +15,28 @@ type exchange struct {
 	Param2       string
 }
 
-type TicketInput struct {
+type Pay struct {
+	ContractID  int
 	TicketID    int
+	PoolName    string
 	AssetType   string
 	Amount      float32
 	TokenAmount float32
-	InputTime   string
+	PayTime     string
 	PubLog      string
 	LocalLog    string
 	Param1      string
 	Param2      string
 }
 
-type TicketOutput struct {
+type Income struct {
+	ContractID  int
 	TicketID    int
+	PoolName    string
 	AssetType   string
 	Amount      float32
 	TokenAmount float32
-	OutputTime  string
+	IncomeTime  string
 	PubLog      string
 	LocalLog    string
 	Param1      string

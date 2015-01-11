@@ -48,11 +48,11 @@ func InitLocalDB(version string) {
 		_, err = db.Exec(sqlstr)
 		checkErr(err)
 
-		sqlstr = "create table `ticketinput` (`tickerinputid` INTEGER PRIMARY KEY AUTOINCREMENT,`ticketID` INTEGER NULL,`assettype` VARCHAR(128) NULL,`amount` real NULL,`tokenamount` real NULL,`inputtime` text NULL,`publog` text NULL,`locallog` text NULL,`param1` text NULL,`param2` text NULL);"
+		sqlstr = "create table `pay` (`payid` INTEGER PRIMARY KEY AUTOINCREMENT,`contractid` INTEGER NULL,`ticketID` INTEGER NULL,`poolname` VARCHAR(128) NULL,`assettype` VARCHAR(128) NULL,`amount` real NULL,`tokenamount` real NULL,`paytime` text NULL,`publog` text NULL,`locallog` text NULL,`param1` text NULL,`param2` text NULL);"
 		_, err = db.Exec(sqlstr)
 		checkErr(err)
 
-		sqlstr = "create table `ticketoutput` (`tickeroutputid` INTEGER PRIMARY KEY AUTOINCREMENT,`ticketID` INTEGER NULL,`assettype` VARCHAR(128) NULL,`amount` real NULL,`tokenamount` real NULL,`outputtime` text NULL,`publog` text NULL,`locallog` text NULL,`param1` text NULL,`param2` text NULL);"
+		sqlstr = "create table `income` (`incomeid` INTEGER PRIMARY KEY AUTOINCREMENT,`contractid` INTEGER NULL,`ticketID` INTEGER NULL,`poolname` VARCHAR(128) NULL,`assettype` VARCHAR(128) NULL,`amount` real NULL,`tokenamount` real NULL,`incometime` text NULL,`publog` text NULL,`locallog` text NULL,`param1` text NULL,`param2` text NULL);"
 		_, err = db.Exec(sqlstr)
 		checkErr(err)
 	}
