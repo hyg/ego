@@ -43,12 +43,23 @@ type Income struct {
 	Param2      string
 }
 
+type TicketBudget struct {
+	ContractID  int
+	TicketID    int
+	PoolName    string
+	AssetType   string
+	Amount      float32
+	TokenAmount float32
+}
+
 type Ticket struct {
 	TicketID     int
 	ContractID   int
+	Target       string
 	PubContent   string
 	LocalContent string
 	CreateTime   string
+	Deadline     string
 	Status       int
 }
 

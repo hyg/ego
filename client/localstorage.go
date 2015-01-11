@@ -2,6 +2,7 @@ package main
 
 import (
 	"database/sql"
+	"fmt"
 	_ "github.com/mattn/go-sqlite3"
 )
 
@@ -44,7 +45,11 @@ func InitLocalDB(version string) {
 		_, err = db.Exec(sqlstr)
 		checkErr(err)
 
-		sqlstr = "create table `ticket` (`ticketid` INTEGER PRIMARY KEY AUTOINCREMENT,`contractid` INTEGER,`pubcontent` text NULL,`localcontent` text NULL,`createtime` text NULL,`status` INTEGER NULL);"
+		sqlstr = "create table `ticket` (`ticketid` INTEGER PRIMARY KEY AUTOINCREMENT,`contractid` INTEGER,`target` text NULL,`pubcontent` text NULL,`localcontent` text NULL,`createtime` text NULL,`deadline` text NULL,`status` INTEGER NULL);"
+		_, err = db.Exec(sqlstr)
+		checkErr(err)
+
+		sqlstr = "create table `ticketbudget` (`ticketbudgetid` INTEGER PRIMARY KEY AUTOINCREMENT,`contractid` INTEGER NULL,`ticketID` INTEGER NULL,`poolname` VARCHAR(128) NULL,`assettype` VARCHAR(128) NULL,`amount` real NULL,`tokenamount` real NULL);"
 		_, err = db.Exec(sqlstr)
 		checkErr(err)
 
@@ -53,6 +58,10 @@ func InitLocalDB(version string) {
 		checkErr(err)
 
 		sqlstr = "create table `income` (`incomeid` INTEGER PRIMARY KEY AUTOINCREMENT,`contractid` INTEGER NULL,`ticketID` INTEGER NULL,`poolname` VARCHAR(128) NULL,`assettype` VARCHAR(128) NULL,`amount` real NULL,`tokenamount` real NULL,`incometime` text NULL,`publog` text NULL,`locallog` text NULL,`param1` text NULL,`param2` text NULL);"
+		_, err = db.Exec(sqlstr)
+		checkErr(err)
+
+		sqlstr = fmt.Sprintf("insert into `contract` values (null,'raw',null,null,'living',null,datetime('now','localtime'),datetime('now','localtime'),null,%d);", Valid)
 		_, err = db.Exec(sqlstr)
 		checkErr(err)
 	}
