@@ -12,6 +12,11 @@ ego client
 ├── data  
 |   ├── person.json
 |   ├── watchlist.json
+|   ├── sharedata
+|   |   ├── person.xxx.com.json
+|   |   ├── person.xxx.cod.json
+|   |   ├── person.xxx.pool.json
+|   |   └── ...
 |   ├── index.json
 |   ├── 20150101010203
 |   |   ├── baseline.json
@@ -21,12 +26,8 @@ ego client
 |   |   ├── baseline.json
 |   |   ├── data.json
 |   |   └── ...
-|   ├── ...
-|   └── sharedata
-|       ├── person.xxx.com.json
-|       ├── person.xxx.cod.json
-|       ├── person.xxx.pool.json
-|       └── ...
+|   └── ...
+
 ├── client.v0.1.exe
 ├── client.v0.2.exe
 ├── client.v....exe
