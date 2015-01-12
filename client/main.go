@@ -99,10 +99,10 @@ func openbrowser(url string) {
 }
 
 func makejson() {
-	hyg := Person{"Huang Yonggang", "modeler", "huangyg@mars22.com"}
+	hyg := Person{"Huang Yonggang", "modeler", "huangyg@mars22.com", "", ""}
 	CommCOM := COM{"通用 个人领域模型", "https://github.com/hyg/ego/blob/master/common.com.md", NaturalPerson, "Huang Yonggang"}
 	EgoCOM := COM{"ego 个人领域模型", "https://github.com/hyg/ego/blob/master/ego.com.md", NaturalPerson, "Huang Yonggang"}
-	EgoCOD := COD{"egonet", EgoCOM, "https://github.com/hyg/ego/blob/master/cod.md", NaturalPerson, "Huang Yonggang"}
+	EgoCOD := COD{"egonet", EgoCOM, "https://github.com/hyg/ego/blob/master/cod.md", "https://ego.mars22.com/api", NaturalPerson, "Huang Yonggang"}
 
 	RMB := AssetType{"人民币", "RMB"}
 	Token := AssetType{"Token", "个人领域模型的内部记账单位。"}

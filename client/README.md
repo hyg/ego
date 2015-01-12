@@ -23,7 +23,6 @@ ego client
 ├── client.v0.1.exe
 ├── client.v0.2.exe
 ├── client.v....exe
-├── empty.s3db
 ├── local.v0.1.s3db
 ├── local.v0.2.s3db
 ├── local.v....s3db

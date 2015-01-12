@@ -99,6 +99,8 @@ type AssetType struct {
 	Define string
 }
 
+// pub only
+// [CreatorName].[Name].com.json
 type COM struct {
 	Name        string
 	PubURL      string
@@ -108,18 +110,25 @@ type COM struct {
 
 //COD 是一个利益共同体部署。
 //部署方案作为一种信息资产，叫CODFile。
+// pub only
+// [DeployerName].[Name].cod.json
 type COD struct {
 	Name         string
 	Model        COM
 	PubURL       string
+	APIURL       string
 	DeployerType int
 	DeployerName string
 }
 
+// pub only
+// [NickName].person.json
 type Person struct {
-	Name     string
-	NickName string
-	Email    string
+	Name      string
+	NickName  string // global unique
+	Email     string
+	PubKey    string
+	Statement string
 }
 
 const (

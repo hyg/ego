@@ -10,38 +10,36 @@ func InitLocalDB() {
 
 	var sqlstr string
 	filename := "./local.v" + version + ".s3db"
-
-	CopyFile(filename, "./empty.s3db")
 	db, err := sql.Open("sqlite3", filename)
 	defer db.Close()
 
 	switch version {
 	case "0.1":
-		sqlstr = "create table `com` (`name` VARCHAR(128) NULL,`puburl` text NULL,`creatortype` integer NULL,`creatorname` VARCHAR(128) NULL);"
+		sqlstr = "create table `com` (`name` text NULL,`puburl` text NULL,`creatortype` integer NULL,`creatorname` text NULL);"
 		_, err = db.Exec(sqlstr)
 		checkErr(err)
 
-		sqlstr = "create table `cod` (`name` VARCHAR(128) NULL,`modelname` VARCHAR(256),`puburl` text NULL,`deployertype` integer NULL,`deployername` VARCHAR(128) NULL);"
+		sqlstr = "create table `cod` (`name` text NULL,`modelname` VARCHAR(256),`puburl` text NULL,`apiurl` text NULL,`deployertype` integer NULL,`deployername` text NULL);"
 		_, err = db.Exec(sqlstr)
 		checkErr(err)
 
-		sqlstr = "create table `assettype` (`name` VARCHAR(128) NULL,`define` text NULL);"
+		sqlstr = "create table `assettype` (`name` text NULL,`define` text NULL);"
 		_, err = db.Exec(sqlstr)
 		checkErr(err)
 
-		sqlstr = "create table `assetpooltype` (`name` VARCHAR(128) NULL,`define` text NULL,`creatortype` integer NULL,`creatorname` VARCHAR(128) NULL);"
+		sqlstr = "create table `assetpooltype` (`name` text NULL,`define` text NULL,`creatortype` integer NULL,`creatorname` text NULL);"
 		_, err = db.Exec(sqlstr)
 		checkErr(err)
 
-		sqlstr = "create table `assetprice` (`pooltype` VARCHAR(128) NULL,`assettype` VARCHAR(128) NULL,`price` real NULL);"
+		sqlstr = "create table `assetprice` (`pooltype` text NULL,`assettype` text NULL,`price` real NULL);"
 		_, err = db.Exec(sqlstr)
 		checkErr(err)
 
-		sqlstr = "create table `exchange` (`poolname1` VARCHAR(128) NULL,`assettype1` VARCHAR(128) NULL,`amount1` real NULL,`poolname2` VARCHAR(128) NULL,`assettype2` VARCHAR(128) NULL,`amount2` real NULL,`tokenamount` real NULL,`exchangetime` text NULL,`publog` text NULL,`locallog` text NULL,`param1` text NULL,`param2` text NULL);"
+		sqlstr = "create table `exchange` (`poolname1` text NULL,`assettype1` text NULL,`amount1` real NULL,`poolname2` text NULL,`assettype2` text NULL,`amount2` real NULL,`tokenamount` real NULL,`exchangetime` text NULL,`publog` text NULL,`locallog` text NULL,`param1` text NULL,`param2` text NULL);"
 		_, err = db.Exec(sqlstr)
 		checkErr(err)
 
-		sqlstr = "create table `contract` (`contractid` INTEGER PRIMARY KEY AUTOINCREMENT,`poolname` VARCHAR(128) NULL,`otherpartytype` INTEGER NULL,`otherpartyname` VARCHAR(128) NULL,`pubcontent` text NULL,`localcontent` text NULL,`signtime` text NULL,`validtime` text NULL,`invalidtime` text NULL,`status` INTEGER NULL);"
+		sqlstr = "create table `contract` (`contractid` INTEGER PRIMARY KEY AUTOINCREMENT,`poolname` text NULL,`otherpartytype` INTEGER NULL,`otherpartyname` text NULL,`pubcontent` text NULL,`localcontent` text NULL,`signtime` text NULL,`validtime` text NULL,`invalidtime` text NULL,`status` INTEGER NULL);"
 		_, err = db.Exec(sqlstr)
 		checkErr(err)
 
@@ -49,21 +47,38 @@ func InitLocalDB() {
 		_, err = db.Exec(sqlstr)
 		checkErr(err)
 
-		sqlstr = "create table `ticketbudget` (`ticketbudgetid` INTEGER PRIMARY KEY AUTOINCREMENT,`contractid` INTEGER NULL,`ticketID` INTEGER NULL,`poolname` VARCHAR(128) NULL,`assettype` VARCHAR(128) NULL,`amount` real NULL,`tokenamount` real NULL);"
+		sqlstr = "create table `ticketbudget` (`ticketbudgetid` INTEGER PRIMARY KEY AUTOINCREMENT,`contractid` INTEGER NULL,`ticketID` INTEGER NULL,`poolname` text NULL,`assettype` text NULL,`amount` real NULL,`tokenamount` real NULL);"
 		_, err = db.Exec(sqlstr)
 		checkErr(err)
 
-		sqlstr = "create table `pay` (`payid` INTEGER PRIMARY KEY AUTOINCREMENT,`contractid` INTEGER NULL,`ticketID` INTEGER NULL,`poolname` VARCHAR(128) NULL,`assettype` VARCHAR(128) NULL,`amount` real NULL,`tokenamount` real NULL,`paytime` text NULL,`publog` text NULL,`locallog` text NULL,`param1` text NULL,`param2` text NULL);"
+		sqlstr = "create table `pay` (`payid` INTEGER PRIMARY KEY AUTOINCREMENT,`contractid` INTEGER NULL,`ticketID` INTEGER NULL,`poolname` text NULL,`assettype` text NULL,`amount` real NULL,`tokenamount` real NULL,`paytime` text NULL,`publog` text NULL,`locallog` text NULL,`param1` text NULL,`param2` text NULL);"
 		_, err = db.Exec(sqlstr)
 		checkErr(err)
 
-		sqlstr = "create table `income` (`incomeid` INTEGER PRIMARY KEY AUTOINCREMENT,`contractid` INTEGER NULL,`ticketID` INTEGER NULL,`poolname` VARCHAR(128) NULL,`assettype` VARCHAR(128) NULL,`amount` real NULL,`tokenamount` real NULL,`incometime` text NULL,`publog` text NULL,`locallog` text NULL,`param1` text NULL,`param2` text NULL);"
+		sqlstr = "create table `income` (`incomeid` INTEGER PRIMARY KEY AUTOINCREMENT,`contractid` INTEGER NULL,`ticketID` INTEGER NULL,`poolname` text NULL,`assettype` text NULL,`amount` real NULL,`tokenamount` real NULL,`incometime` text NULL,`publog` text NULL,`locallog` text NULL,`param1` text NULL,`param2` text NULL);"
 		_, err = db.Exec(sqlstr)
 		checkErr(err)
 
 		sqlstr = fmt.Sprintf("insert into `contract` values (null,'raw',null,null,'living',null,datetime('now','localtime'),datetime('now','localtime'),null,%d);", Valid)
 		_, err = db.Exec(sqlstr)
 		checkErr(err)
+
+		//sqlstr = "insert into `assettype` values ('Time',\"时间\"),('Token',\"个人领域模型内部记账单位\"),('RMB',\"人民币：中华人民共和国法定货币。\");"
+		//_, err = db.Exec(sqlstr)
+		stmt, err := db.Prepare("insert into `assettype` values (?,?)")
+		checkErr(err)
+		defer stmt.Close()
+
+		res, err := stmt.Exec("Time", "时间")
+		checkErr(err)
+		res, err = stmt.Exec("Token", "个人领域模型内部记账单位")
+		checkErr(err)
+		res, err = stmt.Exec("RMB", "人民币：中华人民共和国法定货币。")
+		checkErr(err)
+
+		affect, err := res.RowsAffected()
+		checkErr(err)
+		fmt.Println(affect)
 	}
 
 }
