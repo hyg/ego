@@ -139,3 +139,5 @@ const (
 	Open  = 1 << iota // 1 (i.e. 1 << 0)
 	Close             // 2 (i.e. 1 << 1)
 )
+
+const version = "0.1"

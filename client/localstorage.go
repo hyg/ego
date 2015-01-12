@@ -6,7 +6,7 @@ import (
 	_ "github.com/mattn/go-sqlite3"
 )
 
-func InitLocalDB(version string) {
+func InitLocalDB() {
 
 	var sqlstr string
 	filename := "./local.v" + version + ".s3db"

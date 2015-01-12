@@ -3,6 +3,7 @@ ego client
 
 ###文件夹结构
 <pre>
+.
 ├── static
 |   ├── css
 |   ├── image
@@ -29,6 +30,7 @@ ego client
 ├── pub.v0.1.s3db
 ├── pub.v0.2.s3db
 ├── pub.v....s3db
+├── README.md
 └── config.json
 </pre>
 
@@ -37,4 +39,14 @@ ego client
 * config.json：部署参数，用户根据本手册编辑。
 
 
-###
+###部署
+1. 初次部署：
+	1. 在非系统盘创建工作文件夹。
+	2. 把部署文件解压缩到工作文件夹。
+	3. 编辑部署参数：config.json文件。
+	4. 运行版本号最高的client.[version].exe，文件名中的version是版本号。
+2. 升级部署：
+	1. 把部署文件解压缩到工作文件夹。
+	2. 运行版本号最高的client.[version].exe，文件名中的version是版本号。
+
+###配置参数
