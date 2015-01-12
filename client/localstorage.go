@@ -15,11 +15,11 @@ func InitLocalDB() {
 
 	switch version {
 	case "0.1":
-		sqlstr = "create table `com` (`name` text NULL,`puburl` text NULL,`creatortype` integer NULL,`creatorname` text NULL);"
+		sqlstr = "create table `com` (`name` text NULL,`nickname` text NULL,`puburl` text NULL,`creatortype` integer NULL,`creatorname` text NULL);"
 		_, err = db.Exec(sqlstr)
 		checkErr(err)
 
-		sqlstr = "create table `cod` (`name` text NULL,`modelname` VARCHAR(256),`puburl` text NULL,`apiurl` text NULL,`deployertype` integer NULL,`deployername` text NULL);"
+		sqlstr = "create table `cod` (`name` text NULL,`nickname` text NULL,`modelname` VARCHAR(256),`puburl` text NULL,`apiurl` text NULL,`deployertype` integer NULL,`deployername` text NULL);"
 		_, err = db.Exec(sqlstr)
 		checkErr(err)
 
@@ -35,11 +35,11 @@ func InitLocalDB() {
 		_, err = db.Exec(sqlstr)
 		checkErr(err)
 
-		sqlstr = "create table `exchange` (`poolname1` text NULL,`assettype1` text NULL,`amount1` real NULL,`poolname2` text NULL,`assettype2` text NULL,`amount2` real NULL,`tokenamount` real NULL,`exchangetime` text NULL,`publog` text NULL,`locallog` text NULL,`param1` text NULL,`param2` text NULL);"
+		sqlstr = "create table `exchange` (`poolname1` text NULL,`assettype1` text NULL,`amount1` real NULL,`poolname2` text NULL,`assettype2` text NULL,`amount2` real NULL,`tokenamount` real NULL,`exchangetime` text NULL,`log` text NULL,`param1` text NULL,`param2` text NULL);"
 		_, err = db.Exec(sqlstr)
 		checkErr(err)
 
-		sqlstr = "create table `contract` (`contractid` INTEGER PRIMARY KEY AUTOINCREMENT,`poolname` text NULL,`otherpartytype` INTEGER NULL,`otherpartyname` text NULL,`content` text NULL,`signtime` text NULL,`validtime` text NULL,`invalidtime` text NULL,`status` INTEGER NULL);"
+		sqlstr = "create table `contract` (`contractid` INTEGER PRIMARY KEY AUTOINCREMENT,`title` text NULL,`poolname` text NULL,`otherpartytype` INTEGER NULL,`otherpartyname` text NULL,`content` text NULL,`signtime` text NULL,`validtime` text NULL,`invalidtime` text NULL,`status` INTEGER NULL);"
 		_, err = db.Exec(sqlstr)
 		checkErr(err)
 
@@ -47,7 +47,7 @@ func InitLocalDB() {
 		_, err = db.Exec(sqlstr)
 		checkErr(err)
 
-		sqlstr = "create table `ticketbudget` (`ticketbudgetid` INTEGER PRIMARY KEY AUTOINCREMENT,`contractid` INTEGER NULL,`ticketID` INTEGER NULL,`poolname` text NULL,`assettype` text NULL,`amount` real NULL,`tokenamount` real NULL);"
+		sqlstr = "create table `ticketbudget` (`ticketbudgetid` INTEGER PRIMARY KEY AUTOINCREMENT,`ticketID` INTEGER NULL,`poolname` text NULL,`assettype` text NULL,`amount` real NULL,`tokenamount` real NULL);"
 		_, err = db.Exec(sqlstr)
 		checkErr(err)
 
@@ -71,9 +71,9 @@ func InitLocalDB() {
 
 		res, err := stmt.Exec("Time1", "时间:每天8小时")
 		checkErr(err)
-		res, err := stmt.Exec("Time2", "时间:每天6小时")
+		res, err = stmt.Exec("Time2", "时间:每天6小时")
 		checkErr(err)
-		res, err := stmt.Exec("Time3", "时间:每天10小时")
+		res, err = stmt.Exec("Time3", "时间:每天10小时")
 		checkErr(err)
 		res, err = stmt.Exec("Token", "个人领域模型内部记账单位")
 		checkErr(err)

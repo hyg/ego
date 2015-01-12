@@ -13,27 +13,37 @@ ego client
 |   ├── person.json
 |   ├── watchlist.json
 |   ├── sharedata
-|   |   ├── person.xxx.com.json
-|   |   ├── person.xxx.cod.json
-|   |   ├── person.xxx.pool.json
+|   |   ├── xxx.person.json
+|   |   ├── xxx.key.pub
+|   |   ├── person.yyy.com.json
+|   |   ├── person.yyy.cod.json
+|   |   ├── person.yyy.pool.json
 |   |   └── ...
 |   ├── index.json
+|   ├── contract
+|   |   ├── 1.json
+|   |   ├── 2.json
+|   |   └── ...
+|   ├── ticket
+|   |   ├── 1.json
+|   |   ├── 1.budget.json
+|   |   ├── 2.json
+|   |   └── ...
 |   ├── 20150101010203
 |   |   ├── baseline.json
-|   |   ├── data.json
+|   |   ├── index.json
 |   |   └── ...
 |   ├── YYMMDDhhmmss
 |   |   ├── baseline.json
-|   |   ├── data.json
+|   |   ├── index.json
 |   |   └── ...
 |   └── ...
-
 ├── client.v0.1.exe
 ├── client.v0.2.exe
 ├── client.v....exe
-├── v0.1.s3db
-├── v0.2.s3db
-├── v....s3db
+├── config.json
+├── key.pub
+├── key.sec
 └── README.md
 </pre>
 

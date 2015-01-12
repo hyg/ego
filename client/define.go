@@ -1,6 +1,30 @@
 package main
 
-type exchange struct {
+type GlobalIndex struct {
+	Period      []PeriodBrief
+	ContractMax int
+	Contract    []string
+	TicketMax   int
+	Ticket      []string
+}
+
+type PeriodIndex struct {
+	IncomeMax   int
+	PayMax      int
+	ExchangeMax int
+}
+
+type PeriodBrief struct {
+	BeingTime    string
+	TotalBalance float32
+}
+
+type Baseline struct {
+	Version string
+	Pool    []AssetPool
+}
+
+type Exchange struct {
 	PoolName1    string
 	AssetType1   string
 	Amount1      float32
@@ -9,8 +33,7 @@ type exchange struct {
 	Amount2      float32
 	TokenAmount  float32
 	ExchangeTime string
-	PubLog       string
-	LocalLog     string
+	Log          string
 	Param1       string
 	Param2       string
 }
@@ -42,7 +65,6 @@ type Income struct {
 }
 
 type TicketBudget struct {
-	ContractID  int
 	TicketID    int
 	PoolName    string
 	AssetType   string
@@ -63,6 +85,7 @@ type Ticket struct {
 //
 type Contract struct {
 	ContractID     int
+	Title          string
 	PoolName       string
 	OtherPartyType int
 	OtherPartyName string
@@ -103,6 +126,7 @@ type AssetType struct {
 // [CreatorName].[Name].com.json
 type COM struct {
 	Name        string
+	NickName    string
 	PubURL      string
 	CreatorType int
 	CreatorName string
@@ -114,6 +138,7 @@ type COM struct {
 // [DeployerName].[Name].cod.json
 type COD struct {
 	Name         string
+	NickName     string
 	Model        COM
 	PubURL       string
 	APIURL       string
@@ -128,7 +153,6 @@ type Person struct {
 	NickName  string // global unique
 	Email     string
 	DataURL   string
-	PubKey    string
 	Statement string
 }
 
