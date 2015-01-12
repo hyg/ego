@@ -23,8 +23,7 @@ type Pay struct {
 	Amount      float32
 	TokenAmount float32
 	PayTime     string
-	PubLog      string
-	LocalLog    string
+	Log         string
 	Param1      string
 	Param2      string
 }
@@ -37,8 +36,7 @@ type Income struct {
 	Amount      float32
 	TokenAmount float32
 	IncomeTime  string
-	PubLog      string
-	LocalLog    string
+	Log         string
 	Param1      string
 	Param2      string
 }
@@ -53,23 +51,22 @@ type TicketBudget struct {
 }
 
 type Ticket struct {
-	TicketID     int
-	ContractID   int
-	Target       string
-	PubContent   string
-	LocalContent string
-	CreateTime   string
-	Deadline     string
-	Status       int
+	TicketID   int
+	ContractID int
+	Target     string
+	Content    string
+	CreateTime string
+	Deadline   string
+	Status     int
 }
 
+//
 type Contract struct {
 	ContractID     int
 	PoolName       string
 	OtherPartyType int
 	OtherPartyName string
-	PubContent     string
-	LocalContent   string
+	Content        string
 	SignTime       string
 	ValidTime      string
 	InvalidTime    string
@@ -87,6 +84,8 @@ type AssetPool struct {
 	Price        map[string]float32
 }
 
+// pub only
+// [CreatorName].[Name].assetpooltype.json
 type AssetPoolType struct {
 	Name        string
 	Define      string
@@ -94,6 +93,7 @@ type AssetPoolType struct {
 	CreatorName string
 }
 
+// local only
 type AssetType struct {
 	Name   string
 	Define string
@@ -127,6 +127,7 @@ type Person struct {
 	Name      string
 	NickName  string // global unique
 	Email     string
+	DataURL   string
 	PubKey    string
 	Statement string
 }

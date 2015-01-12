@@ -9,7 +9,7 @@ import (
 func InitLocalDB() {
 
 	var sqlstr string
-	filename := "./local.v" + version + ".s3db"
+	filename := "v" + version + ".s3db"
 	db, err := sql.Open("sqlite3", filename)
 	defer db.Close()
 
@@ -39,11 +39,11 @@ func InitLocalDB() {
 		_, err = db.Exec(sqlstr)
 		checkErr(err)
 
-		sqlstr = "create table `contract` (`contractid` INTEGER PRIMARY KEY AUTOINCREMENT,`poolname` text NULL,`otherpartytype` INTEGER NULL,`otherpartyname` text NULL,`pubcontent` text NULL,`localcontent` text NULL,`signtime` text NULL,`validtime` text NULL,`invalidtime` text NULL,`status` INTEGER NULL);"
+		sqlstr = "create table `contract` (`contractid` INTEGER PRIMARY KEY AUTOINCREMENT,`poolname` text NULL,`otherpartytype` INTEGER NULL,`otherpartyname` text NULL,`content` text NULL,`signtime` text NULL,`validtime` text NULL,`invalidtime` text NULL,`status` INTEGER NULL);"
 		_, err = db.Exec(sqlstr)
 		checkErr(err)
 
-		sqlstr = "create table `ticket` (`ticketid` INTEGER PRIMARY KEY AUTOINCREMENT,`contractid` INTEGER,`target` text NULL,`pubcontent` text NULL,`localcontent` text NULL,`createtime` text NULL,`deadline` text NULL,`status` INTEGER NULL);"
+		sqlstr = "create table `ticket` (`ticketid` INTEGER PRIMARY KEY AUTOINCREMENT,`contractid` INTEGER,`target` text NULL,`content` text NULL,`createtime` text NULL,`deadline` text NULL,`status` INTEGER NULL);"
 		_, err = db.Exec(sqlstr)
 		checkErr(err)
 
@@ -51,11 +51,11 @@ func InitLocalDB() {
 		_, err = db.Exec(sqlstr)
 		checkErr(err)
 
-		sqlstr = "create table `pay` (`payid` INTEGER PRIMARY KEY AUTOINCREMENT,`contractid` INTEGER NULL,`ticketID` INTEGER NULL,`poolname` text NULL,`assettype` text NULL,`amount` real NULL,`tokenamount` real NULL,`paytime` text NULL,`publog` text NULL,`locallog` text NULL,`param1` text NULL,`param2` text NULL);"
+		sqlstr = "create table `pay` (`payid` INTEGER PRIMARY KEY AUTOINCREMENT,`contractid` INTEGER NULL,`ticketID` INTEGER NULL,`poolname` text NULL,`assettype` text NULL,`amount` real NULL,`tokenamount` real NULL,`paytime` text NULL,`log` text NULL,`param1` text NULL,`param2` text NULL);"
 		_, err = db.Exec(sqlstr)
 		checkErr(err)
 
-		sqlstr = "create table `income` (`incomeid` INTEGER PRIMARY KEY AUTOINCREMENT,`contractid` INTEGER NULL,`ticketID` INTEGER NULL,`poolname` text NULL,`assettype` text NULL,`amount` real NULL,`tokenamount` real NULL,`incometime` text NULL,`publog` text NULL,`locallog` text NULL,`param1` text NULL,`param2` text NULL);"
+		sqlstr = "create table `income` (`incomeid` INTEGER PRIMARY KEY AUTOINCREMENT,`contractid` INTEGER NULL,`ticketID` INTEGER NULL,`poolname` text NULL,`assettype` text NULL,`amount` real NULL,`tokenamount` real NULL,`incometime` text NULL,`log` text NULL,`param1` text NULL,`param2` text NULL);"
 		_, err = db.Exec(sqlstr)
 		checkErr(err)
 
@@ -69,7 +69,11 @@ func InitLocalDB() {
 		checkErr(err)
 		defer stmt.Close()
 
-		res, err := stmt.Exec("Time", "时间")
+		res, err := stmt.Exec("Time1", "时间:每天8小时")
+		checkErr(err)
+		res, err := stmt.Exec("Time2", "时间:每天6小时")
+		checkErr(err)
+		res, err := stmt.Exec("Time3", "时间:每天10小时")
 		checkErr(err)
 		res, err = stmt.Exec("Token", "个人领域模型内部记账单位")
 		checkErr(err)

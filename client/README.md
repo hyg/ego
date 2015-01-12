@@ -9,28 +9,31 @@ ego client
 |   ├── image
 |   ├── js
 |   └── template
-├── locallog  
-|   ├── v0.1
-|   |   ├── .json
-|   |   ├── .json
+├── data  
+|   ├── person.json
+|   ├── watchlist.json
+|   ├── index.json
+|   ├── 20150101010203
+|   |   ├── baseline.json
+|   |   ├── data.json
 |   |   └── ...
-|   ├── v0.2
-|   └── ... 
-├── publog  
-|   ├── v0.1
-|   ├── v0.2
-|   └── ...
+|   ├── YYMMDDhhmmss
+|   |   ├── baseline.json
+|   |   ├── data.json
+|   |   └── ...
+|   ├── ...
+|   └── sharedata
+|       ├── person.xxx.com.json
+|       ├── person.xxx.cod.json
+|       ├── person.xxx.pool.json
+|       └── ...
 ├── client.v0.1.exe
 ├── client.v0.2.exe
 ├── client.v....exe
-├── local.v0.1.s3db
-├── local.v0.2.s3db
-├── local.v....s3db
-├── pub.v0.1.s3db
-├── pub.v0.2.s3db
-├── pub.v....s3db
-├── README.md
-└── config.json
+├── v0.1.s3db
+├── v0.2.s3db
+├── v....s3db
+└── README.md
 </pre>
 
 * locallog：本地记录，用户不要编辑，由客户端维护。
@@ -49,3 +52,6 @@ ego client
 	2. 运行版本号最高的client.[version].exe，文件名中的version是版本号。
 
 ###配置参数
+1. 资源池
+2. 资源价格表
+3. 
