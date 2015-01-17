@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"gopkg.in/yaml.v2"
 	"html/template"
 	"io"
 	"log"
@@ -34,6 +35,7 @@ func serveFile(pattern string, filename string) {
 }
 
 func main() {
+	makeyaml()
 	openbrowser("http://127.0.0.1")
 
 	//设置访问的路由
@@ -92,8 +94,130 @@ func openbrowser(url string) {
 
 }
 
+func makeyaml() {
+	hyg := Person{"Huang Yonggang", "modeler", "huangyg@mars22.com", "", "", `-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: OpenPGP.js v0.9.0
+Comment: http://openpgpjs.org
+
+xsBNBFSlVgcBCACQURxJMfdrPbAFa5ZGOs4j43tRmc7KQoM6lKveobO+v+Jg
+IIYqXtDadXAM1h34CQgwj4o7VFKf+M1SmGbO57cx+M3U1+SgKmW9w8gRwgNE
+q+m3JPo+HIiOI/X8Gsa9vrbAbs19UvXk4H+CdC02bxwruLPan87fI17wGLEB
+62mcLG9eNPg4XrmZDDISPvicR88AFmkZMPh9WoVm99jzKl3EWCfPXqdNiLWK
+kzXZO2jPLXLb2iJRacq2i+QXt5UWB5BEaAHLLVLTu5PNykHumN0xxIoidrxV
+G+ug8Z269ZmcYdRv2fgY/TYP+/h43RkSI+iqiXeKSL8+WGDqSpee9sPnABEB
+AAHNMOa1i+ivlei0puWPtyAoaHlnL2pzLnNhbXBsZSkgPHRlc3RAanNzYW1w
+bGUub3JnPsLAcgQQAQgAJgUCVKVWDwYLCQgHAwIJEE5QeumSjbLwBBUIAgoD
+FgIBAhsDAh4BAADijgf/e24fcRYoEZlIrej5ZblOszkKV7Y2900NerwrLPFK
+kfQVHOBSAi9Nls5rOlZ4jDi7rd8/V+NUDDqE966jMha6TpCnHd+j6I4tiJiq
+I8n51FoctVcpJcadygcoZE18pGF+dl62o7iLJVqsQv6ZnbLTQJngPDjAQGG8
+KKhJjpY2RYNnR8vBCb4+lH8lhBnXviUUyyFRBjbBdhiPVebvv/LGd60diEmJ
++xKC89+Z0bGdElPpVW2WdOkTXL47UoNfZpHzpxhytOmjAykxGFtaqtUmHzvN
+KogM5YDXuO7ZcWjiiTbKSnLcYyWLBp8VGq+MdDQmIEV7YpE3/mWPHat0wZar
+X87ATQRUpVYMAQgAogdxHIK2i4MMeV2DASacwP037GCqyLHRcmo1ud5IYkHd
+WXs1xigEklj2+3AaWjYgHzhN/f5BE2aDFttSonJhQ+ltZrEArungIWppSfN+
+v6SyzmUsYK8EooF1M/EckvyF3ugub+SGst4MXyGfYhx901oRvKhY61pFWgZP
+3gs/P1nHbDpUYNDKENflVBV0ha2DSlLxFQdfSh4hh4Jm1icmw85V5gTwppQd
+CQ//qGZ757Tq4AtZS9givMYnSkXFsSlufKZ8LTVa/RFZ+gGKbcJHMR8XLoOc
+8n8Vge92GHm63W5mP33A99e+NgyegInLmoi3lIXGO8yORIdwci17Eaqa9QAR
+AQABwsBfBBgBCAATBQJUpVYQCRBOUHrpko2y8AIbDAAAmiAIAIHhfGiJ9e9L
+n8z9tD/BFzqk5vll36hCXkLdg2HzftJsxPdW0eT27iDLagJcsrbVpRAag49/
+47GH9BeHdtqsDNsh7UzQAlfp4t7+Fi00+9GuazHtTnI1bN9zgpGLCCNP6JUR
+J9Z00c+GhQayTkPwTCf9zCidtbbNJc7GRlfgOMaoNqGoasyZrltqoB6hCM16
+l0jkh59MIqQ+4FbLQOqr/7SGi6H1wzFa/Q4Q9R2VDg5zlEg163pbsf+ope52
+3rPxBia7vxpFfXQXGbtR6vZDjI8uqsEMEyflqiuHJxmjtitnYLRqxQRr9fZq
+WMc+ZlpNrplXO9WkeuhEICGQdZSy/ok=
+=+yKz
+-----END PGP PUBLIC KEY BLOCK-----
+
+`}
+	CommCOM := COM{"通用 个人领域模型", "common", "github.com/hyg/ego/blob/master/common.com.md", NaturalPerson, "Huang Yonggang"}
+	EgoCOM := COM{"ego 个人领域模型", "ego", "github.com/hyg/ego/blob/master/ego.com.md", NaturalPerson, "Huang Yonggang"}
+	EgoCOD := COD{"ego 个人管理工具", "ego", EgoCOM, "github.com/hyg/ego/blob/master/cod.md", "ego.mars22.com/api", NaturalPerson, "Huang Yonggang"}
+
+	//RMB := AssetType{"人民币", "RMB"}
+	//Token := AssetType{"Token", "个人领域模型的内部记账单位。"}
+	//Time1 := AssetType{"Time1", "1类时间:每天供应8小时。"}
+	//Time2 := AssetType{"Time2", "2类时间;每天供应6小时。"}
+	//Time3 := AssetType{"Time3", "3类时间:每天供应10小时。"}
+	//COMFile := AssetType{"共同体模型", "COmmunity Model"}
+	//CODFile := AssetType{"部署方案", "COmmunity Deployment"}
+	raw := AssetPoolType{"raw", "原生资源池，是时间资源的注入池", NaturalPerson, "Huang Yonggang"}
+	p1 := AssetPoolType{"p1", `登记：
+	1. 不产生任何共同体定义的契约。
+	2. 与第零层共同体的契约。`, NaturalPerson, "Huang Yonggang"}
+	p2 := AssetPoolType{"p1", "登记：1. 产生共同体定义（即设计其数学模型）的行为，该模型要求成员公开接受角色。2. 产生共同体定义（即设计其数学模型）的契约，该模型要求成员公开接受角色。3. 与第零层以上共同体的契约，该共同体产生的模型要求成员公开接受角色。", NaturalPerson, "Huang Yonggang"}
+	ia := AssetPoolType{"ia", "登记：1. 产生共同体定义（即设计其数学模型）的行为，该模型不要求成员公开接受角色。2. 产生共同体定义（即设计其数学模型）的契约，该模型不要求成员公开接受角色。3. 与第零层以上共同体的契约，该共同体产生的模型不要求成员公开接受角色。", NaturalPerson, "Huang Yonggang"}
+
+	rawpool := AssetPool{"raw", map[string]float32{"RMB": 1.0, "Time1": 1.0, "Time2": 4.0, "Time3": 16.0}}
+	p1pool := AssetPool{"p1", map[string]float32{"RMB": 1.0, "Time1": 4.0, "Time2": 4.0, "Time3": 4.0}}
+	p2pool := AssetPool{"p1", map[string]float32{"RMB": 1.0, "Time1": 16.0, "Time2": 16.0, "Time3": 16.0}}
+	iapool := AssetPool{"p1", map[string]float32{"RMB": 1.0, "Time1": 64.0, "Time2": 64.0, "Time3": 64.0}}
+
+	client := EgoClient{hyg, EgoCOD, []AssetPool{rawpool, p1pool, p2pool, iapool}}
+
+	d, err := yaml.Marshal(&hyg)
+	checkErr(err)
+	log.Printf("--- hyg:\n%s\n\n", string(d))
+
+	d, _ = yaml.Marshal(&CommCOM)
+	log.Printf("--- CommCOM:\n%s\n\n", string(d))
+	d, _ = yaml.Marshal(&EgoCOM)
+	log.Printf("--- EgoCOM:\n%s\n\n", string(d))
+	d, _ = yaml.Marshal(&EgoCOD)
+	log.Printf("--- EgoCOD:\n%s\n\n", string(d))
+
+	d, _ = yaml.Marshal(&raw)
+	log.Printf("--- raw:\n%s\n\n", string(d))
+	d, _ = yaml.Marshal(&p1)
+	log.Printf("--- p1:\n%s\n\n", string(d))
+	d, _ = yaml.Marshal(&p2)
+	log.Printf("--- p2:\n%s\n\n", string(d))
+	d, _ = yaml.Marshal(&ia)
+	log.Printf("--- ia:\n%s\n\n", string(d))
+
+	d, _ = yaml.Marshal(&rawpool)
+	log.Printf("--- rawpool:\n%s\n\n", string(d))
+	d, _ = yaml.Marshal(&client)
+	log.Printf("--- client:\n%s\n\n", string(d))
+
+}
+
 func makejson() {
-	hyg := Person{"Huang Yonggang", "modeler", "huangyg@mars22.com", "", ""}
+	hyg := Person{"Huang Yonggang", "modeler", "huangyg@mars22.com", "", "", `-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: OpenPGP.js v0.9.0
+Comment: http://openpgpjs.org
+
+xsBNBFSlVgcBCACQURxJMfdrPbAFa5ZGOs4j43tRmc7KQoM6lKveobO+v+Jg
+IIYqXtDadXAM1h34CQgwj4o7VFKf+M1SmGbO57cx+M3U1+SgKmW9w8gRwgNE
+q+m3JPo+HIiOI/X8Gsa9vrbAbs19UvXk4H+CdC02bxwruLPan87fI17wGLEB
+62mcLG9eNPg4XrmZDDISPvicR88AFmkZMPh9WoVm99jzKl3EWCfPXqdNiLWK
+kzXZO2jPLXLb2iJRacq2i+QXt5UWB5BEaAHLLVLTu5PNykHumN0xxIoidrxV
+G+ug8Z269ZmcYdRv2fgY/TYP+/h43RkSI+iqiXeKSL8+WGDqSpee9sPnABEB
+AAHNMOa1i+ivlei0puWPtyAoaHlnL2pzLnNhbXBsZSkgPHRlc3RAanNzYW1w
+bGUub3JnPsLAcgQQAQgAJgUCVKVWDwYLCQgHAwIJEE5QeumSjbLwBBUIAgoD
+FgIBAhsDAh4BAADijgf/e24fcRYoEZlIrej5ZblOszkKV7Y2900NerwrLPFK
+kfQVHOBSAi9Nls5rOlZ4jDi7rd8/V+NUDDqE966jMha6TpCnHd+j6I4tiJiq
+I8n51FoctVcpJcadygcoZE18pGF+dl62o7iLJVqsQv6ZnbLTQJngPDjAQGG8
+KKhJjpY2RYNnR8vBCb4+lH8lhBnXviUUyyFRBjbBdhiPVebvv/LGd60diEmJ
++xKC89+Z0bGdElPpVW2WdOkTXL47UoNfZpHzpxhytOmjAykxGFtaqtUmHzvN
+KogM5YDXuO7ZcWjiiTbKSnLcYyWLBp8VGq+MdDQmIEV7YpE3/mWPHat0wZar
+X87ATQRUpVYMAQgAogdxHIK2i4MMeV2DASacwP037GCqyLHRcmo1ud5IYkHd
+WXs1xigEklj2+3AaWjYgHzhN/f5BE2aDFttSonJhQ+ltZrEArungIWppSfN+
+v6SyzmUsYK8EooF1M/EckvyF3ugub+SGst4MXyGfYhx901oRvKhY61pFWgZP
+3gs/P1nHbDpUYNDKENflVBV0ha2DSlLxFQdfSh4hh4Jm1icmw85V5gTwppQd
+CQ//qGZ757Tq4AtZS9givMYnSkXFsSlufKZ8LTVa/RFZ+gGKbcJHMR8XLoOc
+8n8Vge92GHm63W5mP33A99e+NgyegInLmoi3lIXGO8yORIdwci17Eaqa9QAR
+AQABwsBfBBgBCAATBQJUpVYQCRBOUHrpko2y8AIbDAAAmiAIAIHhfGiJ9e9L
+n8z9tD/BFzqk5vll36hCXkLdg2HzftJsxPdW0eT27iDLagJcsrbVpRAag49/
+47GH9BeHdtqsDNsh7UzQAlfp4t7+Fi00+9GuazHtTnI1bN9zgpGLCCNP6JUR
+J9Z00c+GhQayTkPwTCf9zCidtbbNJc7GRlfgOMaoNqGoasyZrltqoB6hCM16
+l0jkh59MIqQ+4FbLQOqr/7SGi6H1wzFa/Q4Q9R2VDg5zlEg163pbsf+ope52
+3rPxBia7vxpFfXQXGbtR6vZDjI8uqsEMEyflqiuHJxmjtitnYLRqxQRr9fZq
+WMc+ZlpNrplXO9WkeuhEICGQdZSy/ok=
+=+yKz
+-----END PGP PUBLIC KEY BLOCK-----
+
+`}
 	CommCOM := COM{"通用 个人领域模型", "common", "github.com/hyg/ego/blob/master/common.com.md", NaturalPerson, "Huang Yonggang"}
 	EgoCOM := COM{"ego 个人领域模型", "ego", "github.com/hyg/ego/blob/master/ego.com.md", NaturalPerson, "Huang Yonggang"}
 	EgoCOD := COD{"ego 个人管理工具", "ego", EgoCOM, "github.com/hyg/ego/blob/master/cod.md", "ego.mars22.com/api", NaturalPerson, "Huang Yonggang"}

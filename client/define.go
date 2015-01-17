@@ -154,6 +154,7 @@ type Person struct {
 	Email     string
 	DataURL   string
 	Statement string
+	Pubkey    string
 }
 
 const (
