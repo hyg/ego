@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+	<head>
+		<title>创建密钥</title>
+		<meta charset="UTF-8"> 
+
+		<link rel="stylesheet" type="text/css" href="/static/css/pure-min.css" />
+		<script src="/static/js/openpgp.min.js"></script>
+		<script src="/static/js/FileSaver.min.js"></script>
+		<script type="text/javascript">
+			 function createkey()
+			 {
+				var name;
+				name=document.getElementById("name").value;
+				var nickname;
+				nickname=document.getElementById("nickname").value;
+				var email;
+				email=document.getElementById("email").value;
+				
+				var openpgp = window.openpgp;
+				var userid = name + " (" + nickname + ") <" + email +">"
+				var passphrase = prompt('准备创建密钥，请输入密钥口令');
+				var publicKey,privateKey;
+				var opt = {numBits: 2048, userId: userid, passphrase: passphrase};
+				
+				openpgp.generateKeyPair(opt).then(function(key) {
+					var pub = new Blob([key.publicKeyArmored], {type: "text/plain;charset=utf-8"});
+					alert("保存公钥，请公开发布。");
+					saveAs(pub, "key.pub");
+					var sec = new Blob([key.privateKeyArmored], {type: "text/plain;charset=utf-8"});
+					alert("保存私钥，不要给任何人！");
+					saveAs(sec, "key.sec");
+					});
+			 }
+		</script>	
+	</head>
+	<body>
+		<!--content begin-->
+		<div class="header"  align="center">
+			<h1>创建密钥</h1>
+			<hr>
+		</div>
+
+		<form class="pure-form" id="createkeys" action="/" method="post">
+			<div class="pure-g" align="center">
+				<br/>
+				<fieldset class="pure-group">
+				    <input type="text" id="name" name="name" class="pure-input-1-2" placeholder="姓名">
+				    <input type="text" id="nickname" name="nickname" class="pure-input-1-2" placeholder="代号">
+				    <input type="email" id="email" name="email" class="pure-input-1-2" placeholder="邮箱">
+				</fieldset>
+				<input type="button" id="b" name ="b" class="pure-button pure-button-primary pure-input-1-2" onclick="createkey()" value="创建"></input>
+				<br/>
+				
+			</div>
+		</form>
+		<!--content end-->
+
+	</body>
+</html>

@@ -35,8 +35,12 @@ func serveFile(pattern string, filename string) {
 }
 
 func main() {
-	readyaml()
-	openbrowser("http://127.0.0.1")
+	//readyaml()
+	if Exist("data\\key.pub") {
+		openbrowser("http://127.0.0.1")
+	} else {
+		openbrowser("http://127.0.0.1/static/template/createkey.html")
+	}
 
 	//设置访问的路由
 	//web pages
