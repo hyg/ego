@@ -3,9 +3,9 @@ package main
 type GlobalIndex struct {
 	Period      []PeriodBrief
 	ContractMax int
-	Contract    []string
+	Contract    []int
 	TicketMax   int
-	Ticket      []string
+	Ticket      []int
 }
 
 type PeriodIndex struct {

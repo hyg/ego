@@ -10,38 +10,39 @@ ego client
 |   ├── js
 |   └── template
 ├── data  
-|   ├── person.json
-|   ├── watchlist.json
+|   ├── person.yaml
+|   ├── watchlist.yaml
 |   ├── sharedata
-|   |   ├── xxx.person.json
+|   |   ├── xxx.person.yaml
 |   |   ├── xxx.key.pub
-|   |   ├── person.yyy.com.json
-|   |   ├── person.yyy.cod.json
-|   |   ├── person.yyy.pool.json
+|   |   ├── person.yyy.com.yaml
+|   |   ├── person.yyy.cod.yaml
+|   |   ├── person.yyy.pool.yaml
 |   |   └── ...
-|   ├── index.json
+|   ├── index.yaml
 |   ├── contract
-|   |   ├── 1.json
-|   |   ├── 2.json
+|   |   ├── 1.yaml
+|   |   ├── 2.yaml
 |   |   └── ...
 |   ├── ticket
-|   |   ├── 1.json
-|   |   ├── 1.budget.json
-|   |   ├── 2.json
+|   |   ├── 1.yaml
+|   |   ├── 1.budget.yaml
+|   |   ├── 2.yaml
 |   |   └── ...
 |   ├── 20150101010203
-|   |   ├── baseline.json
-|   |   ├── index.json
+|   |   ├── baseline.yaml
+|   |   ├── index.yaml
 |   |   └── ...
 |   ├── YYMMDDhhmmss
-|   |   ├── baseline.json
-|   |   ├── index.json
+|   |   ├── baseline.yaml
+|   |   ├── index.yaml
 |   |   └── ...
 |   └── ...
 ├── client.v0.1.exe
 ├── client.v0.2.exe
 ├── client.v....exe
-├── config.json
+├── config.yaml
+├── pointer.yaml
 ├── key.pub
 ├── key.sec
 └── README.md
@@ -49,14 +50,14 @@ ego client
 
 * locallog：本地记录，用户不要编辑，由客户端维护。
 * publog：公开记录。用户不要编辑，由客户端自动从公网上同步到本地。
-* config.json：部署参数，用户根据本手册编辑。
+* config.yaml：部署参数，用户根据本手册编辑。
 
 
 ###部署
 1. 初次部署：
 	1. 在非系统盘创建工作文件夹。
 	2. 把部署文件解压缩到工作文件夹。
-	3. 编辑部署参数：config.json文件。
+	3. 编辑部署参数：config.yaml文件。
 	4. 运行版本号最高的client.[version].exe，文件名中的version是版本号。
 2. 升级部署：
 	1. 把部署文件解压缩到工作文件夹。
