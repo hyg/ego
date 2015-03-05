@@ -184,6 +184,9 @@ WMc+ZlpNrplXO9WkeuhEICGQdZSy/ok=
 	tic := Ticket{1, 4, "基本管理制度", "启动S2状态", "2015-01-01 00:00:00", "2015-01-15 00:00:00", 2}
 	ticbudget := TicketBudget{1, "p2", "Time1", 960, 15360}
 
+	pi := PeriodIndex{3, 7, 2}
+	bl := Baseline{"1.0", []AssetPool{rawpool, p1pool, p2pool, iapool}}
+
 	d, err := yaml.Marshal(&hyg)
 	checkErr(err)
 	log.Printf("--- hyg:\n%s\n\n", string(d))
@@ -218,6 +221,11 @@ WMc+ZlpNrplXO9WkeuhEICGQdZSy/ok=
 	log.Printf("--- tic:\n%s\n\n", string(d))
 	d, _ = yaml.Marshal(&ticbudget)
 	log.Printf("--- ticbudget:\n%s\n\n", string(d))
+
+	d, _ = yaml.Marshal(&pi)
+	log.Printf("--- periodindex:\n%s\n\n", string(d))
+	d, _ = yaml.Marshal(&bl)
+	log.Printf("--- baseline:\n%s\n\n", string(d))
 
 }
 

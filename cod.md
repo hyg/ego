@@ -335,13 +335,62 @@ egonet
 	tokenamount: 15360
 </pre>
 
+####periodindex.yaml
+1. 用途：记录一个管理周期的简要信息，保存在\sharedata\YYMMDDhhmmss\index.yaml，其中YYMMDDhhmmss是管理周期开始时间。
+2. 数据项：
+	* incomemax：收入笔数
+	* paymax：支付笔数
+	* exchangemax：交易笔数
+3. 范例
+<pre>
+	incomemax: 3
+	paymax: 7
+	exchangemax: 2
+</pre>
+
+####baseline.yaml
+1. 用途：记录一个管理周期的起始基准，保存在\sharedata\YYMMDDhhmmss\baseline.yaml，其中YYMMDDhhmmss是管理周期开始时间。
+2. 数据项：
+	* version：软件版本
+	* pool：资源池
+		* pooltypename：资源池种类名称
+		* price：资源池下各项资源的Token价格
+3. 范例
+<pre>
+	version: "1.0"
+	pool:
+	- pooltypename: raw
+	  price:
+	    RMB: 1
+	    Time1: 1
+	    Time2: 4
+	    Time3: 16
+	- pooltypename: p1
+	  price:
+	    RMB: 1
+	    Time1: 4
+	    Time2: 4
+	    Time3: 4
+	- pooltypename: p1
+	  price:
+	    RMB: 1
+	    Time1: 16
+	    Time2: 16
+	    Time3: 16
+	- pooltypename: p1
+	  price:
+	    RMB: 1
+	    Time1: 64
+	    Time2: 64
+	    Time3: 64
+</pre>
+
 ####.yaml
 1. 用途：
 2. 数据项：
 3. 范例
 <pre>
 </pre>
-
 
 ##部署许可证
 ego 个人领域模型
