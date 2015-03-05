@@ -254,6 +254,21 @@ egonet
 	deployername: Huang Yonggang
 </pre>
 
+####pool.yaml
+1. 用途：记录一个资源池的信息，保存在\sharedata\person.yyy.pool.yaml，其中person是资源池种类创建者的昵称，yyy是资源池种类的名称。
+2. 数据项：
+	* name：资源池种类的名称
+	* define：资源池种类的定义
+	* creatortype：资源池种类创建者类型，1-自然人，2-利益共同体。
+	* creatorname：资源池种类创建者名称
+3. 范例
+<pre>
+	name: p2
+	define: 登记：1. 产生共同体定义（即设计其数学模型）的行为，该模型要求成员公开接受角色。2. 产生共同体定义（即设计其数学模型）的契约，该模型要求成员公开接受角色。3.
+	  与第零层以上共同体的契约，该共同体产生的模型要求成员公开接受角色。
+	creatortype: 1
+	creatorname: Huang Yonggang
+</pre>
 
 1. 用途：
 2. 数据项：
