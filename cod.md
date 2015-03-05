@@ -125,6 +125,7 @@ egonet
 * locallog：本地记录，用户不要编辑，由客户端维护。
 * publog：公开记录。用户不要编辑，由客户端自动从公网上同步到本地。
 * config.yaml：部署参数，用户根据本手册编辑。
+
 ####person.yaml
 1. 用途：保存一个自然人的信息。使用者的个人信息存放在\person.yaml文件，其他用户的信息存放在\sharedata\xxx.person.yaml，其中xxx是该用户的昵称。
 2. 数据项：
