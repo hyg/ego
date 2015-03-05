@@ -181,6 +181,8 @@ WMc+ZlpNrplXO9WkeuhEICGQdZSy/ok=
 	index := GlobalIndex{[]PeriodBrief{{"201501010000", 0.0}, {"201501200000", 0.0}}, 6, []int{1, 2, 3, 4, 5, 6}, 1, []int{1}}
 
 	egomodeling := Contract{2, "ego modeling", "p2", 2, "ego", "ego建模者", "2006-11-12 23:25:00", "2006-11-12 23:25:00", "", 2}
+	tic := Ticket{1, 4, "基本管理制度", "启动S2状态", "2015-01-01 00:00:00", "2015-01-15 00:00:00", 2}
+	ticbudget := TicketBudget{1, "p2", "Time1", 960, 15360}
 
 	d, err := yaml.Marshal(&hyg)
 	checkErr(err)
@@ -212,6 +214,10 @@ WMc+ZlpNrplXO9WkeuhEICGQdZSy/ok=
 
 	d, _ = yaml.Marshal(&egomodeling)
 	log.Printf("--- egomodeling:\n%s\n\n", string(d))
+	d, _ = yaml.Marshal(&tic)
+	log.Printf("--- tic:\n%s\n\n", string(d))
+	d, _ = yaml.Marshal(&ticbudget)
+	log.Printf("--- ticbudget:\n%s\n\n", string(d))
 
 }
 

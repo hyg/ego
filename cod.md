@@ -100,7 +100,7 @@ egonet
 |   |   └── ...
 |   ├── ticket
 |   |   ├── 1.yaml
-|   |   ├── 1.budget.yaml
+|   |   ├── 1.budget.pool.aaa.yaml
 |   |   ├── 2.yaml
 |   |   └── ...
 |   ├── 20150101010203
@@ -295,6 +295,44 @@ egonet
 	validtime: 2006-11-12 23:25:00
 	invalidtime: ""
 	status: 2
+</pre>
+
+####ticket.yaml
+1. 用途：记录一个工单的信息，保存在\sharedata\n.ticket.yaml，其中n是工单编号。
+2. 数据项：
+	* ticketid：工单编号
+	* contractid：工单所属契约编号
+	* target：工单完成时提交的标的物
+	* content：工单内容
+	* createtime：创建时间
+	* deadline：完成期限
+	* status：当前状态：1-已创建，2-已完成。
+3. 范例
+<pre>
+	ticketid: 1
+	contractid: 4
+	target: 基本管理制度
+	content: "启动S2状态"
+	createtime: 2015-01-01 00:00:00
+	deadline: 2015-01-15 00:00:00
+	status: 2
+</pre>
+
+####ticket.budget.pool.aaa.yaml
+1. 用途：记录一个工单的预算，每个资源池的每种资产产生一个记录。保存在\sharedata\n.ticket.pool.aaa.yaml，其中n是工单编号，pool是资源池种类名称，aaa是资产种类名称。
+2. 数据项：
+	* ticketid：工单编号
+	* poolname：资源池种类名称
+	* assettype：资产种类名称
+	* amount：资产数额
+	* tokenamount：折算为Token的数额
+3. 范例
+<pre>
+	ticketid: 1
+	poolname: p2
+	assettype: Time1
+	amount: 960
+	tokenamount: 15360
 </pre>
 
 ####.yaml
