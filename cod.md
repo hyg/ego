@@ -75,8 +75,140 @@ egonet
 	* 具体说明：如采用则成交，本开放要约每月最多采购一份。
 
 ###数据交换
+####文件夹结构
+<pre>
+.
+├── static
+|   ├── css
+|   ├── image
+|   ├── js
+|   └── template
+├── data  
+|   ├── person.yaml
+|   ├── watchlist.yaml
+|   ├── sharedata
+|   |   ├── xxx.person.yaml
+|   |   ├── xxx.key.pub
+|   |   ├── person.yyy.com.yaml
+|   |   ├── person.yyy.cod.yaml
+|   |   ├── person.yyy.pool.yaml
+|   |   └── ...
+|   ├── index.yaml
+|   ├── contract
+|   |   ├── 1.yaml
+|   |   ├── 2.yaml
+|   |   └── ...
+|   ├── ticket
+|   |   ├── 1.yaml
+|   |   ├── 1.budget.yaml
+|   |   ├── 2.yaml
+|   |   └── ...
+|   ├── 20150101010203
+|   |   ├── baseline.yaml
+|   |   ├── index.yaml
+|   |   └── ...
+|   ├── YYMMDDhhmmss
+|   |   ├── baseline.yaml
+|   |   ├── index.yaml
+|   |   └── ...
+|   └── ...
+├── client.v0.1.exe
+├── client.v0.2.exe
+├── client.v....exe
+├── config.yaml
+├── pointer.yaml
+├── key.pub
+├── key.sec
+└── README.md
+</pre>
 
+* locallog：本地记录，用户不要编辑，由客户端维护。
+* publog：公开记录。用户不要编辑，由客户端自动从公网上同步到本地。
+* config.yaml：部署参数，用户根据本手册编辑。
+####person.yaml
+1. 用途：保存一个自然人的信息。使用者的个人信息存放在\person.yaml文件，其他用户的信息存放在\sharedata\xxx.person.yaml，其中xxx是该用户的昵称。
+2. 数据项：
+	* name：姓名
+	* nickname：昵称（部署内唯一）
+	* email：电子邮件地址
+	* dataurl：公布数据的网络地址
+	* statement：自我陈述
+	* pubkey：PGP公钥
+3. 范例：
+<pre>
+name: Huang Yonggang
+nickname: modeler
+email: huangyg@mars22.com
+dataurl: github.com/hyg/data/blob/master
+statement: |+
+  微博：http://weibo.com/huangyg
+  qq：445053
 
+pubkey: |+
+  -----BEGIN PGP PUBLIC KEY BLOCK-----
+  Version: OpenPGP.js v0.9.0
+  Comment: http://openpgpjs.org
+
+  xsBNBFSlVgcBCACQURxJMfdrPbAFa5ZGOs4j43tRmc7KQoM6lKveobO+v+Jg
+  IIYqXtDadXAM1h34CQgwj4o7VFKf+M1SmGbO57cx+M3U1+SgKmW9w8gRwgNE
+  q+m3JPo+HIiOI/X8Gsa9vrbAbs19UvXk4H+CdC02bxwruLPan87fI17wGLEB
+  62mcLG9eNPg4XrmZDDISPvicR88AFmkZMPh9WoVm99jzKl3EWCfPXqdNiLWK
+  kzXZO2jPLXLb2iJRacq2i+QXt5UWB5BEaAHLLVLTu5PNykHumN0xxIoidrxV
+  G+ug8Z269ZmcYdRv2fgY/TYP+/h43RkSI+iqiXeKSL8+WGDqSpee9sPnABEB
+  AAHNMOa1i+ivlei0puWPtyAoaHlnL2pzLnNhbXBsZSkgPHRlc3RAanNzYW1w
+  bGUub3JnPsLAcgQQAQgAJgUCVKVWDwYLCQgHAwIJEE5QeumSjbLwBBUIAgoD
+  FgIBAhsDAh4BAADijgf/e24fcRYoEZlIrej5ZblOszkKV7Y2900NerwrLPFK
+  kfQVHOBSAi9Nls5rOlZ4jDi7rd8/V+NUDDqE966jMha6TpCnHd+j6I4tiJiq
+  I8n51FoctVcpJcadygcoZE18pGF+dl62o7iLJVqsQv6ZnbLTQJngPDjAQGG8
+  KKhJjpY2RYNnR8vBCb4+lH8lhBnXviUUyyFRBjbBdhiPVebvv/LGd60diEmJ
+  +xKC89+Z0bGdElPpVW2WdOkTXL47UoNfZpHzpxhytOmjAykxGFtaqtUmHzvN
+  KogM5YDXuO7ZcWjiiTbKSnLcYyWLBp8VGq+MdDQmIEV7YpE3/mWPHat0wZar
+  X87ATQRUpVYMAQgAogdxHIK2i4MMeV2DASacwP037GCqyLHRcmo1ud5IYkHd
+  WXs1xigEklj2+3AaWjYgHzhN/f5BE2aDFttSonJhQ+ltZrEArungIWppSfN+
+  v6SyzmUsYK8EooF1M/EckvyF3ugub+SGst4MXyGfYhx901oRvKhY61pFWgZP
+  3gs/P1nHbDpUYNDKENflVBV0ha2DSlLxFQdfSh4hh4Jm1icmw85V5gTwppQd
+  CQ//qGZ757Tq4AtZS9givMYnSkXFsSlufKZ8LTVa/RFZ+gGKbcJHMR8XLoOc
+  8n8Vge92GHm63W5mP33A99e+NgyegInLmoi3lIXGO8yORIdwci17Eaqa9QAR
+  AQABwsBfBBgBCAATBQJUpVYQCRBOUHrpko2y8AIbDAAAmiAIAIHhfGiJ9e9L
+  n8z9tD/BFzqk5vll36hCXkLdg2HzftJsxPdW0eT27iDLagJcsrbVpRAag49/
+  47GH9BeHdtqsDNsh7UzQAlfp4t7+Fi00+9GuazHtTnI1bN9zgpGLCCNP6JUR
+  J9Z00c+GhQayTkPwTCf9zCidtbbNJc7GRlfgOMaoNqGoasyZrltqoB6hCM16
+  l0jkh59MIqQ+4FbLQOqr/7SGi6H1wzFa/Q4Q9R2VDg5zlEg163pbsf+ope52
+  3rPxBia7vxpFfXQXGbtR6vZDjI8uqsEMEyflqiuHJxmjtitnYLRqxQRr9fZq
+  WMc+ZlpNrplXO9WkeuhEICGQdZSy/ok=
+  =+yKz
+  -----END PGP PUBLIC KEY BLOCK-----
+</pre>
+
+####index.yaml
+1. 用途：公开数据的索引文件，每次增添数据都修改index。
+2. 数据项：
+	* period：管理周期的列表
+		* begintime：一个管理周期的开始时间，精确到秒。
+		* totalbalance：管理周期开始时以Token结算的资产总额。
+	* contractmax：契约的最大编号。
+	* contract：当前有效的契约。
+	* ticketmax：工单的最大编号。
+	* ticket：当前有效的工单。
+3. 范例
+<pre>
+period:
+- begintime: "201501010000"
+  totalbalance: 0
+- begintime: "201501200000"
+  totalbalance: 0
+contractmax: 6
+contract:
+- 1
+- 2
+- 3
+- 4
+- 5
+- 6
+ticketmax: 1
+ticket:
+- 1
+</pre>
 
 ##部署许可证
 ego 个人领域模型

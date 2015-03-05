@@ -15,7 +15,7 @@ type PeriodIndex struct {
 }
 
 type PeriodBrief struct {
-	BeingTime    string
+	BeginTime    string
 	TotalBalance float32
 }
 
