@@ -136,7 +136,7 @@ egonet
 	* statement：自我陈述
 	* pubkey：PGP公钥
 3. 范例：
-	<pre>
+<pre>
 	name: Huang Yonggang
 	nickname: modeler
 	email: huangyg@mars22.com
@@ -179,7 +179,7 @@ egonet
 	  WMc+ZlpNrplXO9WkeuhEICGQdZSy/ok=
 	  =+yKz
 	  -----END PGP PUBLIC KEY BLOCK-----
-	</pre>
+</pre>
 
 ####index.yaml
 1. 用途：公开数据的索引文件，每次增添数据都修改index。
@@ -192,7 +192,7 @@ egonet
 	* ticketmax：工单的最大编号。
 	* ticket：当前有效的工单。
 3. 范例
-	<pre>
+<pre>
 	period:
 	- begintime: "201501010000"
 	  totalbalance: 0
@@ -209,7 +209,7 @@ egonet
 	ticketmax: 1
 	ticket:
 	- 1
-	</pre>
+</pre>
 
 ##部署许可证
 ego 个人领域模型
