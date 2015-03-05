@@ -35,6 +35,7 @@ func serveFile(pattern string, filename string) {
 }
 
 func main() {
+	makeyaml()
 	//readyaml()
 	if Exist("data\\key.pub") {
 		openbrowser("http://127.0.0.1")
@@ -179,6 +180,8 @@ WMc+ZlpNrplXO9WkeuhEICGQdZSy/ok=
 	client := EgoClient{hyg, EgoCOD, []AssetPool{rawpool, p1pool, p2pool, iapool}}
 	index := GlobalIndex{[]PeriodBrief{{"201501010000", 0.0}, {"201501200000", 0.0}}, 6, []int{1, 2, 3, 4, 5, 6}, 1, []int{1}}
 
+	egomodeling := Contract{2, "ego modeling", "p2", 2, "ego", "ego建模者", "2006-11-12 23:25:00", "2006-11-12 23:25:00", "", 2}
+
 	d, err := yaml.Marshal(&hyg)
 	checkErr(err)
 	log.Printf("--- hyg:\n%s\n\n", string(d))
@@ -206,6 +209,9 @@ WMc+ZlpNrplXO9WkeuhEICGQdZSy/ok=
 
 	d, _ = yaml.Marshal(&index)
 	log.Printf("--- index:\n%s\n\n", string(d))
+
+	d, _ = yaml.Marshal(&egomodeling)
+	log.Printf("--- egomodeling:\n%s\n\n", string(d))
 
 }
 

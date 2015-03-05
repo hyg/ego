@@ -270,6 +270,34 @@ egonet
 	creatorname: Huang Yonggang
 </pre>
 
+####contract.yaml
+1. 用途：记录一份契约的信息，保存在\sharedata\contact\n.yaml，其中n是契约编号。
+2. 数据项：
+	* contractid：契约编号
+	* title：契约标题
+	* poolname：契约所属资源库名称
+	* otherpartytype：对方类型，1-自然人，2-利益共同体。
+	* otherpartyname：对方名称
+	* content：契约内容
+	* signtime：签署时间
+	* validtime：生效时间
+	* invalidtime：失效时间
+	* status：契约状态，1-要约，2-生效，3-失效。
+3. 范例
+<pre>
+	contractid: 2
+	title: ego modeling
+	poolname: p2
+	otherpartytype: 2
+	otherpartyname: ego
+	content: "ego建模者"
+	signtime: 2006-11-12 23:25:00
+	validtime: 2006-11-12 23:25:00
+	invalidtime: ""
+	status: 2
+</pre>
+
+####.yaml
 1. 用途：
 2. 数据项：
 3. 范例
