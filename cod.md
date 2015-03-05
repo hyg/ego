@@ -211,6 +211,57 @@ egonet
 	- 1
 </pre>
 
+####com.yaml
+1. 用途：记录一个共同体模型的信息，保存在\sharedata\person.yyy.com.yaml，其中person是建模者的昵称，yyy是模型昵称。
+2. 数据项：
+	* name：模型名称
+	* nickname：模型昵称
+	* creatortype：建模者类型，1-自然人，2-利益共同体。
+	* creatorname：建模者名称
+3. 范例
+<pre>
+	name: "通用 个人领域模型"
+	nickname: common
+	puburl: github.com/hyg/ego/blob/master/common.com.md
+	creatortype: 1
+	creatorname: Huang Yonggang
+</pre>
+
+####cod.yaml
+1. 用途：记录一个共同体部署的信息，保存在\sharedata\person.yyy.cod.yaml，其中person是部署者的昵称，yyy是部署昵称。
+2. 数据项：
+	* name：部署名称
+	* nickname：部署昵称
+	* model
+		* 具体数据项同com.yaml定义。
+	* puburl：部署方案网址
+	* apiurl：api网址
+	* deployertype：部署者类型，1-自然人，2-利益共同体。
+	* deployername：部署者名称
+3. 范例
+<pre>
+	name: "ego 个人管理工具"
+	nickname: ego
+	model:
+	  name: "ego 个人领域模型"
+	  nickname: ego
+	  puburl: github.com/hyg/ego/blob/master/ego.com.md
+	  creatortype: 1
+	  creatorname: Huang Yonggang
+	puburl: github.com/hyg/ego/blob/master/cod.md
+	apiurl: ego.mars22.com/api
+	deployertype: 1
+	deployername: Huang Yonggang
+</pre>
+
+
+1. 用途：
+2. 数据项：
+3. 范例
+<pre>
+</pre>
+
+
 ##部署许可证
 ego 个人领域模型
 
