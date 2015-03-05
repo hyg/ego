@@ -187,6 +187,10 @@ WMc+ZlpNrplXO9WkeuhEICGQdZSy/ok=
 	pi := PeriodIndex{3, 7, 2}
 	bl := Baseline{"1.0", []AssetPool{rawpool, p1pool, p2pool, iapool}}
 
+	income := Income{1, 0, "raw", "Time1", 9600, 9600, "2015-01-01 00:00:00", "", "2015-01-01 00:00:00", "2015-01-20 24:00:00"}
+	pay := Pay{0, 0, "raw", "Time1", 270, 270, "2015-01-01 14:00:00", "学习openpgp的js，完成一个范例。github.com/hyg/js.sample/tree/master/openpgp", "14:00", "18:25"}
+	exchange := Exchange{"raw", "Time1", 2400, "p2", "Token", 2400, 2400, "2015-01-01 00:00:00", "每天两小时", "", ""}
+
 	d, err := yaml.Marshal(&hyg)
 	checkErr(err)
 	log.Printf("--- hyg:\n%s\n\n", string(d))
@@ -227,6 +231,12 @@ WMc+ZlpNrplXO9WkeuhEICGQdZSy/ok=
 	d, _ = yaml.Marshal(&bl)
 	log.Printf("--- baseline:\n%s\n\n", string(d))
 
+	d, _ = yaml.Marshal(&income)
+	log.Printf("--- income:\n%s\n\n", string(d))
+	d, _ = yaml.Marshal(&pay)
+	log.Printf("--- pay:\n%s\n\n", string(d))
+	d, _ = yaml.Marshal(&exchange)
+	log.Printf("--- exchange:\n%s\n\n", string(d))
 }
 
 func CopyFile(dstName, srcName string) (written int64, err error) {

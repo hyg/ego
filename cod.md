@@ -254,7 +254,7 @@ egonet
 	deployername: Huang Yonggang
 </pre>
 
-####pool.yaml
+####pooltype.yaml
 1. 用途：记录一个资源池的信息，保存在\sharedata\person.yyy.pool.yaml，其中person是资源池种类创建者的昵称，yyy是资源池种类的名称。
 2. 数据项：
 	* name：资源池种类的名称
@@ -383,6 +383,89 @@ egonet
 	    Time1: 64
 	    Time2: 64
 	    Time3: 64
+</pre>
+
+####income.yaml
+1. 用途：保存一笔收入的记录，保存在\sharedata\YYMMDDhhmmss\n.income.yaml，其中YYMMDDhhmmss是管理周期开始时间，n是收入编号。
+2. 数据项：
+	* contractid：收入所属契约编号
+	* ticketid：收入所属工单编号
+	* poolname：收入所属资源池名称
+	* assettype：收入的资产种类
+	* amount：数额
+	* tokenamount：折算为Token的数额
+	* incometime：收入的时间
+	* log：日志
+	* param1：参数1，自由填写。
+	* param2：参数2
+3. 范例
+<pre>
+	contractid: 1
+	ticketid: 0
+	poolname: raw
+	assettype: Time1
+	amount: 9600
+	tokenamount: 9600
+	incometime: 2015-01-01 00:00:00
+	log: ""
+	param1: 2015-01-01 00:00:00
+	param2: 2015-01-20 24:00:00
+</pre>
+
+####pay.yaml
+1. 用途：保存一笔支出的记录，保存在\sharedata\YYMMDDhhmmss\n.pay.yaml，其中YYMMDDhhmmss是管理周期开始时间，n是支出编号。
+2. 数据项：
+	* contractid：支出所属契约编号
+	* ticketid：支出所属工单编号
+	* poolname：支出所属资源池名称
+	* assettype：支出的资产种类
+	* amount：数额
+	* tokenamount：折算为Token的数额
+	* paytime：支出的时间
+	* log：日志
+	* param1：参数1，自由填写。
+	* param2：参数2
+3. 范例
+<pre>
+	contractid: 0
+	ticketid: 0
+	poolname: raw
+	assettype: Time1
+	amount: 270
+	tokenamount: 270
+	paytime: 2015-01-01 14:00:00
+	log: "学习openpgp的js，完成一个范例。github.com/hyg/js.sample/tree/master/openpgp"
+	param1: "14:00"
+	param2: "18:25"
+</pre>
+
+####exchange.yaml
+1. 用途：保存一笔交易的记录，保存在\sharedata\YYMMDDhhmmss\n.exchange.yaml，其中YYMMDDhhmmss是管理周期开始时间，n是交易编号。
+2. 数据项：
+	* poolname1：交易第一方资源库名称
+	* assettype1：交易第一方资产种类
+	* amount1：交易第一方支付的资产数额
+	* poolname2：交易第二方资源库名称
+	* assettype2：交易第二方资产种类
+	* amount2：交易第二方支付的资产数额
+	* tokenamount：折算为Token的交易数额
+	* exchangetime：交易时间
+	* log：日志
+	* param1：参数1，自由填写。
+	* param2：参数2
+3. 范例
+<pre>
+	poolname1: raw
+	assettype1: Time1
+	amount1: 2400
+	poolname2: p2
+	assettype2: Token
+	amount2: 2400
+	tokenamount: 2400
+	exchangetime: 2015-01-01 00:00:00
+	log: 每天两小时
+	param1: ""
+	param2: ""
 </pre>
 
 ####.yaml
