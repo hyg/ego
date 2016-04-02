@@ -37,7 +37,8 @@ func serveFile(pattern string, filename string) {
 func main() {
 	makeyaml()
 	//readyaml()
-	if Exist("data\\key.pub") {
+	ret := ReadJSKey()
+	if ret {
 		openbrowser("http://127.0.0.1")
 	} else {
 		openbrowser("http://127.0.0.1/static/template/createkey.html")
