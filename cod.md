@@ -474,11 +474,3 @@ egonet
 3. 范例
 <pre>
 </pre>
-
-##部署许可证
-ego 个人领域模型
-
-1. 本作品版权归[黄勇刚](mailto:huangyg@mars22.com)所有。
-2. 使用本部署方案的部署者，视为同意“互联模式部署者要约”要约。
-3. 本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">知识共享署名 4.0 国际许可协议</a>进行许可。  
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://licensebuttons.net/l/by-sa/4.0/88x31.png" /></a>
