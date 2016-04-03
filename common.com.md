@@ -101,3 +101,9 @@
 	* 相关咨询：16 Token/分钟（必须公开咨询，建模者选择有价值的问题回答。）
 2. 建模者会发布改进本模型和部署方案的交易要约，具体价格根据Token净值调整。
 
+##模型许可证
+通用 个人领域模型
+
+1. 本作品版权归[黄勇刚](mailto:huangyg@mars22.com)所有。
+2. 本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">知识共享署名 4.0 国际许可协议</a>进行许可。  
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://licensebuttons.net/l/by-sa/4.0/88x31.png" /></a>

@@ -86,3 +86,10 @@ club是基于[通用个人领域模型](common.com.md)（以下简称“通用�
 1. 俱乐部成员指定总结者时，按照《俱乐部配置文件》将t3或（t3 * d / 365）分配到总结者对应资源池中。
 2. 《封闭交流确认函》发出时，参与者缴纳的t1（封闭交流主持人报酬）自动进入召集人对应资源池中，t2（封闭交流后勤官报酬）自动进入后勤官对应资源池中。
 3. 每年末，俱乐部对应自动账户的余额转入资源池种类创建者的对应资源池。
+
+##模型许可证
+通用 个人领域模型
+
+1. 本作品版权归[黄勇刚](mailto:huangyg@mars22.com)所有。
+2. 本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">知识共享署名 4.0 国际许可协议</a>进行许可。  
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://licensebuttons.net/l/by-sa/4.0/88x31.png" /></a>
