@@ -1,0 +1,17 @@
+name: PSMD
+id: AdnICD1W
+parent id: 0
+start: 2015-01-01T00:00:00.000Z
+dependencies: null
+path: /PSMD
+readme: |
+  Pivot Structure Modeling and Deploy
+
+  PSMD培养共同体建模、部署人员，帮助他们适应分布式自治组织( Distributed Autonomous Community)的需要。
+  它本身是开放、半自助的共同体。
+step:
+  - time: null
+    name: null
+    status: null
+    readme: ''
+log:
