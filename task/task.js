@@ -72,8 +72,8 @@ function maketaskview() {
     var alltask = yaml.load(fs.readFileSync("alltask.yaml", 'utf8'));
     // make task name-id index
     var taskbyname = new Object();
-    for (var id in alltask.task) {
-        taskbyname[alltask.task[id].name] = id;
+    for (var id in alltask.tasklist) {
+        taskbyname[alltask.tasklist[id].name] = id;
     }
     //console.log("task name-id index:\n"+yaml.dump(taskbyname));
 
@@ -98,19 +98,19 @@ function maketaskview() {
 
             var taskname = alldraft[date].time[slice].subject;
             //console.log(taskname);
-            //console.log(alltask.task[taskbyname[taskname]]);
+            //console.log(alltask.tasklist[taskbyname[taskname]]);
             if (taskbyname[taskname] != null) {
-                if (alltask.task[taskbyname[taskname]].log == null) {
-                    alltask.task[taskbyname[taskname]].log = new Object();
+                if (alltask.tasklist[taskbyname[taskname]].log == null) {
+                    alltask.tasklist[taskbyname[taskname]].log = new Object();
                 }
-                alltask.task[taskbyname[taskname]].log[logitem.begin] = logitem;
-                if ((alltask.task[taskbyname[taskname]].firstlog == null) | (alltask.task[taskbyname[taskname]].firstlog > logitem.begin)) {
-                    alltask.task[taskbyname[taskname]].firstlog = logitem.begin;
+                alltask.tasklist[taskbyname[taskname]].log[logitem.begin] = logitem;
+                if ((alltask.tasklist[taskbyname[taskname]].firstlog == null) | (alltask.tasklist[taskbyname[taskname]].firstlog > logitem.begin)) {
+                    alltask.tasklist[taskbyname[taskname]].firstlog = logitem.begin;
                 }
-                if (alltask.task[taskbyname[taskname]].totaltime == null) {
-                    alltask.task[taskbyname[taskname]].totaltime = logitem.amount;
+                if (alltask.tasklist[taskbyname[taskname]].totaltime == null) {
+                    alltask.tasklist[taskbyname[taskname]].totaltime = logitem.amount;
                 } else {
-                    alltask.task[taskbyname[taskname]].totaltime = alltask.task[taskbyname[taskname]].totaltime + logitem.amount;
+                    alltask.tasklist[taskbyname[taskname]].totaltime = alltask.tasklist[taskbyname[taskname]].totaltime + logitem.amount;
                 }
             } else {
                 console.log("can't find task metadata:\t" + taskname);
@@ -125,8 +125,8 @@ function maketaskview() {
     });
 
     // make task markdown
-    for(var id in alltask.task){
-        var taskobj = alltask.task[id];
+    for(var id in alltask.tasklist){
+        var taskobj = alltask.tasklist[id];
         var taskstr = "# "+taskobj.name +"\n\n";
 
         taskstr = taskstr + "- id:" + taskobj.id + "\n";
@@ -149,16 +149,16 @@ function maketaskview() {
         taskstr = taskstr + "- 路径:" + taskobj.path + "\n";
         taskstr = taskstr + "- 简介:\n~~~\n" + taskobj.readme + "\n~~~\n";
         if(taskobj["log"] != null){
-            taskstr = taskstr + "## 任务日志:\n|时间|时长(分钟)|输出结果|\n|---|---|---|\n" ;
+            taskstr = taskstr + "## 任务日志:\n|时间|时长(分钟)|名称|输出结果|\n|---|---|---|---|\n" ;
 
             for(var date in taskobj["log"]){
                 var logitem = taskobj["log"][date] ;
-                taskstr = taskstr + "|" + logitem["begin"] + "|" + logitem["amount"] + "|[" + logitem["output"] + "](" + logitem["output"] + ")|\n";
+                taskstr = taskstr + "|" + logitem["begin"] + "|" + logitem["amount"] + "|" + logitem.name + "|[" + logitem["output"] + "](" + logitem["output"] + ")|\n";
             }
         }
         
-        var markdownfilename = "t."+taskobj.id+".md" ;
-        //console.log("filename:"+markdownfilename+"\n"+taskstr);
+        var markdownfilename = "task."+taskobj.id+".md" ;
+        console.log("filename:"+markdownfilename+"\n"+taskstr);
         fs.writeFile(markdownfilename,taskstr, (err) => {
             if (err) throw err;
             console.log('\n'+markdownfilename+"文件已被更新。");
@@ -178,9 +178,8 @@ function loaddraft(itemPath) {
 }
 
 function tasktoalltask() {
-    var alltask = new Object();
-    var tasklist = new Object();
-    var task;
+    var alltask = new Object()
+    //var task;
 
     const date = new Date();
     const options = { year: 'numeric', month: 'long', day: 'numeric' };
@@ -189,19 +188,80 @@ function tasktoalltask() {
     //const dateString = moment(date).format('YYYY-MM-DD HH:mm:ss');// 输出类似 "2023-03-13 11:30:45" 的字符串
     alltask["time"] = dateString;
 
-    fs.readdirSync(".").forEach(file => {
-        if (file.substr(0, 2) == "t.") {
-            task = yaml.load(fs.readFileSync(file, 'utf8'));
-            console.log(task.name);
-            tasklist[task.id] = task;
+    var tasklist = new Object();
+    loadtask(".",tasklist);
+    // make the task structure
+    var tasktree = new Object();
+    
+    for(var id in tasklist){
+        if(tasklist[id]["parent id"] == 0){
+            tasktree[id] = yaml.load(yaml.dump(tasklist[id])) ;
+            tasktree[id].level = 1 ;
         }
-    });
-    alltask.task = tasklist;
+    }
+    var level = 0 ;    
+    var findsub = true;
+    while(findsub){
+        findsub = false;
+        level = level+1;
+        for(var treeid in tasktree){
+            if(tasktree[treeid].level == level){
+                console.log("search the subtask of:"+tasktree[treeid].name+"\t"+treeid)
+                for(var listid in tasklist){
+                    if(tasklist[listid]["parent id"] == treeid){
+                        console.log("find a subtask:"+tasklist[listid].name+"\t"+listid);
+                        if(tasktree[treeid].subtask == null){
+                            tasktree[treeid].subtask = new Object();
+                        }
+                        tasktree[treeid].subtask[listid] = yaml.load(yaml.dump(tasklist[listid])) ;
+                        tasktree[treeid].subtask[listid].level = level+1 ;
+                        findsub = true;
+                    }
+                }
+            }
+        }
+    }
 
+    alltask.tasklist = tasklist;
+    alltask.tasktree = tasktree;
+
+    //console.log(yaml.dump(alltask));
+    
     fs.writeFile("alltask.yaml", yaml.dump(alltask), (err) => {
         if (err) throw err;
         console.log('alltask.yaml文件已被保存。');
     });
+    
+}
+
+// load all task metadata files in a folder, append in a object.
+// if any task has its own path field, search it.
+function loadtask(path,obj){
+    //console.log("enter loadtask, path:"+path);
+
+    if (fs.existsSync(path)){
+        fs.readdirSync(path).forEach(file => {
+            if ((file.substring(file.lastIndexOf(".")) == ".yaml")&(file.substr(0, 5) == "task.")) {
+                //console.log("loading:"+file);
+                task = yaml.load(fs.readFileSync(path+"\\"+file, 'utf8'));
+                //console.log("load "+task.name);
+                obj[task.id] = task;
+    
+                if(task.path != null){
+                    for(var item in task.path){
+                        var nextname = task.path[item].name;
+                        var nextpath = path+"\\"+task.path[item].path;
+                        //console.log("find a new path. name: "+ nextname + "\tpath:" + nextpath) ;
+                        loadtask(nextpath,obj);
+                    }
+                    
+                }
+            }
+        });
+    }else{
+        console.log("this path is not exist:"+ path);
+    }
+    
 }
 
 function drafttostat(startdate, nextstartdate) {
@@ -215,8 +275,8 @@ function drafttostat(startdate, nextstartdate) {
     var alltask = yaml.load(fs.readFileSync("alltask.yaml", 'utf8'));
     // make task name-id index
     var taskbyname = new Object();
-    for (var id in alltask.task) {
-        taskbyname[alltask.task[id].name] = id;
+    for (var id in alltask.tasklist) {
+        taskbyname[alltask.tasklist[id].name] = id;
     }
     //console.log("task name-id index:\n"+yaml.dump(taskbyname));
 
@@ -263,7 +323,7 @@ function drafttotask(date) {
     var taskbyname = new Object();
     for (taskid in alltask.task) {
         //console.log("task id:"+taskid);
-        taskbyname[alltask.task[taskid].name] = taskid;
+        taskbyname[alltask.tasklist[taskid].name] = taskid;
     }
     //console.log(taskbyname.valueOf());
 
@@ -273,7 +333,7 @@ function drafttotask(date) {
         console.log("timelog.subject:" + timelog.subject);
         if (taskbyname[timelog.subject] != undefined) {
             // the subject is a task
-            var taskmetadatafilename = "test." + "t." + timelog.subject + ".yaml";
+            var taskmetadatafilename = "test." + "task." + timelog.subject + ".yaml";
             //console.log("\nloading file\n"+taskmetadatafilename+"\n"+fs.readFileSync(taskmetadatafilename, 'utf8'));
             var taskmetadata = yaml.load(fs.readFileSync(taskmetadatafilename, 'utf8'));
             var tasklog = taskmetadata.log;

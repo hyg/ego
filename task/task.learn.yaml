@@ -1,15 +1,15 @@
 name: learn
-id: ao2lLpI
+id: 6a8da52e
 parent id: 0
 start: 1975-03-22
 dependencies:
 path: 
   - name: reading
-    path: note/task/
+    path: ..\..\note\task
     readme: |
       文字类学习
   - name: js
-    path: js.sample/task/
+    path: ..\..\js.sample\task
     readme: |
       javascript族编程学习
 readme: |

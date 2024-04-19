@@ -1,9 +1,11 @@
 name: PSMD
-id: AdnICD1W
+id: 01d9c808
 parent id: 0
 start: 2015-01-01T00:00:00.000Z
 dependencies: null
-path: /PSMD
+path: 
+  - name: PSMD git repo
+    path: ..\..\PSMD\data
 readme: |
   Pivot Structure Modeling and Deploy
 
