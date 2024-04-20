@@ -79,12 +79,16 @@ tasklist:
       '20240419093000':
         begin: '20240419093000'
         amount: 90
-        name: >-
-          追溯到一级任务的path文件夹的task metadata。考虑子项目的情况。应该按树形结构逐级汇总。alltask
-          metadata这时候可以用上，不要漏了subject。
+        name: 根据task metadata 中的path字段追溯到各级子项目，在alltask metadata中增加树形结构。
         output: draft/2024/04/20240419093000.md
+      '20240420143000':
+        begin: '20240420143000'
+        amount: 30
+        name: 子任务时间汇总的伪码
+        output: draft/2024/04/20240420143000.md
     firstlog: 20240413160000
-    totaltime: 1620
+    totaltime: 840
+    treetotaltime: 840
   16cedf80:
     name: js
     id: 16cedf80
@@ -92,6 +96,15 @@ tasklist:
     start: 2015-01-01T00:00:00.000Z
     readme: |
       学习javasricpt，包括ECMAscript、Typescript、nodejs，以及使用以上语言开发通用模块。
+    log:
+      '20240420140000':
+        begin: '20240420140000'
+        amount: 30
+        name: 学习国密算法
+        output: draft/2024/04/20240420140000.md
+    firstlog: '20240420140000'
+    totaltime: 30
+    treetotaltime: 30
   6a8da52e:
     name: learn
     id: 6a8da52e
@@ -115,6 +128,8 @@ tasklist:
         status: null
         readme: ''
     log: null
+    totaltime: 0
+    treetotaltime: 30
   01d9c808:
     name: PSMD
     id: 01d9c808
@@ -179,25 +194,41 @@ tasklist:
       '20240419074500':
         begin: '20240419074500'
         amount: 60
-        name: 一套合同的、一个模型的termset。
+        name: PSMD 一合同附件的termset
         output: draft/2024/04/20240419074500.md
       '20240419140000':
         begin: '20240419140000'
         amount: 30
-        name: 把termset的metada整理生成id和文件名。
+        name: 把termset的metada整理生成id和文件名
         output: draft/2024/04/20240419140000.md
       '20240419143000':
         begin: '20240419143000'
         amount: 30
-        name: 设计error、deploy、com的关系。
+        name: 把termset的metada整理生成id和文件名
         output: draft/2024/04/20240419143000.md
       '20240419160000':
         begin: '20240419160000'
         amount: 60
-        name: 调整PSMD新版基础规则的表述。
+        name: 设计error、term、termset、deploy、com的关系。
         output: draft/2024/04/20240419160000.md
+      '20240420074500':
+        begin: '20240420074500'
+        amount: 75
+        name: 整理合同和COM metadata
+        output: draft/2024/04/20240420074500.md
+      '20240420093000':
+        begin: '20240420093000'
+        amount: 140
+        name: COM metsdata → COM view
+        output: draft/2024/04/20240420093000.md
+      '20240420160000':
+        begin: '20240420160000'
+        amount: 60
+        name: 设计error、log、env、knowledge等新的数据结构，以及与termset、com、task关联。
+        output: draft/2024/04/20240420160000.md
     firstlog: 20240414074500
-    totaltime: 2160
+    totaltime: 1355
+    treetotaltime: 1355
   b7bd55c1:
     name: deploy
     id: b7bd55c1
@@ -207,6 +238,8 @@ tasklist:
       - id: e39da5b6
     readme: |
       根据标准模型部署共同体。
+    totaltime: 0
+    treetotaltime: 0
   e39da5b6:
     name: modeling
     id: e39da5b6
@@ -214,6 +247,8 @@ tasklist:
     start: 2015-01-01T00:00:00.000Z
     readme: |
       从实践中整理成功案例，提炼出共同体标准模型。
+    totaltime: 0
+    treetotaltime: 0
 tasktree:
   1cJ9sN:
     name: ego
@@ -236,6 +271,7 @@ tasktree:
           readme: ''
     log: null
     level: 1
+    treetotaltime: 840
   6a8da52e:
     name: learn
     id: 6a8da52e
@@ -269,6 +305,8 @@ tasktree:
         readme: |
           学习javasricpt，包括ECMAscript、Typescript、nodejs，以及使用以上语言开发通用模块。
         level: 2
+        treetotaltime: 30
+    treetotaltime: 30
   01d9c808:
     name: PSMD
     id: 01d9c808
@@ -301,6 +339,7 @@ tasktree:
         readme: |
           根据标准模型部署共同体。
         level: 2
+        treetotaltime: 0
       e39da5b6:
         name: modeling
         id: e39da5b6
@@ -309,4 +348,6 @@ tasktree:
         readme: |
           从实践中整理成功案例，提炼出共同体标准模型。
         level: 2
+        treetotaltime: 0
+    treetotaltime: 1355
 firstdrat: '20240413'

@@ -74,6 +74,7 @@ function maketaskview() {
     var taskbyname = new Object();
     for (var id in alltask.tasklist) {
         taskbyname[alltask.tasklist[id].name] = id;
+        alltask.tasklist[id].totaltime = 0;
     }
     //console.log("task name-id index:\n"+yaml.dump(taskbyname));
 
@@ -81,6 +82,7 @@ function maketaskview() {
     traverseFolder(draftrepopath, loaddraft);
     //console.log(alldraft.valueOf());
 
+    //var drafttotaltime = 0;
     var firstdate = datestr();
     for (var date in alldraft) {
         if (date < firstdate) {
@@ -115,57 +117,91 @@ function maketaskview() {
             } else {
                 console.log("can't find task metadata:\t" + taskname);
             }
+            //drafttotaltime = drafttotaltime + logitem.amount;
+            //console.log("begin:"+ logitem.begin+" amount:"+logitem.amount+" total:"+drafttotaltime);
         }
         alltask.firstdrat = firstdate;
     }
+    //console.log("draft totaltime:" + drafttotaltime);
+    var tasktreetotaltime = gettreetime(alltask.tasklist, alltask.tasktree);
+    console.log("tasktree totaltime:" + tasktreetotaltime);
+
     //console.log("the final alltask:\n" + yaml.dump(alltask));
-    fs.writeFile("alltask.yaml", yaml.dump(alltask), (err) => {
-        if (err) throw err;
-        console.log('\n\nalltask.yaml文件已被更新。');
-    });
+    fs.writeFileSync("alltask.yaml", yaml.dump(alltask));
+    console.log('\nalltask.yaml文件已被更新。');
 
     // make task markdown
-    for(var id in alltask.tasklist){
+    for (var id in alltask.tasklist) {
         var taskobj = alltask.tasklist[id];
-        var taskstr = "# "+taskobj.name +"\n\n";
+        var taskstr = "# " + taskobj.name + "\n\n";
 
         taskstr = taskstr + "- id:" + taskobj.id + "\n";
-        if(taskobj["parent id"] != 0){
-            taskstr = taskstr + "- 父任务id:" + taskobj["parent id"] + "\n";    
+        if (taskobj["parent id"] != 0) {
+            taskstr = taskstr + "- 父任务id:" + taskobj["parent id"] + "\n";
         }
         taskstr = taskstr + "- 开始时间:" + taskobj.start + "\n";
-        if(taskobj["firstlog"] != null){
-            taskstr = taskstr + "- 日志开始时间:" + taskobj["firstlog"] + "\n";    
+        if (taskobj["firstlog"] != null) {
+            taskstr = taskstr + "- 日志开始时间:" + taskobj["firstlog"] + "\n";
         }
-        if(taskobj["totaltime"] != null){
-            taskstr = taskstr + "- 总耗时(分钟):" + taskobj["totaltime"] + "\n";    
+        if (taskobj["totaltime"] != null) {
+            taskstr = taskstr + "- 总耗时(分钟):" + taskobj["totaltime"] + "\n";
         }
-        if(taskobj["dependencies"] != null){
-            taskstr = taskstr + "- 依赖任务id:\n" ;
-            for(var i in taskobj["dependencies"]){
+        if (taskobj["dependencies"] != null) {
+            taskstr = taskstr + "- 依赖任务id:\n";
+            for (var i in taskobj["dependencies"]) {
                 taskstr = taskstr + "\t" + taskobj["dependencies"][i] + "\n";
             }
         }
         taskstr = taskstr + "- 路径:" + taskobj.path + "\n";
         taskstr = taskstr + "- 简介:\n~~~\n" + taskobj.readme + "\n~~~\n";
-        if(taskobj["log"] != null){
-            taskstr = taskstr + "## 任务日志:\n|时间|时长(分钟)|名称|输出结果|\n|---|---|---|---|\n" ;
+        if (taskobj["log"] != null) {
+            taskstr = taskstr + "## 任务日志:\n|时间|时长(分钟)|名称|输出结果|\n|---|---|---|---|\n";
 
-            for(var date in taskobj["log"]){
-                var logitem = taskobj["log"][date] ;
+            for (var date in taskobj["log"]) {
+                var logitem = taskobj["log"][date];
                 taskstr = taskstr + "|" + logitem["begin"] + "|" + logitem["amount"] + "|" + logitem.name + "|[" + logitem["output"] + "](" + logitem["output"] + ")|\n";
             }
         }
-        
-        var markdownfilename = "task."+taskobj.id+".md" ;
-        console.log("filename:"+markdownfilename+"\n"+taskstr);
-        fs.writeFile(markdownfilename,taskstr, (err) => {
-            if (err) throw err;
-            console.log('\n'+markdownfilename+"文件已被更新。");
-        });
+
+        var markdownfilename = "task." + taskobj.id + ".md";
+        //console.log("filename:"+markdownfilename+"\n"+taskstr);
+        fs.writeFileSync(markdownfilename, taskstr);
+        console.log(markdownfilename + "文件已被更新。");
     }
 }
 
+function gettreetime(tasklist, treenode) {
+    var treetotaltime = 0;
+
+    for (var id in treenode) {
+        if (treenode[id].subtask != null) {
+            var childtotaltime = gettreetime(tasklist, treenode[id].subtask);
+            if (tasklist[id].totaltime != null) {
+                treenode[id].treetotaltime = tasklist[id].totaltime + childtotaltime;
+                treetotaltime = treetotaltime + tasklist[id].totaltime + childtotaltime;
+                console.log("tree node:" + id + " node time:" + tasklist[id].totaltime + " child time:" + childtotaltime);
+                tasklist[id].treetotaltime = tasklist[id].totaltime + childtotaltime;
+            } else {
+                treenode[id].treetotaltime = childtotaltime;
+                treetotaltime = treetotaltime + childtotaltime;
+                console.log("tree node:" + id + "it has not node time, child time:" + childtotaltime);
+                tasklist[id].treetotaltime = childtotaltime;
+            }
+        } else {
+            if (tasklist[id].totaltime != null) {
+                treenode[id].treetotaltime = tasklist[id].totaltime;
+                treetotaltime = treetotaltime + tasklist[id].totaltime;
+                console.log("end node:" + id + " node time:" + tasklist[id].totaltime);
+                tasklist[id].treetotaltime = tasklist[id].totaltime;
+                //return parseInt(tasklist[id].totaltime) ;
+            } else {
+                console.log("end node:" + id + "it has not node time");
+            }
+        }
+    }
+
+    return treetotaltime;
+}
 
 function loaddraft(itemPath) {
     var draft = new Object();
@@ -189,32 +225,32 @@ function tasktoalltask() {
     alltask["time"] = dateString;
 
     var tasklist = new Object();
-    loadtask(".",tasklist);
+    loadtask(".", tasklist);
     // make the task structure
     var tasktree = new Object();
-    
-    for(var id in tasklist){
-        if(tasklist[id]["parent id"] == 0){
-            tasktree[id] = yaml.load(yaml.dump(tasklist[id])) ;
-            tasktree[id].level = 1 ;
+
+    for (var id in tasklist) {
+        if (tasklist[id]["parent id"] == 0) {
+            tasktree[id] = yaml.load(yaml.dump(tasklist[id]));
+            tasktree[id].level = 1;
         }
     }
-    var level = 0 ;    
+    var level = 0;
     var findsub = true;
-    while(findsub){
+    while (findsub) {
         findsub = false;
-        level = level+1;
-        for(var treeid in tasktree){
-            if(tasktree[treeid].level == level){
-                console.log("search the subtask of:"+tasktree[treeid].name+"\t"+treeid)
-                for(var listid in tasklist){
-                    if(tasklist[listid]["parent id"] == treeid){
-                        console.log("find a subtask:"+tasklist[listid].name+"\t"+listid);
-                        if(tasktree[treeid].subtask == null){
+        level = level + 1;
+        for (var treeid in tasktree) {
+            if (tasktree[treeid].level == level) {
+                console.log("search the subtask of:" + tasktree[treeid].name + "\t" + treeid)
+                for (var listid in tasklist) {
+                    if (tasklist[listid]["parent id"] == treeid) {
+                        console.log("find a subtask:" + tasklist[listid].name + "\t" + listid);
+                        if (tasktree[treeid].subtask == null) {
                             tasktree[treeid].subtask = new Object();
                         }
-                        tasktree[treeid].subtask[listid] = yaml.load(yaml.dump(tasklist[listid])) ;
-                        tasktree[treeid].subtask[listid].level = level+1 ;
+                        tasktree[treeid].subtask[listid] = yaml.load(yaml.dump(tasklist[listid]));
+                        tasktree[treeid].subtask[listid].level = level + 1;
                         findsub = true;
                     }
                 }
@@ -226,42 +262,42 @@ function tasktoalltask() {
     alltask.tasktree = tasktree;
 
     //console.log(yaml.dump(alltask));
-    
+
     fs.writeFile("alltask.yaml", yaml.dump(alltask), (err) => {
         if (err) throw err;
         console.log('alltask.yaml文件已被保存。');
     });
-    
+
 }
 
 // load all task metadata files in a folder, append in a object.
 // if any task has its own path field, search it.
-function loadtask(path,obj){
+function loadtask(path, obj) {
     //console.log("enter loadtask, path:"+path);
 
-    if (fs.existsSync(path)){
+    if (fs.existsSync(path)) {
         fs.readdirSync(path).forEach(file => {
-            if ((file.substring(file.lastIndexOf(".")) == ".yaml")&(file.substr(0, 5) == "task.")) {
+            if ((file.substring(file.lastIndexOf(".")) == ".yaml") & (file.substr(0, 5) == "task.")) {
                 //console.log("loading:"+file);
-                task = yaml.load(fs.readFileSync(path+"\\"+file, 'utf8'));
+                task = yaml.load(fs.readFileSync(path + "\\" + file, 'utf8'));
                 //console.log("load "+task.name);
                 obj[task.id] = task;
-    
-                if(task.path != null){
-                    for(var item in task.path){
+
+                if (task.path != null) {
+                    for (var item in task.path) {
                         var nextname = task.path[item].name;
-                        var nextpath = path+"\\"+task.path[item].path;
+                        var nextpath = path + "\\" + task.path[item].path;
                         //console.log("find a new path. name: "+ nextname + "\tpath:" + nextpath) ;
-                        loadtask(nextpath,obj);
+                        loadtask(nextpath, obj);
                     }
-                    
+
                 }
             }
         });
-    }else{
-        console.log("this path is not exist:"+ path);
+    } else {
+        console.log("this path is not exist:" + path);
     }
-    
+
 }
 
 function drafttostat(startdate, nextstartdate) {
