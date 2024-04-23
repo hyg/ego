@@ -39,3 +39,38 @@ tasktree:
 ~~~
 - tasklist是并列的，包括从draft中提取的日志、时间统计。
 - tasktree是树形结构。
+
+season metadata
+~~~
+year:
+season:
+dayplan:
+time:
+  in:
+    1: 40
+    2: 10
+    3: 2
+    // dayplanid: amount
+  agreement:
+    - name: contract1.deploy
+      deadline: 2024-06-13 18:00:00
+      budget:
+        90: 2
+        60: 8
+        30: 4
+    - name: contract2.modeling
+      deadline: 2024-05-16 12:00:00
+      budget:
+        90: 3
+        60: 2
+        30: 2
+    alloc:
+      taskid1:
+        90: 1
+        60: 3
+        30: 2
+      taskid2:
+        90: 4
+        60: 4
+        30: 1 
+~~~
