@@ -14,9 +14,7 @@ path:
       javascript族编程学习
 readme: |
   学习通用知识
-step:
-  - time: 
-    name:
-    status:
-    readme: |
-log:
+todo:
+  - 30: 整理各git托管商的page协议。
+  - 30: 学习正则表达式RegExp
+  - 90: 把PSMD的data、src部分升级到rdf，如果升级成功则作为范例。

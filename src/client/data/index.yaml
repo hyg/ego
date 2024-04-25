@@ -1,0 +1,16 @@
+﻿period:
+- begintime: "201501010000"
+  totalbalance: 0
+- begintime: "201501200000"
+  totalbalance: 0
+contractmax: 6
+contract:
+- 1
+- 2
+- 3
+- 4
+- 5
+- 6
+ticketmax: 1
+ticket:
+- 1

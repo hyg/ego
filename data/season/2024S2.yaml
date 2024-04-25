@@ -1,0 +1,199 @@
+year: 2024
+season: 1
+beginmonth: 3
+beginday: 1
+nextbeginmoth: 7
+nextbeginday: 1
+timetype:
+  - name: work
+  - name: free
+  - name: discuss
+  - name: learn
+  - name: prepare
+  - name: sleep
+  - name: food
+  - name: check
+dayplan:
+dayplan:
+  1:
+    supply:
+      90: 1
+      60: 2
+      30: 2
+    time:
+      - beginhour: 04
+        beginminute: 0
+        amount: 15
+        type: free
+        name: 休整
+      - beginhour: 04
+        beginminute: 15
+        amount: 60
+        type: prepare
+        name: 备餐、运动
+      - beginhour: 05
+        beginminute: 15
+        amount: 45
+        type: food
+        name: 早餐
+      - beginhour: 06
+        beginminute: 0
+        amount: 45
+        type: discuss
+        name: 会议、自习
+      - beginhour: 06
+        beginminute: 45
+        amount: 60
+        type: free
+        name: 休整
+      - beginhour: 07
+        beginminute: 45
+        amount: 60
+        type: work
+        name: 静默工作
+        namelink: http://simp.ly/p/xtgD4F
+      - beginhour: 08
+        beginminute: 45
+        amount: 45
+        type: free
+        name: 休整
+      - beginhour: 09
+        beginminute: 30
+        amount: 90
+        type: work
+        name: 静默工作
+        namelink: http://simp.ly/p/j1SspP
+      - beginhour: 11
+        beginminute: 00
+        amount: 180
+        type: food
+        name: 备餐、午餐午休
+      - beginhour: 14
+        beginminute: 0
+        amount: 30
+        type: work
+        name: 静默工作
+        namelink: http://simp.ly/p/8t3vlk
+      - beginhour: 14
+        beginminute: 30
+        amount: 30
+        type: work
+        name: 静默工作
+        namelink: http://simp.ly/p/5k9gJy
+      - beginhour: 15
+        beginminute: 0
+        amount: 60
+        type: free
+        name: 休整
+      - beginhour: 16
+        beginminute: 0
+        amount: 60
+        type: work
+        name: 静默工作
+        namelink: http://simp.ly/p/4QDThK
+      - beginhour: 17
+        beginminute: 00
+        amount: 120
+        type: food
+        name: 晚餐
+      - beginhour: 19
+        beginminute: 00
+        amount: 60
+        type: check
+        name: 讨论、整理提交
+    readme: |
+      模版一采用静默工作方式。  
+      希望讨论的提纲发到 [huangyg@mars22.com](mailto:huangyg@mars22.com)，通常安排在后面某天的早餐（5:15~5:59）或会议时间（6:00~6:45）。
+  2:
+    supply:
+      195: 1
+      60: 1
+      90: 1
+    time:
+      - beginhour: 04
+        beginminute: 0
+        amount: 15
+        type: free
+        name: 休整
+      - beginhour: 04
+        beginminute: 15
+        amount: 60
+        type: prepare
+        name: 备餐、运动
+      - beginhour: 05
+        beginminute: 15
+        amount: 45
+        type: food
+        name: 早餐
+      - beginhour: 06
+        beginminute: 0
+        amount: 45
+        type: discuss
+        name: 会议、自习
+      - beginhour: 06
+        beginminute: 45
+        amount: 60
+        type: free
+        name: 休整
+      - beginhour: 07
+        beginminute: 45
+        amount: 195
+        type: work
+        name: 工作
+        namelink: http://simp.ly/p/3GXNTh
+      - beginhour: 11
+        beginminute: 00
+        amount: 180
+        type: food
+        name: 备餐、午餐午休
+      - beginhour: 14
+        beginminute: 0
+        amount: 90
+        type: work
+        name: 工作
+        namelink: http://simp.ly/p/lsBYG9
+      - beginhour: 15
+        beginminute: 30
+        amount: 30
+        type: free
+        name: 休整
+      - beginhour: 16
+        beginminute: 0
+        amount: 60
+        type: work
+        name: 工作
+        namelink: http://simp.ly/p/MpcbHD
+      - beginhour: 17
+        beginminute: 00
+        amount: 120
+        type: food
+        name: 晚餐
+      - beginhour: 19
+        beginminute: 00
+        amount: 60
+        type: check
+        name: 讨论、整理提交
+    readme: |
+      工作的同时可以在线讨论。
+time:
+  supply:
+    1: 30
+    2: 15
+    3: 2
+    // dayplanid: amount
+  alloc:
+      PSMD:
+        90: 1
+        60: 3
+        30: 2
+      learn:
+        90: 4
+        60: 4
+        30: 1 
+      ego:
+        90: 4
+        60: 4
+        30: 1 
+      learn:
+        30: 8
+        60: 4

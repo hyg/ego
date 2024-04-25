@@ -1,0 +1,23 @@
+name: PSMD
+id: 01d9c808
+parent id: 0
+start: 2015-01-01T00:00:00.000Z
+dependencies: null
+path: 
+  - name: PSMD git repo
+    path: ..\..\PSMD\data
+readme: |
+  Pivot Structure Modeling and Deploy
+
+  PSMD培养共同体建模、部署人员，帮助他们适应分布式自治组织( Distributed Autonomous Community)的需要。
+  它本身是开放、半自助的共同体。
+agreement:
+    - name: 集结准备
+      deadline: 2024-06-13 18:00:00
+      budget:
+        90: 1
+        60: 3
+        30: 4
+todo:
+  - 30: 重新knowldege数据结构
+  - 60: 重新设计error

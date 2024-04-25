@@ -1,0 +1,57 @@
+{
+    "Owner": {
+        "Name": "Huang Yonggang",
+        "NickName": "modeler",
+        "Email": "huangyg@mars22.com"
+    },
+    "CommunityDeployment": {
+        "Name": "egonet",
+        "Model": {
+            "Name": "ego 个人领域模型",
+            "PubURL": "https://github.com/hyg/ego/blob/master/ego.com.md",
+            "CreatorType": 1,
+            "CreatorName": "Huang Yonggang"
+        },
+        "PubURL": "https://github.com/hyg/ego/blob/master/cod.md",
+        "DeployerType": 1,
+        "DeployerName": "Huang Yonggang"
+    },
+    "PoolList": [
+        {
+            "PoolTypeName": "raw",
+            "Price": {
+                "RMB": 1,
+                "Time1": 1,
+                "Time2": 4,
+                "Time3": 16
+            }
+        },
+        {
+            "PoolTypeName": "p1",
+            "Price": {
+                "RMB": 1,
+                "Time1": 4,
+                "Time2": 4,
+                "Time3": 4
+            }
+        },
+        {
+            "PoolTypeName": "p1",
+            "Price": {
+                "RMB": 1,
+                "Time1": 16,
+                "Time2": 16,
+                "Time3": 16
+            }
+        },
+        {
+            "PoolTypeName": "p1",
+            "Price": {
+                "RMB": 1,
+                "Time1": 64,
+                "Time2": 64,
+                "Time3": 64
+            }
+        }
+    ]
+}
