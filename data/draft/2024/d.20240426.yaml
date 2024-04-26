@@ -1,0 +1,38 @@
+date: 20240426
+plan: 1
+time:
+  - begin: '20240426074500'
+    amount: 80
+    type: work
+    subject: ego
+    name: 新season metadata生成日计划
+    output: draft/2024/04/20240426074500.md
+  - begin: '20240426093000'
+    amount: 90
+    type: work
+    subject: PSMD
+    name: knowledge新metadata输出view
+    readme: |
+      - node term knowledge    ： knowledge metadata → allknowledge metadata
+      - node term knowledge id    ： knowledge metadata → knowledge markdown + html
+    output: draft/2024/04/20240426093000.md
+  - begin: '20240426140000'
+    amount: 37
+    type: work
+    subject: PSMD
+    name: debug,yaml.dump后|符号编程>符号而且加了换行。
+    readme: |
+      error.0ccddb29
+    output: draft/2024/04/20240426140000.md
+  - begin: '20240426143000'
+    amount: 30
+    type: work
+    subject: learn
+    name: 整理各git托管商的page协议。
+    output: draft/2024/04/20240426143000.md
+  - begin: '20240426160000'
+    amount: 60
+    type: work
+    subject: PSMD
+    name: 新season metadata生成日小结
+    output: draft/2024/04/20240426160000.md

@@ -1,6 +1,9 @@
 
-
-const rawrepopath = "../../raw/";
-const draftrepopath = "../../draft/";
-const datapath = "../data/";
-const viewpath = "../view/";
+module.exports = {
+    gitpath: "../../",
+    rawrepopath: "../../raw/",
+    draftrepopath: "../../draft/",
+    blogrepopath: "../../blog/",
+    datapath: "../data/",
+    viewpath: "../view/"
+}

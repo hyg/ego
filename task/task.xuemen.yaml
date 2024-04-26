@@ -1,0 +1,15 @@
+name: xuemen
+id: 0512393e
+parent id: 0
+start: 2015-01-01T00:00:00.000Z
+dependencies: null
+path: 
+  - name: xuemen git repo
+    path: ..\..\xuemen\
+readme: |
+  北京学门科技有限公司
+  91110108795995493J
+todo:
+  - 30: 数字发票试点
+  - 60: 整理治理相关数据结构，为自动分录做好准备。
+  - 90: 编写自动分录的代码

@@ -12,12 +12,8 @@ readme: |
   PSMD培养共同体建模、部署人员，帮助他们适应分布式自治组织( Distributed Autonomous Community)的需要。
   它本身是开放、半自助的共同体。
 todo:
-  - 30: debug,yaml.dump后|符号编程>符号而且加了换行。
-    readme: |
-      error.0ccddb29
   - 30: 分析term和termset是否可以合并
-  - 60: knowledge新metadata生成内容板块
-    readme： |
-      - node term knowledge    ： knowledge metadata → allknowledge metadata
-      - node term knowledge id    ： knowledge metadata → knowledge markdown + html
-log:
+  - 60: 使用knowledge metadata生成error view内容：
+    readme: |
+      - 生成checklist和条款
+      - 生成委托合同
