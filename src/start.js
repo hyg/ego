@@ -103,7 +103,7 @@ module.exports = {
         planstr = planstr + "\n" + planobj.dayplan[plan].readme;
         //console.log("planstr:\n"+planstr);
 
-        var dayplan = "# " + year + "." + month + "." + day + "\n计划  \n\n根据[ego模型时间接口](https://gitee.com/hyg/blog/blob/master/timeflow.md)，今天绑定模版" + plan + "。\n\n" + planstr + "\n---\n\n";
+        var dayplan = "# " + year + "." + month + "." + day + ".\n计划  \n\n根据[ego模型时间接口](https://gitee.com/hyg/blog/blob/master/timeflow.md)，今天绑定模版" + plan + "。\n\n" + planstr + "\n---\n\n";
 
         for (var i in draftmetadata.time) {
             var subject = draftmetadata.time[i].subject;
@@ -130,7 +130,7 @@ module.exports = {
             fs.writeFileSync(timeviewfilename, timestr);
         }
 
-        var dayplanfilename = path.blogrepopath + "releade/time/d." + date + ".md";
+        var dayplanfilename = path.blogrepopath + "release/time/d." + date + ".md";
         console.log("dayplan file name:\n" + dayplanfilename + "\ncontent:\n" + dayplan);
         fs.writeFileSync(dayplanfilename, dayplan);
     }

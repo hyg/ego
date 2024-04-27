@@ -23,7 +23,7 @@ module.exports = {
             console.log("yaml read error！" + e);
             process.exit();
         }
-        var daylog = "# " + year + "." + month + "." + day + "\n日小结  \n\n<a id=\"top\"></a>\n";
+        var daylog = "# " + year + "." + month + "." + day + ".\n日小结  \n\n<a id=\"top\"></a>\n";
 
         var plan = draftmetadata.plan;
         if (plan != null) {
@@ -40,8 +40,8 @@ module.exports = {
                 timeslicename[draftmetadata.time[i].begin] = draftmetadata.time[i].name;
             }
 
-            var planstr = `| 时间片 | 时长 | 用途 | 手稿 |  
-| --- | --- | --- | --- |  
+            var planstr = `| 时间片 | 时长 | 用途 | 手稿 |
+| --- | --- | --- | --- |
 `;
             for (var i in planobj.dayplan[plan].time) {
                 var timeslice = planobj.dayplan[plan].time[i];
@@ -58,7 +58,7 @@ module.exports = {
                     draftstr = draftstr + "[" + timeslicename[begintime] + "](#" + begintime + ")";
                 }
 
-                planstr = planstr + "| " + beginhour.toString().padStart(2, '0') + ":" + beginminute.toString().padStart(2, '0') + "~" + endhour.toString().padStart(2, '0') + ":" + endminute.toString().padStart(2, '0') + " | " + amount + " | " + timeslice.name + " | " + draftstr + " |  \n";
+                planstr = planstr + "| " + beginhour.toString().padStart(2, '0') + ":" + beginminute.toString().padStart(2, '0') + "~" + endhour.toString().padStart(2, '0') + ":" + endminute.toString().padStart(2, '0') + " | " + amount + " | " + timeslice.name + " | " + draftstr + " |\n";
             }
 
             planstr = planstr + "\n" + planobj.dayplan[plan].readme;
@@ -91,8 +91,8 @@ module.exports = {
         var daylog = daylog + indexstr + "\n" + logstr;
         //console.log(daylog);
 
-        var daylogfilename = path.blogrepopath + "releade/time/d." + date + ".md";
+        var daylogfilename = path.blogrepopath + "release/time/d." + date + ".md";
         console.log("daylog file name:\n" + daylogfilename + "\ncontent:\n" + daylog);
-        //fs.writeFileSync(daylogfilename, daylog);
+        fs.writeFileSync(daylogfilename, daylog);
     }
 }

@@ -1,0 +1,9 @@
+name: raw
+id: ce84f90e
+parent id: 0
+start: 2012-01-01T00:00:00.000Z
+dependencies: null
+readme: >
+  raw项目涵盖个人领域不受意识控制的部分，也称为野生部分。
+todo:
+  - 30: debug-灰枣按"个"作为单位被算出很高热量。
