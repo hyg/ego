@@ -85,7 +85,7 @@ module.exports = {
 
             var outputfilename = path.gitpath + timelog.output;
             var outputstr = fs.readFileSync(outputfilename, 'utf8')
-            logstr = logstr + "---\n\n[top](#top) | [index](#index)\n<a id=\"" + timelog.begin + "\"></a>\n" + outputstr;
+            logstr = logstr + "\n---\n\n[top](#top) | [index](#index)\n<a id=\"" + timelog.begin + "\"></a>\n" + outputstr;
         }
 
         var daylog = daylog + indexstr + "\n" + logstr;

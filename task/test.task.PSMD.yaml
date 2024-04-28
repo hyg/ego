@@ -1,0 +1,29 @@
+name: PSMD
+id: 01d9c808
+parent id: 0
+start: 2015-01-01T00:00:00.000Z
+dependencies: null
+path:
+  - name: PSMD git repo
+    path: ..\..\PSMD\data
+readme: |
+  Pivot Structure Modeling and Deploy
+
+  PSMD培养共同体建模、部署人员，帮助他们适应分布式自治组织( Distributed Autonomous Community)的需要。
+  它本身是开放、半自助的共同体。
+todo:
+  - '90': 基于新的term +termset metadata修改代码commit, generate view
+    readme: |
+      - term commit
+      - term metadata -> term view
+  - '30': 生成入门目录涉及的所有view，调整措池准备试用
+  - '60': 基于term metadata修改COM、deploy、COD等metadata
+  - '195': term + COM matedata -> deploy metadata -> deploy view
+  - '30': PSMD委托合同的metadata
+log:
+  '20240427140000':
+    name: 分析term和termset是否可以合并
+    output: draft/2024/04/20240427140000.md
+  '20240427093000':
+    name: 使用knowledge metadata生成error view内容
+    output: draft/2024/04/20240427093000.md

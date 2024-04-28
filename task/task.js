@@ -40,14 +40,14 @@ if (arguments.length > 0) {
             var theday = arguments[0];
             var nextday = (parseInt(theday) + 1).toString();
             drafttostat(theday, nextday);
-            //drafttotask(today);
+            drafttotask(today);
         } else if ((arguments[0].length != 8) & (!isNaN(arguments[0]))) {
             // node task 1          : diff date draft to task stat
             var diff = parseInt(arguments[0]);
             var theday = datestr(diff);
             var nextday = datestr(diff + 1)
             drafttostat(theday, nextday);
-            //drafttotask(theday);
+            drafttotask(theday);
         }
     } else if (arguments.length == 2) {
         // node task 20240101 20240401   : period draft to stat
@@ -263,11 +263,8 @@ function tasktoalltask() {
 
     //console.log(yaml.dump(alltask));
 
-    fs.writeFile("alltask.yaml", yaml.dump(alltask), (err) => {
-        if (err) throw err;
-        console.log('alltask.yaml文件已被保存。');
-    });
-
+    fs.writeFileSync("alltask.yaml", yaml.dump(alltask));
+    console.log('alltask.yaml文件已被保存。');
 }
 
 // load all task metadata files in a folder, append in a object.
@@ -350,6 +347,7 @@ function drafttostat(startdate, nextstartdate) {
 }
 
 function drafttotask(date) {
+    //console.log("enter drafttotask", date);
     var year = date.slice(0, 4);
     var month = date.slice(4, 6);
     var draftmetadatafilename = year + "/" + month + "/d." + date + ".yaml";
@@ -357,7 +355,7 @@ function drafttotask(date) {
 
     var alltask = yaml.load(fs.readFileSync("alltask.yaml", 'utf8'));
     var taskbyname = new Object();
-    for (taskid in alltask.task) {
+    for (taskid in alltask.tasklist) {
         //console.log("task id:"+taskid);
         taskbyname[alltask.tasklist[taskid].name] = taskid;
     }
@@ -389,11 +387,8 @@ function drafttotask(date) {
             taskmetadata.log = newlog;
             console.log(yaml.dump(taskmetadata));
 
-            fs.writeFile(taskmetadatafilename, yaml.dump(taskmetadata), (err) => {
-                if (err) throw err;
-                console.log(taskmetadatafilename + '文件已被更新。');
-            });
-
+            fs.writeFileSync(taskmetadatafilename, yaml.dump(taskmetadata));
+            console.log(taskmetadatafilename + '文件已被更新。');
         } else {
             console.log("a subject isn't task:" + timelog.subject);
         }
