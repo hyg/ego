@@ -1,6 +1,7 @@
 var fs = require('fs');
 var yaml = require('js-yaml');
 var path = require('./path.js');
+var util = require('./util.js');
 
 module.exports = {
     makedaydraft: function (date, plan) {
@@ -9,8 +10,8 @@ module.exports = {
         var season = Math.ceil(parseInt(month) / 3);
         var seasonpath = "../data/season/" + year + "S" + season + ".yaml";
         console.log("seasonpath:" + seasonpath);
-        var planobj = yaml.load(fs.readFileSync(seasonpath, 'utf8'));
-        var time = planobj.dayplan[plan].time;
+        var seasonobj = yaml.load(fs.readFileSync(seasonpath, 'utf8'));
+        var time = seasonobj.dayplan[plan].time;
 
         var draftmetadata = new Object();
         var drafttimearray = new Array();
@@ -66,17 +67,17 @@ module.exports = {
         var season = Math.ceil(parseInt(month) / 3);
         var seasonpath = "../data/season/" + year + "S" + season + ".yaml";
         console.log("seasonpath:" + seasonpath);
-        var planobj = yaml.load(fs.readFileSync(seasonpath, 'utf8'));
-        var time = planobj.dayplan[plan].time;
+        var seasonobj = yaml.load(fs.readFileSync(seasonpath, 'utf8'));
+        var time = seasonobj.dayplan[plan].time;
 
-        //var planobj = yaml.load(fs.readFileSync("plan.yaml", 'utf8'));
-        //var planstr = planobj.dayplan[plan].planstr;
+        //var seasonobj = yaml.load(fs.readFileSync("plan.yaml", 'utf8'));
+        //var planstr = seasonobj.dayplan[plan].planstr;
 
         var planstr = `| 时间片 | 时长 | 用途 | 手稿 |  
 | --- | --- | --- | --- |  
 `;
-        for (var i in planobj.dayplan[plan].time) {
-            var timeslice = planobj.dayplan[plan].time[i];
+        for (var i in seasonobj.dayplan[plan].time) {
+            var timeslice = seasonobj.dayplan[plan].time[i];
             var beginhour = timeslice.beginhour;
             var beginminute = timeslice.beginminute;
             var amount = timeslice.amount;
@@ -100,7 +101,7 @@ module.exports = {
 
             planstr = planstr + "| " + beginhour.toString().padStart(2, '0') + ":" + beginminute.toString().padStart(2, '0') + "~" + endhour.toString().padStart(2, '0') + ":" + endminute.toString().padStart(2, '0') + " | " + amount + " | " + timeslice.name + " | " + draftstr + " |  \n";
         }
-        planstr = planstr + "\n" + planobj.dayplan[plan].readme;
+        planstr = planstr + "\n" + seasonobj.dayplan[plan].readme;
         //console.log("planstr:\n"+planstr);
 
         var dayplan = "# " + year + "." + month + "." + day + ".\n计划  \n\n根据[ego模型时间接口](https://gitee.com/hyg/blog/blob/master/timeflow.md)，今天绑定模版" + plan + "。\n\n" + planstr + "\n---\n\n";
@@ -133,5 +134,79 @@ module.exports = {
         var dayplanfilename = path.blogrepopath + "release/time/d." + date + ".md";
         console.log("dayplan file name:\n" + dayplanfilename + "\ncontent:\n" + dayplan);
         fs.writeFileSync(dayplanfilename, dayplan);
+    },
+    makewaitinglist: function () {
+        var date = util.datestr();
+        var year = date.slice(0, 4);
+        var month = date.slice(4, 6);
+        var season = Math.ceil(parseInt(month) / 3);
+        var seasonpath = "../data/season/" + year + "S" + season + ".yaml";
+        console.log("seasonpath:" + seasonpath);
+        var seasonobj = yaml.load(fs.readFileSync(seasonpath, 'utf8'));
+        var todoobj = seasonobj.todo;
+        var timeobj = seasonobj.time;
+
+        var rest = new Object();
+        var resttotal = 0;
+        for (var task in timeobj.alloc) {
+            if (timeobj.sold[task] != null) {
+                rest[task] = timeobj.alloc[task] - timeobj.sold[task];
+            } else {
+                rest[task] = timeobj.alloc[task];
+            }
+            resttotal = resttotal + rest[task];
+        }
+        console.log("resttotal:", resttotal);
+        console.log("reset:\n", yaml.dump(rest));
+        var restSorted = Object.keys(rest).sort(function (a, b) { return rest[b] - rest[a] });
+        console.log("resetSOrted:\n", yaml.dump(restSorted));
+
+        // init the waitinglist
+        var dayplanobj = seasonobj.dayplan;
+        var waitinglist = new Object();
+        for (var planid in dayplanobj) {
+            for (var amounttype in dayplanobj[planid].supply) {
+                if (waitinglist[amounttype] == null) {
+                    // a new amount type
+                    var amounttypelist = new Array();
+                    waitinglist[amounttype] = amounttypelist;
+                }
+            }
+        }
+        //console.log("waitinglist:\n",yaml.dump(waitinglist));
+
+        var hasobj = true;
+        var k = 0;
+        while (hasobj) {
+            hasobj = false;
+            // search the k th member of todo list of each task
+            //console.log("search the %d th member...",k);
+            for (var j = 0; j < restSorted.length; j++) {
+                //console.log("search the %d th task:%s\n",j,restSorted[j]);
+                for(var amounttype in waitinglist){
+                    if(todoobj[restSorted[j]][k] != null){
+                        //console.log("find a item:",yaml.dump(todoobj[restSorted[j]][k]));
+                        hasobj = true;
+                        if(todoobj[restSorted[j]][k][amounttype] != null){
+                            var atask = new Object();
+                            atask.task = restSorted[j];
+                            atask.name = todoobj[restSorted[j]][k][amounttype];
+                            atask.id = k;
+                            if (todoobj[restSorted[j]][k]["readme"] != null) {
+                                atask.readme = todoobj[restSorted[j]][k]["readme"];
+                            }
+                            waitinglist[amounttype].push(atask);
+                        }
+                    }
+                    
+                }
+            }
+            k = k + 1;
+        }
+        console.log("waitinglist:\n",yaml.dump(waitinglist));
+
+    },
+    testdayplan: function () {
+
     }
 };

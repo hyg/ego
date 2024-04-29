@@ -4,9 +4,3 @@ parent id: 6a8da52e
 start: 2015-01-01T00:00:00.000Z
 readme: |
   学习javasricpt，包括ECMAscript、Typescript、nodejs，以及使用以上语言开发通用模块。
-todo:
-  - 30: async 
-  - 30: promise 对象
-  - 30: 学习AMD规范，如果适用就开发范例
-  - 60: 向外提供js文件的范例，为代码层级互通做准备
-  

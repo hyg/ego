@@ -30,10 +30,10 @@ module.exports = {
             var season = Math.ceil(parseInt(month) / 3);
             var seasonpath = "../data/season/" + year + "S" + season + ".yaml";
             console.log("seasonpath:" + seasonpath);
-            var planobj = yaml.load(fs.readFileSync(seasonpath, 'utf8'));
-            var time = planobj.dayplan[plan].time;
-            //var planobj = yaml.load(fs.readFileSync("plan.yaml", 'utf8'));
-            //var planstr = planobj.dayplan[plan].planstr;
+            var seasonobj = yaml.load(fs.readFileSync(seasonpath, 'utf8'));
+            var time = seasonobj.dayplan[plan].time;
+            //var seasonobj = yaml.load(fs.readFileSync("plan.yaml", 'utf8'));
+            //var planstr = seasonobj.dayplan[plan].planstr;
 
             var timeslicename = new Object();
             for (var i in draftmetadata.time) {
@@ -43,8 +43,8 @@ module.exports = {
             var planstr = `| 时间片 | 时长 | 用途 | 手稿 |
 | --- | --- | --- | --- |
 `;
-            for (var i in planobj.dayplan[plan].time) {
-                var timeslice = planobj.dayplan[plan].time[i];
+            for (var i in seasonobj.dayplan[plan].time) {
+                var timeslice = seasonobj.dayplan[plan].time[i];
                 var beginhour = timeslice.beginhour;
                 var beginminute = timeslice.beginminute;
                 var amount = timeslice.amount;
@@ -61,7 +61,7 @@ module.exports = {
                 planstr = planstr + "| " + beginhour.toString().padStart(2, '0') + ":" + beginminute.toString().padStart(2, '0') + "~" + endhour.toString().padStart(2, '0') + ":" + endminute.toString().padStart(2, '0') + " | " + amount + " | " + timeslice.name + " | " + draftstr + " |\n";
             }
 
-            planstr = planstr + "\n" + planobj.dayplan[plan].readme;
+            planstr = planstr + "\n" + seasonobj.dayplan[plan].readme;
 
             daylog = daylog + "根据[ego模型时间接口](https://gitee.com/hyg/blog/blob/master/timeflow.md)，今天绑定模版" + plan + "。\n\n" + planstr;
         } else {
@@ -94,5 +94,49 @@ module.exports = {
         var daylogfilename = path.blogrepopath + "release/time/d." + date + ".md";
         console.log("daylog file name:\n" + daylogfilename + "\ncontent:\n" + daylog);
         fs.writeFileSync(daylogfilename, daylog);
+    },
+    updateseason: function (date) {
+        var year = date.slice(0, 4);
+        var month = date.slice(4, 6);
+        var day = date.slice(6, 8);
+        var season = Math.ceil(parseInt(month) / 3);
+        var seasonpath = "../data/season/" + year + "S" + season + ".yaml";
+        //console.log("seasonpath:" + seasonpath);
+        var seasonobj = yaml.load(fs.readFileSync(seasonpath, 'utf8'));
+
+        var firstdateofseason = seasonobj.year + seasonobj.beginmonth.toString().padStart(2, "0") + seasonobj.beginday.toString().padStart(2, "0");
+        var lastdateofseason = seasonobj.year + seasonobj.lastmonth.toString().padStart(2, "0") + seasonobj.lastday.toString().padStart(2, "0");
+        //console.log("season day:",firstdateofseason,lastdateofseason)
+        var sold = new Object();        
+        for (var m = parseInt(seasonobj.beginmonth); m <= parseInt(seasonobj.lastmonth); m++) {
+            var draftmetapath = path.draftrepopath + seasonobj.year + "/" + m.toString().padStart(2, "0") + "/";
+            //var draftmetafilename = "../data/draft" + "/" + year + "/" ;
+            //console.log("draftmetapath:" + draftmetapath);
+
+            if (fs.existsSync(draftmetapath)){
+                fs.readdirSync(draftmetapath).forEach(file => {
+                    //console.log("file:",file);
+                    if (file.substring(file.lastIndexOf(".")) == ".yaml") {
+                        var date = file.slice(2, 10);
+                        //console.log("date:",date);
+                        if ((date >= firstdateofseason) & (date <= lastdateofseason)) {
+                            var draftmetaobj = yaml.load(fs.readFileSync(draftmetapath + file, 'utf8'));
+                            for (var tid in draftmetaobj.time) {
+                                if (sold[draftmetaobj.time[tid].subject] != null) {
+                                    sold[draftmetaobj.time[tid].subject] = sold[draftmetaobj.time[tid].subject] + draftmetaobj.time[tid].amount;
+                                } else {
+                                    sold[draftmetaobj.time[tid].subject] = draftmetaobj.time[tid].amount;
+                                };
+                            }
+                        }
+                    }
+                });
+            }
+        }
+        //console.log("sold stat:\n" + yaml.dump(sold));
+        seasonobj.time.sold = sold ;
+        
+        fs.writeFileSync(seasonpath,yaml.dump(seasonobj));
+        console.log(seasonpath+"文件已更新:\n"+yaml.dump(seasonobj));
     }
 }
