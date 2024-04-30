@@ -176,15 +176,6 @@ dayplan:
         name: 讨论、整理提交
     readme: |
       工作的同时可以在线讨论。
-  timetype:
-    - name: work
-    - name: free
-    - name: discuss
-    - name: learn
-    - name: prepare
-    - name: sleep
-    - name: food
-    - name: check
 time:
   supply:
     '1': 30
@@ -206,35 +197,25 @@ time:
     raw: 115
 todo:
   PSMD:
-    - '60': 设计条款内容与排版序号分离的新数据结构，编写metadata范例。
-    - '90': 基于新的term +termset metadata修改代码commit, generate view
+    - '195': 基于新的term +termset metadata修改代码commit, generate view
       readme: |
-        - item字段里可以自由排练text、term，可以自由安排有title、prefix或没有。
-          - title：单独显示，不改变内部序号。通常用做章、附件的开头。
-          - prefix：向下改变所有内部序号，用"."依序连接起来。
-        - item字段里的map增加title、prefix的映射。
-          - 下级title可以在map被替换；
-          - 下级prefix也在map被替换。
-        - interface字段增加title字段，相当于目录。上级不提换就用本地的。
+        - item字段里可以自由排练text、term.
+          - 无localid，或者localid为""的text，就是title，通常用做章、附件的开头。最好是含有placeholer。
+          - localid同时作为prefix：向下改变所有内部序号，用"."依序连接起来。
+        - 实际检验一下localid机制是否能实现prefix功能，或者需要单独设一个字段。
         - term commit
-        - term metadata -> term view
+        - term metadata -> term txt
+    - '60': term metadata -> term html
     - '30': 生成入门目录涉及的所有view，调整措池准备试用
     - '60': 基于term metadata修改COM、deploy、COD等metadata
     - '195': term + COM matedata -> deploy metadata -> deploy view
     - '30': PSMD委托合同的metadata
   ego:
-    - '60': task waitinglist编码
     - '60': task之间结算体系设计
     - '30': 整理废弃git库，包括本地和远程。
     - '60': github + codeberg page 范例
     - '60': 在season metadata中实现浮动时间表，修改日计划功能。
   learn:
-    - '60': 设计自己的git开发流程
-      readme: |
-        - https://ruanyifeng.com/blog/2015/08/git-use-process.html
-        - https://www.ruanyifeng.com/blog/2015/12/git-workflow.html
-        - https://www.jianshu.com/p/9801b98c1de4
-        - https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow
     - '60': 把git开发流程编写成批处理文件
     - '30': 学习正则表达式RegExp
     - '60': nosql
@@ -243,19 +224,22 @@ todo:
     - '30': async
     - '30': promise 对象
     - '30': 学习AMD规范，如果适用就开发范例
-    - '30': 在js代码中进行git操作
+    - '30': 测试
     - '60': 向外提供js文件的范例，为代码层级互通做准备
     - '30': 日期格式化
       readme: |
         https://www.cnblogs.com/biehongli/p/9327604.html
         https://juejin.cn/post/7199191689150644279
         https://blog.csdn.net/lwf3115841/article/details/129105206
+    - 60: 学习'Electron'，创作一个范例。
   raw:
     - '30': debug-灰枣按"个"作为单位被算出很高热量。
     - '30': 设计DRI metadata
     - '60': 实现自定义DRI的代码
     - '30': debug-diff mode较大天数返回空数据，创建三个R文件。
   xuemen:
-    - '30': 数字发票试点
+    - '60': 五月报税
+      readme: |
+        - 学习云票助手软件：http://www.ibwjf.com/classRooms/1
     - '90': 编写自动分录的代码
     - '195': xuemen COD metadata

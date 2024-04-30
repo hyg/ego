@@ -9,9 +9,10 @@ module.exports = {
         var month = date.slice(4, 6);
         var season = Math.ceil(parseInt(month) / 3);
         var seasonpath = "../data/season/" + year + "S" + season + ".yaml";
-        console.log("seasonpath:" + seasonpath);
+        //console.log("seasonpath:" + seasonpath);
         var seasonobj = yaml.load(fs.readFileSync(seasonpath, 'utf8'));
         var time = seasonobj.dayplan[plan].time;
+        var waitinglist = this.makewaitinglist();
 
         var draftmetadata = new Object();
         var drafttimearray = new Array();
@@ -23,11 +24,20 @@ module.exports = {
                 var timeperiod = new Object();
                 timeperiod.begin = date + time[i].beginhour.toString().padStart(2, '0') + time[i].beginminute.toString().padStart(2, '0') + "00";
                 timeperiod.amount = time[i].amount;
-                timeperiod.type = "work";
-                timeperiod.subject = "tbd";
-                timeperiod.name = "tbd";
+                timeperiod.type = "work"; timeperiod.subject = waitinglist[time[i].amount.toString()][0].task;
+                timeperiod.name = waitinglist[time[i].amount.toString()][0].name;
+                if (waitinglist[time[i].amount.toString()][0].readme != null) {
+                    timeperiod.readme = waitinglist[time[i].amount.toString()][0].readme;
+                }
+                //timeperiod.subject = "tbd";
+                //timeperiod.name = "tbd";
                 timeperiod.output = "draft/" + date.slice(0, 4) + "/" + date.slice(4, 6) + "/" + timeperiod.begin + ".md";
                 drafttimearray.push(timeperiod);
+
+                seasonobj.todo[timeperiod.subject] = seasonobj.todo[timeperiod.subject].filter((job) => job[time[i].amount.toString()] != timeperiod.name);
+                console.log("delete the job from %s:\n%s", waitinglist[time[i].amount.toString()][0].task, waitinglist[time[i].amount.toString()][0].name)
+                //delete it from waitinglist
+                waitinglist[time[i].amount.toString()].shift();
             }
         }
         draftmetadata.time = drafttimearray;
@@ -36,7 +46,10 @@ module.exports = {
         var draftmetafilename = "../data/draft" + "/" + year + "/" + "d." + date + ".yaml";
         console.log(draftmetafilename);
         console.log(yaml.dump(draftmetadata));
-        fs.writeFileSync(draftmetafilename, yaml.dump(draftmetadata));
+        //fs.writeFileSync(draftmetafilename, yaml.dump(draftmetadata, { 'lineWidth': -1 }));
+        // save new todo
+        //fs.writeFileSync(seasonpath,yaml.dump(seasonobj, { 'lineWidth': -1 }));
+        console.log("seasonobj.todo:\n%s", yaml.dump(seasonobj.todo, { 'lineWidth': -1 }));
     },
     makedayplan: function (date) {
         var year = date.slice(0, 4);
@@ -128,12 +141,12 @@ module.exports = {
             var timeviewfilename = path.draftrepopath + date.slice(0, 4) + "/" + date.slice(4, 6) + "/" + begintime + ".md";
             console.log("time slice draft file name:" + timeviewfilename);
             console.log(timestr);
-            fs.writeFileSync(timeviewfilename, timestr);
+            //fs.writeFileSync(timeviewfilename, timestr);
         }
 
         var dayplanfilename = path.blogrepopath + "release/time/d." + date + ".md";
         console.log("dayplan file name:\n" + dayplanfilename + "\ncontent:\n" + dayplan);
-        fs.writeFileSync(dayplanfilename, dayplan);
+        //fs.writeFileSync(dayplanfilename, dayplan);
     },
     makewaitinglist: function () {
         var date = util.datestr();
@@ -141,7 +154,7 @@ module.exports = {
         var month = date.slice(4, 6);
         var season = Math.ceil(parseInt(month) / 3);
         var seasonpath = "../data/season/" + year + "S" + season + ".yaml";
-        console.log("seasonpath:" + seasonpath);
+        //console.log("seasonpath:" + seasonpath);
         var seasonobj = yaml.load(fs.readFileSync(seasonpath, 'utf8'));
         var todoobj = seasonobj.todo;
         var timeobj = seasonobj.time;
@@ -183,11 +196,11 @@ module.exports = {
             //console.log("search the %d th member...",k);
             for (var j = 0; j < restSorted.length; j++) {
                 //console.log("search the %d th task:%s\n",j,restSorted[j]);
-                for(var amounttype in waitinglist){
-                    if(todoobj[restSorted[j]][k] != null){
+                for (var amounttype in waitinglist) {
+                    if (todoobj[restSorted[j]][k] != null) {
                         //console.log("find a item:",yaml.dump(todoobj[restSorted[j]][k]));
                         hasobj = true;
-                        if(todoobj[restSorted[j]][k][amounttype] != null){
+                        if (todoobj[restSorted[j]][k][amounttype] != null) {
                             var atask = new Object();
                             atask.task = restSorted[j];
                             atask.name = todoobj[restSorted[j]][k][amounttype];
@@ -198,15 +211,58 @@ module.exports = {
                             waitinglist[amounttype].push(atask);
                         }
                     }
-                    
+
                 }
             }
             k = k + 1;
         }
-        console.log("waitinglist:\n",yaml.dump(waitinglist));
-
+        //console.log("waitinglist:\n",yaml.dump(waitinglist));
+        return waitinglist;
     },
     testdayplan: function () {
+        var date = util.datestr();
+        var year = date.slice(0, 4);
+        var month = date.slice(4, 6);
+        var season = Math.ceil(parseInt(month) / 3);
+        var seasonpath = "../data/season/" + year + "S" + season + ".yaml";
+        //console.log("seasonpath:" + seasonpath);
+        var seasonobj = yaml.load(fs.readFileSync(seasonpath, 'utf8'));
+        var dayplanobj = seasonobj.dayplan;
 
+        for (var plan in dayplanobj) {
+            var waitinglist = this.makewaitinglist();
+            var time = seasonobj.dayplan[plan].time;
+
+            var draftmetadata = new Object();
+            var drafttimearray = new Array();
+            draftmetadata.date = parseInt(date);
+            draftmetadata.plan = parseInt(plan);
+            for (var i in time) {
+                if (time[i].type == "work") {
+                    var timeperiod = new Object();
+                    timeperiod.begin = date + time[i].beginhour.toString().padStart(2, '0') + time[i].beginminute.toString().padStart(2, '0') + "00";
+                    timeperiod.amount = time[i].amount;
+                    timeperiod.type = "work";
+                    timeperiod.subject = waitinglist[time[i].amount.toString()][0].task;
+                    timeperiod.name = waitinglist[time[i].amount.toString()][0].name;
+                    if (waitinglist[time[i].amount.toString()][0].readme != null) {
+                        timeperiod.readme = waitinglist[time[i].amount.toString()][0].readme;
+                    }
+                    timeperiod.output = "draft/" + date.slice(0, 4) + "/" + date.slice(4, 6) + "/" + timeperiod.begin + ".md";
+                    drafttimearray.push(timeperiod);
+                    //console.log("drafttimearray:",yaml.dump(drafttimearray));
+                    //deleta it from season.todo
+
+                    //seasonobj.todo[timeperiod.subject] = seasonobj.todo[timeperiod.subject].filter((job) => job[time[i].amount.toString()] != timeperiod.name);
+                    //seasonobj.todo[waitinglist[time[i].amount.toString()][0].task].splice(waitinglist[time[i].amount.toString()][0].id, 1);
+                    //console.log("delete the job from %s:\n%s", waitinglist[time[i].amount.toString()][0].task, waitinglist[time[i].amount.toString()][0].name)
+                    //delete it from waitinglist
+                    waitinglist[time[i].amount.toString()].shift();
+                }
+            }
+            draftmetadata.time = drafttimearray;
+            console.log("%s draftmetadata:\n%s", plan, yaml.dump(draftmetadata, { 'lineWidth': -1 }));
+
+        }
     }
 };
