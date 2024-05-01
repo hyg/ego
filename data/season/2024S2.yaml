@@ -188,50 +188,50 @@ time:
     xuemen: 600
     raw: 300
   sold:
-    ego: 1609
-    PSMD: 2938
+    ego: 1731
+    PSMD: 3028
     infra: 30
-    js: 199
-    learn: 162
-    xuemen: 60
+    js: 229
+    learn: 222
+    xuemen: 90
     raw: 115
 todo:
   PSMD:
-    - '195': 基于新的term +termset metadata修改代码commit, generate view
+    - '60': error,knowledge metadata的placeholder升级
       readme: |
-        - item字段里可以自由排练text、term.
-          - 无localid，或者localid为""的text，就是title，通常用做章、附件的开头。最好是含有placeholer。
-          - localid同时作为prefix：向下改变所有内部序号，用"."依序连接起来。
-        - 实际检验一下localid机制是否能实现prefix功能，或者需要单独设一个字段。
-        - term commit
-        - term metadata -> term txt
+        - commit
+        - metadata -> view
+    - '60': term metadata的upgradeby,depend,together,effect等字段的内容写入term view
     - '60': term metadata -> term html
     - '30': 生成入门目录涉及的所有view，调整措池准备试用
     - '60': 基于term metadata修改COM、deploy、COD等metadata
     - '195': term + COM matedata -> deploy metadata -> deploy view
     - '30': PSMD委托合同的metadata
+    - '90': 整理近期手稿。
   ego:
-    - '60': task之间结算体系设计
     - '30': 整理废弃git库，包括本地和远程。
+    - '30': makedayplan()创建draft文件夹，合并makedayplan和makedaydraft。
     - '60': github + codeberg page 范例
     - '60': 在season metadata中实现浮动时间表，修改日计划功能。
+    - '195': 在整理近期手稿之后，修订个人模型。
+    - '60': task之间结算体系设计。
   learn:
     - '60': 把git开发流程编写成批处理文件
     - '30': 学习正则表达式RegExp
     - '60': nosql
     - '90': 把PSMD的data、src部分升级到rdf，如果升级成功则作为范例。
   js:
+    - '30': 测试
     - '30': async
     - '30': promise 对象
     - '30': 学习AMD规范，如果适用就开发范例
-    - '30': 测试
     - '60': 向外提供js文件的范例，为代码层级互通做准备
     - '30': 日期格式化
       readme: |
         https://www.cnblogs.com/biehongli/p/9327604.html
         https://juejin.cn/post/7199191689150644279
         https://blog.csdn.net/lwf3115841/article/details/129105206
-    - 60: 学习'Electron'，创作一个范例。
+    - '60': 学习'Electron'，创作一个范例。
   raw:
     - '30': debug-灰枣按"个"作为单位被算出很高热量。
     - '30': 设计DRI metadata
@@ -241,5 +241,4 @@ todo:
     - '60': 五月报税
       readme: |
         - 学习云票助手软件：http://www.ibwjf.com/classRooms/1
-    - '90': 编写自动分录的代码
     - '195': xuemen COD metadata

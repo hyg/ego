@@ -1,0 +1,28 @@
+date: 20240501
+plan: 2
+time:
+  - begin: '20240501074500'
+    amount: 210
+    type: work
+    subject: PSMD
+    name: 基于新的term +termset metadata修改代码commit, generate view
+    readme: |
+      - item字段里可以自由排练text、term.
+        - 无localid，或者localid为""的text，就是title，通常用做章、附件的开头。最好是含有placeholer。
+        - localid同时作为prefix：向下改变所有内部序号，用"."依序连接起来。
+      - 实际检验一下localid机制是否能实现prefix功能，或者需要单独设一个字段。
+      - term commit
+      - term metadata -> term txt
+    output: draft/2024/05/20240501074500.md
+  - begin: '20240501140000'
+    amount: 116
+    type: work
+    subject: xuemen
+    name: 编写自动分录的代码
+    output: draft/2024/05/20240501140000.md
+  - begin: '20240501160000'
+    amount: 89
+    type: work
+    subject: ego
+    name: 复习个人模型
+    output: draft/2024/05/20240501160000.md

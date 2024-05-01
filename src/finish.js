@@ -137,6 +137,6 @@ module.exports = {
         seasonobj.time.sold = sold ;
         
         fs.writeFileSync(seasonpath,yaml.dump(seasonobj));
-        console.log(seasonpath+"文件已更新:\n"+yaml.dump(seasonobj));
+        console.log(seasonpath+"文件中的time.sold字段已更新:\n"+yaml.dump(sold));
     }
 }

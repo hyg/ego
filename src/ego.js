@@ -28,6 +28,7 @@ if (arguments.length > 0) {
         } else if (arguments[1] == "plan") {
             // node ego day plan: show the day plan in each tempplate
             var date = util.datestr();
+            finish.updateseason(date);
             start.testdayplan();
         }else {
             //node ego day 1: generate day draft metadata by template 1

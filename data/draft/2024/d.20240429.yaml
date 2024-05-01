@@ -1,0 +1,33 @@
+date: 20240429
+plan: 1
+time:
+  - begin: '20240429074500'
+    amount: 60
+    type: work
+    subject: PSMD
+    name: 设计条款内容与排版序号分离的新数据结构，编写metadata范例。
+    output: draft/2024/04/20240429074500.md
+  - begin: '20240429093000'
+    amount: 90
+    type: work
+    subject: xuemen
+    name: 编写自动分录的代码
+    output: draft/2024/04/20240429093000.md
+  - begin: '20240429140000'
+    amount: 30
+    type: work
+    subject: js
+    name: async
+    output: draft/2024/04/20240429140000.md
+  - begin: '20240429143000'
+    amount: 30
+    type: work
+    subject: xuemen
+    name: 数字发票试点
+    output: draft/2024/04/20240429143000.md
+  - begin: '20240429160000'
+    amount: 60
+    type: work
+    subject: ego
+    name: task waitinglist编码
+    output: draft/2024/04/20240429160000.md

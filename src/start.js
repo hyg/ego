@@ -46,9 +46,9 @@ module.exports = {
         var draftmetafilename = "../data/draft" + "/" + year + "/" + "d." + date + ".yaml";
         console.log(draftmetafilename);
         console.log(yaml.dump(draftmetadata));
-        //fs.writeFileSync(draftmetafilename, yaml.dump(draftmetadata, { 'lineWidth': -1 }));
+        fs.writeFileSync(draftmetafilename, yaml.dump(draftmetadata, { 'lineWidth': -1 }));
         // save new todo
-        //fs.writeFileSync(seasonpath,yaml.dump(seasonobj, { 'lineWidth': -1 }));
+        fs.writeFileSync(seasonpath,yaml.dump(seasonobj, { 'lineWidth': -1 }));
         console.log("seasonobj.todo:\n%s", yaml.dump(seasonobj.todo, { 'lineWidth': -1 }));
     },
     makedayplan: function (date) {
@@ -86,8 +86,8 @@ module.exports = {
         //var seasonobj = yaml.load(fs.readFileSync("plan.yaml", 'utf8'));
         //var planstr = seasonobj.dayplan[plan].planstr;
 
-        var planstr = `| 时间片 | 时长 | 用途 | 手稿 |  
-| --- | --- | --- | --- |  
+        var planstr = `| 时间片 | 时长 | 用途 | 手稿 |
+| --- | --- | --- | --- |
 `;
         for (var i in seasonobj.dayplan[plan].time) {
             var timeslice = seasonobj.dayplan[plan].time[i];
@@ -112,7 +112,7 @@ module.exports = {
                 draftstr = draftstr + " [离线归档](" + draftfilename + ")";
             }
 
-            planstr = planstr + "| " + beginhour.toString().padStart(2, '0') + ":" + beginminute.toString().padStart(2, '0') + "~" + endhour.toString().padStart(2, '0') + ":" + endminute.toString().padStart(2, '0') + " | " + amount + " | " + timeslice.name + " | " + draftstr + " |  \n";
+            planstr = planstr + "| " + beginhour.toString().padStart(2, '0') + ":" + beginminute.toString().padStart(2, '0') + "~" + endhour.toString().padStart(2, '0') + ":" + endminute.toString().padStart(2, '0') + " | " + amount + " | " + timeslice.name + " | " + draftstr + " |\n";
         }
         planstr = planstr + "\n" + seasonobj.dayplan[plan].readme;
         //console.log("planstr:\n"+planstr);
@@ -141,12 +141,12 @@ module.exports = {
             var timeviewfilename = path.draftrepopath + date.slice(0, 4) + "/" + date.slice(4, 6) + "/" + begintime + ".md";
             console.log("time slice draft file name:" + timeviewfilename);
             console.log(timestr);
-            //fs.writeFileSync(timeviewfilename, timestr);
+            fs.writeFileSync(timeviewfilename, timestr);
         }
 
         var dayplanfilename = path.blogrepopath + "release/time/d." + date + ".md";
         console.log("dayplan file name:\n" + dayplanfilename + "\ncontent:\n" + dayplan);
-        //fs.writeFileSync(dayplanfilename, dayplan);
+        fs.writeFileSync(dayplanfilename, dayplan);
     },
     makewaitinglist: function () {
         var date = util.datestr();

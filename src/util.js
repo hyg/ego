@@ -1,4 +1,4 @@
-
+const crypto = require('crypto');
 
 module.exports = {
     datestr: function (diff = 0) {
@@ -13,5 +13,9 @@ module.exports = {
 
         //console.log("datestr retrun:"+dateStr);
         return dateStr;
+    },
+    makemetafileid: function (name) {
+        var hashid = crypto.createHash("sha256").update(name).digest("hex").slice(0, 8);
+        return hashid;
     }
 }
