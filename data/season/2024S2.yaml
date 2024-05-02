@@ -214,6 +214,10 @@ todo:
     - '60': 在season metadata中实现浮动时间表，修改日计划功能。
     - '195': 在整理近期手稿之后，修订个人模型。
     - '60': task之间结算体系设计。
+    - '60': 用js代码完成日小结后的git操作。
+      readme: |
+        - 参考：D:\huangyg\git\draft\2024\04\20240430140000.md
+        - 在各task metadata中给出git库的路径，每天根据实际任务去操作。
   learn:
     - '30': 学习正则表达式RegExp
     - '60': nosql

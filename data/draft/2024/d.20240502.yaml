@@ -32,5 +32,5 @@ time:
     amount: 60
     type: work
     subject: learn
-    name: 把git开发流程编写成批处理文件
+    name: 日小结后的git操作编写成批处理文件
     output: draft/2024/05/20240502160000.md
