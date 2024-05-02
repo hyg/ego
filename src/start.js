@@ -10,7 +10,7 @@ module.exports = {
         var season = Math.ceil(parseInt(month) / 3);
         var seasonpath = "../data/season/" + year + "S" + season + ".yaml";
         //console.log("seasonpath:" + seasonpath);
-        var seasonobj = yaml.load(fs.readFileSync(seasonpath, 'utf8'));
+        var seasonobj = yaml.load(fs.readFileSync(seasonpath, 'utf8',{schema: yaml.FAILSAFE_SCHEMA }));
         var time = seasonobj.dayplan[plan].time;
         var waitinglist = this.makewaitinglist();
 
@@ -59,7 +59,7 @@ module.exports = {
         var draftmetadata;
         try {
             if (fs.existsSync(draftmetafilename)) {
-                draftmetadata = yaml.load(fs.readFileSync(draftmetafilename, 'utf8'));
+                draftmetadata = yaml.load(fs.readFileSync(draftmetafilename, 'utf8',{schema: yaml.FAILSAFE_SCHEMA }));
             } else {
                 console.log("the draft metadata isn't exist:" + draftmetafilename);
                 process.exit();
@@ -80,10 +80,10 @@ module.exports = {
         var season = Math.ceil(parseInt(month) / 3);
         var seasonpath = "../data/season/" + year + "S" + season + ".yaml";
         console.log("seasonpath:" + seasonpath);
-        var seasonobj = yaml.load(fs.readFileSync(seasonpath, 'utf8'));
+        var seasonobj = yaml.load(fs.readFileSync(seasonpath, 'utf8',{schema: yaml.FAILSAFE_SCHEMA }));
         var time = seasonobj.dayplan[plan].time;
 
-        //var seasonobj = yaml.load(fs.readFileSync("plan.yaml", 'utf8'));
+        //var seasonobj = yaml.load(fs.readFileSync("plan.yaml", 'utf8',{schema: yaml.FAILSAFE_SCHEMA }));
         //var planstr = seasonobj.dayplan[plan].planstr;
 
         var planstr = `| 时间片 | 时长 | 用途 | 手稿 |
@@ -155,7 +155,7 @@ module.exports = {
         var season = Math.ceil(parseInt(month) / 3);
         var seasonpath = "../data/season/" + year + "S" + season + ".yaml";
         //console.log("seasonpath:" + seasonpath);
-        var seasonobj = yaml.load(fs.readFileSync(seasonpath, 'utf8'));
+        var seasonobj = yaml.load(fs.readFileSync(seasonpath, 'utf8',{schema: yaml.FAILSAFE_SCHEMA }));
         var todoobj = seasonobj.todo;
         var timeobj = seasonobj.time;
 
@@ -169,10 +169,10 @@ module.exports = {
             }
             resttotal = resttotal + rest[task];
         }
-        console.log("resttotal:", resttotal);
-        console.log("reset:\n", yaml.dump(rest));
+        console.log("resttotal:",resttotal);
+        console.log("rest:\n"+yaml.dump(rest));
         var restSorted = Object.keys(rest).sort(function (a, b) { return rest[b] - rest[a] });
-        console.log("resetSOrted:\n", yaml.dump(restSorted));
+        console.log("resetSOrted:\n"+ yaml.dump(restSorted));
 
         // init the waitinglist
         var dayplanobj = seasonobj.dayplan;
@@ -226,7 +226,7 @@ module.exports = {
         var season = Math.ceil(parseInt(month) / 3);
         var seasonpath = "../data/season/" + year + "S" + season + ".yaml";
         //console.log("seasonpath:" + seasonpath);
-        var seasonobj = yaml.load(fs.readFileSync(seasonpath, 'utf8'));
+        var seasonobj = yaml.load(fs.readFileSync(seasonpath, 'utf8',{schema: yaml.FAILSAFE_SCHEMA }));
         var dayplanobj = seasonobj.dayplan;
 
         for (var plan in dayplanobj) {

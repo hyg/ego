@@ -197,12 +197,11 @@ time:
     raw: 115
 todo:
   PSMD:
-    - '60': error,knowledge metadata的placeholder升级
-      readme: |
-        - commit
-        - metadata -> view
     - '60': term metadata的upgradeby,depend,together,effect等字段的内容写入term view
-    - '60': term metadata -> term html
+    - '90': 自动把旧格式转化为新格式：
+      readme: |
+        - old term metadata -> new term metadata
+        - old termset metadata -> new term metadata
     - '30': 生成入门目录涉及的所有view，调整措池准备试用
     - '60': 基于term metadata修改COM、deploy、COD等metadata
     - '195': term + COM matedata -> deploy metadata -> deploy view
@@ -216,12 +215,12 @@ todo:
     - '195': 在整理近期手稿之后，修订个人模型。
     - '60': task之间结算体系设计。
   learn:
-    - '60': 把git开发流程编写成批处理文件
     - '30': 学习正则表达式RegExp
     - '60': nosql
     - '90': 把PSMD的data、src部分升级到rdf，如果升级成功则作为范例。
   js:
-    - '30': 测试
+    - '60': Jade Language生成html view
+    - '60': 学习测试方法和工具
     - '30': async
     - '30': promise 对象
     - '30': 学习AMD规范，如果适用就开发范例
@@ -236,6 +235,7 @@ todo:
     - '30': debug-灰枣按"个"作为单位被算出很高热量。
     - '30': 设计DRI metadata
     - '60': 实现自定义DRI的代码
+    - '60': 根据过去数据给出15天内的建议。
     - '30': debug-diff mode较大天数返回空数据，创建三个R文件。
   xuemen:
     - '60': 五月报税

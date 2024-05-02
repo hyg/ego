@@ -1,9 +1,9 @@
-var fs = require('fs');
-var yaml = require('js-yaml');
-var path = require('./path.js');
-var util = require('./util.js');
-var start = require('./start.js');
-var finish = require('./finish.js');
+const fs = require('fs');
+const yaml = require('js-yaml');
+const path = require('./path.js');
+const util = require('./util.js');
+const start = require('./start.js');
+const finish = require('./finish.js');
 
 const helpstr = `
 node ego day plan: show the day plan in each tempplate
@@ -23,8 +23,8 @@ if (arguments.length > 0) {
         } else if (arguments[1] == "over") {
             //node ego day over: generate day overall view
             var date = util.datestr();
-            finish.makedaylog(date);
             finish.updateseason(date);
+            finish.makedaylog(date);
         } else if (arguments[1] == "plan") {
             // node ego day plan: show the day plan in each tempplate
             var date = util.datestr();

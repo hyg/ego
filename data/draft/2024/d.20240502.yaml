@@ -1,0 +1,36 @@
+date: 20240502
+plan: 1
+time:
+  - begin: '20240502074500'
+    amount: 60
+    type: work
+    subject: PSMD
+    name: error,knowledge metadata的placeholder升级
+    readme: |
+      - commit
+      - metadata -> view
+    output: draft/2024/05/20240502074500.md
+  - begin: '20240502093000'
+    amount: 90
+    type: work
+    subject: PSMD
+    name: term metadata -> term html
+    output: draft/2024/05/20240502093000.md
+  - begin: '20240502140000'
+    amount: 58
+    type: work
+    subject: ego
+    name: 把waitinglist前几名和次日可能的模版绑定结果写入日小结。
+    output: draft/2024/05/20240502140000.md
+  - begin: '20240502143000'
+    amount: 2
+    type: work
+    subject: js
+    name: 测试
+    output: draft/2024/05/20240502143000.md
+  - begin: '20240502160000'
+    amount: 60
+    type: work
+    subject: learn
+    name: 把git开发流程编写成批处理文件
+    output: draft/2024/05/20240502160000.md
