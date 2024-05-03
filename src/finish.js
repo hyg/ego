@@ -58,44 +58,52 @@ module.exports = {
         }
 
         // season time stat
-        
+
         var statobj = new Object();
-        for(var task in seasonobj.time.alloc){
+        statobj.total = {alloc:0,sold:0,hold:0};
+        for (var task in seasonobj.time.alloc) {
             statobj[task] = new Object();
             statobj[task].alloc = parseInt(seasonobj.time.alloc[task]);
-            if(seasonobj.time.sold[task]!=null){
+            if (seasonobj.time.sold[task] != null) {
                 statobj[task].sold = parseInt(seasonobj.time.sold[task]);
-            }else{
-                statobj[task].sold = 0 ;
+            } else {
+                statobj[task].sold = 0;
             }
-            statobj[task].rest = statobj[task].alloc - statobj[task].sold ;
+            statobj[task].hold = statobj[task].alloc - statobj[task].sold;
+
+            statobj.total.alloc = statobj.total.alloc + statobj[task].alloc;
+            statobj.total.sold = statobj.total.sold + statobj[task].sold;
         }
-        for(var task in seasonobj.time.sold){
-            if(statobj[task]==null){
+        for (var task in seasonobj.time.sold) {
+            if (statobj[task] == null) {
                 statobj[task] = new Object();
                 statobj[task].alloc = 0;
                 statobj[task].sold = parseInt(seasonobj.time.sold[task]);
-                statobj[task].rest = statobj[task].alloc - statobj[task].sold ;
+                statobj[task].hold = statobj[task].alloc - statobj[task].sold;
+
+                statobj.total.alloc = statobj.total.alloc + statobj[task].alloc;
+                statobj.total.sold = statobj.total.sold + statobj[task].sold;
             }
         }
+        statobj.total.hold = statobj.total.alloc - statobj.total.sold;
 
-        var seasonstatstr = `\n---\nseason stat:\n| task | alloc | sold | rest |
+        var seasonstatstr = `\n---\nseason stat:\n\n| task | alloc | sold | hold |
 | --- | --- | --- | --- |
 `;
-        for(var task in statobj){
-            seasonstatstr = seasonstatstr + "| " + task + " | " + statobj[task].alloc + " | " + statobj[task].sold + " | " + statobj[task].rest + " |\n" ;
+        for (var task in statobj) {
+            seasonstatstr = seasonstatstr + "| " + task + " | " + statobj[task].alloc + " | " + statobj[task].sold + " | " + statobj[task].hold + " |\n";
         }
 
         // waitinglist
         var waitinglist = start.makewaitinglist();
-        var waitingliststr = "\n---\n\nwaiting list:\n" ;
-        for(var amounttype in waitinglist){
-            waitingliststr = waitingliststr + "\n" + amounttype + "分钟时间片：\n" ;
-            for(var i=0;i<4;i++){
-                if(waitinglist[amounttype][i] != null){
+        var waitingliststr = "\n---\n\nwaiting list:\n\n";
+        for (var amounttype in waitinglist) {
+            waitingliststr = waitingliststr + "\n- " + amounttype + "分钟时间片：\n";
+            for (var i = 0; i < 4; i++) {
+                if (waitinglist[amounttype][i] != null) {
                     var todoobj = waitinglist[amounttype][i];
-                    var place = parseInt(todoobj.id)+1 ;
-                    waitingliststr = waitingliststr + "- " + todoobj.task + "的第" + place + "号事项：" + todoobj.name + "\n" ;
+                    var place = parseInt(todoobj.id) + 1;
+                    waitingliststr = waitingliststr + "  - " + todoobj.task + "的第" + place + "号事项：" + todoobj.name + "\n";
                 }
             }
 

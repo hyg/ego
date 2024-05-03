@@ -197,21 +197,27 @@ time:
     raw: 115
 todo:
   PSMD:
-    - '60': term metadata的upgradeby,depend,together,effect等字段的内容写入term view
-    - '90': 自动把旧格式转化为新格式：
+    - '60': term metadata的depend,together,effect等字段的内容写入term view
+    - '90': 完成psmd\src\conver.js中的termsertoterm().
       readme: |
-        - old term metadata -> new term metadata
-        - old termset metadata -> new term metadata
+        - 参考5.3. 9:30 draft。
+        - old termset -> new term
+          - 如果item符合以下条件，直接把text、readme提升到item下：
+            - type = term
+            - localid = ”“
+          - 增加converfrom字段：值是旧term或者termset的文件名。
     - '30': 生成入门目录涉及的所有view，调整措池准备试用
+    - '60': 设计条款的可执行机制
     - '60': 基于term metadata修改COM、deploy、COD等metadata
     - '195': term + COM matedata -> deploy metadata -> deploy view
     - '30': PSMD委托合同的metadata
     - '90': 整理近期手稿。
   ego:
-    - '30': 整理废弃git库，包括本地和远程。
-    - '30': makedayplan()创建draft文件夹，合并makedayplan和makedaydraft。
     - '60': github + codeberg page 范例
     - '60': 在season metadata中实现浮动时间表，修改日计划功能。
+    - '30': 整理废弃git库，包括本地和远程。
+      readme: |
+        参考5.3.14:00 draft
     - '195': 在整理近期手稿之后，修订个人模型。
     - '60': task之间结算体系设计。
     - '60': 用js代码完成日小结后的git操作。
@@ -219,11 +225,9 @@ todo:
         - 参考：D:\huangyg\git\draft\2024\04\20240430140000.md
         - 在各task metadata中给出git库的路径，每天根据实际任务去操作。
   learn:
-    - '30': 学习正则表达式RegExp
     - '60': nosql
     - '90': 把PSMD的data、src部分升级到rdf，如果升级成功则作为范例。
   js:
-    - '60': Jade Language生成html view
     - '60': 学习测试方法和工具
     - '30': async
     - '30': promise 对象
