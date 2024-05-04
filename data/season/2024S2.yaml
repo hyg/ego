@@ -196,6 +196,7 @@ time:
 todo:
   PSMD:
     - '60': term metadata的depend,together,effect等字段的内容写入term view
+    - '90': 根据新的term metadata，重新设计COM、deploy、COD metadata，编辑出范例。
     - '60': 设计条款的可执行机制
     - '60': 基于term metadata修改COM、deploy、COD等metadata
     - '195': term + COM matedata -> deploy metadata -> deploy view
