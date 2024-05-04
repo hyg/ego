@@ -1,0 +1,40 @@
+date: 20240504
+plan: 1
+time:
+  - begin: '20240504074500'
+    amount: 5
+    type: work
+    subject: PSMD
+    name: term metadata的depend,together,effect等字段的内容写入term view
+    output: draft/2024/05/20240504074500.md
+  - begin: '20240504093000'
+    amount: 170
+    type: work
+    subject: PSMD
+    name: 完成psmd\src\conver.js中的termsertoterm().
+    readme: |
+      - 参考5.3. 9:30 draft。
+      - old termset -> new term
+        - 如果item符合以下条件，直接把text、readme提升到item下：
+          - type = term
+          - localid = ”“
+        - 增加converfrom字段：值是旧term或者termset的文件名。
+    output: draft/2024/05/20240504093000.md
+  - begin: '20240504140000'
+    amount: 35
+    type: work
+    subject: raw
+    name: debug-灰枣按"个"作为单位被算出很高热量。
+    output: draft/2024/05/20240504140000.md
+  - begin: '20240504143000'
+    amount: 30
+    type: work
+    subject: js
+    name: async
+    output: draft/2024/05/20240504143000.md
+  - begin: '20240504160000'
+    amount: 86
+    type: work
+    subject: ego
+    name: github + codeberg page 范例
+    output: draft/2024/05/20240504160000.md
