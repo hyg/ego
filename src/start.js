@@ -136,7 +136,7 @@ module.exports = {
             var endhour = beginhour + parseInt((beginminute + amount) / 60);
             var endminute = (beginminute + amount) % 60;
             //console.log(begintime,beginhour,beginminute,amount,endhour,endminute);
-            var timestr = "## " + beginhour.toString().padStart(2, "0") + ":" + beginminute.toString().padStart(2, "0") + " ~ " + endhour.toString().padStart(2, "0") + ":" + endminute.toString().padStart(2, "0") + "\n\n" + taskname + "\n\n";
+            var timestr = "## " + beginhour.toString().padStart(2, "0") + ":" + beginminute.toString().padStart(2, "0") + " ~ " + endhour.toString().padStart(2, "0") + ":" + endminute.toString().padStart(2, "0") + "\n" + taskname + "\n\n";
 
             var timeviewfilename = path.draftrepopath + date.slice(0, 4) + "/" + date.slice(4, 6) + "/" + begintime + ".md";
             console.log("time slice draft file name:" + timeviewfilename);

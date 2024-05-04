@@ -100,11 +100,9 @@ dayplan:
         amount: 60
         type: check
         name: 讨论、整理提交
-    readme: >
+    readme: |
       模版一采用静默工作方式。  
-
-      希望讨论的提纲发到
-      [huangyg@mars22.com](mailto:huangyg@mars22.com)，通常安排在后面某天的早餐（5:15~5:59）或会议时间（6:00~6:45）。
+      希望讨论的提纲发到 [huangyg@mars22.com](mailto:huangyg@mars22.com)，通常安排在后面某天的早餐（5:15~5:59）或会议时间（6:00~6:45）。
   '2':
     supply:
       '60': 1
@@ -198,7 +196,6 @@ time:
 todo:
   PSMD:
     - '60': term metadata的depend,together,effect等字段的内容写入term view
-    - '30': 生成入门目录涉及的所有view，调整措池准备试用
     - '60': 设计条款的可执行机制
     - '60': 基于term metadata修改COM、deploy、COD等metadata
     - '195': term + COM matedata -> deploy metadata -> deploy view
@@ -221,6 +218,9 @@ todo:
       readme: |
         - https://docs.github.com/zh/actions/creating-actions/metadata-syntax-for-github-actions
         - https://docs.github.com/zh/actions/learn-github-actions/finding-and-customizing-actions
+    - '30': YARRRML
+      readme: |
+        - https://rml.io/yarrrml/
     - '60': nosql
     - '90': 把PSMD的data、src部分升级到rdf，如果升级成功则作为范例。
   js:

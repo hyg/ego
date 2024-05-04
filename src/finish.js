@@ -37,7 +37,7 @@ module.exports = {
             daylog = daylog + "当天未绑定时间模版"
         }
 
-        var indexstr = "\n\n<a id=\"index\"></a>\n";
+        var indexstr = "<a id=\"index\"></a>\n";
         var logstr = "";
         for (t in draftmetadata.time) {
             var timelog = draftmetadata.time[t];
@@ -159,7 +159,7 @@ module.exports = {
         //console.log("sold stat:\n" + yaml.dump(sold));
         seasonobj.time.sold = sold;
 
-        fs.writeFileSync(seasonpath, yaml.dump(seasonobj));
+        fs.writeFileSync(seasonpath, yaml.dump(seasonobj, { 'lineWidth': -1 }));
         console.log(seasonpath + "文件中的time.sold字段已更新:\n" + yaml.dump(sold));
     }
 }
