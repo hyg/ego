@@ -1,0 +1,21 @@
+date: 20240505
+plan: 2
+time:
+  - begin: '20240505074500'
+    amount: 245
+    type: work
+    subject: xuemen
+    name: xuemen COD metadata-章程部分条款
+    output: draft/2024/05/20240505074500.md
+  - begin: '20240505140000'
+    amount: 110
+    type: work
+    subject: PSMD
+    name: 根据新的term metadata，重新设计COM、deploy metadata。
+    output: draft/2024/05/20240505140000.md
+  - begin: '20240505160000'
+    amount: 108
+    type: work
+    subject: PSMD
+    name: term metadata的depend字段的内容写入term view
+    output: draft/2024/05/20240505160000.md

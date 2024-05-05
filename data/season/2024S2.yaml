@@ -195,8 +195,16 @@ time:
     raw: 115
 todo:
   PSMD:
-    - '60': term metadata的depend,together,effect等字段的内容写入term view
-    - '90': 根据新的term metadata，重新设计COM、deploy、COD metadata，编辑出范例。
+    - '60': term metadata的together,effect等字段的内容写入term view
+    - '195': 根据新的term metadata，重新设计COM、deploy、COD metadata，编辑出范例。
+    - '30': debug- D:\huangyg\git\PSMD\data\term.25c83dac.yaml interface字段混乱。
+      readme: |
+        term.25c83dac.yaml的depend.text 包含 <term.2e4f11cb.term.1> 
+        执行node term term 2e4f11cb
+        term.25c83dac.yaml的interface:
+          <term.50430bca.632214.c83dac.entity.1>: 董事会
+          <term.50430bca.632214.c83dac.term.1>: 章程第八条（十）
+          <term.50430bca.632214.c83dac.term.2>: 中华人民共和国公司法
     - '60': 设计条款的可执行机制
     - '60': 基于term metadata修改COM、deploy、COD等metadata
     - '195': term + COM matedata -> deploy metadata -> deploy view
@@ -245,4 +253,5 @@ todo:
     - '60': 五月报税
       readme: |
         - 学习云票助手软件：http://www.ibwjf.com/classRooms/1
-    - '195': xuemen COD metadata
+    - '60': xuemen COD metadata-章程实施细则
+    - '90': xuemen COD metadata-S2状态下的部门模型
