@@ -1,0 +1,21 @@
+date: 20240506
+plan: 2
+time:
+  - begin: '20240506074500'
+    amount: 195
+    type: work
+    subject: PSMD
+    name: 根据新的term metadata，重新设计COM、deploy、COD metadata。
+    output: draft/2024/05/20240506074500.md
+  - begin: '20240506140000'
+    amount: 130
+    type: work
+    subject: xuemen
+    name: 整理章程实施细则
+    output: draft/2024/05/20240506140000.md
+  - begin: '20240506160000'
+    amount: 20
+    type: work
+    subject: PSMD
+    name: term metadata的together,effect等字段的内容写入term view
+    output: draft/2024/05/20240506160000.md

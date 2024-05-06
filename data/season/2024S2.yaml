@@ -195,8 +195,8 @@ time:
     raw: 115
 todo:
   PSMD:
-    - '60': term metadata的together,effect等字段的内容写入term view
-    - '195': 根据新的term metadata，重新设计COM、deploy、COD metadata，编辑出范例。
+    - '90': 根据新的COM、deploy、COD metadata，编辑出范例。
+    - '30': 了解Rules as Code (RaC)，准备在metadata中增加code字段。
     - '30': debug- D:\huangyg\git\PSMD\data\term.25c83dac.yaml interface字段混乱。
       readme: |
         term.25c83dac.yaml的depend.text 包含 <term.2e4f11cb.term.1> 
@@ -211,6 +211,7 @@ todo:
     - '30': PSMD委托合同的metadata
     - '90': 整理近期手稿。
   ego:
+    - '60': 在node ego over时创建次日的计划，内容参考node ego plan输出。
     - '60': 在season metadata中实现浮动时间表，修改日计划功能。
     - '30': 整理废弃git库，包括本地和远程。
       readme: |
@@ -254,4 +255,6 @@ todo:
       readme: |
         - 学习云票助手软件：http://www.ibwjf.com/classRooms/1
     - '60': xuemen COD metadata-章程实施细则
-    - '90': xuemen COD metadata-S2状态下的部门模型
+      readme: |
+        章程实施细则定位在基本管理制度，保留董事会职权，涉及股东会职权的条款列入附件，经理职权以下（含经理）的条款分离出来作为一般的工作。
+    - '60': xuemen COD metadata-S2状态下的部门模型
