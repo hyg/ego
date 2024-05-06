@@ -186,13 +186,13 @@ time:
     xuemen: 600
     raw: 300
   sold:
-    ego: 1731
-    PSMD: 3028
+    ego: 1994
+    PSMD: 4146
     infra: 30
-    js: 229
-    learn: 222
-    xuemen: 90
-    raw: 115
+    js: 345
+    learn: 312
+    xuemen: 581
+    raw: 150
 todo:
   PSMD:
     - '90': 根据新的COM、deploy、COD metadata，编辑出范例。

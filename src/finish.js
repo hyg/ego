@@ -131,18 +131,18 @@ module.exports = {
         var lastdateofseason = seasonobj.year + seasonobj.lastmonth.toString().padStart(2, "0") + seasonobj.lastday.toString().padStart(2, "0");
         //console.log("season day:",firstdateofseason,lastdateofseason)
         var sold = new Object();
+        // old path 
         for (var m = parseInt(seasonobj.beginmonth); m <= parseInt(seasonobj.lastmonth); m++) {
             var draftmetapath = path.draftrepopath + seasonobj.year + "/" + m.toString().padStart(2, "0") + "/";
             //var draftmetafilename = "../data/draft" + "/" + year + "/" ;
-            //console.log("draftmetapath:" + draftmetapath);
-
             if (fs.existsSync(draftmetapath)) {
+                //console.log("draftmetadata path exist:" + draftmetapath);
                 fs.readdirSync(draftmetapath).forEach(file => {
-                    //console.log("file:",file);
                     if (file.substring(file.lastIndexOf(".")) == ".yaml") {
                         var date = file.slice(2, 10);
                         //console.log("date:",date);
                         if ((date >= firstdateofseason) & (date <= lastdateofseason)) {
+                            console.log("file:",file);
                             var draftmetaobj = yaml.load(fs.readFileSync(draftmetapath + file, 'utf8', { schema: yaml.FAILSAFE_SCHEMA }));
                             for (var tid in draftmetaobj.time) {
                                 if (sold[draftmetaobj.time[tid].subject] != null) {
@@ -154,7 +154,33 @@ module.exports = {
                         }
                     }
                 });
+            }else{
+                console.log("draftmetadata path not exist:",draftmetapath)
             }
+        }
+
+        // new path
+        var draftmetapath = "../data/draft/" + seasonobj.year + "/" ;
+        if (fs.existsSync(draftmetapath)) {
+            fs.readdirSync(draftmetapath).forEach(file => {
+                if (file.substring(file.lastIndexOf(".")) == ".yaml") {
+                    var date = file.slice(2, 10);
+                    //console.log("date:",date);
+                    if ((date >= firstdateofseason) & (date <= lastdateofseason)) {
+                        console.log("file:",file);
+                        var draftmetaobj = yaml.load(fs.readFileSync(draftmetapath + file, 'utf8', { schema: yaml.FAILSAFE_SCHEMA }));
+                        for (var tid in draftmetaobj.time) {
+                            if (sold[draftmetaobj.time[tid].subject] != null) {
+                                sold[draftmetaobj.time[tid].subject] = sold[draftmetaobj.time[tid].subject] + draftmetaobj.time[tid].amount;
+                            } else {
+                                sold[draftmetaobj.time[tid].subject] = draftmetaobj.time[tid].amount;
+                            };
+                        }
+                    }
+                }
+            });
+        }else{
+            console.log("draftmetadata path not exist:",draftmetapath)
         }
         //console.log("sold stat:\n" + yaml.dump(sold));
         seasonobj.time.sold = sold;
