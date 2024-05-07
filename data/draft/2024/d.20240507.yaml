@@ -1,0 +1,36 @@
+date: 20240507
+plan: 1
+time:
+  - begin: '20240507074500'
+    amount: 60
+    type: work
+    subject: js
+    name: 学习测试方法和工具
+    output: draft/2024/05/20240507074500.md
+  - begin: '20240507093000'
+    amount: 90
+    type: work
+    subject: PSMD
+    name: 根据新的COM、deploy、COD metadata，编辑出范例。
+    output: draft/2024/05/20240507093000.md
+  - begin: '20240507140000'
+    amount: 30
+    type: work
+    subject: learn
+    name: 学习 github actions和 workflows 的yaml语法
+    readme: |
+      - https://docs.github.com/zh/actions/creating-actions/metadata-syntax-for-github-actions
+      - https://docs.github.com/zh/actions/learn-github-actions/finding-and-customizing-actions
+    output: draft/2024/05/20240507140000.md
+  - begin: '20240507143000'
+    amount: 30
+    type: work
+    subject: raw
+    name: 设计DRI metadata
+    output: draft/2024/05/20240507143000.md
+  - begin: '20240507160000'
+    amount: 60
+    type: work
+    subject: ego
+    name: 在node ego over时创建次日的计划，内容参考node ego plan输出。
+    output: draft/2024/05/20240507160000.md

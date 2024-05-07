@@ -195,7 +195,7 @@ time:
     raw: 150
 todo:
   PSMD:
-    - '90': 根据新的COM、deploy、COD metadata，编辑出范例。
+    - '90': term metadata生成按修订层级排版的COM metadata。
     - '30': 了解Rules as Code (RaC)，准备在metadata中增加code字段。
     - '30': debug- D:\huangyg\git\PSMD\data\term.25c83dac.yaml interface字段混乱。
       readme: |
@@ -211,7 +211,6 @@ todo:
     - '30': PSMD委托合同的metadata
     - '90': 整理近期手稿。
   ego:
-    - '60': 在node ego over时创建次日的计划，内容参考node ego plan输出。
     - '60': 在season metadata中实现浮动时间表，修改日计划功能。
     - '30': 整理废弃git库，包括本地和远程。
       readme: |
@@ -224,17 +223,20 @@ todo:
         - 参考：D:\huangyg\git\draft\2024\04\20240430140000.md
         - 在各task metadata中给出git库的路径，每天根据实际任务去操作。
   learn:
-    - '30': 学习 github actions和 workflows 的yaml语法
+    - '60': github的actions,workflow,job脚本语法
       readme: |
+        - https://docs.github.com/zh/actions/using-workflows/workflow-syntax-for-github-actions
         - https://docs.github.com/zh/actions/creating-actions/metadata-syntax-for-github-actions
         - https://docs.github.com/zh/actions/learn-github-actions/finding-and-customizing-actions
     - '30': YARRRML
       readme: |
         - https://rml.io/yarrrml/
+    - '30': docker
+    - '60': 在util库进行单元测试，在实践中学习。
+    - '30': 寻找测试做得比较好的开源软件，作为学习单元划分和测试的实例。
     - '60': nosql
     - '90': 把PSMD的data、src部分升级到rdf，如果升级成功则作为范例。
   js:
-    - '60': 学习测试方法和工具
     - '60': promise对象和async/await
     - '30': 学习AMD规范，如果适用就开发范例
     - '60': 向外提供js文件的范例，为代码层级互通做准备
@@ -245,8 +247,8 @@ todo:
         https://blog.csdn.net/lwf3115841/article/details/129105206
     - '60': 学习'Electron'，创作一个范例。
   raw:
-    - '30': 设计DRI metadata
-    - '60': 实现自定义DRI的代码
+    - '60': 整理DRI和夏季使用的NRV metadata
+    - '60': 实现自定义DRI,NRV的代码
     - '60': 根据过去数据给出15天内的建议。
     - '30': debug-diff mode较大天数返回空数据，创建三个R文件。
     - '30': 检查etable递归过程是否累加amount字段而未检查unit字段的。
