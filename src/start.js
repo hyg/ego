@@ -24,7 +24,8 @@ module.exports = {
                 var timeperiod = new Object();
                 timeperiod.begin = date + time[i].beginhour.toString().padStart(2, '0') + time[i].beginminute.toString().padStart(2, '0') + "00";
                 timeperiod.amount = time[i].amount;
-                timeperiod.type = "work"; timeperiod.subject = waitinglist[time[i].amount.toString()][0].task;
+                timeperiod.type = "work"; 
+                timeperiod.subject = waitinglist[time[i].amount.toString()][0].task;
                 timeperiod.name = waitinglist[time[i].amount.toString()][0].name;
                 if (waitinglist[time[i].amount.toString()][0].readme != null) {
                     timeperiod.readme = waitinglist[time[i].amount.toString()][0].readme;
@@ -169,10 +170,10 @@ module.exports = {
             }
             resttotal = resttotal + rest[task];
         }
-        console.log("resttotal:",resttotal);
-        console.log("rest:\n"+yaml.dump(rest));
+        //console.log("resttotal:",resttotal);
+        //console.log("rest:\n"+yaml.dump(rest));
         var restSorted = Object.keys(rest).sort(function (a, b) { return rest[b] - rest[a] });
-        console.log("resetSOrted:\n"+ yaml.dump(restSorted));
+        //console.log("resetSOrted:\n"+ yaml.dump(restSorted));
 
         // init the waitinglist
         var dayplanobj = seasonobj.dayplan;

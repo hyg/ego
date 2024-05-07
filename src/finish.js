@@ -4,13 +4,39 @@ const path = require('./path.js');
 const start = require('./start.js');
 
 module.exports = {
+    maketomorowinfo: function(date){
+        var year = date.slice(0, 4);
+        var month = date.slice(4, 6);
+        var day = date.slice(6, 8);
+        var season = Math.ceil(parseInt(month) / 3);
+        var seasonpath = "../data/season/" + year + "S" + season + ".yaml";
+        var seasonobj = yaml.load(fs.readFileSync(seasonpath, 'utf8', { schema: yaml.FAILSAFE_SCHEMA }));
+    
+        var dayinfostr = "# " + year + "." + month + "." + day + ".\n\n根据[ego模型时间接口](https://gitee.com/hyg/blog/blob/master/timeflow.md)，每天早起根据身心状况绑定模版。" + "\n\n---\n";
+        for(var plan in seasonobj.dayplan){
+            var waitinglist = start.makewaitinglist();
+            var time = seasonobj.dayplan[plan].time;
+            dayinfostr = dayinfostr + "如果绑定模版" + plan + "可能安排以下任务：\n\n" ;
+            for (var i in time) {
+                if (time[i].type == "work") {
+                    dayinfostr = dayinfostr + "- " + time[i].beginhour.toString().padStart(2, '0') + ":" + time[i].beginminute.toString().padStart(2, '0') + "\t" + waitinglist[time[i].amount.toString()][0].name + " -" + waitinglist[time[i].amount.toString()][0].task + "[" + waitinglist[time[i].amount.toString()][0].id + "]\n" ;
+                    waitinglist[time[i].amount.toString()].shift();
+                }
+            }
+            dayinfostr = dayinfostr + "\n---\n";
+        }
+        dayinfostr = dayinfostr + "对任务排序的建议发到<huangyg@mrs22.com>，日计划确定后会在本页面发布。";
+        var dayinfofilename = path.blogrepopath + "release/time/d." + date + ".md";
+        console.log("dayinfo file name:\n" + dayinfofilename + "\ncontent:\n" + dayinfostr);
+        fs.writeFileSync(dayinfofilename, dayinfostr);
+    },
     makedaylog: function (date) {
         var year = date.slice(0, 4);
         var month = date.slice(4, 6);
         var day = date.slice(6, 8);
         var season = Math.ceil(parseInt(month) / 3);
         var seasonpath = "../data/season/" + year + "S" + season + ".yaml";
-        console.log("seasonpath:" + seasonpath);
+        //console.log("seasonpath:" + seasonpath);
         var seasonobj = yaml.load(fs.readFileSync(seasonpath, 'utf8', { schema: yaml.FAILSAFE_SCHEMA }));
 
         //var draftmetafilename = path.draftrepopath + year + "/" + month + "/" + "d." + date + ".yaml";
@@ -142,7 +168,7 @@ module.exports = {
                         var date = file.slice(2, 10);
                         //console.log("date:",date);
                         if ((date >= firstdateofseason) & (date <= lastdateofseason)) {
-                            console.log("file:",file);
+                            //console.log("file:",file);
                             var draftmetaobj = yaml.load(fs.readFileSync(draftmetapath + file, 'utf8', { schema: yaml.FAILSAFE_SCHEMA }));
                             for (var tid in draftmetaobj.time) {
                                 if (sold[draftmetaobj.time[tid].subject] != null) {
@@ -167,7 +193,7 @@ module.exports = {
                     var date = file.slice(2, 10);
                     //console.log("date:",date);
                     if ((date >= firstdateofseason) & (date <= lastdateofseason)) {
-                        console.log("file:",file);
+                        //console.log("file:",file);
                         var draftmetaobj = yaml.load(fs.readFileSync(draftmetapath + file, 'utf8', { schema: yaml.FAILSAFE_SCHEMA }));
                         for (var tid in draftmetaobj.time) {
                             if (sold[draftmetaobj.time[tid].subject] != null) {

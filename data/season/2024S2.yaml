@@ -186,15 +186,17 @@ time:
     xuemen: 600
     raw: 300
   sold:
-    ego: 1994
-    PSMD: 4146
+    ego: 2054
+    PSMD: 4236
     infra: 30
-    js: 345
-    learn: 312
+    js: 405
+    learn: 342
     xuemen: 581
-    raw: 150
+    raw: 180
 todo:
   PSMD:
+    - '60': 使用1609模型实际编写COM、deploy、COD的metadata
+      readme: 重点在于验证metadata的结构，如果时间不足可以使用虚构内容。
     - '90': term metadata生成按修订层级排版的COM metadata。
     - '30': 了解Rules as Code (RaC)，准备在metadata中增加code字段。
     - '30': debug- D:\huangyg\git\PSMD\data\term.25c83dac.yaml interface字段混乱。
@@ -237,7 +239,7 @@ todo:
     - '60': nosql
     - '90': 把PSMD的data、src部分升级到rdf，如果升级成功则作为范例。
   js:
-    - '60': promise对象和async/await
+    - '60': 学习promise对象和async/await
     - '30': 学习AMD规范，如果适用就开发范例
     - '60': 向外提供js文件的范例，为代码层级互通做准备
     - '30': 日期格式化
@@ -253,6 +255,9 @@ todo:
     - '30': debug-diff mode较大天数返回空数据，创建三个R文件。
     - '30': 检查etable递归过程是否累加amount字段而未检查unit字段的。
   xuemen:
+    - '90': 整理章程实施细则的metedata
+    - '195': 整理S2状态下基本管理制度
+    - '90': 整理S2状态下基本管理制度的metedata
     - '60': 五月报税
       readme: |
         - 学习云票助手软件：http://www.ibwjf.com/classRooms/1

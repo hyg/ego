@@ -23,8 +23,10 @@ if (arguments.length > 0) {
         } else if (arguments[1] == "over") {
             //node ego day over: generate day overall view
             var date = util.datestr();
+            var tomorrow = util.datestr(1);
             finish.updateseason(date);
             finish.makedaylog(date);
+            finish.maketomorowinfo(tomorrow);
         } else if (arguments[1] == "plan") {
             // node ego day plan: show the day plan in each tempplate
             var date = util.datestr();
@@ -36,6 +38,7 @@ if (arguments.length > 0) {
             var plan = arguments[1];
             start.makedaydraft(date, plan);
             start.makedayplan(date);
+            finish.maketomorowinfo(tomorrow);
         }
     } else {
         console.log(helpstr);
