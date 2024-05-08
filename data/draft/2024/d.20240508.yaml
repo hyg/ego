@@ -1,0 +1,21 @@
+date: 20240508
+plan: 2
+time:
+  - begin: '20240508074500'
+    amount: 195
+    type: work
+    subject: xuemen
+    name: 整理章程及章程实施细则
+    output: draft/2024/05/20240508074500.md
+  - begin: '20240508140000'
+    amount: 105
+    type: work
+    subject: xuemen
+    name: 整理章程实施细则的metedata
+    output: draft/2024/05/20240508140000.md
+  - begin: '20240508160000'
+    amount: 60
+    type: work
+    subject: PSMD
+    name: 使用1609模型实际编写COM metadata
+    output: draft/2024/05/20240508160000.md

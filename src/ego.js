@@ -35,6 +35,7 @@ if (arguments.length > 0) {
         }else {
             //node ego day 1: generate day draft metadata by template 1
             var date = util.datestr();
+            var tomorrow = util.datestr(1);
             var plan = arguments[1];
             start.makedaydraft(date, plan);
             start.makedayplan(date);

@@ -187,17 +187,17 @@ time:
     raw: 300
   sold:
     ego: 2054
-    PSMD: 4236
+    PSMD: 4296
     infra: 30
     js: 405
     learn: 342
-    xuemen: 581
+    xuemen: 881
     raw: 180
 todo:
   PSMD:
-    - '60': 使用1609模型实际编写COM、deploy、COD的metadata
-      readme: 重点在于验证metadata的结构，如果时间不足可以使用虚构内容。
-    - '90': term metadata生成按修订层级排版的COM metadata。
+    - '90': 使用1609模型实际编写COM、deploy、COD的metadata
+    - '195': term + COM matedata -> deploy metadata -> deploy view
+    - '30': PSMD委托合同的metadata
     - '30': 了解Rules as Code (RaC)，准备在metadata中增加code字段。
     - '30': debug- D:\huangyg\git\PSMD\data\term.25c83dac.yaml interface字段混乱。
       readme: |
@@ -207,24 +207,26 @@ todo:
           <term.50430bca.632214.c83dac.entity.1>: 董事会
           <term.50430bca.632214.c83dac.term.1>: 章程第八条（十）
           <term.50430bca.632214.c83dac.term.2>: 中华人民共和国公司法
+    - '90': term metadata生成按修订层级排版的COM metadata。
     - '60': 设计条款的可执行机制
-    - '60': 基于term metadata修改COM、deploy、COD等metadata
-    - '195': term + COM matedata -> deploy metadata -> deploy view
-    - '30': PSMD委托合同的metadata
     - '90': 整理近期手稿。
   ego:
+    - '90': 实现todo项的多层结构
+    - '30': 日小结时间统计增加一列todo，累计还没有进行的todo项时间。
     - '60': 在season metadata中实现浮动时间表，修改日计划功能。
     - '30': 整理废弃git库，包括本地和远程。
       readme: |
         参考5.3.14:00 draft
-    - '195': 在整理近期手稿之后，修订个人模型。
     - '60': task之间结算体系设计。
     - '30': 设计ego.mars22.com 发布内容。
     - '60': 用js代码完成日小结后的git操作。
       readme: |
         - 参考：D:\huangyg\git\draft\2024\04\20240430140000.md
         - 在各task metadata中给出git库的路径，每天根据实际任务去操作。
+    - '195': 在整理近期手稿之后，修订个人模型。
   learn:
+    - '30': 了解XMPP协议，为自动发送通知做准备。
+      readme: https://github.com/xmppjs/xmpp.js/
     - '60': github的actions,workflow,job脚本语法
       readme: |
         - https://docs.github.com/zh/actions/using-workflows/workflow-syntax-for-github-actions
@@ -239,6 +241,11 @@ todo:
     - '60': nosql
     - '90': 把PSMD的data、src部分升级到rdf，如果升级成功则作为范例。
   js:
+    - '60': 本地html调用远程git repo或者git page的metadata
+    - '30': nodejs中使用微信，为协同工作做准备。
+      readme: |
+        - https://cloud.tencent.com/developer/article/1342870
+        - https://blog.lindexi.com/post/%E9%80%9A%E8%BF%87%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%BD%BF%E7%94%A8%E5%BE%AE%E4%BF%A1.html
     - '60': 学习promise对象和async/await
     - '30': 学习AMD规范，如果适用就开发范例
     - '60': 向外提供js文件的范例，为代码层级互通做准备
@@ -255,13 +262,9 @@ todo:
     - '30': debug-diff mode较大天数返回空数据，创建三个R文件。
     - '30': 检查etable递归过程是否累加amount字段而未检查unit字段的。
   xuemen:
-    - '90': 整理章程实施细则的metedata
     - '195': 整理S2状态下基本管理制度
-    - '90': 整理S2状态下基本管理制度的metedata
     - '60': 五月报税
       readme: |
         - 学习云票助手软件：http://www.ibwjf.com/classRooms/1
-    - '60': xuemen COD metadata-章程实施细则
-      readme: |
-        章程实施细则定位在基本管理制度，保留董事会职权，涉及股东会职权的条款列入附件，经理职权以下（含经理）的条款分离出来作为一般的工作。
+    - '90': 整理S2状态下基本管理制度的metedata
     - '60': xuemen COD metadata-S2状态下的部门模型
