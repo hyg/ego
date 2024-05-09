@@ -187,15 +187,20 @@ time:
     raw: 300
   sold:
     ego: 2054
-    PSMD: 4296
+    PSMD: 4386
     infra: 30
-    js: 405
-    learn: 342
+    js: 495
+    learn: 412
     xuemen: 881
-    raw: 180
+    raw: 265
 todo:
   PSMD:
-    - '90': 使用1609模型实际编写COM、deploy、COD的metadata
+    - '90': 完成1609 COM metadata
+      readme: |
+        - 利益分配条款
+        - 各决策条款的改变事项，微调。
+    - '90': 完成1609 deploy、COD的metadata
+    - '90': COM metadata -> COM view
     - '195': term + COM matedata -> deploy metadata -> deploy view
     - '30': PSMD委托合同的metadata
     - '30': 了解Rules as Code (RaC)，准备在metadata中增加code字段。
@@ -213,6 +218,7 @@ todo:
   ego:
     - '90': 实现todo项的多层结构
     - '30': 日小结时间统计增加一列todo，累计还没有进行的todo项时间。
+    - '60': /release/entry.html 读取 markdown和metadata 并显示。
     - '60': 在season metadata中实现浮动时间表，修改日计划功能。
     - '30': 整理废弃git库，包括本地和远程。
       readme: |
@@ -225,8 +231,6 @@ todo:
         - 在各task metadata中给出git库的路径，每天根据实际任务去操作。
     - '195': 在整理近期手稿之后，修订个人模型。
   learn:
-    - '30': 了解XMPP协议，为自动发送通知做准备。
-      readme: https://github.com/xmppjs/xmpp.js/
     - '60': github的actions,workflow,job脚本语法
       readme: |
         - https://docs.github.com/zh/actions/using-workflows/workflow-syntax-for-github-actions
@@ -241,11 +245,10 @@ todo:
     - '60': nosql
     - '90': 把PSMD的data、src部分升级到rdf，如果升级成功则作为范例。
   js:
-    - '60': 本地html调用远程git repo或者git page的metadata
-    - '30': nodejs中使用微信，为协同工作做准备。
+    - '60': 使用wechty做一个微信机器人范例
       readme: |
-        - https://cloud.tencent.com/developer/article/1342870
-        - https://blog.lindexi.com/post/%E9%80%9A%E8%BF%87%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%BD%BF%E7%94%A8%E5%BE%AE%E4%BF%A1.html
+        - https://github.com/wechaty/wechaty
+        - https://wechaty.gitbook.io/wechaty/v/zh
     - '60': 学习promise对象和async/await
     - '30': 学习AMD规范，如果适用就开发范例
     - '60': 向外提供js文件的范例，为代码层级互通做准备
@@ -256,7 +259,7 @@ todo:
         https://blog.csdn.net/lwf3115841/article/details/129105206
     - '60': 学习'Electron'，创作一个范例。
   raw:
-    - '60': 整理DRI和夏季使用的NRV metadata
+    - '30': 整理今年夏季使用的NRV metadata
     - '60': 实现自定义DRI,NRV的代码
     - '60': 根据过去数据给出15天内的建议。
     - '30': debug-diff mode较大天数返回空数据，创建三个R文件。
