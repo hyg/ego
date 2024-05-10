@@ -1,0 +1,39 @@
+date: 20240510
+plan: 1
+time:
+  - begin: '20240510074500'
+    amount: 60
+    type: work
+    subject: js
+    name: 使用wechty做一个微信机器人范例
+    readme: |
+      - https://github.com/wechaty/wechaty
+      - https://wechaty.gitbook.io/wechaty/v/zh
+    output: draft/2024/05/20240510074500.md
+  - begin: '20240510093000'
+    amount: 120
+    type: work
+    subject: PSMD
+    name: 完成1609 COM metadata
+    readme: |
+      - 利益分配条款
+      - 各决策条款的改变事项，微调。
+    output: draft/2024/05/20240510093000.md
+  - begin: '20240510140000'
+    amount: 15
+    type: work
+    subject: raw
+    name: 整理今年夏季使用的NRV metadata
+    output: draft/2024/05/20240510140000.md
+  - begin: '20240510143000'
+    amount: 77
+    type: work
+    subject: raw
+    name: 实现自定义DRI,NRV的代码
+    output: draft/2024/05/20240510143000.md
+  - begin: '20240510160000'
+    amount: 60
+    type: work
+    subject: ego
+    name: 日小结时间统计增加一列todo，累计还没有进行的todo项时间。学习数组插入数组。
+    output: draft/2024/05/20240510160000.md

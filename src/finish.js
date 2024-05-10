@@ -86,7 +86,7 @@ module.exports = {
         // season time stat
 
         var statobj = new Object();
-        statobj.total = {alloc:0,sold:0,hold:0};
+        statobj.total = {alloc:0,sold:0,hold:0,todo:0};
         for (var task in seasonobj.time.alloc) {
             statobj[task] = new Object();
             statobj[task].alloc = parseInt(seasonobj.time.alloc[task]);
@@ -99,6 +99,7 @@ module.exports = {
 
             statobj.total.alloc = statobj.total.alloc + statobj[task].alloc;
             statobj.total.sold = statobj.total.sold + statobj[task].sold;
+            statobj[task].todo = 0 ;
         }
         for (var task in seasonobj.time.sold) {
             if (statobj[task] == null) {
@@ -109,15 +110,20 @@ module.exports = {
 
                 statobj.total.alloc = statobj.total.alloc + statobj[task].alloc;
                 statobj.total.sold = statobj.total.sold + statobj[task].sold;
+                statobj[task].todo = 0 ;
             }
         }
         statobj.total.hold = statobj.total.alloc - statobj.total.sold;
+        for(var task in seasonobj.todo){
+            statobj[task].todo = this.todosum(seasonobj.todo[task]);
+            statobj.total.todo = statobj.total.todo + statobj[task].todo ;
+        }
 
-        var seasonstatstr = `\n---\nseason stat:\n\n| task | alloc | sold | hold |
-| --- | --- | --- | --- |
+        var seasonstatstr = `\n---\nseason stat:\n\n| task | alloc | sold | hold | todo |
+| --- | --- | --- | --- | --- |
 `;
         for (var task in statobj) {
-            seasonstatstr = seasonstatstr + "| " + task + " | " + statobj[task].alloc + " | " + statobj[task].sold + " | " + statobj[task].hold + " |\n";
+            seasonstatstr = seasonstatstr + "| " + task + " | " + statobj[task].alloc + " | " + statobj[task].sold + " | " + statobj[task].hold + " | " + statobj[task].todo + " |\n";
         }
 
         // waitinglist
@@ -213,5 +219,20 @@ module.exports = {
 
         fs.writeFileSync(seasonpath, yaml.dump(seasonobj, { 'lineWidth': -1 }));
         console.log(seasonpath + "文件中的time.sold字段已更新:\n" + yaml.dump(sold));
+    },
+    todosum: function(todoarray){
+        var sum = 0;
+
+        for(var i in todoarray){
+            for(var key in todoarray[i]){
+                if(!isNaN(parseInt(key))){
+                    sum = sum + parseInt(key);
+                }else if (key == "bind"){
+                    sum = sum + this.todosum(todoarray[i][key]);
+                }
+            }
+        }
+
+        return sum ;
     }
 }
