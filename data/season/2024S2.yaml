@@ -187,17 +187,18 @@ time:
     raw: 300
   sold:
     ego: 2114
-    PSMD: 4506
+    PSMD: 4596
     infra: 30
-    js: 555
+    js: 615
     learn: 412
-    xuemen: 881
+    xuemen: 926
     raw: 357
 todo:
   PSMD:
-    - '90': 完成1609 deploy、COD的metadata
+    - '60': 基于智能设备的S2基本管理制度
     - '90': COM metadata -> COM view
     - '195': term + COM matedata -> deploy metadata -> deploy view
+    - '30': 修订入门目录term.9d12877c，准备实际使用。
     - '30': PSMD委托合同的metadata
     - '30': 了解Rules as Code (RaC)，准备在metadata中增加code字段。
     - '30': debug- D:\huangyg\git\PSMD\data\term.25c83dac.yaml interface字段混乱。
@@ -240,7 +241,6 @@ todo:
     - '60': nosql
     - '90': 把PSMD的data、src部分升级到rdf，如果升级成功则作为范例。
   js:
-    - '60': 了解call和apply
     - '60': 学习promise对象和async/await
     - '30': 学习AMD规范，如果适用就开发范例
     - '60': 向外提供js文件的范例，为代码层级互通做准备
@@ -256,7 +256,6 @@ todo:
     - '30': debug-diff mode较大天数返回空数据，创建三个R文件。
     - '30': 检查etable递归过程是否累加amount字段而未检查unit字段的。
   xuemen:
-    - '195': 整理S2状态下基本管理制度
     - '60': 五月报税
       readme: |
         - 学习云票助手软件：http://www.ibwjf.com/classRooms/1

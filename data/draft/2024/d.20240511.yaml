@@ -1,0 +1,21 @@
+date: 20240511
+plan: 2
+time:
+  - begin: '20240511074500'
+    amount: 45
+    type: work
+    subject: xuemen
+    name: 整理S2状态下基本管理制度
+    output: draft/2024/05/20240511074500.md
+  - begin: '20240511140000'
+    amount: 90
+    type: work
+    subject: PSMD
+    name: 完成1609 deploy、COD的metadata
+    output: draft/2024/05/20240511140000.md
+  - begin: '20240511160000'
+    amount: 60
+    type: work
+    subject: js
+    name: 了解call和apply
+    output: draft/2024/05/20240511160000.md
