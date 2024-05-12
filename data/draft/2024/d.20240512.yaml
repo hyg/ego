@@ -1,0 +1,33 @@
+date: 20240512
+plan: 1
+time:
+  - begin: '20240512074500'
+    amount: 60
+    type: work
+    subject: PSMD
+    name: 基于智能设备的S2基本管理制度
+    output: draft/2024/05/20240512074500.md
+  - begin: '20240512093000'
+    amount: 200
+    type: work
+    subject: PSMD
+    name: COM metadata -> COM view
+    output: draft/2024/05/20240512093000.md
+  - begin: '20240512140000'
+    amount: 0
+    type: work
+    subject: ego
+    name: 实现todo项的多层结构
+    output: draft/2024/05/20240512140000.md
+  - begin: '20240512143000'
+    amount: 0
+    type: work
+    subject: js
+    name: 学习AMD规范，如果适用就开发范例
+    output: draft/2024/05/20240512143000.md
+  - begin: '20240512160000'
+    amount: 90
+    type: work
+    subject: js
+    name: 学习promise对象和async/await
+    output: draft/2024/05/20240512160000.md
