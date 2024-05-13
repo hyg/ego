@@ -4,13 +4,14 @@ var path = require('./path.js');
 var util = require('./util.js');
 
 module.exports = {
+    debug: true,
     makedaydraft: function (date, plan) {
         var year = date.slice(0, 4);
         var month = date.slice(4, 6);
         var season = Math.ceil(parseInt(month) / 3);
         var seasonpath = "../data/season/" + year + "S" + season + ".yaml";
         //console.log("seasonpath:" + seasonpath);
-        var seasonobj = yaml.load(fs.readFileSync(seasonpath, 'utf8',{schema: yaml.FAILSAFE_SCHEMA }));
+        var seasonobj = yaml.load(fs.readFileSync(seasonpath, 'utf8', { schema: yaml.FAILSAFE_SCHEMA }));
         var time = seasonobj.dayplan[plan].time;
         var waitinglist = this.makewaitinglist();
 
@@ -24,7 +25,7 @@ module.exports = {
                 var timeperiod = new Object();
                 timeperiod.begin = date + time[i].beginhour.toString().padStart(2, '0') + time[i].beginminute.toString().padStart(2, '0') + "00";
                 timeperiod.amount = time[i].amount;
-                timeperiod.type = "work"; 
+                timeperiod.type = "work";
                 timeperiod.subject = waitinglist[time[i].amount.toString()][0].task;
                 timeperiod.name = waitinglist[time[i].amount.toString()][0].name;
                 if (waitinglist[time[i].amount.toString()][0].readme != null) {
@@ -35,7 +36,15 @@ module.exports = {
                 timeperiod.output = "draft/" + date.slice(0, 4) + "/" + date.slice(4, 6) + "/" + timeperiod.begin + ".md";
                 drafttimearray.push(timeperiod);
 
-                seasonobj.todo[timeperiod.subject] = seasonobj.todo[timeperiod.subject].filter((job) => job[time[i].amount.toString()] != timeperiod.name);
+                console.log("makedaydraft()> before delete todo item, waitinglist:\n" + yaml.dump(waitinglist[time[i].amount.toString()][0]));
+                console.log("makedaydraft()> before delete todo item:\n" + yaml.dump(seasonobj.todo[timeperiod.subject]));
+                if (seasonobj.todo[timeperiod.subject][waitinglist[time[i].amount.toString()][0].id].bind != null) {
+                    seasonobj.todo[timeperiod.subject].splice(waitinglist[time[i].amount.toString()][0].id, 1, ...seasonobj.todo[timeperiod.subject][waitinglist[time[i].amount.toString()][0].id].bind);
+                } else {
+                    seasonobj.todo[timeperiod.subject].splice(waitinglist[time[i].amount.toString()][0].id, 1);
+                }
+                console.log("makedaydraft()> after delete todo item:\n" + yaml.dump(seasonobj.todo[timeperiod.subject]));
+                //seasonobj.todo[timeperiod.subject] = seasonobj.todo[timeperiod.subject].filter((job) => job[time[i].amount.toString()] != timeperiod.name);
                 console.log("delete the job from %s:\n%s", waitinglist[time[i].amount.toString()][0].task, waitinglist[time[i].amount.toString()][0].name)
                 //delete it from waitinglist
                 waitinglist[time[i].amount.toString()].shift();
@@ -47,9 +56,11 @@ module.exports = {
         var draftmetafilename = "../data/draft" + "/" + year + "/" + "d." + date + ".yaml";
         console.log(draftmetafilename);
         console.log(yaml.dump(draftmetadata));
-        fs.writeFileSync(draftmetafilename, yaml.dump(draftmetadata, { 'lineWidth': -1 }));
-        // save new todo
-        fs.writeFileSync(seasonpath,yaml.dump(seasonobj, { 'lineWidth': -1 }));
+        if (this.debug == false) {
+            fs.writeFileSync(draftmetafilename, yaml.dump(draftmetadata, { 'lineWidth': -1 }));
+            // save new todo
+            fs.writeFileSync(seasonpath, yaml.dump(seasonobj, { 'lineWidth': -1 }));
+        }
         console.log("seasonobj.todo:\n%s", yaml.dump(seasonobj.todo, { 'lineWidth': -1 }));
     },
     makedayplan: function (date) {
@@ -60,7 +71,7 @@ module.exports = {
         var draftmetadata;
         try {
             if (fs.existsSync(draftmetafilename)) {
-                draftmetadata = yaml.load(fs.readFileSync(draftmetafilename, 'utf8',{schema: yaml.FAILSAFE_SCHEMA }));
+                draftmetadata = yaml.load(fs.readFileSync(draftmetafilename, 'utf8', { schema: yaml.FAILSAFE_SCHEMA }));
             } else {
                 console.log("the draft metadata isn't exist:" + draftmetafilename);
                 process.exit();
@@ -77,15 +88,11 @@ module.exports = {
             timeslicename[draftmetadata.time[i].begin] = draftmetadata.time[i].name;
         }
 
-
         var season = Math.ceil(parseInt(month) / 3);
         var seasonpath = "../data/season/" + year + "S" + season + ".yaml";
-        console.log("seasonpath:" + seasonpath);
-        var seasonobj = yaml.load(fs.readFileSync(seasonpath, 'utf8',{schema: yaml.FAILSAFE_SCHEMA }));
+        //console.log("seasonpath:" + seasonpath);
+        var seasonobj = yaml.load(fs.readFileSync(seasonpath, 'utf8', { schema: yaml.FAILSAFE_SCHEMA }));
         var time = seasonobj.dayplan[plan].time;
-
-        //var seasonobj = yaml.load(fs.readFileSync("plan.yaml", 'utf8',{schema: yaml.FAILSAFE_SCHEMA }));
-        //var planstr = seasonobj.dayplan[plan].planstr;
 
         var planstr = `| 时间片 | 时长 | 用途 | 手稿 |
 | --- | --- | --- | --- |
@@ -108,7 +115,6 @@ module.exports = {
                 draftstr = draftstr + "[在线同步](" + timeslice.namelink + ")";
             }
             if (timeslice.type == "work") {
-
                 var draftfilename = path.draftrepopath + date.slice(0, 4) + "/" + date.slice(4, 6) + "/" + begintime + ".md";
                 draftstr = draftstr + " [离线归档](" + draftfilename + ")";
             }
@@ -142,12 +148,16 @@ module.exports = {
             var timeviewfilename = path.draftrepopath + date.slice(0, 4) + "/" + date.slice(4, 6) + "/" + begintime + ".md";
             console.log("time slice draft file name:" + timeviewfilename);
             console.log(timestr);
-            fs.writeFileSync(timeviewfilename, timestr);
+            if (this.debug == false) {
+                fs.writeFileSync(timeviewfilename, timestr);
+            }
         }
 
         var dayplanfilename = path.blogrepopath + "release/time/d." + date + ".md";
         console.log("dayplan file name:\n" + dayplanfilename + "\ncontent:\n" + dayplan);
-        fs.writeFileSync(dayplanfilename, dayplan);
+        if (this.debug == false) {
+            fs.writeFileSync(dayplanfilename, dayplan);
+        }
     },
     makewaitinglist: function () {
         var date = util.datestr();
@@ -156,7 +166,7 @@ module.exports = {
         var season = Math.ceil(parseInt(month) / 3);
         var seasonpath = "../data/season/" + year + "S" + season + ".yaml";
         //console.log("seasonpath:" + seasonpath);
-        var seasonobj = yaml.load(fs.readFileSync(seasonpath, 'utf8',{schema: yaml.FAILSAFE_SCHEMA }));
+        var seasonobj = yaml.load(fs.readFileSync(seasonpath, 'utf8', { schema: yaml.FAILSAFE_SCHEMA }));
         var todoobj = seasonobj.todo;
         var timeobj = seasonobj.time;
 
@@ -227,7 +237,7 @@ module.exports = {
         var season = Math.ceil(parseInt(month) / 3);
         var seasonpath = "../data/season/" + year + "S" + season + ".yaml";
         //console.log("seasonpath:" + seasonpath);
-        var seasonobj = yaml.load(fs.readFileSync(seasonpath, 'utf8',{schema: yaml.FAILSAFE_SCHEMA }));
+        var seasonobj = yaml.load(fs.readFileSync(seasonpath, 'utf8', { schema: yaml.FAILSAFE_SCHEMA }));
         var dayplanobj = seasonobj.dayplan;
 
         for (var plan in dayplanobj) {

@@ -186,19 +186,23 @@ time:
     xuemen: 600
     raw: 300
   sold:
-    ego: 2114
-    PSMD: 4856
+    ego: 2184
+    PSMD: 4916
     infra: 30
     js: 705
-    learn: 412
-    xuemen: 926
+    learn: 472
+    xuemen: 1046
     raw: 357
 todo:
   PSMD:
-    - '30': 修订入门目录term.9d12877c，准备实际使用。
+    - '60': 按照可交互deploy的模式整理入门目录term.9d12877c措辞
     - '195': term + COM matedata -> deploy metadata -> deploy view
+      bind:
+        - '90': term metadata生成按修订层级排版的COM metadata。
     - '30': PSMD委托合同的metadata
     - '30': 了解Rules as Code (RaC)，准备在metadata中增加code字段。
+      bind:
+        - '60': 设计条款的可执行机制
     - '30': debug- D:\huangyg\git\PSMD\data\term.25c83dac.yaml interface字段混乱。
       readme: |
         term.25c83dac.yaml的depend.text 包含 <term.2e4f11cb.term.1> 
@@ -207,27 +211,26 @@ todo:
           <term.50430bca.632214.c83dac.entity.1>: 董事会
           <term.50430bca.632214.c83dac.term.1>: 章程第八条（十）
           <term.50430bca.632214.c83dac.term.2>: 中华人民共和国公司法
-    - '90': term metadata生成按修订层级排版的COM metadata。
-    - '60': 设计条款的可执行机制
     - '90': 整理近期手稿。
   ego:
-    - '30': 实现todo项的多层结构
-    - '60': /release/entry.html 读取 markdown和metadata 并显示。
+    - '30': 在draft+season+task metadata基础上设计有互动的总结功能
+      bind:
+        - '90': 代码实现，有互动的总结功能。
+        - '60': task之间结算体系设计。
+        - '195': 在整理近期手稿之后，修订个人模型。
     - '60': 在season metadata中实现浮动时间表，修改日计划功能。
     - '30': 整理废弃git库，包括本地和远程。
       readme: |
         参考5.3.14:00 draft
-    - '60': task之间结算体系设计。
     - '30': 设计ego.mars22.com 发布内容。
+      bing:
+        - '60': /release/entry.html 读取 markdown和metadata 并显示。
     - '60': 用js代码完成日小结后的git操作。
       readme: |
         - 参考：D:\huangyg\git\draft\2024\04\20240430140000.md
         - 在各task metadata中给出git库的路径，每天根据实际任务去操作。
-    - '195': 在整理近期手稿之后，修订个人模型。
+    - '60': 重新设计ego.js的命令行参数，合并函数，整理代码。
   learn:
-    - '60': freenet的contract
-      readme: |
-        https://docs.freenet.org/contract-interface.html#contract-interface
     - '60': github的actions,workflow,job脚本语法
       readme: |
         - https://docs.github.com/zh/actions/using-workflows/workflow-syntax-for-github-actions
@@ -237,11 +240,26 @@ todo:
       readme: |
         - https://rml.io/yarrrml/
     - '30': docker
-    - '60': 在util库进行单元测试，在实践中学习。
     - '30': 寻找测试做得比较好的开源软件，作为学习单元划分和测试的实例。
+      bind:
+        - '60': 在util库进行单元测试，在实践中学习。
     - '60': nosql
     - '90': 把PSMD的data、src部分升级到rdf，如果升级成功则作为范例。
+    - '195': rust入门
+      bind:
+        - '195': 开发reenet Contracts sample
+          readme: |
+            - https://docs.freenet.org/components/contracts.html
+            - https://docs.freenet.org/introduction.html
   js:
+    - '60': 可交互的静态网页
+      readme: |
+        - 根据同域名的metadata进行提示、选择、接收补充信息并跳转页面
+        - 根据不同域名的js进行类似操作。
+    - '30': 自动收发email。
+      readme: |
+        - https://github.com/nodemailer/nodemailer
+        - https://nodemailer.com/
     - '30': 继续学习promise api
       readme: |
         - https://zh.javascript.info/promise-api
@@ -254,13 +272,17 @@ todo:
         https://blog.csdn.net/lwf3115841/article/details/129105206
     - '60': 学习'Electron'，创作一个范例。
   raw:
-    - '60': 实现自定义DRI,NRV的代码
-    - '60': 根据过去数据给出15天内的建议。
     - '30': debug-diff mode较大天数返回空数据，创建三个R文件。
+    - '60': 根据过去数据给出15天内的建议。
     - '30': 检查etable递归过程是否累加amount字段而未检查unit字段的。
   xuemen:
-    - '60': 五月报税
+    - '60': 整理kernel、ISU、JPU之间的关系，厘清概念。
       readme: |
-        - 学习云票助手软件：http://www.ibwjf.com/classRooms/1
-    - '90': 整理S2状态下基本管理制度的metedata
-    - '60': xuemen COD metadata-S2状态下的部门模型
+        - 对产品、外部环境和成员个人模型（缺陷）的分析，以及输出成果的定义不明确。当时对这些对象的理解还不够深刻，现在可以加深。
+        - 抓住1609模型的异同，吸纳1609的决策架构，保留xuemen模型(尤其是2-2.核心模型)相对激进的部分。
+      bind:
+        - '90': 重新设计S2状态下的学门基本管理制度
+          readme: |
+            - 基于term.e6f0caec整理
+          bind:
+            - '60': term.e6f0caec -> xuemen COD metadata-S2状态下的部门模型

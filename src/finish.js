@@ -4,22 +4,23 @@ const path = require('./path.js');
 const start = require('./start.js');
 
 module.exports = {
-    maketomorowinfo: function(date){
+    debug: true,
+    maketomorowinfo: function (date) {
         var year = date.slice(0, 4);
         var month = date.slice(4, 6);
         var day = date.slice(6, 8);
         var season = Math.ceil(parseInt(month) / 3);
         var seasonpath = "../data/season/" + year + "S" + season + ".yaml";
         var seasonobj = yaml.load(fs.readFileSync(seasonpath, 'utf8', { schema: yaml.FAILSAFE_SCHEMA }));
-    
+
         var dayinfostr = "# " + year + "." + month + "." + day + ".\n\n根据[ego模型时间接口](https://gitee.com/hyg/blog/blob/master/timeflow.md)，每天早起根据身心状况绑定模版。" + "\n\n---\n";
-        for(var plan in seasonobj.dayplan){
+        for (var plan in seasonobj.dayplan) {
             var waitinglist = start.makewaitinglist();
             var time = seasonobj.dayplan[plan].time;
-            dayinfostr = dayinfostr + "如果绑定模版" + plan + "可能安排以下任务：\n\n" ;
+            dayinfostr = dayinfostr + "如果绑定模版" + plan + "可能安排以下任务：\n\n";
             for (var i in time) {
                 if (time[i].type == "work") {
-                    dayinfostr = dayinfostr + "- " + time[i].beginhour.toString().padStart(2, '0') + ":" + time[i].beginminute.toString().padStart(2, '0') + "\t" + waitinglist[time[i].amount.toString()][0].name + " -" + waitinglist[time[i].amount.toString()][0].task + "[" + waitinglist[time[i].amount.toString()][0].id + "]\n" ;
+                    dayinfostr = dayinfostr + "- " + time[i].beginhour.toString().padStart(2, '0') + ":" + time[i].beginminute.toString().padStart(2, '0') + "\t" + waitinglist[time[i].amount.toString()][0].name + " -" + waitinglist[time[i].amount.toString()][0].task + "[" + waitinglist[time[i].amount.toString()][0].id + "]\n";
                     waitinglist[time[i].amount.toString()].shift();
                 }
             }
@@ -28,7 +29,9 @@ module.exports = {
         dayinfostr = dayinfostr + "对任务排序的建议发到<huangyg@mrs22.com>，日计划确定后会在本页面发布。";
         var dayinfofilename = path.blogrepopath + "release/time/d." + date + ".md";
         console.log("dayinfo file name:\n" + dayinfofilename + "\ncontent:\n" + dayinfostr);
-        fs.writeFileSync(dayinfofilename, dayinfostr);
+        if (this.debug == false) {
+            fs.writeFileSync(dayinfofilename, dayinfostr);
+        }
     },
     makedaylog: function (date) {
         var year = date.slice(0, 4);
@@ -86,7 +89,7 @@ module.exports = {
         // season time stat
 
         var statobj = new Object();
-        statobj.total = {alloc:0,sold:0,hold:0,todo:0};
+        statobj.total = { alloc: 0, sold: 0, hold: 0, todo: 0 };
         for (var task in seasonobj.time.alloc) {
             statobj[task] = new Object();
             statobj[task].alloc = parseInt(seasonobj.time.alloc[task]);
@@ -99,7 +102,7 @@ module.exports = {
 
             statobj.total.alloc = statobj.total.alloc + statobj[task].alloc;
             statobj.total.sold = statobj.total.sold + statobj[task].sold;
-            statobj[task].todo = 0 ;
+            statobj[task].todo = 0;
         }
         for (var task in seasonobj.time.sold) {
             if (statobj[task] == null) {
@@ -110,13 +113,13 @@ module.exports = {
 
                 statobj.total.alloc = statobj.total.alloc + statobj[task].alloc;
                 statobj.total.sold = statobj.total.sold + statobj[task].sold;
-                statobj[task].todo = 0 ;
+                statobj[task].todo = 0;
             }
         }
         statobj.total.hold = statobj.total.alloc - statobj.total.sold;
-        for(var task in seasonobj.todo){
+        for (var task in seasonobj.todo) {
             statobj[task].todo = this.todosum(seasonobj.todo[task]);
-            statobj.total.todo = statobj.total.todo + statobj[task].todo ;
+            statobj.total.todo = statobj.total.todo + statobj[task].todo;
         }
 
         var seasonstatstr = `\n---\nseason stat:\n\n| task | alloc | sold | hold | todo |
@@ -148,7 +151,9 @@ module.exports = {
 
         var daylogfilename = path.blogrepopath + "release/time/d." + date + ".md";
         console.log("daylog file name:\n" + daylogfilename + "\ncontent:\n" + daylog);
-        fs.writeFileSync(daylogfilename, daylog);
+        if (this.debug == false) {
+            fs.writeFileSync(daylogfilename, daylog);
+        }
     },
     updateseason: function (date) {
         var year = date.slice(0, 4);
@@ -186,13 +191,13 @@ module.exports = {
                         }
                     }
                 });
-            }else{
-                console.log("draftmetadata path not exist:",draftmetapath)
+            } else {
+                console.log("draftmetadata path not exist:", draftmetapath)
             }
         }
 
         // new path
-        var draftmetapath = "../data/draft/" + seasonobj.year + "/" ;
+        var draftmetapath = "../data/draft/" + seasonobj.year + "/";
         if (fs.existsSync(draftmetapath)) {
             fs.readdirSync(draftmetapath).forEach(file => {
                 if (file.substring(file.lastIndexOf(".")) == ".yaml") {
@@ -211,28 +216,30 @@ module.exports = {
                     }
                 }
             });
-        }else{
-            console.log("draftmetadata path not exist:",draftmetapath)
+        } else {
+            console.log("draftmetadata path not exist:", draftmetapath)
         }
         //console.log("sold stat:\n" + yaml.dump(sold));
         seasonobj.time.sold = sold;
 
-        fs.writeFileSync(seasonpath, yaml.dump(seasonobj, { 'lineWidth': -1 }));
+        if (this.debug == false) {
+            fs.writeFileSync(seasonpath, yaml.dump(seasonobj, { 'lineWidth': -1 }));
+        }
         console.log(seasonpath + "文件中的time.sold字段已更新:\n" + yaml.dump(sold));
     },
-    todosum: function(todoarray){
+    todosum: function (todoarray) {
         var sum = 0;
 
-        for(var i in todoarray){
-            for(var key in todoarray[i]){
-                if(!isNaN(parseInt(key))){
+        for (var i in todoarray) {
+            for (var key in todoarray[i]) {
+                if (!isNaN(parseInt(key))) {
                     sum = sum + parseInt(key);
-                }else if (key == "bind"){
+                } else if (key == "bind") {
                     sum = sum + this.todosum(todoarray[i][key]);
                 }
             }
         }
 
-        return sum ;
+        return sum;
     }
 }

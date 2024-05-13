@@ -1,0 +1,37 @@
+date: 20240513
+plan: 1
+time:
+  - begin: '20240513074500'
+    amount: 60
+    type: work
+    subject: learn
+    name: freenet的contract
+    readme: |
+      https://docs.freenet.org/contract-interface.html#contract-interface
+    output: draft/2024/05/20240513074500.md
+  - begin: '20240513093000'
+    amount: 90
+    type: work
+    subject: xuemen
+    name: 整理S2状态下基本管理制度的metedata
+    output: draft/2024/05/20240513093000.md
+  - begin: '20240513140000'
+    amount: 60
+    type: work
+    subject: PSMD
+    name: 修订入门目录term.9d12877c，准备实际使用。
+    output: draft/2024/05/20240513140000.md
+  - begin: '20240513143000'
+    amount: 70
+    type: work
+    subject: ego
+    name: 实现todo项的多层结构
+    output: draft/2024/05/20240513143000.md
+  - begin: '20240513160000'
+    amount: 30
+    type: work
+    subject: xuemen
+    name: 五月报税
+    readme: |
+      - 学习云票助手软件：http://www.ibwjf.com/classRooms/1
+    output: draft/2024/05/20240513160000.md

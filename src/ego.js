@@ -12,6 +12,10 @@ node ego day init: generate day plan and draft files by draft metadata
 node ego day over: generate day overall view
 `;
 
+const debug = false;
+start.debug = debug;
+finish.debug = debug;
+
 // read the arguments
 var arguments = process.argv.splice(2);
 if (arguments.length > 0) {
