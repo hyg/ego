@@ -187,7 +187,7 @@ time:
     raw: 300
   sold:
     ego: 2184
-    PSMD: 4916
+    PSMD: 5311
     infra: 30
     js: 705
     learn: 472
@@ -195,10 +195,12 @@ time:
     raw: 357
 todo:
   PSMD:
-    - '60': 按照可交互deploy的模式整理入门目录term.9d12877c措辞
+    - '60': 整理term.9d12877c的附件部分。
+    - '90': 起草标准模型2405
+      readme: |
+        - 设计思路在5.14 7:45时间片的draft
     - '195': term + COM matedata -> deploy metadata -> deploy view
-      bind:
-        - '90': term metadata生成按修订层级排版的COM metadata。
+    - '90': term metadata生成按修订层级排版的COM metadata。
     - '30': PSMD委托合同的metadata
     - '30': 了解Rules as Code (RaC)，准备在metadata中增加code字段。
       bind:
@@ -211,13 +213,14 @@ todo:
           <term.50430bca.632214.c83dac.entity.1>: 董事会
           <term.50430bca.632214.c83dac.term.1>: 章程第八条（十）
           <term.50430bca.632214.c83dac.term.2>: 中华人民共和国公司法
-    - '90': 整理近期手稿。
   ego:
+    - '60': 整理近期手稿
+      bind:
+        - '195': 在整理近期手稿之后，修订个人模型。
     - '30': 在draft+season+task metadata基础上设计有互动的总结功能
       bind:
         - '90': 代码实现，有互动的总结功能。
         - '60': task之间结算体系设计。
-        - '195': 在整理近期手稿之后，修订个人模型。
     - '60': 在season metadata中实现浮动时间表，修改日计划功能。
     - '30': 整理废弃git库，包括本地和远程。
       readme: |
@@ -230,6 +233,7 @@ todo:
         - 参考：D:\huangyg\git\draft\2024\04\20240430140000.md
         - 在各task metadata中给出git库的路径，每天根据实际任务去操作。
     - '60': 重新设计ego.js的命令行参数，合并函数，整理代码。
+    - '30': 生成waitinglist时，考虑多层todo。
   learn:
     - '60': github的actions,workflow,job脚本语法
       readme: |
@@ -251,6 +255,7 @@ todo:
           readme: |
             - https://docs.freenet.org/components/contracts.html
             - https://docs.freenet.org/introduction.html
+            - https://docs.freenet.org/tutorial.html
   js:
     - '60': 可交互的静态网页
       readme: |

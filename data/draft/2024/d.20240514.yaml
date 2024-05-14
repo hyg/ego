@@ -1,0 +1,21 @@
+date: 20240514
+plan: 2
+time:
+  - begin: '20240514074500'
+    amount: 195
+    type: work
+    subject: PSMD
+    name: 整理新思路，无意识转化有意识作为权利分配的基点
+    output: draft/2024/05/20240514074500.md
+  - begin: '20240514140000'
+    amount: 90
+    type: work
+    subject: PSMD
+    name: 整理近期手稿。
+    output: draft/2024/05/20240514140000.md
+  - begin: '20240514160000'
+    amount: 110
+    type: work
+    subject: PSMD
+    name: 按照可交互deploy的模式整理入门目录term.9d12877c措辞
+    output: draft/2024/05/20240514160000.md

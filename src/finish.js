@@ -26,7 +26,7 @@ module.exports = {
             }
             dayinfostr = dayinfostr + "\n---\n";
         }
-        dayinfostr = dayinfostr + "对任务排序的建议发到<huangyg@mrs22.com>，日计划确定后会在本页面发布。";
+        dayinfostr = dayinfostr + "对任务排序的建议发到<huangyg@mars22.com>，日计划确定后会在本页面发布。";
         var dayinfofilename = path.blogrepopath + "release/time/d." + date + ".md";
         console.log("dayinfo file name:\n" + dayinfofilename + "\ncontent:\n" + dayinfostr);
         if (this.debug == false) {
