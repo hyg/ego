@@ -112,11 +112,14 @@ module.exports = {
                 draftstr = draftstr + timeslicename[begintime] + "  ";
             }
             if (timeslice.namelink != null) {
-                draftstr = draftstr + "[在线同步](" + timeslice.namelink + ")";
+                draftstr = draftstr + "[在线](" + timeslice.namelink + ")";
             }
             if (timeslice.type == "work") {
                 var draftfilename = path.draftrepopath + date.slice(0, 4) + "/" + date.slice(4, 6) + "/" + begintime + ".md";
-                draftstr = draftstr + " [离线归档](" + draftfilename + ")";
+                draftstr = draftstr + " [离线](" + draftfilename + ")";
+
+                var mailtostr = " <a href=\"mailto:huangyg@mars22.com?subject=关于" + year + "." + month + "." + day + ".[" + timeslicename[begintime] + "]任务&body=日期: " + date +"%0D%0A序号: " + i + "%0D%0A手稿:" + draftfilename + "%0D%0A---请勿修改邮件主题及以上内容 从下一行开始写您的想法---%0D%0A\">[想法]</a>" ;
+                draftstr = draftstr + mailtostr ;
             }
 
             planstr = planstr + "| " + beginhour.toString().padStart(2, '0') + ":" + beginminute.toString().padStart(2, '0') + "~" + endhour.toString().padStart(2, '0') + ":" + endminute.toString().padStart(2, '0') + " | " + amount + " | " + timeslice.name + " | " + draftstr + " |\n";

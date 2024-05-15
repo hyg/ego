@@ -1,0 +1,33 @@
+date: 20240515
+plan: 1
+time:
+  - begin: '20240515074500'
+    amount: 60
+    type: work
+    subject: PSMD
+    name: 整理term.9d12877c的附件部分。
+    output: draft/2024/05/20240515074500.md
+  - begin: '20240515093000'
+    amount: 90
+    type: work
+    subject: xuemen
+    name: 准备银行资料
+    output: draft/2024/05/20240515093000.md
+  - begin: '20240515140000'
+    amount: 7
+    type: work
+    subject: raw
+    name: debug-diff mode较大天数返回空数据，创建三个R文件。
+    output: draft/2024/05/20240515140000.md
+  - begin: '20240515143000'
+    amount: 60
+    type: work
+    subject: ego
+    name: 增加email互动
+    output: draft/2024/05/20240515143000.md
+  - begin: '20240515160000'
+    amount: 60
+    type: work
+    subject: ego
+    name: 整理近期手稿
+    output: draft/2024/05/20240515160000.md

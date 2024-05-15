@@ -26,8 +26,10 @@ module.exports = {
             }
             dayinfostr = dayinfostr + "\n---\n";
         }
-        dayinfostr = dayinfostr + "对任务排序的建议发到<huangyg@mars22.com>，日计划确定后会在本页面发布。";
         var dayinfofilename = path.blogrepopath + "release/time/d." + date + ".md";
+        var mailtostr = "<a href=\"mailto:huangyg@mars22.com?subject=关于" + year + "." + month + "." + day + ".任务排序的建议&body=date: " + date +"%0D%0Afile: " + dayinfofilename + "%0D%0A---请勿修改邮件主题及以上内容---%0D%0A\">发送电子邮件</a>" ;
+        dayinfostr = dayinfostr + "对任务排序的建议请点击这个链接" + mailtostr + "，日计划确定后会在本页面发布。";
+        
         console.log("dayinfo file name:\n" + dayinfofilename + "\ncontent:\n" + dayinfostr);
         if (this.debug == false) {
             fs.writeFileSync(dayinfofilename, dayinfostr);
@@ -83,7 +85,8 @@ module.exports = {
 
             var outputfilename = path.gitpath + timelog.output;
             var outputstr = fs.readFileSync(outputfilename, 'utf8')
-            logstr = logstr + "\n---\n\n[top](#top) | [index](#index)\n<a id=\"" + timelog.begin + "\"></a>\n" + outputstr;
+            var mailtostr = "<a href=\"mailto:huangyg@mars22.com?subject=关于" + year + "." + month + "." + day + ".[" + taskname + "]任务&body=日期: " + date +"%0D%0A序号: " + t + "%0D%0A手稿:" + outputfilename + "%0D%0A---请勿修改邮件主题及以上内容 从下一行开始写您的想法---%0D%0A\">[email]</a>" ;
+            logstr = logstr + "\n---\n\n" + mailtostr + " | [top](#top) | [index](#index)\n<a id=\"" + timelog.begin + "\"></a>\n" + outputstr;
         }
 
         // season time stat
