@@ -186,16 +186,15 @@ time:
     xuemen: 600
     raw: 300
   sold:
-    ego: 2304
-    PSMD: 5371
+    ego: 2334
+    PSMD: 5461
     infra: 30
-    js: 705
-    learn: 472
+    js: 795
+    learn: 532
     xuemen: 1136
     raw: 364
 todo:
   PSMD:
-    - '90': 起草标准模型2405
     - '195': term + COM matedata -> deploy metadata -> deploy view
     - '90': term metadata生成按修订层级排版的COM metadata。
     - '30': PSMD委托合同的metadata
@@ -211,7 +210,6 @@ todo:
           <term.50430bca.632214.c83dac.term.1>: 章程第八条（十）
           <term.50430bca.632214.c83dac.term.2>: 中华人民共和国公司法
   ego:
-    - '30': 在draft+season+task metadata基础上设计总结功能
     - '60': 整理近期手稿
       bind:
         - '195': 在整理近期手稿之后，修订个人模型。
@@ -231,11 +229,6 @@ todo:
     - '60': 重新设计ego.js的命令行参数，合并函数，整理代码。
     - '30': 生成waitinglist时，考虑多层todo。
   learn:
-    - '60': github的actions,workflow,job脚本语法
-      readme: |
-        - https://docs.github.com/zh/actions/using-workflows/workflow-syntax-for-github-actions
-        - https://docs.github.com/zh/actions/creating-actions/metadata-syntax-for-github-actions
-        - https://docs.github.com/zh/actions/learn-github-actions/finding-and-customizing-actions
     - '30': YARRRML
       readme: |
         - https://rml.io/yarrrml/
@@ -253,17 +246,22 @@ todo:
             - https://docs.freenet.org/introduction.html
             - https://docs.freenet.org/tutorial.html
   js:
-    - '60': 可交互的静态网页
+    - '60': 用imap和mailparse自动处理并回复email
       readme: |
-        - 根据同域名的metadata进行提示、选择、接收补充信息并跳转页面
-        - 根据不同域名的js进行类似操作。
-    - '30': 自动收发email。
+        - 在js.sample/IM/imap.js基础上继续增加功能。
+        - https://www.jianshu.com/p/6163113fae4f
+        - https://developer.aliyun.com/article/927081
+    - '60': 用EmailEngine搭建邮件服务器
       readme: |
-        - https://github.com/nodemailer/nodemailer
+        - https://emailengine.app
+    - '30': 用Nodemailer 自动处理并恢复email
+      readme: |
         - https://nodemailer.com/
+        - https://github.com/nodemailer/nodemailer
     - '30': 继续学习promise api
       readme: |
         - https://zh.javascript.info/promise-api
+    - '30': 同npm发布包
     - '30': 学习AMD规范，如果适用就开发范例
     - '60': 向外提供js文件的范例，为代码层级互通做准备
     - '30': 日期格式化

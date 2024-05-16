@@ -1,0 +1,43 @@
+date: 20240516
+plan: 1
+time:
+  - begin: '20240516074500'
+    amount: 60
+    type: work
+    subject: js
+    name: 可交互的静态网页
+    readme: |
+      - 根据同域名的metadata进行提示、选择、接收补充信息并跳转页面
+      - 根据不同域名的js进行类似操作。
+    output: draft/2024/05/20240516074500.md
+  - begin: '20240516093000'
+    amount: 90
+    type: work
+    subject: PSMD
+    name: 起草标准模型2405
+    output: draft/2024/05/20240516093000.md
+  - begin: '20240516140000'
+    amount: 30
+    type: work
+    subject: ego
+    name: 在draft+season+task metadata基础上设计总结功能
+    output: draft/2024/05/20240516140000.md
+  - begin: '20240516143000'
+    amount: 30
+    type: work
+    subject: js
+    name: 自动收发email。
+    readme: |
+      - https://github.com/nodemailer/nodemailer
+      - https://nodemailer.com/
+    output: draft/2024/05/20240516143000.md
+  - begin: '20240516160000'
+    amount: 60
+    type: work
+    subject: learn
+    name: github的actions,workflow,job脚本语法
+    readme: |
+      - https://docs.github.com/zh/actions/using-workflows/workflow-syntax-for-github-actions
+      - https://docs.github.com/zh/actions/creating-actions/metadata-syntax-for-github-actions
+      - https://docs.github.com/zh/actions/learn-github-actions/finding-and-customizing-actions
+    output: draft/2024/05/20240516160000.md

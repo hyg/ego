@@ -36,16 +36,21 @@ module.exports = {
                 timeperiod.output = "draft/" + date.slice(0, 4) + "/" + date.slice(4, 6) + "/" + timeperiod.begin + ".md";
                 drafttimearray.push(timeperiod);
 
-                console.log("makedaydraft()> before delete todo item, waitinglist:\n" + yaml.dump(waitinglist[time[i].amount.toString()][0]));
-                console.log("makedaydraft()> before delete todo item:\n" + yaml.dump(seasonobj.todo[timeperiod.subject]));
-                if (seasonobj.todo[timeperiod.subject][waitinglist[time[i].amount.toString()][0].id].bind != null) {
-                    seasonobj.todo[timeperiod.subject].splice(waitinglist[time[i].amount.toString()][0].id, 1, ...seasonobj.todo[timeperiod.subject][waitinglist[time[i].amount.toString()][0].id].bind);
-                } else {
-                    seasonobj.todo[timeperiod.subject].splice(waitinglist[time[i].amount.toString()][0].id, 1);
+                console.log("delete the job from %s:\n%s", waitinglist[time[i].amount.toString()][0].task, waitinglist[time[i].amount.toString()][0].name) ;
+                for(var j in seasonobj.todo[timeperiod.subject]){
+                    if(seasonobj.todo[timeperiod.subject][j] == timeperiod.name){
+                        console.log("makedaydraft()> before delete todo item, waitinglist:\n" + yaml.dump(waitinglist[time[i].amount.toString()][0]));
+                        console.log("makedaydraft()> before delete todo item:\n" + yaml.dump(seasonobj.todo[timeperiod.subject]));
+                        if (seasonobj.todo[timeperiod.subject][j].bind != null) {
+                            seasonobj.todo[timeperiod.subject].splice(j, 1, ...seasonobj.todo[timeperiod.subject][waitinglist[time[i].amount.toString()][0].id].bind);
+                        } else {
+                            seasonobj.todo[timeperiod.subject].splice(j, 1);
+                        }
+                        console.log("makedaydraft()> after delete todo item:\n" + yaml.dump(seasonobj.todo[timeperiod.subject]));
+                    }
                 }
-                console.log("makedaydraft()> after delete todo item:\n" + yaml.dump(seasonobj.todo[timeperiod.subject]));
                 //seasonobj.todo[timeperiod.subject] = seasonobj.todo[timeperiod.subject].filter((job) => job[time[i].amount.toString()] != timeperiod.name);
-                console.log("delete the job from %s:\n%s", waitinglist[time[i].amount.toString()][0].task, waitinglist[time[i].amount.toString()][0].name)
+                
                 //delete it from waitinglist
                 waitinglist[time[i].amount.toString()].shift();
             }
