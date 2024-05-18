@@ -1,0 +1,39 @@
+date: 20240518
+plan: 1
+time:
+  - begin: '20240518074500'
+    amount: 0
+    type: work
+    subject: ego
+    name: 整理近期手稿
+    output: draft/2024/05/20240518074500.md
+  - begin: '20240518093000'
+    amount: 90
+    type: work
+    subject: PSMD
+    name: term metadata生成按修订层级排版的COM metadata。
+    output: draft/2024/05/20240518093000.md
+  - begin: '20240518140000'
+    amount: 30
+    type: work
+    subject: learn
+    name: YARRRML
+    readme: |
+      - https://rml.io/yarrrml/
+    output: draft/2024/05/20240518140000.md
+  - begin: '20240518143000'
+    amount: 30
+    type: work
+    subject: learn
+    name: docker
+    output: draft/2024/05/20240518143000.md
+  - begin: '20240518160000'
+    amount: 60
+    type: work
+    subject: js
+    name: 用imap和mailparse自动处理并回复email
+    readme: |
+      - 在js.sample/IM/imap.js基础上继续增加功能。
+      - https://www.jianshu.com/p/6163113fae4f
+      - https://developer.aliyun.com/article/927081
+    output: draft/2024/05/20240518160000.md

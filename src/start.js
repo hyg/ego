@@ -38,7 +38,8 @@ module.exports = {
 
                 console.log("delete the job from %s:\n%s", waitinglist[time[i].amount.toString()][0].task, waitinglist[time[i].amount.toString()][0].name) ;
                 for(var j in seasonobj.todo[timeperiod.subject]){
-                    if(seasonobj.todo[timeperiod.subject][j] == timeperiod.name){
+                    //console.log("makedaydraft() > seasonobj.todo[timeperiod.subject][j][timeperiod.amount]: "+seasonobj.todo[timeperiod.subject][j][timeperiod.amount] + " timeperiod.name: "+ timeperiod.name)
+                    if(seasonobj.todo[timeperiod.subject][j][timeperiod.amount] == timeperiod.name){
                         console.log("makedaydraft()> before delete todo item, waitinglist:\n" + yaml.dump(waitinglist[time[i].amount.toString()][0]));
                         console.log("makedaydraft()> before delete todo item:\n" + yaml.dump(seasonobj.todo[timeperiod.subject]));
                         if (seasonobj.todo[timeperiod.subject][j].bind != null) {

@@ -187,16 +187,15 @@ time:
     raw: 300
   sold:
     ego: 2334
-    PSMD: 5461
+    PSMD: 5551
     infra: 30
-    js: 795
-    learn: 532
+    js: 855
+    learn: 592
     xuemen: 1136
     raw: 364
 todo:
   PSMD:
     - '195': term + COM matedata -> deploy metadata -> deploy view
-    - '90': term metadata生成按修订层级排版的COM metadata。
     - '30': PSMD委托合同的metadata
     - '30': 了解Rules as Code (RaC)，准备在metadata中增加code字段。
       bind:
@@ -209,18 +208,19 @@ todo:
           <term.50430bca.632214.c83dac.entity.1>: 董事会
           <term.50430bca.632214.c83dac.term.1>: 章程第八条（十）
           <term.50430bca.632214.c83dac.term.2>: 中华人民共和国公司法
+    - '30': 重新思考term metadata种的upgradeby，是否需要显示内容和id两种。
   ego:
-    - '60': 整理近期手稿
+    - '90': 整理近期手稿
       bind:
         - '195': 在整理近期手稿之后，修订个人模型。
+        - '60': task之间结算体系设计。
     - '90': 代码实现，有互动的总结功能。
-    - '60': task之间结算体系设计。
     - '60': 在season metadata中实现浮动时间表，修改日计划功能。
     - '30': 整理废弃git库，包括本地和远程。
       readme: |
         参考5.3.14:00 draft
     - '30': 设计ego.mars22.com 发布内容。
-      bing:
+      bind:
         - '60': /release/entry.html 读取 markdown和metadata 并显示。
     - '60': 用js代码完成日小结后的git操作。
       readme: |
@@ -229,14 +229,11 @@ todo:
     - '60': 重新设计ego.js的命令行参数，合并函数，整理代码。
     - '30': 生成waitinglist时，考虑多层todo。
   learn:
-    - '30': YARRRML
-      readme: |
-        - https://rml.io/yarrrml/
-    - '30': docker
     - '30': 寻找测试做得比较好的开源软件，作为学习单元划分和测试的实例。
       bind:
         - '60': 在util库进行单元测试，在实践中学习。
     - '60': nosql
+    - '60': 开发YARRRML范例
     - '90': 把PSMD的data、src部分升级到rdf，如果升级成功则作为范例。
     - '195': rust入门
       bind:
@@ -246,18 +243,21 @@ todo:
             - https://docs.freenet.org/introduction.html
             - https://docs.freenet.org/tutorial.html
   js:
-    - '60': 用imap和mailparse自动处理并回复email
+    - '60': 自动接收恢复邮件。
       readme: |
-        - 在js.sample/IM/imap.js基础上继续增加功能。
+        - 继续在js.sample/IM/imap.js基础上继续增加功能。
+        - 直接使用imap而不用mailparser：
+        - https://www.npmjs.com/package/node-imap
         - https://www.jianshu.com/p/6163113fae4f
         - https://developer.aliyun.com/article/927081
-    - '60': 用EmailEngine搭建邮件服务器
-      readme: |
-        - https://emailengine.app
-    - '30': 用Nodemailer 自动处理并恢复email
-      readme: |
-        - https://nodemailer.com/
-        - https://github.com/nodemailer/nodemailer
+      bind:
+        - '60': 用EmailEngine搭建邮件服务器
+          readme: |
+            - https://emailengine.app
+        - '30': 用Nodemailer 自动处理并恢复email
+          readme: |
+            - https://nodemailer.com/
+            - https://github.com/nodemailer/nodemailer
     - '30': 继续学习promise api
       readme: |
         - https://zh.javascript.info/promise-api
