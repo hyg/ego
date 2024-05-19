@@ -1,0 +1,39 @@
+date: 20240519
+plan: 1
+time:
+  - begin: '20240519074500'
+    amount: 60
+    type: work
+    subject: js
+    name: 自动接收恢复邮件。
+    readme: |
+      - 继续在js.sample/IM/imap.js基础上继续增加功能。
+      - 直接使用imap而不用mailparser：
+      - https://www.npmjs.com/package/node-imap
+      - https://www.jianshu.com/p/6163113fae4f
+      - https://developer.aliyun.com/article/927081
+    output: draft/2024/05/20240519074500.md
+  - begin: '20240519093000'
+    amount: 90
+    type: work
+    subject: ego
+    name: 整理近期手稿
+    output: draft/2024/05/20240519093000.md
+  - begin: '20240519140000'
+    amount: 30
+    type: work
+    subject: learn
+    name: 寻找测试做得比较好的开源软件，作为学习单元划分和测试的实例。
+    output: draft/2024/05/20240519140000.md
+  - begin: '20240519143000'
+    amount: 30
+    type: work
+    subject: PSMD
+    name: PSMD委托合同的metadata
+    output: draft/2024/05/20240519143000.md
+  - begin: '20240519160000'
+    amount: 80
+    type: work
+    subject: raw
+    name: 根据过去数据给出15天内的建议。
+    output: draft/2024/05/20240519160000.md

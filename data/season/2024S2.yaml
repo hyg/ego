@@ -186,17 +186,21 @@ time:
     xuemen: 600
     raw: 300
   sold:
-    ego: 2334
-    PSMD: 5551
+    ego: 2424
+    PSMD: 5581
     infra: 30
-    js: 855
-    learn: 592
+    js: 915
+    learn: 622
     xuemen: 1136
-    raw: 364
+    raw: 444
 todo:
   PSMD:
+    - '60': 重新设计PSMD自助、互助、委托合同
+      readme: |
+        - 20240519 14:30 draft
+      bind:
+        - PSMD新合同的metadata
     - '195': term + COM matedata -> deploy metadata -> deploy view
-    - '30': PSMD委托合同的metadata
     - '30': 了解Rules as Code (RaC)，准备在metadata中增加code字段。
       bind:
         - '60': 设计条款的可执行机制
@@ -210,10 +214,16 @@ todo:
           <term.50430bca.632214.c83dac.term.2>: 中华人民共和国公司法
     - '30': 重新思考term metadata种的upgradeby，是否需要显示内容和id两种。
   ego:
-    - '90': 整理近期手稿
+    - '60': 整理近期手稿。
       bind:
-        - '195': 在整理近期手稿之后，修订个人模型。
-        - '60': task之间结算体系设计。
+        - '60': 整理近期手稿。
+          bind:
+            - '60': 整理近期手稿。
+              bind:
+                - '60': 整理近期手稿。
+                  bind:
+                    - '195': 在整理近期手稿之后，修订个人模型。
+    - '60': task之间结算体系设计。
     - '90': 代码实现，有互动的总结功能。
     - '60': 在season metadata中实现浮动时间表，修改日计划功能。
     - '30': 整理废弃git库，包括本地和远程。
@@ -229,9 +239,7 @@ todo:
     - '60': 重新设计ego.js的命令行参数，合并函数，整理代码。
     - '30': 生成waitinglist时，考虑多层todo。
   learn:
-    - '30': 寻找测试做得比较好的开源软件，作为学习单元划分和测试的实例。
-      bind:
-        - '60': 在util库进行单元测试，在实践中学习。
+    - '60': 在util库进行单元测试，在实践中学习。
     - '60': nosql
     - '60': 开发YARRRML范例
     - '90': 把PSMD的data、src部分升级到rdf，如果升级成功则作为范例。
@@ -243,21 +251,19 @@ todo:
             - https://docs.freenet.org/introduction.html
             - https://docs.freenet.org/tutorial.html
   js:
-    - '60': 自动接收恢复邮件。
+    - '60': 用EmailEngine搭建邮件服务器
       readme: |
-        - 继续在js.sample/IM/imap.js基础上继续增加功能。
-        - 直接使用imap而不用mailparser：
-        - https://www.npmjs.com/package/node-imap
-        - https://www.jianshu.com/p/6163113fae4f
-        - https://developer.aliyun.com/article/927081
-      bind:
-        - '60': 用EmailEngine搭建邮件服务器
-          readme: |
-            - https://emailengine.app
-        - '30': 用Nodemailer 自动处理并恢复email
-          readme: |
-            - https://nodemailer.com/
-            - https://github.com/nodemailer/nodemailer
+        - https://emailengine.app
+    - '30': 了解jami api
+      readme: |
+        - https://docs.jami.net/zh_CN/developer/apis-of-jami.html
+    - '60': 学习 nodejs test框架
+      readme: |
+        - https://github.com/Vanessa219/vditor
+            - https://nodejs.cn/api/test.html
+        - https://github.com/markedjs/marked
+        bind:
+          - '90': 实际编写自己的测试范例
     - '30': 继续学习promise api
       readme: |
         - https://zh.javascript.info/promise-api
@@ -271,7 +277,6 @@ todo:
         https://blog.csdn.net/lwf3115841/article/details/129105206
     - '60': 学习'Electron'，创作一个范例。
   raw:
-    - '60': 根据过去数据给出15天内的建议。
     - '30': 检查etable递归过程是否累加amount字段而未检查unit字段的。
   xuemen:
     - '60': 整理kernel、ISU、JPU之间的关系，厘清概念。
