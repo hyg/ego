@@ -1,0 +1,23 @@
+date: 20240520
+plan: 2
+time:
+  - begin: '20240520074500'
+    amount: 195
+    type: work
+    subject: ego
+    name: 整理近期手稿。
+    output: draft/2024/05/20240520074500.md
+  - begin: '20240520140000'
+    amount: 90
+    type: work
+    subject: ego
+    name: 设计新版个人模型的基础定义
+    output: draft/2024/05/20240520140000.md
+  - begin: '20240520160000'
+    amount: 60
+    type: work
+    subject: PSMD
+    name: 重新设计PSMD自助、互助、委托合同
+    readme: |
+      - 20240519 14:30 draft
+    output: draft/2024/05/20240520160000.md
