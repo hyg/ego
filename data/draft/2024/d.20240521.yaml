@@ -1,0 +1,23 @@
+date: 20240521
+plan: 2
+time:
+  - begin: '20240521074500'
+    amount: 195
+    type: work
+    subject: ego
+    name: 在整理近期手稿之后，修订个人模型。
+    output: draft/2024/05/20240521074500.md
+  - begin: '20240521140000'
+    amount: 90
+    type: work
+    subject: PSMD
+    name: 设计几种新版合同的雏形，实际测试观察接受程度。
+    output: draft/2024/05/20240521140000.md
+  - begin: '20240521160000'
+    amount: 60
+    type: work
+    subject: js
+    name: 用EmailEngine搭建邮件服务器
+    readme: |
+      - https://emailengine.app
+    output: draft/2024/05/20240521160000.md
