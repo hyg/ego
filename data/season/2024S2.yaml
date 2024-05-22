@@ -186,17 +186,18 @@ time:
     xuemen: 600
     raw: 300
   sold:
-    ego: 2904
-    PSMD: 5731
+    ego: 3099
+    PSMD: 5851
     infra: 30
     js: 975
-    learn: 622
+    learn: 667
     xuemen: 1136
     raw: 444
 todo:
   PSMD:
-    - '90': 重新设计PSMD自助、互助、委托合同
-    - '60': PSMD新合同的metadata
+    - '90': PSMD新合同的view draft
+      bind:
+        - '60': PSMD新合同的metadata
     - '195': term + COM matedata -> deploy metadata -> deploy view
     - '30': 了解Rules as Code (RaC)，准备在metadata中增加code字段。
       bind:
@@ -211,8 +212,10 @@ todo:
           <term.50430bca.632214.c83dac.term.2>: 中华人民共和国公司法
     - '30': 重新思考term metadata种的upgradeby，是否需要显示内容和id两种。
   ego:
-    - '195': 新版个人模型
-    - '60': task之间结算体系设计。
+    - '195': 新版个人模型的view draft
+      bind:
+        - '195': 新版个人模型的metadata
+        - '60': task之间结算体系设计。
     - '60': 在season metadata中实现浮动时间表，修改日计划功能。
     - '30': 整理废弃git库，包括本地和远程。
       readme: |
@@ -227,7 +230,6 @@ todo:
     - '60': 重新设计ego.js的命令行参数，合并函数，整理代码。
     - '30': 生成waitinglist时，考虑多层todo。
   learn:
-    - '60': 在util库进行单元测试，在实践中学习。
     - '60': nosql
     - '60': 开发YARRRML范例
     - '90': 把PSMD的data、src部分升级到rdf，如果升级成功则作为范例。

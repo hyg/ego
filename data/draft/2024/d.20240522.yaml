@@ -1,0 +1,21 @@
+date: 20240522
+plan: 2
+time:
+  - begin: '20240522074500'
+    amount: 195
+    type: work
+    subject: ego
+    name: 新版个人模型
+    output: draft/2024/05/20240522074500.md
+  - begin: '20240522140000'
+    amount: 120
+    type: work
+    subject: PSMD
+    name: 重新设计PSMD自助、互助、委托合同
+    output: draft/2024/05/20240522140000.md
+  - begin: '20240522160000'
+    amount: 45
+    type: work
+    subject: learn
+    name: 在util库进行单元测试，在实践中学习。
+    output: draft/2024/05/20240522160000.md
