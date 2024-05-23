@@ -1,0 +1,21 @@
+date: 20240523
+plan: 2
+time:
+  - begin: '20240523074500'
+    amount: 195
+    type: work
+    subject: ego
+    name: 新版个人模型的view draft
+    output: draft/2024/05/20240523074500.md
+  - begin: '20240523140000'
+    amount: 90
+    type: work
+    subject: PSMD
+    name: PSMD新合同的view draft
+    output: draft/2024/05/20240523140000.md
+  - begin: '20240523160000'
+    amount: 60
+    type: work
+    subject: learn
+    name: nosql
+    output: draft/2024/05/20240523160000.md

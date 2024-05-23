@@ -186,11 +186,11 @@ time:
     xuemen: 600
     raw: 300
   sold:
-    ego: 3099
-    PSMD: 5851
+    ego: 3294
+    PSMD: 5941
     infra: 30
     js: 975
-    learn: 667
+    learn: 727
     xuemen: 1136
     raw: 444
 todo:
@@ -215,7 +215,7 @@ todo:
     - '195': 新版个人模型的view draft
       bind:
         - '195': 新版个人模型的metadata
-        - '60': task之间结算体系设计。
+    - '60': task之间结算体系设计。
     - '60': 在season metadata中实现浮动时间表，修改日计划功能。
     - '30': 整理废弃git库，包括本地和远程。
       readme: |
@@ -230,7 +230,15 @@ todo:
     - '60': 重新设计ego.js的命令行参数，合并函数，整理代码。
     - '30': 生成waitinglist时，考虑多层todo。
   learn:
-    - '60': nosql
+    - '60': knowledge graph数据库和查询语言
+      readme: |
+        - Neo4J、Infinite Graph、OrientDB
+    - '30': Document-Oriented数据库
+      readme: |
+        -MongoDB、CouchDB、RavenDB
+    - '30': 列存储（Wide Column Store/Column-Family）数据库
+      readme: |
+        -Cassandra、HBase
     - '60': 开发YARRRML范例
     - '90': 把PSMD的data、src部分升级到rdf，如果升级成功则作为范例。
     - '195': rust入门
