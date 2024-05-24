@@ -1,0 +1,23 @@
+date: 20240524
+plan: 2
+time:
+  - begin: '20240524074500'
+    amount: 195
+    type: work
+    subject: ego
+    name: 新版个人模型的view draft
+    output: draft/2024/05/20240524074500.md
+  - begin: '20240524140000'
+    amount: 90
+    type: work
+    subject: PSMD
+    name: PSMD新合同的view draft
+    output: draft/2024/05/20240524140000.md
+  - begin: '20240524160000'
+    amount: 60
+    type: work
+    subject: learn
+    name: knowledge graph数据库和查询语言
+    readme: |
+      - Neo4J、Infinite Graph、OrientDB、Ultipa 
+    output: draft/2024/05/20240524160000.md
