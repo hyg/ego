@@ -186,16 +186,15 @@ time:
     xuemen: 600
     raw: 300
   sold:
-    ego: 3489
-    PSMD: 6031
+    ego: 3684
+    PSMD: 6091
     infra: 30
     js: 975
-    learn: 787
+    learn: 877
     xuemen: 1136
     raw: 444
 todo:
   PSMD:
-    - '60': PSMD新合同的metadata
     - '195': term + COM matedata -> deploy metadata -> deploy view
     - '30': 了解Rules as Code (RaC)，准备在metadata中增加code字段。
       bind:
@@ -210,7 +209,14 @@ todo:
           <term.50430bca.632214.c83dac.term.2>: 中华人民共和国公司法
     - '30': 重新思考term metadata种的upgradeby，是否需要显示内容和id两种。
   ego:
-    - '195': 新版个人模型的metadata
+    - '90': 新版个人模型
+      readme: |
+        - 整理git库md文件
+        - 再次放在三种形式自然人、共同体、智能设备检查。
+        - 再次比对旧版、比对let‘X。
+        - 放在物理学的模型中检查。
+      bind:
+        - '90': 新版个人模型的共同体接口
     - '60': task之间结算体系设计。
     - '60': 在season metadata中实现浮动时间表，修改日计划功能。
     - '30': 整理废弃git库，包括本地和远程。
@@ -226,11 +232,7 @@ todo:
     - '60': 重新设计ego.js的命令行参数，合并函数，整理代码。
     - '30': 生成waitinglist时，考虑多层todo。
   learn:
-    - '90': cypher and neo4j arua
-      readme: |
-        - https://console.neo4j.io
-        - https://neo4j.com/docs/cypher-manual/current/syntax/
-        - https://zhuanlan.zhihu.com/p/88745411
+    - '30': Learn the basics https://console.neo4j.io
     - '60': Ultipa
     - '30': Document-Oriented数据库
       readme: |
@@ -248,6 +250,10 @@ todo:
             - https://docs.freenet.org/introduction.html
             - https://docs.freenet.org/tutorial.html
   js:
+    - '30': quick-yaml.db
+      readme: |
+        - https://github.com/TFAGaming/quick-yaml.db
+    - '30': https://github.com/levelgraph/levelgraph
     - '30': 了解jami api
       readme: |
         - https://docs.jami.net/zh_CN/developer/apis-of-jami.html

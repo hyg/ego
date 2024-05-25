@@ -1,0 +1,25 @@
+date: 20240525
+plan: 2
+time:
+  - begin: '20240525074500'
+    amount: 195
+    type: work
+    subject: ego
+    name: 新版个人模型的metadata
+    output: draft/2024/05/20240525074500.md
+  - begin: '20240525140000'
+    amount: 90
+    type: work
+    subject: learn
+    name: cypher and neo4j arua
+    readme: |
+      - https://console.neo4j.io
+      - https://neo4j.com/docs/cypher-manual/current/syntax/
+      - https://zhuanlan.zhihu.com/p/88745411
+    output: draft/2024/05/20240525140000.md
+  - begin: '20240525160000'
+    amount: 60
+    type: work
+    subject: PSMD
+    name: PSMD新合同的metadata
+    output: draft/2024/05/20240525160000.md
