@@ -186,15 +186,17 @@ time:
     xuemen: 600
     raw: 300
   sold:
-    ego: 3684
+    ego: 3774
     PSMD: 6091
     infra: 30
-    js: 975
-    learn: 877
-    xuemen: 1136
+    js: 1005
+    learn: 967
+    xuemen: 1196
     raw: 444
 todo:
   PSMD:
+    - '90': FSM的cypher实现
+    - '60': FSM的嵌入式db实现
     - '195': term + COM matedata -> deploy metadata -> deploy view
     - '30': 了解Rules as Code (RaC)，准备在metadata中增加code字段。
       bind:
@@ -209,14 +211,8 @@ todo:
           <term.50430bca.632214.c83dac.term.2>: 中华人民共和国公司法
     - '30': 重新思考term metadata种的upgradeby，是否需要显示内容和id两种。
   ego:
-    - '90': 新版个人模型
-      readme: |
-        - 整理git库md文件
-        - 再次放在三种形式自然人、共同体、智能设备检查。
-        - 再次比对旧版、比对let‘X。
-        - 放在物理学的模型中检查。
-      bind:
-        - '90': 新版个人模型的共同体接口
+    - '195': 新版个人模型和部署
+    - '90': 新版个人模型的共同体接口
     - '60': task之间结算体系设计。
     - '60': 在season metadata中实现浮动时间表，修改日计划功能。
     - '30': 整理废弃git库，包括本地和远程。
@@ -232,14 +228,13 @@ todo:
     - '60': 重新设计ego.js的命令行参数，合并函数，整理代码。
     - '30': 生成waitinglist时，考虑多层todo。
   learn:
-    - '30': Learn the basics https://console.neo4j.io
-    - '60': Ultipa
     - '30': Document-Oriented数据库
       readme: |
         -MongoDB、CouchDB、RavenDB
     - '30': 列存储（Wide Column Store/Column-Family）数据库
       readme: |
         -Cassandra、HBase
+    - '30': Query fundamentals https://console.neo4j.io
     - '60': 开发YARRRML范例
     - '90': 把PSMD的data、src部分升级到rdf，如果升级成功则作为范例。
     - '195': rust入门
@@ -250,9 +245,6 @@ todo:
             - https://docs.freenet.org/introduction.html
             - https://docs.freenet.org/tutorial.html
   js:
-    - '30': quick-yaml.db
-      readme: |
-        - https://github.com/TFAGaming/quick-yaml.db
     - '30': https://github.com/levelgraph/levelgraph
     - '30': 了解jami api
       readme: |
@@ -279,16 +271,11 @@ todo:
   raw:
     - '30': 检查etable递归过程是否累加amount字段而未检查unit字段的。
   xuemen:
-    - '60': 整理kernel、ISU、JPU之间的关系，厘清概念。
+    - '90': 重新设计S2状态下的学门基本管理制度
       readme: |
-        - 对产品、外部环境和成员个人模型（缺陷）的分析，以及输出成果的定义不明确。当时对这些对象的理解还不够深刻，现在可以加深。
-        - 抓住1609模型的异同，吸纳1609的决策架构，保留xuemen模型(尤其是2-2.核心模型)相对激进的部分。
+        - 基于term.e6f0caec整理
       bind:
-        - '90': 重新设计S2状态下的学门基本管理制度
-          readme: |
-            - 基于term.e6f0caec整理
-          bind:
-            - '60': term.e6f0caec -> xuemen COD metadata-S2状态下的部门模型
+        - '60': term.e6f0caec -> xuemen COD metadata-S2状态下的部门模型
 comment:
   '20240520': |
     - 需要一套合理的分类谱系

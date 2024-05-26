@@ -1,0 +1,43 @@
+date: 20240526
+plan: 1
+time:
+  - begin: '20240526074500'
+    amount: 60
+    type: work
+    subject: xuemen
+    name: 整理kernel、ISU、JPU之间的关系，厘清概念。
+    readme: |
+      - 对产品、外部环境和成员个人模型（缺陷）的分析，以及输出成果的定义不明确。当时对这些对象的理解还不够深刻，现在可以加深。
+      - 抓住1609模型的异同，吸纳1609的决策架构，保留xuemen模型(尤其是2-2.核心模型)相对激进的部分。
+    output: draft/2024/05/20240526074500.md
+  - begin: '20240526093000'
+    amount: 90
+    type: work
+    subject: ego
+    name: 新版个人模型
+    readme: |
+      - 整理git库md文件
+      - 再次放在三种形式自然人、共同体、智能设备检查。
+      - 再次比对旧版、比对let‘X。
+      - 放在物理学的模型中检查。
+    output: draft/2024/05/20240526093000.md
+  - begin: '20240526140000'
+    amount: 30
+    type: work
+    subject: js
+    name: quick-yaml.db
+    readme: |
+      - https://github.com/TFAGaming/quick-yaml.db
+    output: draft/2024/05/20240526140000.md
+  - begin: '20240526143000'
+    amount: 30
+    type: work
+    subject: learn
+    name: Learn the basics https://console.neo4j.io
+    output: draft/2024/05/20240526143000.md
+  - begin: '20240526160000'
+    amount: 60
+    type: work
+    subject: learn
+    name: Ultipa
+    output: draft/2024/05/20240526160000.md
