@@ -56,15 +56,23 @@ ego是[通用个人领域模型](common.com.md)、[俱乐部](club.com.md)的分
 ## 基本概念
 
 - 物体|thing: 与知识图谱的thing定义相同。
-- 主体|entity: 具有mate行为的物体(thing)。
-    - meta: 认知自我，解释自己的思想和行为，察觉思想和行为中使用的知识（概念、定义、假设等等）。
-        - 可实践的知识，可以表现为生效的协议、要约。
-    - raw: entuity还没有认知的自身行为的集合。
-- common: 具有protocol,spilit,joint三种基础行为的主体(entity)。
-    - protocol：附有条件的行为。
-        - 要约表示可实践的知识。
-    - spilit分立，一个entity分立成为多个entity。
-    - joint合并，多个entity合并产生一个entity。
+- 主体|entity: 具有认知行为的物体(thing)。
+    - 认知的定义是能描述认知对象的推理和行为。
+        - 知识|knowledge: 对推理的描述，包括描述行为的后果。
+        - 对行为的描述包括已发生、将发生、附条件发生...的行为。
+    - 认知对象可以是thing和entity，包括自身。
+    - raw: entuity还没有认知的自身推理和行为的集合。
+- 协议|protocol: 多个entity的共同认知。
+    - 对thing的所有权是entity行为的一种认知。
+    - 要约|offer: 是一个entity单方面认可的protocol。发布要约是一种行为，因此表示知识进入实践。
+- 元认知|meta: 认知推理和行为所使用的知识（概念、定义、假设等等）。
+- 容器|vat: 为entity的推理和行为提供知识的protocol。
+    - 以protocol替换原有知识；
+    - 先有明确的知识，再有使用这些知识的推理和行为；
+    - 通过替换知识来改变推理和行为。
+- 分立|spilit: 一个entity产生多个entity的行为。
+- 联合|joint: 多个entity产生一个entity的行为。
+
 - vat: 支持entity的思想和行为的知识（定义、概念、假设等等）的thing。
 - ego: 通过创造vat、在vat中设立主体(entity)来认知的entity。
 - 共同体|community：由多个主体joint合并而成的主体。

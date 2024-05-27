@@ -186,8 +186,8 @@ time:
     xuemen: 600
     raw: 300
   sold:
-    ego: 3774
-    PSMD: 6091
+    ego: 3969
+    PSMD: 6241
     infra: 30
     js: 1005
     learn: 967
@@ -195,8 +195,6 @@ time:
     raw: 444
 todo:
   PSMD:
-    - '90': FSM的cypher实现
-    - '60': FSM的嵌入式db实现
     - '195': term + COM matedata -> deploy metadata -> deploy view
     - '30': 了解Rules as Code (RaC)，准备在metadata中增加code字段。
       bind:
@@ -211,8 +209,11 @@ todo:
           <term.50430bca.632214.c83dac.term.2>: 中华人民共和国公司法
     - '30': 重新思考term metadata种的upgradeby，是否需要显示内容和id两种。
   ego:
-    - '195': 新版个人模型和部署
-    - '90': 新版个人模型的共同体接口
+    - '60': 新版个人模型的view
+      bind:
+        - '90': 新版个人模型的共同体接口
+          bind:
+            - '60': 新版个人模型的metadata
     - '60': task之间结算体系设计。
     - '60': 在season metadata中实现浮动时间表，修改日计划功能。
     - '30': 整理废弃git库，包括本地和远程。
@@ -228,6 +229,8 @@ todo:
     - '60': 重新设计ego.js的命令行参数，合并函数，整理代码。
     - '30': 生成waitinglist时，考虑多层todo。
   learn:
+    - '30': https://www.npmjs.com/package/jssm
+    - '30': http://machina-js.org/
     - '30': Document-Oriented数据库
       readme: |
         -MongoDB、CouchDB、RavenDB
@@ -260,6 +263,7 @@ todo:
       readme: |
         - https://zh.javascript.info/promise-api
     - '30': 同npm发布包
+    - '30': ESM(ESModule)
     - '30': 学习AMD规范，如果适用就开发范例
     - '60': 向外提供js文件的范例，为代码层级互通做准备
     - '30': 日期格式化

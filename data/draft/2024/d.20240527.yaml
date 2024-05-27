@@ -1,0 +1,21 @@
+date: 20240527
+plan: 2
+time:
+  - begin: '20240527074500'
+    amount: 195
+    type: work
+    subject: ego
+    name: 新版个人模型和部署
+    output: draft/2024/05/20240527074500.md
+  - begin: '20240527140000'
+    amount: 90
+    type: work
+    subject: PSMD
+    name: FSM的cypher实现
+    output: draft/2024/05/20240527140000.md
+  - begin: '20240527160000'
+    amount: 60
+    type: work
+    subject: PSMD
+    name: FSM的嵌入式db实现
+    output: draft/2024/05/20240527160000.md
