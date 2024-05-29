@@ -1,0 +1,40 @@
+date: 20240529
+plan: 1
+time:
+  - begin: '20240529074500'
+    amount: 60
+    type: work
+    subject: PSMD
+    name: 新版共同体模型和物理学
+    output: draft/2024/05/20240529074500.md
+  - begin: '20240529093000'
+    amount: 90
+    type: work
+    subject: ego
+    name: 新版个人模型的view
+    output: draft/2024/05/20240529093000.md
+  - begin: '20240529140000'
+    amount: 30
+    type: work
+    subject: js
+    name: 了解jami api
+    readme: |
+      - https://docs.jami.net/zh_CN/developer/apis-of-jami.html
+    output: draft/2024/05/20240529140000.md
+  - begin: '20240529143000'
+    amount: 30
+    type: work
+    subject: learn
+    name: http://machina-js.org/
+    output: draft/2024/05/20240529143000.md
+  - begin: '20240529160000'
+    amount: 60
+    type: work
+    subject: learn
+    name: Reduced Kernel Mean Embedding Specification
+    readme: |
+      - https://ar5iv.labs.arxiv.org/html/2001.07135
+      - https://arxiv.org/pdf/2210.03647
+      - https://www.gitlink.org.cn/beimingwu/learnware
+      - https://dl.ccf.org.cn/article/articleDetail.html?type=xhtx_thesis&_ack=1&id=6993700685137920#
+    output: draft/2024/05/20240529160000.md

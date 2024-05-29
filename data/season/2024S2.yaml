@@ -186,20 +186,20 @@ time:
     xuemen: 600
     raw: 300
   sold:
-    ego: 4029
-    PSMD: 6241
+    ego: 4119
+    PSMD: 6301
     infra: 30
-    js: 1050
-    learn: 987
+    js: 1080
+    learn: 1077
     xuemen: 1196
     raw: 444
 todo:
   PSMD:
-    - '60': 新版共同体模型和物理学
-    - '195': term + COM matedata -> deploy metadata -> deploy view
-    - '30': 了解Rules as Code (RaC)，准备在metadata中增加code字段。
+    - '90': 新版个人模型对应的共同体模型范式
+    - '60': 了解Rules as Code (RaC)，准备在metadata中增加code字段。
       bind:
         - '60': 设计条款的可执行机制
+    - '195': term + COM matedata -> deploy metadata -> deploy view
     - '30': debug- D:\huangyg\git\PSMD\data\term.25c83dac.yaml interface字段混乱。
       readme: |
         term.25c83dac.yaml的depend.text 包含 <term.2e4f11cb.term.1> 
@@ -210,11 +210,9 @@ todo:
           <term.50430bca.632214.c83dac.term.2>: 中华人民共和国公司法
     - '30': 重新思考term metadata种的upgradeby，是否需要显示内容和id两种。
   ego:
-    - '90': 新版个人模型的view
+    - '195': 新版个人模型的view和共同体接口
       bind:
-        - '90': 新版个人模型的共同体接口
-          bind:
-            - '60': 新版个人模型的metadata
+        - '60': 新版个人模型的metadata
     - '60': 在season metadata中实现浮动时间表，修改日计划功能。
     - '30': 整理废弃git库，包括本地和远程。
       readme: |
@@ -229,7 +227,10 @@ todo:
     - '60': 重新设计ego.js的命令行参数，合并函数，整理代码。
     - '30': 生成waitinglist时，考虑多层todo。
   learn:
-    - '30': http://machina-js.org/
+    - '30': 寻找可编程的,去中心化的信息发布方式
+      readme: |
+        - https://diaspora.github.io/api-documentation/
+        - https://github.com/diaspora/api-documentation
     - '30': Document-Oriented数据库
       readme: |
         -MongoDB、CouchDB、RavenDB
@@ -247,9 +248,13 @@ todo:
             - https://docs.freenet.org/introduction.html
             - https://docs.freenet.org/tutorial.html
   js:
-    - '30': 了解jami api
+    - '30': 继续学习promise api
       readme: |
-        - https://docs.jami.net/zh_CN/developer/apis-of-jami.html
+        - https://zh.javascript.info/promise-api
+    - '30': 同npm发布包
+    - '30': ESM(ESModule)
+    - '30': https://www.npmjs.com/package/commander
+    - '30': 学习AMD规范，如果适用就开发范例
     - '60': 学习 nodejs test框架
       readme: |
         - https://github.com/Vanessa219/vditor
@@ -257,12 +262,6 @@ todo:
         - https://github.com/markedjs/marked
         bind:
           - '90': 实际编写自己的测试范例
-    - '30': 继续学习promise api
-      readme: |
-        - https://zh.javascript.info/promise-api
-    - '30': 同npm发布包
-    - '30': ESM(ESModule)
-    - '30': 学习AMD规范，如果适用就开发范例
     - '60': 向外提供js文件的范例，为代码层级互通做准备
     - '30': 日期格式化
       readme: |
@@ -274,6 +273,11 @@ todo:
     - '30': 检查etable递归过程是否累加amount字段而未检查unit字段的。
   xuemen:
     - '30': 域名和接口整理
+    - '30': 新版数字证书CA
+      readme: |
+        - 【北京数字认证】北京市电子税务局新版上线，一证通用户必须下载安装一证通CA控件，才能登录使用！
+        - 一证通CA控件下载地址：https://bjtax.bjca.org.cn/bjtax/index.html
+        - 咨询电话：400-700-1900转人工1-0-0
     - '90': 重新设计S2状态下的学门基本管理制度
     - '60': term.e6f0caec -> xuemen COD metadata-S2状态下的部门模型
 comment:
