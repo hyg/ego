@@ -40,10 +40,10 @@ module.exports = {
                 for(var j in seasonobj.todo[timeperiod.subject]){
                     //console.log("makedaydraft() > seasonobj.todo[timeperiod.subject][j][timeperiod.amount]: "+seasonobj.todo[timeperiod.subject][j][timeperiod.amount] + " timeperiod.name: "+ timeperiod.name)
                     if(seasonobj.todo[timeperiod.subject][j][timeperiod.amount] == timeperiod.name){
-                        console.log("makedaydraft()> before delete todo item, waitinglist:\n" + yaml.dump(waitinglist[time[i].amount.toString()][0]));
+                        console.log("makedaydraft()> before delete todo item, waitinglist: %d %d\n" + yaml.dump(waitinglist[time[i].amount.toString()][0]),i,j);
                         console.log("makedaydraft()> before delete todo item:\n" + yaml.dump(seasonobj.todo[timeperiod.subject]));
                         if (seasonobj.todo[timeperiod.subject][j].bind != null) {
-                            seasonobj.todo[timeperiod.subject].splice(j, 1, ...seasonobj.todo[timeperiod.subject][waitinglist[time[i].amount.toString()][0].id].bind);
+                            seasonobj.todo[timeperiod.subject].splice(j, 1, ...seasonobj.todo[timeperiod.subject][j].bind);
                         } else {
                             seasonobj.todo[timeperiod.subject].splice(j, 1);
                         }

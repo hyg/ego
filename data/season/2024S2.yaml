@@ -187,7 +187,7 @@ time:
     raw: 300
   sold:
     ego: 4119
-    PSMD: 6301
+    PSMD: 6511
     infra: 30
     js: 1080
     learn: 1077
@@ -195,8 +195,11 @@ time:
     raw: 444
 todo:
   PSMD:
-    - '90': 新版个人模型对应的共同体模型范式
-    - '60': 了解Rules as Code (RaC)，准备在metadata中增加code字段。
+    - '195': 新版个人模型的view和共同体接口
+    - '60': 了解blawx的语法
+      readme: |
+        - 5.30.16:00 draft
+        - https://blawx.dev/docs/features/categories/
       bind:
         - '60': 设计条款的可执行机制
     - '195': term + COM matedata -> deploy metadata -> deploy view
@@ -210,9 +213,7 @@ todo:
           <term.50430bca.632214.c83dac.term.2>: 中华人民共和国公司法
     - '30': 重新思考term metadata种的upgradeby，是否需要显示内容和id两种。
   ego:
-    - '195': 新版个人模型的view和共同体接口
-      bind:
-        - '60': 新版个人模型的metadata
+    - '60': 新版个人模型的metadata
     - '60': 在season metadata中实现浮动时间表，修改日计划功能。
     - '30': 整理废弃git库，包括本地和远程。
       readme: |
@@ -260,6 +261,7 @@ todo:
         - https://github.com/Vanessa219/vditor
             - https://nodejs.cn/api/test.html
         - https://github.com/markedjs/marked
+        - https://bun.sh/
         bind:
           - '90': 实际编写自己的测试范例
     - '60': 向外提供js文件的范例，为代码层级互通做准备

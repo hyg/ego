@@ -1,0 +1,21 @@
+date: 20240530
+plan: 2
+time:
+  - begin: '20240530074500'
+    amount: 60
+    type: work
+    subject: PSMD
+    name: default模型
+    output: draft/2024/05/20240530074500.md
+  - begin: '20240530140000'
+    amount: 90
+    type: work
+    subject: PSMD
+    name: 新版个人模型对应的共同体模型范式
+    output: draft/2024/05/20240530140000.md
+  - begin: '20240530160000'
+    amount: 60
+    type: work
+    subject: PSMD
+    name: 了解Rules as Code (RaC)，准备在metadata中增加code字段。
+    output: draft/2024/05/20240530160000.md
