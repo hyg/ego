@@ -186,7 +186,7 @@ time:
     xuemen: 600
     raw: 300
   sold:
-    ego: 4119
+    ego: 4134
     PSMD: 6511
     infra: 30
     js: 1080
@@ -213,7 +213,6 @@ todo:
           <term.50430bca.632214.c83dac.term.2>: 中华人民共和国公司法
     - '30': 重新思考term metadata种的upgradeby，是否需要显示内容和id两种。
   ego:
-    - '60': 新版个人模型的metadata
     - '60': 在season metadata中实现浮动时间表，修改日计划功能。
     - '30': 整理废弃git库，包括本地和远程。
       readme: |
@@ -228,6 +227,15 @@ todo:
     - '60': 重新设计ego.js的命令行参数，合并函数，整理代码。
     - '30': 生成waitinglist时，考虑多层todo。
   learn:
+    - '60': 熟悉知识库语法
+      readme: |
+        http://xmlns.com/foaf/spec/
+        https://www.semantic-mediawiki.org/wiki/FOAF
+        https://rdfa.info/docs
+        http://cnschema.openkg.cn/
+        https://schema.org.cn/docs/getstarted.html
+        www.schema.org/docs/extension.html
+        https://json-ld.org/
     - '30': 寻找可编程的,去中心化的信息发布方式
       readme: |
         - https://diaspora.github.io/api-documentation/
@@ -267,20 +275,24 @@ todo:
     - '60': 向外提供js文件的范例，为代码层级互通做准备
     - '30': 日期格式化
       readme: |
+        http://momentjs.cn/
         https://www.cnblogs.com/biehongli/p/9327604.html
         https://juejin.cn/post/7199191689150644279
         https://blog.csdn.net/lwf3115841/article/details/129105206
     - '60': 学习'Electron'，创作一个范例。
+    - '30': text->id,protobuf-javascript
+      readme: |
+        https://github.com/protocolbuffers/protobuf-javascript
   raw:
     - '30': 检查etable递归过程是否累加amount字段而未检查unit字段的。
   xuemen:
+    - '90': 重新设计S2状态下的学门基本管理制度
     - '30': 域名和接口整理
     - '30': 新版数字证书CA
       readme: |
         - 【北京数字认证】北京市电子税务局新版上线，一证通用户必须下载安装一证通CA控件，才能登录使用！
         - 一证通CA控件下载地址：https://bjtax.bjca.org.cn/bjtax/index.html
         - 咨询电话：400-700-1900转人工1-0-0
-    - '90': 重新设计S2状态下的学门基本管理制度
     - '60': term.e6f0caec -> xuemen COD metadata-S2状态下的部门模型
 comment:
   '20240520': |

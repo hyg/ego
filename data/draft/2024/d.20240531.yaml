@@ -1,0 +1,21 @@
+date: 20240531
+plan: 2
+time:
+  - begin: '20240531074500'
+    amount: 0
+    type: work
+    subject: PSMD
+    name: 新版个人模型的view和共同体接口
+    output: draft/2024/05/20240531074500.md
+  - begin: '20240531140000'
+    amount: 0
+    type: work
+    subject: xuemen
+    name: 重新设计S2状态下的学门基本管理制度
+    output: draft/2024/05/20240531140000.md
+  - begin: '20240531160000'
+    amount: 15
+    type: work
+    subject: ego
+    name: 新版个人模型的metadata
+    output: draft/2024/05/20240531160000.md

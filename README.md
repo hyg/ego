@@ -53,15 +53,56 @@ ego是[通用个人领域模型](common.com.md)、[俱乐部](club.com.md)的分
     - view
 
 
-## 基本概念
+- ego
+    - thing.yaml
+    - entity.yaml
+    - ego.yaml
+    - data
+        - event
+        - promise
+        - error
+            - error.*.yaml
+        - raw
+        - offer
+            - term.spilit.yaml
+            - term.joint.yaml
+            - term.default.yaml
+        - protocol
+            - term.ego.yaml
+        - vat
+    - src
+    - view
+        - ego.md
+        - ego.html
+        - raw.md
+        - raw.html
+        - 
+- raw
+- 
+    
 
-- 物体|thing: 与知识图谱的thing定义相同。
-- 主体|entity: 具有认知行为的物体(thing)。
-    - 认知的定义是能描述认知对象的推理和行为。
-        - 知识|knowledge: 对推理的描述，包括描述行为的后果。
-        - 对行为的描述包括已发生、将发生、附条件发生...的行为。
-    - 认知对象可以是thing和entity，包括自身。
-    - raw: entuity还没有认知的自身推理和行为的集合。
+## 基本概念
+以下是entity在外部记录中使用的概念
+
+- 物体|thing: 与知识图谱的thing定义相同。(https://schema.org.cn/Thing)
+- 主体|entity: 具有认知(cognize)行为的物体(thing)。
+    - event: 与知识图谱的event定义相同。（https://schema.org.cn/Event） 
+    - promise：承诺的行为。
+        - event的所有字段。
+        - effect：行为的后果，一组event。
+    - raw: entuity还没有认知的自身行为的集合。
+    - 知识|knowledge: 对推理的描述，包括描述行为的后果。
+- ego: 通过创造vat、在vat中设立主体(entity)来认知的entity。
+    - error
+    - offer
+    - protocol
+       - spilit
+       - joint
+    - vat: 支持entity的思想和行为的知识（定义、概念、假设等等）的thing。
+- 认知|cognize: 认知是描述认知对象的行为。认知对象可以是thing和entity，包括自身。
+- 行为：
+    - 包括推理
+    - 包括自身的行为
 - 协议|protocol: 多个entity的共同认知。
     - 对thing的所有权是entity行为的一种认知。
     - 要约|offer: 是一个entity单方面认可的protocol。发布要约是一种行为，因此表示知识进入实践。
@@ -72,11 +113,7 @@ ego是[通用个人领域模型](common.com.md)、[俱乐部](club.com.md)的分
     - 通过替换知识来改变推理和行为。
 - 分立|spilit: 一个entity产生多个entity的行为。
 - 联合|joint: 多个entity产生一个entity的行为。
-
-- vat: 支持entity的思想和行为的知识（定义、概念、假设等等）的thing。
-- ego: 通过创造vat、在vat中设立主体(entity)来认知的entity。
 - 共同体|community：由多个主体joint合并而成的主体。
-
 
 ## 接口
 
