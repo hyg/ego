@@ -181,21 +181,22 @@ time:
   alloc:
     PSMD: 7000
     learn: 1000
-    ego: 3000
+    ego: 4500
     js: 1375
-    xuemen: 600
-    raw: 300
+    xuemen: 1500
+    raw: 600
   sold:
     ego: 4134
-    PSMD: 6511
+    PSMD: 6526
     infra: 30
     js: 1080
-    learn: 1077
+    learn: 1107
     xuemen: 1196
     raw: 444
 todo:
   PSMD:
-    - '195': 新版个人模型的view和共同体接口
+    - '90': 新版个人模型的view
+    - '60': 新版个人模型中的共同体接口
     - '60': 了解blawx的语法
       readme: |
         - 5.30.16:00 draft
@@ -213,13 +214,13 @@ todo:
           <term.50430bca.632214.c83dac.term.2>: 中华人民共和国公司法
     - '30': 重新思考term metadata种的upgradeby，是否需要显示内容和id两种。
   ego:
-    - '60': 在season metadata中实现浮动时间表，修改日计划功能。
     - '30': 整理废弃git库，包括本地和远程。
       readme: |
         参考5.3.14:00 draft
     - '30': 设计ego.mars22.com 发布内容。
       bind:
         - '60': /release/entry.html 读取 markdown和metadata 并显示。
+    - '60': 在season metadata中实现浮动时间表，修改日计划功能。
     - '60': 用js代码完成日小结后的git操作。
       readme: |
         - 参考：D:\huangyg\git\draft\2024\04\20240430140000.md
@@ -227,6 +228,15 @@ todo:
     - '60': 重新设计ego.js的命令行参数，合并函数，整理代码。
     - '30': 生成waitinglist时，考虑多层todo。
   learn:
+    - '30': 寻找可编程的,去中心化的信息发布方式
+      readme: |
+        - https://diaspora.github.io/api-documentation/
+        - https://github.com/diaspora/api-documentation
+    - '30': 了解免安装web im的机制
+      readme: |
+        gitter.im
+        https://libera.chat/
+        https://web.libera.chat/gamja/
     - '60': 熟悉知识库语法
       readme: |
         http://xmlns.com/foaf/spec/
@@ -236,10 +246,6 @@ todo:
         https://schema.org.cn/docs/getstarted.html
         www.schema.org/docs/extension.html
         https://json-ld.org/
-    - '30': 寻找可编程的,去中心化的信息发布方式
-      readme: |
-        - https://diaspora.github.io/api-documentation/
-        - https://github.com/diaspora/api-documentation
     - '30': Document-Oriented数据库
       readme: |
         -MongoDB、CouchDB、RavenDB
@@ -249,6 +255,7 @@ todo:
     - '30': Query fundamentals https://console.neo4j.io
     - '60': 开发YARRRML范例
     - '90': 把PSMD的data、src部分升级到rdf，如果升级成功则作为范例。
+    - '60': Windows PowerShell
     - '195': rust入门
       bind:
         - '195': 开发reenet Contracts sample

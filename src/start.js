@@ -133,7 +133,7 @@ module.exports = {
         planstr = planstr + "\n" + seasonobj.dayplan[plan].readme;
         //console.log("planstr:\n"+planstr);
 
-        var dayplan = "# " + year + "." + month + "." + day + ".\n计划  \n\n根据[ego模型时间接口](https://gitee.com/hyg/blog/blob/master/timeflow.md)，今天绑定模版" + plan + "。\n\n" + planstr + "\n---\n\n";
+        var dayplan = "# " + year + "." + month + "." + day + ".\n计划  \n\n根据[ego模型时间接口](https://gitee.com/hyg/blog/blob/master/timeflow.md)，六月上旬补足前两月缺勤。今天绑定模版" + plan + "。\n\n" + planstr + "\n---\n\n";
 
         for (var i in draftmetadata.time) {
             var subject = draftmetadata.time[i].subject;

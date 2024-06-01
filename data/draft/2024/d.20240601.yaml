@@ -1,0 +1,21 @@
+date: 20240601
+plan: 2
+time:
+  - begin: '20240601074500'
+    amount: 15
+    type: work
+    subject: PSMD
+    name: 新版个人模型的view和共同体接口
+    output: draft/2024/06/20240601074500.md
+  - begin: '20240601140000'
+    amount: 0
+    type: work
+    subject: xuemen
+    name: 重新设计S2状态下的学门基本管理制度
+    output: draft/2024/06/20240601140000.md
+  - begin: '20240601160000'
+    amount: 30
+    type: work
+    subject: learn
+    name: windows power shell
+    output: draft/2024/06/20240601160000.md
