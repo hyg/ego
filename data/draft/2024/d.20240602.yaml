@@ -1,0 +1,40 @@
+date: 20240602
+plan: 1
+time:
+  - begin: '20240602074500'
+    amount: 20
+    type: work
+    subject: PSMD
+    name: 新版个人模型中的共同体接口
+    output: draft/2024/06/20240602074500.md
+  - begin: '20240602093000'
+    amount: 30
+    type: work
+    subject: PSMD
+    name: 新版个人模型的view
+    output: draft/2024/06/20240602093000.md
+  - begin: '20240602140000'
+    amount: 30
+    type: work
+    subject: ego
+    name: 整理废弃git库，包括本地和远程。
+    readme: |
+      参考5.3.14:00 draft
+    output: draft/2024/06/20240602140000.md
+  - begin: '20240602143000'
+    amount: 30
+    type: work
+    subject: js
+    name: 继续学习promise api
+    readme: |
+      - https://zh.javascript.info/promise-api
+    output: draft/2024/06/20240602143000.md
+  - begin: '20240602160000'
+    amount: 60
+    type: work
+    subject: PSMD
+    name: 了解blawx的语法
+    readme: |
+      - 5.30.16:00 draft
+      - https://blawx.dev/docs/features/categories/
+    output: draft/2024/06/20240602160000.md
