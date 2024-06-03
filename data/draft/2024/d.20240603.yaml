@@ -1,0 +1,21 @@
+date: 20240603
+plan: 2
+time:
+  - begin: '20240603074500'
+    amount: 90
+    type: work
+    subject: PSMD
+    name: 新版个人模型和共同体接口
+    output: draft/2024/06/20240603074500.md
+  - begin: '20240603140000'
+    amount: 0
+    type: work
+    subject: xuemen
+    name: 重新设计S2状态下的学门基本管理制度
+    output: draft/2024/06/20240603140000.md
+  - begin: '20240603160000'
+    amount: 10
+    type: work
+    subject: xuemen
+    name: 整理财务
+    output: draft/2024/06/20240603160000.md

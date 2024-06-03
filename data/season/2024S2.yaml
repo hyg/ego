@@ -187,15 +187,16 @@ time:
     raw: 600
   sold:
     ego: 4164
-    PSMD: 6636
+    PSMD: 6726
     infra: 30
     js: 1110
     learn: 1107
-    xuemen: 1196
+    xuemen: 1206
     raw: 444
 todo:
   PSMD:
-    - '195': 新版个人模型和共同体接口
+    - '60': 新版模型的draft
+    - '90': entity和com的接口
     - '60': 设计条款的可执行机制
     - '195': term + COM matedata -> deploy metadata -> deploy view
     - '90': 以1406为例检查知识图谱和blawx的语法
@@ -285,13 +286,13 @@ todo:
   raw:
     - '30': 检查etable递归过程是否累加amount字段而未检查unit字段的。
   xuemen:
-    - '90': 重新设计S2状态下的学门基本管理制度
     - '30': 域名和接口整理
     - '30': 新版数字证书CA
       readme: |
         - 【北京数字认证】北京市电子税务局新版上线，一证通用户必须下载安装一证通CA控件，才能登录使用！
         - 一证通CA控件下载地址：https://bjtax.bjca.org.cn/bjtax/index.html
         - 咨询电话：400-700-1900转人工1-0-0
+    - '90': 重新设计S2状态下的学门基本管理制度
     - '60': term.e6f0caec -> xuemen COD metadata-S2状态下的部门模型
 comment:
   '20240520': |
