@@ -1,0 +1,33 @@
+date: 20240604
+plan: 1
+time:
+  - begin: '20240604074500'
+    amount: 0
+    type: work
+    subject: PSMD
+    name: 新版模型的draft
+    output: draft/2024/06/20240604074500.md
+  - begin: '20240604093000'
+    amount: 0
+    type: work
+    subject: PSMD
+    name: entity和com的接口
+    output: draft/2024/06/20240604093000.md
+  - begin: '20240604140000'
+    amount: 30
+    type: work
+    subject: ego
+    name: 设计ego.mars22.com 发布内容。
+    output: draft/2024/06/20240604140000.md
+  - begin: '20240604143000'
+    amount: 30
+    type: work
+    subject: xuemen
+    name: 域名和接口整理
+    output: draft/2024/06/20240604143000.md
+  - begin: '20240604160000'
+    amount: 60
+    type: work
+    subject: ego
+    name: 在season metadata中实现浮动时间表，修改日计划功能。
+    output: draft/2024/06/20240604160000.md

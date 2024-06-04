@@ -186,17 +186,17 @@ time:
     xuemen: 1500
     raw: 600
   sold:
-    ego: 4164
+    ego: 4254
     PSMD: 6726
     infra: 30
     js: 1110
     learn: 1107
-    xuemen: 1206
+    xuemen: 1236
     raw: 444
 todo:
   PSMD:
-    - '60': 新版模型的draft
-    - '90': entity和com的接口
+    - '195': entity、ego的draft、metadata
+    - '90': entify、ego的共同体接口
     - '60': 设计条款的可执行机制
     - '195': term + COM matedata -> deploy metadata -> deploy view
     - '90': 以1406为例检查知识图谱和blawx的语法
@@ -210,10 +210,8 @@ todo:
           <term.50430bca.632214.c83dac.term.2>: 中华人民共和国公司法
     - '30': 重新思考term metadata种的upgradeby，是否需要显示内容和id两种。
   ego:
-    - '30': 设计ego.mars22.com 发布内容。
-      bind:
-        - '60': /release/entry.html 读取 markdown和metadata 并显示。
-    - '60': 在season metadata中实现浮动时间表，修改日计划功能。
+    - '90': /release/entry.html 读取 markdown和metadata 并显示。
+    - '90': 实现2024.6.4.16:00draft的方案三
     - '60': 用js代码完成日小结后的git操作。
       readme: |
         - 参考：D:\huangyg\git\draft\2024\04\20240430140000.md
@@ -280,13 +278,16 @@ todo:
         https://juejin.cn/post/7199191689150644279
         https://blog.csdn.net/lwf3115841/article/details/129105206
     - '60': 学习'Electron'，创作一个范例。
+    - '30': mermaid
+      readme: |
+        https://mermaid.nodejs.cn/
+        https://mermaid.js.org/
     - '30': text->id,protobuf-javascript
       readme: |
         https://github.com/protocolbuffers/protobuf-javascript
   raw:
     - '30': 检查etable递归过程是否累加amount字段而未检查unit字段的。
   xuemen:
-    - '30': 域名和接口整理
     - '30': 新版数字证书CA
       readme: |
         - 【北京数字认证】北京市电子税务局新版上线，一证通用户必须下载安装一证通CA控件，才能登录使用！
