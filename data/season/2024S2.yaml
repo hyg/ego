@@ -186,8 +186,8 @@ time:
     xuemen: 1500
     raw: 600
   sold:
-    ego: 4254
-    PSMD: 6726
+    ego: 4344
+    PSMD: 6981
     infra: 30
     js: 1110
     learn: 1107
@@ -195,11 +195,11 @@ time:
     raw: 444
 todo:
   PSMD:
-    - '195': entity、ego的draft、metadata
-    - '90': entify、ego的共同体接口
-    - '60': 设计条款的可执行机制
+    - '90': entity,ego draft
+    - '60': entify、ego的共同体接口
     - '195': term + COM matedata -> deploy metadata -> deploy view
     - '90': 以1406为例检查知识图谱和blawx的语法
+    - '60': 设计条款的可执行机制
     - '30': debug- D:\huangyg\git\PSMD\data\term.25c83dac.yaml interface字段混乱。
       readme: |
         term.25c83dac.yaml的depend.text 包含 <term.2e4f11cb.term.1> 
@@ -210,8 +210,10 @@ todo:
           <term.50430bca.632214.c83dac.term.2>: 中华人民共和国公司法
     - '30': 重新思考term metadata种的upgradeby，是否需要显示内容和id两种。
   ego:
-    - '90': /release/entry.html 读取 markdown和metadata 并显示。
-    - '90': 实现2024.6.4.16:00draft的方案三
+    - '60': 实现2024.6.4.16:00draft的方案三
+    - '90': 根据ego对外信息接口编写页面代码
+      readme: |
+        D:\huangyg\git\blog\release\time\d.20240604.md
     - '60': 用js代码完成日小结后的git操作。
       readme: |
         - 参考：D:\huangyg\git\draft\2024\04\20240430140000.md

@@ -1,0 +1,21 @@
+date: 20240605
+plan: 2
+time:
+  - begin: '20240605074500'
+    amount: 195
+    type: work
+    subject: PSMD
+    name: entity、ego的draft、metadata
+    output: draft/2024/06/20240605074500.md
+  - begin: '20240605140000'
+    amount: 90
+    type: work
+    subject: ego
+    name: /release/entry.html 读取 markdown和metadata 并显示。
+    output: draft/2024/06/20240605140000.md
+  - begin: '20240605160000'
+    amount: 60
+    type: work
+    subject: PSMD
+    name: 设计条款的可执行机制
+    output: draft/2024/06/20240605160000.md
