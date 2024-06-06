@@ -1,9 +1,9 @@
 year: 2024
-season: 2
-beginmonth: 4
+season: 3
+beginmonth: 7
 beginday: 1
-lastmonth: 6
-lastday: 31
+lastmonth: 9
+lastday: 30
 timetype:
   - name: work
   - name: free
@@ -13,36 +13,40 @@ timetype:
   - name: sleep
   - name: food
   - name: check
+map:
+  1:
+    1a:
+      start: 0
+      end: 040459
+    1b:
+      start: 040500
+      end: 042959
+    1c:
+      start: 043000
+      end: 045959
+    1d:
+      start: 
 dayplan:
-  '1':
+  '1a':
     supply:
       '30': 2
       '60': 2
       '90': 1
     time:
-      - beginhour: 4
-        beginminute: 0
-        amount: 15
+      - amount: 15
         type: free
         name: 休整
-      - beginhour: 4
-        beginminute: 15
-        amount: 60
+      - amount: 60
         type: prepare
         name: 备餐、运动
-      - beginhour: 5
-        beginminute: 15
-        amount: 45
+      - amount: 45
         type: food
         name: 早餐
-      - beginhour: 6
-        beginminute: 0
-        amount: 45
+      - amount: 45
         type: discuss
         name: 会议、自习
-      - beginhour: 6
-        beginminute: 45
-        amount: 60
+      - endhour: 7
+        endminute: 44
         type: free
         name: 休整
       - beginhour: 7
@@ -102,7 +106,87 @@ dayplan:
         name: 讨论、整理提交
     readme: |
       模版一采用静默工作方式。  
-      希望讨论的提纲发到 [huangyg@mars22.com](mailto:huangyg@mars22.com)，通常安排在后面某天的早餐（5:15~5:59）或会议时间（6:00~6:45）。
+      希望讨论的提纲发到 [huangyg@mars22.com](mailto:huangyg@mars22.com)，通常安排在后面某天的早餐或会议自习时间。
+  '1b':
+    supply:
+      '30': 2
+      '60': 2
+      '90': 1
+    time:
+      - amount: 15
+        type: free
+        name: 休整
+      - amount: 60
+        type: prepare
+        name: 备餐、运动
+      - amount: 45
+        type: food
+        name: 早餐
+      - amount: 45
+        type: discuss
+        name: 会议、自习
+      - endhour: 7
+        endminute: 44
+        type: free
+        name: 休整
+      - beginhour: 7
+        beginminute: 45
+        amount: 60
+        type: work
+        name: 静默工作
+        namelink: http://simp.ly/p/xtgD4F
+      - beginhour: 8
+        beginminute: 45
+        amount: 45
+        type: free
+        name: 休整
+      - beginhour: 9
+        beginminute: 30
+        amount: 90
+        type: work
+        name: 静默工作
+        namelink: http://simp.ly/p/j1SspP
+      - beginhour: 11
+        beginminute: 0
+        amount: 180
+        type: food
+        name: 备餐、午餐午休
+      - beginhour: 14
+        beginminute: 0
+        amount: 30
+        type: work
+        name: 静默工作
+        namelink: http://simp.ly/p/8t3vlk
+      - beginhour: 14
+        beginminute: 30
+        amount: 30
+        type: work
+        name: 静默工作
+        namelink: http://simp.ly/p/5k9gJy
+      - beginhour: 15
+        beginminute: 0
+        amount: 60
+        type: free
+        name: 休整
+      - beginhour: 16
+        beginminute: 0
+        amount: 60
+        type: work
+        name: 静默工作
+        namelink: http://simp.ly/p/4QDThK
+      - beginhour: 17
+        beginminute: 0
+        amount: 120
+        type: food
+        name: 晚餐
+      - beginhour: 19
+        beginminute: 0
+        amount: 60
+        type: check
+        name: 讨论、整理提交
+    readme: |
+      模版一采用静默工作方式。  
+      希望讨论的提纲发到 [huangyg@mars22.com](mailto:huangyg@mars22.com)，通常安排在后面某天的早餐或会议自习时间。
   '2':
     supply:
       '60': 1
@@ -186,16 +270,15 @@ time:
     xuemen: 1500
     raw: 600
   sold:
-    ego: 4404
+    ego: 4344
     PSMD: 6981
     infra: 30
-    js: 1155
+    js: 1110
     learn: 1107
-    xuemen: 1253
+    xuemen: 1236
     raw: 444
 todo:
   PSMD:
-    - '195': entify, ego draft
     - '195': term + COM matedata -> deploy metadata -> deploy view
     - '90': 以1406为例检查知识图谱和blawx的语法
     - '60': 设计条款的可执行机制
@@ -209,10 +292,6 @@ todo:
           <term.50430bca.632214.c83dac.term.2>: 中华人民共和国公司法
     - '30': 重新思考term metadata种的upgradeby，是否需要显示内容和id两种。
   ego:
-    - '90': 编写浮动时间表代码
-      readme: |
-        2024.6.4.16:00 draft
-        2024.6.6.7:45 draft
     - '90': 根据ego对外信息接口编写页面代码
       readme: |
         D:\huangyg\git\blog\release\time\d.20240604.md
@@ -223,15 +302,6 @@ todo:
     - '60': 重新设计ego.js的命令行参数，合并函数，整理代码。
     - '30': 生成waitinglist时，考虑多层todo。
   learn:
-    - '60': 熟悉知识库语法
-      readme: |
-        http://xmlns.com/foaf/spec/
-        https://www.semantic-mediawiki.org/wiki/FOAF
-        https://rdfa.info/docs
-        http://cnschema.openkg.cn/
-        https://schema.org.cn/docs/getstarted.html
-        www.schema.org/docs/extension.html
-        https://json-ld.org/
     - '30': 寻找可编程的,去中心化的信息发布方式
       readme: |
         - https://diaspora.github.io/api-documentation/
@@ -241,6 +311,15 @@ todo:
         gitter.im
         https://libera.chat/
         https://web.libera.chat/gamja/
+    - '60': 熟悉知识库语法
+      readme: |
+        http://xmlns.com/foaf/spec/
+        https://www.semantic-mediawiki.org/wiki/FOAF
+        https://rdfa.info/docs
+        http://cnschema.openkg.cn/
+        https://schema.org.cn/docs/getstarted.html
+        www.schema.org/docs/extension.html
+        https://json-ld.org/
     - '30': Document-Oriented数据库
       readme: |
         -MongoDB、CouchDB、RavenDB
@@ -291,7 +370,7 @@ todo:
   raw:
     - '30': 检查etable递归过程是否累加amount字段而未检查unit字段的。
   xuemen:
-    - '60': 重新设计S2状态下的学门基本管理制度
+    - '90': 重新设计S2状态下的学门基本管理制度
     - '60': term.e6f0caec -> xuemen COD metadata-S2状态下的部门模型
 comment:
   '20240520': |

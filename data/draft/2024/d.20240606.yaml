@@ -1,0 +1,37 @@
+date: 20240606
+plan: 1
+time:
+  - begin: '20240606074500'
+    amount: 60
+    type: work
+    subject: ego
+    name: 实现2024.6.4.16:00draft的方案三
+    output: draft/2024/06/20240606074500.md
+  - begin: '20240606093000'
+    amount: 0
+    type: work
+    subject: PSMD
+    name: entity,ego draft
+    output: draft/2024/06/20240606093000.md
+  - begin: '20240606140000'
+    amount: 45
+    type: work
+    subject: js
+    name: 同npm发布包
+    output: draft/2024/06/20240606140000.md
+  - begin: '20240606143000'
+    amount: 17
+    type: work
+    subject: xuemen
+    name: 新版数字证书CA
+    readme: |
+      - 【北京数字认证】北京市电子税务局新版上线，一证通用户必须下载安装一证通CA控件，才能登录使用！
+      - 一证通CA控件下载地址：https://bjtax.bjca.org.cn/bjtax/index.html
+      - 咨询电话：400-700-1900转人工1-0-0
+    output: draft/2024/06/20240606143000.md
+  - begin: '20240606160000'
+    amount: 0
+    type: work
+    subject: PSMD
+    name: entify、ego的共同体接口
+    output: draft/2024/06/20240606160000.md
