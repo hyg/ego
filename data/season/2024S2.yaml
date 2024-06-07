@@ -189,10 +189,10 @@ time:
     ego: 4404
     PSMD: 6981
     infra: 30
-    js: 1155
-    learn: 1107
+    js: 1203
+    learn: 1197
     xuemen: 1253
-    raw: 444
+    raw: 450
 todo:
   PSMD:
     - '195': entify, ego draft
@@ -223,15 +223,7 @@ todo:
     - '60': 重新设计ego.js的命令行参数，合并函数，整理代码。
     - '30': 生成waitinglist时，考虑多层todo。
   learn:
-    - '60': 熟悉知识库语法
-      readme: |
-        http://xmlns.com/foaf/spec/
-        https://www.semantic-mediawiki.org/wiki/FOAF
-        https://rdfa.info/docs
-        http://cnschema.openkg.cn/
-        https://schema.org.cn/docs/getstarted.html
-        www.schema.org/docs/extension.html
-        https://json-ld.org/
+    - '60': linkml, yaml-ld
     - '30': 寻找可编程的,去中心化的信息发布方式
       readme: |
         - https://diaspora.github.io/api-documentation/
@@ -262,7 +254,6 @@ todo:
       readme: |
         - https://zh.javascript.info/promise-api
   js:
-    - '30': ESM(ESModule)
     - '30': https://www.npmjs.com/package/commander
     - '30': 学习AMD规范，如果适用就开发范例
     - '60': 学习 nodejs test框架
@@ -289,7 +280,7 @@ todo:
       readme: |
         https://github.com/protocolbuffers/protobuf-javascript
   raw:
-    - '30': 检查etable递归过程是否累加amount字段而未检查unit字段的。
+    - '30': 选择有价值的数据显示到entry页面
   xuemen:
     - '60': 重新设计S2状态下的学门基本管理制度
     - '60': term.e6f0caec -> xuemen COD metadata-S2状态下的部门模型

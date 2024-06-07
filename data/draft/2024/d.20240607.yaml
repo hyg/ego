@@ -1,0 +1,44 @@
+date: 20240607
+plan: 1
+time:
+  - begin: '20240607074500'
+    amount: 0
+    type: work
+    subject: xuemen
+    name: 重新设计S2状态下的学门基本管理制度
+    output: draft/2024/06/20240607074500.md
+  - begin: '20240607093000'
+    amount: 0
+    type: work
+    subject: ego
+    name: 编写浮动时间表代码
+    readme: |
+      2024.6.4.16:00 draft
+      2024.6.6.7:45 draft
+    output: draft/2024/06/20240607093000.md
+  - begin: '20240607140000'
+    amount: 48
+    type: work
+    subject: js
+    name: ESM(ESModule)
+    output: draft/2024/06/20240607140000.md
+  - begin: '20240607143000'
+    amount: 6
+    type: work
+    subject: raw
+    name: 检查etable递归过程是否累加amount字段而未检查unit字段的。
+    output: draft/2024/06/20240607143000.md
+  - begin: '20240607160000'
+    amount: 90
+    type: work
+    subject: learn
+    name: 熟悉知识库语法
+    readme: |
+      http://xmlns.com/foaf/spec/
+      https://www.semantic-mediawiki.org/wiki/FOAF
+      https://rdfa.info/docs
+      http://cnschema.openkg.cn/
+      https://schema.org.cn/docs/getstarted.html
+      www.schema.org/docs/extension.html
+      https://json-ld.org/
+    output: draft/2024/06/20240607160000.md
