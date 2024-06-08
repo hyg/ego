@@ -1,0 +1,18 @@
+id: https://raw.githubusercontent.com/hyg/ego/vat/data/recognize
+name: recognize
+prefixes:
+  linkml: https://w3id.org/linkml/
+  recognize: https://raw.githubusercontent.com/hyg/ego/vat/data/entity
+imports:
+  - linkml:types
+default_range: string
+default_prefix: recognize
+
+classes:
+  Recognize:
+    attributes:
+      id:
+      name:
+      current_schema:
+      new_schema:
+      readme:

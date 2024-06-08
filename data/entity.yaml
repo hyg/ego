@@ -1,0 +1,19 @@
+id: https://raw.githubusercontent.com/hyg/ego/vat/data/entity
+name: entity
+prefixes:
+  linkml: https://w3id.org/linkml/
+  entity: https://raw.githubusercontent.com/hyg/ego/vat/data/entity
+imports:
+  - linkml:types
+default_range: string
+default_prefix: entity
+
+classes:
+  Entity:
+    attributes:
+      id:
+      name:
+      aliases:
+      event:
+      todo:
+      cognize:

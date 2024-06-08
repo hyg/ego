@@ -1,0 +1,24 @@
+date: 20240608
+plan: 2
+time:
+  - begin: '20240608074500'
+    amount: 195
+    type: work
+    subject: PSMD
+    name: entity, ego draft
+    output: draft/2024/06/20240608074500.md
+  - begin: '20240608140000'
+    amount: 135
+    type: work
+    subject: ego
+    name: 编写浮动时间表代码
+    readme: |
+      2024.6.4.16:00 draft
+      2024.6.6.7:45 draft
+    output: draft/2024/06/20240608140000.md
+  - begin: '20240608160000'
+    amount: 0
+    type: work
+    subject: xuemen
+    name: 重新设计S2状态下的学门基本管理制度
+    output: draft/2024/06/20240608160000.md

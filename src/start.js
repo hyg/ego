@@ -5,6 +5,148 @@ var util = require('./util.js');
 
 module.exports = {
     debug: true,
+    devmakedayplan: function (date, mode) {
+        var year = date.slice(0, 4);
+        var month = date.slice(4, 6);
+        var day = date.slice(6, 8);
+        var seasonpath = "../data/season/2024S3.yaml";
+        var seasonobj = yaml.load(fs.readFileSync(seasonpath, 'utf8', { schema: yaml.FAILSAFE_SCHEMA }));
+        var waitinglist = this.makewaitinglist();
+        //console.log("devmakedayplan()> waitinglist:",yaml.dump(waitinglist));
+
+        var healthpath = path.rawrepopath + "health/d." + date + ".yaml";
+        //console.log("devmakedayplan()> healthpath:",healthpath);
+        var healthobj = yaml.load(fs.readFileSync(healthpath, 'utf8', { schema: yaml.FAILSAFE_SCHEMA }));
+        var waketime = healthobj.wake.time % 1000000;
+        console.log("devmakedayplan()> waketime:", waketime);
+        var dayplan = "";
+
+        for (var plan in seasonobj.map[mode]) {
+            var item = seasonobj.map[mode][plan];
+            if ((waketime >= item.start) && (waketime <= item.end)) {
+                dayplan = plan;
+                break;
+            }
+        }
+        if (dayplan == "") {
+            console.log("devmakedayplan()> can't find dayplan");
+            return;
+        }
+        console.log("devmakedayplan()> dayplan:", dayplan);
+
+        var draftmetadata = new Object();
+        var drafttimearray = new Array();
+
+        draftmetadata.date = parseInt(date);
+        draftmetadata.mode = parseInt(mode);
+        draftmetadata.plan = parseInt(dayplan);
+
+        var planstr = `| 时间片 | 时长 | 用途 | 手稿 |
+| --- | --- | --- | --- |
+`;
+        var draftstr = ""; 
+        var indexstr = "";
+        var time = seasonobj.dayplan[dayplan].time;
+        var beginhour, beginminute, amount, endhour, endminute, begintime, nextbeiginhour, nextbeginminute;
+        nextbeiginhour = parseInt(waketime / 10000);
+        nextbeginminute = parseInt((waketime % 10000) / 100);
+        for (var i in time) {
+            var timeslice = time[i];
+
+            if (timeslice.beginhour != null) {
+                beginhour = timeslice.beginhour;
+                beginminute = timeslice.beginminute;
+                amount = timeslice.amount;
+                endhour = beginhour + parseInt((beginminute + amount - 1) / 60);
+                endminute = (beginminute + amount - 1) % 60;
+            } else if (timeslice.endhour != null) {
+                beginhour = nextbeiginhour;
+                beginminute = nextbeginminute;
+                endhour = timeslice.endhour;
+                endminute = timeslice.endminute;
+                amount = (endhour - beginhour) * 60 + (endminute - beginminute);
+            } else {
+                beginhour = nextbeiginhour;
+                beginminute = nextbeginminute;
+                amount = timeslice.amount;
+                endhour = beginhour + parseInt((beginminute + amount - 1) / 60);
+                endminute = (beginminute + amount - 1) % 60;
+            }
+            begintime = date + beginhour.toString().padStart(2, '0') + beginminute.toString().padStart(2, '0') + "00";
+            console.log("devmakedayplan()> timeslice:", i, timeslice.type,beginhour, beginminute, amount, endhour, endminute);
+
+            if (timeslice.type == "work") {
+                var timeperiod = new Object();
+                timeperiod.begin = begintime;
+                timeperiod.amount = amount;
+                timeperiod.type = "work";
+                timeperiod.subject = waitinglist[amount.toString()][0].task;
+                timeperiod.name = waitinglist[amount.toString()][0].name;
+                if (waitinglist[amount.toString()][0].readme != null) {
+                    timeperiod.readme = waitinglist[amount.toString()][0].readme;
+                }
+                timeperiod.output = "draft/" + date.slice(0, 4) + "/" + date.slice(4, 6) + "/" + timeperiod.begin + ".md";
+                drafttimearray.push(timeperiod);
+                console.log("devmakedayplan() > delete the job from %s:\n%s", waitinglist[amount.toString()][0].task, waitinglist[amount.toString()][0].name);
+                for (var j in seasonobj.todo[timeperiod.subject]) {
+                    //console.log("devmakedayplan() > seasonobj.todo[timeperiod.subject][j][timeperiod.amount]: "+seasonobj.todo[timeperiod.subject][j][timeperiod.amount] + " timeperiod.name: "+ timeperiod.name)
+                    if (seasonobj.todo[timeperiod.subject][j][timeperiod.amount] == timeperiod.name) {
+                        console.log("devmakedayplan()> before delete todo item, waitinglist: %d %d\n" + yaml.dump(waitinglist[amount.toString()][0]), i, j);
+                        console.log("devmakedayplan()> before delete todo item:\n" + yaml.dump(seasonobj.todo[timeperiod.subject]));
+                        if (seasonobj.todo[timeperiod.subject][j].bind != null) {
+                            seasonobj.todo[timeperiod.subject].splice(j, 1, ...seasonobj.todo[timeperiod.subject][j].bind);
+                        } else {
+                            seasonobj.todo[timeperiod.subject].splice(j, 1);
+                        }
+                        console.log("devmakedayplan()> after delete todo item:\n" + yaml.dump(seasonobj.todo[timeperiod.subject]));
+                    }
+                }
+                //delete it from waitinglist
+                waitinglist[time[i].amount.toString()].shift();
+
+                var draftfilename = path.draftrepopath + date.slice(0, 4) + "/" + date.slice(4, 6) + "/" + begintime + ".md";
+                draftstr = timeperiod.subject + ":" + timeperiod.name;
+                if (timeslice.namelink != null) {
+                    draftstr = draftstr + "  [在线](" + timeslice.namelink + ")";
+                }
+                draftstr = draftstr + " [离线](" + draftfilename + ")";
+                var mailtostr = " <a href=\"mailto:huangyg@mars22.com?subject=关于" + year + "." + month + "." + day + ".[" + timeperiod.name + "]任务&body=日期: " + date + "%0D%0A序号: " + i + "%0D%0A手稿:" + draftfilename + "%0D%0A---请勿修改邮件主题及以上内容 从下一行开始写您的想法---%0D%0A\">[想法]</a>";
+                draftstr = draftstr + mailtostr;
+
+                indexstr = indexstr + "- " +beginhour.toString().padStart(2, "0") + ":" + beginminute.toString().padStart(2, "0") + "\t" + timeperiod.subject + ": [" + timeperiod.name + "](../" + path.gitpath + timeperiod.output + ")\n";
+                var timestr = "## " + beginhour.toString().padStart(2, "0") + ":" + beginminute.toString().padStart(2, "0") + " ~ " + endhour.toString().padStart(2, "0") + ":" + endminute.toString().padStart(2, "0") + "\n" + timeperiod.subject + ": [" + timeperiod.name + "]\n\n";
+
+                var timeviewfilename = path.draftrepopath + date.slice(0, 4) + "/" + date.slice(4, 6) + "/" + begintime + ".md";
+                if (this.debug == false) {
+                    fs.writeFileSync(timeviewfilename, timestr);
+                }
+                console.log("devmakedayplan() > time slice draft file name:%s\n%s",timeviewfilename,timestr);
+            }
+            planstr = planstr + "| " + beginhour.toString().padStart(2, '0') + ":" + beginminute.toString().padStart(2, '0') + "~" + endhour.toString().padStart(2, '0') + ":" + endminute.toString().padStart(2, '0') + " | " + amount + " | " + timeslice.name + " | " + draftstr + " |\n";
+
+
+            nextbeiginhour = endhour + parseInt((endminute + 1) / 60);;
+            nextbeginminute = (endminute + 1) % 60;
+        }
+        planstr = planstr + "\n" + seasonobj.dayplan[plan].readme;
+
+        var dayplanstr = "# " + year + "." + month + "." + day + ".\n计划  \n\n根据[ego模型时间接口](https://gitee.com/hyg/blog/blob/master/timeflow.md)，六月上旬补足前两月缺勤。今天绑定模版" + mode + "(" + dayplan + ")。\n\n" + planstr + "\n---\n\n" + indexstr;
+        var dayplanfilename = path.blogrepopath + "release/time/d." + date + ".md";
+
+        draftmetadata.time = drafttimearray;
+        var draftmetafilename = "../data/draft" + "/" + year + "/" + "d." + date + ".yaml";
+
+        if (this.debug == false) {
+            fs.writeFileSync(draftmetafilename, yaml.dump(draftmetadata, { 'lineWidth': -1 }));
+            // save new todo
+            fs.writeFileSync(seasonpath, yaml.dump(seasonobj, { 'lineWidth': -1 }));
+            fs.writeFileSync(dayplanfilename, dayplanstr);
+        }
+        console.log("devmakedayplan() > draft meta filename:%s\n%s", draftmetafilename, yaml.dump(draftmetadata));
+        console.log("devmakedayplan() > seasonobj.todo:\n%s", yaml.dump(seasonobj.todo, { 'lineWidth': -1 }));
+        console.log("devmakedayplan() > dayplan file name:%s\n%s", dayplanfilename, dayplanstr);
+
+    },
     makedaydraft: function (date, plan) {
         var year = date.slice(0, 4);
         var month = date.slice(4, 6);
@@ -36,11 +178,11 @@ module.exports = {
                 timeperiod.output = "draft/" + date.slice(0, 4) + "/" + date.slice(4, 6) + "/" + timeperiod.begin + ".md";
                 drafttimearray.push(timeperiod);
 
-                console.log("delete the job from %s:\n%s", waitinglist[time[i].amount.toString()][0].task, waitinglist[time[i].amount.toString()][0].name) ;
-                for(var j in seasonobj.todo[timeperiod.subject]){
+                console.log("delete the job from %s:\n%s", waitinglist[time[i].amount.toString()][0].task, waitinglist[time[i].amount.toString()][0].name);
+                for (var j in seasonobj.todo[timeperiod.subject]) {
                     //console.log("makedaydraft() > seasonobj.todo[timeperiod.subject][j][timeperiod.amount]: "+seasonobj.todo[timeperiod.subject][j][timeperiod.amount] + " timeperiod.name: "+ timeperiod.name)
-                    if(seasonobj.todo[timeperiod.subject][j][timeperiod.amount] == timeperiod.name){
-                        console.log("makedaydraft()> before delete todo item, waitinglist: %d %d\n" + yaml.dump(waitinglist[time[i].amount.toString()][0]),i,j);
+                    if (seasonobj.todo[timeperiod.subject][j][timeperiod.amount] == timeperiod.name) {
+                        console.log("makedaydraft()> before delete todo item, waitinglist: %d %d\n" + yaml.dump(waitinglist[time[i].amount.toString()][0]), i, j);
                         console.log("makedaydraft()> before delete todo item:\n" + yaml.dump(seasonobj.todo[timeperiod.subject]));
                         if (seasonobj.todo[timeperiod.subject][j].bind != null) {
                             seasonobj.todo[timeperiod.subject].splice(j, 1, ...seasonobj.todo[timeperiod.subject][j].bind);
@@ -51,7 +193,7 @@ module.exports = {
                     }
                 }
                 //seasonobj.todo[timeperiod.subject] = seasonobj.todo[timeperiod.subject].filter((job) => job[time[i].amount.toString()] != timeperiod.name);
-                
+
                 //delete it from waitinglist
                 waitinglist[time[i].amount.toString()].shift();
             }
@@ -124,8 +266,8 @@ module.exports = {
                 var draftfilename = path.draftrepopath + date.slice(0, 4) + "/" + date.slice(4, 6) + "/" + begintime + ".md";
                 draftstr = draftstr + " [离线](" + draftfilename + ")";
 
-                var mailtostr = " <a href=\"mailto:huangyg@mars22.com?subject=关于" + year + "." + month + "." + day + ".[" + timeslicename[begintime] + "]任务&body=日期: " + date +"%0D%0A序号: " + i + "%0D%0A手稿:" + draftfilename + "%0D%0A---请勿修改邮件主题及以上内容 从下一行开始写您的想法---%0D%0A\">[想法]</a>" ;
-                draftstr = draftstr + mailtostr ;
+                var mailtostr = " <a href=\"mailto:huangyg@mars22.com?subject=关于" + year + "." + month + "." + day + ".[" + timeslicename[begintime] + "]任务&body=日期: " + date + "%0D%0A序号: " + i + "%0D%0A手稿:" + draftfilename + "%0D%0A---请勿修改邮件主题及以上内容 从下一行开始写您的想法---%0D%0A\">[想法]</a>";
+                draftstr = draftstr + mailtostr;
             }
 
             planstr = planstr + "| " + beginhour.toString().padStart(2, '0') + ":" + beginminute.toString().padStart(2, '0') + "~" + endhour.toString().padStart(2, '0') + ":" + endminute.toString().padStart(2, '0') + " | " + amount + " | " + timeslice.name + " | " + draftstr + " |\n";
@@ -143,8 +285,6 @@ module.exports = {
             }
             var output = draftmetadata.time[i].output;
 
-            dayplan = dayplan + "- task:" + subject + "  [" + taskname + "](../" + path.gitpath + output + ")\n";
-
             var begintime = draftmetadata.time[i].begin;
             var beginhour = parseInt((begintime - parseInt(begintime / 1000000) * 1000000) / 10000);
             var beginminute = parseInt((begintime - parseInt(begintime / 10000) * 10000) / 100);
@@ -152,6 +292,7 @@ module.exports = {
             var endhour = beginhour + parseInt((beginminute + amount) / 60);
             var endminute = (beginminute + amount) % 60;
             //console.log(begintime,beginhour,beginminute,amount,endhour,endminute);
+            dayplan = dayplan + "- " + beginhour.toString().padStart(2, "0") + ":" + beginminute.toString().padStart(2, "0") + "\t" + subject + "  [" + taskname + "](../" + path.gitpath + output + ")\n";
             var timestr = "## " + beginhour.toString().padStart(2, "0") + ":" + beginminute.toString().padStart(2, "0") + " ~ " + endhour.toString().padStart(2, "0") + ":" + endminute.toString().padStart(2, "0") + "\n" + taskname + "\n\n";
 
             var timeviewfilename = path.draftrepopath + date.slice(0, 4) + "/" + date.slice(4, 6) + "/" + begintime + ".md";

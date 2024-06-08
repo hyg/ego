@@ -179,15 +179,15 @@ time:
     '1': 30
     '2': 15
   alloc:
-    PSMD: 7000
-    learn: 1000
-    ego: 4500
+    PSMD: 7250
+    learn: 1250
+    ego: 4700
     js: 1375
-    xuemen: 1500
+    xuemen: 1300
     raw: 600
   sold:
-    ego: 4404
-    PSMD: 6981
+    ego: 4539
+    PSMD: 7176
     infra: 30
     js: 1203
     learn: 1197
@@ -195,7 +195,7 @@ time:
     raw: 450
 todo:
   PSMD:
-    - '195': entify, ego draft
+    - '60': entity draft
     - '195': term + COM matedata -> deploy metadata -> deploy view
     - '90': 以1406为例检查知识图谱和blawx的语法
     - '60': 设计条款的可执行机制
@@ -209,13 +209,11 @@ todo:
           <term.50430bca.632214.c83dac.term.2>: 中华人民共和国公司法
     - '30': 重新思考term metadata种的upgradeby，是否需要显示内容和id两种。
   ego:
-    - '90': 编写浮动时间表代码
-      readme: |
-        2024.6.4.16:00 draft
-        2024.6.6.7:45 draft
+    - '90': ego draft
     - '90': 根据ego对外信息接口编写页面代码
       readme: |
         D:\huangyg\git\blog\release\time\d.20240604.md
+    - '90': finish.devmaketomorowinfo(tomorrow);
     - '60': 用js代码完成日小结后的git操作。
       readme: |
         - 参考：D:\huangyg\git\draft\2024\04\20240430140000.md
@@ -224,6 +222,14 @@ todo:
     - '30': 生成waitinglist时，考虑多层todo。
   learn:
     - '60': linkml, yaml-ld
+      readme: |
+        - 了解linkml.io首页图中的语法和工具：https://linkml.io/uploads/2021/03/30/screen-shot-2021-03-29-at-7-05-14-pm.png
+        - https://linkml.io/linkml/intro/tutorial07.html
+    - '60': Decentralized Identifiers
+      readme: |
+        https://did.js.org/
+        https://www.w3.org/TR/did-use-cases/
+        https://www.w3.org/TR/did-core/
     - '30': 寻找可编程的,去中心化的信息发布方式
       readme: |
         - https://diaspora.github.io/api-documentation/
