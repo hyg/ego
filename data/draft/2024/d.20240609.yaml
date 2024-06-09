@@ -1,0 +1,36 @@
+date: 20240609
+plan: 1
+time:
+  - begin: '20240609074500'
+    amount: 10
+    type: work
+    subject: PSMD
+    name: entity draft
+    output: draft/2024/06/20240609074500.md
+  - begin: '20240609093000'
+    amount: 5
+    type: work
+    subject: ego
+    name: ego draft
+    output: draft/2024/06/20240609093000.md
+  - begin: '20240609140000'
+    amount: 45
+    type: work
+    subject: js
+    name: https://www.npmjs.com/package/commander
+    output: draft/2024/06/20240609140000.md
+  - begin: '20240609143000'
+    amount: 120
+    type: work
+    subject: raw
+    name: 选择有价值的数据显示到entry页面
+    output: draft/2024/06/20240609143000.md
+  - begin: '20240609160000'
+    amount: 15
+    type: work
+    subject: learn
+    name: linkml, yaml-ld
+    readme: |
+      - 了解linkml.io首页图中的语法和工具：https://linkml.io/uploads/2021/03/30/screen-shot-2021-03-29-at-7-05-14-pm.png
+      - https://linkml.io/linkml/intro/tutorial07.html
+    output: draft/2024/06/20240609160000.md

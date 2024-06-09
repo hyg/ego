@@ -186,16 +186,15 @@ time:
     xuemen: 1300
     raw: 600
   sold:
-    ego: 4539
-    PSMD: 7176
+    ego: 4544
+    PSMD: 7186
     infra: 30
-    js: 1203
-    learn: 1197
+    js: 1248
+    learn: 1212
     xuemen: 1253
-    raw: 450
+    raw: 570
 todo:
   PSMD:
-    - '60': entity draft
     - '195': term + COM matedata -> deploy metadata -> deploy view
     - '90': 以1406为例检查知识图谱和blawx的语法
     - '60': 设计条款的可执行机制
@@ -209,7 +208,8 @@ todo:
           <term.50430bca.632214.c83dac.term.2>: 中华人民共和国公司法
     - '30': 重新思考term metadata种的upgradeby，是否需要显示内容和id两种。
   ego:
-    - '90': ego draft
+    - '195': entity,ego draft
+    - '60': 基于commander升级参数
     - '90': 根据ego对外信息接口编写页面代码
       readme: |
         D:\huangyg\git\blog\release\time\d.20240604.md
@@ -221,10 +221,12 @@ todo:
     - '60': 重新设计ego.js的命令行参数，合并函数，整理代码。
     - '30': 生成waitinglist时，考虑多层todo。
   learn:
-    - '60': linkml, yaml-ld
+    - '90': linkml, yaml-ld
       readme: |
         - 了解linkml.io首页图中的语法和工具：https://linkml.io/uploads/2021/03/30/screen-shot-2021-03-29-at-7-05-14-pm.png
         - https://linkml.io/linkml/intro/tutorial07.html
+        - https://linkml.io/linkml/schemas/models.html
+        - https://github.com/linkml/linkml/blob/main/examples/PersonSchema/personinfo.yaml
     - '60': Decentralized Identifiers
       readme: |
         https://did.js.org/
@@ -260,7 +262,6 @@ todo:
       readme: |
         - https://zh.javascript.info/promise-api
   js:
-    - '30': https://www.npmjs.com/package/commander
     - '30': 学习AMD规范，如果适用就开发范例
     - '60': 学习 nodejs test框架
       readme: |
@@ -285,10 +286,9 @@ todo:
     - '30': text->id,protobuf-javascript
       readme: |
         https://github.com/protocolbuffers/protobuf-javascript
-  raw:
-    - '30': 选择有价值的数据显示到entry页面
+  raw: []
   xuemen:
-    - '60': 重新设计S2状态下的学门基本管理制度
+    - '195': 重新设计S2状态下的学门基本管理制度
     - '60': term.e6f0caec -> xuemen COD metadata-S2状态下的部门模型
 comment:
   '20240520': |
