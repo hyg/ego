@@ -186,15 +186,16 @@ time:
     xuemen: 1300
     raw: 600
   sold:
-    ego: 4544
+    ego: 4609
     PSMD: 7186
     infra: 30
     js: 1248
-    learn: 1212
+    learn: 1302
     xuemen: 1253
     raw: 570
 todo:
   PSMD:
+    - '90': 格里申法案
     - '195': term + COM matedata -> deploy metadata -> deploy view
     - '90': 以1406为例检查知识图谱和blawx的语法
     - '60': 设计条款的可执行机制
@@ -209,7 +210,7 @@ todo:
     - '30': 重新思考term metadata种的upgradeby，是否需要显示内容和id两种。
   ego:
     - '195': entity,ego draft
-    - '60': 基于commander升级参数
+    - '30': 用commander的.command()或.addCommand()改写入口
     - '90': 根据ego对外信息接口编写页面代码
       readme: |
         D:\huangyg\git\blog\release\time\d.20240604.md
@@ -221,12 +222,11 @@ todo:
     - '60': 重新设计ego.js的命令行参数，合并函数，整理代码。
     - '30': 生成waitinglist时，考虑多层todo。
   learn:
-    - '90': linkml, yaml-ld
+    - '60': linkml, yaml-ld
       readme: |
-        - 了解linkml.io首页图中的语法和工具：https://linkml.io/uploads/2021/03/30/screen-shot-2021-03-29-at-7-05-14-pm.png
-        - https://linkml.io/linkml/intro/tutorial07.html
         - https://linkml.io/linkml/schemas/models.html
-        - https://github.com/linkml/linkml/blob/main/examples/PersonSchema/personinfo.yaml
+        - https://linkml.io/linkml/intro/tutorial02.html
+    - '90': 拟制说、目的财产说、实在说
     - '60': Decentralized Identifiers
       readme: |
         https://did.js.org/
@@ -241,6 +241,13 @@ todo:
         gitter.im
         https://libera.chat/
         https://web.libera.chat/gamja/
+    - '30': github project
+      readme: |
+        https://docs.github.com/zh/issues/planning-and-tracking-with-projects/learning-about-projects/quickstart-for-projects
+    - '30': trello api
+      readme: |
+        https://developer.atlassian.com/cloud/trello/rest/
+        https://www.npmjs.com/package/trello
     - '30': Document-Oriented数据库
       readme: |
         -MongoDB、CouchDB、RavenDB

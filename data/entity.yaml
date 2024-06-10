@@ -17,3 +17,22 @@ classes:
       event:
       todo:
       cognize:
+  Ego:
+    is_a: Entity
+    description:
+      entity alloc resources according to cognize level.
+    slots:
+      - id
+      - name
+      - protocol
+      - offer
+
+slots:
+  id:
+    identifier: true
+  name:
+    required: true
+    slot_uri: schema:name
+  protocol:
+  offer:
+

@@ -1,0 +1,26 @@
+date: 20240610
+plan: 2
+time:
+  - begin: '20240610074500'
+    amount: 5
+    type: work
+    subject: ego
+    name: entity,ego draft
+    output: draft/2024/06/20240610074500.md
+  - begin: '20240610140000'
+    amount: 90
+    type: work
+    subject: learn
+    name: linkml, yaml-ld
+    readme: |
+      - 了解linkml.io首页图中的语法和工具：https://linkml.io/uploads/2021/03/30/screen-shot-2021-03-29-at-7-05-14-pm.png
+      - https://linkml.io/linkml/intro/tutorial07.html
+      - https://linkml.io/linkml/schemas/models.html
+      - https://github.com/linkml/linkml/blob/main/examples/PersonSchema/personinfo.yaml
+    output: draft/2024/06/20240610140000.md
+  - begin: '20240610160000'
+    amount: 60
+    type: work
+    subject: ego
+    name: 基于commander升级参数
+    output: draft/2024/06/20240610160000.md
