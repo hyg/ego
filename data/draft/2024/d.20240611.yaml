@@ -1,0 +1,24 @@
+date: 20240611
+plan: 2
+time:
+  - begin: '20240611074500'
+    amount: 45
+    type: work
+    subject: ego
+    name: entity,ego draft
+    output: draft/2024/06/20240611074500.md
+  - begin: '20240611140000'
+    amount: 50
+    type: work
+    subject: PSMD
+    name: 格里申法案
+    output: draft/2024/06/20240611140000.md
+  - begin: '20240611160000'
+    amount: 60
+    type: work
+    subject: learn
+    name: linkml, yaml-ld
+    readme: |
+      - https://linkml.io/linkml/schemas/models.html
+      - https://linkml.io/linkml/intro/tutorial02.html
+    output: draft/2024/06/20240611160000.md

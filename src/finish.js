@@ -13,7 +13,7 @@ module.exports = {
         var seasonpath = "../data/season/" + year + "S" + season + ".yaml";
         var seasonobj = yaml.load(fs.readFileSync(seasonpath, 'utf8', { schema: yaml.FAILSAFE_SCHEMA }));
 
-        var dayinfostr = "# " + year + "." + month + "." + day + ".\n\n根据[ego模型时间接口](https://gitee.com/hyg/blog/blob/master/timeflow.md)，六月上旬补足前两月缺勤。每天早起根据身心状况绑定模版。" + "\n\n---\n";
+        var dayinfostr = "# " + year + "." + month + "." + day + ".\n\n根据[ego模型时间接口](https://gitee.com/hyg/blog/blob/master/timeflow.md)，六月中上旬补足前两月缺勤。每天早起根据身心状况绑定模版。" + "\n\n---\n";
         for (var plan in seasonobj.dayplan) {
             var waitinglist = start.makewaitinglist();
             var time = seasonobj.dayplan[plan].time;
@@ -63,7 +63,7 @@ module.exports = {
 
         var plan = draftmetadata.plan;
         if (plan != null) {
-            daylog = daylog + "根据[ego模型时间接口](https://gitee.com/hyg/blog/blob/master/timeflow.md)，六月上旬补足前两月缺勤。今天绑定模版" + plan + "。\n\n";
+            daylog = daylog + "根据[ego模型时间接口](https://gitee.com/hyg/blog/blob/master/timeflow.md)，六月中上旬补足前两月缺勤。今天绑定模版" + plan + "。\n\n";
         } else {
             daylog = daylog + "当天未绑定时间模版"
         }

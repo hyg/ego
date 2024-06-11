@@ -14,8 +14,8 @@ classes:
       id:
       name:
       aliases:
-      event:
-      todo:
+      data:
+        range: EntityData
       cognize:
   Ego:
     is_a: Entity
@@ -26,7 +26,36 @@ classes:
       - name
       - protocol
       - offer
-
+  Event:
+    attributes:
+      id:
+      name:
+      readme:
+      log:
+      comment:
+  Todo:
+    attributes:
+      id:
+      name:
+      subject:
+      time:
+      readme:
+  EntityData:
+    tree_root: true
+    description:
+      a list of event and todo item.
+    attributes:
+      id:
+      name: 
+      entityid:
+      events:
+        multivalued: true
+        inlined_as_list: true
+        range: Event
+      todos:
+        multivalued: true
+        inlined_as_list: true
+        range: Todo
 slots:
   id:
     identifier: true

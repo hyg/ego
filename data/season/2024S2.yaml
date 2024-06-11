@@ -186,16 +186,19 @@ time:
     xuemen: 1300
     raw: 600
   sold:
-    ego: 4609
-    PSMD: 7186
+    ego: 4654
+    PSMD: 7236
     infra: 30
     js: 1248
-    learn: 1302
+    learn: 1362
     xuemen: 1253
     raw: 570
 todo:
   PSMD:
-    - '90': 格里申法案
+    - '60': 格里申法案
+      readme: |
+        - https://www.secrss.com/articles/11191
+        - https://www.faxin.cn/lib/flwx/FlqkContent.aspx?gid=F662676
     - '195': term + COM matedata -> deploy metadata -> deploy view
     - '90': 以1406为例检查知识图谱和blawx的语法
     - '60': 设计条款的可执行机制
@@ -209,7 +212,7 @@ todo:
           <term.50430bca.632214.c83dac.term.2>: 中华人民共和国公司法
     - '30': 重新思考term metadata种的upgradeby，是否需要显示内容和id两种。
   ego:
-    - '195': entity,ego draft
+    - '90': ego draft, metadata
     - '30': 用commander的.command()或.addCommand()改写入口
     - '90': 根据ego对外信息接口编写页面代码
       readme: |
@@ -225,7 +228,7 @@ todo:
     - '60': linkml, yaml-ld
       readme: |
         - https://linkml.io/linkml/schemas/models.html
-        - https://linkml.io/linkml/intro/tutorial02.html
+        - https://linkml.io/linkml/intro/tutorial03.html
     - '90': 拟制说、目的财产说、实在说
     - '60': Decentralized Identifiers
       readme: |
