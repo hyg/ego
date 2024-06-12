@@ -1,0 +1,39 @@
+date: 20240612
+plan: 1
+time:
+  - begin: '20240612074500'
+    amount: 60
+    type: work
+    subject: PSMD
+    name: 格里申法案
+    readme: |
+      - https://www.secrss.com/articles/11191
+      - https://www.faxin.cn/lib/flwx/FlqkContent.aspx?gid=F662676
+    output: draft/2024/06/20240612074500.md
+  - begin: '20240612093000'
+    amount: 0
+    type: work
+    subject: ego
+    name: ego draft, metadata
+    output: draft/2024/06/20240612093000.md
+  - begin: '20240612140000'
+    amount: 30
+    type: work
+    subject: js
+    name: 学习AMD规范，如果适用就开发范例
+    output: draft/2024/06/20240612140000.md
+  - begin: '20240612143000'
+    amount: 15
+    type: work
+    subject: ego
+    name: 用commander的.command()或.addCommand()改写入口
+    output: draft/2024/06/20240612143000.md
+  - begin: '20240612160000'
+    amount: 60
+    type: work
+    subject: learn
+    name: linkml, yaml-ld
+    readme: |
+      - https://linkml.io/linkml/schemas/models.html
+      - https://linkml.io/linkml/intro/tutorial03.html
+    output: draft/2024/06/20240612160000.md

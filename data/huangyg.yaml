@@ -1,0 +1,21 @@
+id: ORCID:0009-0005-7296-5316
+name: 黄勇刚
+aliases:
+  - huangyg
+  - mars22
+  - fromoon
+  - samadhi
+data:
+  entityid: ORCID:0009-0005-7296-5316
+  todos:
+    - id: 20240612165400
+      name: linkml, yaml-ld
+      subject: learn
+      time: 60
+      readme: |
+        - https://linkml.io/linkml/schemas/models.html
+        - https://linkml.io/linkml/intro/tutorial03.html
+  events:
+cognize: 1
+protocol: 2
+offer: 3

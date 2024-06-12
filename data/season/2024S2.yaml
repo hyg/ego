@@ -186,19 +186,16 @@ time:
     xuemen: 1300
     raw: 600
   sold:
-    ego: 4654
-    PSMD: 7236
+    ego: 4669
+    PSMD: 7296
     infra: 30
-    js: 1248
-    learn: 1362
+    js: 1278
+    learn: 1422
     xuemen: 1253
     raw: 570
 todo:
   PSMD:
-    - '60': 格里申法案
-      readme: |
-        - https://www.secrss.com/articles/11191
-        - https://www.faxin.cn/lib/flwx/FlqkContent.aspx?gid=F662676
+    - '195': entify,ego draft, metadata
     - '195': term + COM matedata -> deploy metadata -> deploy view
     - '90': 以1406为例检查知识图谱和blawx的语法
     - '60': 设计条款的可执行机制
@@ -212,8 +209,7 @@ todo:
           <term.50430bca.632214.c83dac.term.2>: 中华人民共和国公司法
     - '30': 重新思考term metadata种的upgradeby，是否需要显示内容和id两种。
   ego:
-    - '90': ego draft, metadata
-    - '30': 用commander的.command()或.addCommand()改写入口
+    - '90': ego draft
     - '90': 根据ego对外信息接口编写页面代码
       readme: |
         D:\huangyg\git\blog\release\time\d.20240604.md
@@ -228,7 +224,8 @@ todo:
     - '60': linkml, yaml-ld
       readme: |
         - https://linkml.io/linkml/schemas/models.html
-        - https://linkml.io/linkml/intro/tutorial03.html
+        - https://linkml.io/linkml/intro/tutorial04.html
+    - '30': JSON Schema
     - '90': 拟制说、目的财产说、实在说
     - '60': Decentralized Identifiers
       readme: |
@@ -272,7 +269,7 @@ todo:
       readme: |
         - https://zh.javascript.info/promise-api
   js:
-    - '30': 学习AMD规范，如果适用就开发范例
+    - '60': 用js代码完成git操作。
     - '60': 学习 nodejs test框架
       readme: |
         - https://github.com/Vanessa219/vditor
@@ -298,6 +295,7 @@ todo:
         https://github.com/protocolbuffers/protobuf-javascript
   raw: []
   xuemen:
+    - '30': kernel模型升级
     - '195': 重新设计S2状态下的学门基本管理制度
     - '60': term.e6f0caec -> xuemen COD metadata-S2状态下的部门模型
 comment:

@@ -3,6 +3,7 @@ name: entity
 prefixes:
   linkml: https://w3id.org/linkml/
   entity: https://raw.githubusercontent.com/hyg/ego/vat/data/entity
+  ORCID: https://orcid.org/
 imports:
   - linkml:types
 default_range: string
@@ -12,12 +13,14 @@ classes:
   Entity:
     attributes:
       id:
+        identifier: true
       name:
       aliases:
       data:
         range: EntityData
       cognize:
   Ego:
+    tree_root: true
     is_a: Entity
     description:
       entity alloc resources according to cognize level.
@@ -29,6 +32,7 @@ classes:
   Event:
     attributes:
       id:
+        identifier: true
       name:
       readme:
       log:
@@ -41,7 +45,6 @@ classes:
       time:
       readme:
   EntityData:
-    tree_root: true
     description:
       a list of event and todo item.
     attributes:
