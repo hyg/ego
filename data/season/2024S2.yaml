@@ -186,16 +186,16 @@ time:
     xuemen: 1300
     raw: 600
   sold:
-    ego: 4669
-    PSMD: 7296
+    ego: 4699
+    PSMD: 7341
     infra: 30
-    js: 1278
+    js: 1293
     learn: 1422
     xuemen: 1253
     raw: 570
 todo:
   PSMD:
-    - '195': entify,ego draft, metadata
+    - '90': entity draft,metadata
     - '195': term + COM matedata -> deploy metadata -> deploy view
     - '90': 以1406为例检查知识图谱和blawx的语法
     - '60': 设计条款的可执行机制
@@ -209,7 +209,7 @@ todo:
           <term.50430bca.632214.c83dac.term.2>: 中华人民共和国公司法
     - '30': 重新思考term metadata种的upgradeby，是否需要显示内容和id两种。
   ego:
-    - '90': ego draft
+    - '60': ego draft, metadata
     - '90': 根据ego对外信息接口编写页面代码
       readme: |
         D:\huangyg\git\blog\release\time\d.20240604.md
@@ -269,7 +269,12 @@ todo:
       readme: |
         - https://zh.javascript.info/promise-api
   js:
-    - '60': 用js代码完成git操作。
+    - '60': isomorphic-git范例
+      bind:
+        - '60': 在代码中自动提交git库
+          readme: |
+            - D:\huangyg\git\draft\2024\04\20240430140000.md
+            - 2024.6.13. 16:00 draft
     - '60': 学习 nodejs test框架
       readme: |
         - https://github.com/Vanessa219/vditor

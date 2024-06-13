@@ -1,0 +1,21 @@
+date: 20240613
+plan: 2
+time:
+  - begin: '20240613074500'
+    amount: 45
+    type: work
+    subject: PSMD
+    name: data to schema
+    output: draft/2024/06/20240613074500.md
+  - begin: '20240613140000'
+    amount: 30
+    type: work
+    subject: ego
+    name: ego draft， metadata
+    output: draft/2024/06/20240613140000.md
+  - begin: '20240613160000'
+    amount: 15
+    type: work
+    subject: js
+    name: 用js代码完成git操作。
+    output: draft/2024/06/20240613160000.md
