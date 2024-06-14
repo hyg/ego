@@ -1,6 +1,8 @@
 # ego data
 
 
+
+
 ## season metadata
 
 ### 命名
@@ -80,4 +82,9 @@ time:
 todo:
   PSMD:
     - 30: todo what
+      bind:
+        - 60: todo
+          readme: |
+            - string1
+            - string2
 ```

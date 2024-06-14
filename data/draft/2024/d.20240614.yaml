@@ -1,0 +1,33 @@
+date: 20240614
+plan: 1
+time:
+  - begin: '20240614074500'
+    amount: 90
+    type: work
+    subject: js
+    name: isomorphic-git范例
+    output: draft/2024/06/20240614074500.md
+  - begin: '20240614093000'
+    amount: 90
+    type: work
+    subject: PSMD
+    name: entity draft,metadata
+    output: draft/2024/06/20240614093000.md
+  - begin: '20240614140000'
+    amount: 0
+    type: work
+    subject: xuemen
+    name: kernel模型升级
+    output: draft/2024/06/20240614140000.md
+  - begin: '20240614143000'
+    amount: 0
+    type: work
+    subject: learn
+    name: JSON Schema
+    output: draft/2024/06/20240614143000.md
+  - begin: '20240614160000'
+    amount: 60
+    type: work
+    subject: ego
+    name: ego draft, metadata
+    output: draft/2024/06/20240614160000.md
