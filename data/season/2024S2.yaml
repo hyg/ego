@@ -187,7 +187,7 @@ time:
     raw: 600
   sold:
     ego: 4759
-    PSMD: 7431
+    PSMD: 7491
     infra: 30
     js: 1383
     learn: 1422
@@ -195,7 +195,7 @@ time:
     raw: 570
 todo:
   PSMD:
-    - '90': entity model增加自我认知、资源分配、元认知字段。
+    - '195': entity model增加自我认知、资源分配、元认知字段。
     - '195': term + COM matedata -> deploy metadata -> deploy view
     - '90': 以1406为例检查知识图谱和blawx的语法
     - '60': 设计条款的可执行机制
@@ -209,7 +209,7 @@ todo:
           <term.50430bca.632214.c83dac.term.2>: 中华人民共和国公司法
     - '30': 重新思考term metadata种的upgradeby，是否需要显示内容和id两种。
   ego:
-    - '60': ego as instance
+    - '90': ego as instance
     - '90': 根据ego对外信息接口编写页面代码
       readme: |
         D:\huangyg\git\blog\release\time\d.20240604.md
