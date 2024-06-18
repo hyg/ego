@@ -1,0 +1,24 @@
+date: 20240618
+plan: 2
+time:
+  - begin: '20240618074500'
+    amount: 0
+    type: work
+    subject: PSMD
+    name: entity model增加自我认知、资源分配、元认知字段。
+    output: draft/2024/06/20240618074500.md
+  - begin: '20240618140000'
+    amount: 0
+    type: work
+    subject: ego
+    name: ego as instance
+    output: draft/2024/06/20240618140000.md
+  - begin: '20240618160000'
+    amount: 0
+    type: work
+    subject: learn
+    name: linkml, yaml-ld
+    readme: |
+      - https://linkml.io/linkml/schemas/models.html
+      - https://linkml.io/linkml/intro/tutorial04.html
+    output: draft/2024/06/20240618160000.md
