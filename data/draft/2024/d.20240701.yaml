@@ -1,0 +1,21 @@
+date: 20240701
+plan: 2
+time:
+  - begin: '20240701074500'
+    amount: 195
+    type: work
+    subject: PSMD
+    name: entity model增加自我认知、资源分配、元认知字段。
+    output: draft/2024/07/20240701074500.md
+  - begin: '20240701140000'
+    amount: 90
+    type: work
+    subject: ego
+    name: ego as instance
+    output: draft/2024/07/20240701140000.md
+  - begin: '20240701160000'
+    amount: 60
+    type: work
+    subject: xuemen
+    name: 报税
+    output: draft/2024/07/20240701160000.md

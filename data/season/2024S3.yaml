@@ -14,18 +14,18 @@ timetype:
   - name: food
   - name: check
 map:
-  1:
+  '1':
     1a:
       start: 0
-      end: 045959
+      end: 45959
     1b:
-      start: 050000
-      end: 064459
+      start: 50000
+      end: 64459
     1c:
-      start: 064500
-      end: 071459
+      start: 64500
+      end: 71459
     1d:
-      start: 071500
+      start: 71500
       end: 101459
     1e:
       start: 101500
@@ -34,7 +34,78 @@ map:
       start: 121500
       end: 191459
 dayplan:
-  '1a':
+  '2':
+    supply:
+      '60': 1
+      '90': 1
+      '195': 1
+    time:
+      - beginhour: 4
+        beginminute: 0
+        amount: 15
+        type: free
+        name: 休整
+      - beginhour: 4
+        beginminute: 15
+        amount: 60
+        type: prepare
+        name: 备餐、运动
+      - beginhour: 5
+        beginminute: 15
+        amount: 45
+        type: food
+        name: 早餐
+      - beginhour: 6
+        beginminute: 0
+        amount: 45
+        type: discuss
+        name: 会议、自习
+      - beginhour: 6
+        beginminute: 45
+        amount: 60
+        type: free
+        name: 休整
+      - beginhour: 7
+        beginminute: 45
+        amount: 195
+        type: work
+        name: 工作
+        namelink: http://simp.ly/p/3GXNTh
+      - beginhour: 11
+        beginminute: 0
+        amount: 180
+        type: food
+        name: 备餐、午餐午休
+      - beginhour: 14
+        beginminute: 0
+        amount: 90
+        type: work
+        name: 工作
+        namelink: http://simp.ly/p/lsBYG9
+      - beginhour: 15
+        beginminute: 30
+        amount: 30
+        type: free
+        name: 休整
+      - beginhour: 16
+        beginminute: 0
+        amount: 60
+        type: work
+        name: 工作
+        namelink: http://simp.ly/p/MpcbHD
+      - beginhour: 17
+        beginminute: 0
+        amount: 120
+        type: food
+        name: 晚餐
+      - beginhour: 19
+        beginminute: 0
+        amount: 60
+        type: check
+        name: 讨论、整理提交
+    readme: |
+      工作的同时可以在线讨论。
+  1a:
     supply:
       '30': 2
       '60': 2
@@ -114,7 +185,7 @@ dayplan:
     readme: |
       模版一采用静默工作方式。  
       希望讨论的提纲发到 [huangyg@mars22.com](mailto:huangyg@mars22.com)，通常安排在后面某天的早餐或会议自习时间。
-  '1b':
+  1b:
     supply:
       '30': 2
       '60': 1
@@ -183,7 +254,7 @@ dayplan:
     readme: |
       模版一采用静默工作方式。  
       希望讨论的提纲发到 [huangyg@mars22.com](mailto:huangyg@mars22.com)，通常安排在后面某天的早餐或会议自习时间。
-  '1c':
+  1c:
     supply:
       '30': 2
       '60': 1
@@ -245,7 +316,7 @@ dayplan:
     readme: |
       模版一采用静默工作方式。  
       希望讨论的提纲发到 [huangyg@mars22.com](mailto:huangyg@mars22.com)，通常安排在后面某天的早餐或会议自习时间。
-  '1d':
+  1d:
     supply:
       '30': 2
       '60': 1
@@ -302,7 +373,7 @@ dayplan:
     readme: |
       模版一采用静默工作方式。  
       希望讨论的提纲发到 [huangyg@mars22.com](mailto:huangyg@mars22.com)，通常安排在后面某天的早餐或会议自习时间。
-  '1e':
+  1e:
     supply:
       '60': 1
     time:
@@ -341,7 +412,7 @@ dayplan:
     readme: |
       模版一采用静默工作方式。  
       希望讨论的提纲发到 [huangyg@mars22.com](mailto:huangyg@mars22.com)，通常安排在后面某天的早餐或会议自习时间。
-  '1f':
+  1f:
     time:
       - amount: 15
         type: free
@@ -364,96 +435,19 @@ dayplan:
     readme: |
       模版一采用静默工作方式。  
       希望讨论的提纲发到 [huangyg@mars22.com](mailto:huangyg@mars22.com)，通常安排在后面某天的早餐或会议自习时间。
-  '2':
-    supply:
-      '60': 1
-      '90': 1
-      '195': 1
-    time:
-      - beginhour: 4
-        beginminute: 0
-        amount: 15
-        type: free
-        name: 休整
-      - beginhour: 4
-        beginminute: 15
-        amount: 60
-        type: prepare
-        name: 备餐、运动
-      - beginhour: 5
-        beginminute: 15
-        amount: 45
-        type: food
-        name: 早餐
-      - beginhour: 6
-        beginminute: 0
-        amount: 45
-        type: discuss
-        name: 会议、自习
-      - beginhour: 6
-        beginminute: 45
-        amount: 60
-        type: free
-        name: 休整
-      - beginhour: 7
-        beginminute: 45
-        amount: 195
-        type: work
-        name: 工作
-        namelink: http://simp.ly/p/3GXNTh
-      - beginhour: 11
-        beginminute: 0
-        amount: 180
-        type: food
-        name: 备餐、午餐午休
-      - beginhour: 14
-        beginminute: 0
-        amount: 90
-        type: work
-        name: 工作
-        namelink: http://simp.ly/p/lsBYG9
-      - beginhour: 15
-        beginminute: 30
-        amount: 30
-        type: free
-        name: 休整
-      - beginhour: 16
-        beginminute: 0
-        amount: 60
-        type: work
-        name: 工作
-        namelink: http://simp.ly/p/MpcbHD
-      - beginhour: 17
-        beginminute: 0
-        amount: 120
-        type: food
-        name: 晚餐
-      - beginhour: 19
-        beginminute: 0
-        amount: 60
-        type: check
-        name: 讨论、整理提交
-    readme: |
-      工作的同时可以在线讨论。
 time:
   supply:
-    '1': 30
-    '2': 15
+    '1': 40
+    '2': 20
   alloc:
     PSMD: 7000
-    learn: 1000
-    ego: 4500
-    js: 1375
+    ego: 4000
+    infra: 2000
     xuemen: 1500
-    raw: 600
-  sold:
-    ego: 4344
-    PSMD: 6981
-    infra: 30
-    js: 1110
-    learn: 1107
-    xuemen: 1236
-    raw: 444
+    raw: 500
+    learn: 1500
+    js: 1200
+  sold: {}
 todo:
   PSMD:
     - '195': term + COM matedata -> deploy metadata -> deploy view
@@ -472,17 +466,22 @@ todo:
     - '90': 根据ego对外信息接口编写页面代码
       readme: |
         D:\huangyg\git\blog\release\time\d.20240604.md
+    - '60': 设计subtask与todo的关系，保持工作的持续连贯。
+    - '90': finish.devmaketomorowinfo(tomorrow);
     - '60': 用js代码完成日小结后的git操作。
       readme: |
         - 参考：D:\huangyg\git\draft\2024\04\20240430140000.md
         - 在各task metadata中给出git库的路径，每天根据实际任务去操作。
     - '60': 重新设计ego.js的命令行参数，合并函数，整理代码。
     - '30': 生成waitinglist时，考虑多层todo。
+  infra:
+    - '30': 整理旧代码
   learn:
     - '60': linkml, yaml-ld
       readme: |
-        - 了解linkml.io首页图中的语法和工具：https://linkml.io/uploads/2021/03/30/screen-shot-2021-03-29-at-7-05-14-pm.png
-        - https://linkml.io/linkml/intro/tutorial07.html
+        - https://linkml.io/linkml/schemas/models.html
+        - https://linkml.io/linkml/intro/tutorial04.html
+    - '90': 拟制说、目的财产说、实在说
     - '60': Decentralized Identifiers
       readme: |
         https://did.js.org/
@@ -497,6 +496,13 @@ todo:
         gitter.im
         https://libera.chat/
         https://web.libera.chat/gamja/
+    - '30': github project
+      readme: |
+        https://docs.github.com/zh/issues/planning-and-tracking-with-projects/learning-about-projects/quickstart-for-projects
+    - '30': trello api
+      readme: |
+        https://developer.atlassian.com/cloud/trello/rest/
+        https://www.npmjs.com/package/trello
     - '30': Document-Oriented数据库
       readme: |
         -MongoDB、CouchDB、RavenDB
@@ -518,8 +524,15 @@ todo:
       readme: |
         - https://zh.javascript.info/promise-api
   js:
-    - '30': https://www.npmjs.com/package/commander
-    - '30': 学习AMD规范，如果适用就开发范例
+    - '30': JSON Schema
+    - '60': git sample
+      readme: |
+        - https://isomorphic-git.org/docs/en/snippets
+        - https://isomorphic-git.org/docs/en/quickstart
+    - '60': 在代码中自动提交git库
+      readme: |
+        - D:\huangyg\git\draft\2024\04\20240430140000.md
+        - 2024.6.13. 16:00 draft
     - '60': 学习 nodejs test框架
       readme: |
         - https://github.com/Vanessa219/vditor
@@ -544,8 +557,10 @@ todo:
       readme: |
         https://github.com/protocolbuffers/protobuf-javascript
   raw:
-    - '30': 选择有价值的数据显示到entry页面
+    - '60': 月度季度报告的报表统一到新格式
   xuemen:
+    - '30': kernel模型升级
+    - '195': 重新设计S2状态下的学门基本管理制度
     - '60': term.e6f0caec -> xuemen COD metadata-S2状态下的部门模型
 comment:
   '20240520': |
