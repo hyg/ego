@@ -1,0 +1,28 @@
+date: 20240702
+mode: 1
+plan: 1
+time:
+  - begin: '20240702093000'
+    amount: 60
+    type: work
+    subject: PSMD
+    name: 知识网络的基础概念和示范
+    output: draft/2024/07/20240702093000.md
+  - begin: '20240702140000'
+    amount: 30
+    type: work
+    subject: infra
+    name: 整理旧代码
+    output: draft/2024/07/20240702140000.md
+  - begin: '20240702143000'
+    amount: 50
+    type: work
+    subject: js
+    name: JSON Schema
+    output: draft/2024/07/20240702143000.md
+  - begin: '20240702160000'
+    amount: 20
+    type: work
+    subject: ego
+    name: 整理ego\src代码结构
+    output: draft/2024/07/20240702160000.md

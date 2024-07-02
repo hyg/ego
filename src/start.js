@@ -121,6 +121,8 @@ module.exports = {
                     fs.writeFileSync(timeviewfilename, timestr);
                 }
                 console.log("devmakedayplan() > time slice draft file name:%s\n%s",timeviewfilename,timestr);
+            }else{
+                draftstr = "";
             }
             planstr = planstr + "| " + beginhour.toString().padStart(2, '0') + ":" + beginminute.toString().padStart(2, '0') + "~" + endhour.toString().padStart(2, '0') + ":" + endminute.toString().padStart(2, '0') + " | " + amount + " | " + timeslice.name + " | " + draftstr + " |\n";
 
@@ -161,7 +163,8 @@ module.exports = {
         var drafttimearray = new Array();
         //console.log(typeof(date));
         draftmetadata.date = parseInt(date);
-        draftmetadata.plan = parseInt(plan);
+        //draftmetadata.plan = parseInt(plan);
+        draftmetadata.plan = plan;
         for (var i in time) {
             if (time[i].type == "work") {
                 var timeperiod = new Object();

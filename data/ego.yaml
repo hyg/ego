@@ -1,6 +1,16 @@
 id: huangyg
 name: huang yonggang
 aliases: ego
-event: ego\data\event
-todo: ego\data\todo
+data:
+  id: hyg.data
+  name: data instance of entity "huangyg"
+  entityid: huangyg
+  events:
+    - id: hyg.data.event
+      name: the event queue of entity "huangyg"
+      readme: ego\data\event
+  todos: 
+    - id: hyg.data.todo
+      name: the todo item of entity "huangyg"
+      readme: ego\data\todo
 cognize: ego\data\congnize

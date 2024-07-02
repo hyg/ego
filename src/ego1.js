@@ -29,8 +29,9 @@ program.command('day')
       var date = util.datestr();
       var tomorrow = util.datestr(1);
       var plan = options.init;
-      start.makedaydraft(date, plan);
-      start.makedayplan(date);
+      start.devmakedayplan(date, plan);
+      //start.makedaydraft(date, plan);
+      //start.makedayplan(date);
       finish.maketomorowinfo(tomorrow);
     } else if (options.over) {
       var date = util.datestr();

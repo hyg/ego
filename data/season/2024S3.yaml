@@ -448,12 +448,16 @@ time:
     learn: 1500
     js: 1200
   sold:
-    PSMD: 35
-    ego: 30
+    PSMD: 95
+    ego: 50
     xuemen: 30
+    infra: 30
+    js: 50
 todo:
   PSMD:
-    - '90': 知识网络的基础概念和示范
+    - '60': 用yaml写json schema并且验证。
+      readme: |
+        - 参考2024.7.2. 14:30 draft
     - '60': 用linkml编写一套标准模型
     - '195': term + COM matedata -> deploy metadata -> deploy view
     - '90': 以1406为例检查知识图谱和blawx的语法
@@ -468,7 +472,7 @@ todo:
           <term.50430bca.632214.c83dac.term.2>: 中华人民共和国公司法
     - '30': 重新思考term metadata种的upgradeby，是否需要显示内容和id两种。
   ego:
-    - '60': 整理ego\src代码结构
+    - '90': day plan, day log, waiting list
     - '90': 根据ego对外信息接口编写页面代码
       readme: |
         D:\huangyg\git\blog\release\time\d.20240604.md
@@ -480,8 +484,7 @@ todo:
         - 在各task metadata中给出git库的路径，每天根据实际任务去操作。
     - '60': 重新设计ego.js的命令行参数，合并函数，整理代码。
     - '30': 生成waitinglist时，考虑多层todo。
-  infra:
-    - '30': 整理旧代码
+  infra: []
   learn:
     - '60': linkml, yaml-ld
       readme: |
@@ -530,7 +533,6 @@ todo:
       readme: |
         - https://zh.javascript.info/promise-api
   js:
-    - '30': JSON Schema
     - '60': git sample
       readme: |
         - https://isomorphic-git.org/docs/en/snippets
