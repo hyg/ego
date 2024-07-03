@@ -1,6 +1,7 @@
 id: huangyg
 name: huang yonggang
-aliases: ego
+aliases: 
+  - ego
 data:
   id: hyg.data
   name: data instance of entity "huangyg"

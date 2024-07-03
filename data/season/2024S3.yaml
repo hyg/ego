@@ -448,16 +448,15 @@ time:
     learn: 1500
     js: 1200
   sold:
-    PSMD: 95
-    ego: 50
+    PSMD: 157
+    ego: 60
     xuemen: 30
     infra: 30
     js: 50
+    learn: 77
 todo:
   PSMD:
-    - '60': 用yaml写json schema并且验证。
-      readme: |
-        - 参考2024.7.2. 14:30 draft
+    - '195': data -> schema 迭代范例
     - '60': 用linkml编写一套标准模型
     - '195': term + COM matedata -> deploy metadata -> deploy view
     - '90': 以1406为例检查知识图谱和blawx的语法
@@ -484,7 +483,8 @@ todo:
         - 在各task metadata中给出git库的路径，每天根据实际任务去操作。
     - '60': 重新设计ego.js的命令行参数，合并函数，整理代码。
     - '30': 生成waitinglist时，考虑多层todo。
-  infra: []
+  infra:
+    - '60': metadata中自带处理代码的范例
   learn:
     - '60': linkml, yaml-ld
       readme: |
@@ -496,15 +496,6 @@ todo:
         https://did.js.org/
         https://www.w3.org/TR/did-use-cases/
         https://www.w3.org/TR/did-core/
-    - '30': 寻找可编程的,去中心化的信息发布方式
-      readme: |
-        - https://diaspora.github.io/api-documentation/
-        - https://github.com/diaspora/api-documentation
-    - '30': 了解免安装web im的机制
-      readme: |
-        gitter.im
-        https://libera.chat/
-        https://web.libera.chat/gamja/
     - '30': github project
       readme: |
         https://docs.github.com/zh/issues/planning-and-tracking-with-projects/learning-about-projects/quickstart-for-projects
@@ -533,6 +524,11 @@ todo:
       readme: |
         - https://zh.javascript.info/promise-api
   js:
+    - '90': peerjs sample
+    - '60': dat sample
+      readme: |
+        - https://github.com/dat-ecosystem-archive/dat-node
+        - https://datproject.org/
     - '60': git sample
       readme: |
         - https://isomorphic-git.org/docs/en/snippets
@@ -567,7 +563,7 @@ todo:
   raw:
     - '60': 月度季度报告的报表统一到新格式
   xuemen:
-    - '60': kernel模型升级
+    - '90': kernel模型升级
     - '195': 重新设计S2状态下的学门基本管理制度
     - '60': term.e6f0caec -> xuemen COD metadata-S2状态下的部门模型
 comment:
