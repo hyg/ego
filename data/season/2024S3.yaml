@@ -33,6 +33,10 @@ map:
     1f:
       start: 121500
       end: 191459
+  '2':
+    '2':
+      start: 0
+      end: 235959
 dayplan:
   '2':
     supply:
@@ -449,11 +453,11 @@ time:
     js: 1200
   sold:
     PSMD: 157
-    ego: 60
+    ego: 90
     xuemen: 30
-    infra: 30
+    infra: 90
     js: 50
-    learn: 77
+    learn: 137
 todo:
   PSMD:
     - '195': data -> schema 迭代范例
@@ -471,7 +475,8 @@ todo:
           <term.50430bca.632214.c83dac.term.2>: 中华人民共和国公司法
     - '30': 重新思考term metadata种的upgradeby，是否需要显示内容和id两种。
   ego:
-    - '90': day plan, day log, waiting list
+    - '60': 新版ego.js的数据结构
+      readme: 参考2024.7.4.9:30 draft
     - '90': 根据ego对外信息接口编写页面代码
       readme: |
         D:\huangyg\git\blog\release\time\d.20240604.md
@@ -483,9 +488,13 @@ todo:
         - 在各task metadata中给出git库的路径，每天根据实际任务去操作。
     - '60': 重新设计ego.js的命令行参数，合并函数，整理代码。
     - '30': 生成waitinglist时，考虑多层todo。
-  infra:
-    - '60': metadata中自带处理代码的范例
+  infra: []
   learn:
+    - '60': simplenote的数据同步机制
+      readme: |
+        - https://simperium.com/overview/
+        - https://simplenote.com/developers/
+        - https://simperium.com/docs/reference/http/
     - '60': linkml, yaml-ld
       readme: |
         - https://linkml.io/linkml/schemas/models.html
@@ -496,9 +505,6 @@ todo:
         https://did.js.org/
         https://www.w3.org/TR/did-use-cases/
         https://www.w3.org/TR/did-core/
-    - '30': github project
-      readme: |
-        https://docs.github.com/zh/issues/planning-and-tracking-with-projects/learning-about-projects/quickstart-for-projects
     - '30': trello api
       readme: |
         https://developer.atlassian.com/cloud/trello/rest/
@@ -525,10 +531,11 @@ todo:
         - https://zh.javascript.info/promise-api
   js:
     - '90': peerjs sample
-    - '60': dat sample
+    - '60': dat sample for root metadata
       readme: |
         - https://github.com/dat-ecosystem-archive/dat-node
         - https://datproject.org/
+        - https://github.com/RangerMauve/hyper-sdk
     - '60': git sample
       readme: |
         - https://isomorphic-git.org/docs/en/snippets
@@ -546,6 +553,10 @@ todo:
         bind:
           - '90': 实际编写自己的测试范例
     - '60': 向外提供js文件的范例，为代码层级互通做准备
+    - '60': giiter.im bot sample
+      readme: |
+        - https://github.com/matrix-org/matrix-js-sdk
+        - http://matrix-org.github.io/matrix-js-sdk/index.html
     - '30': 日期格式化
       readme: |
         http://momentjs.cn/

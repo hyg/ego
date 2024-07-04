@@ -1,0 +1,30 @@
+date: 20240704
+mode: 1
+plan: 1
+time:
+  - begin: '20240704093000'
+    amount: 30
+    type: work
+    subject: ego
+    name: day plan, day log, waiting list
+    output: draft/2024/07/20240704093000.md
+  - begin: '20240704140000'
+    amount: 30
+    type: work
+    subject: learn
+    name: 了解免安装web im的机制：gitter.im
+    output: draft/2024/07/20240704140000.md
+  - begin: '20240704143000'
+    amount: 30
+    type: work
+    subject: learn
+    name: github project
+    readme: |
+      https://docs.github.com/zh/issues/planning-and-tracking-with-projects/learning-about-projects/quickstart-for-projects
+    output: draft/2024/07/20240704143000.md
+  - begin: '20240704160000'
+    amount: 60
+    type: work
+    subject: infra
+    name: metadata中自带处理代码的范例
+    output: draft/2024/07/20240704160000.md
