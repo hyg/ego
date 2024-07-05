@@ -1,0 +1,27 @@
+date: 20240705
+mode: 2
+plan: 2
+time:
+  - begin: '20240705074500'
+    amount: 195
+    type: work
+    subject: learn
+    name: p2p工具
+    output: draft/2024/07/20240705074500.md
+  - begin: '20240705140000'
+    amount: 127
+    type: work
+    subject: ego
+    name: 新版ego.js的数据结构
+    readme: 参考2024.7.4.9:30 draft
+    output: draft/2024/07/20240705140000.md
+  - begin: '20240705160000'
+    amount: 27
+    type: work
+    subject: learn
+    name: simplenote的数据同步机制
+    readme: |
+      - https://simperium.com/overview/
+      - https://simplenote.com/developers/
+      - https://simperium.com/docs/reference/http/
+    output: draft/2024/07/20240705160000.md

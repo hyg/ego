@@ -453,11 +453,11 @@ time:
     js: 1200
   sold:
     PSMD: 157
-    ego: 90
+    ego: 217
     xuemen: 30
     infra: 90
     js: 50
-    learn: 137
+    learn: 359
 todo:
   PSMD:
     - '195': data -> schema 迭代范例
@@ -475,8 +475,7 @@ todo:
           <term.50430bca.632214.c83dac.term.2>: 中华人民共和国公司法
     - '30': 重新思考term metadata种的upgradeby，是否需要显示内容和id两种。
   ego:
-    - '60': 新版ego.js的数据结构
-      readme: 参考2024.7.4.9:30 draft
+    - '90': 相关代码整理到day.js, season.js, waitinglist.js
     - '90': 根据ego对外信息接口编写页面代码
       readme: |
         D:\huangyg\git\blog\release\time\d.20240604.md
@@ -490,11 +489,7 @@ todo:
     - '30': 生成waitinglist时，考虑多层todo。
   infra: []
   learn:
-    - '60': simplenote的数据同步机制
-      readme: |
-        - https://simperium.com/overview/
-        - https://simplenote.com/developers/
-        - https://simperium.com/docs/reference/http/
+    - '90': pear sample
     - '60': linkml, yaml-ld
       readme: |
         - https://linkml.io/linkml/schemas/models.html
@@ -536,6 +531,16 @@ todo:
         - https://github.com/dat-ecosystem-archive/dat-node
         - https://datproject.org/
         - https://github.com/RangerMauve/hyper-sdk
+    - '60': syncthing sample
+      readme: |
+        - https://docs.syncthing.net/dev/rest.html
+        - https://github.com/JodusNodus/node-syncthing
+    - '30': js minify tools
+      readme: |
+        - js代码写入metadata，作为候选方案确保代码和数据准确匹配。
+        - https://www.npmjs.com/package/minify
+        - https://github.com/mishoo/UglifyJS
+        - https://github.com/babel/minify
     - '60': git sample
       readme: |
         - https://isomorphic-git.org/docs/en/snippets
