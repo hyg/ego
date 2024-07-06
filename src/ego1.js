@@ -9,6 +9,7 @@ const { Command } = require('commander');
 const program = new Command();
 
 const log = s => console.log(s);
+
 const debug = false;
 start.debug = debug;
 finish.debug = debug;

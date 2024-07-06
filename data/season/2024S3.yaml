@@ -452,12 +452,13 @@ time:
     learn: 1500
     js: 1200
   sold:
-    PSMD: 157
-    ego: 217
+    PSMD: 182
+    ego: 307
     xuemen: 30
     infra: 90
     js: 50
     learn: 359
+    raw: 60
 todo:
   PSMD:
     - '195': data -> schema 迭代范例
@@ -475,7 +476,10 @@ todo:
           <term.50430bca.632214.c83dac.term.2>: 中华人民共和国公司法
     - '30': 重新思考term metadata种的upgradeby，是否需要显示内容和id两种。
   ego:
-    - '90': 相关代码整理到day.js, season.js, waitinglist.js
+    - '90': 相关代码整理到day.js
+    - '60': 相关代码整理到season.js
+    - '30': 相关代码整理到waitinglist.js
+    - '60': 使用新版day、season、waitinglist的ego.js
     - '90': 根据ego对外信息接口编写页面代码
       readme: |
         D:\huangyg\git\blog\release\time\d.20240604.md
@@ -531,10 +535,15 @@ todo:
         - https://github.com/dat-ecosystem-archive/dat-node
         - https://datproject.org/
         - https://github.com/RangerMauve/hyper-sdk
+        - https://docs.datproject.org/docs/dat-sdk#using-script-tags-to-load-the-sdk
     - '60': syncthing sample
       readme: |
         - https://docs.syncthing.net/dev/rest.html
         - https://github.com/JodusNodus/node-syncthing
+    - '90': helia and orbitdb sample
+      readme: |
+        - https://helia.io/
+        - https://api.orbitdb.org/
     - '30': js minify tools
       readme: |
         - js代码写入metadata，作为候选方案确保代码和数据准确匹配。

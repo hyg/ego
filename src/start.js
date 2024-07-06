@@ -3,6 +3,10 @@ var yaml = require('js-yaml');
 var path = require('./path.js');
 var util = require('./util.js');
 
+function log(s) {
+    console.log(log.caller.name + ">", s);
+}
+
 module.exports = {
     debug: true,
     devmakedayplan: function (date, mode) {
@@ -44,7 +48,7 @@ module.exports = {
         var planstr = `| 时间片 | 时长 | 用途 | 手稿 |
 | --- | --- | --- | --- |
 `;
-        var draftstr = ""; 
+        var draftstr = "";
         var indexstr = "";
         var time = seasonobj.dayplan[dayplan].time;
         var beginhour, beginminute, amount, endhour, endminute, begintime, nextbeiginhour, nextbeginminute;
@@ -73,7 +77,7 @@ module.exports = {
                 endminute = (beginminute + amount - 1) % 60;
             }
             begintime = date + beginhour.toString().padStart(2, '0') + beginminute.toString().padStart(2, '0') + "00";
-            console.log("devmakedayplan()> timeslice:", i, timeslice.type,beginhour, beginminute, amount, endhour, endminute);
+            console.log("devmakedayplan()> timeslice:", i, timeslice.type, beginhour, beginminute, amount, endhour, endminute);
 
             if (timeslice.type == "work") {
                 var timeperiod = new Object();
@@ -113,15 +117,15 @@ module.exports = {
                 var mailtostr = " <a href=\"mailto:huangyg@mars22.com?subject=关于" + year + "." + month + "." + day + ".[" + timeperiod.name + "]任务&body=日期: " + date + "%0D%0A序号: " + i + "%0D%0A手稿:" + draftfilename + "%0D%0A---请勿修改邮件主题及以上内容 从下一行开始写您的想法---%0D%0A\">[想法]</a>";
                 draftstr = draftstr + mailtostr;
 
-                indexstr = indexstr + "- " +beginhour.toString().padStart(2, "0") + ":" + beginminute.toString().padStart(2, "0") + "\t" + timeperiod.subject + ": [" + timeperiod.name + "](../" + path.gitpath + timeperiod.output + ")\n";
+                indexstr = indexstr + "- " + beginhour.toString().padStart(2, "0") + ":" + beginminute.toString().padStart(2, "0") + "\t" + timeperiod.subject + ": [" + timeperiod.name + "](../" + path.gitpath + timeperiod.output + ")\n";
                 var timestr = "## " + beginhour.toString().padStart(2, "0") + ":" + beginminute.toString().padStart(2, "0") + " ~ " + endhour.toString().padStart(2, "0") + ":" + endminute.toString().padStart(2, "0") + "\n" + timeperiod.subject + ": [" + timeperiod.name + "]\n\n";
 
                 var timeviewfilename = path.draftrepopath + date.slice(0, 4) + "/" + date.slice(4, 6) + "/" + begintime + ".md";
                 if (this.debug == false) {
                     fs.writeFileSync(timeviewfilename, timestr);
                 }
-                console.log("devmakedayplan() > time slice draft file name:%s\n%s",timeviewfilename,timestr);
-            }else{
+                console.log("devmakedayplan() > time slice draft file name:%s\n%s", timeviewfilename, timestr);
+            } else {
                 draftstr = "";
             }
             planstr = planstr + "| " + beginhour.toString().padStart(2, '0') + ":" + beginminute.toString().padStart(2, '0') + "~" + endhour.toString().padStart(2, '0') + ":" + endminute.toString().padStart(2, '0') + " | " + amount + " | " + timeslice.name + " | " + draftstr + " |\n";

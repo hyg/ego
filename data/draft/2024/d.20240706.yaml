@@ -1,0 +1,22 @@
+date: 20240706
+mode: 2
+plan: 2
+time:
+  - begin: '20240706074500'
+    amount: 25
+    type: work
+    subject: PSMD
+    name: data -> schema 迭代范例
+    output: draft/2024/07/20240706074500.md
+  - begin: '20240706140000'
+    amount: 90
+    type: work
+    subject: ego
+    name: 相关代码整理到day.js, season.js, waitinglist.js
+    output: draft/2024/07/20240706140000.md
+  - begin: '20240706160000'
+    amount: 60
+    type: work
+    subject: raw
+    name: 月度季度报告的报表统一到新格式
+    output: draft/2024/07/20240706160000.md
