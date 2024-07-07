@@ -1,0 +1,33 @@
+date: 20240707
+mode: 1
+plan: 1
+time:
+  - begin: '20240707093000'
+    amount: 90
+    type: work
+    subject: ego
+    name: 相关代码整理到day.js
+    output: draft/2024/07/20240707093000.md
+  - begin: '20240707140000'
+    amount: 15
+    type: work
+    subject: ego
+    name: 相关代码整理到waitinglist.js
+    output: draft/2024/07/20240707140000.md
+  - begin: '20240707143000'
+    amount: 45
+    type: work
+    subject: js
+    name: js minify tools
+    readme: |
+      - js代码写入metadata，作为候选方案确保代码和数据准确匹配。
+      - https://www.npmjs.com/package/minify
+      - https://github.com/mishoo/UglifyJS
+      - https://github.com/babel/minify
+    output: draft/2024/07/20240707143000.md
+  - begin: '20240707160000'
+    amount: 60
+    type: work
+    subject: raw
+    name: 月度季度报告的报表统一到新格式
+    output: draft/2024/07/20240707160000.md

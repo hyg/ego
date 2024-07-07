@@ -15,7 +15,7 @@ time:
     name: 相关代码整理到day.js, season.js, waitinglist.js
     output: draft/2024/07/20240706140000.md
   - begin: '20240706160000'
-    amount: 60
+    amount: 0
     type: work
     subject: raw
     name: 月度季度报告的报表统一到新格式

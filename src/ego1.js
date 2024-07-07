@@ -4,6 +4,7 @@ const path = require('./path.js');
 const util = require('./util.js');
 const start = require('./start.js');
 const finish = require('./finish.js');
+const day = require('./day.js');
 
 const { Command } = require('commander');
 const program = new Command();
@@ -24,6 +25,7 @@ program.command('day')
   .option('-i, --init <int>', '初始化：绑定时间模版，创建日计划、次日规划、手稿及元数据文件。')
   .option('-o, --over', '工作结束，生成日小结、更新次日规划。')
   .option('-p, --plan', '显示次日规划，不更新任何文件。')
+  .option('-t, --test', '测试新代码')
   .action((options) => {
     log(options);
     if (options.init) {
@@ -44,6 +46,8 @@ program.command('day')
       var date = util.datestr();
       finish.updateseason(date);
       start.testdayplan();
+    } else if (options.test) {
+      day.makedayobj(1);
     }
   });
 

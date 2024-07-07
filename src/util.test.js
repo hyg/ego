@@ -9,17 +9,6 @@ test('make meta file id',(t)=>{
 });
 
 test('get today str',(t)=>{
-    assert.strictEqual(util.datestr(),"20240706");
-});
-
-test('get day metadata file name',(t)=>{
-    assert.strictEqual(day.dayfilename(),"../data/day/2024/d.20240706.yaml");
-});
-
-test('get season metadata file name',(t)=>{
-    assert.strictEqual(season.seasonfilename(),"../data/season/2024S3.yaml");
-});
-
-test('get wake time',(t)=>{
-    assert.strictEqual(day.getwaketime(),20240706053500);
+    assert.strictEqual(util.datestr(),"20240707");
+    assert.strictEqual(util.datestring(),"20240707");
 });

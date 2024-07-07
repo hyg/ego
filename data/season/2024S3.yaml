@@ -453,16 +453,16 @@ time:
     js: 1200
   sold:
     PSMD: 182
-    ego: 307
+    ego: 412
     xuemen: 30
     infra: 90
-    js: 50
+    js: 95
     learn: 359
     raw: 60
 todo:
   PSMD:
     - '195': data -> schema 迭代范例
-    - '60': 用linkml编写一套标准模型
+    - '90': 用linkml编写一套标准模型
     - '195': term + COM matedata -> deploy metadata -> deploy view
     - '90': 以1406为例检查知识图谱和blawx的语法
     - '60': 设计条款的可执行机制
@@ -476,9 +476,8 @@ todo:
           <term.50430bca.632214.c83dac.term.2>: 中华人民共和国公司法
     - '30': 重新思考term metadata种的upgradeby，是否需要显示内容和id两种。
   ego:
-    - '90': 相关代码整理到day.js
+    - '60': 完成day.js中table、index等string
     - '60': 相关代码整理到season.js
-    - '30': 相关代码整理到waitinglist.js
     - '60': 使用新版day、season、waitinglist的ego.js
     - '90': 根据ego对外信息接口编写页面代码
       readme: |
@@ -491,6 +490,11 @@ todo:
         - 在各task metadata中给出git库的路径，每天根据实际任务去操作。
     - '60': 重新设计ego.js的命令行参数，合并函数，整理代码。
     - '30': 生成waitinglist时，考虑多层todo。
+    - '60': 时间改为ISO8601格式
+      readme: |
+        - season metadata
+        - day metada
+        - draft文件名
   infra: []
   learn:
     - '90': pear sample
@@ -544,12 +548,6 @@ todo:
       readme: |
         - https://helia.io/
         - https://api.orbitdb.org/
-    - '30': js minify tools
-      readme: |
-        - js代码写入metadata，作为候选方案确保代码和数据准确匹配。
-        - https://www.npmjs.com/package/minify
-        - https://github.com/mishoo/UglifyJS
-        - https://github.com/babel/minify
     - '60': git sample
       readme: |
         - https://isomorphic-git.org/docs/en/snippets
@@ -586,9 +584,14 @@ todo:
       readme: |
         https://github.com/protocolbuffers/protobuf-javascript
   raw:
-    - '60': 月度季度报告的报表统一到新格式
+    - '90': 自动从网页提取营养成分表
+      readme: |
+        - https://www.npmjs.com/package/htmlparser2
+        - https://www.npmjs.com/package/jsdom
+        - https://htmltojsonconverter.azurewebsites.net/
+        - https://developerxyz.com/free-tools/html-to-json-converter
   xuemen:
-    - '90': kernel模型升级
+    - '195': kernel模型升级
     - '195': 重新设计S2状态下的学门基本管理制度
     - '60': term.e6f0caec -> xuemen COD metadata-S2状态下的部门模型
 comment:
