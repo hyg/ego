@@ -24,6 +24,18 @@ module.exports = {
 
         var datestr = theDate.Format("yyyyMMdd") ;
         return datestr;
+    },
+    str2time: function(date){
+        var year = date.slice(0, 4);
+        var month = date.slice(4, 6);
+        var day = date.slice(6, 8);
+        var hour = date.slice(8,10);
+        var minute = date.slice(10,12);
+        var second = date.slice(12,14);
+
+        var theDate = new Date(year,month,day,hour,minute,second);
+        //console.log(theDate.Format("yyyy-MM-dd hh:mm:ss.S"));
+        return theDate;
     }
 }
 

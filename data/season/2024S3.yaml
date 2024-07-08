@@ -452,12 +452,12 @@ time:
     learn: 1500
     js: 1200
   sold:
-    PSMD: 182
-    ego: 412
+    PSMD: 212
+    ego: 487
     xuemen: 30
     infra: 90
     js: 95
-    learn: 359
+    learn: 489
     raw: 60
 todo:
   PSMD:
@@ -466,17 +466,9 @@ todo:
     - '195': term + COM matedata -> deploy metadata -> deploy view
     - '90': 以1406为例检查知识图谱和blawx的语法
     - '60': 设计条款的可执行机制
-    - '30': debug- D:\huangyg\git\PSMD\data\term.25c83dac.yaml interface字段混乱。
-      readme: |
-        term.25c83dac.yaml的depend.text 包含 <term.2e4f11cb.term.1> 
-        执行node term term 2e4f11cb
-        term.25c83dac.yaml的interface:
-          <term.50430bca.632214.c83dac.entity.1>: 董事会
-          <term.50430bca.632214.c83dac.term.1>: 章程第八条（十）
-          <term.50430bca.632214.c83dac.term.2>: 中华人民共和国公司法
     - '30': 重新思考term metadata种的upgradeby，是否需要显示内容和id两种。
   ego:
-    - '60': 完成day.js中table、index等string
+    - '30': 完成day.js中index等string
     - '60': 相关代码整理到season.js
     - '60': 使用新版day、season、waitinglist的ego.js
     - '90': 根据ego对外信息接口编写页面代码
@@ -497,7 +489,13 @@ todo:
         - draft文件名
   infra: []
   learn:
-    - '90': pear sample
+    - '90': pear api sample
+      readme: |
+        - https://docs.pears.com/pear-runtime/api
+        - https://docs.pears.com/guides/starting-a-pear-terminal-project
+    - '60': schema in ipld
+      readme: |
+        - https://ipld.io/docs/schemas/intro/
     - '60': linkml, yaml-ld
       readme: |
         - https://linkml.io/linkml/schemas/models.html
@@ -508,10 +506,6 @@ todo:
         https://did.js.org/
         https://www.w3.org/TR/did-use-cases/
         https://www.w3.org/TR/did-core/
-    - '30': trello api
-      readme: |
-        https://developer.atlassian.com/cloud/trello/rest/
-        https://www.npmjs.com/package/trello
     - '30': Document-Oriented数据库
       readme: |
         -MongoDB、CouchDB、RavenDB
@@ -548,6 +542,8 @@ todo:
       readme: |
         - https://helia.io/
         - https://api.orbitdb.org/
+        - https://github.com/ipfs/helia-ipns
+        - https://github.com/ipfs/js-ipns
     - '60': git sample
       readme: |
         - https://isomorphic-git.org/docs/en/snippets

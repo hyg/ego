@@ -1,0 +1,38 @@
+date: 20240708
+mode: 1
+plan: 1
+time:
+  - begin: '20240708093000'
+    amount: 90
+    type: work
+    subject: learn
+    name: pear sample
+    output: draft/2024/07/20240708093000.md
+  - begin: '20240708140000'
+    amount: 30
+    type: work
+    subject: PSMD
+    name: debug- D:\huangyg\git\PSMD\data\term.25c83dac.yaml interface字段混乱。
+    readme: |
+      term.25c83dac.yaml的depend.text 包含 <term.2e4f11cb.term.1> 
+      执行node term term 2e4f11cb
+      term.25c83dac.yaml的interface:
+        <term.50430bca.632214.c83dac.entity.1>: 董事会
+        <term.50430bca.632214.c83dac.term.1>: 章程第八条（十）
+        <term.50430bca.632214.c83dac.term.2>: 中华人民共和国公司法
+    output: draft/2024/07/20240708140000.md
+  - begin: '20240708143000'
+    amount: 40
+    type: work
+    subject: learn
+    name: trello api
+    readme: |
+      https://developer.atlassian.com/cloud/trello/rest/
+      https://www.npmjs.com/package/trello
+    output: draft/2024/07/20240708143000.md
+  - begin: '20240708160000'
+    amount: 75
+    type: work
+    subject: ego
+    name: 完成day.js中table、index等string
+    output: draft/2024/07/20240708160000.md

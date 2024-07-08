@@ -47,7 +47,9 @@ program.command('day')
       finish.updateseason(date);
       start.testdayplan();
     } else if (options.test) {
-      day.makedayobj(1);
+      var dayobj = day.makedayobj(1);
+      var tablestr = day.maketable(dayobj);
+
     }
   });
 

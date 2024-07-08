@@ -4,16 +4,21 @@ const day = require('./day.js');
 
 test('get day metadata file name',(t)=>{
     day.debug = true;
-    assert.strictEqual(day.dayfilename(),"../data/day/2024/d.20240707.yaml");
+    assert.strictEqual(day.dayfilename(),"../data/day/2024/d.20240708.yaml");
 });
 
 test('get wake time',(t)=>{
     day.debug = true;
-    assert.strictEqual(day.getwaketime(),20240707061200);
+    assert.strictEqual(day.getwaketime(),20240708063700);
 });
 
 test('make day object',(t)=>{
     day.debug = true;
     assert.ok(day.makedayobj(1));
     assert.ok(day.makedayobj(2));
+});
+
+test('make day table',(t)=>{
+    day.debug = true;
+    assert.ok(day.maketable(day.makedayobj(1)));
 });
