@@ -34,44 +34,99 @@ map:
       start: 121500
       end: 191459
   '2':
-    '2':
+    2a:
       start: 0
-      end: 235959
+      end: 45959
+    2b:
+      start: 50000
+      end: 64459
 dayplan:
-  '2':
+  2a:
     supply:
       '60': 1
       '90': 1
       '195': 1
     time:
-      - beginhour: 4
-        beginminute: 0
-        amount: 15
+      - amount: 15
         type: free
         name: 休整
-      - beginhour: 4
-        beginminute: 15
-        amount: 60
+      - amount: 60
         type: prepare
         name: 备餐、运动
-      - beginhour: 5
-        beginminute: 15
-        amount: 45
+      - amount: 45
         type: food
         name: 早餐
-      - beginhour: 6
-        beginminute: 0
-        amount: 45
+      - amount: 45
         type: discuss
         name: 会议、自习
-      - beginhour: 6
-        beginminute: 45
-        amount: 60
+      - endhour: 7
+        endminute: 44
         type: free
         name: 休整
       - beginhour: 7
         beginminute: 45
         amount: 195
+        type: work
+        name: 工作
+        namelink: http://simp.ly/p/3GXNTh
+      - beginhour: 11
+        beginminute: 0
+        amount: 180
+        type: food
+        name: 备餐、午餐午休
+      - beginhour: 14
+        beginminute: 0
+        amount: 90
+        type: work
+        name: 工作
+        namelink: http://simp.ly/p/lsBYG9
+      - beginhour: 15
+        beginminute: 30
+        amount: 30
+        type: free
+        name: 休整
+      - beginhour: 16
+        beginminute: 0
+        amount: 60
+        type: work
+        name: 工作
+        namelink: http://simp.ly/p/MpcbHD
+      - beginhour: 17
+        beginminute: 0
+        amount: 120
+        type: food
+        name: 晚餐
+      - beginhour: 19
+        beginminute: 0
+        amount: 60
+        type: check
+        name: 讨论、整理提交
+    readme: |
+      工作的同时可以在线讨论。
+  2b:
+    supply:
+      '60': 1
+      '90': 2
+    time:
+      - amount: 15
+        type: free
+        name: 休整
+      - amount: 60
+        type: prepare
+        name: 备餐、运动
+      - amount: 45
+        type: food
+        name: 早餐
+      - amount: 45
+        type: discuss
+        name: 会议、自习
+      - endhour: 9
+        endminute: 29
+        type: free
+        name: 休整
+      - beginhour: 9
+        beginminute: 30
+        amount: 90
         type: work
         name: 工作
         namelink: http://simp.ly/p/3GXNTh
@@ -452,11 +507,11 @@ time:
     learn: 1500
     js: 1200
   sold:
-    PSMD: 212
-    ego: 487
+    PSMD: 227
+    ego: 547
     xuemen: 30
     infra: 90
-    js: 95
+    js: 215
     learn: 489
     raw: 60
 todo:
@@ -469,7 +524,6 @@ todo:
     - '30': 重新思考term metadata种的upgradeby，是否需要显示内容和id两种。
   ego:
     - '30': 完成day.js中index等string
-    - '60': 相关代码整理到season.js
     - '60': 使用新版day、season、waitinglist的ego.js
     - '90': 根据ego对外信息接口编写页面代码
       readme: |
@@ -527,7 +581,6 @@ todo:
       readme: |
         - https://zh.javascript.info/promise-api
   js:
-    - '90': peerjs sample
     - '60': dat sample for root metadata
       readme: |
         - https://github.com/dat-ecosystem-archive/dat-node

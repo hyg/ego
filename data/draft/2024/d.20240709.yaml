@@ -1,0 +1,22 @@
+date: 20240709
+mode: 2
+plan: 2
+time:
+  - begin: '20240709074500'
+    amount: 15
+    type: work
+    subject: PSMD
+    name: data -> schema 迭代范例
+    output: draft/2024/07/20240709074500.md
+  - begin: '20240709140000'
+    amount: 120
+    type: work
+    subject: js
+    name: peerjs sample
+    output: draft/2024/07/20240709140000.md
+  - begin: '20240709160000'
+    amount: 60
+    type: work
+    subject: ego
+    name: 相关代码整理到season.js
+    output: draft/2024/07/20240709160000.md

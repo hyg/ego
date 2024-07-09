@@ -7,5 +7,6 @@ module.exports = {
     xuemenrepopath: "../../xuemen/",
     xuemenrecordrepopath: "../../xuemen.record/",
     datapath: "../data/",
-    viewpath: "../view/"
+    viewpath: "../view/",
+    daymetadatapath: "../data/draft/"
 }

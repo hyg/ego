@@ -9,8 +9,8 @@ test('make meta file id',(t)=>{
 });
 
 test('get today str',(t)=>{
-    assert.strictEqual(util.datestr(),"20240708");
-    assert.strictEqual(util.datestring(),"20240708");
+    assert.strictEqual(util.datestr(),"20240709");
+    assert.strictEqual(util.datestring(),"20240709");
 });
 
 test('get time from str',(t)=>{
