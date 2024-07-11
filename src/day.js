@@ -198,7 +198,28 @@ module.exports = {
         log("table string:\n%s",tablestr);
         return tablestr;
     },
-    makeindex: function (dayobj) {
+    makeindex: function (dayobj,type) {
+        var indexstr = "";
 
+        for(var i in dayobj.time){
+            var timeperiod = dayobj.time[i];
+            var begintime = util.str2time(timeperiod.begin);
+            var endtime = new Date(begintime) ;
+            endtime = new Date(endtime.setMinutes(endtime.getMinutes() + timeperiod.amount - 1));
+
+            var linkstr="";
+            if(type == "plan"){
+                linkstr = path.gitpath + timeperiod.output ;
+            }else if(type == "log"){
+                linkstr = "#" + timeperiod.begin ;
+            }
+
+            if(timeperiod.type == "work"){
+                indexstr = indexstr + "- " +  begintime.Format("hh:mm") + "~" + endtime.Format("hh:mm") +  "\t" + timeperiod.subject + ": [" + timeperiod.title + "](" + linkstr + ")\n";
+            }
+        }
+
+        log("indexstr:\n%s",indexstr);
+        return indexstr ;
     }
 }

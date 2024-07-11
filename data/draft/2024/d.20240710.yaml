@@ -1,0 +1,27 @@
+date: 20240710
+mode: 1
+plan: 1
+time:
+  - begin: '20240710140000'
+    amount: 0
+    type: work
+    subject: ego
+    name: 完成day.js中index等string
+    output: draft/2024/07/20240710140000.md
+  - begin: '20240710143000'
+    amount: 30
+    type: work
+    subject: PSMD
+    name: 重新思考term metadata种的upgradeby，是否需要显示内容和id两种。
+    output: draft/2024/07/20240710143000.md
+  - begin: '20240710160000'
+    amount: 60
+    type: work
+    subject: js
+    name: dat sample for root metadata
+    readme: |
+      - https://github.com/dat-ecosystem-archive/dat-node
+      - https://datproject.org/
+      - https://github.com/RangerMauve/hyper-sdk
+      - https://docs.datproject.org/docs/dat-sdk#using-script-tags-to-load-the-sdk
+    output: draft/2024/07/20240710160000.md

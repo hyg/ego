@@ -1,0 +1,38 @@
+date: 20240711
+mode: 1
+plan: 1
+time:
+  - begin: '20240711093000'
+    amount: 30
+    type: work
+    subject: raw
+    name: 自动从网页提取营养成分表
+    readme: |
+      - https://www.npmjs.com/package/htmlparser2
+      - https://www.npmjs.com/package/jsdom
+      - https://htmltojsonconverter.azurewebsites.net/
+      - https://developerxyz.com/free-tools/html-to-json-converter
+    output: draft/2024/07/20240711093000.md
+  - begin: '20240711140000'
+    amount: 30
+    type: work
+    subject: ego
+    name: 完成day.js中index等string
+    output: draft/2024/07/20240711140000.md
+  - begin: '20240711143000'
+    amount: 104
+    type: work
+    subject: learn
+    name: Document-Oriented数据库
+    readme: |
+      -MongoDB、CouchDB、RavenDB
+    output: draft/2024/07/20240711143000.md
+  - begin: '20240711160000'
+    amount: 90
+    type: work
+    subject: learn
+    name: hyper-sdk sample
+    readme: |
+      - https://github.com/RangerMauve/hyper-sdk
+      - https://docs.datproject.org/docs/dat-sdk#using-script-tags-to-load-the-sdk
+    output: draft/2024/07/20240711160000.md

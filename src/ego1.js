@@ -23,7 +23,7 @@ program
 program.command('day')
   .description('以天为单位的自我管理功能')
   .option('-i, --init <int>', '初始化：绑定时间模版，创建日计划、次日规划、手稿及元数据文件。')
-  .option('-o, --over', '工作结束，生成日小结、更新次日规划。')
+  .option('-o, --over <diff>', '工作结束，生成日小结、更新次日规划。','0')
   .option('-p, --plan', '显示次日规划，不更新任何文件。')
   .option('-t, --test', '测试新代码')
   .action((options) => {
@@ -36,12 +36,19 @@ program.command('day')
       //start.makedaydraft(date, plan);
       //start.makedayplan(date);
       finish.maketomorowinfo(tomorrow);
-    } else if (options.over) {
-      var date = util.datestr();
-      var tomorrow = util.datestr(1);
+    } else if (options.over !== undefined) {
+      var diff = parseInt(options.over);
+      var date = util.datestr(diff);
+      log("date:",date);
+      
       finish.updateseason(date);
       finish.makedaylog(date);
-      finish.maketomorowinfo(tomorrow);
+
+      if(diff == 0){
+        var tomorrow = util.datestr(1);
+        finish.maketomorowinfo(tomorrow);
+      }
+      
     } else if (options.plan) {
       var date = util.datestr();
       finish.updateseason(date);
