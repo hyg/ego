@@ -124,9 +124,12 @@ module.exports = {
                 if (waitinglist[amount.toString()][0].readme != null) {
                     timeperiod.readme = waitinglist[amount.toString()][0].readme;
                 }
-                timeperiod.output = "draft/" + date.slice(0, 4) + "/" + date.slice(4, 6) + "/" + timeperiod.begin + ".md";
-                //timearray.push(timeperiod);
-                log("delete the job from %s: [%s]", waitinglist[amount.toString()][0].task, waitinglist[amount.toString()][0].name);
+                timeperiod.output = path.draftrepopath + date.slice(0, 4) + "/" + date.slice(4, 6) + "/" + begintime + ".md";
+
+                seasonobj = season.deletetodoitem(seasonobj,waitinglist[amount.toString()][0]);
+                waitinglist = wl.makewaitinglist(seasonobj);
+                
+                /* log("delete the job from %s: [%s]", waitinglist[amount.toString()][0].task, waitinglist[amount.toString()][0].name);
                 for (var j in seasonobj.todo[timeperiod.subject]) {
                     //log("seasonobj.todo[timeperiod.subject][j][timeperiod.amount]: "+seasonobj.todo[timeperiod.subject][j][timeperiod.amount] + " timeperiod.name: "+ timeperiod.name)
                     if (seasonobj.todo[timeperiod.subject][j][timeperiod.amount] == timeperiod.name) {
@@ -141,17 +144,16 @@ module.exports = {
                     }
                 }
                 //delete it from waitinglist
-                waitinglist[time[i].amount.toString()].shift();
+                waitinglist[time[i].amount.toString()].shift(); */
 
                 var timestr = "## " + beginhour.toString().padStart(2, "0") + ":" + beginminute.toString().padStart(2, "0") + " ~ " + endhour.toString().padStart(2, "0") + ":" + endminute.toString().padStart(2, "0") + "\n" + timeperiod.subject + ": [" + timeperiod.name + "]\n\n";
-                var timeviewfilename = path.draftrepopath + date.slice(0, 4) + "/" + date.slice(4, 6) + "/" + begintime + ".md";
                 if (this.debug == false) {
-                    fs.writeFileSync(timeviewfilename, timestr);
+                    fs.writeFileSync(timeperiod.output, timestr);
                 }
                 log("time slice draft file name:%s\n%s", timeviewfilename, timestr);
             }
 
-            if (timeslice.name != null) {
+            if (timeslice.namelink != null) {
                 timeperiod.namelink = timeslice.namelink;
             }
             timearray.push(timeperiod);
@@ -161,6 +163,7 @@ module.exports = {
         dayobj.time = timearray;
 
         this.dumpdayobj(dayobj, diff);
+        season.debug = this.debug;
         season.dumpseasonobj(seasonobj);
         log("dump seasonobj, todo:\n%s", yaml.dump(seasonobj.todo, { 'lineWidth': -1 }));
 
@@ -221,5 +224,37 @@ module.exports = {
 
         log("indexstr:\n%s",indexstr);
         return indexstr ;
+    },
+    makedayplan: function(dayobj){
+        var datestr = util.datestr(diff);
+        var date = util.str2time(datestr);
+
+        var dayplanstr = "# " + date.Format("yyyy.MM.dd.") + "\n日计划\n\n" 
+        + "根据[ego模型时间接口](https://gitee.com/hyg/blog/blob/master/timeflow.md)，今天绑定模版" + dayobj.mode + "(" + dayobj.plan + ")。\n\n" 
+        + this.maketable(dayobj) + "\n---\n\n" + this.makeindex(dayobj,"plan") ;
+
+        var dayplanfilename = path.blogrepopath + "release/time/d." + datestr + ".md";       
+        if (this.debug == false) {
+            fs.writeFileSync(dayplanfilename, dayplanstr);
+        }
+        log("make day plan file: %s\n%s", dayplanfilename, dayplanstr);
+
+        return dayplanstr;
+    },
+    makedaylog: function(dayobj){
+        var datestr = util.datestr(diff);
+        var date = util.str2time(datestr);
+
+        var dayplanstr = "# " + date.Format("yyyy.MM.dd.") + "\n日小结\n\n" 
+        + "<a id=\"top\"></a>\n" + "根据[ego模型时间接口](https://gitee.com/hyg/blog/blob/master/timeflow.md)，今天绑定模版" + dayobj.mode + "(" + dayobj.plan + ")。\n\n" 
+        + "<a id=\"index\"></a>" + this.makeindex(dayobj,"log") ;
+
+        var dayplanfilename = path.blogrepopath + "release/time/d." + datestr + ".md";       
+        if (this.debug == false) {
+            fs.writeFileSync(dayplanfilename, dayplanstr);
+        }
+        log("make day plan file: %s\n%s", dayplanfilename, dayplanstr);
+
+        return dayplanstr;
     }
 }

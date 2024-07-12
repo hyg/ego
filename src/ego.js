@@ -4,60 +4,55 @@ const path = require('./path.js');
 const util = require('./util.js');
 const start = require('./start.js');
 const finish = require('./finish.js');
+const day = require('./day.js');
 
-const helpstr = `
-node ego day plan: show the day plan in each tempplate
-node ego day 1: generate day draft metadata by template 1
-node ego day init: generate day plan and draft files by draft metadata 
-node ego day over: generate day overall view
-node ego dev *: develop mode in the same param
-`;
+const { Command } = require('commander');
+var program = new Command();
 
-const debug = false;
-start.debug = debug;
-finish.debug = debug;
-
-// read the arguments
-var arguments = process.argv.splice(2);
-if (arguments.length > 0) {
-    if ((arguments.length == 2) & (arguments[0] == "day")) {
-        if (arguments[1] == "init") {
-            //node ego day init: generate day plan and draft files by draft metadata 
-            var date = util.datestr();
-            start.makedayplan(date);
-        } else if (arguments[1] == "over") {
-            //node ego day over: generate day overall view
-            var date = util.datestr();
-            var tomorrow = util.datestr(1);
-            finish.updateseason(date);
-            finish.makedaylog(date);
-            finish.maketomorowinfo(tomorrow);
-        } else if (arguments[1] == "plan") {
-            // node ego day plan: show the day plan in each tempplate
-            var date = util.datestr();
-            finish.updateseason(date);
-            start.testdayplan();
-        }else {
-            //node ego day 1: generate day draft metadata by template 1
-            var date = util.datestr();
-            var tomorrow = util.datestr(1);
-            var plan = arguments[1];
-            start.makedaydraft(date, plan);
-            start.makedayplan(date);
-            finish.maketomorowinfo(tomorrow);
-        }
-    }else if ((arguments.length == 2) & (arguments[0] == "dev")) {
-        //node ego dev 1: generate day draft metadata by template 1
-        var date = util.datestr();
-        var tomorrow = util.datestr(1);
-        var mode = arguments[1];
-        start.devmakedayplan(date, mode);
-        //finish.devmaketomorowinfo(tomorrow);
-    }else {
-        console.log(helpstr);
-        process.exit();
-    }
-} else {
-
+function log(...s) {
+    s[0] = log.caller.name + "> " + s[0];
+    console.log(...s);
 }
 
+const debug = true;
+day.debug = debug;
+
+program
+    .name('ego')
+    .description('个人领域的理性部分')
+    .version('0.1.2');
+
+const daycommand = program
+    .command('day')
+    .description('以天为单位的自我管理功能');
+
+daycommand
+    .command("init <mode>")
+    .description('初始化：绑定时间模版，创建日计划、次日规划、手稿及元数据文件。')
+    .action((mode) => {
+        log("init:", mode);
+    });
+
+daycommand
+    .command("over <diff>")
+    .description('工作结束，生成日小结、更新次日规划。')
+    .action((diff) => {
+        log("over:", diff);
+    });
+
+daycommand
+    .command("plan")
+    .description('显示次日规划，不更新任何文件。')
+    .action(() => {
+        log("plan");
+    });
+
+
+daycommand
+    .command("test <data>")
+    .description('测试新代码')
+    .action((data) => {
+        log("test:", data);
+    });
+
+program.parse();

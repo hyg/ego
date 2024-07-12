@@ -69,5 +69,18 @@ module.exports = {
         }
 
         return seasonobj;
+    },
+    deletetodoitem(seasonobj,todoitem){
+        log("delete the todo item from %s: [%s]", todoitem.task, todoitem.name);
+
+        log("before delete todo item:\n" + yaml.dump(seasonobj.todo[todoitem.task]));
+        if (seasonobj.todo[todoitem.task][todoitem.id].bind != null) {
+            seasonobj.todo[todoitem.task].splice(todoitem.id, 1, ...seasonobj.todo[todoitem.task][todoitem.id].bind);
+        } else {
+            seasonobj.todo[todoitem.task].splice(todoitem.id, 1);
+        }
+        log("after delete todo item:\n" + yaml.dump(seasonobj.todo[todoitem.task]));
+
+        return seasonobj;
     }
 }

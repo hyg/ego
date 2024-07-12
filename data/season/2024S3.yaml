@@ -40,6 +40,9 @@ map:
     2b:
       start: 50000
       end: 64459
+    2c:
+      start: 64500
+      end: 81459
 dayplan:
   2a:
     supply:
@@ -130,6 +133,61 @@ dayplan:
         type: work
         name: 工作
         namelink: http://simp.ly/p/3GXNTh
+      - beginhour: 11
+        beginminute: 0
+        amount: 180
+        type: food
+        name: 备餐、午餐午休
+      - beginhour: 14
+        beginminute: 0
+        amount: 90
+        type: work
+        name: 工作
+        namelink: http://simp.ly/p/lsBYG9
+      - beginhour: 15
+        beginminute: 30
+        amount: 30
+        type: free
+        name: 休整
+      - beginhour: 16
+        beginminute: 0
+        amount: 60
+        type: work
+        name: 工作
+        namelink: http://simp.ly/p/MpcbHD
+      - beginhour: 17
+        beginminute: 0
+        amount: 120
+        type: food
+        name: 晚餐
+      - beginhour: 19
+        beginminute: 0
+        amount: 60
+        type: check
+        name: 讨论、整理提交
+    readme: |
+      工作的同时可以在线讨论。
+  2c:
+    supply:
+      '60': 1
+      '90': 1
+    time:
+      - amount: 15
+        type: free
+        name: 休整
+      - amount: 60
+        type: prepare
+        name: 备餐、运动
+      - amount: 45
+        type: food
+        name: 早餐
+      - amount: 45
+        type: discuss
+        name: 会议、自习
+      - endhour: 10
+        endminute: 59
+        type: free
+        name: 休整
       - beginhour: 11
         beginminute: 0
         amount: 180
@@ -508,7 +566,7 @@ time:
     js: 1200
   sold:
     PSMD: 257
-    ego: 577
+    ego: 787
     xuemen: 30
     infra: 90
     js: 275
@@ -525,6 +583,7 @@ todo:
     - '90': 以1406为例检查知识图谱和blawx的语法
     - '60': 设计条款的可执行机制
   ego:
+    - '60': 整理日小结功能。
     - '60': 使用新版day、season、waitinglist的ego.js
     - '90': 根据ego对外信息接口编写页面代码
       readme: |
@@ -536,7 +595,6 @@ todo:
         - 参考：D:\huangyg\git\draft\2024\04\20240430140000.md
         - 在各task metadata中给出git库的路径，每天根据实际任务去操作。
     - '60': 重新设计ego.js的命令行参数，合并函数，整理代码。
-    - '30': 生成waitinglist时，考虑多层todo。
     - '60': 时间改为ISO8601格式
       readme: |
         - season metadata
@@ -544,6 +602,9 @@ todo:
         - draft文件名
   infra: []
   learn:
+    - '30': 列存储（Wide Column Store/Column-Family）数据库
+      readme: |
+        - Cassandra、HBase
     - '60': hypercore sample
       readme: |
         - read the exsamples :https://github.com/holepunchto/hypercore/tree/main/examples
@@ -565,9 +626,6 @@ todo:
         https://did.js.org/
         https://www.w3.org/TR/did-use-cases/
         https://www.w3.org/TR/did-core/
-    - '30': 列存储（Wide Column Store/Column-Family）数据库
-      readme: |
-        -Cassandra、HBase
     - '30': Query fundamentals https://console.neo4j.io
     - '60': 开发YARRRML范例
     - '90': 把PSMD的data、src部分升级到rdf，如果升级成功则作为范例。

@@ -4,14 +4,14 @@ var util = require('./util.js');
 
 function log(...s) {
     s[0] = log.caller.name + "> " + s[0];
-    console.log( ...s);
+    console.log(...s);
 }
 
 module.exports = {
     debug: true,
-    makewaitinglist: function(seasonobj){
+    makewaitinglist: function (seasonobj) {
         var waitinglist = new Object();
-    
+
         var todoobj = seasonobj.todo;
         var timeobj = seasonobj.time;
 
@@ -52,22 +52,21 @@ module.exports = {
             //console.log("search the %d th member...",k);
             for (var j = 0; j < restSorted.length; j++) {
                 //console.log("search the %d th task:%s\n",j,restSorted[j]);
-                for (var amounttype in waitinglist) {
-                    if (todoobj[restSorted[j]][k] != null) {
+                if (todoobj[restSorted[j]][k] != null) {
+                    for (var amounttype in waitinglist) {
                         //console.log("find a item:",yaml.dump(todoobj[restSorted[j]][k]));
                         hasobj = true;
                         if (todoobj[restSorted[j]][k][amounttype] != null) {
-                            var atask = new Object();
-                            atask.task = restSorted[j];
-                            atask.name = todoobj[restSorted[j]][k][amounttype];
-                            atask.id = k;
+                            var todoitem = new Object();
+                            todoitem.task = restSorted[j];
+                            todoitem.name = todoobj[restSorted[j]][k][amounttype];
+                            todoitem.id = k;
                             if (todoobj[restSorted[j]][k]["readme"] != null) {
-                                atask.readme = todoobj[restSorted[j]][k]["readme"];
+                                todoitem.readme = todoobj[restSorted[j]][k]["readme"];
                             }
-                            waitinglist[amounttype].push(atask);
+                            waitinglist[amounttype].push(todoitem);
                         }
                     }
-
                 }
             }
             k = k + 1;
