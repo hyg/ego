@@ -1,0 +1,78 @@
+{
+    "type": "object",
+    "properties": {
+        "date": {
+            "type": "integer"
+        },
+        "food": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "time": {
+                        "type": "integer"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "amount": {
+                        "type": "number"
+                    },
+                    "unit": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "water": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "time": {
+                        "type": "integer"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "amount": {
+                        "type": "number"
+                    },
+                    "unit": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "med": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "time": {
+                        "type": "integer"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "amount": {
+                        "type": "number"
+                    },
+                    "unit": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "log": {
+            "type": "string"
+        },
+        "comment": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "date"
+    ],
+    "additionalProperties": false
+}

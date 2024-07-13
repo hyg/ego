@@ -9,4 +9,5 @@ module.exports = {
     datapath: "../data/",
     viewpath: "../view/",
     daymetadatapath: "../data/draft/"
+    //daymetadatapath: "../data/day/"
 }

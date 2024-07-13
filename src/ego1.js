@@ -24,7 +24,7 @@ program
   .command('day')
   .description('以天为单位的自我管理功能')
   .option('-i, --init <int>', '初始化：绑定时间模版，创建日计划、次日规划、手稿及元数据文件。')
-  .option('-o, --over <diff>', '工作结束，生成日小结、更新次日规划。','0')
+  .option('-o, --over [diff]', '工作结束，生成日小结、更新次日规划。','0')
   .option('-p, --plan', '显示次日规划，不更新任何文件。')
   .option('-t, --test', '测试新代码')
   .action((options) => {
@@ -55,8 +55,7 @@ program
       finish.updateseason(date);
       start.testdayplan();
     } else if (options.test) {
-      var dayobj = day.makedayobj(1);
-      var tablestr = day.maketable(dayobj);
+      
 
     }
   });

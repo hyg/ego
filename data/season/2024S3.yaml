@@ -565,17 +565,16 @@ time:
     learn: 1500
     js: 1200
   sold:
-    PSMD: 257
-    ego: 787
+    PSMD: 402
+    ego: 862
     xuemen: 30
     infra: 90
-    js: 275
-    learn: 683
+    js: 301
+    learn: 722
     raw: 90
 todo:
   PSMD:
     - '195': data -> schema 迭代范例
-    - '90': 用linkml编写一套标准模型
     - '90': term metadata的序号，分为显示序号和唯一id两种。
       readnme: |
         - 考虑upgradeby的实现。
@@ -583,8 +582,10 @@ todo:
     - '90': 以1406为例检查知识图谱和blawx的语法
     - '60': 设计条款的可执行机制
   ego:
-    - '60': 整理日小结功能。
-    - '60': 使用新版day、season、waitinglist的ego.js
+    - '90': 使用新版day、season、waitinglist的ego.js
+      readme: |
+        - 整理maketomorowinfo()、testdayplan()到新版day.js
+        - https://github.com/tj/commander.js/blob/HEAD/Readme_zh-CN.md#%E5%91%BD%E4%BB%A4
     - '90': 根据ego对外信息接口编写页面代码
       readme: |
         D:\huangyg\git\blog\release\time\d.20240604.md
@@ -602,9 +603,6 @@ todo:
         - draft文件名
   infra: []
   learn:
-    - '30': 列存储（Wide Column Store/Column-Family）数据库
-      readme: |
-        - Cassandra、HBase
     - '60': hypercore sample
       readme: |
         - read the exsamples :https://github.com/holepunchto/hypercore/tree/main/examples
@@ -672,12 +670,6 @@ todo:
       readme: |
         - https://github.com/matrix-org/matrix-js-sdk
         - http://matrix-org.github.io/matrix-js-sdk/index.html
-    - '30': 日期格式化
-      readme: |
-        http://momentjs.cn/
-        https://www.cnblogs.com/biehongli/p/9327604.html
-        https://juejin.cn/post/7199191689150644279
-        https://blog.csdn.net/lwf3115841/article/details/129105206
     - '60': 学习'Electron'，创作一个范例。
     - '30': mermaid
       readme: |
@@ -686,6 +678,7 @@ todo:
     - '30': text->id,protobuf-javascript
       readme: |
         https://github.com/protocolbuffers/protobuf-javascript
+    - '30': 用day.js改写util.js
   raw:
     - '60': 自动从网页提取营养成分表
       readme: |

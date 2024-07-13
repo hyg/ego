@@ -49,7 +49,7 @@ daycommand
 
 
 daycommand
-    .command("test <data>")
+    .command("test [data]")
     .description('测试新代码')
     .action((data) => {
         log("test:", data);

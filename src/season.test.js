@@ -71,3 +71,11 @@ test('delete todo item',(t)=>{
 
     assert.ok(season.deletetodoitem(seasonobj,todoitem));
 });
+
+test('make season stat table',(t)=>{
+    season.debug = true;
+
+    var seasonobj;
+    assert.ok(seasonobj = season.loadseasonobj());
+    assert.ok(season.makestattable(seasonobj));
+});

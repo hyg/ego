@@ -1,0 +1,32 @@
+id: https://raw.githubusercontent.com/hyg/ego/vat/data/raw.food
+name: raw.food
+prefixes:
+  linkml: https://w3id.org/linkml/
+  raw.food: https://raw.githubusercontent.com/hyg/ego/vat/data/raw.food
+  ORCID: https://orcid.org/
+imports:
+  - linkml:types
+default_range: string
+default_prefix: raw.food
+
+classes:
+  raw.food:
+    attributes:
+      date: 
+      food:
+        multivalued: true 
+        range: item
+      water:
+        multivalued: true 
+        range: item
+      med:
+        multivalued: true 
+        range: item
+      log:
+      comment:
+  item:
+    attributes:
+      time:
+      name:
+      amount:
+      unit:

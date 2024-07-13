@@ -49,7 +49,7 @@ module.exports = {
                         //log("file:",file);
                         var dayobj = yaml.load(fs.readFileSync(daymetadatapath + file, 'utf8', { schema: yaml.FAILSAFE_SCHEMA }));
                         for (var tid in dayobj.time) {
-                            if (dayobj.time[tid].subject != null){
+                            if (dayobj.time[tid].subject != null) {
                                 if (sold[dayobj.time[tid].subject] != null) {
                                     sold[dayobj.time[tid].subject] = sold[dayobj.time[tid].subject] + dayobj.time[tid].amount;
                                 } else {
@@ -64,13 +64,13 @@ module.exports = {
             console.log("daymetadata path not exist:", daymetadatapath)
         }
         seasonobj.time.sold = sold;
-        if(this.debug == true){
-            log("season.sold:\n%s",sold)
+        if (this.debug == true) {
+            log("season.sold:\n%s", sold)
         }
 
         return seasonobj;
     },
-    deletetodoitem(seasonobj,todoitem){
+    deletetodoitem(seasonobj, todoitem) {
         log("delete the todo item from %s: [%s]", todoitem.task, todoitem.name);
 
         log("before delete todo item:\n" + yaml.dump(seasonobj.todo[todoitem.task]));
@@ -82,5 +82,67 @@ module.exports = {
         log("after delete todo item:\n" + yaml.dump(seasonobj.todo[todoitem.task]));
 
         return seasonobj;
+    },
+    makestattable: function (seasonobj) {
+        var statobj = new Object();
+        statobj.total = { alloc: 0, sold: 0, hold: 0, todo: 0 };
+        for (var task in seasonobj.time.alloc) {
+            statobj[task] = new Object();
+            statobj[task].alloc = parseInt(seasonobj.time.alloc[task]);
+            if (seasonobj.time.sold[task] != null) {
+                statobj[task].sold = parseInt(seasonobj.time.sold[task]);
+            } else {
+                statobj[task].sold = 0;
+            }
+            statobj[task].hold = statobj[task].alloc - statobj[task].sold;
+
+            statobj.total.alloc = statobj.total.alloc + statobj[task].alloc;
+            statobj.total.sold = statobj.total.sold + statobj[task].sold;
+            statobj[task].todo = 0;
+        }
+        for (var task in seasonobj.time.sold) {
+            if (statobj[task] == null) {
+                statobj[task] = new Object();
+                statobj[task].alloc = 0;
+                statobj[task].sold = parseInt(seasonobj.time.sold[task]);
+                statobj[task].hold = statobj[task].alloc - statobj[task].sold;
+
+                statobj.total.alloc = statobj.total.alloc + statobj[task].alloc;
+                statobj.total.sold = statobj.total.sold + statobj[task].sold;
+                statobj[task].todo = 0;
+            }
+        }
+        statobj.total.hold = statobj.total.alloc - statobj.total.sold;
+        for (var task in seasonobj.todo) {
+            statobj[task].todo = this.todosum(seasonobj.todo[task]);
+            statobj.total.todo = statobj.total.todo + statobj[task].todo;
+        }
+
+        var seasonstatstr = `\n---\nseason stat:\n\n| task | alloc | sold | hold | todo |
+| :---: | ---: | ---: | ---: | ---: |
+`;
+        for (var task in statobj) {
+            seasonstatstr = seasonstatstr + "| " + task + " | " + statobj[task].alloc + " | " + statobj[task].sold + " | " + statobj[task].hold + " | " + statobj[task].todo + " |\n";
+        }
+
+        if(this.debug == true){
+            log("seasonstatstr:\n%s",seasonstatstr)
+        }
+        return seasonstatstr;
+    },
+    todosum: function (todoarray) {
+        var sum = 0;
+
+        for (var i in todoarray) {
+            for (var key in todoarray[i]) {
+                if (!isNaN(parseInt(key))) {
+                    sum = sum + parseInt(key);
+                } else if (key == "bind") {
+                    sum = sum + this.todosum(todoarray[i][key]);
+                }
+            }
+        }
+
+        return sum;
     }
 }

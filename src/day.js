@@ -37,11 +37,11 @@ module.exports = {
         var day = theDate.getDate() < 10 ? "0" + theDate.getDate() : theDate.getDate();
         var dateStr = year + "" + month + "" + day;
 
-        var dayfilename = path.datapath + "day" + "/" + year + "/" + "d." + dateStr + ".yaml";
+        var dayfilename = path.daymetadatapath + "/" + year + "/" + "d." + dateStr + ".yaml";
         return dayfilename;
     },
     loaddayobj: function (diff = 0) {
-        var dayfilename = dayfilename(diff);
+        var dayfilename = this.dayfilename(diff);
         var dayobj = yaml.load(fs.readFileSync(dayfilename, 'utf8', { schema: yaml.FAILSAFE_SCHEMA }));
 
         return dayobj;
@@ -126,9 +126,9 @@ module.exports = {
                 }
                 timeperiod.output = path.draftrepopath + date.slice(0, 4) + "/" + date.slice(4, 6) + "/" + begintime + ".md";
 
-                seasonobj = season.deletetodoitem(seasonobj,waitinglist[amount.toString()][0]);
+                seasonobj = season.deletetodoitem(seasonobj, waitinglist[amount.toString()][0]);
                 waitinglist = wl.makewaitinglist(seasonobj);
-                
+
                 /* log("delete the job from %s: [%s]", waitinglist[amount.toString()][0].task, waitinglist[amount.toString()][0].name);
                 for (var j in seasonobj.todo[timeperiod.subject]) {
                     //log("seasonobj.todo[timeperiod.subject][j][timeperiod.amount]: "+seasonobj.todo[timeperiod.subject][j][timeperiod.amount] + " timeperiod.name: "+ timeperiod.name)
@@ -150,7 +150,7 @@ module.exports = {
                 if (this.debug == false) {
                     fs.writeFileSync(timeperiod.output, timestr);
                 }
-                log("time slice draft file name:%s\n%s", timeviewfilename, timestr);
+                log("time slice draft file name:%s\n%s", timeperiod.output, timestr);
             }
 
             if (timeslice.namelink != null) {
@@ -180,7 +180,7 @@ module.exports = {
         for (var i in dayobj.time) {
             var timeslice = dayobj.time[i];
             var begintime = util.str2time(timeslice.begin);
-            var endtime = new Date(begintime) ;
+            var endtime = new Date(begintime);
             endtime = new Date(endtime.setMinutes(endtime.getMinutes() + timeslice.amount - 1));
 
             var draftstr = "";
@@ -192,48 +192,48 @@ module.exports = {
                     draftstr = draftstr + "[在线](" + timeslice.namelink + ")";
                 }
                 draftstr = draftstr + " [离线](" + draftfilename + ")";
-                var mailtostr = " <a href=\"mailto:huangyg@mars22.com?subject=关于" + year + "." + month + "." + day + ".[" +  timeslice.subject + ":" + timeslice.title + "]任务&body=日期: " + dayobj.date + "%0D%0A序号: " + i + "%0D%0A手稿:" + draftfilename + "%0D%0A---请勿修改邮件主题及以上内容 从下一行开始写您的想法---%0D%0A\">[想法]</a>";
+                var mailtostr = " <a href=\"mailto:huangyg@mars22.com?subject=关于" + year + "." + month + "." + day + ".[" + timeslice.subject + ":" + timeslice.title + "]任务&body=日期: " + dayobj.date + "%0D%0A序号: " + i + "%0D%0A手稿:" + draftfilename + "%0D%0A---请勿修改邮件主题及以上内容 从下一行开始写您的想法---%0D%0A\">[想法]</a>";
                 draftstr = draftstr + mailtostr;
             }
             tablestr = tablestr + "| " + begintime.Format("hh:mm") + "~" + endtime.Format("hh:mm") + " | " + timeslice.amount + " | " + timeslice.name + " | " + draftstr + " |\n";
         }
 
-        log("table string:\n%s",tablestr);
+        log("table string:\n%s", tablestr);
         return tablestr;
     },
-    makeindex: function (dayobj,type) {
+    makeindex: function (dayobj, type) {
         var indexstr = "";
 
-        for(var i in dayobj.time){
+        for (var i in dayobj.time) {
             var timeperiod = dayobj.time[i];
             var begintime = util.str2time(timeperiod.begin);
-            var endtime = new Date(begintime) ;
+            var endtime = new Date(begintime);
             endtime = new Date(endtime.setMinutes(endtime.getMinutes() + timeperiod.amount - 1));
 
-            var linkstr="";
-            if(type == "plan"){
-                linkstr = path.gitpath + timeperiod.output ;
-            }else if(type == "log"){
-                linkstr = "#" + timeperiod.begin ;
+            var linkstr = "";
+            if (type == "plan") {
+                linkstr = path.gitpath + timeperiod.output;
+            } else if (type == "log") {
+                linkstr = "#" + timeperiod.begin;
             }
 
-            if(timeperiod.type == "work"){
-                indexstr = indexstr + "- " +  begintime.Format("hh:mm") + "~" + endtime.Format("hh:mm") +  "\t" + timeperiod.subject + ": [" + timeperiod.title + "](" + linkstr + ")\n";
+            if (timeperiod.type == "work") {
+                indexstr = indexstr + "- " + begintime.Format("hh:mm") + "~" + endtime.Format("hh:mm") + "\t" + timeperiod.subject + ": [" + timeperiod.title + "](" + linkstr + ")\n";
             }
         }
 
-        log("indexstr:\n%s",indexstr);
-        return indexstr ;
+        log("indexstr:\n%s", indexstr);
+        return indexstr;
     },
-    makedayplan: function(dayobj){
+    makedayplan: function (dayobj) {
         var datestr = util.datestr(diff);
         var date = util.str2time(datestr);
 
-        var dayplanstr = "# " + date.Format("yyyy.MM.dd.") + "\n日计划\n\n" 
-        + "根据[ego模型时间接口](https://gitee.com/hyg/blog/blob/master/timeflow.md)，今天绑定模版" + dayobj.mode + "(" + dayobj.plan + ")。\n\n" 
-        + this.maketable(dayobj) + "\n---\n\n" + this.makeindex(dayobj,"plan") ;
+        var dayplanstr = "# " + date.Format("yyyy.MM.dd.") + "\n日计划\n\n"
+            + "根据[ego模型时间接口](https://gitee.com/hyg/blog/blob/master/timeflow.md)，今天绑定模版" + dayobj.mode + "(" + dayobj.plan + ")。\n\n"
+            + this.maketable(dayobj) + "\n---\n\n" + this.makeindex(dayobj, "plan");
 
-        var dayplanfilename = path.blogrepopath + "release/time/d." + datestr + ".md";       
+        var dayplanfilename = path.blogrepopath + "release/time/d." + datestr + ".md";
         if (this.debug == false) {
             fs.writeFileSync(dayplanfilename, dayplanstr);
         }
@@ -241,20 +241,51 @@ module.exports = {
 
         return dayplanstr;
     },
-    makedaylog: function(dayobj){
-        var datestr = util.datestr(diff);
+    makedaylog: function (dayobj) {
+        var datestr = dayobj.date.toString();
         var date = util.str2time(datestr);
+        var seasonobj = season.loadseasonobj();
+        var waitinglist = wl.makewaitinglist(seasonobj);
 
-        var dayplanstr = "# " + date.Format("yyyy.MM.dd.") + "\n日小结\n\n" 
-        + "<a id=\"top\"></a>\n" + "根据[ego模型时间接口](https://gitee.com/hyg/blog/blob/master/timeflow.md)，今天绑定模版" + dayobj.mode + "(" + dayobj.plan + ")。\n\n" 
-        + "<a id=\"index\"></a>" + this.makeindex(dayobj,"log") ;
+        var daylogstr = "# " + date.Format("yyyy.MM.dd.") + "\n日小结\n\n"
+            + "<a id=\"top\"></a>\n" + "根据[ego模型时间接口](https://gitee.com/hyg/blog/blob/master/timeflow.md)，今天绑定模版" + dayobj.mode + "(" + dayobj.plan + ")。\n\n"
+            + "<a id=\"index\"></a>" + this.makeindex(dayobj, "log")
+            + season.makestattable(seasonobj)
+            + wl.makebrieflist(waitinglist)
+            + this.makeoutputlist(dayobj);
 
-        var dayplanfilename = path.blogrepopath + "release/time/d." + datestr + ".md";       
+        var daylogfilename = path.blogrepopath + "release/time/d." + datestr + ".md";
         if (this.debug == false) {
-            fs.writeFileSync(dayplanfilename, dayplanstr);
+            fs.writeFileSync(daylogfilename, daylogstr);
         }
-        log("make day plan file: %s\n%s", dayplanfilename, dayplanstr);
 
-        return dayplanstr;
+        log("make day plan file: %s\n%s", daylogfilename, daylogstr);
+
+        return daylogfilename;
+    },
+    makeoutputlist: function (dayobj) {
+        var outputliststr = "";
+        for (t in dayobj.time) {
+            var timeperiod = dayobj.time[t];
+            if (timeperiod.output != null) {
+                var begintime = util.str2time(timeperiod.begin);
+                var endtime = new Date(begintime);
+                endtime = new Date(endtime.setMinutes(endtime.getMinutes() + timeperiod.amount - 1));
+
+                var taskname = timeperiod.title;
+                if (taskname === undefined) {
+                    taskname = "无名任务";
+                }
+
+                var outputstr = fs.readFileSync(timeperiod.output, 'utf8')
+                var mailtostr = "<a href=\"mailto:huangyg@mars22.com?subject=关于" + begintime.Format("yyyy.MM.dd.") + "[" + taskname + "]任务&body=日期: " + begintime.Format("yyyy.MM.dd.") + "%0D%0A序号: " + t + "%0D%0A手稿:" + timeperiod.output + "%0D%0A---请勿修改邮件主题及以上内容 从下一行开始写您的想法---%0D%0A\">[email]</a>";
+                outputliststr = outputliststr + "\n---\n" + mailtostr + " | [top](#top) | [index](#index)\n<a id=\"" + timeperiod.begin + "\"></a>\n" + outputstr;
+            }
+
+        }
+        if(this.debug == true){
+            log("outputliststr:\n%s",outputliststr);
+        }
+        return outputliststr;
     }
 }

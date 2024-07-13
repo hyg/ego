@@ -7,7 +7,7 @@ time:
     type: work
     subject: ego
     name: 生成waitinglist时，考虑多层todo。
-    output: draft/2024/07/20240712140000.md
+    output: ../../draft/2024/07/20240712140000.md
   - begin: '20240712143000'
     amount: 0
     type: work
@@ -15,10 +15,10 @@ time:
     name: 列存储（Wide Column Store/Column-Family）数据库
     readme: |
       -Cassandra、HBase
-    output: draft/2024/07/20240712143000.md
+    output: ../../draft/2024/07/20240712143000.md
   - begin: '20240712160000'
     amount: 120
     type: work
     subject: ego
     name: 使用新版day、season、waitinglist的ego.js
-    output: draft/2024/07/20240712160000.md
+    output: ../../draft/2024/07/20240712160000.md

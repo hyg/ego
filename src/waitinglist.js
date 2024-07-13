@@ -72,5 +72,23 @@ module.exports = {
             k = k + 1;
         }
         return waitinglist;
+    },
+    makebrieflist: function(waitinglist){
+        var waitingliststr = "\n---\nwaiting list:\n\n";
+        for (var amounttype in waitinglist) {
+            waitingliststr = waitingliststr + "\n- " + amounttype + "分钟时间片：\n";
+            for (var i = 0; i < 4; i++) {
+                if (waitinglist[amounttype][i] != null) {
+                    var todoobj = waitinglist[amounttype][i];
+                    var place = parseInt(todoobj.id) + 1;
+                    waitingliststr = waitingliststr + "  - " + todoobj.task + "的第" + place + "号事项：" + todoobj.name + "\n";
+                }
+            }
+        }
+        if(this.debug == true){
+            log("waitingliststr:\n%s",waitingliststr)
+        }
+
+        return waitingliststr;
     }
 }
