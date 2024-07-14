@@ -1,0 +1,28 @@
+date: 20240714
+mode: 1
+plan: 1
+time:
+  - begin: '20240714140000'
+    amount: 0
+    type: work
+    subject: learn
+    name: Query fundamentals https://console.neo4j.io
+    output: draft/2024/07/20240714140000.md
+  - begin: '20240714143000'
+    amount: 90
+    type: work
+    subject: js
+    name: mermaid
+    readme: |
+      https://mermaid.nodejs.cn/
+      https://mermaid.js.org/
+    output: draft/2024/07/20240714143000.md
+  - begin: '20240714160000'
+    amount: 60
+    type: work
+    subject: js
+    name: syncthing sample
+    readme: |
+      - https://docs.syncthing.net/dev/rest.html
+      - https://github.com/JodusNodus/node-syncthing
+    output: draft/2024/07/20240714160000.md

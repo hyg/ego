@@ -569,7 +569,7 @@ time:
     ego: 862
     xuemen: 30
     infra: 90
-    js: 301
+    js: 451
     learn: 722
     raw: 90
 todo:
@@ -619,12 +619,12 @@ todo:
         - https://linkml.io/linkml/schemas/models.html
         - https://linkml.io/linkml/intro/tutorial04.html
     - '90': 拟制说、目的财产说、实在说
+    - '30': Query fundamentals https://console.neo4j.io
     - '60': Decentralized Identifiers
       readme: |
         https://did.js.org/
         https://www.w3.org/TR/did-use-cases/
         https://www.w3.org/TR/did-core/
-    - '30': Query fundamentals https://console.neo4j.io
     - '60': 开发YARRRML范例
     - '90': 把PSMD的data、src部分升级到rdf，如果升级成功则作为范例。
     - '60': Windows PowerShell
@@ -639,10 +639,6 @@ todo:
       readme: |
         - https://zh.javascript.info/promise-api
   js:
-    - '60': syncthing sample
-      readme: |
-        - https://docs.syncthing.net/dev/rest.html
-        - https://github.com/JodusNodus/node-syncthing
     - '90': helia and orbitdb sample
       readme: |
         - https://helia.io/
@@ -671,10 +667,6 @@ todo:
         - https://github.com/matrix-org/matrix-js-sdk
         - http://matrix-org.github.io/matrix-js-sdk/index.html
     - '60': 学习'Electron'，创作一个范例。
-    - '30': mermaid
-      readme: |
-        https://mermaid.nodejs.cn/
-        https://mermaid.js.org/
     - '30': text->id,protobuf-javascript
       readme: |
         https://github.com/protocolbuffers/protobuf-javascript
