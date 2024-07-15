@@ -1,0 +1,33 @@
+date: 20240715
+mode: 2
+plan: 2
+time:
+  - begin: '20240715093000'
+    amount: 120
+    type: work
+    subject: ego
+    name: 使用新版day、season、waitinglist的ego.js
+    readme: |
+      - 整理maketomorowinfo()、testdayplan()到新版day.js
+      - https://github.com/tj/commander.js/blob/HEAD/Readme_zh-CN.md#%E5%91%BD%E4%BB%A4
+    output: ../../draft/2024/07/20240715093000.md
+  - begin: '20240715140000'
+    amount: 100
+    type: work
+    subject: js
+    name: helia and orbitdb sample
+    readme: |
+      - https://helia.io/
+      - https://api.orbitdb.org/
+      - https://github.com/ipfs/helia-ipns
+      - https://github.com/ipfs/js-ipns
+    output: ../../draft/2024/07/20240715140000.md
+  - begin: '20240715160000'
+    amount: 90
+    type: work
+    subject: learn
+    name: hypercore sample
+    readme: |
+      - read the exsamples :https://github.com/holepunchto/hypercore/tree/main/examples
+      - update D:\huangyg\git\js.sample\dat\hypercore.js
+    output: ../../draft/2024/07/20240715160000.md

@@ -33,12 +33,11 @@ module.exports = {
         var minute = date.slice(10,12);
         var second = date.slice(12,14);
 
-        var theDate = new Date(year,month,day,hour,minute,second);
+        var theDate = new Date(year,month-1,day,hour,minute,second);
         //console.log(theDate.Format("yyyy-MM-dd hh:mm:ss.S"));
         return theDate;
     }
 }
-
 
 /* 
 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 

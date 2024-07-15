@@ -132,7 +132,7 @@ dayplan:
         amount: 90
         type: work
         name: 工作
-        namelink: http://simp.ly/p/3GXNTh
+        namelink: http://simp.ly/p/WZ077p
       - beginhour: 11
         beginminute: 0
         amount: 180
@@ -566,11 +566,11 @@ time:
     js: 1200
   sold:
     PSMD: 402
-    ego: 862
+    ego: 952
     xuemen: 30
     infra: 90
-    js: 451
-    learn: 722
+    js: 541
+    learn: 782
     raw: 90
 todo:
   PSMD:
@@ -582,10 +582,6 @@ todo:
     - '90': 以1406为例检查知识图谱和blawx的语法
     - '60': 设计条款的可执行机制
   ego:
-    - '90': 使用新版day、season、waitinglist的ego.js
-      readme: |
-        - 整理maketomorowinfo()、testdayplan()到新版day.js
-        - https://github.com/tj/commander.js/blob/HEAD/Readme_zh-CN.md#%E5%91%BD%E4%BB%A4
     - '90': 根据ego对外信息接口编写页面代码
       readme: |
         D:\huangyg\git\blog\release\time\d.20240604.md
@@ -603,10 +599,6 @@ todo:
         - draft文件名
   infra: []
   learn:
-    - '60': hypercore sample
-      readme: |
-        - read the exsamples :https://github.com/holepunchto/hypercore/tree/main/examples
-        - update D:\huangyg\git\js.sample\dat\hypercore.js
     - '90': pear api sample
       readme: |
         - https://docs.pears.com/pear-runtime/api
@@ -639,10 +631,15 @@ todo:
       readme: |
         - https://zh.javascript.info/promise-api
   js:
-    - '90': helia and orbitdb sample
+    - '30': 限定nodejs版本
       readme: |
-        - https://helia.io/
-        - https://api.orbitdb.org/
+        - https://segmentfault.com/q/1010000042599510
+      bind:
+        - '60': helia, orbitdb sample
+          readme: |
+            - read 2024.07.15. 14:00 draft
+    - '90': try "@helia/ipns" sample
+      readme: |
         - https://github.com/ipfs/helia-ipns
         - https://github.com/ipfs/js-ipns
     - '60': git sample

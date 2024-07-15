@@ -1,9 +1,3 @@
-const fs = require('fs');
-const yaml = require('js-yaml');
-const path = require('./path.js');
-const util = require('./util.js');
-const start = require('./start.js');
-const finish = require('./finish.js');
 const day = require('./day.js');
 
 const { Command } = require('commander');
@@ -14,7 +8,7 @@ function log(...s) {
     console.log(...s);
 }
 
-const debug = true;
+const debug = false;
 day.debug = debug;
 
 program
@@ -31,13 +25,22 @@ daycommand
     .description('初始化：绑定时间模版，创建日计划、次日规划、手稿及元数据文件。')
     .action((mode) => {
         log("init:", mode);
+        day.makedayobj(mode);
     });
 
 daycommand
-    .command("over <diff>")
+    .command("over [date]")
     .description('工作结束，生成日小结、更新次日规划。')
-    .action((diff) => {
-        log("over:", diff);
+    .action((date) => {
+        log("over:", date);
+        if (date == undefined) {
+            var dayobj = day.loaddayobj();
+            day.makedaylog(dayobj);
+            day.maketomorrowinfo();
+        } else {
+            var dayobj = day.loaddayobjbydate(date);
+            day.makedaylog(dayobj);
+        }
     });
 
 daycommand
@@ -45,8 +48,9 @@ daycommand
     .description('显示次日规划，不更新任何文件。')
     .action(() => {
         log("plan");
+        day.debug = true;
+        day.maketomorrowinfo();
     });
-
 
 daycommand
     .command("test [data]")
