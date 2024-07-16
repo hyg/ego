@@ -33,7 +33,7 @@ module.exports = {
         var datestr = util.datestr(diff);
         var year = datestr.slice(0,4);
 
-        var dayfilename = path.daymetadatapath + "/" + year + "/" + "d." + datestr + ".yaml";
+        var dayfilename = path.daymetadatapath + year + "/" + "d." + datestr + ".yaml";
         return dayfilename;
     },
     loaddayobj: function (diff = 0) {
@@ -241,7 +241,7 @@ module.exports = {
         return indexstr;
     },
     makedayplan: function (dayobj) {
-        var datestr = util.datestr(diff);
+        var datestr = dayobj.date;
         var date = util.str2time(datestr);
 
         var dayplanstr = "# " + date.Format("yyyy.MM.dd.") + "\n日计划\n\n"

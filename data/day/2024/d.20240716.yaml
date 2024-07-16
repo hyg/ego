@@ -1,0 +1,93 @@
+date: '20240716'
+mode: '1'
+plan: 1a
+time:
+  - begin: '20240716041200'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20240716042700'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20240716052700'
+    amount: 45
+    type: food
+    name: 早餐
+  - begin: '20240716061200'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20240716065700'
+    amount: 47
+    type: free
+    name: 休整
+  - begin: '20240716074500'
+    amount: 60
+    type: work
+    name: 静默工作
+    subject: raw
+    title: 自动从网页提取营养成分表
+    readme: |
+      - https://www.npmjs.com/package/htmlparser2
+      - https://www.npmjs.com/package/jsdom
+      - https://htmltojsonconverter.azurewebsites.net/
+      - https://developerxyz.com/free-tools/html-to-json-converter
+    output: ../../draft/2024/07/20240716074500.md
+    namelink: http://simp.ly/p/xtgD4F
+  - begin: '20240716084500'
+    amount: 45
+    type: free
+    name: 休整
+  - begin: '20240716093000'
+    amount: 90
+    type: work
+    name: 静默工作
+    subject: ego
+    title: 根据ego对外信息接口编写页面代码
+    readme: |
+      D:\huangyg\git\blog\release\time\d.20240604.md
+    output: ../../draft/2024/07/20240716093000.md
+    namelink: http://simp.ly/p/j1SspP
+  - begin: '20240716110000'
+    amount: 180
+    type: food
+    name: 备餐、午餐午休
+  - begin: '20240716140000'
+    amount: 50
+    type: work
+    name: 静默工作
+    subject: js
+    title: 限定nodejs版本
+    readme: |
+      - https://segmentfault.com/q/1010000042599510
+    output: ../../draft/2024/07/20240716140000.md
+    namelink: http://simp.ly/p/8t3vlk
+  - begin: '20240716143000'
+    amount: 0
+    type: work
+    name: 静默工作
+    subject: learn
+    title: Query fundamentals https://console.neo4j.io
+    output: ../../draft/2024/07/20240716143000.md
+    namelink: http://simp.ly/p/5k9gJy
+  - begin: '20240716150000'
+    amount: 60
+    type: free
+    name: 休整
+  - begin: '20240716160000'
+    amount: 70
+    type: work
+    name: 静默工作
+    subject: ego
+    title: 设计subtask与todo的关系，保持工作的持续连贯。
+    output: ../../draft/2024/07/20240716160000.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20240716170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20240716190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交

@@ -25,7 +25,9 @@ daycommand
     .description('初始化：绑定时间模版，创建日计划、次日规划、手稿及元数据文件。')
     .action((mode) => {
         log("init:", mode);
-        day.makedayobj(mode);
+        var dayobj = day.makedayobj(mode);
+        day.makedayplan(dayobj);
+        day.maketomorrowinfo();
     });
 
 daycommand
@@ -57,6 +59,9 @@ daycommand
     .description('测试新代码')
     .action((data) => {
         log("test:", data);
+        var dayobj = day.loaddayobj();
+        day.makedayplan(dayobj);
+        day.maketomorrowinfo();
     });
 
 program.parse();
