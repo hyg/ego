@@ -604,10 +604,6 @@ todo:
       readme: |
         - https://mermaid.nodejs.cn/syntax/gantt.html
         - read 2024.07.16.16:00 draft
-    - '90': pear api sample
-      readme: |
-        - https://docs.pears.com/pear-runtime/api
-        - https://docs.pears.com/guides/starting-a-pear-terminal-project
     - '60': schema in ipld
       readme: |
         - https://ipld.io/docs/schemas/intro/
@@ -635,13 +631,23 @@ todo:
       readme: |
         - https://zh.javascript.info/promise-api
   js:
-    - '60': helia, orbitdb sample
+    - '60': helia ipns sample (libp2p/keychain)
       readme: |
-        - read 2024.07.15. 14:00 draft
-    - '90': try "@helia/ipns" sample
+        - read 2024.07.17. 14:00 draft
+        - learn @libp2p/keychain https://github.com/libp2p/js-libp2p-keychain
+        - learn sample https://helia.io/modules/_helia_ipns.html
+      bind:
+        - '60': learn Orbitdb
+          readme: |
+            - read 2024.07.15. 14:00 draft
+            - read 2024.07.17. 16:00 draft
+            - https://api.orbitdb.org/
+    - '60': learn js implement of ipfs
       readme: |
-        - https://github.com/ipfs/helia-ipns
-        - https://github.com/ipfs/js-ipns
+        - https://docs.ipfs.tech/reference/js/api/#get-started
+        - https://github.com/ipfs/kubo
+        - https://github.com/elastic-ipfs/elastic-ipfs
+    - '60': 基于dat,hypercore,hyperswarm等模块的浏览器动态页面范例。
     - '60': git sample
       readme: |
         - https://isomorphic-git.org/docs/en/snippets
@@ -675,6 +681,13 @@ todo:
         - finish the parseeshian() in D:\huangyg\git\js.sample\htmlparser\json2e.js , save e.foodname.yaml use DRI and NRV metadata.
         - 抓取网页:https://pptr.nodejs.cn/
         - https://www.npmjs.com/package/puppeteer
+    - '60': 设计新版raw.js架构。
+      readme: |
+        - 增加子命令和参数。
+        - 划分独立模块。
+      bind:
+        - '30': 新版raw.js的子命令-营养成分详情
+        - '30': 新版raw.js的子命令-营养成分排序
   xuemen:
     - '195': 关于对《北京市自动驾驶汽车条例（征求意见稿）》公开征集意见的公告
       readme: |

@@ -1,0 +1,72 @@
+date: '20240717'
+mode: '2'
+plan: 2b
+time:
+  - begin: '20240717052900'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20240717054400'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20240717064400'
+    amount: 45
+    type: food
+    name: 早餐
+  - begin: '20240717072900'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20240717081400'
+    amount: 75
+    type: free
+    name: 休整
+  - begin: '20240717093000'
+    amount: 100
+    type: work
+    name: 工作
+    subject: learn
+    title: pear api sample
+    readme: |
+      - https://docs.pears.com/pear-runtime/api
+      - https://docs.pears.com/guides/starting-a-pear-terminal-project
+    output: ../../draft/2024/07/20240717093000.md
+    namelink: http://simp.ly/p/WZ077p
+  - begin: '20240717110000'
+    amount: 180
+    type: food
+    name: 备餐、午餐午休
+  - begin: '20240717140000'
+    amount: 110
+    type: work
+    name: 工作
+    subject: js
+    title: try "@helia/ipns" sample
+    readme: |
+      - https://github.com/ipfs/helia-ipns
+      - https://github.com/ipfs/js-ipns
+    output: ../../draft/2024/07/20240717140000.md
+    namelink: http://simp.ly/p/lsBYG9
+  - begin: '20240717153000'
+    amount: 30
+    type: free
+    name: 休整
+  - begin: '20240717160000'
+    amount: 65
+    type: work
+    name: 工作
+    subject: js
+    title: helia, orbitdb sample
+    readme: |
+      - read 2024.07.15. 14:00 draft
+    output: ../../draft/2024/07/20240717160000.md
+    namelink: http://simp.ly/p/MpcbHD
+  - begin: '20240717170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20240717190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
