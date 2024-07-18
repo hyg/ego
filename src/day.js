@@ -227,7 +227,7 @@ module.exports = {
 
             var linkstr = "";
             if (type == "plan") {
-                linkstr = path.gitpath + timeperiod.output;
+                linkstr = timeperiod.output;
             } else if (type == "log") {
                 linkstr = "#" + timeperiod.begin;
             }

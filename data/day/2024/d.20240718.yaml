@@ -1,0 +1,94 @@
+date: '20240718'
+mode: '1'
+plan: 1a
+time:
+  - begin: '20240718040600'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20240718042100'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20240718052100'
+    amount: 45
+    type: food
+    name: 早餐
+  - begin: '20240718060600'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20240718065100'
+    amount: 53
+    type: free
+    name: 休整
+  - begin: '20240718074500'
+    amount: 100
+    type: work
+    name: 静默工作
+    subject: js
+    title: helia ipns sample (libp2p/keychain)
+    readme: |
+      - read 2024.07.17. 14:00 draft
+      - learn @libp2p/keychain https://github.com/libp2p/js-libp2p-keychain
+      - learn sample https://helia.io/modules/_helia_ipns.html
+    output: ../../draft/2024/07/20240718074500.md
+    namelink: http://simp.ly/p/xtgD4F
+  - begin: '20240718084500'
+    amount: 5
+    type: free
+    name: 休整
+  - begin: '20240718093000'
+    amount: 90
+    type: work
+    name: 静默工作
+    subject: js
+    title: learn Secure Scuttlebutt
+    readme: |
+      - http://ssbc.github.io/ssb-db/
+      - https://scuttlebot.io
+    output: ../../draft/2024/07/20240718093000.md
+    namelink: http://simp.ly/p/j1SspP
+  - begin: '20240718110000'
+    amount: 180
+    type: food
+    name: 备餐、午餐午休
+  - begin: '20240718140000'
+    amount: 30
+    type: work
+    name: 静默工作
+    subject: ego
+    title: 设计ego中task的种类、设立、注销规则。
+    output: ../../draft/2024/07/20240718140000.md
+    namelink: http://simp.ly/p/8t3vlk
+  - begin: '20240718143000'
+    amount: 30
+    type: work
+    name: 静默工作
+    subject: learn
+    title: 确定mermaid gantt语法是否能表达ego模型task关系
+    readme: |
+      - https://mermaid.nodejs.cn/syntax/gantt.html
+      - read 2024.07.16.16:00 draft
+    output: ../../draft/2024/07/20240718143000.md
+    namelink: http://simp.ly/p/5k9gJy
+  - begin: '20240718150000'
+    amount: 60
+    type: free
+    name: 休整
+  - begin: '20240718160000'
+    amount: 60
+    type: work
+    name: 静默工作
+    subject: ego
+    title: 编写ego中task的schema
+    output: ../../draft/2024/07/20240718160000.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20240718170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20240718190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交

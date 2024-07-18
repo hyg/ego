@@ -582,8 +582,7 @@ todo:
         - 考虑upgradeby的实现。
     - '60': 设计条款的可执行机制
   ego:
-    - '30': 设计ego中task的种类、设立、注销规则。
-    - '60': 编写ego中task的schema
+    - '60': 实践检验一下stage、level、branch、error等task type。
     - '90': 用linkml和json schema沿信息接口向内建模。
       readme: |
         - D:/huangyg/git/blog/release/time/d.20240604.md
@@ -600,10 +599,10 @@ todo:
         - draft文件名
   infra: []
   learn:
-    - '30': 确定mermaid gantt语法是否能表达ego模型task关系
+    - '30': learn gemini protocol
       readme: |
-        - https://mermaid.nodejs.cn/syntax/gantt.html
-        - read 2024.07.16.16:00 draft
+        - https://geminiprotocol.net/
+        - gemini://geminiprotocol.net/
     - '60': schema in ipld
       readme: |
         - https://ipld.io/docs/schemas/intro/
@@ -631,17 +630,20 @@ todo:
       readme: |
         - https://zh.javascript.info/promise-api
   js:
-    - '60': helia ipns sample (libp2p/keychain)
+    - '60': learn ssb db
       readme: |
-        - read 2024.07.17. 14:00 draft
-        - learn @libp2p/keychain https://github.com/libp2p/js-libp2p-keychain
-        - learn sample https://helia.io/modules/_helia_ipns.html
-      bind:
-        - '60': learn Orbitdb
-          readme: |
-            - read 2024.07.15. 14:00 draft
-            - read 2024.07.17. 16:00 draft
-            - https://api.orbitdb.org/
+        - read 2024.07.18. 9:30 draft
+        - https://github.com/ssbc/ssb-db2
+        - find broswer utils
+    - '30': debug helia/ipns
+      readme: |
+        - readme 2024.07.18. 7:45 draft
+        - /ipfs/bafkreiaixnpf23vkyecj5xqispjq5ubcwgsntnnurw2bjby7khe4wnjihu 为什么没有发布出来，重点考虑helia.start()。
+    - '60': learn Orbitdb
+      readme: |
+        - read 2024.07.15. 14:00 draft
+        - read 2024.07.17. 16:00 draft
+        - https://api.orbitdb.org/
     - '60': learn js implement of ipfs
       readme: |
         - https://docs.ipfs.tech/reference/js/api/#get-started

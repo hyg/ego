@@ -1,0 +1,49 @@
+id: https://raw.githubusercontent.com/hyg/ego/vat/data/task
+name: task
+prefixes:
+  linkml: https://w3id.org/linkml/
+  task: https://raw.githubusercontent.com/hyg/ego/vat/data/task
+  ORCID: https://orcid.org/
+imports:
+  - linkml:types
+default_range: string
+default_prefix: task
+
+classes:
+  task:
+    attributes:
+      id:
+        identifier: true 
+      name:
+        required: true
+      parent id:
+        required: true
+      start:
+      status:
+        range: TaskStatus
+      dependencies:
+        range: depend
+      readme:
+      log:
+  depend:
+    attributes:
+      Finish-to-Start:
+        multivalued: true
+        inlined_as_list: true
+      Start-to-Start:
+        multivalued: true
+        inlined_as_list: true
+      Finish-to-Finish:
+        multivalued: true
+        inlined_as_list: true
+      Start-to-Finish:
+        multivalued: true
+        inlined_as_list: true
+enums:
+  TaskStatus:
+    permissible_values:
+      active:
+      done:
+      crit:
+      unknown:
+      milestone:

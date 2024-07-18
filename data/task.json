@@ -1,0 +1,89 @@
+{
+    "$defs": {
+        "Depend": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "Finish_to_Finish": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "Finish_to_Start": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "Start_to_Finish": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "Start_to_Start": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                }
+            },
+            "title": "Depand",
+            "type": "object"
+        },
+        "Task": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "dependencies": {
+                    "$ref": "#/$defs/Depend"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "log": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "parent_id": {
+                    "type": "string"
+                },
+                "readme": {
+                    "type": "string"
+                },
+                "start": {
+                    "type": "string"
+                },
+                "status": {
+                    "$ref": "#/$defs/TaskStatus"
+                }
+            },
+            "required": [
+                "id",
+                "name",
+                "parent_id"
+            ],
+            "title": "Task",
+            "type": "object"
+        },
+        "TaskStatus": {
+            "description": "",
+            "enum": [
+                "active",
+                "done",
+                "crit",
+                "unknown",
+                "milestone"
+            ],
+            "title": "TaskStatus",
+            "type": "string"
+        }
+    },
+    "$id": "https://raw.githubusercontent.com/hyg/ego/vat/data/task",
+    "additionalProperties": true,
+    "title": "task",
+    "type": "object"
+}
