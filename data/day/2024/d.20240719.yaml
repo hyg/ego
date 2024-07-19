@@ -1,0 +1,82 @@
+date: '20240719'
+mode: '1'
+plan: 1b
+time:
+  - begin: '20240719052600'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20240719054100'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20240719064100'
+    amount: 45
+    type: food
+    name: 早餐
+  - begin: '20240719072600'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20240719081100'
+    amount: 78
+    type: free
+    name: 休整
+  - begin: '20240719093000'
+    amount: 90
+    type: work
+    name: 静默工作
+    subject: ego
+    title: 用linkml和json schema沿信息接口向内建模。
+    readme: |
+      - D:/huangyg/git/blog/release/time/d.20240604.md
+      - 2024.7.16. 9:30 draft 
+    output: ../../draft/2024/07/20240719093000.md
+    namelink: http://simp.ly/p/j1SspP
+  - begin: '20240719110000'
+    amount: 180
+    type: food
+    name: 备餐、午餐午休
+  - begin: '20240719140000'
+    amount: 75
+    type: work
+    name: 静默工作
+    subject: learn
+    title: learn gemini protocol
+    readme: |
+      - https://geminiprotocol.net/
+      - gemini://geminiprotocol.net/
+    output: ../../draft/2024/07/20240719140000.md
+    namelink: http://simp.ly/p/8t3vlk
+  - begin: '20240719143000'
+    amount: 60
+    type: work
+    name: 静默工作
+    subject: js
+    title: debug helia/ipns
+    readme: |
+      - readme 2024.07.18. 7:45 draft
+      - read other samples https://helia.io/modules/_helia_ipns.html
+      - /ipfs/bafkreiaixnpf23vkyecj5xqispjq5ubcwgsntnnurw2bjby7khe4wnjihu 为什么没有发布出来，重点考虑helia.start()。
+    output: ../../draft/2024/07/20240719143000.md
+    namelink: http://simp.ly/p/5k9gJy
+  - begin: '20240719150000'
+    amount: 60
+    type: free
+    name: 休整
+  - begin: '20240719160000'
+    amount: 60
+    type: work
+    name: 静默工作
+    subject: ego
+    title: 实践检验一下stage、level、branch、error等task type。
+    output: ../../draft/2024/07/20240719160000.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20240719170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20240719190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交

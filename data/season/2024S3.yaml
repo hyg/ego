@@ -574,19 +574,19 @@ time:
     raw: 90
 todo:
   PSMD:
+    - '60': 设计term模型中event、action字段
+      readme: |
+        - 结合text字段生成UI行为。
+        - 业务逻辑的片段：FSM分立、合并的方法。
+        - 或者另一个模型，连接term、event、action。
+    - '60': 设计条款的可执行机制
     - '195': data -> schema 迭代范例
     - '195': term + COM matedata -> deploy metadata -> deploy view
     - '90': 以1406为例检查知识图谱和blawx的语法
     - '90': term metadata的序号，分为显示序号和唯一id两种。
       readnme: |
         - 考虑upgradeby的实现。
-    - '60': 设计条款的可执行机制
   ego:
-    - '60': 实践检验一下stage、level、branch、error等task type。
-    - '90': 用linkml和json schema沿信息接口向内建模。
-      readme: |
-        - D:/huangyg/git/blog/release/time/d.20240604.md
-        - 2024.7.16. 9:30 draft 
     - '60': 用js代码完成日小结后的git操作。
       readme: |
         - 参考：D:\huangyg\git\draft\2024\04\20240430140000.md
@@ -599,10 +599,6 @@ todo:
         - draft文件名
   infra: []
   learn:
-    - '30': learn gemini protocol
-      readme: |
-        - https://geminiprotocol.net/
-        - gemini://geminiprotocol.net/
     - '60': schema in ipld
       readme: |
         - https://ipld.io/docs/schemas/intro/
@@ -630,15 +626,19 @@ todo:
       readme: |
         - https://zh.javascript.info/promise-api
   js:
+    - '60': leran helia ipns
+      readme: |
+        - read draft: 2024.07.18. 7:45 ,2024.07.19.14:30
+        - https://helia.io/modules/_helia_ipns.html
+        - try ipns cover a helia/json content
+        - try ipns.2 resolve the content cid from peerid
+        - try publish to a path: /ipfs/.../foo.txt and read it from another pc
+          - https://helia.io/modules/_helia_ipns.html#md:example---publishing-a-record-with-a-path
     - '60': learn ssb db
       readme: |
         - read 2024.07.18. 9:30 draft
         - https://github.com/ssbc/ssb-db2
         - find broswer utils
-    - '30': debug helia/ipns
-      readme: |
-        - readme 2024.07.18. 7:45 draft
-        - /ipfs/bafkreiaixnpf23vkyecj5xqispjq5ubcwgsntnnurw2bjby7khe4wnjihu 为什么没有发布出来，重点考虑helia.start()。
     - '60': learn Orbitdb
       readme: |
         - read 2024.07.15. 14:00 draft
