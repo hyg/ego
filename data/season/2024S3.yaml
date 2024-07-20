@@ -565,13 +565,13 @@ time:
     learn: 1500
     js: 1200
   sold:
-    PSMD: 402
-    ego: 952
+    PSMD: 462
+    ego: 1382
     xuemen: 30
     infra: 90
-    js: 541
-    learn: 782
-    raw: 90
+    js: 1086
+    learn: 1107
+    raw: 150
 todo:
   PSMD:
     - '60': 设计条款的可执行机制

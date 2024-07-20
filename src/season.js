@@ -32,6 +32,7 @@ module.exports = {
         if (this.debug == false) {
             fs.writeFileSync(seasonfilename, yaml.dump(seasonobj, { 'lineWidth': -1 }));
         }
+        log("seasonobj.time:\n%s", yaml.dump(seasonobj.time, { 'lineWidth': -1 }));
         //log("seasonobj.todo:\n%s", yaml.dump(seasonobj.todo, { 'lineWidth': -1 }));
     },
     updatesold: function (seasonobj) {

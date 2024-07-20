@@ -62,6 +62,8 @@ module.exports = {
         
     },
     makedayobj: function (mode, diff = 0) {
+        season.debug = this.debug;
+        
         var date = util.datestr(diff);
         var waketime = this.getwaketime(diff) % 1000000;
         log("waketime:", waketime);
@@ -257,9 +259,14 @@ module.exports = {
         return dayplanstr;
     },
     makedaylog: function (dayobj) {
+        season.debug = this.debug;
+
         var datestr = dayobj.date.toString();
         var date = util.str2time(datestr);
+        
         var seasonobj = season.loadseasonobj();
+        seasonobj = season.updatesold(seasonobj);
+        season.dumpseasonobj(seasonobj);
         var waitinglist = wl.makewaitinglist(seasonobj);
         log("date:",date);
 
@@ -306,6 +313,8 @@ module.exports = {
         return outputliststr;
     },
     maketomorrowinfo: function () {
+        season.debug = this.debug;
+
         var datestr = util.datestr(1);
         var date = util.str2time(datestr);
         var seasonobj = season.loadseasonobj();
