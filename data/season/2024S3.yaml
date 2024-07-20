@@ -574,19 +574,20 @@ time:
     raw: 90
 todo:
   PSMD:
-    - '60': 设计term模型中event、action字段
-      readme: |
-        - 结合text字段生成UI行为。
-        - 业务逻辑的片段：FSM分立、合并的方法。
-        - 或者另一个模型，连接term、event、action。
     - '60': 设计条款的可执行机制
     - '195': data -> schema 迭代范例
+    - '60': 升级knowledge模型
+      readme: |
+        - read 2024.07.20 16:00 draft
     - '195': term + COM matedata -> deploy metadata -> deploy view
     - '90': 以1406为例检查知识图谱和blawx的语法
     - '90': term metadata的序号，分为显示序号和唯一id两种。
       readnme: |
         - 考虑upgradeby的实现。
   ego:
+    - '60': 整理task及其相互关系
+      readme: |
+        - readme 2024.07.20. 09:30 draft
     - '60': 用js代码完成日小结后的git操作。
       readme: |
         - 参考：D:\huangyg\git\draft\2024\04\20240430140000.md
@@ -599,15 +600,18 @@ todo:
         - draft文件名
   infra: []
   learn:
-    - '60': schema in ipld
+    - '30': schema in ipld,reading time.
       readme: |
         - https://ipld.io/docs/schemas/intro/
-    - '60': linkml, yaml-ld
+      bind:
+        - '30': schema in ipld,codingh time.
+    - '30': linkml, yaml-ld, reading time.
       readme: |
         - https://linkml.io/linkml/schemas/models.html
         - https://linkml.io/linkml/intro/tutorial04.html
-    - '90': 拟制说、目的财产说、实在说
-    - '60': Decentralized Identifiers
+      bind:
+        - '30': linkml, yaml-ld, coding time.
+    - '30': Decentralized Identifiers
       readme: |
         https://did.js.org/
         https://www.w3.org/TR/did-use-cases/
@@ -626,7 +630,7 @@ todo:
       readme: |
         - https://zh.javascript.info/promise-api
   js:
-    - '60': leran helia ipns
+    - '30': leran helia ipns,reading time.
       readme: |
         - read draft: 2024.07.18. 7:45 ,2024.07.19.14:30
         - https://helia.io/modules/_helia_ipns.html
@@ -634,11 +638,15 @@ todo:
         - try ipns.2 resolve the content cid from peerid
         - try publish to a path: /ipfs/.../foo.txt and read it from another pc
           - https://helia.io/modules/_helia_ipns.html#md:example---publishing-a-record-with-a-path
-    - '60': learn ssb db
+      bind:
+        - '30': leran helia ipns,coding time.
+    - '30': learn ssb db,reading time.
       readme: |
         - read 2024.07.18. 9:30 draft
         - https://github.com/ssbc/ssb-db2
         - find broswer utils
+      bind:
+        - '30': learn ssb db,coding time.
     - '60': learn Orbitdb
       readme: |
         - read 2024.07.15. 14:00 draft
@@ -672,10 +680,6 @@ todo:
         - https://github.com/matrix-org/matrix-js-sdk
         - http://matrix-org.github.io/matrix-js-sdk/index.html
     - '60': 学习'Electron'，创作一个范例。
-    - '30': text->id,protobuf-javascript
-      readme: |
-        https://github.com/protocolbuffers/protobuf-javascript
-    - '30': 用day.js改写util.js
   raw:
     - '60': 自动从网页提取营养成分表
       readme: |
@@ -691,7 +695,7 @@ todo:
         - '30': 新版raw.js的子命令-营养成分详情
         - '30': 新版raw.js的子命令-营养成分排序
   xuemen:
-    - '195': 关于对《北京市自动驾驶汽车条例（征求意见稿）》公开征集意见的公告
+    - '90': 关于对《北京市自动驾驶汽车条例（征求意见稿）》公开征集意见的公告
       readme: |
         - https://www.beijing.gov.cn/hudong/gfxwjzj/zjxx/202406/t20240630_3733376.html
         - https://www.sohu.com/a/162518719_526275

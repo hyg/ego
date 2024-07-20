@@ -1,0 +1,78 @@
+date: '20240720'
+mode: '1'
+plan: 1b
+time:
+  - begin: '20240720054100'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20240720055600'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20240720065600'
+    amount: 45
+    type: food
+    name: 早餐
+  - begin: '20240720074100'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20240720082600'
+    amount: 63
+    type: free
+    name: 休整
+  - begin: '20240720093000'
+    amount: 90
+    type: work
+    name: 静默工作
+    subject: learn
+    title: 拟制说、目的财产说、实在说
+    output: ../../draft/2024/07/20240720093000.md
+    namelink: http://simp.ly/p/j1SspP
+  - begin: '20240720110000'
+    amount: 180
+    type: food
+    name: 备餐、午餐午休
+  - begin: '20240720140000'
+    amount: 30
+    type: work
+    name: 静默工作
+    subject: js
+    title: text->id,protobuf-javascript
+    readme: |
+      https://github.com/protocolbuffers/protobuf-javascript
+    output: ../../draft/2024/07/20240720140000.md
+    namelink: http://simp.ly/p/8t3vlk
+  - begin: '20240720143000'
+    amount: 30
+    type: work
+    name: 静默工作
+    subject: js
+    title: 用day.js改写util.js
+    output: ../../draft/2024/07/20240720143000.md
+    namelink: http://simp.ly/p/5k9gJy
+  - begin: '20240720150000'
+    amount: 60
+    type: free
+    name: 休整
+  - begin: '20240720160000'
+    amount: 60
+    type: work
+    name: 静默工作
+    subject: PSMD
+    title: 设计term模型中event、action字段
+    readme: |
+      - 结合text字段生成UI行为。
+      - 业务逻辑的片段：FSM分立、合并的方法。
+      - 或者另一个模型，连接term、event、action。
+    output: ../../draft/2024/07/20240720160000.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20240720170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20240720190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
