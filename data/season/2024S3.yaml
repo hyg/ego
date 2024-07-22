@@ -565,21 +565,22 @@ time:
     learn: 1500
     js: 1200
   sold:
-    PSMD: 717
-    ego: 1382
+    PSMD: 887
+    ego: 1412
     xuemen: 120
     infra: 90
     js: 1086
-    learn: 1107
+    learn: 1207
     raw: 150
 todo:
   PSMD:
-    - '90': 整理新版本term的manifest text
+    - '195': 整理新版本term的manifest code
       readme: |
-        - read 2024.07.21 16:00 draft
-    - '60': 升级knowledge模型
+        - read 2024.07.22. 09:30 draft
+        - read D:\huangyg\git\draft\2024\07\20240721160000.md
+    - '60': knowledge model(protocol.log -> protocol + effect)
       readme: |
-        - read 2024.07.20 16:00 draft
+        - 2024.07.22 16:00 draft
     - '195': term + COM matedata -> deploy metadata -> deploy view
     - '90': 以1406为例检查知识图谱和blawx的语法
     - '90': term metadata的序号，分为显示序号和唯一id两种。
@@ -589,8 +590,8 @@ todo:
     - '60': schema manifest code v0
       readme: |
         - read 2024.07.21 07:45 draft
-      bind:
-        - '90': schema level 2 schema for code v1
+        - read 2024.07.22 07:45 draft
+    - '90': schema level 2 schema for code v1
     - '60': schema manifest law v0
       readme: |
         - read 2024.07.21 07:45 draft
@@ -611,11 +612,17 @@ todo:
         - draft文件名
   infra: []
   learn:
-    - '30': schema in ipld,reading time.
+    - '60': learn ipld,reading time.
       readme: |
-        - https://ipld.io/docs/schemas/intro/
+        - read 2024.07.22 14:00 draft
+        - https://ipld.io/docs/intro/primer/
+        - 彻底弄明白CID代替url实现linked data的实现细节。
       bind:
-        - '30': schema in ipld,codingh time.
+        - '60': schema in ipld,coding time.
+          readme: |
+            - https://www.npmjs.com/package/@ipld/schema
+            - https://github.com/ipld/js-ipld-schema
+            - read 2024.07.22 14:00 draft
     - '30': linkml, yaml-ld, reading time.
       readme: |
         - https://linkml.io/linkml/schemas/models.html
