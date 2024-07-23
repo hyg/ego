@@ -565,8 +565,8 @@ time:
     learn: 1500
     js: 1200
   sold:
-    PSMD: 887
-    ego: 1412
+    PSMD: 1037
+    ego: 1472
     xuemen: 120
     infra: 90
     js: 1086
@@ -574,24 +574,42 @@ time:
     raw: 150
 todo:
   PSMD:
-    - '195': 整理新版本term的manifest code
+    - '90': FPM(finite protocol machine) model
       readme: |
+        - a sample instance of FPM in manifest code 
+        - schema for code of FPM
+    - '90': 整理新版本term的manifest code
+      readme: |
+        - read 2024.07.23. 07:45 draft
         - read 2024.07.22. 09:30 draft
         - read D:\huangyg\git\draft\2024\07\20240721160000.md
-    - '60': knowledge model(protocol.log -> protocol + effect)
-      readme: |
-        - 2024.07.22 16:00 draft
+        - 设计前置protocol的定义和数据表现
+        - 逐个条款签署和整份protocol签署的关系，是否还需要嵌套term。
+          - 设计每项知识的思考和案例积累锚点。
+        - 随之修订manifest text。
     - '195': term + COM matedata -> deploy metadata -> deploy view
     - '90': 以1406为例检查知识图谱和blawx的语法
     - '90': term metadata的序号，分为显示序号和唯一id两种。
       readnme: |
         - 考虑upgradeby的实现。
   ego:
+    - '195': 新版ego, instance or model, any manifest
+    - '60': eventemitter sample
+      readme: |
+        - event listener in module
+        - auto load the event listener in main js file
+          - load them in a function in module
+          - load them in main js file use metadata
+      bind:
+        - '60': schema level 2 schema for code v1
+          readme: |
+            - schema means "task level and stage defined by schema"
+            - schema manifest code: generate tasks by level and stage define by schema
+            - schame level 2 schema for code: schema for develop "generate tasks by level and stage define by schema" 
     - '60': schema manifest code v0
       readme: |
         - read 2024.07.21 07:45 draft
         - read 2024.07.22 07:45 draft
-    - '90': schema level 2 schema for code v1
     - '60': schema manifest law v0
       readme: |
         - read 2024.07.21 07:45 draft
@@ -617,6 +635,8 @@ todo:
         - read 2024.07.22 14:00 draft
         - https://ipld.io/docs/intro/primer/
         - 彻底弄明白CID代替url实现linked data的实现细节。
+        - https://ipld.io/docs/schemas/intro/#schema-language-dsl-and-dmt-form
+        - https://ipld.io/docs/schemas/features/representation-strategies/
       bind:
         - '60': schema in ipld,coding time.
           readme: |
@@ -648,7 +668,7 @@ todo:
       readme: |
         - https://zh.javascript.info/promise-api
   js:
-    - '30': leran helia ipns,reading time.
+    - '30': learn helia ipns,reading time.
       readme: |
         - read draft: 2024.07.18. 7:45 ,2024.07.19.14:30
         - https://helia.io/modules/_helia_ipns.html

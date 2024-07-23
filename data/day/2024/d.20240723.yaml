@@ -1,0 +1,72 @@
+date: '20240723'
+mode: '2'
+plan: 2a
+time:
+  - begin: '20240723044000'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20240723045500'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20240723055500'
+    amount: 45
+    type: food
+    name: 早餐
+  - begin: '20240723064000'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20240723072500'
+    amount: 19
+    type: free
+    name: 休整
+  - begin: '20240723074500'
+    amount: 90
+    type: work
+    name: 工作
+    subject: PSMD
+    title: 整理新版本term的manifest code
+    readme: |
+      - read 2024.07.22. 09:30 draft
+      - read D:\huangyg\git\draft\2024\07\20240721160000.md
+      - 设计前置protocol的定义和数据表现
+      - 逐个条款签署和整份protocol签署的关系，是否还需要嵌套term。
+        - 设计每项知识的思考和案例积累锚点。
+    output: ../../draft/2024/07/20240723074500.md
+    namelink: http://simp.ly/p/3GXNTh
+  - begin: '20240723110000'
+    amount: 180
+    type: food
+    name: 备餐、午餐午休
+  - begin: '20240723140000'
+    amount: 60
+    type: work
+    name: 工作
+    subject: ego
+    title: schema level 2 schema for code v1
+    output: ../../draft/2024/07/20240723140000.md
+    namelink: http://simp.ly/p/lsBYG9
+  - begin: '20240723153000'
+    amount: 30
+    type: free
+    name: 休整
+  - begin: '20240723160000'
+    amount: 60
+    type: work
+    name: 工作
+    subject: PSMD
+    title: knowledge model(protocol.log -> protocol + effect)
+    readme: |
+      - 2024.07.22 16:00 draft
+    output: ../../draft/2024/07/20240723160000.md
+    namelink: http://simp.ly/p/MpcbHD
+  - begin: '20240723170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20240723190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
