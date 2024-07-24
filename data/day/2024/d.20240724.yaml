@@ -1,0 +1,102 @@
+date: '20240724'
+mode: '1'
+plan: 1a
+time:
+  - begin: '20240724044300'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20240724045800'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20240724055800'
+    amount: 45
+    type: food
+    name: 早餐
+  - begin: '20240724064300'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20240724072800'
+    amount: 16
+    type: free
+    name: 休整
+  - begin: '20240724074500'
+    amount: 75
+    type: work
+    name: 静默工作
+    subject: raw
+    title: 自动从网页提取营养成分表
+    readme: |
+      - read 2024.07.16.07:45 draft
+      - finish the parseeshian() in D:\huangyg\git\js.sample\htmlparser\json2e.js , save e.foodname.yaml use DRI and NRV metadata.
+      - 抓取网页:https://pptr.nodejs.cn/
+      - https://www.npmjs.com/package/puppeteer
+    output: ../../draft/2024/07/20240724074500.md
+    namelink: http://simp.ly/p/xtgD4F
+  - begin: '20240724084500'
+    amount: 45
+    type: free
+    name: 休整
+  - begin: '20240724093000'
+    amount: 105
+    type: work
+    name: 静默工作
+    subject: PSMD
+    title: FPM(finite protocol machine) model
+    readme: |
+      - a sample instance of FPM in manifest code 
+      - schema for code of FPM
+    output: ../../draft/2024/07/20240724093000.md
+    namelink: http://simp.ly/p/j1SspP
+  - begin: '20240724110000'
+    amount: 180
+    type: food
+    name: 备餐、午餐午休
+  - begin: '20240724140000'
+    amount: 30
+    type: work
+    name: 静默工作
+    subject: js
+    title: learn helia ipns,reading time.
+    readme: |
+      - read draft: 2024.07.18. 7:45 ,2024.07.19.14:30
+      - https://helia.io/modules/_helia_ipns.html
+      - try ipns cover a helia/json content
+      - try ipns.2 resolve the content cid from peerid
+      - try publish to a path: /ipfs/.../foo.txt and read it from another pc
+        - https://helia.io/modules/_helia_ipns.html#md:example---publishing-a-record-with-a-path
+    output: ../../draft/2024/07/20240724140000.md
+    namelink: http://simp.ly/p/8t3vlk
+  - begin: '20240724143000'
+    amount: 85
+    type: work
+    name: 静默工作
+    subject: js
+    title: leran helia ipns,coding time.
+    output: ../../draft/2024/07/20240724143000.md
+    namelink: http://simp.ly/p/5k9gJy
+  - begin: '20240724150000'
+    amount: 60
+    type: free
+    name: 休整
+  - begin: '20240724160000'
+    amount: 60
+    type: work
+    name: 静默工作
+    subject: raw
+    title: 设计新版raw.js架构。
+    readme: |
+      - 增加子命令和参数。
+      - 划分独立模块。
+    output: ../../draft/2024/07/20240724160000.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20240724170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20240724190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交

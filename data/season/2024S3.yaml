@@ -565,19 +565,21 @@ time:
     learn: 1500
     js: 1200
   sold:
-    PSMD: 1037
+    PSMD: 1142
     ego: 1472
     xuemen: 120
     infra: 90
-    js: 1086
+    js: 1201
     learn: 1207
-    raw: 150
+    raw: 285
 todo:
   PSMD:
     - '90': FPM(finite protocol machine) model
       readme: |
         - a sample instance of FPM in manifest code 
         - schema for code of FPM
+        - read D:\huangyg\git\draft\2024\07\20240723160000.md
+        - read 2024.07.24. 09:30 draft
     - '90': 整理新版本term的manifest code
       readme: |
         - read 2024.07.23. 07:45 draft
@@ -654,6 +656,7 @@ todo:
         https://did.js.org/
         https://www.w3.org/TR/did-use-cases/
         https://www.w3.org/TR/did-core/
+    - '60': learn web-llm
     - '60': 开发YARRRML范例
     - '90': 把PSMD的data、src部分升级到rdf，如果升级成功则作为范例。
     - '60': Windows PowerShell
@@ -668,16 +671,6 @@ todo:
       readme: |
         - https://zh.javascript.info/promise-api
   js:
-    - '30': learn helia ipns,reading time.
-      readme: |
-        - read draft: 2024.07.18. 7:45 ,2024.07.19.14:30
-        - https://helia.io/modules/_helia_ipns.html
-        - try ipns cover a helia/json content
-        - try ipns.2 resolve the content cid from peerid
-        - try publish to a path: /ipfs/.../foo.txt and read it from another pc
-          - https://helia.io/modules/_helia_ipns.html#md:example---publishing-a-record-with-a-path
-      bind:
-        - '30': leran helia ipns,coding time.
     - '30': learn ssb db,reading time.
       readme: |
         - read 2024.07.18. 9:30 draft
@@ -719,19 +712,18 @@ todo:
         - http://matrix-org.github.io/matrix-js-sdk/index.html
     - '60': 学习'Electron'，创作一个范例。
   raw:
-    - '60': 自动从网页提取营养成分表
-      readme: |
-        - read 2024.07.16.07:45 draft
-        - finish the parseeshian() in D:\huangyg\git\js.sample\htmlparser\json2e.js , save e.foodname.yaml use DRI and NRV metadata.
-        - 抓取网页:https://pptr.nodejs.cn/
-        - https://www.npmjs.com/package/puppeteer
     - '60': 设计新版raw.js架构。
       readme: |
         - 增加子命令和参数。
         - 划分独立模块。
-      bind:
-        - '30': 新版raw.js的子命令-营养成分详情
-        - '30': 新版raw.js的子命令-营养成分排序
+    - '60': 自动从网页提取营养成分表
+      readme: |
+        - read 2024.07.16.07:45 draft
+        - read 2024.07.24.07:45 draft
+        - 抓取网页:https://pptr.nodejs.cn/
+        - https://www.npmjs.com/package/puppeteer
+    - '30': 新版raw.js的子命令-营养成分详情
+    - '30': 新版raw.js的子命令-营养成分排序
   xuemen:
     - '195': kernel模型升级
     - '195': 重新设计S2状态下的学门基本管理制度
