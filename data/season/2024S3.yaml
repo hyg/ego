@@ -565,21 +565,20 @@ time:
     learn: 1500
     js: 1200
   sold:
-    PSMD: 1142
+    PSMD: 1247
     ego: 1472
     xuemen: 120
     infra: 90
-    js: 1201
-    learn: 1207
+    js: 1296
+    learn: 1292
     raw: 285
 todo:
   PSMD:
     - '90': FPM(finite protocol machine) model
       readme: |
-        - a sample instance of FPM in manifest code 
-        - schema for code of FPM
+        - a sample instance of machine,FPM,FSM in manifest code 
         - read D:\huangyg\git\draft\2024\07\20240723160000.md
-        - read 2024.07.24. 09:30 draft
+        - read 2024.07.24. 09:30, 2024.07.25. 09:30 draft
     - '90': 整理新版本term的manifest code
       readme: |
         - read 2024.07.23. 07:45 draft
@@ -634,17 +633,16 @@ todo:
   learn:
     - '60': learn ipld,reading time.
       readme: |
-        - read 2024.07.22 14:00 draft
+        - read 2024.07.22 14:00, 2024.07.25.16:00 draft
         - https://ipld.io/docs/intro/primer/
         - 彻底弄明白CID代替url实现linked data的实现细节。
         - https://ipld.io/docs/schemas/intro/#schema-language-dsl-and-dmt-form
         - https://ipld.io/docs/schemas/features/representation-strategies/
-      bind:
-        - '60': schema in ipld,coding time.
-          readme: |
-            - https://www.npmjs.com/package/@ipld/schema
-            - https://github.com/ipld/js-ipld-schema
-            - read 2024.07.22 14:00 draft
+    - '60': schema in ipld,coding time.
+      readme: |
+        - https://www.npmjs.com/package/@ipld/schema
+        - https://github.com/ipld/js-ipld-schema
+        - read 2024.07.22 14:00 draft
     - '30': linkml, yaml-ld, reading time.
       readme: |
         - https://linkml.io/linkml/schemas/models.html
@@ -671,13 +669,10 @@ todo:
       readme: |
         - https://zh.javascript.info/promise-api
   js:
-    - '30': learn ssb db,reading time.
+    - '30': learn SSB browser core
       readme: |
-        - read 2024.07.18. 9:30 draft
-        - https://github.com/ssbc/ssb-db2
-        - find broswer utils
-      bind:
-        - '30': learn ssb db,coding time.
+        - https://github.com/arj03/ssb-browser-core
+        - https://github.com/arj03/ssb-browser-example/
     - '60': learn Orbitdb
       readme: |
         - read 2024.07.15. 14:00 draft
@@ -716,14 +711,15 @@ todo:
       readme: |
         - 增加子命令和参数。
         - 划分独立模块。
+      bind:
+        - '30': 新版raw.js的子命令-营养成分详情
+        - '30': 新版raw.js的子命令-营养成分排序
     - '60': 自动从网页提取营养成分表
       readme: |
         - read 2024.07.16.07:45 draft
         - read 2024.07.24.07:45 draft
         - 抓取网页:https://pptr.nodejs.cn/
         - https://www.npmjs.com/package/puppeteer
-    - '30': 新版raw.js的子命令-营养成分详情
-    - '30': 新版raw.js的子命令-营养成分排序
   xuemen:
     - '195': kernel模型升级
     - '195': 重新设计S2状态下的学门基本管理制度
