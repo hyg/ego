@@ -1,0 +1,85 @@
+date: '20240726'
+mode: '1'
+plan: 1b
+time:
+  - begin: '20240726054700'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20240726060200'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20240726070200'
+    amount: 45
+    type: food
+    name: 早餐
+  - begin: '20240726074700'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20240726083200'
+    amount: 57
+    type: free
+    name: 休整
+  - begin: '20240726093000'
+    amount: 90
+    type: work
+    name: 静默工作
+    subject: PSMD
+    title: FPM(finite protocol machine) model
+    readme: |
+      - a sample instance of machine,FPM,FSM in manifest code 
+      - read D:\huangyg\git\draft\2024\07\20240723160000.md
+      - read 2024.07.24. 09:30, 2024.07.25. 09:30 draft
+    output: ../../draft/2024/07/20240726093000.md
+    namelink: http://simp.ly/p/j1SspP
+  - begin: '20240726110000'
+    amount: 180
+    type: food
+    name: 备餐、午餐午休
+  - begin: '20240726140000'
+    amount: 57
+    type: work
+    name: 静默工作
+    subject: js
+    title: learn SSB browser core
+    readme: |
+      - https://github.com/arj03/ssb-browser-core
+      - https://github.com/arj03/ssb-browser-example/
+    output: ../../draft/2024/07/20240726140000.md
+    namelink: http://simp.ly/p/8t3vlk
+  - begin: '20240726143000'
+    amount: 3
+    type: work
+    name: 静默工作
+    subject: learn
+    title: linkml, yaml-ld, reading time.
+    readme: |
+      - https://linkml.io/linkml/schemas/models.html
+      - https://linkml.io/linkml/intro/tutorial04.html
+    output: ../../draft/2024/07/20240726143000.md
+    namelink: http://simp.ly/p/5k9gJy
+  - begin: '20240726150000'
+    amount: 60
+    type: free
+    name: 休整
+  - begin: '20240726160000'
+    amount: 20
+    type: work
+    name: 静默工作
+    subject: raw
+    title: 设计新版raw.js架构。
+    readme: |
+      - 增加子命令和参数。
+      - 划分独立模块。
+    output: ../../draft/2024/07/20240726160000.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20240726170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20240726190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交

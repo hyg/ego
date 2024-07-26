@@ -565,20 +565,23 @@ time:
     learn: 1500
     js: 1200
   sold:
-    PSMD: 1247
+    PSMD: 1337
     ego: 1472
     xuemen: 120
     infra: 90
-    js: 1296
-    learn: 1292
-    raw: 285
+    js: 1353
+    learn: 1295
+    raw: 305
 todo:
   PSMD:
-    - '90': FPM(finite protocol machine) model
+    - '90': machines model
       readme: |
         - a sample instance of machine,FPM,FSM in manifest code 
         - read D:\huangyg\git\draft\2024\07\20240723160000.md
-        - read 2024.07.24. 09:30, 2024.07.25. 09:30 draft
+        - read 2024.07.24. 09:30, 2024.07.25. 09:30, 2024.07.26. 09:30 draft
+        - 实现FPM+FSM
+        - 从FSM、FPM中抽象出统一的mechine
+        - 实现joint、split机制
     - '90': 整理新版本term的manifest code
       readme: |
         - read 2024.07.23. 07:45 draft
@@ -643,12 +646,7 @@ todo:
         - https://www.npmjs.com/package/@ipld/schema
         - https://github.com/ipld/js-ipld-schema
         - read 2024.07.22 14:00 draft
-    - '30': linkml, yaml-ld, reading time.
-      readme: |
-        - https://linkml.io/linkml/schemas/models.html
-        - https://linkml.io/linkml/intro/tutorial04.html
-      bind:
-        - '30': linkml, yaml-ld, coding time.
+    - '30': linkml, yaml-ld, coding time.
     - '30': Decentralized Identifiers
       readme: |
         https://did.js.org/
@@ -669,10 +667,6 @@ todo:
       readme: |
         - https://zh.javascript.info/promise-api
   js:
-    - '30': learn SSB browser core
-      readme: |
-        - https://github.com/arj03/ssb-browser-core
-        - https://github.com/arj03/ssb-browser-example/
     - '60': learn Orbitdb
       readme: |
         - read 2024.07.15. 14:00 draft
@@ -707,13 +701,12 @@ todo:
         - http://matrix-org.github.io/matrix-js-sdk/index.html
     - '60': 学习'Electron'，创作一个范例。
   raw:
-    - '60': 设计新版raw.js架构。
+    - '30': 设计新版raw.js架构。
       readme: |
         - 增加子命令和参数。
         - 划分独立模块。
-      bind:
-        - '30': 新版raw.js的子命令-营养成分详情
-        - '30': 新版raw.js的子命令-营养成分排序
+    - '30': 新版raw.js的子命令-营养成分详情
+    - '30': 新版raw.js的子命令-营养成分排序
     - '60': 自动从网页提取营养成分表
       readme: |
         - read 2024.07.16.07:45 draft
