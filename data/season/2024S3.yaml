@@ -565,13 +565,13 @@ time:
     learn: 1500
     js: 1200
   sold:
-    PSMD: 1337
+    PSMD: 1412
     ego: 1472
     xuemen: 120
     infra: 90
     js: 1353
-    learn: 1295
-    raw: 305
+    learn: 1370
+    raw: 320
 todo:
   PSMD:
     - '90': machines model
@@ -634,10 +634,9 @@ todo:
         - draft文件名
   infra: []
   learn:
-    - '60': learn ipld,reading time.
+    - '60': Getting Things Done with IPLD
       readme: |
-        - read 2024.07.22 14:00, 2024.07.25.16:00 draft
-        - https://ipld.io/docs/intro/primer/
+        - https://ipld.io/docs/intro/primer/#getting-things-done-with-ipld
         - 彻底弄明白CID代替url实现linked data的实现细节。
         - https://ipld.io/docs/schemas/intro/#schema-language-dsl-and-dmt-form
         - https://ipld.io/docs/schemas/features/representation-strategies/
