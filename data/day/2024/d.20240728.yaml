@@ -1,0 +1,87 @@
+date: '20240728'
+mode: '1'
+plan: 1b
+time:
+  - begin: '20240728055900'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20240728061400'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20240728071400'
+    amount: 45
+    type: food
+    name: 早餐
+  - begin: '20240728075900'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20240728084400'
+    amount: 45
+    type: free
+    name: 休整
+  - begin: '20240728093000'
+    amount: 0
+    type: work
+    name: 静默工作
+    subject: PSMD
+    title: machines model
+    readme: |
+      - a sample instance of machine,FPM,FSM in manifest code 
+      - read D:\huangyg\git\draft\2024\07\20240723160000.md
+      - read 2024.07.24. 09:30, 2024.07.25. 09:30, 2024.07.26. 09:30 draft
+      - 实现FPM+FSM
+      - 从FSM、FPM中抽象出统一的mechine
+      - 实现joint、split机制
+    output: ../../draft/2024/07/20240728093000.md
+    namelink: http://simp.ly/p/j1SspP
+  - begin: '20240728110000'
+    amount: 180
+    type: food
+    name: 备餐、午餐午休
+  - begin: '20240728140000'
+    amount: 0
+    type: work
+    name: 静默工作
+    subject: raw
+    title: 设计新版raw.js架构。
+    readme: |
+      - 增加子命令和参数。
+      - 划分独立模块。
+    output: ../../draft/2024/07/20240728140000.md
+    namelink: http://simp.ly/p/8t3vlk
+  - begin: '20240728143000'
+    amount: 0
+    type: work
+    name: 静默工作
+    subject: raw
+    title: 新版raw.js的子命令-营养成分详情
+    output: ../../draft/2024/07/20240728143000.md
+    namelink: http://simp.ly/p/5k9gJy
+  - begin: '20240728150000'
+    amount: 60
+    type: free
+    name: 休整
+  - begin: '20240728160000'
+    amount: 15
+    type: work
+    name: 静默工作
+    subject: learn
+    title: Getting Things Done with IPLD
+    readme: |
+      - https://ipld.io/docs/intro/primer/#getting-things-done-with-ipld
+      - 彻底弄明白CID代替url实现linked data的实现细节。
+      - https://ipld.io/docs/schemas/intro/#schema-language-dsl-and-dmt-form
+      - https://ipld.io/docs/schemas/features/representation-strategies/
+    output: ../../draft/2024/07/20240728160000.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20240728170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20240728190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
