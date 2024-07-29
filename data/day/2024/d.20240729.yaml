@@ -1,0 +1,84 @@
+date: '20240729'
+mode: '2'
+plan: 2b
+time:
+  - begin: '20240729060400'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20240729061900'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20240729071900'
+    amount: 45
+    type: food
+    name: 早餐
+  - begin: '20240729080400'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20240729084900'
+    amount: 40
+    type: free
+    name: 休整
+  - begin: '20240729093000'
+    amount: 0
+    type: work
+    name: 工作
+    subject: PSMD
+    title: machines model
+    readme: |
+      - a sample instance of machine,FPM,FSM in manifest code 
+      - read D:\huangyg\git\draft\2024\07\20240723160000.md
+      - read 2024.07.24. 09:30, 2024.07.25. 09:30, 2024.07.26. 09:30 draft
+      - 实现FPM+FSM
+      - 从FSM、FPM中抽象出统一的mechine
+      - 实现joint、split机制
+    output: ../../draft/2024/07/20240729093000.md
+    namelink: http://simp.ly/p/WZ077p
+  - begin: '20240729110000'
+    amount: 180
+    type: food
+    name: 备餐、午餐午休
+  - begin: '20240729140000'
+    amount: 0
+    type: work
+    name: 工作
+    subject: PSMD
+    title: 整理新版本term的manifest code
+    readme: |
+      - read 2024.07.23. 07:45 draft
+      - read 2024.07.22. 09:30 draft
+      - read D:\huangyg\git\draft\2024\07\20240721160000.md
+      - 设计前置protocol的定义和数据表现
+      - 逐个条款签署和整份protocol签署的关系，是否还需要嵌套term。
+        - 设计每项知识的思考和案例积累锚点。
+      - 随之修订manifest text。
+    output: ../../draft/2024/07/20240729140000.md
+    namelink: http://simp.ly/p/lsBYG9
+  - begin: '20240729153000'
+    amount: 30
+    type: free
+    name: 休整
+  - begin: '20240729160000'
+    amount: 0
+    type: work
+    name: 工作
+    subject: learn
+    title: Getting Things Done with IPLD
+    readme: |
+      - https://ipld.io/docs/intro/primer/#getting-things-done-with-ipld
+      - 彻底弄明白CID代替url实现linked data的实现细节。
+      - https://ipld.io/docs/schemas/intro/#schema-language-dsl-and-dmt-form
+      - https://ipld.io/docs/schemas/features/representation-strategies/
+    output: ../../draft/2024/07/20240729160000.md
+    namelink: http://simp.ly/p/MpcbHD
+  - begin: '20240729170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20240729190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交

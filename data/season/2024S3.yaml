@@ -713,6 +713,9 @@ todo:
         - 抓取网页:https://pptr.nodejs.cn/
         - https://www.npmjs.com/package/puppeteer
   xuemen:
+    - '60': 国家网络身份认证公共服务管理办法
+      readme: |
+        - https://www.cac.gov.cn/2024-07/26/c_1723675813897965.htm
     - '195': kernel模型升级
     - '195': 重新设计S2状态下的学门基本管理制度
     - '60': term.e6f0caec -> xuemen COD metadata-S2状态下的部门模型
