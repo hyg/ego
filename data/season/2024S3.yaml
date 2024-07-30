@@ -565,9 +565,9 @@ time:
     learn: 1500
     js: 1200
   sold:
-    PSMD: 1412
+    PSMD: 1452
     ego: 1472
-    xuemen: 120
+    xuemen: 165
     infra: 90
     js: 1353
     learn: 1385
@@ -584,13 +584,16 @@ todo:
         - 实现joint、split机制
     - '90': 整理新版本term的manifest code
       readme: |
-        - read 2024.07.23. 07:45 draft
-        - read 2024.07.22. 09:30 draft
-        - read D:\huangyg\git\draft\2024\07\20240721160000.md
+        - 为了显示而设计的term model，并不适合与代码绑定。
         - 设计前置protocol的定义和数据表现
+          - 自身的行为及其原因，可以自述的范围：标出理性与非理性（下意识）行为的边界。
+          - 对待自身与其他方采取相同标准的范围：标出公平与（无法自控、无法意识到的）歧视的边界。
+          - 上述范围与边界对合作行为有明显影响，是protocol可以要求参与者公示的。为了展示自身的范围和边界，最佳方式就是展示前置protocol和历史记录，今后发现更好的展示方式（前置protocol无法表达的）可以随之修订。
         - 逐个条款签署和整份protocol签署的关系，是否还需要嵌套term。
+          - 根据FSM、FPM、machine的设计决定term的粒度。
           - 设计每项知识的思考和案例积累锚点。
         - 随之修订manifest text。
+        - 根据ego中joint、split两个原生操作的接口，设计protocol这一侧的接口。
     - '195': term + COM matedata -> deploy metadata -> deploy view
     - '90': 以1406为例检查知识图谱和blawx的语法
     - '90': term metadata的序号，分为显示序号和唯一id两种。
@@ -713,9 +716,6 @@ todo:
         - 抓取网页:https://pptr.nodejs.cn/
         - https://www.npmjs.com/package/puppeteer
   xuemen:
-    - '60': 国家网络身份认证公共服务管理办法
-      readme: |
-        - https://www.cac.gov.cn/2024-07/26/c_1723675813897965.htm
     - '195': kernel模型升级
     - '195': 重新设计S2状态下的学门基本管理制度
     - '60': term.e6f0caec -> xuemen COD metadata-S2状态下的部门模型
