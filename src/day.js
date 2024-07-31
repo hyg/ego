@@ -268,7 +268,7 @@ module.exports = {
         seasonobj = season.updatesold(seasonobj);
         season.dumpseasonobj(seasonobj);
         var waitinglist = wl.makewaitinglist(seasonobj);
-        log("date:",date);
+        log("datestr:",datestr);
 
         var daylogstr = "# " + date.Format("yyyy.MM.dd.") + "\n日小结\n\n"
             + "<a id=\"top\"></a>\n" + "根据[ego模型时间接口](https://gitee.com/hyg/blog/blob/master/timeflow.md)，今天绑定模版" + dayobj.mode + "(" + dayobj.plan + ")。\n\n"

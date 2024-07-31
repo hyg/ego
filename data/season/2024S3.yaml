@@ -570,7 +570,7 @@ time:
     xuemen: 165
     infra: 90
     js: 1353
-    learn: 1385
+    learn: 1425
     raw: 320
 todo:
   PSMD:
@@ -637,17 +637,15 @@ todo:
         - draft文件名
   infra: []
   learn:
-    - '60': Getting Things Done with IPLD
-      readme: |
-        - https://ipld.io/docs/intro/primer/#getting-things-done-with-ipld
-        - 彻底弄明白CID代替url实现linked data的实现细节。
-        - https://ipld.io/docs/schemas/intro/#schema-language-dsl-and-dmt-form
-        - https://ipld.io/docs/schemas/features/representation-strategies/
     - '60': schema in ipld,coding time.
       readme: |
         - https://www.npmjs.com/package/@ipld/schema
         - https://github.com/ipld/js-ipld-schema
         - read 2024.07.22 14:00 draft
+    - '60': learn IPLD Codes, https://ipld.io/docs/data-model/node/
+    - '90': learn IPLD ADLs https://ipld.io/docs/advanced-data-layouts/
+    - '60': https://proto.school/merkle-dags IPLD,Merkle DAGs, Structuring Data for the Distributed Web
+    - '60': https://proto.school/basics  IPFS,P2P Data Links with Content Addressing
     - '30': linkml, yaml-ld, coding time.
     - '30': Decentralized Identifiers
       readme: |
