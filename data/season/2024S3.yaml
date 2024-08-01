@@ -565,13 +565,13 @@ time:
     learn: 1500
     js: 1200
   sold:
-    PSMD: 1452
+    PSMD: 1472
     ego: 1472
     xuemen: 165
     infra: 90
     js: 1353
-    learn: 1425
-    raw: 320
+    learn: 1485
+    raw: 390
 todo:
   PSMD:
     - '90': machines model
@@ -637,11 +637,11 @@ todo:
         - draft文件名
   infra: []
   learn:
-    - '60': schema in ipld,coding time.
+    - '60': IPLD DSL sample
       readme: |
-        - https://www.npmjs.com/package/@ipld/schema
-        - https://github.com/ipld/js-ipld-schema
-        - read 2024.07.22 14:00 draft
+        - read 2024.08.01. 16:00 draft
+        - read .ipldsch files https://github.com/ipld/js-ipld-schema/tree/master/test/fixtures
+        - make schema sample use raw\food 
     - '60': learn IPLD Codes, https://ipld.io/docs/data-model/node/
     - '90': learn IPLD ADLs https://ipld.io/docs/advanced-data-layouts/
     - '60': https://proto.school/merkle-dags IPLD,Merkle DAGs, Structuring Data for the Distributed Web
@@ -686,6 +686,12 @@ todo:
       readme: |
         - D:\huangyg\git\draft\2024\04\20240430140000.md
         - 2024.6.13. 16:00 draft
+    - '60': learn factory, constructor, prototype
+      readme: |
+        - https://juejin.cn/post/6844903653774458888
+        - https://segmentfault.com/a/1190000019054466
+        - https://www.javascripttutorial.net/javascript-factory-functions/
+        -https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/Objects/Object_prototypes
     - '60': 学习 nodejs test框架
       readme: |
         - https://github.com/Vanessa219/vditor
@@ -701,10 +707,6 @@ todo:
         - http://matrix-org.github.io/matrix-js-sdk/index.html
     - '60': 学习'Electron'，创作一个范例。
   raw:
-    - '30': 设计新版raw.js架构。
-      readme: |
-        - 增加子命令和参数。
-        - 划分独立模块。
     - '30': 新版raw.js的子命令-营养成分详情
     - '30': 新版raw.js的子命令-营养成分排序
     - '60': 自动从网页提取营养成分表
