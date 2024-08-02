@@ -571,7 +571,7 @@ time:
     infra: 90
     js: 1353
     learn: 1485
-    raw: 390
+    raw: 450
 todo:
   PSMD:
     - '90': machines model
@@ -692,6 +692,14 @@ todo:
         - https://segmentfault.com/a/1190000019054466
         - https://www.javascripttutorial.net/javascript-factory-functions/
         -https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/Objects/Object_prototypes
+      bind:
+        - '30': 新版raw.js的子命令-营养成分详情
+          readme: |
+            - 可选多种营养成分
+            - 考虑不同UI
+            - 使用新的模块化设计
+            - 使用新的data model
+        - '30': 新版raw.js的子命令-营养成分排序
     - '60': 学习 nodejs test框架
       readme: |
         - https://github.com/Vanessa219/vditor
@@ -706,15 +714,7 @@ todo:
         - https://github.com/matrix-org/matrix-js-sdk
         - http://matrix-org.github.io/matrix-js-sdk/index.html
     - '60': 学习'Electron'，创作一个范例。
-  raw:
-    - '30': 新版raw.js的子命令-营养成分详情
-    - '30': 新版raw.js的子命令-营养成分排序
-    - '60': 自动从网页提取营养成分表
-      readme: |
-        - read 2024.07.16.07:45 draft
-        - read 2024.07.24.07:45 draft
-        - 抓取网页:https://pptr.nodejs.cn/
-        - https://www.npmjs.com/package/puppeteer
+  raw: []
   xuemen:
     - '195': kernel模型升级
     - '195': 重新设计S2状态下的学门基本管理制度

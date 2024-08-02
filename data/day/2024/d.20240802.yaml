@@ -1,0 +1,84 @@
+date: '20240802'
+mode: '1'
+plan: 1b
+time:
+  - begin: '20240802053700'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20240802055200'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20240802065200'
+    amount: 45
+    type: food
+    name: 早餐
+  - begin: '20240802073700'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20240802082200'
+    amount: 67
+    type: free
+    name: 休整
+  - begin: '20240802093000'
+    amount: 0
+    type: work
+    name: 静默工作
+    subject: PSMD
+    title: machines model
+    readme: |
+      - a sample instance of machine,FPM,FSM in manifest code 
+      - read D:\huangyg\git\draft\2024\07\20240723160000.md
+      - read 2024.07.24. 09:30, 2024.07.25. 09:30, 2024.07.26. 09:30 draft
+      - 实现FPM+FSM
+      - 从FSM、FPM中抽象出统一的mechine
+      - 实现joint、split机制
+    output: ../../draft/2024/08/20240802093000.md
+    namelink: http://simp.ly/p/j1SspP
+  - begin: '20240802110000'
+    amount: 180
+    type: food
+    name: 备餐、午餐午休
+  - begin: '20240802140000'
+    amount: 20
+    type: work
+    name: 静默工作
+    subject: raw
+    title: 新版raw.js的子命令-营养成分详情
+    output: ../../draft/2024/08/20240802140000.md
+    namelink: http://simp.ly/p/8t3vlk
+  - begin: '20240802143000'
+    amount: 0
+    type: work
+    name: 静默工作
+    subject: raw
+    title: 新版raw.js的子命令-营养成分排序
+    output: ../../draft/2024/08/20240802143000.md
+    namelink: http://simp.ly/p/5k9gJy
+  - begin: '20240802150000'
+    amount: 60
+    type: free
+    name: 休整
+  - begin: '20240802160000'
+    amount: 40
+    type: work
+    name: 静默工作
+    subject: raw
+    title: 自动从网页提取营养成分表
+    readme: |
+      - read 2024.07.16.07:45 draft
+      - read 2024.07.24.07:45 draft
+      - 抓取网页:https://pptr.nodejs.cn/
+      - https://www.npmjs.com/package/puppeteer
+    output: ../../draft/2024/08/20240802160000.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20240802170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20240802190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
