@@ -565,23 +565,15 @@ time:
     learn: 1500
     js: 1200
   sold:
-    PSMD: 1472
+    PSMD: 1492
     ego: 1472
     xuemen: 165
     infra: 90
     js: 1353
-    learn: 1485
+    learn: 1495
     raw: 450
 todo:
   PSMD:
-    - '90': machines model
-      readme: |
-        - a sample instance of machine,FPM,FSM in manifest code 
-        - read D:\huangyg\git\draft\2024\07\20240723160000.md
-        - read 2024.07.24. 09:30, 2024.07.25. 09:30, 2024.07.26. 09:30 draft
-        - 实现FPM+FSM
-        - 从FSM、FPM中抽象出统一的mechine
-        - 实现joint、split机制
     - '90': 整理新版本term的manifest code
       readme: |
         - 为了显示而设计的term model，并不适合与代码绑定。
@@ -594,6 +586,14 @@ todo:
           - 设计每项知识的思考和案例积累锚点。
         - 随之修订manifest text。
         - 根据ego中joint、split两个原生操作的接口，设计protocol这一侧的接口。
+    - '90': machines model
+      readme: |
+        - a sample instance of machine,FPM,FSM in manifest code 
+        - read D:\huangyg\git\draft\2024\07\20240723160000.md
+        - read 2024.07.24. 09:30, 2024.07.25. 09:30, 2024.07.26. 09:30 draft
+        - 实现FPM+FSM
+        - 从FSM、FPM中抽象出统一的mechine
+        - 实现joint、split机制
     - '195': term + COM matedata -> deploy metadata -> deploy view
     - '90': 以1406为例检查知识图谱和blawx的语法
     - '90': term metadata的序号，分为显示序号和唯一id两种。
