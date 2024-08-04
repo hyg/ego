@@ -570,10 +570,11 @@ time:
     xuemen: 165
     infra: 90
     js: 1353
-    learn: 1495
+    learn: 1628
     raw: 450
 todo:
   PSMD:
+    - '30': 整理近期讨论，按照新版manifest text提炼几个有代表性的场景。
     - '90': 整理新版本term的manifest code
       readme: |
         - 为了显示而设计的term model，并不适合与代码绑定。
@@ -637,21 +638,15 @@ todo:
         - draft文件名
   infra: []
   learn:
-    - '60': IPLD DSL sample
+    - '60': Decentralized Identifiers
       readme: |
-        - read 2024.08.01. 16:00 draft
-        - read .ipldsch files https://github.com/ipld/js-ipld-schema/tree/master/test/fixtures
-        - make schema sample use raw\food 
+        - https://did.js.org/
+        - https://developers.ceramic.network/docs/dids/authorization
+        - https://did-ipid.github.io/ipid-did-method/
     - '60': learn IPLD Codes, https://ipld.io/docs/data-model/node/
     - '90': learn IPLD ADLs https://ipld.io/docs/advanced-data-layouts/
     - '60': https://proto.school/merkle-dags IPLD,Merkle DAGs, Structuring Data for the Distributed Web
     - '60': https://proto.school/basics  IPFS,P2P Data Links with Content Addressing
-    - '30': linkml, yaml-ld, coding time.
-    - '30': Decentralized Identifiers
-      readme: |
-        https://did.js.org/
-        https://www.w3.org/TR/did-use-cases/
-        https://www.w3.org/TR/did-core/
     - '60': learn web-llm
     - '60': 开发YARRRML范例
     - '90': 把PSMD的data、src部分升级到rdf，如果升级成功则作为范例。
@@ -714,8 +709,11 @@ todo:
         - https://github.com/matrix-org/matrix-js-sdk
         - http://matrix-org.github.io/matrix-js-sdk/index.html
     - '60': 学习'Electron'，创作一个范例。
-  raw: []
+  raw:
+    - '30': 新版营养成分详情，允许多种营养成分。
+    - '30': 新版食材排序，包括升序、降序、特定值距离、多种营养成分特定值组合距离。
   xuemen:
+    - '30': 报税。
     - '195': kernel模型升级
     - '195': 重新设计S2状态下的学门基本管理制度
     - '60': term.e6f0caec -> xuemen COD metadata-S2状态下的部门模型

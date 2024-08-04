@@ -1,0 +1,72 @@
+date: '20240804'
+mode: '1'
+plan: 1c
+time:
+  - begin: '20240804065000'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20240804070500'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20240804080500'
+    amount: 45
+    type: food
+    name: 早餐
+  - begin: '20240804085000'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20240804093500'
+    amount: 84
+    type: free
+    name: 休整
+  - begin: '20240804110000'
+    amount: 180
+    type: food
+    name: 备餐、午餐午休
+  - begin: '20240804140000'
+    amount: 20
+    type: work
+    name: 静默工作
+    subject: learn
+    title: linkml, yaml-ld, coding time.
+    output: ../../draft/2024/08/20240804140000.md
+    namelink: http://simp.ly/p/8t3vlk
+  - begin: '20240804143000'
+    amount: 53
+    type: work
+    name: 静默工作
+    subject: learn
+    title: Decentralized Identifiers
+    readme: |
+      https://did.js.org/
+      https://www.w3.org/TR/did-use-cases/
+      https://www.w3.org/TR/did-core/
+    output: ../../draft/2024/08/20240804143000.md
+    namelink: http://simp.ly/p/5k9gJy
+  - begin: '20240804150000'
+    amount: 60
+    type: free
+    name: 休整
+  - begin: '20240804160000'
+    amount: 60
+    type: work
+    name: 静默工作
+    subject: learn
+    title: IPLD DSL sample
+    readme: |
+      - read 2024.08.01. 16:00 draft
+      - read .ipldsch files https://github.com/ipld/js-ipld-schema/tree/master/test/fixtures
+      - make schema sample use raw\food 
+    output: ../../draft/2024/08/20240804160000.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20240804170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20240804190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
