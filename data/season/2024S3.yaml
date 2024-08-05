@@ -565,12 +565,12 @@ time:
     learn: 1500
     js: 1200
   sold:
-    PSMD: 1492
+    PSMD: 1582
     ego: 1472
-    xuemen: 165
+    xuemen: 181
     infra: 90
     js: 1353
-    learn: 1628
+    learn: 1638
     raw: 450
 todo:
   PSMD:
@@ -713,7 +713,6 @@ todo:
     - '30': 新版营养成分详情，允许多种营养成分。
     - '30': 新版食材排序，包括升序、降序、特定值距离、多种营养成分特定值组合距离。
   xuemen:
-    - '30': 报税。
     - '195': kernel模型升级
     - '195': 重新设计S2状态下的学门基本管理制度
     - '60': term.e6f0caec -> xuemen COD metadata-S2状态下的部门模型
