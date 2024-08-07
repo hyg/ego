@@ -565,7 +565,7 @@ time:
     learn: 1500
     js: 1200
   sold:
-    PSMD: 1622
+    PSMD: 1802
     ego: 1472
     xuemen: 181
     infra: 90
@@ -582,6 +582,7 @@ todo:
         - 实现FPM+FSM
         - 从FSM、FPM中抽象出统一的mechine
         - 实现joint、split机制
+        - 先用javascript的class实现
     - '90': 整理新版本term的manifest code
       readme: |
         - 为了显示而设计的term model，并不适合与代码绑定。
@@ -657,6 +658,11 @@ todo:
       readme: |
         - https://zh.javascript.info/promise-api
   js:
+    - '90': import typescript into javascript
+      readme: |
+        - https://geek-docs.com/typescript/typescript-questions/570_typescript_transforming_typescript_into_javascript.html
+        - https://cloud.tencent.com/developer/article/1592752
+        - https://wangdoc.com/typescript/tsc
     - '60': learn Orbitdb
       readme: |
         - read 2024.07.15. 14:00 draft
