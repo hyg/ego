@@ -565,27 +565,32 @@ time:
     learn: 1500
     js: 1200
   sold:
-    PSMD: 1922
+    PSMD: 1967
     ego: 1472
     xuemen: 181
     infra: 90
-    js: 1353
+    js: 1503
     learn: 1713
     raw: 450
 todo:
   PSMD:
-    - '90': 整理新版本term的manifest code
+    - '90': 整理新版本term的manifest text
       readme: |
-        - 为了显示而设计的term model，并不适合与代码绑定。
-        - 设计前置protocol的定义和数据表现
-          - 自身的行为及其原因，可以自述的范围：标出理性与非理性（下意识）行为的边界。
-          - 对待自身与其他方采取相同标准的范围：标出公平与（无法自控、无法意识到的）歧视的边界。
-          - 上述范围与边界对合作行为有明显影响，是protocol可以要求参与者公示的。为了展示自身的范围和边界，最佳方式就是展示前置protocol和历史记录，今后发现更好的展示方式（前置protocol无法表达的）可以随之修订。
-        - 逐个条款签署和整份protocol签署的关系，是否还需要嵌套term。
-          - 根据FSM、FPM、machine的设计决定term的粒度。
-          - 设计每项知识的思考和案例积累锚点。
-        - 随之修订manifest text。
-        - 根据ego中joint、split两个原生操作的接口，设计protocol这一侧的接口。
+        - 条款文本嵌入到machine模型。
+        - 以修订和任免定义的层级嵌入到machine模型。
+      bind:
+        - '90': 整理新版本term的manifest code
+          readme: |
+            - 为了显示而设计的term model，并不适合与代码绑定。
+            - 设计前置protocol的定义和数据表现
+              - 自身的行为及其原因，可以自述的范围：标出理性与非理性（下意识）行为的边界。
+              - 对待自身与其他方采取相同标准的范围：标出公平与（无法自控、无法意识到的）歧视的边界。
+              - 上述范围与边界对合作行为有明显影响，是protocol可以要求参与者公示的。为了展示自身的范围和边界，最佳方式就是展示前置protocol和历史记录，今后发现更好的展示方式（前置protocol无法表达的）可以随之修订。
+            - 逐个条款签署和整份protocol签署的关系，是否还需要嵌套term。
+              - 根据FSM、FPM、machine的设计决定term的粒度。
+              - 设计每项知识的思考和案例积累锚点。
+            - 随之修订manifest text。
+            - 根据ego中joint、split两个原生操作的接口，设计protocol这一侧的接口。
     - '195': machines model
       readme: |
         - a sample instance of machine,FPM,FSM in manifest code 
@@ -658,11 +663,6 @@ todo:
       readme: |
         - https://zh.javascript.info/promise-api
   js:
-    - '90': import typescript into javascript
-      readme: |
-        - https://geek-docs.com/typescript/typescript-questions/570_typescript_transforming_typescript_into_javascript.html
-        - https://cloud.tencent.com/developer/article/1592752
-        - https://wangdoc.com/typescript/tsc
     - '60': learn Orbitdb
       readme: |
         - read 2024.07.15. 14:00 draft
