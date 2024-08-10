@@ -565,12 +565,12 @@ time:
     learn: 1500
     js: 1200
   sold:
-    PSMD: 1967
+    PSMD: 2017
     ego: 1472
     xuemen: 181
     infra: 90
     js: 1503
-    learn: 1713
+    learn: 1723
     raw: 450
 todo:
   PSMD:
