@@ -1,0 +1,60 @@
+date: '20240812'
+mode: '1'
+plan: 1d
+time:
+  - begin: '20240812090400'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20240812091900'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20240812101900'
+    amount: 45
+    type: food
+    name: 午餐
+  - begin: '20240812110400'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20240812114900'
+    amount: 130
+    type: free
+    name: 休整
+  - begin: '20240812140000'
+    amount: 0
+    type: work
+    name: 静默工作
+    subject: raw
+    title: 新版营养成分详情，允许多种营养成分。
+    output: ../../draft/2024/08/20240812140000.md
+    namelink: http://simp.ly/p/8t3vlk
+  - begin: '20240812143000'
+    amount: 0
+    type: work
+    name: 静默工作
+    subject: raw
+    title: 新版食材排序，包括升序、降序、特定值距离、多种营养成分特定值组合距离。
+    output: ../../draft/2024/08/20240812143000.md
+    namelink: http://simp.ly/p/5k9gJy
+  - begin: '20240812150000'
+    amount: 60
+    type: free
+    name: 休整
+  - begin: '20240812160000'
+    amount: 0
+    type: work
+    name: 静默工作
+    subject: learn
+    title: learn IPLD Codes, https://ipld.io/docs/data-model/node/
+    output: ../../draft/2024/08/20240812160000.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20240812170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20240812190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交

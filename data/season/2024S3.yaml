@@ -571,7 +571,7 @@ time:
     infra: 90
     js: 1503
     learn: 1723
-    raw: 450
+    raw: 540
 todo:
   PSMD:
     - '90': 整理新版本term的manifest text
