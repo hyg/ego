@@ -571,7 +571,7 @@ time:
     infra: 90
     js: 1503
     learn: 1723
-    raw: 540
+    raw: 550
 todo:
   PSMD:
     - '90': 整理新版本term的manifest text
@@ -662,6 +662,7 @@ todo:
       readme: |
         - https://zh.javascript.info/promise-api
   js:
+    - '30': js class framework
     - '60': learn Orbitdb
       readme: |
         - read 2024.07.15. 14:00 draft
@@ -710,7 +711,7 @@ todo:
         - http://matrix-org.github.io/matrix-js-sdk/index.html
     - '60': 学习'Electron'，创作一个范例。
   raw:
-    - '30': 新版营养成分详情，允许多种营养成分。
+    - '60': 新版营养成分详情，允许多种营养成分。
     - '30': 新版食材排序，包括升序、降序、特定值距离、多种营养成分特定值组合距离。
   xuemen:
     - '195': kernel模型升级
