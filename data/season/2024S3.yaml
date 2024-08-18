@@ -571,7 +571,7 @@ time:
     infra: 90
     js: 1693
     learn: 1723
-    raw: 550
+    raw: 670
 todo:
   PSMD:
     - '90': 整理新版本term的manifest text
@@ -666,6 +666,7 @@ todo:
       readme: |
         - https://zh.javascript.info/class
         - https://www.w3school.com.cn/js/pro_js_object_oriented.asp
+        - yaml文件，obj in js，main.js之间是什么关系？其他语言怎么处理？放在schema框架统一再斟酌。
       bind:
         - '30': js class framework
     - '60': learn Orbitdb
@@ -716,9 +717,8 @@ todo:
         - http://matrix-org.github.io/matrix-js-sdk/index.html
     - '60': 学习'Electron'，创作一个范例。
   raw:
-    - '30': 新版架构。
-    - '60': 新版营养成分详情，允许多种营养成分。
     - '30': 新版食材排序，包括升序、降序、特定值距离、多种营养成分特定值组合距离。
+    - '60': 新版营养成分详情，允许多种营养成分。
   xuemen:
     - '195': kernel模型升级
     - '195': 重新设计S2状态下的学门基本管理制度
