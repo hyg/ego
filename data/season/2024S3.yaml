@@ -578,6 +578,7 @@ todo:
       readme: |
         - 条款文本嵌入到machine模型。
         - 以修订和任免定义的层级嵌入到machine模型。
+    - '30': 整理近期讨论，按照新版manifest text提炼几个有代表性的场景。
     - '90': 整理新版本term的manifest code
       readme: |
         - 为了显示而设计的term model，并不适合与代码绑定。
@@ -599,13 +600,13 @@ todo:
         - 从FSM、FPM中抽象出统一的mechine
         - 实现joint、split机制
         - 先用javascript的class实现
-    - '30': 整理近期讨论，按照新版manifest text提炼几个有代表性的场景。
     - '195': term + COM matedata -> deploy metadata -> deploy view
     - '90': 以1406为例检查知识图谱和blawx的语法
     - '90': term metadata的序号，分为显示序号和唯一id两种。
       readnme: |
         - 考虑upgradeby的实现。
   ego:
+    - '60': 为启动todo项从day metadata中自动返回waiting list
     - '195': 新版ego, instance or model, any manifest
     - '60': eventemitter sample
       readme: |

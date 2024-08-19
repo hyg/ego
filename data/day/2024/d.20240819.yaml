@@ -1,0 +1,75 @@
+date: '20240819'
+mode: '1'
+plan: 1b
+time:
+  - begin: '20240819061500'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20240819063000'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20240819073000'
+    amount: 45
+    type: food
+    name: 早餐
+  - begin: '20240819081500'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20240819090000'
+    amount: 29
+    type: free
+    name: 休整
+  - begin: '20240819093000'
+    amount: 0
+    type: work
+    name: 静默工作
+    subject: PSMD
+    title: 整理新版本term的manifest text
+    readme: |
+      - 条款文本嵌入到machine模型。
+      - 以修订和任免定义的层级嵌入到machine模型。
+    output: ../../draft/2024/08/20240819093000.md
+    namelink: http://simp.ly/p/j1SspP
+  - begin: '20240819110000'
+    amount: 180
+    type: food
+    name: 备餐、午餐午休
+  - begin: '20240819140000'
+    amount: 0
+    type: work
+    name: 静默工作
+    subject: raw
+    title: 新版食材排序，包括升序、降序、特定值距离、多种营养成分特定值组合距离。
+    output: ../../draft/2024/08/20240819140000.md
+    namelink: http://simp.ly/p/8t3vlk
+  - begin: '20240819143000'
+    amount: 0
+    type: work
+    name: 静默工作
+    subject: PSMD
+    title: 整理近期讨论，按照新版manifest text提炼几个有代表性的场景。
+    output: ../../draft/2024/08/20240819143000.md
+    namelink: http://simp.ly/p/5k9gJy
+  - begin: '20240819150000'
+    amount: 60
+    type: free
+    name: 休整
+  - begin: '20240819160000'
+    amount: 0
+    type: work
+    name: 静默工作
+    subject: raw
+    title: 新版营养成分详情，允许多种营养成分。
+    output: ../../draft/2024/08/20240819160000.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20240819170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20240819190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
