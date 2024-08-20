@@ -606,7 +606,7 @@ todo:
       readnme: |
         - 考虑upgradeby的实现。
   ego:
-    - '60': 为启动todo项从day metadata中自动返回waiting list
+    - '60': 未启动todo项从day metadata中自动返回waiting list
     - '195': 新版ego, instance or model, any manifest
     - '60': eventemitter sample
       readme: |
