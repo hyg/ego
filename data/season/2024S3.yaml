@@ -565,20 +565,20 @@ time:
     learn: 1500
     js: 1200
   sold:
-    PSMD: 2192
+    PSMD: 2212
     ego: 1472
     xuemen: 181
     infra: 90
     js: 1693
     learn: 1723
-    raw: 670
+    raw: 690
 todo:
   PSMD:
-    - '30': 整理近期讨论，按照新版manifest text提炼几个有代表性的场景。
     - '90': 整理新版本term的manifest text
       readme: |
         - 条款文本嵌入到machine模型。
         - 以修订和任免定义的层级嵌入到machine模型。
+    - '30': 整理近期讨论，按照新版manifest text提炼几个有代表性的场景。
     - '90': 整理新版本term的manifest code
       readme: |
         - 为了显示而设计的term model，并不适合与代码绑定。
@@ -717,8 +717,8 @@ todo:
         - http://matrix-org.github.io/matrix-js-sdk/index.html
     - '60': 学习'Electron'，创作一个范例。
   raw:
-    - '30': 新版食材排序，包括升序、降序、特定值距离、多种营养成分特定值组合距离。
     - '60': 未启动todo项从day metadata中自动返回waiting list
+    - '30': 新版食材排序，包括升序、降序、特定值距离、多种营养成分特定值组合距离。
     - '60': 新版营养成分详情，允许多种营养成分。
   xuemen:
     - '195': kernel模型升级
