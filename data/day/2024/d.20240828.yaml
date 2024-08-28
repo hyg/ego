@@ -1,0 +1,71 @@
+date: '20240828'
+mode: '2'
+plan: 2b
+time:
+  - begin: '20240828053000'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20240828054500'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20240828064500'
+    amount: 45
+    type: food
+    name: 早餐
+  - begin: '20240828073000'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20240828081500'
+    amount: 74
+    type: free
+    name: 休整
+  - begin: '20240828093000'
+    amount: 40
+    type: work
+    name: 工作
+    subject: PSMD
+    title: 朋友的2个务实问题
+    readme: |
+      - read 2024.08.27. 16:00 draft
+    output: ../../draft/2024/08/20240828093000.md
+    namelink: http://simp.ly/p/WZ077p
+  - begin: '20240828110000'
+    amount: 180
+    type: food
+    name: 备餐、午餐午休
+  - begin: '20240828140000'
+    amount: 300
+    type: work
+    name: 工作
+    subject: raw
+    title: 朋友的4个务虚问题
+    readme: |
+      - 遇到人生的重大抉择时，如何做评估和选择?
+      - 如何做反思和复盘?除了Git时间消耗记录，会有哪些反思流程和步骤?月、季度、年等复盘有哪些侧重点?
+      - 何平衡理性和感性关系?会不会过于理性，缺少温度和对人对事对环境的感受力呢?
+      - 何为精彩人生，怎么定义?如何践行?
+    output: ../../draft/2024/08/20240828140000.md
+    namelink: http://simp.ly/p/lsBYG9
+  - begin: '20240828153000'
+    amount: 30
+    type: free
+    name: 休整
+  - begin: '20240828160000'
+    amount: 0
+    type: work
+    name: 工作
+    subject: learn
+    title: learn IPLD Codes, https://ipld.io/docs/data-model/node/
+    output: ../../draft/2024/08/20240828160000.md
+    namelink: http://simp.ly/p/MpcbHD
+  - begin: '20240828170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20240828190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交

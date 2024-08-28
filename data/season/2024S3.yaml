@@ -565,18 +565,15 @@ time:
     learn: 1500
     js: 1200
   sold:
-    PSMD: 2392
+    PSMD: 2432
     ego: 1472
     xuemen: 181
     infra: 90
     js: 1693
     learn: 1723
-    raw: 690
+    raw: 990
 todo:
   PSMD:
-    - '90': 朋友的2个务实问题
-      readme: |
-        - read 2024.08.27. 16:00 draft
     - '30': 整理近期讨论，按照新版manifest text提炼几个有代表性的场景。
     - '90': 整理新版本term的manifest text
       readme: |
@@ -720,12 +717,6 @@ todo:
         - http://matrix-org.github.io/matrix-js-sdk/index.html
     - '60': 学习'Electron'，创作一个范例。
   raw:
-    - '90': 朋友的4个务虚问题
-      readme: |
-        - 遇到人生的重大抉择时，如何做评估和选择?
-        - 如何做反思和复盘?除了Git时间消耗记录，会有哪些反思流程和步骤?月、季度、年等复盘有哪些侧重点?
-        - 何平衡理性和感性关系?会不会过于理性，缺少温度和对人对事对环境的感受力呢?
-        - 何为精彩人生，怎么定义?如何践行?
     - '30': 新版食材排序，包括升序、降序、特定值距离、多种营养成分特定值组合距离。
     - '60': 未启动todo项从day metadata中自动返回waiting list
     - '60': 新版营养成分详情，允许多种营养成分。
