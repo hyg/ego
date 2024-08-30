@@ -84,6 +84,22 @@ module.exports = {
 
         return seasonobj;
     },
+    addtodoitem(seasonobj, task, name, amount, readme) {
+        log("add the todo item to %s: %s", task, name);
+
+        log("before add todo item:\n" + yaml.dump(seasonobj.todo[task]));
+        var item = new Object();
+        item[amount] = name ;
+        if(readme != null){
+            item.readme = readme;
+        }
+
+        seasonobj.todo[task].splice(0,0,item);
+
+        log("after add todo item:\n" + yaml.dump(seasonobj.todo[task]));
+
+        return seasonobj;
+    },
     makestattable: function (seasonobj) {
         var statobj = new Object();
         statobj.total = { alloc: 0, sold: 0, hold: 0, todo: 0 };
@@ -126,8 +142,8 @@ module.exports = {
             seasonstatstr = seasonstatstr + "| " + task + " | " + statobj[task].alloc + " | " + statobj[task].sold + " | " + statobj[task].hold + " | " + statobj[task].todo + " |\n";
         }
 
-        if(this.debug == true){
-            log("seasonstatstr:\n%s",seasonstatstr)
+        if (this.debug == true) {
+            log("seasonstatstr:\n%s", seasonstatstr)
         }
         return seasonstatstr;
     },

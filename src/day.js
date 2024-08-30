@@ -225,7 +225,9 @@ module.exports = {
             var timeperiod = dayobj.time[i];
             var begintime = util.str2time(timeperiod.begin);
             var endtime = new Date(begintime);
-            endtime = new Date(endtime.setMinutes(endtime.getMinutes() + timeperiod.amount - 1));
+            if(timeperiod.amount > 0){
+                endtime = new Date(endtime.setMinutes(endtime.getMinutes() + timeperiod.amount - 1));
+            }            
 
             var linkstr = "";
             if (type == "plan") {
@@ -266,6 +268,22 @@ module.exports = {
         
         var seasonobj = season.loadseasonobj();
         seasonobj = season.updatesold(seasonobj);
+
+        for (var i in dayobj.time) {
+            var timeperiod = dayobj.time[i];
+            var begintime = util.str2time(timeperiod.begin);
+
+            if(timeperiod.redo == true){
+                var todoitem = new Object();
+
+                season.addtodoitem(seasonobj,timeperiod.subject,timeperiod.title,timeperiod.amount,timeperiod.readme);
+                if(timeperiod.trueamount != null){
+                    timeperiod.amount = timeperiod.trueamount ;
+                }
+                
+            }            
+        }
+
         season.dumpseasonobj(seasonobj);
         var waitinglist = wl.makewaitinglist(seasonobj);
         log("datestr:",datestr);
