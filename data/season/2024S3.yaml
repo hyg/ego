@@ -565,15 +565,16 @@ time:
     learn: 1500
     js: 1200
   sold:
-    PSMD: 2612
+    PSMD: 2642
     ego: 1573
     xuemen: 181
     infra: 90
     js: 1693
-    learn: 1723
-    raw: 1055
+    learn: 1783
+    raw: 1085
 todo:
   PSMD:
+    - '30': 整理近期讨论，按照新版manifest text提炼几个有代表性的场景。
     - '90': 整理新版本term的manifest code
       readme: |
         - 为了显示而设计的term model，并不适合与代码绑定。
@@ -590,7 +591,6 @@ todo:
       readme: |
         - 条款文本嵌入到machine模型。
         - 以修订和任免定义的层级嵌入到machine模型。
-    - '30': 整理近期讨论，按照新版manifest text提炼几个有代表性的场景。
     - '195': machines model
       readme: |
         - a sample instance of machine,FPM,FSM in manifest code 

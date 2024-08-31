@@ -1,0 +1,69 @@
+date: '20240831'
+mode: '1'
+plan: 1c
+time:
+  - begin: '20240831065900'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20240831071400'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20240831081400'
+    amount: 45
+    type: food
+    name: 早餐
+  - begin: '20240831085900'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20240831094400'
+    amount: 75
+    type: free
+    name: 休整
+  - begin: '20240831110000'
+    amount: 180
+    type: food
+    name: 备餐、午餐午休
+  - begin: '20240831140000'
+    amount: 30
+    redo: true
+    type: work
+    name: 静默工作
+    subject: raw
+    title: 整理代码，理顺food.js几个成员函数之间的调用关系
+    output: ../../draft/2024/08/20240831140000.md
+    namelink: http://simp.ly/p/8t3vlk
+  - begin: '20240831143000'
+    amount: 30
+    trueamount: 5
+    redo: true
+    type: work
+    name: 静默工作
+    subject: PSMD
+    title: 整理近期讨论，按照新版manifest text提炼几个有代表性的场景。
+    output: ../../draft/2024/08/20240831143000.md
+    namelink: http://simp.ly/p/5k9gJy
+  - begin: '20240831150000'
+    amount: 60
+    type: free
+    name: 休整
+  - begin: '20240831160000'
+    amount: 60
+    trueamount: 0
+    redo: true
+    type: work
+    name: 静默工作
+    subject: learn
+    title: learn IPLD Codes, https://ipld.io/docs/data-model/node/
+    output: ../../draft/2024/08/20240831160000.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20240831170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20240831190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
