@@ -565,12 +565,12 @@ time:
     learn: 1500
     js: 1200
   sold:
-    PSMD: 2672
+    PSMD: 2702
     ego: 1573
-    xuemen: 181
+    xuemen: 241
     infra: 90
     js: 1693
-    learn: 1873
+    learn: 2023
     raw: 1115
 todo:
   PSMD:
@@ -643,8 +643,13 @@ todo:
         - draft文件名
   infra: []
   learn:
-    - '90': learn IPLD ADLs https://ipld.io/docs/advanced-data-layouts/
     - '60': https://proto.school/merkle-dags IPLD,Merkle DAGs, Structuring Data for the Distributed Web
+    - '90': learn IPLD ADLs https://ipld.io/docs/advanced-data-layouts/
+    - '60': 在nodejs读写OFD文件。
+      readme: |
+        - https://github.com/ofdrw/ofdrw
+        - https://blog.csdn.net/lishangke/article/details/135245444
+        - https://www.npmjs.com/package/ofd.js/v/0.8.0
     - '60': https://proto.school/basics  IPFS,P2P Data Links with Content Addressing
     - '60': learn web-llm
     - '60': 开发YARRRML范例
@@ -716,11 +721,11 @@ todo:
         - http://matrix-org.github.io/matrix-js-sdk/index.html
     - '60': 学习'Electron'，创作一个范例。
   raw:
+    - '30': 设计四季度时间表
     - '30': 整理代码，理顺food.js几个成员函数之间的调用关系
     - '60': 新版食材排序，包括升序、降序、特定值距离、多种营养成分特定值组合距离。
     - '60': 新版营养成分详情，允许多种营养成分。
   xuemen:
-    - '30': 财务月初事项
     - '195': kernel模型升级
     - '195': 重新设计S2状态下的学门基本管理制度
     - '60': term.e6f0caec -> xuemen COD metadata-S2状态下的部门模型
