@@ -1,0 +1,69 @@
+date: '20240903'
+mode: '1'
+plan: 1d
+time:
+  - begin: '20240903071700'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20240903073200'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20240903083200'
+    amount: 45
+    type: food
+    name: 午餐
+  - begin: '20240903091700'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20240903100200'
+    amount: 237
+    type: free
+    name: 休整
+  - begin: '20240903140000'
+    amount: 30
+    trueamount: 60
+    redo: true
+    type: work
+    name: 静默工作
+    subject: PSMD
+    title: 整理近期讨论，按照新版manifest text提炼几个有代表性的场景。
+    output: ../../draft/2024/09/20240903140000.md
+    namelink: http://simp.ly/p/8t3vlk
+  - begin: '20240903143000'
+    amount: 30
+    redo: true
+    type: work
+    name: 静默工作
+    subject: raw
+    title: 设计四季度时间表
+    output: ../../draft/2024/09/20240903143000.md
+    namelink: http://simp.ly/p/5k9gJy
+  - begin: '20240903150000'
+    amount: 60
+    type: free
+    name: 休整
+  - begin: '20240903160000'
+    amount: 60
+    trueamount: 0
+    redo: true
+    type: work
+    name: 静默工作
+    subject: js
+    title: js class
+    readme: |
+      - https://zh.javascript.info/class
+      - https://www.w3school.com.cn/js/pro_js_object_oriented.asp
+      - yaml文件，obj in js，main.js之间是什么关系？其他语言怎么处理？放在schema框架统一再斟酌。
+    output: ../../draft/2024/09/20240903160000.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20240903170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20240903190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
