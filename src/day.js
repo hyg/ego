@@ -155,7 +155,7 @@ module.exports = {
                 //delete it from waitinglist
                 waitinglist[time[i].amount.toString()].shift(); */
 
-                var timestr = "## " + beginhour.toString().padStart(2, "0") + ":" + beginminute.toString().padStart(2, "0") + " ~ " + endhour.toString().padStart(2, "0") + ":" + endminute.toString().padStart(2, "0") + "\n" + timeperiod.subject + ": [" + timeperiod.title + "]\n\n";
+                var timestr = "## 计划 " + beginhour.toString().padStart(2, "0") + ":" + beginminute.toString().padStart(2, "0") + " ~ " + endhour.toString().padStart(2, "0") + ":" + endminute.toString().padStart(2, "0") + "\n" + timeperiod.subject + ": [" + timeperiod.title + "]\n\n";
                 if (this.debug == false) {
                     fs.writeFileSync(timeperiod.output, timestr);
                     log("save time slice draft file name:%s\n%s", timeperiod.output, timestr);
@@ -274,14 +274,21 @@ module.exports = {
             var begintime = util.str2time(timeperiod.begin);
 
             if(timeperiod.redo == true){
-                var todoitem = new Object();
-
                 season.addtodoitem(seasonobj,timeperiod.subject,timeperiod.title,timeperiod.amount,timeperiod.readme);
                 if(timeperiod.trueamount != null){
                     timeperiod.amount = timeperiod.trueamount ;
                 }
+            }else if(timeperiod.redo != null){
+                if(timeperiod.readme != null){
+                    season.addtodoitem(seasonobj,timeperiod.subject,timeperiod.title,timeperiod.redo,timeperiod.readme+"- read "+timeperiod.output+"\n");
+                }else{
+                    season.addtodoitem(seasonobj,timeperiod.subject,timeperiod.title,timeperiod.redo,"- read "+timeperiod.output+"\n");
+                }
                 
-            }            
+                if(timeperiod.trueamount != null){
+                    timeperiod.amount = timeperiod.trueamount ;
+                }
+            } 
         }
 
         season.dumpseasonobj(seasonobj);

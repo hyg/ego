@@ -571,10 +571,12 @@ time:
     infra: 90
     js: 1753
     learn: 2023
-    raw: 1145
+    raw: 1175
 todo:
   PSMD:
-    - '30': 整理近期讨论，按照新版manifest text提炼几个有代表性的场景。
+    - '60': 整理近期讨论，按照新版manifest text提炼几个有代表性的场景。
+      readme: |
+        - read ../../draft/2024/09/20240904140000.md
     - '90': 整理新版本term的manifest code
       readme: |
         - 为了显示而设计的term model，并不适合与代码绑定。
@@ -644,6 +646,8 @@ todo:
   infra: []
   learn:
     - '60': https://proto.school/merkle-dags IPLD,Merkle DAGs, Structuring Data for the Distributed Web
+      readme: |
+        - read ../../draft/2024/09/20240904160000.md
     - '90': learn IPLD ADLs https://ipld.io/docs/advanced-data-layouts/
     - '60': 在nodejs读写OFD文件。
       readme: |
@@ -721,6 +725,10 @@ todo:
     - '60': 学习'Electron'，创作一个范例。
   raw:
     - '30': 设计四季度时间表
+      readme: |
+        - 两片休整时间联合调节的算法需要整理。
+        - 餐谱和饱腹感时间需要综合算计。
+        - read ../../draft/2024/09/20240904143000.md
     - '30': 整理代码，理顺food.js几个成员函数之间的调用关系
     - '60': 新版食材排序，包括升序、降序、特定值距离、多种营养成分特定值组合距离。
     - '60': 新版营养成分详情，允许多种营养成分。
