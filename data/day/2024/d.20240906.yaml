@@ -1,0 +1,85 @@
+date: '20240906'
+mode: '2'
+plan: 2b
+time:
+  - begin: '20240906055900'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20240906061400'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20240906071400'
+    amount: 45
+    type: food
+    name: 早餐
+  - begin: '20240906075900'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20240906084400'
+    amount: 45
+    type: free
+    name: 休整
+  - begin: '20240906093000'
+    amount: 0
+    redo: 90
+    type: work
+    name: 工作
+    subject: PSMD
+    title: 整理新版本term的manifest code
+    readme: |
+      - 为了显示而设计的term model，并不适合与代码绑定。
+      - 设计前置protocol的定义和数据表现
+        - 自身的行为及其原因，可以自述的范围：标出理性与非理性（下意识）行为的边界。
+        - 对待自身与其他方采取相同标准的范围：标出公平与（无法自控、无法意识到的）歧视的边界。
+        - 上述范围与边界对合作行为有明显影响，是protocol可以要求参与者公示的。为了展示自身的范围和边界，最佳方式就是展示前置protocol和历史记录，今后发现更好的展示方式（前置protocol无法表达的）可以随之修订。
+      - 逐个条款签署和整份protocol签署的关系，是否还需要嵌套term。
+        - 根据FSM、FPM、machine的设计决定term的粒度。
+        - 设计每项知识的思考和案例积累锚点。
+      - 随之修订manifest text。
+      - 根据ego中joint、split两个原生操作的接口，设计protocol这一侧的接口。
+      - read ../../draft/2024/09/20240905140000.md
+    output: ../../draft/2024/09/20240906093000.md
+    namelink: http://simp.ly/p/WZ077p
+  - begin: '20240906110000'
+    amount: 180
+    type: food
+    name: 备餐、午餐午休
+  - begin: '20240906140000'
+    amount: 45
+    redo: 90
+    type: work
+    name: 工作
+    subject: PSMD
+    title: 整理近期讨论，按照新版manifest text提炼几个有代表性的场景。
+    readme: |
+      - read ../../draft/2024/09/20240904140000.md
+      - read ../../draft/2024/09/20240905074500.md
+    output: ../../draft/2024/09/20240906140000.md
+    namelink: http://simp.ly/p/lsBYG9
+  - begin: '20240906153000'
+    amount: 30
+    type: free
+    name: 休整
+  - begin: '20240906160000'
+    amount: 10
+    redo: 60
+    type: work
+    name: 工作
+    subject: learn
+    title: https://proto.school/merkle-dags IPLD,Merkle DAGs, Structuring Data for the Distributed Web
+    readme: |
+      - read ../../draft/2024/09/20240904160000.md
+      - read ../../draft/2024/09/20240905160000.md
+    output: ../../draft/2024/09/20240906160000.md
+    namelink: http://simp.ly/p/MpcbHD
+  - begin: '20240906170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20240906190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交

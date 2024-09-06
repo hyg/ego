@@ -565,15 +565,20 @@ time:
     learn: 1500
     js: 1200
   sold:
-    PSMD: 3002
+    PSMD: 3047
     ego: 1573
     xuemen: 241
     infra: 90
     js: 1753
-    learn: 2053
+    learn: 2063
     raw: 1175
 todo:
   PSMD:
+    - '90': 整理近期讨论，按照新版manifest text提炼几个有代表性的场景。
+      readme: |
+        - read ../../draft/2024/09/20240904140000.md
+        - read ../../draft/2024/09/20240905074500.md
+        - read ../../draft/2024/09/20240906140000.md
     - '90': 整理新版本term的manifest code
       readme: |
         - 为了显示而设计的term model，并不适合与代码绑定。
@@ -587,10 +592,7 @@ todo:
         - 随之修订manifest text。
         - 根据ego中joint、split两个原生操作的接口，设计protocol这一侧的接口。
         - read ../../draft/2024/09/20240905140000.md
-    - '90': 整理近期讨论，按照新版manifest text提炼几个有代表性的场景。
-      readme: |
-        - read ../../draft/2024/09/20240904140000.md
-        - read ../../draft/2024/09/20240905074500.md
+        - read ../../draft/2024/09/20240906093000.md
     - '90': 整理新版本term的manifest text
       readme: |
         - 条款文本嵌入到machine模型。
@@ -651,6 +653,7 @@ todo:
       readme: |
         - read ../../draft/2024/09/20240904160000.md
         - read ../../draft/2024/09/20240905160000.md
+        - read ../../draft/2024/09/20240906160000.md
     - '90': learn IPLD ADLs https://ipld.io/docs/advanced-data-layouts/
     - '60': 在nodejs读写OFD文件。
       readme: |
