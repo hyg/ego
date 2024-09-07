@@ -1,0 +1,72 @@
+date: '20240907'
+mode: '1'
+plan: 1d
+time:
+  - begin: '20240907080100'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20240907081600'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20240907091600'
+    amount: 45
+    type: food
+    name: 午餐
+  - begin: '20240907100100'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20240907104600'
+    amount: 193
+    type: free
+    name: 休整
+  - begin: '20240907140000'
+    amount: 40
+    redo: 60
+    type: work
+    name: 静默工作
+    subject: raw
+    title: 设计四季度时间表
+    readme: |
+      - 两片休整时间联合调节的算法需要整理。
+      - 餐谱和饱腹感时间需要综合算计。
+      - read ../../draft/2024/09/20240904143000.md
+    output: ../../draft/2024/09/20240907140000.md
+    namelink: http://simp.ly/p/8t3vlk
+  - begin: '20240907143000'
+    amount: 20
+    redo: 90
+    type: work
+    name: 静默工作
+    subject: raw
+    title: 整理代码，理顺food.js几个成员函数之间的调用关系
+    output: ../../draft/2024/09/20240907143000.md
+    namelink: http://simp.ly/p/5k9gJy
+  - begin: '20240907150000'
+    amount: 60
+    type: free
+    name: 休整
+  - begin: '20240907160000'
+    amount: 60
+    redo: 60
+    type: work
+    name: 静默工作
+    subject: js
+    title: js class
+    readme: |
+      - https://zh.javascript.info/class
+      - https://www.w3school.com.cn/js/pro_js_object_oriented.asp
+      - 在FSM实践一下。
+      - yaml文件，obj in js，main.js之间是什么关系？其他语言怎么处理？放在schema框架统一再斟酌。
+    output: ../../draft/2024/09/20240907160000.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20240907170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20240907190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
