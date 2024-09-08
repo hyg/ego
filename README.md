@@ -115,6 +115,52 @@ ego是[通用个人领域模型](common.com.md)、[俱乐部](club.com.md)的分
 - 联合|joint: 多个entity产生一个entity的行为。
 - 共同体|community：由多个主体joint合并而成的主体。
 
+```mermaid
+---
+title: 关系图
+---
+requirementDiagram
+
+requirement other {
+id: other
+text: "其它项目"
+}
+
+requirement PSMD {
+id: PSMD
+text: "共同体核心架构的建模和部署"
+}
+
+requirement infra {
+id: infra
+text: "基础设施"
+}
+
+requirement xuemen {
+id: xuemen
+text: "北京学门科技有限公司"
+}
+
+requirement ego {
+id: ego
+text: "理性部分"
+}
+
+requirement raw {
+id: raw
+text: "野生部分"
+}
+
+raw - satisfies -> xuemen
+raw - satisfies -> ego
+ego - satisfies -> PSMD
+infra - satisfies -> PSMD
+PSMD - satisfies -> infra
+infra - satisfies -> other
+PSMD - satisfies -> other
+```
+
+
 ## 接口
 
 - 门户页：写在个人域名dns，各种软件或纸质的个人简介、签名档。内容根据当时需要统筹规划。
