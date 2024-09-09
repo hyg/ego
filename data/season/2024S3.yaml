@@ -565,13 +565,13 @@ time:
     learn: 1500
     js: 1200
   sold:
-    PSMD: 3182
-    ego: 1573
+    PSMD: 3242
+    ego: 1593
     xuemen: 241
     infra: 90
-    js: 1813
+    js: 1823
     learn: 2123
-    raw: 1235
+    raw: 1265
 todo:
   PSMD:
     - '90': 整理新版本term的manifest code
@@ -589,6 +589,7 @@ todo:
         - read ../../draft/2024/09/20240905140000.md
         - read ../../draft/2024/09/20240906093000.md
         - read ../../draft/2024/09/20240908140000.md
+        - read ../../draft/2024/09/20240909093000.md
     - '90': 整理近期讨论，按照新版manifest text提炼几个有代表性的场景。
       readme: |
         - read ../../draft/2024/09/20240904140000.md
@@ -615,6 +616,8 @@ todo:
         - 考虑upgradeby的实现。
   ego:
     - '30': 整理ubuntu工作环境
+      readme: |
+        - read ../../draft/2024/09/20240909140000.md
     - '195': 新版ego, instance or model, any manifest
     - '60': eventemitter sample
       readme: |
@@ -687,6 +690,7 @@ todo:
         - 在FSM实践一下。
         - yaml文件，obj in js，main.js之间是什么关系？其他语言怎么处理？放在schema框架统一再斟酌。
         - read ../../draft/2024/09/20240907160000.md
+        - read ../../draft/2024/09/20240909160000.md
     - '60': js class
       readme: |
         - https://zh.javascript.info/class
@@ -743,7 +747,9 @@ todo:
         - http://matrix-org.github.io/matrix-js-sdk/index.html
     - '60': 学习'Electron'，创作一个范例。
   raw:
-    - '30': 在心率曲线上增加其它运动种类。
+    - '60': 在心率曲线上增加其它运动种类。
+      readme: |
+        - read ../../draft/2024/09/20240909143000.md
     - '90': 整理代码，理顺food.js几个成员函数之间的调用关系
       readme: |
         - read ../../draft/2024/09/20240907143000.md

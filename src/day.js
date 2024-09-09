@@ -249,7 +249,7 @@ module.exports = {
         var date = util.str2time(datestr);
 
         var dayplanstr = "# " + date.Format("yyyy.MM.dd.") + "\n日计划\n\n"
-            + "根据[ego模型时间接口](https://gitee.com/hyg/blog/blob/master/timeflow.md)，九月上旬补足前两月缺勤。今天绑定模版" + dayobj.mode + "(" + dayobj.plan + ")。\n\n"
+            + "根据[ego模型时间接口](https://gitee.com/hyg/blog/blob/master/timeflow.md)，九月中上旬补足前两月缺勤。今天绑定模版" + dayobj.mode + "(" + dayobj.plan + ")。\n\n"
             + this.maketable(dayobj) + "\n---\n\n" + this.makeindex(dayobj, "plan");
 
         var dayplanfilename = path.blogrepopath + "release/time/d." + datestr + ".md";
@@ -296,7 +296,7 @@ module.exports = {
         log("datestr:",datestr);
 
         var daylogstr = "# " + date.Format("yyyy.MM.dd.") + "\n日小结\n\n"
-            + "<a id=\"top\"></a>\n" + "根据[ego模型时间接口](https://gitee.com/hyg/blog/blob/master/timeflow.md)，九月上旬补足前两月缺勤。今天绑定模版" + dayobj.mode + "(" + dayobj.plan + ")。\n\n"
+            + "<a id=\"top\"></a>\n" + "根据[ego模型时间接口](https://gitee.com/hyg/blog/blob/master/timeflow.md)，九月中上旬补足前两月缺勤。今天绑定模版" + dayobj.mode + "(" + dayobj.plan + ")。\n\n"
             + "<a id=\"index\"></a>\n" + this.makeindex(dayobj, "log")
             + season.makestattable(seasonobj)
             + wl.makebrieflist(waitinglist)
