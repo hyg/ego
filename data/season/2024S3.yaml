@@ -566,7 +566,7 @@ time:
     js: 1200
   sold:
     PSMD: 3242
-    ego: 1593
+    ego: 1653
     xuemen: 241
     infra: 90
     js: 1823
@@ -618,6 +618,7 @@ todo:
     - '30': 整理ubuntu工作环境
       readme: |
         - read ../../draft/2024/09/20240909140000.md
+        - read ../../draft/2024/09/20240910140000.md
     - '195': 新版ego, instance or model, any manifest
     - '60': eventemitter sample
       readme: |
@@ -661,6 +662,7 @@ todo:
         - read ../../draft/2024/09/20240905160000.md
         - read ../../draft/2024/09/20240906160000.md
         - read ../../draft/2024/09/20240908160000.md
+        - read ../../draft/2024/09/20240910160000.md
     - '90': learn IPLD ADLs https://ipld.io/docs/advanced-data-layouts/
     - '60': 在nodejs读写OFD文件。
       readme: |
@@ -683,6 +685,9 @@ todo:
       readme: |
         - https://zh.javascript.info/promise-api
   js:
+    - '30': js class framework
+      readme: |
+        - read ../../draft/2024/09/20240910143000.md
     - '60': js class
       readme: |
         - https://zh.javascript.info/class
@@ -698,7 +703,6 @@ todo:
         - 在FSM实践一下。
         - yaml文件，obj in js，main.js之间是什么关系？其他语言怎么处理？放在schema框架统一再斟酌。
         - read ../../draft/2024/09/20240907160000.md
-    - '30': js class framework
     - '60': learn Orbitdb
       readme: |
         - read 2024.07.15. 14:00 draft
