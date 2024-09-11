@@ -565,7 +565,7 @@ time:
     learn: 1500
     js: 1200
   sold:
-    PSMD: 3242
+    PSMD: 3317
     ego: 1653
     xuemen: 241
     infra: 90
@@ -574,6 +574,13 @@ time:
     raw: 1265
 todo:
   PSMD:
+    - '90': 整理近期讨论，按照新版manifest text提炼几个有代表性的场景。
+      readme: |
+        - read ../../draft/2024/09/20240904140000.md
+        - read ../../draft/2024/09/20240905074500.md
+        - read ../../draft/2024/09/20240906140000.md
+        - read ../../draft/2024/09/20240908093000.md
+        - read ../../draft/2024/09/20240911140000.md
     - '90': 整理新版本term的manifest code
       readme: |
         - 为了显示而设计的term model，并不适合与代码绑定。
@@ -590,12 +597,7 @@ todo:
         - read ../../draft/2024/09/20240906093000.md
         - read ../../draft/2024/09/20240908140000.md
         - read ../../draft/2024/09/20240909093000.md
-    - '90': 整理近期讨论，按照新版manifest text提炼几个有代表性的场景。
-      readme: |
-        - read ../../draft/2024/09/20240904140000.md
-        - read ../../draft/2024/09/20240905074500.md
-        - read ../../draft/2024/09/20240906140000.md
-        - read ../../draft/2024/09/20240908093000.md
+        - read ../../draft/2024/09/20240911093000.md
     - '90': 整理新版本term的manifest text
       readme: |
         - 条款文本嵌入到machine模型。
@@ -658,11 +660,13 @@ todo:
   learn:
     - '60': https://proto.school/merkle-dags IPLD,Merkle DAGs, Structuring Data for the Distributed Web
       readme: |
+        - https://dagitty.net
         - read ../../draft/2024/09/20240904160000.md
         - read ../../draft/2024/09/20240905160000.md
         - read ../../draft/2024/09/20240906160000.md
         - read ../../draft/2024/09/20240908160000.md
         - read ../../draft/2024/09/20240910160000.md
+        - read ../../draft/2024/09/20240911160000.md
     - '90': learn IPLD ADLs https://ipld.io/docs/advanced-data-layouts/
     - '60': 在nodejs读写OFD文件。
       readme: |
