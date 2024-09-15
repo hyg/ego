@@ -565,11 +565,11 @@ time:
     learn: 1500
     js: 1200
   sold:
-    PSMD: 3767
-    ego: 1653
+    PSMD: 3857
+    ego: 1773
     xuemen: 241
     infra: 90
-    js: 1823
+    js: 1928
     learn: 2198
     raw: 1265
 todo:
@@ -584,6 +584,7 @@ todo:
         - read ../../draft/2024/09/20240912093000.md
         - read ../../draft/2024/09/20240913140000.md
         - read ../../draft/2024/09/20240914140000.md
+        - read ../../draft/2024/09/20240915093000.md
     - '90': 整理新版本term的manifest code
       readme: |
         - 为了显示而设计的term model，并不适合与代码绑定。
@@ -622,10 +623,6 @@ todo:
       readnme: |
         - 考虑upgradeby的实现。
   ego:
-    - '30': 整理ubuntu工作环境
-      readme: |
-        - read ../../draft/2024/09/20240909140000.md
-        - read ../../draft/2024/09/20240910140000.md
     - '195': 新版ego, instance or model, any manifest
     - '60': eventemitter sample
       readme: |
@@ -697,9 +694,6 @@ todo:
       readme: |
         - https://zh.javascript.info/promise-api
   js:
-    - '30': js class framework
-      readme: |
-        - read ../../draft/2024/09/20240910143000.md
     - '60': js class
       readme: |
         - https://zh.javascript.info/class
@@ -708,6 +702,7 @@ todo:
         - yaml文件，obj in js，main.js之间是什么关系？其他语言怎么处理？放在schema框架统一再斟酌。
         - read ../../draft/2024/09/20240907160000.md
         - read ../../draft/2024/09/20240909160000.md
+        - read ../../draft/2024/09/20240915160000.md
     - '60': js class
       readme: |
         - https://zh.javascript.info/class
