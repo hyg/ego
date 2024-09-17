@@ -565,13 +565,13 @@ time:
     learn: 1500
     js: 1200
   sold:
-    PSMD: 3857
+    PSMD: 3917
     ego: 1773
     xuemen: 241
-    infra: 90
+    infra: 110
     js: 1928
-    learn: 2198
-    raw: 1265
+    learn: 2258
+    raw: 1415
 todo:
   PSMD:
     - '90': 整理近期讨论，按照新版manifest text提炼几个有代表性的场景。
@@ -585,6 +585,7 @@ todo:
         - read ../../draft/2024/09/20240913140000.md
         - read ../../draft/2024/09/20240914140000.md
         - read ../../draft/2024/09/20240915093000.md
+        - read ../../draft/2024/09/20240916140000.md
     - '90': 整理新版本term的manifest code
       readme: |
         - 为了显示而设计的term model，并不适合与代码绑定。
@@ -623,6 +624,9 @@ todo:
       readnme: |
         - 考虑upgradeby的实现。
   ego:
+    - '60': draft文件名改为序号
+      readme: |
+        每个时间片始末时间由day metadata记载,ego的day.js中使用day metadata生成始末时间- read ../../draft/2024/09/20240917160000.md
     - '195': 新版ego, instance or model, any manifest
     - '60': eventemitter sample
       readme: |
@@ -658,21 +662,12 @@ todo:
         - season metadata
         - day metada
         - draft文件名
-  infra: []
+  infra:
+    - '90': schema立项。
+    - '30': 动态菜单设计。
   learn:
-    - '60': https://proto.school/merkle-dags IPLD,Merkle DAGs, Structuring Data for the Distributed Web
-      readme: |
-        - https://dagitty.net
-        - read ../../draft/2024/09/20240904160000.md
-        - read ../../draft/2024/09/20240905160000.md
-        - read ../../draft/2024/09/20240906160000.md
-        - read ../../draft/2024/09/20240908160000.md
-        - read ../../draft/2024/09/20240910160000.md
-        - read ../../draft/2024/09/20240911160000.md
-        - read ../../draft/2024/09/20240912160000.md
-        - read ../../draft/2024/09/20240913160000.md
-        - read ../../draft/2024/09/20240914160000.md
     - '90': learn IPLD ADLs https://ipld.io/docs/advanced-data-layouts/
+    - '60': learn Blogging on the Decentralized Web https://proto.school/blog
     - '60': 在nodejs读写OFD文件。
       readme: |
         - https://github.com/ofdrw/ofdrw
@@ -758,6 +753,9 @@ todo:
         - http://matrix-org.github.io/matrix-js-sdk/index.html
     - '60': 学习'Electron'，创作一个范例。
   raw:
+    - '60': 熟悉内脏之间的关系
+      readme: |
+        - read ../../draft/2024/09/20240917143000.md
     - '90': 整理代码，理顺food.js几个成员函数之间的调用关系
       readme: |
         - read ../../draft/2024/09/20240907143000.md
@@ -767,7 +765,6 @@ todo:
         - 餐谱和饱腹感时间需要综合算计。
         - read ../../draft/2024/09/20240904143000.md
         - read ../../draft/2024/09/20240907140000.md
-    - '30': 熟悉内脏之间的关系
     - '90': 整理代码，理顺food.js几个成员函数之间的调用关系
       readme: |
         - read ../../draft/2024/09/20240907143000.md

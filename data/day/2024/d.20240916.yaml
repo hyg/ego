@@ -1,0 +1,78 @@
+date: '20240916'
+mode: '2'
+plan: 2c
+time:
+  - begin: '20240916064600'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20240916070100'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20240916080100'
+    amount: 45
+    type: food
+    name: 早餐
+  - begin: '20240916084600'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20240916093100'
+    amount: 88
+    type: free
+    name: 休整
+  - begin: '20240916110000'
+    amount: 180
+    type: food
+    name: 备餐、午餐午休
+  - begin: '20240916140000'
+    amount: 60
+    redo: 90
+    type: work
+    name: 工作
+    subject: PSMD
+    title: 整理近期讨论，按照新版manifest text提炼几个有代表性的场景。
+    readme: |
+      - read ../../draft/2024/09/20240904140000.md
+      - read ../../draft/2024/09/20240905074500.md
+      - read ../../draft/2024/09/20240906140000.md
+      - read ../../draft/2024/09/20240908093000.md
+      - read ../../draft/2024/09/20240911140000.md
+      - read ../../draft/2024/09/20240912093000.md
+      - read ../../draft/2024/09/20240913140000.md
+      - read ../../draft/2024/09/20240914140000.md
+      - read ../../draft/2024/09/20240915093000.md
+    output: ../../draft/2024/09/20240916140000.md
+    namelink: http://simp.ly/p/lsBYG9
+  - begin: '20240916153000'
+    amount: 30
+    type: free
+    name: 休整
+  - begin: '20240916160000'
+    amount: 60
+    type: work
+    name: 工作
+    subject: learn
+    title: https://proto.school/merkle-dags IPLD,Merkle DAGs, Structuring Data for the Distributed Web
+    readme: |
+      - https://dagitty.net
+      - read ../../draft/2024/09/20240904160000.md
+      - read ../../draft/2024/09/20240905160000.md
+      - read ../../draft/2024/09/20240906160000.md
+      - read ../../draft/2024/09/20240908160000.md
+      - read ../../draft/2024/09/20240910160000.md
+      - read ../../draft/2024/09/20240911160000.md
+      - read ../../draft/2024/09/20240912160000.md
+      - read ../../draft/2024/09/20240913160000.md
+      - read ../../draft/2024/09/20240914160000.md
+    output: ../../draft/2024/09/20240916160000.md
+    namelink: http://simp.ly/p/MpcbHD
+  - begin: '20240916170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20240916190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
