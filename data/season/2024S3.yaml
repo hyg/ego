@@ -565,7 +565,7 @@ time:
     learn: 1500
     js: 1200
   sold:
-    PSMD: 3917
+    PSMD: 3962
     ego: 1773
     xuemen: 241
     infra: 110
@@ -574,18 +574,6 @@ time:
     raw: 1415
 todo:
   PSMD:
-    - '90': 整理近期讨论，按照新版manifest text提炼几个有代表性的场景。
-      readme: |
-        - read ../../draft/2024/09/20240904140000.md
-        - read ../../draft/2024/09/20240905074500.md
-        - read ../../draft/2024/09/20240906140000.md
-        - read ../../draft/2024/09/20240908093000.md
-        - read ../../draft/2024/09/20240911140000.md
-        - read ../../draft/2024/09/20240912093000.md
-        - read ../../draft/2024/09/20240913140000.md
-        - read ../../draft/2024/09/20240914140000.md
-        - read ../../draft/2024/09/20240915093000.md
-        - read ../../draft/2024/09/20240916140000.md
     - '90': 整理新版本term的manifest code
       readme: |
         - 为了显示而设计的term model，并不适合与代码绑定。
@@ -605,6 +593,20 @@ todo:
         - read ../../draft/2024/09/20240911093000.md
         - read ../../draft/2024/09/20240912140000.md
         - read ../../draft/2024/09/20240913093000.md
+        - read ../../draft/2024/09/20240918140000.md
+    - '90': 整理近期讨论，按照新版manifest text提炼几个有代表性的场景。
+      readme: |
+        - read ../../draft/2024/09/20240904140000.md
+        - read ../../draft/2024/09/20240905074500.md
+        - read ../../draft/2024/09/20240906140000.md
+        - read ../../draft/2024/09/20240908093000.md
+        - read ../../draft/2024/09/20240911140000.md
+        - read ../../draft/2024/09/20240912093000.md
+        - read ../../draft/2024/09/20240913140000.md
+        - read ../../draft/2024/09/20240914140000.md
+        - read ../../draft/2024/09/20240915093000.md
+        - read ../../draft/2024/09/20240916140000.md
+        - read ../../draft/2024/09/20240918093000.md
     - '90': 整理新版本term的manifest text
       readme: |
         - 条款文本嵌入到machine模型。
@@ -627,6 +629,7 @@ todo:
     - '60': draft文件名改为序号
       readme: |
         每个时间片始末时间由day metadata记载,ego的day.js中使用day metadata生成始末时间- read ../../draft/2024/09/20240917160000.md
+        - read ../../draft/2024/09/20240918160000.md
     - '195': 新版ego, instance or model, any manifest
     - '60': eventemitter sample
       readme: |
