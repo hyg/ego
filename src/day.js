@@ -86,6 +86,7 @@ module.exports = {
 
         var dayobj = new Object();
         var timearray = new Array();
+        var draftcnt = 0;
 
         dayobj.date = date;
         dayobj.mode = mode;
@@ -133,7 +134,9 @@ module.exports = {
                 if (waitinglist[amount.toString()][0].readme != null) {
                     timeperiod.readme = waitinglist[amount.toString()][0].readme;
                 }
-                timeperiod.output = path.draftrepopath + date.slice(0, 4) + "/" + date.slice(4, 6) + "/" + begintime + ".md";
+                //timeperiod.output = path.draftrepopath + date.slice(0, 4) + "/" + date.slice(4, 6) + "/" + begintime + ".md";
+                timeperiod.output = path.draftrepopath + date.slice(0, 4) + "/" + date.slice(4, 6) + "/" + date + "." + draftcnt.padStart(2, '0') + ".md";
+                draftcnt++;
 
                 seasonobj = season.deletetodoitem(seasonobj, waitinglist[amount.toString()][0]);
                 waitinglist = wl.makewaitinglist(seasonobj);
@@ -155,7 +158,8 @@ module.exports = {
                 //delete it from waitinglist
                 waitinglist[time[i].amount.toString()].shift(); */
 
-                var timestr = "## 计划 " + beginhour.toString().padStart(2, "0") + ":" + beginminute.toString().padStart(2, "0") + " ~ " + endhour.toString().padStart(2, "0") + ":" + endminute.toString().padStart(2, "0") + "\n" + timeperiod.subject + ": [" + timeperiod.title + "]\n\n";
+                //var timestr = "## 计划 " + beginhour.toString().padStart(2, "0") + ":" + beginminute.toString().padStart(2, "0") + " ~ " + endhour.toString().padStart(2, "0") + ":" + endminute.toString().padStart(2, "0") + "\n" + timeperiod.subject + ": [" + timeperiod.title + "]\n\n";
+                var timestr = "## " + timeperiod.subject + ": [" + timeperiod.title + "]\n\n";
                 if (this.debug == false) {
                     fs.writeFileSync(timeperiod.output, timestr);
                     log("save time slice draft file name:%s\n%s", timeperiod.output, timestr);
@@ -319,7 +323,9 @@ module.exports = {
             if (timeperiod.output != null) {
                 var begintime = util.str2time(timeperiod.begin);
                 var endtime = new Date(begintime);
-                endtime = new Date(endtime.setMinutes(endtime.getMinutes() + timeperiod.amount - 1));
+                if(timeperiod.amount > 0){
+                    endtime = new Date(endtime.setMinutes(endtime.getMinutes() + timeperiod.amount - 1));
+                }
 
                 var taskname = timeperiod.title;
                 if (taskname === undefined) {
@@ -328,7 +334,8 @@ module.exports = {
 
                 var outputstr = fs.readFileSync(timeperiod.output, 'utf8')
                 var mailtostr = "<a href=\"mailto:huangyg@mars22.com?subject=关于" + begintime.Format("yyyy.MM.dd.") + "[" + taskname + "]任务&body=日期: " + begintime.Format("yyyy.MM.dd.") + "%0D%0A序号: " + t + "%0D%0A手稿:" + timeperiod.output + "%0D%0A---请勿修改邮件主题及以上内容 从下一行开始写您的想法---%0D%0A\">[email]</a>";
-                outputliststr = outputliststr + "\n---\n" + mailtostr + " | [top](#top) | [index](#index)\n<a id=\"" + timeperiod.begin + "\"></a>\n" + outputstr;
+                var periodstr = "## " + begintime.Format("hh:mm") + " ~ " + endtime.Format("hh:mm") ;
+                outputliststr = outputliststr + "\n---\n" + mailtostr + " | [top](#top) | [index](#index)\n<a id=\"" + timeperiod.begin + "\"></a>\n" + periodstr + "\n" + outputstr;
             }
 
         }
