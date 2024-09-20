@@ -566,7 +566,7 @@ time:
     js: 1200
   sold:
     PSMD: 3962
-    ego: 1833
+    ego: 1953
     xuemen: 241
     infra: 200
     js: 1928
@@ -574,7 +574,19 @@ time:
     raw: 1415
 todo:
   PSMD:
-    - '30': 根据近期交流情况整理入口protocol
+    - '90': 整理近期讨论，按照新版manifest text提炼几个有代表性的场景。
+      readme: |
+        - read ../../draft/2024/09/20240904140000.md
+        - read ../../draft/2024/09/20240905074500.md
+        - read ../../draft/2024/09/20240906140000.md
+        - read ../../draft/2024/09/20240908093000.md
+        - read ../../draft/2024/09/20240911140000.md
+        - read ../../draft/2024/09/20240912093000.md
+        - read ../../draft/2024/09/20240913140000.md
+        - read ../../draft/2024/09/20240914140000.md
+        - read ../../draft/2024/09/20240915093000.md
+        - read ../../draft/2024/09/20240916140000.md
+        - read ../../draft/2024/09/20240918093000.md
     - '90': 整理新版本term的manifest code
       readme: |
         - 为了显示而设计的term model，并不适合与代码绑定。
@@ -595,23 +607,11 @@ todo:
         - read ../../draft/2024/09/20240912140000.md
         - read ../../draft/2024/09/20240913093000.md
         - read ../../draft/2024/09/20240918140000.md
-    - '90': 整理近期讨论，按照新版manifest text提炼几个有代表性的场景。
-      readme: |
-        - read ../../draft/2024/09/20240904140000.md
-        - read ../../draft/2024/09/20240905074500.md
-        - read ../../draft/2024/09/20240906140000.md
-        - read ../../draft/2024/09/20240908093000.md
-        - read ../../draft/2024/09/20240911140000.md
-        - read ../../draft/2024/09/20240912093000.md
-        - read ../../draft/2024/09/20240913140000.md
-        - read ../../draft/2024/09/20240914140000.md
-        - read ../../draft/2024/09/20240915093000.md
-        - read ../../draft/2024/09/20240916140000.md
-        - read ../../draft/2024/09/20240918093000.md
     - '90': 整理新版本term的manifest text
       readme: |
         - 条款文本嵌入到machine模型。
         - 以修订和任免定义的层级嵌入到machine模型。
+    - '30': 根据近期交流情况整理入口protocol
     - '195': machines model
       readme: |
         - a sample instance of machine,FPM,FSM in manifest code 
@@ -627,8 +627,9 @@ todo:
       readnme: |
         - 考虑upgradeby的实现。
   ego:
-    - '30': ego day各参数中增加已实现的diff
-    - '30': day.js makedaylog() 根据日期读取正确的season obj
+    - '60': ego day各参数中增加已实现的diff
+      readme: |
+        - read ../../draft/2024/09/20240920.00.md
     - '195': 新版ego, instance or model, any manifest
     - '60': eventemitter sample
       readme: |
@@ -702,6 +703,7 @@ todo:
         - read ../../draft/2024/09/20240907160000.md
         - read ../../draft/2024/09/20240909160000.md
         - read ../../draft/2024/09/20240915160000.md
+        - read ../../draft/2024/09/20240920.02.md
     - '60': js class
       readme: |
         - https://zh.javascript.info/class

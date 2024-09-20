@@ -37,6 +37,11 @@ module.exports = {
         var theDate = new Date(year,month-1,day,hour,minute,second);
         //console.log(theDate.Format("yyyy-MM-dd hh:mm:ss.S"));
         return theDate;
+    },
+    str2date: function(date){
+        var theDate = dayjs(date, 'YYYYMMDD')
+        //console.log(theDate.Format("yyyy-MM-dd hh:mm:ss.S"));
+        return theDate;
     }
 }
 

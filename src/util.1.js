@@ -19,6 +19,12 @@ module.exports = {
         //console.log(thedate.format());
         
         return thedate.toDate();
+    },
+    str2date: function(date){
+        dayjs.extend(customParseFormat);
+        var thedate = dayjs(date, 'YYYYMMDD')
+        //console.log(thedate.format());
+        return thedate.toDate();
     }
 }
 

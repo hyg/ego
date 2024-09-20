@@ -1,7 +1,7 @@
 var fs = require('fs');
 var yaml = require('js-yaml');
 var path = require('./path.js');
-var util = require('./util.js');
+var util = require('./util.1.js');
 var season = require('./season.js');
 var wl = require('./waitinglist.js');
 
@@ -13,14 +13,17 @@ function log(...s) {
 module.exports = {
     debug: true,
     getwaketime: function (diff = 0) {
+        log("diff:",diff);
         var theDate = new Date();
         theDate.setDate(theDate.getDate() + diff);
+        log("theDate:",theDate);
 
         var year = theDate.getFullYear();
         var month = theDate.getMonth() + 1 < 10 ? "0" + (theDate.getMonth() + 1) : theDate.getMonth() + 1;
         var day = theDate.getDate() < 10 ? "0" + theDate.getDate() : theDate.getDate();
         //var dateStr = year + "" + month + "" + day;
         var dateStr = util.datestr(diff);
+        log("dateStr:",dateStr);
 
         var healthpath = path.rawrepopath + "health/d." + dateStr + ".yaml";
         var healthobj = yaml.load(fs.readFileSync(healthpath, 'utf8', { schema: yaml.FAILSAFE_SCHEMA }));
@@ -135,9 +138,9 @@ module.exports = {
                     timeperiod.readme = waitinglist[amount.toString()][0].readme;
                 }
                 //timeperiod.output = path.draftrepopath + date.slice(0, 4) + "/" + date.slice(4, 6) + "/" + begintime + ".md";
-                timeperiod.output = path.draftrepopath + date.slice(0, 4) + "/" + date.slice(4, 6) + "/" + date + "." + draftcnt.padStart(2, '0') + ".md";
                 draftcnt++;
-
+                timeperiod.output = path.draftrepopath + date.slice(0, 4) + "/" + date.slice(4, 6) + "/" + date + "." + draftcnt.toString().padStart(2, '0') + ".md";
+                
                 seasonobj = season.deletetodoitem(seasonobj, waitinglist[amount.toString()][0]);
                 waitinglist = wl.makewaitinglist(seasonobj);
 
@@ -253,7 +256,7 @@ module.exports = {
         var date = util.str2time(datestr);
 
         var dayplanstr = "# " + date.Format("yyyy.MM.dd.") + "\n日计划\n\n"
-            + "根据[ego模型时间接口](https://gitee.com/hyg/blog/blob/master/timeflow.md)，九月中上旬补足前两月缺勤。今天绑定模版" + dayobj.mode + "(" + dayobj.plan + ")。\n\n"
+            + "根据[ego模型时间接口](https://gitee.com/hyg/blog/blob/master/timeflow.md)，九月补足前两月缺勤。今天绑定模版" + dayobj.mode + "(" + dayobj.plan + ")。\n\n"
             + this.maketable(dayobj) + "\n---\n\n" + this.makeindex(dayobj, "plan");
 
         var dayplanfilename = path.blogrepopath + "release/time/d." + datestr + ".md";
@@ -270,7 +273,7 @@ module.exports = {
         var datestr = dayobj.date.toString();
         var date = util.str2time(datestr);
         
-        var seasonobj = season.loadseasonobj();
+        var seasonobj = season.loadseasonobj(datestr);
         seasonobj = season.updatesold(seasonobj);
 
         for (var i in dayobj.time) {
@@ -300,7 +303,7 @@ module.exports = {
         log("datestr:",datestr);
 
         var daylogstr = "# " + date.Format("yyyy.MM.dd.") + "\n日小结\n\n"
-            + "<a id=\"top\"></a>\n" + "根据[ego模型时间接口](https://gitee.com/hyg/blog/blob/master/timeflow.md)，九月中上旬补足前两月缺勤。今天绑定模版" + dayobj.mode + "(" + dayobj.plan + ")。\n\n"
+            + "<a id=\"top\"></a>\n" + "根据[ego模型时间接口](https://gitee.com/hyg/blog/blob/master/timeflow.md)，九月补足前两月缺勤。今天绑定模版" + dayobj.mode + "(" + dayobj.plan + ")。\n\n"
             + "<a id=\"index\"></a>\n" + this.makeindex(dayobj, "log")
             + season.makestattable(seasonobj)
             + wl.makebrieflist(waitinglist)

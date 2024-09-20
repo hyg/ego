@@ -4,6 +4,8 @@ const season = require('./season.js');
 
 test('get season metadata file name',(t)=>{
     assert.strictEqual(season.seasonfilename(),"../data/season/2024S3.yaml");
+    assert.strictEqual(season.seasonfilename(""),"../data/season/2024S3.yaml");
+    assert.strictEqual(season.seasonfilename("20240501"),"../data/season/2024S2.yaml");
 });
 
 test('update season sold time',(t)=>{

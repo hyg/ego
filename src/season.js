@@ -1,7 +1,7 @@
 var fs = require('fs');
 var yaml = require('js-yaml');
 var path = require('./path.js');
-var util = require('./util.js');
+var util = require('./util.1.js');
 
 function log(...s) {
     s[0] = log.caller.name + "> " + s[0];
@@ -10,8 +10,14 @@ function log(...s) {
 
 module.exports = {
     debug: true,
-    seasonfilename: function () {
+    seasonfilename: function (datestr="") {
         var theDate = new Date();
+        if(datestr != ""){
+            theDate = util.str2date(datestr);
+            console.log("datestr is empty");
+        }
+        console.log("theDate = ",theDate.toString());
+        
 
         var year = theDate.getFullYear();
         var month = theDate.getMonth() + 1;
@@ -21,8 +27,8 @@ module.exports = {
         var seasonfilename = path.datapath + "season/" + year + "S" + season + ".yaml";
         return seasonfilename;
     },
-    loadseasonobj: function () {
-        var seasonfilename = this.seasonfilename();
+    loadseasonobj: function (datestr="") {
+        var seasonfilename = this.seasonfilename(datestr);
         var seasonobj = yaml.load(fs.readFileSync(seasonfilename, 'utf8', { schema: yaml.FAILSAFE_SCHEMA }));
 
         return seasonobj;

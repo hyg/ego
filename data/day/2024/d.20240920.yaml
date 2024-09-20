@@ -1,0 +1,74 @@
+date: '20240920'
+mode: '1'
+plan: 1c
+time:
+  - begin: '20240920065900'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20240920071400'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20240920081400'
+    amount: 45
+    type: food
+    name: 早餐
+  - begin: '20240920085900'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20240920094400'
+    amount: 75
+    type: free
+    name: 休整
+  - begin: '20240920110000'
+    amount: 180
+    type: food
+    name: 备餐、午餐午休
+  - begin: '20240920140000'
+    amount: 60
+    redo: 60
+    type: work
+    name: 静默工作
+    subject: ego
+    title: ego day各参数中增加已实现的diff
+    output: ../../draft/2024/09/20240920.00.md
+    namelink: http://simp.ly/p/8t3vlk
+  - begin: '20240920143000'
+    amount: 60
+    type: work
+    name: 静默工作
+    subject: ego
+    title: day.js makedaylog() 根据日期读取正确的season obj
+    output: ../../draft/2024/09/20240920.01.md
+    namelink: http://simp.ly/p/5k9gJy
+  - begin: '20240920150000'
+    amount: 60
+    type: free
+    name: 休整
+  - begin: '20240920160000'
+    amount: 0
+    redo: 60
+    type: work
+    name: 静默工作
+    subject: js
+    title: js class
+    readme: |
+      - https://zh.javascript.info/class
+      - https://www.w3school.com.cn/js/pro_js_object_oriented.asp
+      - 在FSM实践一下。
+      - yaml文件，obj in js，main.js之间是什么关系？其他语言怎么处理？放在schema框架统一再斟酌。
+      - read ../../draft/2024/09/20240907160000.md
+      - read ../../draft/2024/09/20240909160000.md
+      - read ../../draft/2024/09/20240915160000.md
+    output: ../../draft/2024/09/20240920.02.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20240920170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20240920190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交

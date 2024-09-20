@@ -21,11 +21,11 @@ const daycommand = program
     .description('以天为单位的自我管理功能');
 
 daycommand
-    .command("init <mode>")
+    .command("init <mode> [diff]")
     .description('初始化：绑定时间模版，创建日计划、次日规划、手稿及元数据文件。')
-    .action((mode) => {
-        log("init:", mode);
-        var dayobj = day.makedayobj(mode);
+    .action((mode,diff=0) => {
+        log("init:%s %s", mode,diff);
+        var dayobj = day.makedayobj(mode,diff);
         day.makedayplan(dayobj);
         day.maketomorrowinfo();
     });
