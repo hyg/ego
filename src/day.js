@@ -70,7 +70,7 @@ module.exports = {
         var date = util.datestr(diff);
         var waketime = this.getwaketime(diff) % 1000000;
         log("waketime:", waketime);
-        var seasonobj = season.loadseasonobj();
+        var seasonobj = season.loadseasonobj(date);
         var waitinglist = wl.makewaitinglist(seasonobj);
 
         var dayplan = "";
@@ -253,7 +253,7 @@ module.exports = {
     },
     makedayplan: function (dayobj) {
         var datestr = dayobj.date;
-        var date = util.str2time(datestr);
+        var date = util.str2date(datestr);
 
         var dayplanstr = "# " + date.Format("yyyy.MM.dd.") + "\n日计划\n\n"
             + "根据[ego模型时间接口](https://gitee.com/hyg/blog/blob/master/timeflow.md)，九月补足前两月缺勤。今天绑定模版" + dayobj.mode + "(" + dayobj.plan + ")。\n\n"

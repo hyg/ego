@@ -16,7 +16,7 @@ module.exports = {
             theDate = util.str2date(datestr);
             console.log("datestr is empty");
         }
-        console.log("theDate = ",theDate.toString());
+        log("theDate = ",theDate.toString());
         
 
         var year = theDate.getFullYear();

@@ -21,18 +21,19 @@ const daycommand = program
     .description('以天为单位的自我管理功能');
 
 daycommand
-    .command("init <mode> [diff]")
+    .command("init <mode>")
     .description('初始化：绑定时间模版，创建日计划、次日规划、手稿及元数据文件。')
-    .action((mode,diff=0) => {
-        log("init:%s %s", mode,diff);
-        var dayobj = day.makedayobj(mode,diff);
+    .option("-d, -diff <diff>","目标日期相对于今天的天数。",0)
+    .action((mode,opt) => {
+        log("init:%s %s", mode,opt);
+        var dayobj = day.makedayobj(mode,parseInt(opt.Diff));
         day.makedayplan(dayobj);
         day.maketomorrowinfo();
     });
 
 daycommand
     .command("over [date]")
-    .description('工作结束，生成日小结、更新次日规划。')
+    .description('工作结束，生成日小结、更新次日规划。可以指定日期。')
     .action((date) => {
         log("over:", date);
         if (date == undefined) {

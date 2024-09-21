@@ -565,8 +565,8 @@ time:
     learn: 1500
     js: 1200
   sold:
-    PSMD: 3962
-    ego: 1953
+    PSMD: 4092
+    ego: 2043
     xuemen: 241
     infra: 200
     js: 1928
@@ -574,6 +574,9 @@ time:
     raw: 1415
 todo:
   PSMD:
+    - '30': 根据近期交流情况整理入口protocol
+      readme: |
+        - read ../../draft/2024/09/20240921.03.md
     - '90': 整理近期讨论，按照新版manifest text提炼几个有代表性的场景。
       readme: |
         - read ../../draft/2024/09/20240904140000.md
@@ -587,6 +590,7 @@ todo:
         - read ../../draft/2024/09/20240915093000.md
         - read ../../draft/2024/09/20240916140000.md
         - read ../../draft/2024/09/20240918093000.md
+        - read ../../draft/2024/09/20240921.01.md
     - '90': 整理新版本term的manifest code
       readme: |
         - 为了显示而设计的term model，并不适合与代码绑定。
@@ -611,7 +615,6 @@ todo:
       readme: |
         - 条款文本嵌入到machine模型。
         - 以修订和任免定义的层级嵌入到machine模型。
-    - '30': 根据近期交流情况整理入口protocol
     - '195': machines model
       readme: |
         - a sample instance of machine,FPM,FSM in manifest code 
@@ -627,10 +630,8 @@ todo:
       readnme: |
         - 考虑upgradeby的实现。
   ego:
-    - '60': ego day各参数中增加已实现的diff
-      readme: |
-        - read ../../draft/2024/09/20240920.00.md
     - '195': 新版ego, instance or model, any manifest
+    - '30': day.js maketomorrowinfo()并行增加一个函数，支持diff项。然后把plan参数转向新函数。
     - '60': eventemitter sample
       readme: |
         - event listener in module
@@ -666,10 +667,12 @@ todo:
         - day metada
         - draft文件名
   infra:
+    - '30': 动态菜单设计。
+      readme: |
+        - read ../../draft/2024/09/20240921.02.md
     - '90': schema立项。
       readme: |
         - read ../../draft/2024/09/20240919140000.md
-    - '30': 动态菜单设计。
   learn:
     - '90': learn IPLD ADLs https://ipld.io/docs/advanced-data-layouts/
     - '60': learn Blogging on the Decentralized Web https://proto.school/blog
