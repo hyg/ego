@@ -271,7 +271,7 @@ module.exports = {
         season.debug = this.debug;
 
         var datestr = dayobj.date.toString();
-        var date = util.str2time(datestr);
+        var date = util.str2date(datestr);
         
         var seasonobj = season.loadseasonobj(datestr);
         seasonobj = season.updatesold(seasonobj);
