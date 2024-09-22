@@ -1,0 +1,99 @@
+date: '20240922'
+mode: '1'
+plan: 1b
+time:
+  - begin: '20240922063200'
+    amount: 25
+    type: free
+    name: 休整
+  - begin: '20240922065700'
+    amount: 58
+    type: prepare
+    name: 备餐、运动
+  - begin: '20240922075500'
+    amount: 45
+    type: food
+    name: 早餐
+  - begin: '20240922083200'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20240922091700'
+    amount: 12
+    type: free
+    name: 休整
+  - begin: '20240922093000'
+    amount: 90
+    redo: 90
+    type: work
+    name: 静默工作
+    subject: PSMD
+    title: 整理近期讨论，按照新版manifest text提炼几个有代表性的场景。
+    readme: |
+      - read ../../draft/2024/09/20240904140000.md
+      - read ../../draft/2024/09/20240905074500.md
+      - read ../../draft/2024/09/20240906140000.md
+      - read ../../draft/2024/09/20240908093000.md
+      - read ../../draft/2024/09/20240911140000.md
+      - read ../../draft/2024/09/20240912093000.md
+      - read ../../draft/2024/09/20240913140000.md
+      - read ../../draft/2024/09/20240914140000.md
+      - read ../../draft/2024/09/20240915093000.md
+      - read ../../draft/2024/09/20240916140000.md
+      - read ../../draft/2024/09/20240918093000.md
+      - read ../../draft/2024/09/20240921.01.md
+    output: ../../draft/2024/09/20240922.01.md
+    namelink: http://simp.ly/p/j1SspP
+  - begin: '20240922110000'
+    amount: 180
+    type: food
+    name: 备餐、午餐午休
+  - begin: '20240922140000'
+    amount: 75
+    redo: 60
+    type: work
+    name: 静默工作
+    subject: infra
+    title: 动态菜单设计。
+    readme: |
+      - read ../../draft/2024/09/20240921.02.md
+    output: ../../draft/2024/09/20240922.02.md
+    namelink: http://simp.ly/p/8t3vlk
+  - begin: '20240922151500'
+    amount: 5
+    type: work
+    name: 静默工作
+    subject: ego
+    title: day.js maketomorrowinfo()并行增加一个函数，支持diff项。然后把plan参数转向新函数。
+    output: ../../draft/2024/09/20240922.03.md
+    namelink: http://simp.ly/p/5k9gJy
+  - begin: '20240922152000'
+    amount: 40
+    type: free
+    name: 休整
+  - begin: '20240922160000'
+    amount: 90
+    redo: 60
+    type: work
+    name: 静默工作
+    subject: js
+    title: js class
+    readme: |
+      - https://zh.javascript.info/class
+      - https://www.w3school.com.cn/js/pro_js_object_oriented.asp
+      - 在FSM实践一下。
+      - yaml文件，obj in js，main.js之间是什么关系？其他语言怎么处理？放在schema框架统一再斟酌。
+      - read ../../draft/2024/09/20240907160000.md
+      - read ../../draft/2024/09/20240909160000.md
+      - read ../../draft/2024/09/20240915160000.md
+      - read ../../draft/2024/09/20240920.02.md
+    output: ../../draft/2024/09/20240922.04.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20240922170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20240922190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交

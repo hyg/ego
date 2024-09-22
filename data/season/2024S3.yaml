@@ -565,11 +565,11 @@ time:
     learn: 1500
     js: 1200
   sold:
-    PSMD: 4092
-    ego: 2043
+    PSMD: 4182
+    ego: 2048
     xuemen: 241
-    infra: 200
-    js: 1928
+    infra: 275
+    js: 2018
     learn: 2258
     raw: 1415
 todo:
@@ -588,6 +588,7 @@ todo:
         - read ../../draft/2024/09/20240916140000.md
         - read ../../draft/2024/09/20240918093000.md
         - read ../../draft/2024/09/20240921.01.md
+        - read ../../draft/2024/09/20240922.01.md
     - '90': 整理新版本term的manifest code
       readme: |
         - 为了显示而设计的term model，并不适合与代码绑定。
@@ -628,7 +629,6 @@ todo:
         - 考虑upgradeby的实现。
   ego:
     - '195': 新版ego, instance or model, any manifest
-    - '30': day.js maketomorrowinfo()并行增加一个函数，支持diff项。然后把plan参数转向新函数。
     - '60': eventemitter sample
       readme: |
         - event listener in module
@@ -664,13 +664,16 @@ todo:
         - day metada
         - draft文件名
   infra:
-    - '30': 动态菜单设计。
+    - '60': 动态菜单设计。
       readme: |
         - read ../../draft/2024/09/20240921.02.md
+        - read ../../draft/2024/09/20240922.02.md
+    - '60': 范例--利用js模块组合实现合同条款的组合。
     - '90': schema立项。
       readme: |
         - read ../../draft/2024/09/20240919140000.md
   learn:
+    - '30': mermaid with links, 1609 as sample.
     - '90': learn IPLD ADLs https://ipld.io/docs/advanced-data-layouts/
     - '60': learn Blogging on the Decentralized Web https://proto.school/blog
     - '60': 在nodejs读写OFD文件。
@@ -704,6 +707,7 @@ todo:
         - read ../../draft/2024/09/20240909160000.md
         - read ../../draft/2024/09/20240915160000.md
         - read ../../draft/2024/09/20240920.02.md
+        - read ../../draft/2024/09/20240922.04.md
     - '60': learn Orbitdb
       readme: |
         - read 2024.07.15. 14:00 draft
