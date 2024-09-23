@@ -566,14 +566,17 @@ time:
     js: 1200
   sold:
     PSMD: 4182
-    ego: 2048
+    ego: 2071
     xuemen: 241
     infra: 275
     js: 2018
-    learn: 2258
+    learn: 2379
     raw: 1415
 todo:
   PSMD:
+    - '30': 整理闫岸家政能力讨论
+    - '30': 整理8.28.讨论
+    - '30': 整理9.5.讨论
     - '90': 整理近期讨论，按照新版manifest text提炼几个有代表性的场景。
       readme: |
         - read ../../draft/2024/09/20240904140000.md
@@ -668,12 +671,12 @@ todo:
       readme: |
         - read ../../draft/2024/09/20240921.02.md
         - read ../../draft/2024/09/20240922.02.md
+        - read ../../draft/2024/09/20240923.03.md
     - '60': 范例--利用js模块组合实现合同条款的组合。
     - '90': schema立项。
       readme: |
         - read ../../draft/2024/09/20240919140000.md
   learn:
-    - '30': mermaid with links, 1609 as sample.
     - '90': learn IPLD ADLs https://ipld.io/docs/advanced-data-layouts/
     - '60': learn Blogging on the Decentralized Web https://proto.school/blog
     - '60': 在nodejs读写OFD文件。

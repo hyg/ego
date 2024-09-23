@@ -351,7 +351,7 @@ module.exports = {
         season.debug = this.debug;
 
         var datestr = util.datestr(1);
-        var date = util.str2time(datestr);
+        var date = util.str2date(datestr);
         var seasonobj = season.loadseasonobj();
         //var waitinglist = wl.makewaitinglist(seasonobj);
         //log("waitinglist:\n%s",waitinglist);

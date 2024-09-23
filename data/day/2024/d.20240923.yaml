@@ -1,0 +1,64 @@
+date: '20240923'
+mode: '1'
+plan: 1d
+time:
+  - begin: '20240923084200'
+    amount: 20
+    type: free
+    name: 休整
+  - begin: '20240923090200'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20240923095700'
+    amount: 45
+    type: food
+    name: 午餐
+  - begin: '20240923104200'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20240923112700'
+    amount: 183
+    type: free
+    name: 休整
+  - begin: '20240923143000'
+    amount: 23
+    type: work
+    name: 静默工作
+    subject: ego
+    title: debug https://hyg.codeberg.page/blog/@master/release/entry.2day.html
+    output: ../../draft/2024/09/20240923.01.md
+    namelink: http://simp.ly/p/8t3vlk
+  - begin: '20240923145300'
+    amount: 121
+    type: work
+    name: 静默工作
+    subject: learn
+    title: mermaid with links, 1609 as sample.
+    output: ../../draft/2024/09/20240923.02.md
+    namelink: http://simp.ly/p/5k9gJy
+  - begin: '20240923150000'
+    amount: 60
+    type: free
+    name: 休整
+  - begin: '20240923165400'
+    amount: 0
+    redo: 60
+    type: work
+    name: 静默工作
+    subject: infra
+    title: 动态菜单设计。
+    readme: |
+      - read ../../draft/2024/09/20240921.02.md
+      - read ../../draft/2024/09/20240922.02.md
+    output: ../../draft/2024/09/20240923.03.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20240923170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20240923190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
