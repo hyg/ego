@@ -565,8 +565,8 @@ time:
     learn: 1500
     js: 1200
   sold:
-    PSMD: 4182
-    ego: 2071
+    PSMD: 4242
+    ego: 2191
     xuemen: 241
     infra: 275
     js: 2018
@@ -574,12 +574,14 @@ time:
     raw: 1415
 todo:
   PSMD:
-    - '90': 整理8.28.讨论
-      readme: |
-        - read ../../draft/2024/09/20240924.02.md
     - '60': 整理闫岸家政能力讨论
       readme: |
         - read ../../draft/2024/09/20240924.01.md
+        - read ../../draft/2024/09/20240925.03.md
+    - '90': 整理8.28.讨论
+      readme: |
+        - read ../../draft/2024/09/20240924.02.md
+        - read ../../draft/2024/09/20240925.02.md
     - '60': 整理9.5.讨论和代理协议
     - '90': 整理近期讨论，按照新版manifest text提炼几个有代表性的场景。
       readme: |
@@ -636,6 +638,8 @@ todo:
         - 考虑upgradeby的实现。
   ego:
     - '195': 新版ego, instance or model, any manifest
+      readme: |
+        - read ../../draft/2024/09/20240925.01.md
     - '60': eventemitter sample
       readme: |
         - event listener in module
