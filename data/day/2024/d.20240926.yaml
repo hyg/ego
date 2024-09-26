@@ -1,0 +1,78 @@
+date: '20240926'
+mode: '2'
+plan: 2a
+time:
+  - begin: '20240926043600'
+    amount: 19
+    type: free
+    name: 休整
+  - begin: '20240926045600'
+    amount: 54
+    type: prepare
+    name: 备餐、运动
+  - begin: '20240926055000'
+    amount: 40
+    type: food
+    name: 早餐
+  - begin: '20240926063000'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20240926072100'
+    amount: 23
+    type: free
+    name: 休整
+  - begin: '20240926074500'
+    amount: 195
+    redo: 195
+    type: work
+    name: 工作
+    subject: PSMD
+    title: machines model
+    readme: |
+      - a sample instance of machine,FPM,FSM in manifest code 
+      - read D:\huangyg\git\draft\2024\07\20240723160000.md
+      - read 2024.07.24. 09:30, 2024.07.25. 09:30, 2024.07.26. 09:30 draft
+      - 实现FPM+FSM
+      - 从FSM、FPM中抽象出统一的mechine
+      - 实现joint、split机制
+      - 先用javascript的class实现
+    output: ../../draft/2024/09/20240926.01.md
+    namelink: http://simp.ly/p/3GXNTh
+  - begin: '20240926110000'
+    amount: 180
+    type: food
+    name: 备餐、午餐午休
+  - begin: '20240926140000'
+    amount: 30
+    redo: 90
+    type: work
+    name: 工作
+    subject: PSMD
+    title: 整理8.28.讨论
+    readme: |
+      - read ../../draft/2024/09/20240924.02.md
+      - read ../../draft/2024/09/20240925.02.md
+    output: ../../draft/2024/09/20240926.02.md
+    namelink: http://simp.ly/p/lsBYG9
+  - begin: '20240926153000'
+    amount: 30
+    type: free
+    name: 休整
+  - begin: '20240926160000'
+    amount: 75
+    redo: 60
+    type: work
+    name: 工作
+    subject: PSMD
+    title: 整理9.5.讨论和代理协议
+    output: ../../draft/2024/09/20240926.03.md
+    namelink: http://simp.ly/p/MpcbHD
+  - begin: '20240926170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20240926190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
