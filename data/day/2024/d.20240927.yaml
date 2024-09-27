@@ -1,0 +1,75 @@
+date: '20240927'
+mode: '2'
+plan: 2b
+time:
+  - begin: '20240927061900'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20240927063400'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20240927073400'
+    amount: 45
+    type: food
+    name: 早餐
+  - begin: '20240927081900'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20240927090400'
+    amount: 25
+    type: free
+    name: 休整
+  - begin: '20240927093000'
+    amount: 180
+    redo: 90
+    type: work
+    name: 工作
+    subject: PSMD
+    title: 整理8.28.讨论
+    readme: |
+      - read ../../draft/2024/09/20240924.02.md
+      - read ../../draft/2024/09/20240925.02.md
+      - read ../../draft/2024/09/20240926.02.md
+    output: ../../draft/2024/09/20240927.01.md
+    namelink: http://simp.ly/p/WZ077p
+  - begin: '20240927110000'
+    amount: 180
+    type: food
+    name: 备餐、午餐午休
+  - begin: '20240927140000'
+    amount: 0
+    redo: 90
+    type: work
+    name: 工作
+    subject: raw
+    title: 整理代码，理顺food.js几个成员函数之间的调用关系
+    readme: |
+      - read ../../draft/2024/09/20240907143000.md
+    output: ../../draft/2024/09/20240927.02.md
+    namelink: http://simp.ly/p/lsBYG9
+  - begin: '20240927153000'
+    amount: 30
+    type: free
+    name: 休整
+  - begin: '20240927160000'
+    amount: 30
+    redo: 60
+    type: work
+    name: 工作
+    subject: PSMD
+    title: 整理9.5.讨论和代理协议
+    readme: |
+      - read ../../draft/2024/09/20240926.03.md
+    output: ../../draft/2024/09/20240927.03.md
+    namelink: http://simp.ly/p/MpcbHD
+  - begin: '20240927170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20240927190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
