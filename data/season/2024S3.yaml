@@ -565,7 +565,7 @@ time:
     learn: 1500
     js: 1200
   sold:
-    PSMD: 4752
+    PSMD: 4952
     ego: 2191
     xuemen: 241
     infra: 275
@@ -577,68 +577,9 @@ todo:
     - '60': 整理9.5.讨论和代理协议
       readme: |
         - read ../../draft/2024/09/20240926.03.md
-    - '90': 整理8.28.讨论
-      readme: |
-        - read ../../draft/2024/09/20240924.02.md
-        - read ../../draft/2024/09/20240925.02.md
-        - read ../../draft/2024/09/20240926.02.md
-    - '195': machines model
-      readme: |
-        - a sample instance of machine,FPM,FSM in manifest code 
-        - read D:\huangyg\git\draft\2024\07\20240723160000.md
-        - read 2024.07.24. 09:30, 2024.07.25. 09:30, 2024.07.26. 09:30 draft
-        - 实现FPM+FSM
-        - 从FSM、FPM中抽象出统一的mechine
-        - 实现joint、split机制
-        - 先用javascript的class实现
-        - read ../../draft/2024/09/20240926.01.md
-    - '60': 整理闫岸家政能力讨论
-      readme: |
-        - read ../../draft/2024/09/20240924.01.md
-        - read ../../draft/2024/09/20240925.03.md
-    - '90': 整理8.28.讨论
-      readme: |
-        - read ../../draft/2024/09/20240924.02.md
-        - read ../../draft/2024/09/20240925.02.md
-    - '90': 整理8.28.讨论
-      readme: |
-        - read ../../draft/2024/09/20240924.02.md
-    - '60': 整理闫岸家政能力讨论
-      readme: |
-        - read ../../draft/2024/09/20240924.01.md
-    - '90': 整理近期讨论，按照新版manifest text提炼几个有代表性的场景。
-      readme: |
-        - read ../../draft/2024/09/20240904140000.md
-        - read ../../draft/2024/09/20240905074500.md
-        - read ../../draft/2024/09/20240906140000.md
-        - read ../../draft/2024/09/20240908093000.md
-        - read ../../draft/2024/09/20240911140000.md
-        - read ../../draft/2024/09/20240912093000.md
-        - read ../../draft/2024/09/20240913140000.md
-        - read ../../draft/2024/09/20240914140000.md
-        - read ../../draft/2024/09/20240915093000.md
-        - read ../../draft/2024/09/20240916140000.md
-    - '90': 整理近期讨论，按照新版manifest text提炼几个有代表性的场景。
-      readme: |
-        - read ../../draft/2024/09/20240904140000.md
-        - read ../../draft/2024/09/20240905074500.md
-        - read ../../draft/2024/09/20240906140000.md
-        - read ../../draft/2024/09/20240908093000.md
-        - read ../../draft/2024/09/20240911140000.md
-        - read ../../draft/2024/09/20240912093000.md
-        - read ../../draft/2024/09/20240913140000.md
-        - read ../../draft/2024/09/20240914140000.md
-    - '30': 整理近期讨论，按照新版manifest text提炼几个有代表性的场景。
-    - '60': 整理9.5.讨论和代理协议
-      readme: |
-        - read ../../draft/2024/09/20240926.03.md
         - read ../../draft/2024/09/20240927.03.md
-    - '90': 整理8.28.讨论
-      readme: |
-        - read ../../draft/2024/09/20240924.02.md
-        - read ../../draft/2024/09/20240925.02.md
-        - read ../../draft/2024/09/20240926.02.md
-        - read ../../draft/2024/09/20240927.01.md
+        - read ../../draft/2024/09/20240928.02.md
+    - '90': 整理default模型
     - '195': machines model
       readme: |
         - a sample instance of machine,FPM,FSM in manifest code 
@@ -698,6 +639,7 @@ todo:
       readnme: |
         - 考虑upgradeby的实现。
   ego:
+    - '30': day over [date]带有日期参数时，redo就不要插回season metadata了。
     - '195': 新版ego, instance or model, any manifest
       readme: |
         - read ../../draft/2024/09/20240925.01.md
@@ -745,12 +687,6 @@ todo:
         - read ../../draft/2024/09/20240922.02.md
         - read ../../draft/2024/09/20240923.03.md
         - read ../../draft/2024/09/20240924.03.md
-    - '30': 动态菜单设计。
-      readme: |
-        - read ../../draft/2024/09/20240921.02.md
-        - read ../../draft/2024/09/20240922.02.md
-        - read ../../draft/2024/09/20240923.03.md
-        - read ../../draft/2024/09/20240924.03.md
     - '60': 范例--利用js模块组合实现合同条款的组合。
     - '90': schema立项。
       readme: |
@@ -768,8 +704,6 @@ todo:
         - read ../../draft/2024/09/20240912160000.md
         - read ../../draft/2024/09/20240913160000.md
         - read ../../draft/2024/09/20240914160000.md
-    - '60': https://proto.school/merkle-dags IPLD,Merkle DAGs, Structuring Data for the Distributed Web
-    - '90': learn IPLD ADLs https://ipld.io/docs/advanced-data-layouts/
     - '30': learn IPLD ADLs https://ipld.io/docs/advanced-data-layouts/
     - '60': learn Blogging on the Decentralized Web https://proto.school/blog
     - '60': 在nodejs读写OFD文件。

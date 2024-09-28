@@ -280,22 +280,27 @@ module.exports = {
             var timeperiod = dayobj.time[i];
             var begintime = util.str2time(timeperiod.begin);
 
-            if(timeperiod.redo == true){
-                season.addtodoitem(seasonobj,timeperiod.subject,timeperiod.title,timeperiod.amount,timeperiod.readme);
-                if(timeperiod.trueamount != null){
-                    timeperiod.amount = timeperiod.trueamount ;
-                }
-            }else if(timeperiod.redo != null){
-                if(timeperiod.readme != null){
-                    season.addtodoitem(seasonobj,timeperiod.subject,timeperiod.title,timeperiod.redo,timeperiod.readme+"- read "+timeperiod.output+"\n");
-                }else{
-                    season.addtodoitem(seasonobj,timeperiod.subject,timeperiod.title,timeperiod.redo,"- read "+timeperiod.output+"\n");
-                }
-                
-                if(timeperiod.trueamount != null){
-                    timeperiod.amount = timeperiod.trueamount ;
-                }
-            } 
+            if(datestr == util.datestr()){
+                if(timeperiod.redo == true){
+                    season.addtodoitem(seasonobj,timeperiod.subject,timeperiod.title,timeperiod.amount,timeperiod.readme);
+                    if(timeperiod.trueamount != null){
+                        timeperiod.amount = timeperiod.trueamount ;
+                    }
+                }else if(timeperiod.redo != null){
+                    if(timeperiod.readme != null){
+                        season.addtodoitem(seasonobj,timeperiod.subject,timeperiod.title,timeperiod.redo,timeperiod.readme+"- read "+timeperiod.output+"\n");
+                    }else{
+                        season.addtodoitem(seasonobj,timeperiod.subject,timeperiod.title,timeperiod.redo,"- read "+timeperiod.output+"\n");
+                    }
+                    
+                    if(timeperiod.trueamount != null){
+                        timeperiod.amount = timeperiod.trueamount ;
+                    }
+                } 
+            }else{
+                log("not today, don't redo.");
+            }
+            
         }
 
         season.dumpseasonobj(seasonobj);
