@@ -565,12 +565,12 @@ time:
     learn: 1500
     js: 1200
   sold:
-    PSMD: 4952
-    ego: 2191
+    PSMD: 5192
+    ego: 2206
     xuemen: 241
     infra: 275
     js: 2018
-    learn: 2379
+    learn: 2409
     raw: 1415
 todo:
   PSMD:
@@ -579,6 +579,7 @@ todo:
         - read ../../draft/2024/09/20240926.03.md
         - read ../../draft/2024/09/20240927.03.md
         - read ../../draft/2024/09/20240928.02.md
+        - read ../../draft/2024/09/20240929.04.md
     - '90': 整理default模型
     - '195': machines model
       readme: |
@@ -639,7 +640,6 @@ todo:
       readnme: |
         - 考虑upgradeby的实现。
   ego:
-    - '30': day over [date]带有日期参数时，redo就不要插回season metadata了。
     - '195': 新版ego, instance or model, any manifest
       readme: |
         - read ../../draft/2024/09/20240925.01.md
@@ -704,7 +704,6 @@ todo:
         - read ../../draft/2024/09/20240912160000.md
         - read ../../draft/2024/09/20240913160000.md
         - read ../../draft/2024/09/20240914160000.md
-    - '30': learn IPLD ADLs https://ipld.io/docs/advanced-data-layouts/
     - '60': learn Blogging on the Decentralized Web https://proto.school/blog
     - '60': 在nodejs读写OFD文件。
       readme: |
@@ -790,6 +789,7 @@ todo:
       readme: |
         - read ../../draft/2024/09/20240907143000.md
         - read ../../draft/2024/09/20240927.02.md
+        - read ../../draft/2024/09/20240929.01.md
     - '60': 熟悉内脏之间的关系
       readme: |
         - read ../../draft/2024/09/20240917143000.md

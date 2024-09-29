@@ -1,0 +1,81 @@
+date: '20240929'
+mode: '1'
+plan: 1b
+time:
+  - begin: '20240929060200'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20240929061700'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20240929071700'
+    amount: 45
+    type: food
+    name: 早餐
+  - begin: '20240929080200'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20240929084700'
+    amount: 42
+    type: free
+    name: 休整
+  - begin: '20240929093000'
+    amount: 0
+    redo: 90
+    type: work
+    name: 静默工作
+    subject: raw
+    title: 整理代码，理顺food.js几个成员函数之间的调用关系
+    readme: |
+      - read ../../draft/2024/09/20240907143000.md
+      - read ../../draft/2024/09/20240927.02.md
+    output: ../../draft/2024/09/20240929.01.md
+    namelink: http://simp.ly/p/j1SspP
+  - begin: '20240929110000'
+    amount: 180
+    type: food
+    name: 备餐、午餐午休
+  - begin: '20240929140000'
+    amount: 15
+    type: work
+    name: 静默工作
+    subject: ego
+    title: day over [date]带有日期参数时，redo就不要插回season metadata了。
+    output: ../../draft/2024/09/20240929.02.md
+    namelink: http://simp.ly/p/8t3vlk
+  - begin: '20240929143000'
+    amount: 30
+    type: work
+    name: 静默工作
+    subject: learn
+    title: learn IPLD ADLs https://ipld.io/docs/advanced-data-layouts/
+    output: ../../draft/2024/09/20240929.03.md
+    namelink: http://simp.ly/p/5k9gJy
+  - begin: '20240929150000'
+    amount: 60
+    type: free
+    name: 休整
+  - begin: '20240929160000'
+    amount: 240
+    redo: 60
+    type: work
+    name: 静默工作
+    subject: PSMD
+    title: 整理9.5.讨论和代理协议
+    readme: |
+      - read ../../draft/2024/09/20240926.03.md
+      - read ../../draft/2024/09/20240927.03.md
+      - read ../../draft/2024/09/20240928.02.md
+    output: ../../draft/2024/09/20240929.04.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20240929170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20240929190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
