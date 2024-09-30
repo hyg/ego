@@ -1,0 +1,76 @@
+date: '20240930'
+mode: '2'
+plan: 2a
+time:
+  - begin: '20240930044100'
+    amount: 19
+    type: free
+    name: 休整
+  - begin: '20240930050000'
+    amount: 57
+    type: prepare
+    name: 备餐、运动
+  - begin: '20240930055700'
+    amount: 45
+    type: food
+    name: 早餐
+  - begin: '20240930064200'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20240930072600'
+    amount: 18
+    type: free
+    name: 休整
+  - begin: '20240930074500'
+    amount: 270
+    type: work
+    name: 工作
+    subject: PSMD
+    title: 整理9.5.讨论和代理协议
+    readme: |
+      - read ../../draft/2024/09/20240926.03.md
+      - read ../../draft/2024/09/20240927.03.md
+      - read ../../draft/2024/09/20240928.02.md
+      - read ../../draft/2024/09/20240929.04.md
+    output: ../../draft/2024/09/20240930.01.md
+    namelink: http://simp.ly/p/3GXNTh
+  - begin: '20240930110000'
+    amount: 180
+    type: food
+    name: 备餐、午餐午休
+  - begin: '20240930140000'
+    amount: 15
+    redo: 90
+    type: work
+    name: 工作
+    subject: PSMD
+    title: 整理default模型
+    output: ../../draft/2024/09/20240930.02.md
+    namelink: http://simp.ly/p/lsBYG9
+  - begin: '20240930153000'
+    amount: 30
+    type: free
+    name: 休整
+  - begin: '20240930160000'
+    amount: 30
+    redo: 60
+    type: work
+    name: 工作
+    subject: infra
+    title: 动态菜单设计。
+    readme: |
+      - read ../../draft/2024/09/20240921.02.md
+      - read ../../draft/2024/09/20240922.02.md
+      - read ../../draft/2024/09/20240923.03.md
+      - read ../../draft/2024/09/20240924.03.md
+    output: ../../draft/2024/09/20240930.03.md
+    namelink: http://simp.ly/p/MpcbHD
+  - begin: '20240930170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20240930190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
