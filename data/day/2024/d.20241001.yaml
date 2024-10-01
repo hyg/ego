@@ -1,0 +1,65 @@
+date: '20241001'
+mode: '1'
+plan: 1d
+time:
+  - begin: '20241001075400'
+    amount: 24
+    type: free
+    name: 休整
+  - begin: '20241001081800'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20241001090900'
+    amount: 45
+    type: food
+    name: 午餐
+  - begin: '20241001095400'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20241001103900'
+    amount: 200
+    type: free
+    name: 休整
+  - begin: '20241001140000'
+    amount: 30
+    redo: 30
+    type: work
+    name: 静默工作
+    subject: ego
+    title: 新版本任务、子任务的数据结构
+    output: ../../draft/2024/10/20241001.01.md
+    namelink: http://simp.ly/p/8t3vlk
+  - begin: '20241001143000'
+    amount: 45
+    type: work
+    name: 静默工作
+    subject: xuemen
+    title: 整理财务报表
+    output: ../../draft/2024/10/20241001.02.md
+    namelink: http://simp.ly/p/5k9gJy
+  - begin: '20241001150000'
+    amount: 60
+    type: free
+    name: 休整
+  - begin: '20241001160000'
+    amount: 91
+    redo: 60
+    type: work
+    name: 静默工作
+    subject: ego
+    title: schema manifest code v0
+    readme: |
+      - read 2024.07.21 07:45 draft
+      - read 2024.07.22 07:45 draft
+    output: ../../draft/2024/10/20241001.03.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20241001170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20241001190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交

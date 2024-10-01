@@ -1,0 +1,839 @@
+year: 2024
+season: 4
+beginmonth: 10
+beginday: 1
+lastmonth: 12
+lastday: 31
+timetype:
+  - name: work
+  - name: free
+  - name: discuss
+  - name: learn
+  - name: prepare
+  - name: sleep
+  - name: food
+  - name: check
+map:
+  '1':
+    1a:
+      start: 0
+      end: 45959
+    1b:
+      start: 50000
+      end: 64459
+    1c:
+      start: 64500
+      end: 71459
+    1d:
+      start: 71500
+      end: 101459
+    1e:
+      start: 101500
+      end: 121459
+    1f:
+      start: 121500
+      end: 191459
+  '2':
+    2a:
+      start: 0
+      end: 45959
+    2b:
+      start: 50000
+      end: 64459
+    2c:
+      start: 64500
+      end: 81459
+dayplan:
+  2a:
+    timeslice:
+      '60': 1
+      '90': 1
+      '195': 1
+    time:
+      - amount: 15
+        type: free
+        name: 休整
+      - amount: 60
+        type: prepare
+        name: 备餐、运动
+      - amount: 45
+        type: food
+        name: 早餐
+      - amount: 45
+        type: discuss
+        name: 会议、自习
+      - endhour: 7
+        endminute: 44
+        type: free
+        name: 休整
+      - beginhour: 7
+        beginminute: 45
+        amount: 195
+        type: work
+        name: 工作
+        namelink: http://simp.ly/p/3GXNTh
+      - beginhour: 11
+        beginminute: 0
+        amount: 180
+        type: food
+        name: 备餐、午餐午休
+      - beginhour: 14
+        beginminute: 0
+        amount: 90
+        type: work
+        name: 工作
+        namelink: http://simp.ly/p/lsBYG9
+      - beginhour: 15
+        beginminute: 30
+        amount: 30
+        type: free
+        name: 休整
+      - beginhour: 16
+        beginminute: 0
+        amount: 60
+        type: work
+        name: 工作
+        namelink: http://simp.ly/p/MpcbHD
+      - beginhour: 17
+        beginminute: 0
+        amount: 120
+        type: food
+        name: 晚餐
+      - beginhour: 19
+        beginminute: 0
+        amount: 60
+        type: check
+        name: 讨论、整理提交
+    readme: |
+      工作的同时可以在线讨论。
+  2b:
+    timeslice:
+      '60': 1
+      '90': 2
+    time:
+      - amount: 15
+        type: free
+        name: 休整
+      - amount: 60
+        type: prepare
+        name: 备餐、运动
+      - amount: 45
+        type: food
+        name: 早餐
+      - amount: 45
+        type: discuss
+        name: 会议、自习
+      - endhour: 9
+        endminute: 29
+        type: free
+        name: 休整
+      - beginhour: 9
+        beginminute: 30
+        amount: 90
+        type: work
+        name: 工作
+        namelink: http://simp.ly/p/WZ077p
+      - beginhour: 11
+        beginminute: 0
+        amount: 180
+        type: food
+        name: 备餐、午餐午休
+      - beginhour: 14
+        beginminute: 0
+        amount: 90
+        type: work
+        name: 工作
+        namelink: http://simp.ly/p/lsBYG9
+      - beginhour: 15
+        beginminute: 30
+        amount: 30
+        type: free
+        name: 休整
+      - beginhour: 16
+        beginminute: 0
+        amount: 60
+        type: work
+        name: 工作
+        namelink: http://simp.ly/p/MpcbHD
+      - beginhour: 17
+        beginminute: 0
+        amount: 120
+        type: food
+        name: 晚餐
+      - beginhour: 19
+        beginminute: 0
+        amount: 60
+        type: check
+        name: 讨论、整理提交
+    readme: |
+      工作的同时可以在线讨论。
+  2c:
+    timeslice:
+      '60': 1
+      '90': 1
+    time:
+      - amount: 15
+        type: free
+        name: 休整
+      - amount: 60
+        type: prepare
+        name: 备餐、运动
+      - amount: 45
+        type: food
+        name: 早餐
+      - amount: 45
+        type: discuss
+        name: 会议、自习
+      - endhour: 10
+        endminute: 59
+        type: free
+        name: 休整
+      - beginhour: 11
+        beginminute: 0
+        amount: 180
+        type: food
+        name: 备餐、午餐午休
+      - beginhour: 14
+        beginminute: 0
+        amount: 90
+        type: work
+        name: 工作
+        namelink: http://simp.ly/p/lsBYG9
+      - beginhour: 15
+        beginminute: 30
+        amount: 30
+        type: free
+        name: 休整
+      - beginhour: 16
+        beginminute: 0
+        amount: 60
+        type: work
+        name: 工作
+        namelink: http://simp.ly/p/MpcbHD
+      - beginhour: 17
+        beginminute: 0
+        amount: 120
+        type: food
+        name: 晚餐
+      - beginhour: 19
+        beginminute: 0
+        amount: 60
+        type: check
+        name: 讨论、整理提交
+    readme: |
+      工作的同时可以在线讨论。
+  1a:
+    timeslice:
+      '30': 2
+      '60': 2
+      '90': 1
+    time:
+      - amount: 15
+        type: free
+        name: 休整
+      - amount: 60
+        type: prepare
+        name: 备餐、运动
+      - amount: 45
+        type: food
+        name: 早餐
+      - amount: 45
+        type: discuss
+        name: 会议、自习
+      - endhour: 7
+        endminute: 44
+        type: free
+        name: 休整
+      - beginhour: 7
+        beginminute: 45
+        amount: 60
+        type: work
+        name: 静默工作
+        namelink: http://simp.ly/p/xtgD4F
+      - beginhour: 8
+        beginminute: 45
+        amount: 45
+        type: free
+        name: 休整
+      - beginhour: 9
+        beginminute: 30
+        amount: 90
+        type: work
+        name: 静默工作
+        namelink: http://simp.ly/p/j1SspP
+      - beginhour: 11
+        beginminute: 0
+        amount: 180
+        type: food
+        name: 备餐、午餐午休
+      - beginhour: 14
+        beginminute: 0
+        amount: 30
+        type: work
+        name: 静默工作
+        namelink: http://simp.ly/p/8t3vlk
+      - beginhour: 14
+        beginminute: 30
+        amount: 30
+        type: work
+        name: 静默工作
+        namelink: http://simp.ly/p/5k9gJy
+      - beginhour: 15
+        beginminute: 0
+        amount: 60
+        type: free
+        name: 休整
+      - beginhour: 16
+        beginminute: 0
+        amount: 60
+        type: work
+        name: 静默工作
+        namelink: http://simp.ly/p/4QDThK
+      - beginhour: 17
+        beginminute: 0
+        amount: 120
+        type: food
+        name: 晚餐
+      - beginhour: 19
+        beginminute: 0
+        amount: 60
+        type: check
+        name: 讨论、整理提交
+    readme: |
+      模版一采用静默工作方式。  
+      希望讨论的提纲发到 [huangyg@mars22.com](mailto:huangyg@mars22.com)，通常安排在后面某天的早餐或会议自习时间。
+  1b:
+    timeslice:
+      '30': 2
+      '60': 1
+      '90': 1
+    time:
+      - amount: 15
+        type: free
+        name: 休整
+      - amount: 60
+        type: prepare
+        name: 备餐、运动
+      - amount: 45
+        type: food
+        name: 早餐
+      - amount: 45
+        type: discuss
+        name: 会议、自习
+      - endhour: 9
+        endminute: 29
+        type: free
+        name: 休整
+      - beginhour: 9
+        beginminute: 30
+        amount: 90
+        type: work
+        name: 静默工作
+        namelink: http://simp.ly/p/j1SspP
+      - beginhour: 11
+        beginminute: 0
+        amount: 180
+        type: food
+        name: 备餐、午餐午休
+      - beginhour: 14
+        beginminute: 0
+        amount: 30
+        type: work
+        name: 静默工作
+        namelink: http://simp.ly/p/8t3vlk
+      - beginhour: 14
+        beginminute: 30
+        amount: 30
+        type: work
+        name: 静默工作
+        namelink: http://simp.ly/p/5k9gJy
+      - beginhour: 15
+        beginminute: 0
+        amount: 60
+        type: free
+        name: 休整
+      - beginhour: 16
+        beginminute: 0
+        amount: 60
+        type: work
+        name: 静默工作
+        namelink: http://simp.ly/p/4QDThK
+      - beginhour: 17
+        beginminute: 0
+        amount: 120
+        type: food
+        name: 晚餐
+      - beginhour: 19
+        beginminute: 0
+        amount: 60
+        type: check
+        name: 讨论、整理提交
+    readme: |
+      模版一采用静默工作方式。  
+      希望讨论的提纲发到 [huangyg@mars22.com](mailto:huangyg@mars22.com)，通常安排在后面某天的早餐或会议自习时间。
+  1c:
+    timeslice:
+      '30': 2
+      '60': 1
+    time:
+      - amount: 15
+        type: free
+        name: 休整
+      - amount: 60
+        type: prepare
+        name: 备餐、运动
+      - amount: 45
+        type: food
+        name: 早餐
+      - amount: 45
+        type: discuss
+        name: 会议、自习
+      - endhour: 10
+        endminute: 59
+        type: free
+        name: 休整
+      - beginhour: 11
+        beginminute: 0
+        amount: 180
+        type: food
+        name: 备餐、午餐午休
+      - beginhour: 14
+        beginminute: 0
+        amount: 30
+        type: work
+        name: 静默工作
+        namelink: http://simp.ly/p/8t3vlk
+      - beginhour: 14
+        beginminute: 30
+        amount: 30
+        type: work
+        name: 静默工作
+        namelink: http://simp.ly/p/5k9gJy
+      - beginhour: 15
+        beginminute: 0
+        amount: 60
+        type: free
+        name: 休整
+      - beginhour: 16
+        beginminute: 0
+        amount: 60
+        type: work
+        name: 静默工作
+        namelink: http://simp.ly/p/4QDThK
+      - beginhour: 17
+        beginminute: 0
+        amount: 120
+        type: food
+        name: 晚餐
+      - beginhour: 19
+        beginminute: 0
+        amount: 60
+        type: check
+        name: 讨论、整理提交
+    readme: |
+      模版一采用静默工作方式。  
+      希望讨论的提纲发到 [huangyg@mars22.com](mailto:huangyg@mars22.com)，通常安排在后面某天的早餐或会议自习时间。
+  1d:
+    timeslice:
+      '30': 2
+      '60': 1
+    time:
+      - amount: 15
+        type: free
+        name: 休整
+      - amount: 60
+        type: prepare
+        name: 备餐、运动
+      - amount: 45
+        type: food
+        name: 午餐
+      - amount: 45
+        type: discuss
+        name: 会议、自习
+      - endhour: 13
+        endminute: 59
+        type: free
+        name: 休整
+      - beginhour: 14
+        beginminute: 0
+        amount: 30
+        type: work
+        name: 静默工作
+        namelink: http://simp.ly/p/8t3vlk
+      - beginhour: 14
+        beginminute: 30
+        amount: 30
+        type: work
+        name: 静默工作
+        namelink: http://simp.ly/p/5k9gJy
+      - beginhour: 15
+        beginminute: 0
+        amount: 60
+        type: free
+        name: 休整
+      - beginhour: 16
+        beginminute: 0
+        amount: 60
+        type: work
+        name: 静默工作
+        namelink: http://simp.ly/p/4QDThK
+      - beginhour: 17
+        beginminute: 0
+        amount: 120
+        type: food
+        name: 晚餐
+      - beginhour: 19
+        beginminute: 0
+        amount: 60
+        type: check
+        name: 讨论、整理提交
+    readme: |
+      模版一采用静默工作方式。  
+      希望讨论的提纲发到 [huangyg@mars22.com](mailto:huangyg@mars22.com)，通常安排在后面某天的早餐或会议自习时间。
+  1e:
+    timeslice:
+      '60': 1
+    time:
+      - amount: 15
+        type: free
+        name: 休整
+      - amount: 60
+        type: prepare
+        name: 备餐、运动
+      - amount: 45
+        type: food
+        name: 午餐
+      - amount: 45
+        type: discuss
+        name: 会议、自习
+      - endhour: 15
+        endminute: 59
+        type: free
+        name: 休整
+      - beginhour: 16
+        beginminute: 0
+        amount: 60
+        type: work
+        name: 静默工作
+        namelink: http://simp.ly/p/4QDThK
+      - beginhour: 17
+        beginminute: 0
+        amount: 120
+        type: food
+        name: 晚餐
+      - beginhour: 19
+        beginminute: 0
+        amount: 60
+        type: check
+        name: 讨论、整理提交
+    readme: |
+      模版一采用静默工作方式。  
+      希望讨论的提纲发到 [huangyg@mars22.com](mailto:huangyg@mars22.com)，通常安排在后面某天的早餐或会议自习时间。
+  1f:
+    time:
+      - amount: 15
+        type: free
+        name: 休整
+      - amount: 60
+        type: prepare
+        name: 备餐、运动
+      - amount: 45
+        type: food
+        name: 晚餐
+      - amount: 45
+        type: discuss
+        name: 会议、自习
+      - amount: 60
+        type: free
+        name: 休整
+      - amount: 60
+        type: check
+        name: 讨论、整理提交
+    readme: |
+      模版一采用静默工作方式。  
+      希望讨论的提纲发到 [huangyg@mars22.com](mailto:huangyg@mars22.com)，通常安排在后面某天的早餐或会议自习时间。
+time:
+  mode:
+    '1': 41
+    '2': 20
+  plan:
+    1a: 12
+    1b: 12
+    1c: 8
+    1d: 8
+    1e: 1
+    1f: 0
+    2a: 12
+    2b: 5
+    2c: 3
+  timeslice:
+    '30': 80
+    '60': 73
+    '90': 49
+    '195': 12
+  timesum: 13530
+  alloc:
+    PSMD: 4000
+    ego: 2530
+    infra: 2000
+    xuemen: 1000
+    raw: 1000
+    learn: 2000
+    js: 1000
+  sold:
+    ego: 121
+    xuemen: 45
+todo:
+  PSMD:
+    - '90': 整理default模型
+      readme: |
+        - read ../../draft/2024/09/20240930.02.md
+    - '195': machines model
+      readme: |
+        - a sample instance of machine,FPM,FSM in manifest code 
+        - read D:\huangyg\git\draft\2024\07\20240723160000.md
+        - read 2024.07.24. 09:30, 2024.07.25. 09:30, 2024.07.26. 09:30 draft
+        - 实现FPM+FSM
+        - 从FSM、FPM中抽象出统一的mechine
+        - 实现joint、split机制
+        - 先用javascript的class实现
+        - read ../../draft/2024/09/20240926.01.md
+    - '60': 整理闫岸家政能力讨论
+      readme: |
+        - read ../../draft/2024/09/20240924.01.md
+        - read ../../draft/2024/09/20240925.03.md
+    - '90': 整理近期讨论，按照新版manifest text提炼几个有代表性的场景。
+      readme: |
+        - read ../../draft/2024/09/20240904140000.md
+        - read ../../draft/2024/09/20240905074500.md
+        - read ../../draft/2024/09/20240906140000.md
+        - read ../../draft/2024/09/20240908093000.md
+        - read ../../draft/2024/09/20240911140000.md
+        - read ../../draft/2024/09/20240912093000.md
+        - read ../../draft/2024/09/20240913140000.md
+        - read ../../draft/2024/09/20240914140000.md
+        - read ../../draft/2024/09/20240915093000.md
+        - read ../../draft/2024/09/20240916140000.md
+        - read ../../draft/2024/09/20240918093000.md
+        - read ../../draft/2024/09/20240921.01.md
+        - read ../../draft/2024/09/20240922.01.md
+    - '90': 整理新版本term的manifest code
+      readme: |
+        - 为了显示而设计的term model，并不适合与代码绑定。
+        - 设计前置protocol的定义和数据表现
+          - 自身的行为及其原因，可以自述的范围：标出理性与非理性（下意识）行为的边界。
+          - 对待自身与其他方采取相同标准的范围：标出公平与（无法自控、无法意识到的）歧视的边界。
+          - 上述范围与边界对合作行为有明显影响，是protocol可以要求参与者公示的。为了展示自身的范围和边界，最佳方式就是展示前置protocol和历史记录，今后发现更好的展示方式（前置protocol无法表达的）可以随之修订。
+        - 逐个条款签署和整份protocol签署的关系，是否还需要嵌套term。
+          - 根据FSM、FPM、machine的设计决定term的粒度。
+          - 设计每项知识的思考和案例积累锚点。
+        - 随之修订manifest text。
+        - 根据ego中joint、split两个原生操作的接口，设计protocol这一侧的接口。
+        - read ../../draft/2024/09/20240905140000.md
+        - read ../../draft/2024/09/20240906093000.md
+        - read ../../draft/2024/09/20240908140000.md
+        - read ../../draft/2024/09/20240909093000.md
+        - read ../../draft/2024/09/20240911093000.md
+        - read ../../draft/2024/09/20240912140000.md
+        - read ../../draft/2024/09/20240913093000.md
+        - read ../../draft/2024/09/20240918140000.md
+    - '90': 整理新版本term的manifest text
+      readme: |
+        - 条款文本嵌入到machine模型。
+        - 以修订和任免定义的层级嵌入到machine模型。
+    - '195': term + COM matedata -> deploy metadata -> deploy view
+    - '90': 以1406为例检查知识图谱和blawx的语法
+    - '90': term metadata的序号，分为显示序号和唯一id两种。
+      readnme: |
+        - 考虑upgradeby的实现。
+  ego:
+    - '60': schema manifest code v0
+      readme: |
+        - read 2024.07.21 07:45 draft
+        - read 2024.07.22 07:45 draft
+        - read ../../draft/2024/10/20241001.03.md
+    - '30': 新版本任务、子任务的数据结构
+      readme: |
+        - read ../../draft/2024/10/20241001.01.md
+    - '60': schema manifest code v0
+      readme: |
+        - read 2024.07.21 07:45 draft
+        - read 2024.07.22 07:45 draft
+        - read ../../draft/2024/10/20241001.03.md
+    - '30': 新版本任务、子任务的数据结构
+      readme: |
+        - read ../../draft/2024/10/20241001.01.md
+    - '30': 整理季度任务
+    - '60': eventemitter sample
+      readme: |
+        - event listener in module
+        - auto load the event listener in main js file
+          - load them in a function in module
+          - load them in main js file use metadata
+      bind:
+        - '60': schema level 2 schema for code v1
+          readme: |
+            - schema means "task level and stage defined by schema"
+            - schema manifest code: generate tasks by level and stage define by schema
+            - schame level 2 schema for code: schema for develop "generate tasks by level and stage define by schema" 
+    - '195': 新版ego, instance or model, any manifest
+      readme: |
+        - read ../../draft/2024/09/20240925.01.md
+    - '60': schema manifest law v0
+      readme: |
+        - read 2024.07.21 07:45 draft
+      bind:
+        - '90': schema level 2 schema for law v1
+    - '60': 整理task及其相互关系
+      readme: |
+        - readme 2024.07.20. 09:30 draft
+    - '60': 用js代码完成日小结后的git操作。
+      readme: |
+        - 参考：D:\huangyg\git\draft\2024\04\20240430140000.md
+        - 在各task metadata中给出git库的路径，每天根据实际任务去操作。
+    - '60': 重新设计ego.js的命令行参数，合并函数，整理代码。
+    - '60': 时间改为ISO8601格式
+      readme: |
+        - season metadata
+        - day metada
+        - draft文件名
+  infra:
+    - '60': 动态菜单设计。
+      readme: |
+        - read ../../draft/2024/09/20240921.02.md
+        - read ../../draft/2024/09/20240922.02.md
+        - read ../../draft/2024/09/20240923.03.md
+        - read ../../draft/2024/09/20240924.03.md
+        - read ../../draft/2024/09/20240930.03.md
+    - '60': 范例--利用js模块组合实现合同条款的组合。
+    - '90': schema立项。
+      readme: |
+        - read ../../draft/2024/09/20240919140000.md
+  learn:
+    - '60': https://proto.school/merkle-dags IPLD,Merkle DAGs, Structuring Data for the Distributed Web
+      readme: |
+        - https://dagitty.net
+        - read ../../draft/2024/09/20240904160000.md
+        - read ../../draft/2024/09/20240905160000.md
+        - read ../../draft/2024/09/20240906160000.md
+        - read ../../draft/2024/09/20240908160000.md
+        - read ../../draft/2024/09/20240910160000.md
+        - read ../../draft/2024/09/20240911160000.md
+        - read ../../draft/2024/09/20240912160000.md
+        - read ../../draft/2024/09/20240913160000.md
+        - read ../../draft/2024/09/20240914160000.md
+    - '60': learn Blogging on the Decentralized Web https://proto.school/blog
+    - '60': 在nodejs读写OFD文件。
+      readme: |
+        - https://github.com/ofdrw/ofdrw
+        - https://blog.csdn.net/lishangke/article/details/135245444
+        - https://www.npmjs.com/package/ofd.js/v/0.8.0
+    - '60': https://proto.school/basics  IPFS,P2P Data Links with Content Addressing
+    - '60': learn web-llm
+    - '60': 开发YARRRML范例
+    - '90': 把PSMD的data、src部分升级到rdf，如果升级成功则作为范例。
+    - '60': Windows PowerShell
+    - '195': rust入门
+      bind:
+        - '195': 开发reenet Contracts sample
+          readme: |
+            - https://docs.freenet.org/components/contracts.html
+            - https://docs.freenet.org/introduction.html
+            - https://docs.freenet.org/tutorial.html
+    - '60': 继续学习promise api
+      readme: |
+        - https://zh.javascript.info/promise-api
+  js:
+    - '60': js class
+      readme: |
+        - https://zh.javascript.info/class
+        - https://www.w3school.com.cn/js/pro_js_object_oriented.asp
+        - 在FSM实践一下。
+        - yaml文件，obj in js，main.js之间是什么关系？其他语言怎么处理？放在schema框架统一再斟酌。
+        - read ../../draft/2024/09/20240907160000.md
+        - read ../../draft/2024/09/20240909160000.md
+        - read ../../draft/2024/09/20240915160000.md
+        - read ../../draft/2024/09/20240920.02.md
+        - read ../../draft/2024/09/20240922.04.md
+    - '60': learn Orbitdb
+      readme: |
+        - read 2024.07.15. 14:00 draft
+        - read 2024.07.17. 16:00 draft
+        - https://api.orbitdb.org/
+    - '60': learn js implement of ipfs
+      readme: |
+        - https://docs.ipfs.tech/reference/js/api/#get-started
+        - https://github.com/ipfs/kubo
+        - https://github.com/elastic-ipfs/elastic-ipfs
+    - '60': 基于dat,hypercore,hyperswarm等模块的浏览器动态页面范例。
+    - '60': git sample
+      readme: |
+        - https://isomorphic-git.org/docs/en/snippets
+        - https://isomorphic-git.org/docs/en/quickstart
+    - '60': 在代码中自动提交git库
+      readme: |
+        - D:\huangyg\git\draft\2024\04\20240430140000.md
+        - 2024.6.13. 16:00 draft
+    - '60': learn factory, constructor, prototype
+      readme: |
+        - https://juejin.cn/post/6844903653774458888
+        - https://segmentfault.com/a/1190000019054466
+        - https://www.javascripttutorial.net/javascript-factory-functions/
+        -https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/Objects/Object_prototypes
+      bind:
+        - '30': 新版raw.js的子命令-营养成分详情
+          readme: |
+            - 可选多种营养成分
+            - 考虑不同UI
+            - 使用新的模块化设计
+            - 使用新的data model
+        - '30': 新版raw.js的子命令-营养成分排序
+    - '60': 学习 nodejs test框架
+      readme: |
+        - https://github.com/Vanessa219/vditor
+            - https://nodejs.cn/api/test.html
+        - https://github.com/markedjs/marked
+        - https://bun.sh/
+        bind:
+          - '90': 实际编写自己的测试范例
+    - '60': 向外提供js文件的范例，为代码层级互通做准备
+    - '60': giiter.im bot sample
+      readme: |
+        - https://github.com/matrix-org/matrix-js-sdk
+        - http://matrix-org.github.io/matrix-js-sdk/index.html
+    - '60': 学习'Electron'，创作一个范例。
+  raw:
+    - '90': 整理代码，理顺food.js几个成员函数之间的调用关系
+      readme: |
+        - read ../../draft/2024/09/20240907143000.md
+        - read ../../draft/2024/09/20240927.02.md
+        - read ../../draft/2024/09/20240929.01.md
+    - '60': 熟悉内脏之间的关系
+      readme: |
+        - read ../../draft/2024/09/20240917143000.md
+    - '60': 设计四季度时间表
+      readme: |
+        - 两片休整时间联合调节的算法需要整理。
+        - 餐谱和饱腹感时间需要综合算计。
+        - read ../../draft/2024/09/20240904143000.md
+        - read ../../draft/2024/09/20240907140000.md
+    - '90': 整理代码，理顺food.js几个成员函数之间的调用关系
+      readme: |
+        - read ../../draft/2024/09/20240907143000.md
+    - '60': 设计四季度时间表
+      readme: |
+        - 两片休整时间联合调节的算法需要整理。
+        - 餐谱和饱腹感时间需要综合算计。
+        - read ../../draft/2024/09/20240904143000.md
+        - read ../../draft/2024/09/20240907140000.md
+    - '60': 新版食材排序，包括升序、降序、特定值距离、多种营养成分特定值组合距离。
+    - '60': 新版营养成分详情，允许多种营养成分。
+  xuemen:
+    - '30': 月初财务工作
+    - '195': kernel模型升级
+    - '195': 重新设计S2状态下的学门基本管理制度
+    - '60': term.e6f0caec -> xuemen COD metadata-S2状态下的部门模型
+comment:
+  '20240520': |
+    - 需要一套合理的分类谱系
+    - 入门门槛降低，分流后再逐渐升难度

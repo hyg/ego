@@ -1,4 +1,5 @@
 const day = require('./day.js');
+const season = require('./season.js');
 
 const { Command } = require('commander');
 var program = new Command();
@@ -63,6 +64,29 @@ daycommand
         var dayobj = day.loaddayobj();
         day.makedayplan(dayobj);
         day.maketomorrowinfo();
+    });
+
+
+const seasoncommand = program
+    .command('season')
+    .description('以天季度为单位的自我管理功能');
+
+seasoncommand
+    .command("stat [date]")
+    .description('显示季度统计报表。')
+    .action((date) => {
+        log("stat:", date);
+        season.debug = true;
+        season.stat(date);
+    });
+
+seasoncommand
+    .command("plan")
+    .description('计算本季度的时间计划，更新metadata文件。')
+    .action(() => {
+        log("plan");
+        //season.debug = false;
+        season.plan();
     });
 
 program.parse();

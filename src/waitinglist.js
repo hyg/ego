@@ -10,6 +10,7 @@ function log(...s) {
 module.exports = {
     debug: true,
     makewaitinglist: function (seasonobj) {
+        //log("seasonobj:",seasonobj);
         var waitinglist = new Object();
 
         var todoobj = seasonobj.todo;
@@ -25,16 +26,15 @@ module.exports = {
             }
             resttotal = resttotal + rest[task];
         }
-        //console.log("resttotal:",resttotal);
-        //console.log("rest:\n"+yaml.dump(rest));
+        //log("resttotal:",resttotal);
+        //log("rest:\n"+yaml.dump(rest));
         var restSorted = Object.keys(rest).sort(function (a, b) { return rest[b] - rest[a] });
-        //console.log("resetSOrted:\n"+ yaml.dump(restSorted));
+        log("resetSOrted:\n"+ yaml.dump(restSorted));
 
         // init the waitinglist
         var dayplanobj = seasonobj.dayplan;
-        //var waitinglist = new Object();
         for (var planid in dayplanobj) {
-            for (var amounttype in dayplanobj[planid].supply) {
+            for (var amounttype in dayplanobj[planid].timeslice) {
                 if (waitinglist[amounttype] == null) {
                     // a new amount type
                     var amounttypelist = new Array();
@@ -42,7 +42,7 @@ module.exports = {
                 }
             }
         }
-        //console.log("waitinglist:\n",yaml.dump(waitinglist));
+        log("waitinglist:\n",yaml.dump(waitinglist));
 
         var hasobj = true;
         var k = 0;

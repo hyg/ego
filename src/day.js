@@ -256,7 +256,7 @@ module.exports = {
         var date = util.str2date(datestr);
 
         var dayplanstr = "# " + date.Format("yyyy.MM.dd.") + "\n日计划\n\n"
-            + "根据[ego模型时间接口](https://gitee.com/hyg/blog/blob/master/timeflow.md)，九月补足前两月缺勤。今天绑定模版" + dayobj.mode + "(" + dayobj.plan + ")。\n\n"
+            + "根据[ego模型时间接口](https://gitee.com/hyg/blog/blob/master/timeflow.md)，今天绑定模版" + dayobj.mode + "(" + dayobj.plan + ")。\n\n"
             + this.maketable(dayobj) + "\n---\n\n" + this.makeindex(dayobj, "plan");
 
         var dayplanfilename = path.blogrepopath + "release/time/d." + datestr + ".md";
@@ -308,7 +308,7 @@ module.exports = {
         log("datestr:",datestr);
 
         var daylogstr = "# " + date.Format("yyyy.MM.dd.") + "\n日小结\n\n"
-            + "<a id=\"top\"></a>\n" + "根据[ego模型时间接口](https://gitee.com/hyg/blog/blob/master/timeflow.md)，九月补足前两月缺勤。今天绑定模版" + dayobj.mode + "(" + dayobj.plan + ")。\n\n"
+            + "<a id=\"top\"></a>\n" + "根据[ego模型时间接口](https://gitee.com/hyg/blog/blob/master/timeflow.md)，今天绑定模版" + dayobj.mode + "(" + dayobj.plan + ")。\n\n"
             + "<a id=\"index\"></a>\n" + this.makeindex(dayobj, "log")
             + season.makestattable(seasonobj)
             + wl.makebrieflist(waitinglist)
@@ -359,12 +359,12 @@ module.exports = {
         var date = util.str2date(datestr);
         var seasonobj = season.loadseasonobj();
         //var waitinglist = wl.makewaitinglist(seasonobj);
-        //log("waitinglist:\n%s",waitinglist);
 
         var dayinfostr = "# " + date.Format("yyyy.MM.dd.") + "\n\n根据[ego模型时间接口](https://gitee.com/hyg/blog/blob/master/timeflow.md)，每天早起根据身心状况绑定模版。" + "\n\n---\n";
         for (var plan in seasonobj.dayplan) {
             var waitinglist = wl.makewaitinglist(seasonobj);
             //log("plan:",plan);
+            log("waitinglist:\n%s",waitinglist);
             var time = seasonobj.dayplan[plan].time;
             dayinfostr = dayinfostr + "如果绑定模版" + plan + "可能安排以下任务：\n\n";
             for (var i in time) {
