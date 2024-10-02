@@ -364,7 +364,7 @@ module.exports = {
         for (var plan in seasonobj.dayplan) {
             var waitinglist = wl.makewaitinglist(seasonobj);
             //log("plan:",plan);
-            log("waitinglist:\n%s",waitinglist);
+            //log("waitinglist:\n%s",waitinglist);
             var time = seasonobj.dayplan[plan].time;
             dayinfostr = dayinfostr + "如果绑定模版" + plan + "可能安排以下任务：\n\n";
             for (var i in time) {

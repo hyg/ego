@@ -15,7 +15,7 @@ module.exports = {
         if (datestr != "") {
             theDate = util.str2date(datestr);
         }
-        log("theDate = ", theDate.toString());
+        //log("theDate = ", theDate.toString());
 
         var year = theDate.getFullYear();
         var month = theDate.getMonth() + 1;

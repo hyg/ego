@@ -583,11 +583,14 @@ time:
   sold:
     ego: 121
     xuemen: 45
+    PSMD: 0
+    infra: 0
 todo:
   PSMD:
     - '90': 整理default模型
       readme: |
         - read ../../draft/2024/09/20240930.02.md
+        - read ../../draft/2024/10/20241002.01.md
     - '195': machines model
       readme: |
         - a sample instance of machine,FPM,FSM in manifest code 
@@ -647,23 +650,11 @@ todo:
       readnme: |
         - 考虑upgradeby的实现。
   ego:
-    - '60': schema manifest code v0
-      readme: |
-        - read 2024.07.21 07:45 draft
-        - read 2024.07.22 07:45 draft
-        - read ../../draft/2024/10/20241001.03.md
-    - '30': 新版本任务、子任务的数据结构
-      readme: |
-        - read ../../draft/2024/10/20241001.01.md
-    - '60': schema manifest code v0
-      readme: |
-        - read 2024.07.21 07:45 draft
-        - read 2024.07.22 07:45 draft
-        - read ../../draft/2024/10/20241001.03.md
     - '30': 新版本任务、子任务的数据结构
       readme: |
         - read ../../draft/2024/10/20241001.01.md
     - '30': 整理季度任务
+    - '30': day over的redo部分跳过同名、同时间的todo项。
     - '60': eventemitter sample
       readme: |
         - event listener in module
@@ -705,6 +696,7 @@ todo:
         - read ../../draft/2024/09/20240923.03.md
         - read ../../draft/2024/09/20240924.03.md
         - read ../../draft/2024/09/20240930.03.md
+        - read ../../draft/2024/10/20241002.02.md
     - '60': 范例--利用js模块组合实现合同条款的组合。
     - '90': schema立项。
       readme: |
@@ -829,7 +821,6 @@ todo:
     - '60': 新版食材排序，包括升序、降序、特定值距离、多种营养成分特定值组合距离。
     - '60': 新版营养成分详情，允许多种营养成分。
   xuemen:
-    - '30': 月初财务工作
     - '195': kernel模型升级
     - '195': 重新设计S2状态下的学门基本管理制度
     - '60': term.e6f0caec -> xuemen COD metadata-S2状态下的部门模型

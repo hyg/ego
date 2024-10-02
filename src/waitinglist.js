@@ -29,7 +29,7 @@ module.exports = {
         //log("resttotal:",resttotal);
         //log("rest:\n"+yaml.dump(rest));
         var restSorted = Object.keys(rest).sort(function (a, b) { return rest[b] - rest[a] });
-        log("resetSOrted:\n"+ yaml.dump(restSorted));
+        //log("resetSOrted:\n"+ yaml.dump(restSorted));
 
         // init the waitinglist
         var dayplanobj = seasonobj.dayplan;
@@ -42,7 +42,7 @@ module.exports = {
                 }
             }
         }
-        log("waitinglist:\n",yaml.dump(waitinglist));
+        //log("waitinglist:\n",yaml.dump(waitinglist));
 
         var hasobj = true;
         var k = 0;
