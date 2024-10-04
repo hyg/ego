@@ -1,0 +1,105 @@
+date: '20241004'
+mode: '1'
+plan: 1a
+time:
+  - begin: '20241004040800'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20241004042300'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20241004052300'
+    amount: 45
+    type: food
+    name: 早餐
+  - begin: '20241004060800'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20241004065300'
+    amount: 51
+    type: free
+    name: 休整
+  - begin: '20241004074500'
+    amount: 0
+    redo: 60
+    type: work
+    name: 静默工作
+    subject: infra
+    title: 动态菜单设计。
+    readme: |
+      - read ../../draft/2024/09/20240921.02.md
+      - read ../../draft/2024/09/20240922.02.md
+      - read ../../draft/2024/09/20240923.03.md
+      - read ../../draft/2024/09/20240924.03.md
+      - read ../../draft/2024/09/20240930.03.md
+      - read ../../draft/2024/10/20241002.02.md
+      - read ../../draft/2024/10/20241003.03.md
+    output: ../../draft/2024/10/20241004.01.md
+    namelink: http://simp.ly/p/xtgD4F
+  - begin: '20241004084500'
+    amount: 45
+    type: free
+    name: 休整
+  - begin: '20241004093000'
+    amount: 0
+    redo: 90
+    type: work
+    name: 静默工作
+    subject: PSMD
+    title: 整理default模型
+    readme: |
+      - read ../../draft/2024/09/20240930.02.md
+      - read ../../draft/2024/10/20241002.01.md
+    output: ../../draft/2024/10/20241004.02.md
+    namelink: http://simp.ly/p/j1SspP
+  - begin: '20241004110000'
+    amount: 180
+    type: food
+    name: 备餐、午餐午休
+  - begin: '20241004140000'
+    amount: 60
+    redo: 60
+    type: work
+    name: 静默工作
+    subject: ego
+    title: 整理季度任务
+    readme: |
+      - read ../../draft/2024/10/20241003.02.md
+    output: ../../draft/2024/10/20241004.03.md
+    namelink: http://simp.ly/p/8t3vlk
+  - begin: '20241004143000'
+    amount: 15
+    redo: 30
+    type: work
+    name: 静默工作
+    subject: ego
+    title: 新版本任务、子任务的数据结构
+    readme: |
+      - read ../../draft/2024/10/20241001.01.md
+      - read ../../draft/2024/10/20241003.01.md
+    output: ../../draft/2024/10/20241004.04.md
+    namelink: http://simp.ly/p/5k9gJy
+  - begin: '20241004150000'
+    amount: 60
+    type: free
+    name: 休整
+  - begin: '20241004160000'
+    amount: 10
+    redo: 60
+    type: work
+    name: 静默工作
+    subject: infra
+    title: 范例--利用js模块组合实现合同条款的组合。
+    output: ../../draft/2024/10/20241004.05.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20241004170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20241004190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
