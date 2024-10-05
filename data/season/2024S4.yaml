@@ -651,16 +651,20 @@ todo:
       readnme: |
         - 考虑upgradeby的实现。
   ego:
+    - '60': 整理季度任务
+      readme: |
+        - read ../../draft/2024/10/20241003.02.md
+        - read ../../draft/2024/10/20241004.03.md
+        - read ../../draft/2024/10/20241005.03.md
+    - '30': day over的redo部分跳过同名、同时间的todo项。
+      readme: |
+        - read ../../draft/2024/10/20241005.02.md
     - '30': 新版本任务、子任务的数据结构
       readme: |
         - read ../../draft/2024/10/20241001.01.md
         - read ../../draft/2024/10/20241003.01.md
         - read ../../draft/2024/10/20241004.04.md
-    - '60': 整理季度任务
-      readme: |
-        - read ../../draft/2024/10/20241003.02.md
-        - read ../../draft/2024/10/20241004.03.md
-    - '30': day over的redo部分跳过同名、同时间的todo项。
+        - read ../../draft/2024/10/20241005.01.md
     - '60': eventemitter sample
       readme: |
         - event listener in module
