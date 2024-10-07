@@ -581,9 +581,9 @@ time:
     learn: 2000
     js: 1000
   sold:
-    ego: 196
+    ego: 386
     xuemen: 45
-    PSMD: 0
+    PSMD: 30
     infra: 10
 todo:
   PSMD:
@@ -592,6 +592,7 @@ todo:
         - read ../../draft/2024/09/20240930.02.md
         - read ../../draft/2024/10/20241002.01.md
         - read ../../draft/2024/10/20241004.02.md
+        - read ../../draft/2024/10/20241007.01.md
     - '195': machines model
       readme: |
         - a sample instance of machine,FPM,FSM in manifest code 
@@ -656,15 +657,14 @@ todo:
         - read ../../draft/2024/10/20241003.02.md
         - read ../../draft/2024/10/20241004.03.md
         - read ../../draft/2024/10/20241005.03.md
-    - '30': day over的redo部分跳过同名、同时间的todo项。
-      readme: |
-        - read ../../draft/2024/10/20241005.02.md
-    - '30': 新版本任务、子任务的数据结构
+        - read ../../draft/2024/10/20241007.04.md
+    - '60': 新版本任务、子任务的数据结构
       readme: |
         - read ../../draft/2024/10/20241001.01.md
         - read ../../draft/2024/10/20241003.01.md
         - read ../../draft/2024/10/20241004.04.md
         - read ../../draft/2024/10/20241005.01.md
+        - read ../../draft/2024/10/20241007.03.md
     - '60': eventemitter sample
       readme: |
         - event listener in module
@@ -699,6 +699,7 @@ todo:
         - day metada
         - draft文件名
   infra:
+    - '30': 整理不同linked data的schema实现方式。
     - '60': 范例--利用js模块组合实现合同条款的组合。
       readme: |
         - read ../../draft/2024/10/20241004.05.md

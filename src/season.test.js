@@ -2,9 +2,19 @@ const test = require('node:test');
 const assert = require('assert');
 const season = require('./season.js');
 
+test('add a redo item into season',(t)=>{
+    season.debug = true;
+    var seasonobj ;
+    assert.ok(seasonobj = season.loadseasonobj());
+
+    assert.ok(season.addtodoitem(seasonobj,"xuemen","xuemen.195",195,"xuemen.195.readme"));
+    assert.ok(season.addtodoitem(seasonobj,"xuemen","xuemen.195",90,"xuemen.90.readme"));
+    assert.ok(season.addtodoitem(seasonobj,"xuemen","xuemen.195",195,"xuemen.195.readme"));
+});
+
 test('get season metadata file name',(t)=>{
-    assert.strictEqual(season.seasonfilename(),"../data/season/2024S3.yaml");
-    assert.strictEqual(season.seasonfilename(""),"../data/season/2024S3.yaml");
+    assert.strictEqual(season.seasonfilename(),"../data/season/2024S4.yaml");
+    assert.strictEqual(season.seasonfilename(""),"../data/season/2024S4.yaml");
     assert.strictEqual(season.seasonfilename("20240501"),"../data/season/2024S2.yaml");
 });
 

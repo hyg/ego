@@ -28,7 +28,7 @@ module.exports = {
     loadseasonobj: function (datestr = "") {
         //log("datestr:",datestr);
         var seasonfilename = this.seasonfilename(datestr);
-        log("seasonfilename:",seasonfilename);
+        log("seasonfilename:", seasonfilename);
         var seasonobj = yaml.load(fs.readFileSync(seasonfilename, 'utf8', { schema: yaml.FAILSAFE_SCHEMA }));
 
         return seasonobj;
@@ -94,6 +94,12 @@ module.exports = {
         log("add the todo item to %s: %s", task, name);
 
         log("before add todo item:\n" + yaml.dump(seasonobj.todo[task]));
+        var todoarray = seasonobj.todo[task];
+        if (this.findtodoitem(todoarray, name)) {
+            log("the todo item already there.");
+            return seasonobj;
+        }
+
         var item = new Object();
         item[amount] = name;
         if (readme != null) {
@@ -105,6 +111,28 @@ module.exports = {
         log("after add todo item:\n" + yaml.dump(seasonobj.todo[task]));
 
         return seasonobj;
+    },
+    findtodoitem(todoarray, name) {
+        var bhas = false;
+
+        for (var i in todoarray) {
+            for (var key in todoarray[i]) {
+                if (!isNaN(parseInt(key))) {
+                    if (name == todoarray[i][key]) {
+                        bhas = true;
+                        log("found task:", name, i, key);
+                        return true;
+                    }
+                } else if (key == "bind") {
+                    if (this.findtodoitem(todoarray[i][key], name)) {
+                        bhas = true;
+                        log("found task:", name, i, key);
+                        return true;
+                    }
+                }
+            }
+        }
+        return bhas;
     },
     makestattable: function (seasonobj) {
         var statobj = new Object();
@@ -221,18 +249,18 @@ module.exports = {
                 for (var slice in seasonobj.dayplan[plan].timeslice) {
                     if (timeslice[slice] == null) {
                         //log("slice:",slice);
-                        timeslice[slice] = seasonobj.dayplan[plan].timeslice[slice]*seasonobj.time.plan[plan];
+                        timeslice[slice] = seasonobj.dayplan[plan].timeslice[slice] * seasonobj.time.plan[plan];
                     } else {
                         //log("slice:",slice);
-                        timeslice[slice] += seasonobj.dayplan[plan].timeslice[slice]*seasonobj.time.plan[plan];
+                        timeslice[slice] += seasonobj.dayplan[plan].timeslice[slice] * seasonobj.time.plan[plan];
                     }
-                    timesum += slice*seasonobj.dayplan[plan].timeslice[slice]*seasonobj.time.plan[plan];
+                    timesum += slice * seasonobj.dayplan[plan].timeslice[slice] * seasonobj.time.plan[plan];
                 }
             }
-            seasonobj.time.timeslice = timeslice ;
+            seasonobj.time.timeslice = timeslice;
             seasonobj.time.timesum = timesum;
             console.table(timeslice);
-            log("timesum:",timesum);
+            log("timesum:", timesum);
             this.dumpseasonobj(seasonobj);
         }
     }
