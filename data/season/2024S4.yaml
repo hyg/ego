@@ -581,10 +581,10 @@ time:
     learn: 2000
     js: 1000
   sold:
-    ego: 386
+    ego: 421
     xuemen: 45
     PSMD: 30
-    infra: 10
+    infra: 130
 todo:
   PSMD:
     - '90': 整理default模型
@@ -658,6 +658,7 @@ todo:
         - read ../../draft/2024/10/20241004.03.md
         - read ../../draft/2024/10/20241005.03.md
         - read ../../draft/2024/10/20241007.04.md
+        - read ../../draft/2024/10/20241008.03.md
     - '60': 新版本任务、子任务的数据结构
       readme: |
         - read ../../draft/2024/10/20241001.01.md
@@ -700,6 +701,8 @@ todo:
         - draft文件名
   infra:
     - '30': 整理不同linked data的schema实现方式。
+      readme: |
+        - read ../../draft/2024/10/20241008.02.md
     - '60': 范例--利用js模块组合实现合同条款的组合。
       readme: |
         - read ../../draft/2024/10/20241004.05.md
