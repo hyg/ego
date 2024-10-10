@@ -1,0 +1,111 @@
+date: '20241010'
+mode: '1'
+plan: 1a
+time:
+  - begin: '20241010041600'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20241010043100'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20241010053100'
+    amount: 45
+    type: food
+    name: 早餐
+  - begin: '20241010061600'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20241010070100'
+    amount: 43
+    type: free
+    name: 休整
+  - begin: '20241010074500'
+    amount: 35
+    type: work
+    name: 静默工作
+    subject: learn
+    title: https://proto.school/merkle-dags IPLD,Merkle DAGs, Structuring Data for the Distributed Web
+    readme: |
+      - https://dagitty.net
+      - read ../../draft/2024/09/20240904160000.md
+      - read ../../draft/2024/09/20240905160000.md
+      - read ../../draft/2024/09/20240906160000.md
+      - read ../../draft/2024/09/20240908160000.md
+      - read ../../draft/2024/09/20240910160000.md
+      - read ../../draft/2024/09/20240911160000.md
+      - read ../../draft/2024/09/20240912160000.md
+      - read ../../draft/2024/09/20240913160000.md
+      - read ../../draft/2024/09/20240914160000.md
+    output: ../../draft/2024/10/20241010.01.md
+    namelink: http://simp.ly/p/xtgD4F
+  - begin: '20241010084500'
+    amount: 45
+    type: free
+    name: 休整
+  - begin: '20241010093000'
+    amount: 60
+    redo: 90
+    type: work
+    name: 静默工作
+    subject: PSMD
+    title: 整理default模型
+    readme: |
+      - read ../../draft/2024/09/20240930.02.md
+      - read ../../draft/2024/10/20241002.01.md
+      - read ../../draft/2024/10/20241004.02.md
+      - read ../../draft/2024/10/20241007.01.md
+    output: ../../draft/2024/10/20241010.02.md
+    namelink: http://simp.ly/p/j1SspP
+  - begin: '20241010110000'
+    amount: 180
+    type: food
+    name: 备餐、午餐午休
+  - begin: '20241010140000'
+    amount: 30
+    redo: 30
+    type: work
+    name: 静默工作
+    subject: ego
+    title: 整理知识体系的层级定义
+    output: ../../draft/2024/10/20241010.03.md
+    namelink: http://simp.ly/p/8t3vlk
+  - begin: '20241010143000'
+    amount: 30
+    type: work
+    name: 静默工作
+    subject: infra
+    title: 整理不同linked data的schema实现方式。
+    readme: |
+      - read ../../draft/2024/10/20241008.02.md
+    output: ../../draft/2024/10/20241010.04.md
+    namelink: http://simp.ly/p/5k9gJy
+  - begin: '20241010150000'
+    amount: 60
+    type: free
+    name: 休整
+  - begin: '20241010160000'
+    amount: 30
+    redo: 60
+    type: work
+    name: 静默工作
+    subject: ego
+    title: 整理季度任务
+    readme: |
+      - read ../../draft/2024/10/20241003.02.md
+      - read ../../draft/2024/10/20241004.03.md
+      - read ../../draft/2024/10/20241005.03.md
+      - read ../../draft/2024/10/20241007.04.md
+      - read ../../draft/2024/10/20241008.03.md
+    output: ../../draft/2024/10/20241010.05.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20241010170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20241010190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
