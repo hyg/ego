@@ -581,13 +581,18 @@ time:
     learn: 2000
     js: 1000
   sold:
-    ego: 481
+    ego: 541
     xuemen: 45
-    PSMD: 90
+    PSMD: 180
     infra: 160
     learn: 35
 todo:
   PSMD:
+    - '60': 整理闫岸家政能力讨论
+      readme: |
+        - read ../../draft/2024/09/20240924.01.md
+        - read ../../draft/2024/09/20240925.03.md
+        - read ../../draft/2024/10/20241011.03.md
     - '90': 整理default模型
       readme: |
         - read ../../draft/2024/09/20240930.02.md
@@ -595,20 +600,10 @@ todo:
         - read ../../draft/2024/10/20241004.02.md
         - read ../../draft/2024/10/20241007.01.md
         - read ../../draft/2024/10/20241010.02.md
-    - '195': machines model
+        - read ../../draft/2024/10/20241011.01.md
+    - '60': 《中华人民共和国民营经济促进法（草案征求意见稿）》公开征求意见
       readme: |
-        - a sample instance of machine,FPM,FSM in manifest code 
-        - read D:\huangyg\git\draft\2024\07\20240723160000.md
-        - read 2024.07.24. 09:30, 2024.07.25. 09:30, 2024.07.26. 09:30 draft
-        - 实现FPM+FSM
-        - 从FSM、FPM中抽象出统一的mechine
-        - 实现joint、split机制
-        - 先用javascript的class实现
-        - read ../../draft/2024/09/20240926.01.md
-    - '30': 整理闫岸家政能力讨论
-      readme: |
-        - read ../../draft/2024/09/20240924.01.md
-        - read ../../draft/2024/09/20240925.03.md
+        - https://www.moj.gov.cn/pub/sfbgw/lfyjzj/lflfyjzj/202410/t20241010_507325.html
     - '90': 整理近期讨论，按照新版manifest text提炼几个有代表性的场景。
       readme: |
         - read ../../draft/2024/09/20240904140000.md
@@ -624,6 +619,16 @@ todo:
         - read ../../draft/2024/09/20240918093000.md
         - read ../../draft/2024/09/20240921.01.md
         - read ../../draft/2024/09/20240922.01.md
+    - '195': machines model
+      readme: |
+        - a sample instance of machine,FPM,FSM in manifest code 
+        - read D:\huangyg\git\draft\2024\07\20240723160000.md
+        - read 2024.07.24. 09:30, 2024.07.25. 09:30, 2024.07.26. 09:30 draft
+        - 实现FPM+FSM
+        - 从FSM、FPM中抽象出统一的mechine
+        - 实现joint、split机制
+        - 先用javascript的class实现
+        - read ../../draft/2024/09/20240926.01.md
     - '90': 整理新版本term的manifest code
       readme: |
         - 为了显示而设计的term model，并不适合与代码绑定。
@@ -654,17 +659,6 @@ todo:
       readnme: |
         - 考虑upgradeby的实现。
   ego:
-    - '60': 整理季度任务
-      readme: |
-        - read ../../draft/2024/10/20241003.02.md
-        - read ../../draft/2024/10/20241004.03.md
-        - read ../../draft/2024/10/20241005.03.md
-        - read ../../draft/2024/10/20241007.04.md
-        - read ../../draft/2024/10/20241008.03.md
-        - read ../../draft/2024/10/20241010.05.md
-    - '30': 整理知识体系的层级定义
-      readme: |
-        - read ../../draft/2024/10/20241010.03.md
     - '60': 新版本任务、子任务的数据结构
       readme: |
         - read ../../draft/2024/10/20241001.01.md
@@ -672,6 +666,19 @@ todo:
         - read ../../draft/2024/10/20241004.04.md
         - read ../../draft/2024/10/20241005.01.md
         - read ../../draft/2024/10/20241007.03.md
+        - read ../../draft/2024/10/20241011.04.md
+    - '30': 整理知识体系的层级定义
+      readme: |
+        - read ../../draft/2024/10/20241010.03.md
+        - read ../../draft/2024/10/20241011.02.md
+    - '30': 整理季度任务
+      readme: |
+        - read ../../draft/2024/10/20241003.02.md
+        - read ../../draft/2024/10/20241004.03.md
+        - read ../../draft/2024/10/20241005.03.md
+        - read ../../draft/2024/10/20241007.04.md
+        - read ../../draft/2024/10/20241008.03.md
+        - read ../../draft/2024/10/20241010.05.md
     - '60': eventemitter sample
       readme: |
         - event listener in module

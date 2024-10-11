@@ -1,0 +1,93 @@
+date: '20241011'
+mode: '1'
+plan: 1b
+time:
+  - begin: '20241011062000'
+    amount: 19
+    type: free
+    name: 休整
+  - begin: '20241011063900'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20241011073500'
+    amount: 45
+    type: food
+    name: 早餐
+  - begin: '20241011082000'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20241011090500'
+    amount: 24
+    type: free
+    name: 休整
+  - begin: '20241011093000'
+    amount: 30
+    redo: 90
+    type: work
+    name: 静默工作
+    subject: PSMD
+    title: 整理default模型
+    readme: |
+      - read ../../draft/2024/09/20240930.02.md
+      - read ../../draft/2024/10/20241002.01.md
+      - read ../../draft/2024/10/20241004.02.md
+      - read ../../draft/2024/10/20241007.01.md
+      - read ../../draft/2024/10/20241010.02.md
+    output: ../../draft/2024/10/20241011.01.md
+    namelink: http://simp.ly/p/j1SspP
+  - begin: '20241011110000'
+    amount: 180
+    type: food
+    name: 备餐、午餐午休
+  - begin: '20241011140000'
+    amount: 45
+    redo: 30
+    type: work
+    name: 静默工作
+    subject: ego
+    title: 整理知识体系的层级定义
+    readme: |
+      - read ../../draft/2024/10/20241010.03.md
+    output: ../../draft/2024/10/20241011.02.md
+    namelink: http://simp.ly/p/8t3vlk
+  - begin: '20241011143000'
+    amount: 60
+    redo: 60
+    type: work
+    name: 静默工作
+    subject: PSMD
+    title: 整理闫岸家政能力讨论
+    readme: |
+      - read ../../draft/2024/09/20240924.01.md
+      - read ../../draft/2024/09/20240925.03.md
+    output: ../../draft/2024/10/20241011.03.md
+    namelink: http://simp.ly/p/5k9gJy
+  - begin: '20241011150000'
+    amount: 60
+    type: free
+    name: 休整
+  - begin: '20241011160000'
+    amount: 15
+    redo: 60
+    type: work
+    name: 静默工作
+    subject: ego
+    title: 新版本任务、子任务的数据结构
+    readme: |
+      - read ../../draft/2024/10/20241001.01.md
+      - read ../../draft/2024/10/20241003.01.md
+      - read ../../draft/2024/10/20241004.04.md
+      - read ../../draft/2024/10/20241005.01.md
+      - read ../../draft/2024/10/20241007.03.md
+    output: ../../draft/2024/10/20241011.04.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20241011170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20241011190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
