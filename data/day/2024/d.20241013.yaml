@@ -1,0 +1,77 @@
+date: '20241013'
+mode: '1'
+plan: 1d
+time:
+  - begin: '20241013095800'
+    amount: 39
+    type: free
+    name: 休整
+  - begin: '20241013103700'
+    amount: 57
+    type: prepare
+    name: 备餐、运动
+  - begin: '20241013113400'
+    amount: 45
+    type: food
+    name: 午餐
+  - begin: '20241013115800'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20241013124300'
+    amount: 76
+    type: free
+    name: 休整
+  - begin: '20241013140000'
+    amount: 0
+    redo: 30
+    type: work
+    name: 静默工作
+    subject: ego
+    title: 整理知识体系的层级定义
+    readme: |
+      - read ../../draft/2024/10/20241010.03.md
+      - read ../../draft/2024/10/20241011.02.md
+    output: ../../draft/2024/10/20241013.01.md
+    namelink: http://simp.ly/p/8t3vlk
+  - begin: '20241013143000'
+    amount: 0
+    redo: 30
+    type: work
+    name: 静默工作
+    subject: ego
+    title: 整理季度任务
+    readme: |
+      - read ../../draft/2024/10/20241003.02.md
+      - read ../../draft/2024/10/20241004.03.md
+      - read ../../draft/2024/10/20241005.03.md
+      - read ../../draft/2024/10/20241007.04.md
+      - read ../../draft/2024/10/20241008.03.md
+      - read ../../draft/2024/10/20241010.05.md
+    output: ../../draft/2024/10/20241013.02.md
+    namelink: http://simp.ly/p/5k9gJy
+  - begin: '20241013150000'
+    amount: 60
+    type: free
+    name: 休整
+  - begin: '20241013160000'
+    amount: 0
+    redo: 60
+    type: work
+    name: 静默工作
+    subject: PSMD
+    title: 整理闫岸家政能力讨论
+    readme: |
+      - read ../../draft/2024/09/20240924.01.md
+      - read ../../draft/2024/09/20240925.03.md
+      - read ../../draft/2024/10/20241011.03.md
+    output: ../../draft/2024/10/20241013.03.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20241013170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20241013190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交

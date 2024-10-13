@@ -593,6 +593,7 @@ todo:
         - read ../../draft/2024/09/20240924.01.md
         - read ../../draft/2024/09/20240925.03.md
         - read ../../draft/2024/10/20241011.03.md
+        - read ../../draft/2024/10/20241013.03.md
     - '90': 整理default模型
       readme: |
         - read ../../draft/2024/09/20240930.02.md
@@ -659,18 +660,6 @@ todo:
       readnme: |
         - 考虑upgradeby的实现。
   ego:
-    - '60': 新版本任务、子任务的数据结构
-      readme: |
-        - read ../../draft/2024/10/20241001.01.md
-        - read ../../draft/2024/10/20241003.01.md
-        - read ../../draft/2024/10/20241004.04.md
-        - read ../../draft/2024/10/20241005.01.md
-        - read ../../draft/2024/10/20241007.03.md
-        - read ../../draft/2024/10/20241011.04.md
-    - '30': 整理知识体系的层级定义
-      readme: |
-        - read ../../draft/2024/10/20241010.03.md
-        - read ../../draft/2024/10/20241011.02.md
     - '30': 整理季度任务
       readme: |
         - read ../../draft/2024/10/20241003.02.md
@@ -679,6 +668,20 @@ todo:
         - read ../../draft/2024/10/20241007.04.md
         - read ../../draft/2024/10/20241008.03.md
         - read ../../draft/2024/10/20241010.05.md
+        - read ../../draft/2024/10/20241013.02.md
+    - '30': 整理知识体系的层级定义
+      readme: |
+        - read ../../draft/2024/10/20241010.03.md
+        - read ../../draft/2024/10/20241011.02.md
+        - read ../../draft/2024/10/20241013.01.md
+    - '60': 新版本任务、子任务的数据结构
+      readme: |
+        - read ../../draft/2024/10/20241001.01.md
+        - read ../../draft/2024/10/20241003.01.md
+        - read ../../draft/2024/10/20241004.04.md
+        - read ../../draft/2024/10/20241005.01.md
+        - read ../../draft/2024/10/20241007.03.md
+        - read ../../draft/2024/10/20241011.04.md
     - '60': eventemitter sample
       readme: |
         - event listener in module
