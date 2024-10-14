@@ -163,6 +163,7 @@ module.exports = {
 
                 //var timestr = "## 计划 " + beginhour.toString().padStart(2, "0") + ":" + beginminute.toString().padStart(2, "0") + " ~ " + endhour.toString().padStart(2, "0") + ":" + endminute.toString().padStart(2, "0") + "\n" + timeperiod.subject + ": [" + timeperiod.title + "]\n\n";
                 var timestr = "## " + timeperiod.subject + ": [" + timeperiod.title + "]\n\n";
+
                 if (this.debug == false) {
                     fs.writeFileSync(timeperiod.output, timestr);
                     log("save time slice draft file name:%s\n%s", timeperiod.output, timestr);

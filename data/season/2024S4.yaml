@@ -581,11 +581,12 @@ time:
     learn: 2000
     js: 1000
   sold:
-    ego: 541
+    ego: 631
     xuemen: 45
     PSMD: 180
     infra: 160
     learn: 35
+    raw: 0
 todo:
   PSMD:
     - '60': 整理闫岸家政能力讨论
@@ -594,6 +595,7 @@ todo:
         - read ../../draft/2024/09/20240925.03.md
         - read ../../draft/2024/10/20241011.03.md
         - read ../../draft/2024/10/20241013.03.md
+        - read ../../draft/2024/10/20241014.02.md
     - '90': 整理default模型
       readme: |
         - read ../../draft/2024/09/20240930.02.md
@@ -660,6 +662,14 @@ todo:
       readnme: |
         - 考虑upgradeby的实现。
   ego:
+    - '60': 整理知识体系的层级定义
+      readme: |
+        - read ../../draft/2024/10/20241010.03.md
+        - read ../../draft/2024/10/20241011.02.md
+        - read ../../draft/2024/10/20241013.01.md
+        - read ../../draft/2024/10/20241014.a.md
+    - '60': 启用新字段存放前置任务的output，自动汇编写入新的draft文件。
+    - '30': 未进行的todo项，增加特别的特征，不产生draft文件，day log中使用固定提示。
     - '30': 整理季度任务
       readme: |
         - read ../../draft/2024/10/20241003.02.md
@@ -669,11 +679,6 @@ todo:
         - read ../../draft/2024/10/20241008.03.md
         - read ../../draft/2024/10/20241010.05.md
         - read ../../draft/2024/10/20241013.02.md
-    - '30': 整理知识体系的层级定义
-      readme: |
-        - read ../../draft/2024/10/20241010.03.md
-        - read ../../draft/2024/10/20241011.02.md
-        - read ../../draft/2024/10/20241013.01.md
     - '60': 新版本任务、子任务的数据结构
       readme: |
         - read ../../draft/2024/10/20241001.01.md
@@ -815,11 +820,6 @@ todo:
         - http://matrix-org.github.io/matrix-js-sdk/index.html
     - '60': 学习'Electron'，创作一个范例。
   raw:
-    - '90': 整理代码，理顺food.js几个成员函数之间的调用关系
-      readme: |
-        - read ../../draft/2024/09/20240907143000.md
-        - read ../../draft/2024/09/20240927.02.md
-        - read ../../draft/2024/09/20240929.01.md
     - '60': 熟悉内脏之间的关系
       readme: |
         - read ../../draft/2024/09/20240917143000.md

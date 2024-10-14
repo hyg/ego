@@ -1,0 +1,75 @@
+date: '20241014'
+mode: '2'
+plan: 2c
+time:
+  - begin: '20241014071100'
+    amount: 20
+    type: free
+    name: 休整
+  - begin: '20241014073100'
+    amount: 69
+    type: prepare
+    name: 备餐、运动
+  - begin: '20241014084000'
+    amount: 50
+    type: food
+    name: 早餐
+  - begin: '20241014093000'
+    amount: 30
+    type: discuss
+    name: 会议、自习
+  - begin: '20241014100000'
+    amount: 90
+    redo: 60
+    type: work
+    name: 工作
+    subject: ego
+    title: 整理知识体系的层级定义
+    readme: |
+        - read ../../draft/2024/10/20241010.03.md
+        - read ../../draft/2024/10/20241011.02.md
+        - read ../../draft/2024/10/20241013.01.md
+    output: ../../draft/2024/10/20241014.a.md
+  - begin: '20241014110000'
+    amount: 180
+    type: food
+    name: 备餐、午餐午休
+  - begin: '20241014140000'
+    amount: 0
+    redo: 90
+    type: work
+    name: 工作
+    subject: raw
+    title: 整理代码，理顺food.js几个成员函数之间的调用关系
+    readme: |
+      - read ../../draft/2024/09/20240907143000.md
+      - read ../../draft/2024/09/20240927.02.md
+      - read ../../draft/2024/09/20240929.01.md
+    output: ../../draft/2024/10/20241014.01.md
+    namelink: http://simp.ly/p/lsBYG9
+  - begin: '20241014153000'
+    amount: 30
+    type: free
+    name: 休整
+  - begin: '20241014160000'
+    amount: 0
+    redo: 60
+    type: work
+    name: 工作
+    subject: PSMD
+    title: 整理闫岸家政能力讨论
+    readme: |
+      - read ../../draft/2024/09/20240924.01.md
+      - read ../../draft/2024/09/20240925.03.md
+      - read ../../draft/2024/10/20241011.03.md
+      - read ../../draft/2024/10/20241013.03.md
+    output: ../../draft/2024/10/20241014.02.md
+    namelink: http://simp.ly/p/MpcbHD
+  - begin: '20241014170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20241014190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
