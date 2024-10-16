@@ -1,0 +1,101 @@
+date: '20241016'
+mode: '1'
+plan: 1b
+time:
+  - begin: '20241016061000'
+    amount: 18
+    type: free
+    name: 休整
+  - begin: '20241016062800'
+    amount: 83
+    type: prepare
+    name: 备餐、运动
+  - begin: '20241016075100'
+    amount: 46
+    type: food
+    name: 早餐
+  - begin: '20241016083700'
+    amount: 18
+    type: discuss
+    name: 会议、自习
+  - begin: '20241016085500'
+    amount: 34
+    type: free
+    name: 休整
+  - begin: '20241016093000'
+    amount: 30
+    redo: 90
+    type: work
+    name: 静默工作
+    subject: PSMD
+    title: 整理default模型
+    readme: |
+      - read ../../draft/2024/09/20240930.02.md
+      - read ../../draft/2024/10/20241002.01.md
+      - read ../../draft/2024/10/20241004.02.md
+      - read ../../draft/2024/10/20241007.01.md
+      - read ../../draft/2024/10/20241010.02.md
+      - read ../../draft/2024/10/20241011.01.md
+    output: ../../draft/2024/10/20241016.01.md
+    namelink: http://simp.ly/p/j1SspP
+  - begin: '20241016110000'
+    amount: 180
+    type: food
+    name: 备餐、午餐午休
+  - begin: '20241016140000'
+    amount: 0
+    redo: 30
+    type: work
+    name: 静默工作
+    subject: ego
+    title: 整理季度任务
+    readme: |
+      - read ../../draft/2024/10/20241003.02.md
+      - read ../../draft/2024/10/20241004.03.md
+      - read ../../draft/2024/10/20241005.03.md
+      - read ../../draft/2024/10/20241007.04.md
+      - read ../../draft/2024/10/20241008.03.md
+      - read ../../draft/2024/10/20241010.05.md
+      - read ../../draft/2024/10/20241013.02.md
+      - read ../../draft/2024/10/20241015.02.md
+    output: ../../draft/2024/10/20241016.02.md
+    namelink: http://simp.ly/p/8t3vlk
+  - begin: '20241016143000'
+    amount: 0
+    redo: 30
+    type: work
+    name: 静默工作
+    subject: ego
+    title: 未进行的todo项，增加特别的特征，不产生draft文件，day log中使用固定提示。
+    readme: |
+      - read ../../draft/2024/10/20241015.01.md
+    output: ../../draft/2024/10/20241016.03.md
+    namelink: http://simp.ly/p/5k9gJy
+  - begin: '20241016150000'
+    amount: 60
+    type: free
+    name: 休整
+  - begin: '20241016160000'
+    amount: 0
+    redo: 60
+    type: work
+    name: 静默工作
+    subject: PSMD
+    title: 整理闫岸家政能力讨论
+    readme: |
+      - read ../../draft/2024/09/20240924.01.md
+      - read ../../draft/2024/09/20240925.03.md
+      - read ../../draft/2024/10/20241011.03.md
+      - read ../../draft/2024/10/20241013.03.md
+      - read ../../draft/2024/10/20241014.02.md
+      - read ../../draft/2024/10/20241015.03.md
+    output: ../../draft/2024/10/20241016.04.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20241016170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20241016190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
