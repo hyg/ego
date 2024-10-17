@@ -1,0 +1,74 @@
+date: '20241017'
+mode: '2'
+plan: 2c
+time:
+  - begin: '20241017080800'
+    amount: 19
+    type: free
+    name: 休整
+  - begin: '20241017082700'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20241017092300'
+    amount: 45
+    type: food
+    name: 早餐
+  - begin: '20241017100800'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20241017105300'
+    amount: 6
+    type: free
+    name: 休整
+  - begin: '20241017110000'
+    amount: 180
+    type: food
+    name: 备餐、午餐午休
+  - begin: '20241017140000'
+    amount: 0
+    redo: 90
+    type: work
+    name: 工作
+    subject: PSMD
+    title: 整理default模型
+    readme: |
+      - read ../../draft/2024/09/20240930.02.md
+      - read ../../draft/2024/10/20241002.01.md
+      - read ../../draft/2024/10/20241004.02.md
+      - read ../../draft/2024/10/20241007.01.md
+      - read ../../draft/2024/10/20241010.02.md
+      - read ../../draft/2024/10/20241011.01.md
+      - read ../../draft/2024/10/20241016.01.md
+    output: ../../draft/2024/10/20241017.01.md
+    namelink: http://simp.ly/p/lsBYG9
+  - begin: '20241017153000'
+    amount: 30
+    type: free
+    name: 休整
+  - begin: '20241017160000'
+    amount: 0
+    redo: 60
+    type: work
+    name: 工作
+    subject: PSMD
+    title: 整理闫岸家政能力讨论
+    readme: |
+      - read ../../draft/2024/09/20240924.01.md
+      - read ../../draft/2024/09/20240925.03.md
+      - read ../../draft/2024/10/20241011.03.md
+      - read ../../draft/2024/10/20241013.03.md
+      - read ../../draft/2024/10/20241014.02.md
+      - read ../../draft/2024/10/20241015.03.md
+      - read ../../draft/2024/10/20241016.04.md
+    output: ../../draft/2024/10/20241017.02.md
+    namelink: http://simp.ly/p/MpcbHD
+  - begin: '20241017170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20241017190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
