@@ -1,0 +1,90 @@
+date: '20241020'
+mode: '1'
+plan: 1c
+time:
+  - begin: '20241020071000'
+    amount: 45
+    type: free
+    name: 休整
+  - begin: '20241020075500'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20241020082500'
+    amount: 45
+    type: food
+    name: 早餐
+  - begin: '20241020091000'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20241020095500'
+    amount: 64
+    type: free
+    name: 休整
+  - begin: '20241020110000'
+    amount: 180
+    type: food
+    name: 备餐、午餐午休
+  - begin: '20241020140000'
+    amount: 15
+    redo: 30
+    type: work
+    name: 静默工作
+    subject: ego
+    title: 未进行的todo项，增加特别的特征，不产生draft文件，day log中使用固定提示。
+    readme: |
+      - read ../../draft/2024/10/20241015.01.md
+      - read ../../draft/2024/10/20241016.03.md
+    output: ../../draft/2024/10/20241020.01.md
+    namelink: http://simp.ly/p/8t3vlk
+  - begin: '20241020143000'
+    amount: 0
+    redo: 30
+    type: work
+    name: 静默工作
+    subject: ego
+    title: 整理季度任务
+    readme: |
+      - read ../../draft/2024/10/20241003.02.md
+      - read ../../draft/2024/10/20241004.03.md
+      - read ../../draft/2024/10/20241005.03.md
+      - read ../../draft/2024/10/20241007.04.md
+      - read ../../draft/2024/10/20241008.03.md
+      - read ../../draft/2024/10/20241010.05.md
+      - read ../../draft/2024/10/20241013.02.md
+      - read ../../draft/2024/10/20241015.02.md
+      - read ../../draft/2024/10/20241016.02.md
+    output: ../../draft/2024/10/20241020.02.md
+    namelink: http://simp.ly/p/5k9gJy
+  - begin: '20241020150000'
+    amount: 60
+    type: free
+    name: 休整
+  - begin: '20241020160000'
+    amount: 0
+    redo: 60
+    type: work
+    name: 静默工作
+    subject: PSMD
+    title: 整理闫岸家政能力讨论
+    readme: |
+      - read ../../draft/2024/09/20240924.01.md
+      - read ../../draft/2024/09/20240925.03.md
+      - read ../../draft/2024/10/20241011.03.md
+      - read ../../draft/2024/10/20241013.03.md
+      - read ../../draft/2024/10/20241014.02.md
+      - read ../../draft/2024/10/20241015.03.md
+      - read ../../draft/2024/10/20241016.04.md
+      - read ../../draft/2024/10/20241017.02.md
+      - read ../../draft/2024/10/20241019.01.md
+    output: ../../draft/2024/10/20241020.03.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20241020170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20241020190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
