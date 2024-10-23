@@ -583,7 +583,7 @@ time:
   sold:
     ego: 676
     xuemen: 45
-    PSMD: 450
+    PSMD: 570
     infra: 160
     learn: 35
     raw: 0
@@ -603,6 +603,7 @@ todo:
         - read ../../draft/2024/10/20241020.03.md
         - read ../../draft/2024/10/20241021.01.md
         - read ../../draft/2024/10/20241022.03.md
+        - read ../../draft/2024/10/20241023.01.md
     - '90': 整理default模型
       readme: |
         - read ../../draft/2024/09/20240930.02.md
