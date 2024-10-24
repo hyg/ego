@@ -1,0 +1,81 @@
+date: '20241024'
+mode: '2'
+plan: 2c
+time:
+  - begin: '20241024075300'
+    amount: 18
+    type: free
+    name: 休整
+  - begin: '20241024081100'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20241024090800'
+    amount: 45
+    type: food
+    name: 早餐
+  - begin: '20241024095300'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20241024103800'
+    amount: 21
+    type: free
+    name: 休整
+  - begin: '20241024110000'
+    amount: 180
+    type: food
+    name: 备餐、午餐午休
+  - begin: '20241024140000'
+    amount: 30
+    redo: 90
+    type: work
+    name: 工作
+    subject: PSMD
+    title: 整理default模型
+    readme: |
+      - read ../../draft/2024/09/20240930.02.md
+      - read ../../draft/2024/10/20241002.01.md
+      - read ../../draft/2024/10/20241004.02.md
+      - read ../../draft/2024/10/20241007.01.md
+      - read ../../draft/2024/10/20241010.02.md
+      - read ../../draft/2024/10/20241011.01.md
+      - read ../../draft/2024/10/20241016.01.md
+      - read ../../draft/2024/10/20241017.01.md
+    output: ../../draft/2024/10/20241024.01.md
+    namelink: http://simp.ly/p/lsBYG9
+  - begin: '20241024153000'
+    amount: 30
+    type: free
+    name: 休整
+  - begin: '20241024160000'
+    amount: 0
+    redo: 60
+    type: work
+    name: 工作
+    subject: PSMD
+    title: 整理闫岸家政能力讨论
+    readme: |
+      - read ../../draft/2024/09/20240924.01.md
+      - read ../../draft/2024/09/20240925.03.md
+      - read ../../draft/2024/10/20241011.03.md
+      - read ../../draft/2024/10/20241013.03.md
+      - read ../../draft/2024/10/20241014.02.md
+      - read ../../draft/2024/10/20241015.03.md
+      - read ../../draft/2024/10/20241016.04.md
+      - read ../../draft/2024/10/20241017.02.md
+      - read ../../draft/2024/10/20241019.01.md
+      - read ../../draft/2024/10/20241020.03.md
+      - read ../../draft/2024/10/20241021.01.md
+      - read ../../draft/2024/10/20241022.03.md
+      - read ../../draft/2024/10/20241023.01.md
+    output: ../../draft/2024/10/20241024.02.md
+    namelink: http://simp.ly/p/MpcbHD
+  - begin: '20241024170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20241024190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
