@@ -583,7 +583,7 @@ time:
   sold:
     ego: 781
     xuemen: 45
-    PSMD: 600
+    PSMD: 645
     infra: 250
     learn: 35
     raw: 0
@@ -608,20 +608,7 @@ todo:
         - read ../../draft/2024/10/20241025.03.md
         - read ../../draft/2024/10/20241026.03.md
         - read ../../draft/2024/10/20241027.03.md
-    - '90': 整理default模型
-      readme: |
-        - read ../../draft/2024/09/20240930.02.md
-        - read ../../draft/2024/10/20241002.01.md
-        - read ../../draft/2024/10/20241004.02.md
-        - read ../../draft/2024/10/20241007.01.md
-        - read ../../draft/2024/10/20241010.02.md
-        - read ../../draft/2024/10/20241011.01.md
-        - read ../../draft/2024/10/20241016.01.md
-        - read ../../draft/2024/10/20241017.01.md
-        - read ../../draft/2024/10/20241024.01.md
-    - '60': 《中华人民共和国民营经济促进法（草案征求意见稿）》公开征求意见
-      readme: |
-        - https://www.moj.gov.cn/pub/sfbgw/lfyjzj/lflfyjzj/202410/t20241010_507325.html
+        - read ../../draft/2024/10/20241028.03.md
     - '90': 整理近期讨论，按照新版manifest text提炼几个有代表性的场景。
       readme: |
         - read ../../draft/2024/09/20240904140000.md
@@ -637,6 +624,22 @@ todo:
         - read ../../draft/2024/09/20240918093000.md
         - read ../../draft/2024/09/20240921.01.md
         - read ../../draft/2024/09/20240922.01.md
+        - read ../../draft/2024/10/20241028.02.md
+    - '90': 整理default模型
+      readme: |
+        - read ../../draft/2024/09/20240930.02.md
+        - read ../../draft/2024/10/20241002.01.md
+        - read ../../draft/2024/10/20241004.02.md
+        - read ../../draft/2024/10/20241007.01.md
+        - read ../../draft/2024/10/20241010.02.md
+        - read ../../draft/2024/10/20241011.01.md
+        - read ../../draft/2024/10/20241016.01.md
+        - read ../../draft/2024/10/20241017.01.md
+        - read ../../draft/2024/10/20241024.01.md
+        - read ../../draft/2024/10/20241028.01.md
+    - '60': 《中华人民共和国民营经济促进法（草案征求意见稿）》公开征求意见
+      readme: |
+        - https://www.moj.gov.cn/pub/sfbgw/lfyjzj/lflfyjzj/202410/t20241010_507325.html
     - '195': machines model
       readme: |
         - a sample instance of machine,FPM,FSM in manifest code 
