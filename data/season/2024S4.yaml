@@ -581,7 +581,7 @@ time:
     learn: 2000
     js: 1000
   sold:
-    ego: 1201
+    ego: 1381
     xuemen: 45
     PSMD: 795
     infra: 250
@@ -613,6 +613,7 @@ todo:
         - read ../../draft/2024/10/20241030.03.md
         - read ../../draft/2024/10/20241031.02.md
         - read ../../draft/2024/11/20241101.03.md
+        - read ../../draft/2024/11/20241104.01.md
     - '90': 整理近期讨论，按照新版manifest text提炼几个有代表性的场景。
       readme: |
         - read ../../draft/2024/09/20240904140000.md
