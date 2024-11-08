@@ -1,0 +1,68 @@
+date: '20241108'
+mode: '1'
+plan: 1e
+time:
+  - begin: '20241108112400'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20241108113900'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20241108123900'
+    amount: 45
+    type: food
+    name: 午餐
+  - begin: '20241108132400'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20241108140900'
+    amount: 110
+    type: free
+    name: 休整
+  - begin: '20241108160000'
+    amount: 60
+    redo: 60
+    type: work
+    name: 静默工作
+    subject: PSMD
+    title: 整理闫岸家政能力讨论
+    readme: |
+      - read ../../draft/2024/09/20240924.01.md
+      - read ../../draft/2024/09/20240925.03.md
+      - read ../../draft/2024/10/20241011.03.md
+      - read ../../draft/2024/10/20241013.03.md
+      - read ../../draft/2024/10/20241014.02.md
+      - read ../../draft/2024/10/20241015.03.md
+      - read ../../draft/2024/10/20241016.04.md
+      - read ../../draft/2024/10/20241017.02.md
+      - read ../../draft/2024/10/20241019.01.md
+      - read ../../draft/2024/10/20241020.03.md
+      - read ../../draft/2024/10/20241021.01.md
+      - read ../../draft/2024/10/20241022.03.md
+      - read ../../draft/2024/10/20241023.01.md
+      - read ../../draft/2024/10/20241024.02.md
+      - read ../../draft/2024/10/20241025.03.md
+      - read ../../draft/2024/10/20241026.03.md
+      - read ../../draft/2024/10/20241027.03.md
+      - read ../../draft/2024/10/20241028.03.md
+      - read ../../draft/2024/10/20241029.03.md
+      - read ../../draft/2024/10/20241030.03.md
+      - read ../../draft/2024/10/20241031.02.md
+      - read ../../draft/2024/11/20241101.03.md
+      - read ../../draft/2024/11/20241104.01.md
+      - read ../../draft/2024/11/20241105.03.md
+      - read ../../draft/2024/11/20241106.03.md
+      - read ../../draft/2024/11/20241107.03.md
+    output: ../../draft/2024/11/20241108.01.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20241108170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20241108190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
