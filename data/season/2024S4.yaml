@@ -583,7 +583,7 @@ time:
   sold:
     ego: 1531
     xuemen: 45
-    PSMD: 965
+    PSMD: 975
     infra: 250
     learn: 35
     raw: 54
@@ -620,6 +620,7 @@ todo:
         - read ../../draft/2024/11/20241108.01.md
         - read ../../draft/2024/11/20241110.01.md
         - read ../../draft/2024/11/20241111.03.md
+        - read ../../draft/2024/11/20241112.01.md
     - '90': 整理近期讨论，按照新版manifest text提炼几个有代表性的场景。
       readme: |
         - read ../../draft/2024/09/20240904140000.md
