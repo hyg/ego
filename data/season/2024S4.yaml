@@ -582,8 +582,8 @@ time:
     js: 1000
   sold:
     ego: 1571
-    xuemen: 45
-    PSMD: 1035
+    xuemen: 105
+    PSMD: 1155
     infra: 250
     learn: 35
     raw: 54
@@ -621,6 +621,7 @@ todo:
         - read ../../draft/2024/11/20241110.01.md
         - read ../../draft/2024/11/20241111.03.md
         - read ../../draft/2024/11/20241112.01.md
+        - read ../../draft/2024/11/20241114.04.md
     - '90': 整理近期讨论，按照新版manifest text提炼几个有代表性的场景。
       readme: |
         - read ../../draft/2024/09/20240904140000.md
@@ -719,6 +720,7 @@ todo:
         - read ../../draft/2024/11/20241107.02.md
         - read ../../draft/2024/11/20241111.02.md
         - read ../../draft/2024/11/20241113.01.md
+        - read ../../draft/2024/11/20241114.02.md
     - '60': 整理知识体系的层级定义
       readme: |
         - read ../../draft/2024/10/20241010.03.md
@@ -786,6 +788,11 @@ todo:
         - read ../../draft/2024/09/20240919140000.md
   learn:
     - '60': wordpress plugin
+    - '60': MapLibre sample
+      readme: |
+        - https://maplibre.org/
+        - https://maplibre.org/maplibre-gl-js/docs/
+        - https://github.com/maplibre/maplibre-gl-js
     - '60': PSMD term in helia dag-json https://www.npmjs.com/package/@helia/dag-json
     - '60': learn Blogging on the Decentralized Web https://proto.school/blog
     - '60': 在nodejs读写OFD文件。
@@ -893,7 +900,6 @@ todo:
     - '60': 新版食材排序，包括升序、降序、特定值距离、多种营养成分特定值组合距离。
     - '60': 新版营养成分详情，允许多种营养成分。
   xuemen:
-    - '30': 月初事务
     - '195': kernel模型升级
     - '195': 重新设计S2状态下的学门基本管理制度
     - '60': term.e6f0caec -> xuemen COD metadata-S2状态下的部门模型
