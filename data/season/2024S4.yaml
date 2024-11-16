@@ -724,6 +724,7 @@ todo:
         - read ../../draft/2024/11/20241113.01.md
         - read ../../draft/2024/11/20241114.02.md
         - read ../../draft/2024/11/20241115.03.md
+        - read ../../draft/2024/11/20241116.01.md
     - '60': 整理知识体系的层级定义
       readme: |
         - read ../../draft/2024/10/20241010.03.md
@@ -793,6 +794,7 @@ todo:
     - '60': wordpress plugin
       readme: |
         - read ../../draft/2024/11/20241115.05.md
+        - read ../../draft/2024/11/20241116.03.md
     - '60': MapLibre sample
       readme: |
         - https://maplibre.org/
@@ -886,6 +888,7 @@ todo:
     - '30': 使用convert-units
       readme: |
         - read ../../draft/2024/11/20241115.04.md
+        - read ../../draft/2024/11/20241116.02.md
     - '60': 熟悉内脏之间的关系
       readme: |
         - read ../../draft/2024/09/20240917143000.md
