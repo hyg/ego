@@ -583,32 +583,12 @@ time:
   sold:
     ego: 1571
     xuemen: 105
-    PSMD: 1185
+    PSMD: 1305
     infra: 250
-    learn: 95
+    learn: 235
     raw: 174
 todo:
   PSMD:
-    - '90': 整理近期讨论，按照新版manifest text提炼几个有代表性的场景。
-      readme: |
-        - read ../../draft/2024/09/20240904140000.md
-        - read ../../draft/2024/09/20240905074500.md
-        - read ../../draft/2024/09/20240906140000.md
-        - read ../../draft/2024/09/20240908093000.md
-        - read ../../draft/2024/09/20240911140000.md
-        - read ../../draft/2024/09/20240912093000.md
-        - read ../../draft/2024/09/20240913140000.md
-        - read ../../draft/2024/09/20240914140000.md
-        - read ../../draft/2024/09/20240915093000.md
-        - read ../../draft/2024/09/20240916140000.md
-        - read ../../draft/2024/09/20240918093000.md
-        - read ../../draft/2024/09/20240921.01.md
-        - read ../../draft/2024/09/20240922.01.md
-        - read ../../draft/2024/10/20241028.02.md
-        - read ../../draft/2024/10/20241031.01.md
-        - read ../../draft/2024/11/20241105.01.md
-        - read ../../draft/2024/11/20241106.02.md
-        - read ../../draft/2024/11/20241115.02.md
     - '60': 整理闫岸家政能力讨论
       readme: |
         - read ../../draft/2024/09/20240924.01.md
@@ -643,6 +623,28 @@ todo:
         - read ../../draft/2024/11/20241112.01.md
         - read ../../draft/2024/11/20241114.04.md
         - read ../../draft/2024/11/20241115.01.md
+        - read ../../draft/2024/11/20241117.05.md
+    - '90': 整理近期讨论，按照新版manifest text提炼几个有代表性的场景。
+      readme: |
+        - read ../../draft/2024/09/20240904140000.md
+        - read ../../draft/2024/09/20240905074500.md
+        - read ../../draft/2024/09/20240906140000.md
+        - read ../../draft/2024/09/20240908093000.md
+        - read ../../draft/2024/09/20240911140000.md
+        - read ../../draft/2024/09/20240912093000.md
+        - read ../../draft/2024/09/20240913140000.md
+        - read ../../draft/2024/09/20240914140000.md
+        - read ../../draft/2024/09/20240915093000.md
+        - read ../../draft/2024/09/20240916140000.md
+        - read ../../draft/2024/09/20240918093000.md
+        - read ../../draft/2024/09/20240921.01.md
+        - read ../../draft/2024/09/20240922.01.md
+        - read ../../draft/2024/10/20241028.02.md
+        - read ../../draft/2024/10/20241031.01.md
+        - read ../../draft/2024/11/20241105.01.md
+        - read ../../draft/2024/11/20241106.02.md
+        - read ../../draft/2024/11/20241115.02.md
+        - read ../../draft/2024/11/20241117.02.md
     - '90': 整理default模型
       readme: |
         - read ../../draft/2024/09/20240930.02.md
@@ -725,6 +727,7 @@ todo:
         - read ../../draft/2024/11/20241114.02.md
         - read ../../draft/2024/11/20241115.03.md
         - read ../../draft/2024/11/20241116.01.md
+        - read ../../draft/2024/11/20241117.03.md
     - '60': 整理知识体系的层级定义
       readme: |
         - read ../../draft/2024/10/20241010.03.md
@@ -791,10 +794,17 @@ todo:
       readme: |
         - read ../../draft/2024/09/20240919140000.md
   learn:
-    - '60': wordpress plugin
+    - '90': wordpress plugin
       readme: |
         - read ../../draft/2024/11/20241115.05.md
         - read ../../draft/2024/11/20241116.03.md
+        - read ../../draft/2024/11/20241117.01.md
+    - '60': wordpress install and config
+    - '30': https://frontity.org/
+    - '60': oData simple
+      readme: |
+        - https://services.odata.org/
+        - http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html
     - '60': MapLibre sample
       readme: |
         - https://maplibre.org/
@@ -823,6 +833,11 @@ todo:
       readme: |
         - https://zh.javascript.info/promise-api
   js:
+    - '60': wordpress + nodejs
+      readme: |
+        - wordpress-rest-api
+        - https://www.npmjs.com/package/wpapi
+        - https://github.com/scottgonzalez/node-wordpress
     - '60': 引用github等特定版本js文件的html模版
       readme: |
         - 参考D:\huangyg\git\Infra\local\Infra.js createAuto的方法。
@@ -884,11 +899,13 @@ todo:
         - https://github.com/matrix-org/matrix-js-sdk
         - http://matrix-org.github.io/matrix-js-sdk/index.html
     - '60': 学习'Electron'，创作一个范例。
+    - '60': 用代码中的对象或类，产生数据库创建SQL脚本、ER图（mermaid）
   raw:
     - '30': 使用convert-units
       readme: |
         - read ../../draft/2024/11/20241115.04.md
         - read ../../draft/2024/11/20241116.02.md
+        - read ../../draft/2024/11/20241117.04.md
     - '60': 熟悉内脏之间的关系
       readme: |
         - read ../../draft/2024/09/20240917143000.md
