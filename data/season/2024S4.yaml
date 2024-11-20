@@ -582,7 +582,7 @@ time:
     js: 1000
   sold:
     ego: 1571
-    xuemen: 105
+    xuemen: 130
     PSMD: 1485
     infra: 250
     learn: 235
@@ -611,6 +611,7 @@ todo:
         - read ../../draft/2024/11/20241115.02.md
         - read ../../draft/2024/11/20241117.02.md
         - read ../../draft/2024/11/20241119.01.md
+        - read ../../draft/2024/11/20241120.02.md
     - '90': 整理default模型
       readme: |
         - read ../../draft/2024/09/20240930.02.md
@@ -784,6 +785,7 @@ todo:
         - read ../../draft/2024/10/20241004.05.md
         - read ../../draft/2024/11/20241118.03.md
         - read ../../draft/2024/11/20241119.02.md
+        - read ../../draft/2024/11/20241120.03.md
     - '60': 动态菜单设计。
       readme: |
         - read ../../draft/2024/09/20240921.02.md
@@ -933,6 +935,8 @@ todo:
     - '60': 新版营养成分详情，允许多种营养成分。
   xuemen:
     - '195': kernel模型升级
+      readme: |
+        - read ../../draft/2024/11/20241120.01.md
     - '195': 重新设计S2状态下的学门基本管理制度
     - '60': term.e6f0caec -> xuemen COD metadata-S2状态下的部门模型
 comment:
