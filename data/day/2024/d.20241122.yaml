@@ -1,0 +1,101 @@
+date: '20241122'
+mode: '1'
+plan: 1d
+time:
+  - begin: '20241122090300'
+    amount: 25
+    type: free
+    name: 休整
+  - begin: '20241122092800'
+    amount: 67
+    type: prepare
+    name: 备餐、运动
+  - begin: '20241122103500'
+    amount: 45
+    type: food
+    name: 早餐
+  - begin: '20241122114000'
+    amount: 120
+    type: work
+    name: 静默工作
+    subject: learn
+    title: mariadb access
+    output: ../../draft/2024/11/20241122.a.md
+  - begin: '20241122140000'
+    amount: 0
+    redo: 30
+    type: work
+    name: 静默工作
+    subject: ego
+    title: 整理季度任务
+    readme: |
+      - read ../../draft/2024/10/20241003.02.md
+      - read ../../draft/2024/10/20241004.03.md
+      - read ../../draft/2024/10/20241005.03.md
+      - read ../../draft/2024/10/20241007.04.md
+      - read ../../draft/2024/10/20241008.03.md
+      - read ../../draft/2024/10/20241010.05.md
+      - read ../../draft/2024/10/20241013.02.md
+      - read ../../draft/2024/10/20241015.02.md
+      - read ../../draft/2024/10/20241016.02.md
+      - read ../../draft/2024/10/20241020.02.md
+      - read ../../draft/2024/10/20241022.01.md
+      - read ../../draft/2024/10/20241025.02.md
+      - read ../../draft/2024/10/20241026.01.md
+      - read ../../draft/2024/10/20241027.02.md
+      - read ../../draft/2024/10/20241029.01.md
+      - read ../../draft/2024/10/20241030.02.md
+      - read ../../draft/2024/11/20241101.01.md
+      - read ../../draft/2024/11/20241107.02.md
+      - read ../../draft/2024/11/20241111.02.md
+      - read ../../draft/2024/11/20241113.01.md
+      - read ../../draft/2024/11/20241114.02.md
+      - read ../../draft/2024/11/20241115.03.md
+      - read ../../draft/2024/11/20241116.01.md
+      - read ../../draft/2024/11/20241117.03.md
+      - read ../../draft/2024/11/20241118.01.md
+      - read ../../draft/2024/11/20241121.01.md
+    output: ../../draft/2024/11/20241122.01.md
+    namelink: http://simp.ly/p/8t3vlk
+  - begin: '20241122143000'
+    amount: 0
+    redo: 30
+    type: work
+    name: 静默工作
+    subject: raw
+    title: 使用convert-units
+    readme: |
+      - read ../../draft/2024/11/20241115.04.md
+      - read ../../draft/2024/11/20241116.02.md
+      - read ../../draft/2024/11/20241117.04.md
+      - read ../../draft/2024/11/20241118.02.md
+      - read ../../draft/2024/11/20241121.02.md
+    output: ../../draft/2024/11/20241122.02.md
+    namelink: http://simp.ly/p/5k9gJy
+  - begin: '20241122150000'
+    amount: 60
+    type: free
+    name: 休整
+  - begin: '20241122160000'
+    amount: 0
+    redo: 60
+    type: work
+    name: 静默工作
+    subject: infra
+    title: 范例--利用js模块组合实现合同条款的组合。
+    readme: |
+      - read ../../draft/2024/10/20241004.05.md
+      - read ../../draft/2024/11/20241118.03.md
+      - read ../../draft/2024/11/20241119.02.md
+      - read ../../draft/2024/11/20241120.03.md
+      - read ../../draft/2024/11/20241121.03.md
+    output: ../../draft/2024/11/20241122.03.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20241122170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20241122190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
