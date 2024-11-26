@@ -1,0 +1,51 @@
+date: '20241126'
+mode: '1'
+plan: 1e
+time:
+  - begin: '20241126102700'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20241126104200'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20241126114200'
+    amount: 45
+    type: food
+    name: 午餐
+  - begin: '20241126122700'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20241126131200'
+    amount: 167
+    type: free
+    name: 休整
+  - begin: '20241126160000'
+    amount: 0
+    redo: 60
+    type: work
+    name: 静默工作
+    subject: infra
+    title: 范例--利用js模块组合实现合同条款的组合。
+    readme: |
+      - read ../../draft/2024/10/20241004.05.md
+      - read ../../draft/2024/11/20241118.03.md
+      - read ../../draft/2024/11/20241119.02.md
+      - read ../../draft/2024/11/20241120.03.md
+      - read ../../draft/2024/11/20241121.03.md
+      - read ../../draft/2024/11/20241122.03.md
+      - read ../../draft/2024/11/20241123.03.md
+      - read ../../draft/2024/11/20241124.03.md
+      - read ../../draft/2024/11/20241125.03.md
+    output: ../../draft/2024/11/20241126.01.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20241126170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20241126190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
