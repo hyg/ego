@@ -1,0 +1,91 @@
+date: '20241127'
+mode: '2'
+plan: 2c
+time:
+  - begin: '20241127073600'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20241127075100'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20241127085100'
+    amount: 45
+    type: food
+    name: 早餐
+  - begin: '20241127093600'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20241127102100'
+    amount: 38
+    type: free
+    name: 休整
+  - begin: '20241127110000'
+    amount: 180
+    type: food
+    name: 备餐、午餐午休
+  - begin: '20241127140000'
+    amount: 0
+    redo: 90
+    type: work
+    name: 工作
+    subject: PSMD
+    title: 整理近期讨论，按照新版manifest text提炼几个有代表性的场景。
+    readme: |
+      - read ../../draft/2024/09/20240904140000.md
+      - read ../../draft/2024/09/20240905074500.md
+      - read ../../draft/2024/09/20240906140000.md
+      - read ../../draft/2024/09/20240908093000.md
+      - read ../../draft/2024/09/20240911140000.md
+      - read ../../draft/2024/09/20240912093000.md
+      - read ../../draft/2024/09/20240913140000.md
+      - read ../../draft/2024/09/20240914140000.md
+      - read ../../draft/2024/09/20240915093000.md
+      - read ../../draft/2024/09/20240916140000.md
+      - read ../../draft/2024/09/20240918093000.md
+      - read ../../draft/2024/09/20240921.01.md
+      - read ../../draft/2024/09/20240922.01.md
+      - read ../../draft/2024/10/20241028.02.md
+      - read ../../draft/2024/10/20241031.01.md
+      - read ../../draft/2024/11/20241105.01.md
+      - read ../../draft/2024/11/20241106.02.md
+      - read ../../draft/2024/11/20241115.02.md
+      - read ../../draft/2024/11/20241117.02.md
+      - read ../../draft/2024/11/20241119.01.md
+      - read ../../draft/2024/11/20241120.02.md
+    output: ../../draft/2024/11/20241127.01.md
+    namelink: http://simp.ly/p/lsBYG9
+  - begin: '20241127153000'
+    amount: 30
+    type: free
+    name: 休整
+  - begin: '20241127160000'
+    amount: 0
+    redo: 60
+    type: work
+    name: 工作
+    subject: infra
+    title: 范例--利用js模块组合实现合同条款的组合。
+    readme: |
+      - read ../../draft/2024/10/20241004.05.md
+      - read ../../draft/2024/11/20241118.03.md
+      - read ../../draft/2024/11/20241119.02.md
+      - read ../../draft/2024/11/20241120.03.md
+      - read ../../draft/2024/11/20241121.03.md
+      - read ../../draft/2024/11/20241122.03.md
+      - read ../../draft/2024/11/20241123.03.md
+      - read ../../draft/2024/11/20241124.03.md
+      - read ../../draft/2024/11/20241125.03.md
+      - read ../../draft/2024/11/20241126.01.md
+    output: ../../draft/2024/11/20241127.02.md
+    namelink: http://simp.ly/p/MpcbHD
+  - begin: '20241127170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20241127190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
