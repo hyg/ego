@@ -581,7 +581,7 @@ time:
     learn: 2000
     js: 1000
   sold:
-    ego: 1571
+    ego: 1601
     xuemen: 130
     PSMD: 1685
     infra: 250
@@ -739,6 +739,7 @@ todo:
         - read ../../draft/2024/11/20241124.01.md
         - read ../../draft/2024/11/20241125.02.md
         - read ../../draft/2024/12/20241201.03.md
+        - read ../../draft/2024/12/20241202.02.md
     - '60': 整理知识体系的层级定义
       readme: |
         - read ../../draft/2024/10/20241010.03.md
@@ -805,6 +806,7 @@ todo:
         - read ../../draft/2024/11/20241129.01.md
         - read ../../draft/2024/11/20241130.01.md
         - read ../../draft/2024/12/20241201.04.md
+        - read ../../draft/2024/12/20241202.03.md
     - '60': 动态菜单设计。
       readme: |
         - read ../../draft/2024/09/20240921.02.md
@@ -824,6 +826,7 @@ todo:
         - read ../../draft/2024/11/20241124.02.md
         - read ../../draft/2024/11/20241125.01.md
         - read ../../draft/2024/12/20241201.02.md
+        - read ../../draft/2024/12/20241202.01.md
     - '90': wordpress plugin
       readme: |
         - read ../../draft/2024/11/20241115.05.md
