@@ -582,10 +582,10 @@ time:
     js: 1000
   sold:
     ego: 1721
-    xuemen: 130
+    xuemen: 155
     PSMD: 1685
     infra: 250
-    learn: 465
+    learn: 505
     raw: 347
 todo:
   PSMD:
@@ -811,6 +811,7 @@ todo:
         - read ../../draft/2024/12/20241203.01.md
         - read ../../draft/2024/12/20241204.03.md
         - read ../../draft/2024/12/20241206.01.md
+        - read ../../draft/2024/12/20241211.03.md
     - '60': 动态菜单设计。
       readme: |
         - read ../../draft/2024/09/20240921.02.md
@@ -825,13 +826,6 @@ todo:
       readme: |
         - read ../../draft/2024/09/20240919140000.md
   learn:
-    - '30': https://frontity.org/
-      readme: |
-        - read ../../draft/2024/11/20241124.02.md
-        - read ../../draft/2024/11/20241125.01.md
-        - read ../../draft/2024/12/20241201.02.md
-        - read ../../draft/2024/12/20241202.01.md
-        - read ../../draft/2024/12/20241204.01.md
     - '90': wordpress plugin
       readme: |
         - read ../../draft/2024/11/20241115.05.md
@@ -959,7 +953,6 @@ todo:
     - '60': 新版食材排序，包括升序、降序、特定值距离、多种营养成分特定值组合距离。
     - '60': 新版营养成分详情，允许多种营养成分。
   xuemen:
-    - '30': 月初事务
     - '195': kernel模型升级
       readme: |
         - read ../../draft/2024/11/20241120.01.md
