@@ -582,14 +582,14 @@ time:
     js: 1000
   sold:
     ego: 1721
-    xuemen: 155
+    xuemen: 305
     PSMD: 1685
     infra: 250
     learn: 505
     raw: 347
 todo:
   PSMD:
-    - '90': 整理近期讨论，按照新版manifest text提炼几个有代表性的场景。
+    - '60': 整理近期讨论，按照新版manifest text提炼几个有代表性的场景。
       readme: |
         - read ../../draft/2024/09/20240904140000.md
         - read ../../draft/2024/09/20240905074500.md
@@ -706,7 +706,7 @@ todo:
       readnme: |
         - 考虑upgradeby的实现。
   ego:
-    - '30': 整理季度任务
+    - '60': 整理季度任务
       readme: |
         - read ../../draft/2024/10/20241003.02.md
         - read ../../draft/2024/10/20241004.03.md
@@ -741,6 +741,7 @@ todo:
         - read ../../draft/2024/12/20241201.03.md
         - read ../../draft/2024/12/20241202.02.md
         - read ../../draft/2024/12/20241204.02.md
+        - read ../../draft/2024/12/20241212.02.md
     - '60': 整理知识体系的层级定义
       readme: |
         - read ../../draft/2024/10/20241010.03.md
@@ -790,6 +791,9 @@ todo:
         - day metada
         - draft文件名
   infra:
+    - '195': schema立项。
+      readme: |
+        - read ../../draft/2024/09/20240919140000.md
     - '60': 范例--利用js模块组合实现合同条款的组合。
       readme: |
         - read ../../draft/2024/10/20241004.05.md
@@ -812,6 +816,7 @@ todo:
         - read ../../draft/2024/12/20241204.03.md
         - read ../../draft/2024/12/20241206.01.md
         - read ../../draft/2024/12/20241211.03.md
+        - read ../../draft/2024/12/20241212.03.md
     - '60': 动态菜单设计。
       readme: |
         - read ../../draft/2024/09/20240921.02.md
@@ -822,11 +827,8 @@ todo:
         - read ../../draft/2024/10/20241002.02.md
         - read ../../draft/2024/10/20241003.03.md
         - read ../../draft/2024/10/20241004.01.md
-    - '90': schema立项。
-      readme: |
-        - read ../../draft/2024/09/20240919140000.md
   learn:
-    - '90': wordpress plugin
+    - '30': wordpress plugin
       readme: |
         - read ../../draft/2024/11/20241115.05.md
         - read ../../draft/2024/11/20241116.03.md
@@ -864,7 +866,7 @@ todo:
       readme: |
         - https://zh.javascript.info/promise-api
   js:
-    - '60': wordpress + nodejs
+    - '30': wordpress + nodejs
       readme: |
         - wordpress-rest-api
         - https://www.npmjs.com/package/wpapi
@@ -953,6 +955,9 @@ todo:
     - '60': 新版食材排序，包括升序、降序、特定值距离、多种营养成分特定值组合距离。
     - '60': 新版营养成分详情，允许多种营养成分。
   xuemen:
+    - '90': 数字发票申请
+      readme: |
+        - read ../../draft/2024/12/20241212.01.md
     - '195': kernel模型升级
       readme: |
         - read ../../draft/2024/11/20241120.01.md
