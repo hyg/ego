@@ -1,0 +1,105 @@
+date: '20241213'
+mode: '2'
+plan: 2b
+time:
+  - begin: '20241213061700'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20241213063200'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20241213073200'
+    amount: 45
+    type: food
+    name: 早餐
+  - begin: '20241213081700'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20241213090200'
+    amount: 27
+    type: free
+    name: 休整
+  - begin: '20241213093000'
+    amount: 180
+    type: work
+    name: 工作
+    subject: xuemen
+    title: 数字发票申请
+    readme: |
+      - read ../../draft/2024/12/20241212.01.md
+    output: ../../draft/2024/12/20241213.01.md
+    namelink: http://simp.ly/p/WZ077p
+  - begin: '20241213110000'
+    amount: 180
+    type: food
+    name: 备餐、午餐午休
+  - begin: '20241213140000'
+    amount: 0
+    redo: 90
+    type: work
+    name: 工作
+    subject: PSMD
+    title: 整理default模型
+    readme: |
+      - read ../../draft/2024/09/20240930.02.md
+      - read ../../draft/2024/10/20241002.01.md
+      - read ../../draft/2024/10/20241004.02.md
+      - read ../../draft/2024/10/20241007.01.md
+      - read ../../draft/2024/10/20241010.02.md
+      - read ../../draft/2024/10/20241011.01.md
+      - read ../../draft/2024/10/20241016.01.md
+      - read ../../draft/2024/10/20241017.01.md
+      - read ../../draft/2024/10/20241024.01.md
+      - read ../../draft/2024/10/20241028.01.md
+      - read ../../draft/2024/11/20241105.02.md
+      - read ../../draft/2024/11/20241106.01.md
+    output: ../../draft/2024/12/20241213.02.md
+    namelink: http://simp.ly/p/lsBYG9
+  - begin: '20241213153000'
+    amount: 30
+    type: free
+    name: 休整
+  - begin: '20241213160000'
+    amount: 0
+    redo: 60
+    type: work
+    name: 工作
+    subject: PSMD
+    title: 整理近期讨论，按照新版manifest text提炼几个有代表性的场景。
+    readme: |
+      - read ../../draft/2024/09/20240904140000.md
+      - read ../../draft/2024/09/20240905074500.md
+      - read ../../draft/2024/09/20240906140000.md
+      - read ../../draft/2024/09/20240908093000.md
+      - read ../../draft/2024/09/20240911140000.md
+      - read ../../draft/2024/09/20240912093000.md
+      - read ../../draft/2024/09/20240913140000.md
+      - read ../../draft/2024/09/20240914140000.md
+      - read ../../draft/2024/09/20240915093000.md
+      - read ../../draft/2024/09/20240916140000.md
+      - read ../../draft/2024/09/20240918093000.md
+      - read ../../draft/2024/09/20240921.01.md
+      - read ../../draft/2024/09/20240922.01.md
+      - read ../../draft/2024/10/20241028.02.md
+      - read ../../draft/2024/10/20241031.01.md
+      - read ../../draft/2024/11/20241105.01.md
+      - read ../../draft/2024/11/20241106.02.md
+      - read ../../draft/2024/11/20241115.02.md
+      - read ../../draft/2024/11/20241117.02.md
+      - read ../../draft/2024/11/20241119.01.md
+      - read ../../draft/2024/11/20241120.02.md
+      - read ../../draft/2024/11/20241127.01.md
+      - read ../../draft/2024/12/20241201.01.md
+    output: ../../draft/2024/12/20241213.03.md
+    namelink: http://simp.ly/p/MpcbHD
+  - begin: '20241213170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20241213190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交

@@ -582,7 +582,7 @@ time:
     js: 1000
   sold:
     ego: 1721
-    xuemen: 305
+    xuemen: 485
     PSMD: 1685
     infra: 250
     learn: 505
@@ -614,6 +614,7 @@ todo:
         - read ../../draft/2024/11/20241120.02.md
         - read ../../draft/2024/11/20241127.01.md
         - read ../../draft/2024/12/20241201.01.md
+        - read ../../draft/2024/12/20241213.03.md
     - '90': 整理default模型
       readme: |
         - read ../../draft/2024/09/20240930.02.md
@@ -628,6 +629,7 @@ todo:
         - read ../../draft/2024/10/20241028.01.md
         - read ../../draft/2024/11/20241105.02.md
         - read ../../draft/2024/11/20241106.01.md
+        - read ../../draft/2024/12/20241213.02.md
     - '60': 《中华人民共和国民营经济促进法（草案征求意见稿）》公开征求意见
       readme: |
         - https://www.moj.gov.cn/pub/sfbgw/lfyjzj/lflfyjzj/202410/t20241010_507325.html
@@ -955,9 +957,6 @@ todo:
     - '60': 新版食材排序，包括升序、降序、特定值距离、多种营养成分特定值组合距离。
     - '60': 新版营养成分详情，允许多种营养成分。
   xuemen:
-    - '90': 数字发票申请
-      readme: |
-        - read ../../draft/2024/12/20241212.01.md
     - '195': kernel模型升级
       readme: |
         - read ../../draft/2024/11/20241120.01.md
