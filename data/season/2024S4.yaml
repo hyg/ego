@@ -585,8 +585,9 @@ time:
     xuemen: 485
     PSMD: 1685
     infra: 250
-    learn: 505
+    learn: 515
     raw: 347
+    js: 10
 todo:
   PSMD:
     - '60': 整理近期讨论，按照新版manifest text提炼几个有代表性的场景。
@@ -616,6 +617,7 @@ todo:
         - read ../../draft/2024/12/20241201.01.md
         - read ../../draft/2024/12/20241213.03.md
         - read ../../draft/2024/12/20241214.01.md
+        - read ../../draft/2024/12/20241215.03.md
     - '90': 整理default模型
       readme: |
         - read ../../draft/2024/09/20240930.02.md
@@ -831,11 +833,7 @@ todo:
         - read ../../draft/2024/10/20241003.03.md
         - read ../../draft/2024/10/20241004.01.md
   learn:
-    - '30': wordpress plugin
-      readme: |
-        - read ../../draft/2024/11/20241115.05.md
-        - read ../../draft/2024/11/20241116.03.md
-        - read ../../draft/2024/11/20241117.01.md
+    - '30': axios爬虫
     - '60': wordpress install and config
     - '60': oData simple
       readme: |
@@ -869,11 +867,6 @@ todo:
       readme: |
         - https://zh.javascript.info/promise-api
   js:
-    - '30': wordpress + nodejs
-      readme: |
-        - wordpress-rest-api
-        - https://www.npmjs.com/package/wpapi
-        - https://github.com/scottgonzalez/node-wordpress
     - '60': 引用github等特定版本js文件的html模版
       readme: |
         - 参考D:\huangyg\git\Infra\local\Infra.js createAuto的方法。
