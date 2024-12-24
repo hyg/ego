@@ -586,7 +586,7 @@ time:
     PSMD: 1745
     infra: 250
     learn: 515
-    raw: 347
+    raw: 467
     js: 10
 todo:
   PSMD:
@@ -836,10 +836,17 @@ todo:
   learn:
     - '30': axios爬虫
     - '60': wordpress install and config
+    - '90': 飞书 nodejs sdk
+      readme: |
+        - https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/server-side-sdk/nodejs-sdk/preparation-before-development
     - '60': oData simple
       readme: |
         - https://services.odata.org/
         - http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html
+    - '60': markmap
+      readme: |
+        - https://markmap.js.org/
+        - file:///C:/Users/hyg/Downloads/markmap.html
     - '60': MapLibre sample
       readme: |
         - https://maplibre.org/
@@ -868,6 +875,9 @@ todo:
       readme: |
         - https://zh.javascript.info/promise-api
   js:
+    - '30': 考虑sql.js是否使用。
+      readme: |
+        - export JavaScript typed array and dump to yaml file.
     - '60': 引用github等特定版本js文件的html模版
       readme: |
         - 参考D:\huangyg\git\Infra\local\Infra.js createAuto的方法。
