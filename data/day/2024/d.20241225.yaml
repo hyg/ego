@@ -1,0 +1,35 @@
+date: '20241225'
+mode: '1'
+plan: 1f
+time:
+  - begin: '20241225152000'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20241225153500'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20241225163500'
+    amount: 45
+    type: food
+    name: 晚餐
+  - begin: '20241225172000'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20241225180500'
+    amount: 60
+    type: free
+    name: 休整
+  - begin: '20241225190500'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
+  - begin: '20241226010000'
+    amount: 300
+    type: work
+    name: 静默工作
+    subject: raw
+    title: 2025版管理excel
+    output: ../../draft/2024/12/20241225.a.md
