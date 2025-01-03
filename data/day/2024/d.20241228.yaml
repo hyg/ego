@@ -1,0 +1,35 @@
+date: '20241228'
+mode: '1'
+plan: 1f
+time:
+  - begin: '20241228163100'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20241228164600'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20241228174600'
+    amount: 45
+    type: food
+    name: 晚餐
+  - begin: '20241228183100'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20241228191600'
+    amount: 60
+    type: free
+    name: 休整
+  - begin: '20241228201600'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
+  - begin: '20241228190000'
+    amount: 540
+    type: work
+    name: 静默工作
+    subject: infra
+    title: learning
+    output: ../../draft/2024/12/20241228.a.md

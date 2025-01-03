@@ -1,8 +1,8 @@
-year: 2024
-season: 4
-beginmonth: 10
+year: 2025
+season: 1
+beginmonth: 11
 beginday: 1
-lastmonth: 12
+lastmonth: 3
 lastday: 31
 timetype:
   - name: work
@@ -580,14 +580,7 @@ time:
     raw: 1000
     learn: 2000
     js: 1000
-  sold:
-    ego: 1721
-    xuemen: 485
-    PSMD: 1745
-    infra: 790
-    learn: 1115
-    raw: 767
-    js: 10
+  sold: {}
 todo:
   PSMD:
     - '60': 整理近期讨论，按照新版manifest text提炼几个有代表性的场景。

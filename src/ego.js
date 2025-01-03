@@ -1,5 +1,6 @@
 const day = require('./day.js');
 const season = require('./season.js');
+const asset = require('./asset.js');
 
 const { Command } = require('commander');
 var program = new Command();
@@ -87,6 +88,21 @@ seasoncommand
         log("plan");
         //season.debug = false;
         season.plan();
+    });
+
+
+    const assetcommand = program
+    .command('asset')
+    .description('资产管理功能');
+
+
+assetcommand
+    .command("entry")
+    .description('分录')
+    .action(() => {
+        log("entry");
+        //season.debug = false;
+        asset.entry();
     });
 
 program.parse();

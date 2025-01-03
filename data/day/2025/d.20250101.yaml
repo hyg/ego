@@ -1,0 +1,28 @@
+date: '20250101'
+mode: '1'
+plan: 1f
+time:
+  - begin: '20250101172900'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20250101174400'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20250101184400'
+    amount: 45
+    type: food
+    name: 晚餐
+  - begin: '20250101192900'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20250101201400'
+    amount: 60
+    type: free
+    name: 休整
+  - begin: '20250101211400'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
