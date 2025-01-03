@@ -1,6 +1,6 @@
-date: 20250-01-02
+date: 2025-01-02
 title: 小象超市订单
-VoucherID: 151852366076
+VoucherID: "151852366076"
 VoucherType: 电子订单
 amount: 18.15
 summary: 蔬菜、鸡蛋

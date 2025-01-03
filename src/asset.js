@@ -25,6 +25,7 @@ module.exports = {
                 }
                 var record = new Object();
                 record.date = AER.date;
+                record.voucherID = AER.VoucherID;
                 record.asset = item.asset;
                 record.type = "debit";
                 record.amount = item.amount;
@@ -38,6 +39,7 @@ module.exports = {
                 }
                 var record = new Object();
                 record.date = AER.date;
+                record.voucherID = AER.VoucherID;
                 record.asset = item.asset;
                 record.type = "credit";
                 record.amount = item.amount;
@@ -63,6 +65,6 @@ module.exports = {
         return {"rmb": {id: 1,name: "rmb"}};
     },
     loadAccount(){
-        return {"银行存款": {id: 1, name: "银行存款",balance: {"rmb": 0}},"raw.food": {id: 2,name: "raw.food",balance: {"rmb": 0}}};
+        return {"银行存款": {id: 1, name: "银行存款",balance: {"rmb": 0}},"现金.微信零钱": {id: 2.1, name: "现金.微信零钱",balance: {"rmb": 0}},"raw": {id: 10,name: "raw",balance: {"rmb": 0}},"raw.food": {id: 10.1,name: "raw.food",balance: {"rmb": 0}},"raw.site": {id: 10.2,name: "raw.site",balance: {"rmb": 0}},"raw.site.bj1": {id: "10.2.1.",name: "raw.site.bj1",balance: {"rmb": 0}},"donation": {id: 20,name: "donation",balance: {"rmb": 0}},"donation.parent": {id: 20,name: "donation.parent",balance: {"rmb": 0}}};
     }
 }

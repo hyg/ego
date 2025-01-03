@@ -1,0 +1,17 @@
+date: 2025-01-03
+VoucherID: "2025010322001131991414147551"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit: 
+    - AccountTitle: donation.parent
+      asset: rmb
+      amount: 107.0
+  credit: 
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 107.0
+comment: 
+  - name: 欧乐B D12013
+    amount: 1
+    unit: set
+    asset: 107.0
