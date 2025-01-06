@@ -1,0 +1,17 @@
+date: 2025-01-05
+VoucherID: "1925010520201002805570477063278"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit: 
+    - AccountTitle: donation.parent
+      asset: rmb
+      amount: 329.36
+  credit: 
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 329.36
+comment: 
+  - name: 达菲磷酸奥司他韦胶囊
+    amount: 1500
+    unit: mg
+    asset: 329.36

@@ -1,0 +1,17 @@
+date: 2025-01-05
+VoucherID: "19250105012000028008475111094945"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit: 
+    - AccountTitle: raw.food
+      asset: rmb
+      amount: 9.86
+  credit: 
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 107.0
+comment: 
+  - name: 杞里香特优宁夏头茬枸杞
+    amount: 250
+    unit: g
+    asset: 9.86

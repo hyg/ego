@@ -1,0 +1,17 @@
+date: 2025-01-06
+VoucherID: "19250106032000028044859425094750"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit: 
+    - AccountTitle: donation.younger
+      asset: rmb
+      amount: 30
+  credit: 
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 30
+comment: 
+  - name: 败家实验室银蛇钢笔金夹
+    amount: 1
+    unit: 支
+    asset: 30

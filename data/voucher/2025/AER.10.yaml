@@ -1,0 +1,21 @@
+date: 2025-01-06
+VoucherID: "19250106042010028059318205095038"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit: 
+    - AccountTitle: raw.site.wz
+      asset: rmb
+      amount: 18.21
+  credit: 
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 18.21
+comment: 
+  - name: 优调拖鞋灰色42-43
+    amount: 1
+    unit: 双
+    asset: 9.10
+  - name: 优调拖鞋黑色42-43
+    amount: 1
+    unit: 双
+    asset: 9.11
