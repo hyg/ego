@@ -587,6 +587,7 @@ todo:
       readme: |
         - https://www.moj.gov.cn/pub/sfbgw/lfyjzj/lflfyjzj/202410/t20241010_507325.html
         - read ../../draft/2025/20250109.05.md
+        - read ../../draft/2025/20250110.03.md
     - '90': 整理default模型
       readme: |
         - read ../../draft/2024/09/20240930.02.md
@@ -603,6 +604,7 @@ todo:
         - read ../../draft/2024/11/20241106.01.md
         - read ../../draft/2024/12/20241213.02.md
         - read ../../draft/2025/20250109.02.md
+        - read ../../draft/2025/20250110.02.md
     - '60': 整理近期讨论，按照新版manifest text提炼几个有代表性的场景。
       readme: |
         - read ../../draft/2024/09/20240904140000.md
@@ -796,6 +798,7 @@ todo:
     - '195': schema立项。
       readme: |
         - read ../../draft/2024/09/20240919140000.md
+        - read ../../draft/2025/20250110.01.md
     - '60': 范例--利用js模块组合实现合同条款的组合。
       readme: |
         - read ../../draft/2024/10/20241004.05.md

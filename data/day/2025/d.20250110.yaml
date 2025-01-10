@@ -1,0 +1,87 @@
+date: '20250110'
+mode: '2'
+plan: 2a
+time:
+  - begin: '20250110014900'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20250110020400'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20250110030400'
+    amount: 45
+    type: food
+    name: 早餐
+  - begin: '20250110034900'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20250110043400'
+    amount: 190
+    type: free
+    name: 休整
+  - begin: '20250110074500'
+    amount: 60
+    redo: 195
+    type: work
+    name: 工作
+    subject: infra
+    title: schema立项。
+    readme: |
+      - read ../../draft/2024/09/20240919140000.md
+    output: ../../draft/2025/20250110.01.md
+    namelink: http://simp.ly/p/3GXNTh
+  - begin: '20250110110000'
+    amount: 180
+    type: food
+    name: 备餐、午餐午休
+  - begin: '20250110140000'
+    amount: 0
+    redo: 90
+    type: work
+    name: 工作
+    subject: PSMD
+    title: 整理default模型
+    readme: |
+      - read ../../draft/2024/09/20240930.02.md
+      - read ../../draft/2024/10/20241002.01.md
+      - read ../../draft/2024/10/20241004.02.md
+      - read ../../draft/2024/10/20241007.01.md
+      - read ../../draft/2024/10/20241010.02.md
+      - read ../../draft/2024/10/20241011.01.md
+      - read ../../draft/2024/10/20241016.01.md
+      - read ../../draft/2024/10/20241017.01.md
+      - read ../../draft/2024/10/20241024.01.md
+      - read ../../draft/2024/10/20241028.01.md
+      - read ../../draft/2024/11/20241105.02.md
+      - read ../../draft/2024/11/20241106.01.md
+      - read ../../draft/2024/12/20241213.02.md
+      - read ../../draft/2025/20250109.02.md
+    output: ../../draft/2025/20250110.02.md
+    namelink: http://simp.ly/p/lsBYG9
+  - begin: '20250110153000'
+    amount: 30
+    type: free
+    name: 休整
+  - begin: '20250110160000'
+    amount: 0
+    redo: 60
+    type: work
+    name: 工作
+    subject: PSMD
+    title: 《中华人民共和国民营经济促进法（草案征求意见稿）》公开征求意见
+    readme: |
+      - https://www.moj.gov.cn/pub/sfbgw/lfyjzj/lflfyjzj/202410/t20241010_507325.html
+      - read ../../draft/2025/20250109.05.md
+    output: ../../draft/2025/20250110.03.md
+    namelink: http://simp.ly/p/MpcbHD
+  - begin: '20250110170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20250110190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交

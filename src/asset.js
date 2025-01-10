@@ -48,7 +48,7 @@ module.exports = {
             }
         }
         log(yaml.dump(Account));
-        
+        console.table(Account);
     },
     loadAER(year){
         var AERmap = new Object();
