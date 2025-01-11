@@ -583,28 +583,6 @@ time:
   sold: {}
 todo:
   PSMD:
-    - '60': 《中华人民共和国民营经济促进法（草案征求意见稿）》公开征求意见
-      readme: |
-        - https://www.moj.gov.cn/pub/sfbgw/lfyjzj/lflfyjzj/202410/t20241010_507325.html
-        - read ../../draft/2025/20250109.05.md
-        - read ../../draft/2025/20250110.03.md
-    - '90': 整理default模型
-      readme: |
-        - read ../../draft/2024/09/20240930.02.md
-        - read ../../draft/2024/10/20241002.01.md
-        - read ../../draft/2024/10/20241004.02.md
-        - read ../../draft/2024/10/20241007.01.md
-        - read ../../draft/2024/10/20241010.02.md
-        - read ../../draft/2024/10/20241011.01.md
-        - read ../../draft/2024/10/20241016.01.md
-        - read ../../draft/2024/10/20241017.01.md
-        - read ../../draft/2024/10/20241024.01.md
-        - read ../../draft/2024/10/20241028.01.md
-        - read ../../draft/2024/11/20241105.02.md
-        - read ../../draft/2024/11/20241106.01.md
-        - read ../../draft/2024/12/20241213.02.md
-        - read ../../draft/2025/20250109.02.md
-        - read ../../draft/2025/20250110.02.md
     - '60': 整理近期讨论，按照新版manifest text提炼几个有代表性的场景。
       readme: |
         - read ../../draft/2024/09/20240904140000.md
@@ -635,6 +613,25 @@ todo:
         - read ../../draft/2024/12/20241215.03.md
         - read ../../draft/2024/12/20241216.01.md
         - read ../../draft/2025/20250109.01.md
+        - read ../../draft/2025/20250111.05.md
+    - '90': 整理default模型
+      readme: |
+        - read ../../draft/2024/09/20240930.02.md
+        - read ../../draft/2024/10/20241002.01.md
+        - read ../../draft/2024/10/20241004.02.md
+        - read ../../draft/2024/10/20241007.01.md
+        - read ../../draft/2024/10/20241010.02.md
+        - read ../../draft/2024/10/20241011.01.md
+        - read ../../draft/2024/10/20241016.01.md
+        - read ../../draft/2024/10/20241017.01.md
+        - read ../../draft/2024/10/20241024.01.md
+        - read ../../draft/2024/10/20241028.01.md
+        - read ../../draft/2024/11/20241105.02.md
+        - read ../../draft/2024/11/20241106.01.md
+        - read ../../draft/2024/12/20241213.02.md
+        - read ../../draft/2025/20250109.02.md
+        - read ../../draft/2025/20250110.02.md
+        - read ../../draft/2025/20250111.02.md
     - '195': machines model
       readme: |
         - a sample instance of machine,FPM,FSM in manifest code 
@@ -833,9 +830,6 @@ todo:
         - read ../../draft/2024/10/20241003.03.md
         - read ../../draft/2024/10/20241004.01.md
   learn:
-    - '30': remoteStorage sample
-      readme: |
-        - read ../../draft/2025/20250109.03.md
     - '60': firebase的开源替代
       readme: |
         - https://blog.back4app.com/zh/firebase%e5%8d%81%e5%a4%a7%e6%9b%bf%e4%bb%a3%e5%b9%b3%e5%8f%b0/
@@ -950,9 +944,6 @@ todo:
     - '60': 学习'Electron'，创作一个范例。
     - '60': 用代码中的对象或类，产生数据库创建SQL脚本、ER图（mermaid）
   raw:
-    - '30': 2025版管理excel
-      readme: |
-        - read ../../draft/2025/20250109.04.md
     - '60': 熟悉内脏之间的关系
       readme: |
         - read ../../draft/2024/09/20240917143000.md
