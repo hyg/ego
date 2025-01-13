@@ -583,6 +583,26 @@ time:
   sold: {}
 todo:
   PSMD:
+    - '90': 整理default模型
+      readme: |
+        - read ../../draft/2024/09/20240930.02.md
+        - read ../../draft/2024/10/20241002.01.md
+        - read ../../draft/2024/10/20241004.02.md
+        - read ../../draft/2024/10/20241007.01.md
+        - read ../../draft/2024/10/20241010.02.md
+        - read ../../draft/2024/10/20241011.01.md
+        - read ../../draft/2024/10/20241016.01.md
+        - read ../../draft/2024/10/20241017.01.md
+        - read ../../draft/2024/10/20241024.01.md
+        - read ../../draft/2024/10/20241028.01.md
+        - read ../../draft/2024/11/20241105.02.md
+        - read ../../draft/2024/11/20241106.01.md
+        - read ../../draft/2024/12/20241213.02.md
+        - read ../../draft/2025/20250109.02.md
+        - read ../../draft/2025/20250110.02.md
+        - read ../../draft/2025/20250111.02.md
+        - read ../../draft/2025/20250112.02.md
+        - read ../../draft/2025/20250113.02.md
     - '60': 整理近期讨论，按照新版manifest text提炼几个有代表性的场景。
       readme: |
         - read ../../draft/2024/09/20240904140000.md
@@ -614,24 +634,8 @@ todo:
         - read ../../draft/2024/12/20241216.01.md
         - read ../../draft/2025/20250109.01.md
         - read ../../draft/2025/20250111.05.md
-    - '90': 整理default模型
-      readme: |
-        - read ../../draft/2024/09/20240930.02.md
-        - read ../../draft/2024/10/20241002.01.md
-        - read ../../draft/2024/10/20241004.02.md
-        - read ../../draft/2024/10/20241007.01.md
-        - read ../../draft/2024/10/20241010.02.md
-        - read ../../draft/2024/10/20241011.01.md
-        - read ../../draft/2024/10/20241016.01.md
-        - read ../../draft/2024/10/20241017.01.md
-        - read ../../draft/2024/10/20241024.01.md
-        - read ../../draft/2024/10/20241028.01.md
-        - read ../../draft/2024/11/20241105.02.md
-        - read ../../draft/2024/11/20241106.01.md
-        - read ../../draft/2024/12/20241213.02.md
-        - read ../../draft/2025/20250109.02.md
-        - read ../../draft/2025/20250110.02.md
-        - read ../../draft/2025/20250111.02.md
+        - read ../../draft/2025/20250112.03.md
+        - read ../../draft/2025/20250113.01.md
     - '195': machines model
       readme: |
         - a sample instance of machine,FPM,FSM in manifest code 
@@ -743,6 +747,7 @@ todo:
         - read ../../draft/2024/12/20241202.02.md
         - read ../../draft/2024/12/20241204.02.md
         - read ../../draft/2024/12/20241212.02.md
+        - read ../../draft/2025/20250113.05.md
     - '60': 整理知识体系的层级定义
       readme: |
         - read ../../draft/2024/10/20241010.03.md
@@ -796,6 +801,7 @@ todo:
       readme: |
         - read ../../draft/2024/09/20240919140000.md
         - read ../../draft/2025/20250110.01.md
+        - read ../../draft/2025/20250112.01.md
     - '60': 范例--利用js模块组合实现合同条款的组合。
       readme: |
         - read ../../draft/2024/10/20241004.05.md
@@ -830,6 +836,9 @@ todo:
         - read ../../draft/2024/10/20241003.03.md
         - read ../../draft/2024/10/20241004.01.md
   learn:
+    - '30': axios爬虫
+      readme: |
+        - read ../../draft/2025/20250113.04.md
     - '60': firebase的开源替代
       readme: |
         - https://blog.back4app.com/zh/firebase%e5%8d%81%e5%a4%a7%e6%9b%bf%e4%bb%a3%e5%b9%b3%e5%8f%b0/
@@ -837,7 +846,6 @@ todo:
       readme: |
         - https://rxdb.info/replication-webrtc.html
         - https://rxdb.info/replication-nats.html
-    - '30': axios爬虫
     - '60': wordpress install and config
     - '90': 飞书 nodejs sdk
       readme: |
@@ -881,6 +889,7 @@ todo:
     - '30': 考虑sql.js是否使用。
       readme: |
         - export JavaScript typed array and dump to yaml file.
+        - read ../../draft/2025/20250113.03.md
     - '60': 引用github等特定版本js文件的html模版
       readme: |
         - 参考D:\huangyg\git\Infra\local\Infra.js createAuto的方法。
