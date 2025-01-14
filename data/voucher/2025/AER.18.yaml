@@ -1,0 +1,17 @@
+date: 2025-01-14
+VoucherID: "19250114072000028324939084094925"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit: 
+    - AccountTitle: raw.med
+      asset: rmb
+      amount: 11.99
+  credit: 
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 11.99
+comment: 
+  - name: 萌得尔口咽喷剂
+    amount: 10
+    unit: ml
+    asset: 11.99

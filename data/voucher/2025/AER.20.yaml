@@ -1,0 +1,21 @@
+date: 2025-01-14
+VoucherID: "19250114122010028389292702157701"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit: 
+    - AccountTitle: raw.site.wz
+      asset: rmb
+      amount: 27.32
+  credit: 
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 27.32
+comment: 
+  - name: 取暖贴
+    amount: 60
+    unit: 片
+    asset: 23.66
+  - name: 含漱液
+    amount: 100
+    unit: ml
+    asset: 3.66

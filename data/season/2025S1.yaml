@@ -583,26 +583,6 @@ time:
   sold: {}
 todo:
   PSMD:
-    - '90': 整理default模型
-      readme: |
-        - read ../../draft/2024/09/20240930.02.md
-        - read ../../draft/2024/10/20241002.01.md
-        - read ../../draft/2024/10/20241004.02.md
-        - read ../../draft/2024/10/20241007.01.md
-        - read ../../draft/2024/10/20241010.02.md
-        - read ../../draft/2024/10/20241011.01.md
-        - read ../../draft/2024/10/20241016.01.md
-        - read ../../draft/2024/10/20241017.01.md
-        - read ../../draft/2024/10/20241024.01.md
-        - read ../../draft/2024/10/20241028.01.md
-        - read ../../draft/2024/11/20241105.02.md
-        - read ../../draft/2024/11/20241106.01.md
-        - read ../../draft/2024/12/20241213.02.md
-        - read ../../draft/2025/20250109.02.md
-        - read ../../draft/2025/20250110.02.md
-        - read ../../draft/2025/20250111.02.md
-        - read ../../draft/2025/20250112.02.md
-        - read ../../draft/2025/20250113.02.md
     - '60': 整理近期讨论，按照新版manifest text提炼几个有代表性的场景。
       readme: |
         - read ../../draft/2024/09/20240904140000.md
@@ -636,16 +616,7 @@ todo:
         - read ../../draft/2025/20250111.05.md
         - read ../../draft/2025/20250112.03.md
         - read ../../draft/2025/20250113.01.md
-    - '195': machines model
-      readme: |
-        - a sample instance of machine,FPM,FSM in manifest code 
-        - read D:\huangyg\git\draft\2024\07\20240723160000.md
-        - read 2024.07.24. 09:30, 2024.07.25. 09:30, 2024.07.26. 09:30 draft
-        - 实现FPM+FSM
-        - 从FSM、FPM中抽象出统一的mechine
-        - 实现joint、split机制
-        - 先用javascript的class实现
-        - read ../../draft/2024/09/20240926.01.md
+        - read ../../draft/2025/20250114.03.md
     - '90': 整理新版本term的manifest code
       readme: |
         - 为了显示而设计的term model，并不适合与代码绑定。
@@ -666,6 +637,38 @@ todo:
         - read ../../draft/2024/09/20240912140000.md
         - read ../../draft/2024/09/20240913093000.md
         - read ../../draft/2024/09/20240918140000.md
+        - read ../../draft/2025/20250114.02.md
+    - '90': 整理default模型
+      readme: |
+        - read ../../draft/2024/09/20240930.02.md
+        - read ../../draft/2024/10/20241002.01.md
+        - read ../../draft/2024/10/20241004.02.md
+        - read ../../draft/2024/10/20241007.01.md
+        - read ../../draft/2024/10/20241010.02.md
+        - read ../../draft/2024/10/20241011.01.md
+        - read ../../draft/2024/10/20241016.01.md
+        - read ../../draft/2024/10/20241017.01.md
+        - read ../../draft/2024/10/20241024.01.md
+        - read ../../draft/2024/10/20241028.01.md
+        - read ../../draft/2024/11/20241105.02.md
+        - read ../../draft/2024/11/20241106.01.md
+        - read ../../draft/2024/12/20241213.02.md
+        - read ../../draft/2025/20250109.02.md
+        - read ../../draft/2025/20250110.02.md
+        - read ../../draft/2025/20250111.02.md
+        - read ../../draft/2025/20250112.02.md
+        - read ../../draft/2025/20250113.02.md
+        - read ../../draft/2025/20250114.01.md
+    - '195': machines model
+      readme: |
+        - a sample instance of machine,FPM,FSM in manifest code 
+        - read D:\huangyg\git\draft\2024\07\20240723160000.md
+        - read 2024.07.24. 09:30, 2024.07.25. 09:30, 2024.07.26. 09:30 draft
+        - 实现FPM+FSM
+        - 从FSM、FPM中抽象出统一的mechine
+        - 实现joint、split机制
+        - 先用javascript的class实现
+        - read ../../draft/2024/09/20240926.01.md
     - '90': 整理新版本term的manifest text
       readme: |
         - 条款文本嵌入到machine模型。
