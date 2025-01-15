@@ -9,7 +9,7 @@ AccountingEntry:
   credit: 
     - AccountTitle: 银行存款
       asset: rmb
-      amount: 107.0
+      amount: 107.00
 comment: 
   - name: 杞里香特优宁夏头茬枸杞
     amount: 250

@@ -1,17 +1,17 @@
-date: 2025-01-14
-VoucherID: "4200002385202501144984359394"
+date: 2025-01-15
+VoucherID: "4200002567202501150523295327"
 AccountingSoftwareID: 
 AccountingEntry: 
   debit: 
-    - AccountTitle: PSMD
+    - AccountTitle: raw.site.wz
       asset: rmb
-      amount: 1033.00
+      amount: 870.00
   credit: 
     - AccountTitle: 现金.微信零钱
       asset: rmb
-      amount: 1033.00
+      amount: 870.00
 comment: 
-  - name: 火车票
+  - name: 机票
     amount: 1
     unit: 张
-    asset: 1033.00
+    asset: 870.00

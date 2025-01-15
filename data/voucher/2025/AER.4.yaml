@@ -5,13 +5,13 @@ AccountingEntry:
   debit: 
     - AccountTitle: donation.parent
       asset: rmb
-      amount: 107.0
+      amount: 107.00
   credit: 
     - AccountTitle: 银行存款
       asset: rmb
-      amount: 107.0
+      amount: 107.00
 comment: 
   - name: 欧乐B D12013
     amount: 1
     unit: set
-    asset: 107.0
+    asset: 107.00

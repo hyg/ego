@@ -5,13 +5,13 @@ AccountingEntry:
   debit: 
     - AccountTitle: raw.med
       asset: rmb
-      amount: 44.0
+      amount: 44.00
   credit: 
     - AccountTitle: 银行存款
       asset: rmb
-      amount: 44.0
+      amount: 44.00
 comment: 
   - name: 奥尔菲磷酸奥司他韦
     amount: 2250
     unit: mg
-    asset: 44.0
+    asset: 44.00

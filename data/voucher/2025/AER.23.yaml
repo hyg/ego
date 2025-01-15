@@ -1,0 +1,17 @@
+date: 2025-01-15
+VoucherID: "4200002532202501159708647443"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit: 
+    - AccountTitle: raw.site.wz
+      asset: rmb
+      amount: 32.00
+  credit: 
+    - AccountTitle: 现金.微信零钱
+      asset: rmb
+      amount: 32.00
+comment: 
+  - name: 快递运费
+    amount: 4
+    unit: kg
+    asset: 32.00

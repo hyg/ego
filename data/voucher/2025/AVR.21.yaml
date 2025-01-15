@@ -1,0 +1,11 @@
+date: 2025-01-15 10:23:45
+title: 微信零钱账单
+VoucherID: "4200002532202501159708647443"
+VoucherType: 电子账单
+amount: 32.00
+summary: 快递运费
+comment:
+  - name: 商户单号
+    value: 250115009045232127
+  - name: 运单号
+    value: 73542831416233

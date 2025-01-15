@@ -5,13 +5,13 @@ AccountingEntry:
   debit: 
     - AccountTitle: donation.younger
       asset: rmb
-      amount: 30
+      amount: 30.00
   credit: 
     - AccountTitle: 银行存款
       asset: rmb
-      amount: 30
+      amount: 30.00
 comment: 
   - name: 败家实验室银蛇钢笔金夹
     amount: 1
     unit: 支
-    asset: 30
+    asset: 30.00

@@ -1,0 +1,21 @@
+date: 2025-01-15
+VoucherID: "19250115132000028373762023063401"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit: 
+    - AccountTitle: donation.parent
+      asset: rmb
+      amount: 42.70
+  credit: 
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 42.70
+comment: 
+  - name: 大米
+    amount: 5
+    unit: kg
+    asset: 32.91
+  - name: 麦胚芽
+    amount: 600
+    unit: g
+    asset: 9.79

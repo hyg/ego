@@ -2,6 +2,7 @@
   "dependencies": {
     "commander": "^12.1.0",
     "dayjs": "^1.11.13",
+    "decimal.js": "^10.4.3",
     "js-yaml": "^4.1.0"
   }
 }

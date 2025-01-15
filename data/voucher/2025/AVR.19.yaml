@@ -2,7 +2,7 @@ date: 2025-01-14 21:42:22
 title: 微信零钱账单
 VoucherID: "4200002385202501144984359394"
 VoucherType: 电子账单
-amount: 1033
+amount: 1033.00
 summary: 火车票
 comment:
   - name: 商户单号

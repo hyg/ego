@@ -5,17 +5,17 @@ AccountingEntry:
   debit: 
     - AccountTitle: raw.med
       asset: rmb
-      amount: 113.0
+      amount: 113.00
   credit: 
     - AccountTitle: 银行存款
       asset: rmb
-      amount: 113.0
+      amount: 113.00
 comment: 
   - name: 四价裂解流感疫苗
     amount: 1
     unit: 次
-    asset: 88
+    asset: 88.00
   - name: 服务费
     amount: 1
     unit: 次
-    asset: 25
+    asset: 25.00

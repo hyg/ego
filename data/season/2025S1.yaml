@@ -617,6 +617,7 @@ todo:
         - read ../../draft/2025/20250112.03.md
         - read ../../draft/2025/20250113.01.md
         - read ../../draft/2025/20250114.03.md
+        - read ../../draft/2025/20250115.03.md
     - '90': 整理新版本term的manifest code
       readme: |
         - 为了显示而设计的term model，并不适合与代码绑定。
@@ -638,6 +639,10 @@ todo:
         - read ../../draft/2024/09/20240913093000.md
         - read ../../draft/2024/09/20240918140000.md
         - read ../../draft/2025/20250114.02.md
+        - read ../../draft/2025/20250115.02.md
+    - '90': 智在科技项目准备
+      readme: |
+        - read ../../draft/2025/20250115.01.md
     - '90': 整理default模型
       readme: |
         - read ../../draft/2024/09/20240930.02.md
