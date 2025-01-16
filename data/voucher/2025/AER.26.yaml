@@ -1,0 +1,17 @@
+date: 2025-01-16
+VoucherID: "10001071012025011600352075877091"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit: 
+    - AccountTitle: raw.site.bj1
+      asset: rmb
+      amount: 500.00
+  credit: 
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 500.00
+comment: 
+  - name: 电
+    amount: 500
+    unit: kwh
+    asset: 500.00

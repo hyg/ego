@@ -1,0 +1,17 @@
+date: 2025-01-16
+VoucherID: "100003990125011600092332266264098471"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit: 
+    - AccountTitle: raw.fun
+      asset: rmb
+      amount: 8.88
+  credit: 
+    - AccountTitle: 现金.微信零钱
+      asset: rmb
+      amount: 8.88
+comment: 
+  - name: 群红包
+    amount: 88
+    unit: 个
+    asset: 8.88
