@@ -1,0 +1,17 @@
+date: 2025-01-22
+VoucherID: "19250122002010028685530212126593"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit: 
+    - AccountTitle: donation.parent
+      asset: rmb
+      amount: 87.00
+  credit: 
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 87.00
+comment: 
+  - name: M2000羽毛球
+    amount: 6
+    unit: 个
+    asset: 87.00

@@ -1,0 +1,17 @@
+date: 2025-01-22
+VoucherID: "2025012222001131991420781097"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit: 
+    - AccountTitle: donation.parent
+      asset: rmb
+      amount: 278.00
+  credit: 
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 278.00
+comment: 
+  - name: Blink Sunshine护眼无频闪高97显色LED触摸调光台灯
+    amount: 1
+    unit: 个
+    asset: 278.00

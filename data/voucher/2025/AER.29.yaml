@@ -1,0 +1,17 @@
+date: 2025-01-17
+VoucherID: "4200002625202501177557481399"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit: 
+    - AccountTitle: raw.food
+      asset: rmb
+      amount: 42.00
+  credit: 
+    - AccountTitle: 现金.微信零钱
+      asset: rmb
+      amount: 42.00
+comment: 
+  - name: 赛百味火鸡胸三明治
+    amount: 1
+    unit: 个
+    asset: 42.00

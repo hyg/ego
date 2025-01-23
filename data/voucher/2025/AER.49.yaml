@@ -1,0 +1,17 @@
+date: 2025-01-23
+VoucherID: "19250123132000028674975737115693"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit: 
+    - AccountTitle: donation.parent
+      asset: rmb
+      amount: 425.00
+  credit: 
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 425.00
+comment: 
+  - name: 不锈钢蒸锅24cm+三个蒸格
+    amount: 1
+    unit: 套
+    asset: 425.00

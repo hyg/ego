@@ -1,0 +1,25 @@
+date: 2025-01-22
+VoucherID: "19250122172000028644788723021196"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit: 
+    - AccountTitle: donation.parent
+      asset: rmb
+      amount: 136.00
+  credit: 
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 136.00
+comment: 
+  - name: 牛窝骨
+    amount: 1500
+    unit: g
+    asset: 85.03
+  - name: 松板肉
+    amount: 1000
+    unit: g
+    asset: 36.87
+  - name: 楠竹筷子24cm
+    amount: 30
+    unit: 双
+    asset: 14.10

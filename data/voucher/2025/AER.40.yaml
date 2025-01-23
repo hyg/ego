@@ -1,0 +1,17 @@
+date: 2025-01-21
+VoucherID: "19250121202000028618074316126535"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit: 
+    - AccountTitle: donation.parent
+      asset: rmb
+      amount: 23.80
+  credit: 
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 23.80
+comment: 
+  - name: 运动腰包
+    amount: 1
+    unit: 个
+    asset: 23.80

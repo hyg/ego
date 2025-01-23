@@ -1,0 +1,17 @@
+date: 2025-01-17
+VoucherID: "420000255920250117983047694"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit: 
+    - AccountTitle: PSMD
+      asset: rmb
+      amount: 5.99
+  credit: 
+    - AccountTitle: 现金.微信零钱
+      asset: rmb
+      amount: 5.99
+comment: 
+  - name: 地铁票
+    amount: 1
+    unit: 张
+    asset: 5.99

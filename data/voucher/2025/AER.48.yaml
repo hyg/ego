@@ -1,0 +1,17 @@
+date: 2025-01-22
+VoucherID: "2025012222001431991424443912"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit: 
+    - AccountTitle: raw.site.wz
+      asset: rmb
+      amount: 1.00
+  credit: 
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 1.00
+comment: 
+  - name: 公交车
+    amount: 1
+    unit: 次
+    asset: 1.00

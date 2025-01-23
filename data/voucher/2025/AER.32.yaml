@@ -1,0 +1,17 @@
+date: 2025-01-20
+VoucherID: "19250120232010028646950913031752"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit: 
+    - AccountTitle: donation.parent
+      asset: rmb
+      amount: 94.20
+  credit: 
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 94.20
+comment: 
+  - name: 萱草取暖贴
+    amount: 240
+    unit: 张
+    asset: 94.20

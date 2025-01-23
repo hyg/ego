@@ -1,0 +1,17 @@
+date: 2025-01-21
+VoucherID: "19250121122000028601386095073679"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit: 
+    - AccountTitle: raw.site.bj1
+      asset: rmb
+      amount: 5.20
+  credit: 
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 5.20
+comment: 
+  - name: 中光消毒泡腾片
+    amount: 1
+    unit: 瓶
+    asset: 5.20

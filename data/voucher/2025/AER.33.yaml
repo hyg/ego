@@ -1,0 +1,17 @@
+date: 2025-01-20
+VoucherID: "1920120232000028585622168063186"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit: 
+    - AccountTitle: donation.parent
+      asset: rmb
+      amount: 72.50
+  credit: 
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 72.50
+comment: 
+  - name: 316不锈钢保鲜盒
+    amount: 6
+    unit: 个
+    asset: 72.50

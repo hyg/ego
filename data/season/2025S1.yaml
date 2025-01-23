@@ -619,6 +619,7 @@ todo:
         - read ../../draft/2025/20250114.03.md
         - read ../../draft/2025/20250115.03.md
         - read ../../draft/2025/20250116.03.md
+        - read ../../draft/2025/20250123.03.md
     - '90': 整理新版本term的manifest code
       readme: |
         - 为了显示而设计的term model，并不适合与代码绑定。
@@ -847,9 +848,6 @@ todo:
         - read ../../draft/2024/10/20241003.03.md
         - read ../../draft/2024/10/20241004.01.md
   learn:
-    - '30': axios爬虫
-      readme: |
-        - read ../../draft/2025/20250113.04.md
     - '60': firebase的开源替代
       readme: |
         - https://blog.back4app.com/zh/firebase%e5%8d%81%e5%a4%a7%e6%9b%bf%e4%bb%a3%e5%b9%b3%e5%8f%b0/
@@ -901,6 +899,7 @@ todo:
       readme: |
         - export JavaScript typed array and dump to yaml file.
         - read ../../draft/2025/20250113.03.md
+        - read ../../draft/2025/20250123.02.md
     - '60': 引用github等特定版本js文件的html模版
       readme: |
         - 参考D:\huangyg\git\Infra\local\Infra.js createAuto的方法。

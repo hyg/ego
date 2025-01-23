@@ -1,0 +1,17 @@
+date: 2025-01-21
+VoucherID: "19250121182000028608881083126628"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit: 
+    - AccountTitle: donation.parent
+      asset: rmb
+      amount: 151.00
+  credit: 
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 151.00
+comment: 
+  - name: onepolar登山包
+    amount: 1
+    unit: 个
+    asset: 151.00
