@@ -1,0 +1,21 @@
+date: 2025-01-24
+VoucherID: "19250124122000028699428835010678"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit: 
+    - AccountTitle: donation.parent
+      asset: rmb
+      amount: 269.65
+  credit: 
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 269.65
+comment: 
+  - name: 闪浦e14 5700K 8瓦 Ra97玉米灯泡
+    amount: 3
+    unit: 个
+    asset: 89.00
+  - name: 闪浦e27 5500K 12瓦 Ra97灯泡
+    amount: 7
+    unit: 个
+    asset: 180.65

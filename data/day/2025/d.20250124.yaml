@@ -1,0 +1,102 @@
+date: '20250124'
+mode: '1'
+plan: 1d
+time:
+  - begin: '20250124083100'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20250124084600'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20250124094600'
+    amount: 45
+    type: food
+    name: 午餐
+  - begin: '20250124103100'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20250124111600'
+    amount: 163
+    type: free
+    name: 休整
+  - begin: '20250124140000'
+    amount: 75
+    type: work
+    name: 静默工作
+    subject: PSMD
+    title: 升级后勤标准
+    output: ../../draft/2025/20250124.01.md
+    namelink: http://simp.ly/p/8t3vlk
+  - begin: '20250124143000'
+    amount: 0
+    redo: 30
+    type: work
+    name: 静默工作
+    subject: js
+    title: 考虑sql.js是否使用。
+    readme: |
+      - export JavaScript typed array and dump to yaml file.
+      - read ../../draft/2025/20250113.03.md
+      - read ../../draft/2025/20250123.02.md
+    output: ../../draft/2025/20250124.02.md
+    namelink: http://simp.ly/p/5k9gJy
+  - begin: '20250124150000'
+    amount: 60
+    type: free
+    name: 休整
+  - begin: '20250124160000'
+    amount: 0
+    redo: 60
+    type: work
+    name: 静默工作
+    subject: PSMD
+    title: 整理近期讨论，按照新版manifest text提炼几个有代表性的场景。
+    readme: |
+      - read ../../draft/2024/09/20240904140000.md
+      - read ../../draft/2024/09/20240905074500.md
+      - read ../../draft/2024/09/20240906140000.md
+      - read ../../draft/2024/09/20240908093000.md
+      - read ../../draft/2024/09/20240911140000.md
+      - read ../../draft/2024/09/20240912093000.md
+      - read ../../draft/2024/09/20240913140000.md
+      - read ../../draft/2024/09/20240914140000.md
+      - read ../../draft/2024/09/20240915093000.md
+      - read ../../draft/2024/09/20240916140000.md
+      - read ../../draft/2024/09/20240918093000.md
+      - read ../../draft/2024/09/20240921.01.md
+      - read ../../draft/2024/09/20240922.01.md
+      - read ../../draft/2024/10/20241028.02.md
+      - read ../../draft/2024/10/20241031.01.md
+      - read ../../draft/2024/11/20241105.01.md
+      - read ../../draft/2024/11/20241106.02.md
+      - read ../../draft/2024/11/20241115.02.md
+      - read ../../draft/2024/11/20241117.02.md
+      - read ../../draft/2024/11/20241119.01.md
+      - read ../../draft/2024/11/20241120.02.md
+      - read ../../draft/2024/11/20241127.01.md
+      - read ../../draft/2024/12/20241201.01.md
+      - read ../../draft/2024/12/20241213.03.md
+      - read ../../draft/2024/12/20241214.01.md
+      - read ../../draft/2024/12/20241215.03.md
+      - read ../../draft/2024/12/20241216.01.md
+      - read ../../draft/2025/20250109.01.md
+      - read ../../draft/2025/20250111.05.md
+      - read ../../draft/2025/20250112.03.md
+      - read ../../draft/2025/20250113.01.md
+      - read ../../draft/2025/20250114.03.md
+      - read ../../draft/2025/20250115.03.md
+      - read ../../draft/2025/20250116.03.md
+      - read ../../draft/2025/20250123.03.md
+    output: ../../draft/2025/20250124.03.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20250124170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20250124190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交

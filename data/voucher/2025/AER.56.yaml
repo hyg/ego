@@ -1,0 +1,21 @@
+date: 2025-01-24
+VoucherID: "19250124122010028742511640052981"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit: 
+    - AccountTitle: donation.parent
+      asset: rmb
+      amount: 278.20
+  credit: 
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 278.20
+comment: 
+  - name: 树可 600ml 微波炉加热 不锈钢饭盒
+    amount: 2
+    unit: 个
+    asset: 71.09
+  - name: 闪浦e27 5500K 12瓦 Ra97灯泡
+    amount: 8
+    unit: 个
+    asset: 207.11

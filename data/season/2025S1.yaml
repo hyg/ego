@@ -583,6 +583,8 @@ time:
   sold: {}
 todo:
   PSMD:
+    - '90': 1609的分立、合并。
+    - '90': 子1609
     - '60': 整理近期讨论，按照新版manifest text提炼几个有代表性的场景。
       readme: |
         - read ../../draft/2024/09/20240904140000.md
@@ -620,6 +622,7 @@ todo:
         - read ../../draft/2025/20250115.03.md
         - read ../../draft/2025/20250116.03.md
         - read ../../draft/2025/20250123.03.md
+        - read ../../draft/2025/20250124.03.md
     - '90': 整理新版本term的manifest code
       readme: |
         - 为了显示而设计的term model，并不适合与代码绑定。
@@ -900,6 +903,7 @@ todo:
         - export JavaScript typed array and dump to yaml file.
         - read ../../draft/2025/20250113.03.md
         - read ../../draft/2025/20250123.02.md
+        - read ../../draft/2025/20250124.02.md
     - '60': 引用github等特定版本js文件的html模版
       readme: |
         - 参考D:\huangyg\git\Infra\local\Infra.js createAuto的方法。
