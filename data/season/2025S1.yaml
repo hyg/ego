@@ -622,6 +622,7 @@ todo:
         - read ../../draft/2025/20250123.03.md
         - read ../../draft/2025/20250124.03.md
         - read ../../draft/2025/20250125.03.md
+        - read ../../draft/2025/20250126.03.md
     - '90': 子1609
       readme: |
         - read ../../draft/2025/20250125.02.md
@@ -909,6 +910,7 @@ todo:
         - read ../../draft/2025/20250113.03.md
         - read ../../draft/2025/20250123.02.md
         - read ../../draft/2025/20250124.02.md
+        - read ../../draft/2025/20250126.02.md
     - '60': 引用github等特定版本js文件的html模版
       readme: |
         - 参考D:\huangyg\git\Infra\local\Infra.js createAuto的方法。
@@ -972,7 +974,6 @@ todo:
     - '60': 学习'Electron'，创作一个范例。
     - '60': 用代码中的对象或类，产生数据库创建SQL脚本、ER图（mermaid）
   raw:
-    - '30': 差旅物资准备
     - '60': 熟悉内脏之间的关系
       readme: |
         - read ../../draft/2024/09/20240917143000.md
