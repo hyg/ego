@@ -1,0 +1,24 @@
+date: 2025-01-28
+VoucherID: "19250128132000028775857058126585"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit: 
+    - AccountTitle: raw.food
+      asset: rmb
+      amount: 25.47
+    - AccountTitle: raw.site.bj1
+      asset: rmb
+      amount: 6.73
+  credit: 
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 32.20
+comment: 
+  - name: 乌塌菜
+    amount: 2500
+    unit: g
+    asset: 25.47
+  - name: 木饭勺
+    amount: 1
+    unit: 个
+    asset: 6.73

@@ -1,0 +1,28 @@
+date: 2025-01-28
+VoucherID: "19250128142010028828812161000479"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit: 
+    - AccountTitle: raw.food
+      asset: rmb
+      amount: 34.04
+    - AccountTitle: raw.med
+      asset: rmb
+      amount: 4.18
+  credit: 
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 38.22
+comment: 
+  - name: 含漱液
+    amount: 100
+    unit: ml
+    asset: 4.18
+  - name: 麦胚芽
+    amount: 600
+    unit: g
+    asset: 9.46
+  - name: 番石榴
+    amount: 2500
+    unit: ml
+    asset: 24.58
