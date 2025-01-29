@@ -1,0 +1,17 @@
+date: 2025-01-29
+VoucherID: "2025012922001431991447002168"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit: 
+    - AccountTitle: xuemen
+      asset: rmb
+      amount: 128.00
+  credit: 
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 128.00
+comment: 
+  - name: 服务器xuemen.com
+    amount: 1
+    unit: 台
+    asset: 128.00
