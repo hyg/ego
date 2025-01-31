@@ -1,6 +1,6 @@
 year: 2025
 season: 1
-beginmonth: 11
+beginmonth: 1
 beginday: 1
 lastmonth: 3
 lastday: 31
@@ -580,7 +580,14 @@ time:
     raw: 1000
     learn: 2000
     js: 1000
-  sold: {}
+  sold:
+    ego: 180
+    PSMD: 1505
+    learn: 195
+    raw: 255
+    infra: 120
+    xuemen: 90
+    js: 0
 todo:
   PSMD:
     - '90': 子1609
@@ -691,43 +698,6 @@ todo:
       readnme: |
         - 考虑upgradeby的实现。
   ego:
-    - '60': 整理季度任务
-      readme: |
-        - read ../../draft/2024/10/20241003.02.md
-        - read ../../draft/2024/10/20241004.03.md
-        - read ../../draft/2024/10/20241005.03.md
-        - read ../../draft/2024/10/20241007.04.md
-        - read ../../draft/2024/10/20241008.03.md
-        - read ../../draft/2024/10/20241010.05.md
-        - read ../../draft/2024/10/20241013.02.md
-        - read ../../draft/2024/10/20241015.02.md
-        - read ../../draft/2024/10/20241016.02.md
-        - read ../../draft/2024/10/20241020.02.md
-        - read ../../draft/2024/10/20241022.01.md
-        - read ../../draft/2024/10/20241025.02.md
-        - read ../../draft/2024/10/20241026.01.md
-        - read ../../draft/2024/10/20241027.02.md
-        - read ../../draft/2024/10/20241029.01.md
-        - read ../../draft/2024/10/20241030.02.md
-        - read ../../draft/2024/11/20241101.01.md
-        - read ../../draft/2024/11/20241107.02.md
-        - read ../../draft/2024/11/20241111.02.md
-        - read ../../draft/2024/11/20241113.01.md
-        - read ../../draft/2024/11/20241114.02.md
-        - read ../../draft/2024/11/20241115.03.md
-        - read ../../draft/2024/11/20241116.01.md
-        - read ../../draft/2024/11/20241117.03.md
-        - read ../../draft/2024/11/20241118.01.md
-        - read ../../draft/2024/11/20241121.01.md
-        - read ../../draft/2024/11/20241122.01.md
-        - read ../../draft/2024/11/20241123.01.md
-        - read ../../draft/2024/11/20241124.01.md
-        - read ../../draft/2024/11/20241125.02.md
-        - read ../../draft/2024/12/20241201.03.md
-        - read ../../draft/2024/12/20241202.02.md
-        - read ../../draft/2024/12/20241204.02.md
-        - read ../../draft/2024/12/20241212.02.md
-        - read ../../draft/2025/20250113.05.md
     - '60': 整理知识体系的层级定义
       readme: |
         - read ../../draft/2024/10/20241010.03.md
