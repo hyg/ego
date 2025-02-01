@@ -581,7 +581,7 @@ time:
     learn: 2000
     js: 1000
   sold:
-    ego: 180
+    ego: 240
     PSMD: 1505
     learn: 195
     raw: 255
@@ -698,12 +698,6 @@ todo:
       readnme: |
         - 考虑upgradeby的实现。
   ego:
-    - '60': 整理知识体系的层级定义
-      readme: |
-        - read ../../draft/2024/10/20241010.03.md
-        - read ../../draft/2024/10/20241011.02.md
-        - read ../../draft/2024/10/20241013.01.md
-        - read ../../draft/2024/10/20241014.a.md
     - '60': 启用新字段存放前置任务的output，自动汇编写入新的draft文件。
     - '60': 新版本任务、子任务的数据结构
       readme: |
