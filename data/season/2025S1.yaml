@@ -581,7 +581,7 @@ time:
     learn: 2000
     js: 1000
   sold:
-    ego: 240
+    ego: 300
     PSMD: 1505
     learn: 195
     raw: 255
@@ -698,7 +698,9 @@ todo:
       readnme: |
         - 考虑upgradeby的实现。
   ego:
-    - '60': 启用新字段存放前置任务的output，自动汇编写入新的draft文件。
+    - '90': 启用新字段存放前置任务的output，自动汇编写入新的draft文件。
+      readme: |
+        - read ../../draft/2025/20250202.01.md
     - '60': 新版本任务、子任务的数据结构
       readme: |
         - read ../../draft/2024/10/20241001.01.md
