@@ -582,7 +582,7 @@ time:
     js: 1000
   sold:
     ego: 300
-    PSMD: 1505
+    PSMD: 1625
     learn: 195
     raw: 255
     infra: 120
@@ -590,6 +590,7 @@ time:
     js: 0
 todo:
   PSMD:
+    - '195': 根据香港《公司條例》调整1609的部署方案 https://www.elegislation.gov.hk/hk/cap622
     - '90': 子1609
       readme: |
         - read ../../draft/2025/20250125.02.md
@@ -786,6 +787,7 @@ todo:
     - '60': firebase的开源替代
       readme: |
         - https://blog.back4app.com/zh/firebase%e5%8d%81%e5%a4%a7%e6%9b%bf%e4%bb%a3%e5%b9%b3%e5%8f%b0/
+        - read ../../draft/2025/20250203.01.md
     - '60': rxdb p2p NATS
       readme: |
         - https://rxdb.info/replication-webrtc.html
