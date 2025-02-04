@@ -583,7 +583,7 @@ time:
   sold:
     ego: 300
     PSMD: 1625
-    learn: 195
+    learn: 255
     raw: 255
     infra: 120
     xuemen: 90
@@ -784,10 +784,6 @@ todo:
         - read ../../draft/2024/10/20241003.03.md
         - read ../../draft/2024/10/20241004.01.md
   learn:
-    - '60': firebase的开源替代
-      readme: |
-        - https://blog.back4app.com/zh/firebase%e5%8d%81%e5%a4%a7%e6%9b%bf%e4%bb%a3%e5%b9%b3%e5%8f%b0/
-        - read ../../draft/2025/20250203.01.md
     - '60': rxdb p2p NATS
       readme: |
         - https://rxdb.info/replication-webrtc.html
