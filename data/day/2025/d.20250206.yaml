@@ -1,0 +1,50 @@
+date: '20250206'
+mode: '1'
+plan: 1e
+time:
+  - begin: '20250206114100'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20250206115600'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20250206125600'
+    amount: 45
+    type: food
+    name: 午餐
+  - begin: '20250206134100'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20250206142600'
+    amount: 93
+    type: free
+    name: 休整
+  - begin: '20250206160000'
+    amount: 300
+    type: work
+    name: 静默工作
+    subject: PSMD
+    title: 智在项目讲解
+    output: ../../draft/2025/20250206.01.md
+  - begin: '20250206160000'
+    amount: 0
+    redo: 60
+    type: work
+    name: 静默工作
+    subject: learn
+    title: rxdb p2p NATS
+    readme: |
+      - https://rxdb.info/replication-webrtc.html
+      - https://rxdb.info/replication-nats.html
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20250206170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20250206190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交

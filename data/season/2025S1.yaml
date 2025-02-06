@@ -582,7 +582,7 @@ time:
     js: 1000
   sold:
     ego: 300
-    PSMD: 1805
+    PSMD: 2105
     learn: 255
     raw: 255
     infra: 120
@@ -784,10 +784,6 @@ todo:
         - read ../../draft/2024/10/20241003.03.md
         - read ../../draft/2024/10/20241004.01.md
   learn:
-    - '60': rxdb p2p NATS
-      readme: |
-        - https://rxdb.info/replication-webrtc.html
-        - https://rxdb.info/replication-nats.html
     - '60': wordpress install and config
     - '90': 飞书 nodejs sdk
       readme: |
