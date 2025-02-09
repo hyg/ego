@@ -1,0 +1,35 @@
+date: '20250209'
+mode: '1'
+plan: 1f
+time:
+  - begin: '20250209130500'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20250209132000'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20250209142000'
+    amount: 45
+    type: food
+    name: 晚餐
+  - begin: '20250209150500'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20250209155000'
+    amount: 60
+    type: free
+    name: 休整
+  - begin: '20250209165000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
+  - begin: '20250209200000'
+    amount: 600
+    type: work
+    name: 静默工作
+    subject: PSMD
+    title: 智在项目准备
+    output: ../../draft/2025/20250209.01.md
