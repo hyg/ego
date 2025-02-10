@@ -80,7 +80,6 @@ module.exports = {
                 "donation": {id: 20,name: "donation",balance: {"rmb": 0.0}},
                 "donation.parent": {id: 20.1,name: "donation.parent",balance: {"rmb": 0.0}},
                 "donation.younger": {id: 20.2,name: "donation.younger",balance: {"rmb": 0.0}},
-                "donation.parent": {id: 20.1,name: "donation.parent",balance: {"rmb": 0.0}},
                 "PSMD": {id: 100,name: "PSMD",balance: {"rmb": 0.0}},
                 "xuemen": {id: 1000,name: "xuemen",balance: {"rmb": 0.0}}
             };

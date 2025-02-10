@@ -1,0 +1,17 @@
+date: 2025-02-10
+VoucherID: "10000499012025021000346500087189"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit: 
+    - AccountTitle: raw.food
+      asset: rmb
+      amount: 300.00
+  credit: 
+    - AccountTitle: 现金.微信零钱
+      asset: rmb
+      amount: 300.00
+comment: 
+  - name: 纯净水
+    amount: 360.00
+    unit: rmb
+    asset: 300.00
