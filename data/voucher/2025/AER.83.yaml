@@ -1,0 +1,21 @@
+date: 2025-02-11
+VoucherID: "2025021122001831991435562512"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit: 
+    - AccountTitle: donation.parent
+      asset: rmb
+      amount: 46.60
+  credit: 
+    - AccountTitle: 银行账户
+      asset: rmb
+      amount: 46.60
+comment: 
+  - name: 酸枣仁膏
+    amount: 3000
+    unit: g
+    asset: 35.00
+  - name: 运费
+    amount: 1
+    unit: 包
+    asset: 11.60
