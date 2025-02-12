@@ -7,7 +7,7 @@ AccountingEntry:
       asset: rmb
       amount: 46.60
   credit: 
-    - AccountTitle: 银行账户
+    - AccountTitle: 银行存款
       asset: rmb
       amount: 46.60
 comment: 

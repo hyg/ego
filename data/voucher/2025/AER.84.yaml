@@ -1,0 +1,21 @@
+date: 2025-02-12
+VoucherID: "19250212182000029097332570158001"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit: 
+    - AccountTitle: raw.med
+      asset: rmb
+      amount: 9.94
+  credit: 
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 9.94
+comment: 
+  - name: 复方多粘菌素B软膏
+    amount: 10
+    unit: g
+    asset: 36.00
+  - name: 月卡免单优惠券
+    amount: 1
+    unit: 张
+    asset: -26.06
