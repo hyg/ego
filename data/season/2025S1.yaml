@@ -583,10 +583,10 @@ time:
   sold:
     ego: 300
     PSMD: 2765
-    learn: 255
+    learn: 265
     raw: 255
     infra: 120
-    xuemen: 90
+    xuemen: 150
     js: 0
 todo:
   PSMD:
@@ -784,7 +784,6 @@ todo:
         - read ../../draft/2024/10/20241003.03.md
         - read ../../draft/2024/10/20241004.01.md
   learn:
-    - '60': wordpress install and config
     - '90': 飞书 nodejs sdk
       readme: |
         - https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/server-side-sdk/nodejs-sdk/preparation-before-development
@@ -831,6 +830,7 @@ todo:
         - read ../../draft/2025/20250123.02.md
         - read ../../draft/2025/20250124.02.md
         - read ../../draft/2025/20250126.02.md
+        - read ../../draft/2025/20250214.01.md
     - '60': 引用github等特定版本js文件的html模版
       readme: |
         - 参考D:\huangyg\git\Infra\local\Infra.js createAuto的方法。
@@ -895,6 +895,8 @@ todo:
     - '60': 用代码中的对象或类，产生数据库创建SQL脚本、ER图（mermaid）
   raw:
     - '30': 复习形神庄第四节
+      readme: |
+        - read ../../draft/2025/20250214.02.md
     - '30': 复习形神庄第五节
     - '30': 复习形神庄第六节
     - '30': 复习形神庄第七节

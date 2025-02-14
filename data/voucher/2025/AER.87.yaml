@@ -1,0 +1,17 @@
+date: 2025-02-14
+VoucherID: "4200002630202502148974058494"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit: 
+    - AccountTitle: xuemen
+      asset: rmb
+      amount: 540.00
+  credit: 
+    - AccountTitle: 现金.微信零钱
+      asset: rmb
+      amount: 540.0
+comment: 
+  - name: 数字证书服务
+    amount: 3
+    unit: 年
+    asset: 540.00

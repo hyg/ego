@@ -1,0 +1,75 @@
+date: '20250214'
+mode: '1'
+plan: 1d
+time:
+  - begin: '20250214093600'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20250214095100'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20250214105100'
+    amount: 45
+    type: food
+    name: 午餐
+  - begin: '20250214113600'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20250214122100'
+    amount: 98
+    type: free
+    name: 休整
+  - begin: '20250214140000'
+    amount: 60
+    type: work
+    name: 静默工作
+    subject: xuemen
+    title: inner service unit issue
+    output: ../../draft/2025/20250214.a.md
+  - begin: '20250214140000'
+    amount: 0
+    redo: 30
+    type: work
+    name: 静默工作
+    subject: js
+    title: 考虑sql.js是否使用。
+    readme: |
+      - export JavaScript typed array and dump to yaml file.
+      - read ../../draft/2025/20250113.03.md
+      - read ../../draft/2025/20250123.02.md
+      - read ../../draft/2025/20250124.02.md
+      - read ../../draft/2025/20250126.02.md
+    output: ../../draft/2025/20250214.01.md
+    namelink: http://simp.ly/p/8t3vlk
+  - begin: '20250214143000'
+    amount: 0
+    redo: 30
+    type: work
+    name: 静默工作
+    subject: raw
+    title: 复习形神庄第四节
+    output: ../../draft/2025/20250214.02.md
+    namelink: http://simp.ly/p/5k9gJy
+  - begin: '20250214150000'
+    amount: 60
+    type: free
+    name: 休整
+  - begin: '20250214160000'
+    amount: 10
+    type: work
+    name: 静默工作
+    subject: learn
+    title: wordpress install and config
+    output: ../../draft/2025/20250214.03.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20250214170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20250214190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
