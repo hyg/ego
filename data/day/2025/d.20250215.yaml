@@ -1,0 +1,48 @@
+date: '20250215'
+mode: '1'
+plan: 1e
+time:
+  - begin: '20250215102900'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20250215104400'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20250215114400'
+    amount: 45
+    type: food
+    name: 午餐
+  - begin: '20250215122900'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20250215131400'
+    amount: 165
+    type: free
+    name: 休整
+  - begin: '20250215160000'
+    amount: 60
+    redo: 90
+    type: work
+    name: 静默工作
+    subject: ego
+    title: 新版本任务、子任务的数据结构
+    readme: |
+      - read ../../draft/2024/10/20241001.01.md
+      - read ../../draft/2024/10/20241003.01.md
+      - read ../../draft/2024/10/20241004.04.md
+      - read ../../draft/2024/10/20241005.01.md
+      - read ../../draft/2024/10/20241007.03.md
+      - read ../../draft/2024/10/20241011.04.md
+    output: ../../draft/2025/20250215.01.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20250215170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20250215190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交

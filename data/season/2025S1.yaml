@@ -581,7 +581,7 @@ time:
     learn: 2000
     js: 1000
   sold:
-    ego: 300
+    ego: 360
     PSMD: 2765
     learn: 265
     raw: 255
@@ -699,10 +699,7 @@ todo:
       readnme: |
         - 考虑upgradeby的实现。
   ego:
-    - '90': 启用新字段存放前置任务的output，自动汇编写入新的draft文件。
-      readme: |
-        - read ../../draft/2025/20250202.01.md
-    - '60': 新版本任务、子任务的数据结构
+    - '90': 新版本任务、子任务的数据结构
       readme: |
         - read ../../draft/2024/10/20241001.01.md
         - read ../../draft/2024/10/20241003.01.md
@@ -710,6 +707,10 @@ todo:
         - read ../../draft/2024/10/20241005.01.md
         - read ../../draft/2024/10/20241007.03.md
         - read ../../draft/2024/10/20241011.04.md
+        - read ../../draft/2025/20250215.01.md
+    - '90': 启用新字段存放前置任务的output，自动汇编写入新的draft文件。
+      readme: |
+        - read ../../draft/2025/20250202.01.md
     - '60': eventemitter sample
       readme: |
         - event listener in module
