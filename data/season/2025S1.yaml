@@ -584,10 +584,10 @@ time:
     ego: 360
     PSMD: 2945
     learn: 265
-    raw: 285
+    raw: 345
     infra: 120
     xuemen: 150
-    js: 30
+    js: 90
 todo:
   PSMD:
     - '195': 根据香港《公司條例》调整1609的部署方案 https://www.elegislation.gov.hk/hk/cap622
@@ -824,10 +824,6 @@ todo:
       readme: |
         - https://zh.javascript.info/promise-api
   js:
-    - '60': 引用github等特定版本js文件的html模版
-      readme: |
-        - 参考D:\huangyg\git\Infra\local\Infra.js createAuto的方法。
-        - read undefined
     - '60': js class
       readme: |
         - https://zh.javascript.info/class
@@ -888,8 +884,6 @@ todo:
     - '60': 学习'Electron'，创作一个范例。
     - '60': 用代码中的对象或类，产生数据库创建SQL脚本、ER图（mermaid）
   raw:
-    - '30': 复习形神庄第五节
-    - '30': 复习形神庄第六节
     - '30': 复习形神庄第七节
     - '30': 复习形神庄第八节
     - '30': 复习形神庄第九节
