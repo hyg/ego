@@ -584,7 +584,7 @@ time:
     ego: 360
     PSMD: 2945
     learn: 265
-    raw: 345
+    raw: 405
     infra: 120
     xuemen: 150
     js: 90
@@ -835,6 +835,7 @@ todo:
         - read ../../draft/2024/09/20240915160000.md
         - read ../../draft/2024/09/20240920.02.md
         - read ../../draft/2024/09/20240922.04.md
+        - read undefined
     - '60': learn Orbitdb
       readme: |
         - read 2024.07.15. 14:00 draft
@@ -884,8 +885,6 @@ todo:
     - '60': 学习'Electron'，创作一个范例。
     - '60': 用代码中的对象或类，产生数据库创建SQL脚本、ER图（mermaid）
   raw:
-    - '30': 复习形神庄第七节
-    - '30': 复习形神庄第八节
     - '30': 复习形神庄第九节
     - '30': 复习形神庄第十节
     - '30': 复习五元庄第一式
