@@ -1,0 +1,51 @@
+date: '20250221'
+mode: '1'
+plan: 1e
+time:
+  - begin: '20250221121100'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20250221122600'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20250221132600'
+    amount: 45
+    type: food
+    name: 午餐
+  - begin: '20250221141100'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20250221145600'
+    amount: 63
+    type: free
+    name: 休整
+  - begin: '20250221160000'
+    amount: 0
+    redo: 60
+    type: work
+    name: 静默工作
+    subject: js
+    title: js class
+    readme: |
+      - https://zh.javascript.info/class
+      - https://www.w3school.com.cn/js/pro_js_object_oriented.asp
+      - 在FSM实践一下。
+      - yaml文件，obj in js，main.js之间是什么关系？其他语言怎么处理？放在schema框架统一再斟酌。
+      - read ../../draft/2024/09/20240907160000.md
+      - read ../../draft/2024/09/20240909160000.md
+      - read ../../draft/2024/09/20240915160000.md
+      - read ../../draft/2024/09/20240920.02.md
+      - read ../../draft/2024/09/20240922.04.md
+      - read undefined
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20250221170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20250221190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
