@@ -1,0 +1,25 @@
+date: 2025-02-22
+VoucherID: "19250222212000029418842550000232"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit: 
+    - AccountTitle: raw.food
+      asset: rmb
+      amount: 46.44
+  credit: 
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 46.44
+comment: 
+  - name: 康大熏香兔前腿
+    amount: 260
+    unit: g
+    asset: 20.90
+  - name: 五桥粳米粉
+    amount: 750
+    unit: g
+    asset: 10.59
+  - name: 亚麻籽粉
+    amount: 500
+    unit: g
+    asset: 14.95

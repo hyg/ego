@@ -1,0 +1,17 @@
+date: 2025-02-22
+VoucherID: "19250222212000029418842550000232"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit: 
+    - AccountTitle: raw.med
+      asset: rmb
+      amount: 33.10
+  credit: 
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 33.10
+comment: 
+  - name: 仲景银黄颗粒
+    amount: 80
+    unit: g
+    asset: 33.10

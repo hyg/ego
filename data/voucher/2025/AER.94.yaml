@@ -1,0 +1,17 @@
+date: 2025-02-22
+VoucherID: "19250222212000029418842550000232"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit: 
+    - AccountTitle: raw.shell
+      asset: rmb
+      amount: 40.96
+  credit: 
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 40.96
+comment: 
+  - name: nikko户外速干长袖T恤.深灰.M
+    amount: 2
+    unit: 件
+    asset: 40.96

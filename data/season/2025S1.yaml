@@ -581,8 +581,8 @@ time:
     learn: 2000
     js: 1000
   sold:
-    ego: 360
-    PSMD: 2945
+    ego: 660
+    PSMD: 2990
     learn: 265
     raw: 405
     infra: 120
@@ -699,6 +699,7 @@ todo:
       readnme: |
         - 考虑upgradeby的实现。
   ego:
+    - '90': 新版实时手稿
     - '90': 新版本任务、子任务的数据结构
       readme: |
         - read ../../draft/2024/10/20241001.01.md

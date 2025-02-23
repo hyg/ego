@@ -1,0 +1,42 @@
+date: '20250223'
+mode: '1'
+plan: 1f
+time:
+  - begin: '20250223144600'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20250223150100'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20250223160100'
+    amount: 45
+    type: food
+    name: 晚餐
+  - begin: '20250223164600'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20250223173100'
+    amount: 45
+    type: work
+    name: 静默工作
+    subject: PSMD
+    title: meta data微调
+    output: ../../draft/2025/20250223.01.md
+  - begin: '20250223181500'
+    amount: 60
+    type: free
+    name: 休整
+  - begin: '20250223193000'
+    amount: 300
+    type: work
+    name: 静默工作
+    subject: ego
+    title: 手稿从simplenote转移到飞书的设计
+    output: ../../draft/2025/20250223.02.md
+  - begin: '20250223183100'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
