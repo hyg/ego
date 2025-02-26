@@ -581,10 +581,10 @@ time:
     learn: 2000
     js: 1000
   sold:
-    ego: 660
+    ego: 690
     PSMD: 2990
     learn: 265
-    raw: 405
+    raw: 465
     infra: 120
     xuemen: 150
     js: 90
@@ -700,6 +700,8 @@ todo:
         - 考虑upgradeby的实现。
   ego:
     - '90': 新版实时手稿
+      readme: |
+        - read ../../draft/2025/20250226.02.md
     - '90': 新版本任务、子任务的数据结构
       readme: |
         - read ../../draft/2024/10/20241001.01.md
@@ -825,6 +827,12 @@ todo:
       readme: |
         - https://zh.javascript.info/promise-api
   js:
+    - '60': learn Orbitdb
+      readme: |
+        - read 2024.07.15. 14:00 draft
+        - read 2024.07.17. 16:00 draft
+        - https://api.orbitdb.org/
+        - read ../../draft/2025/20250226.05.md
     - '60': js class
       readme: |
         - https://zh.javascript.info/class
@@ -838,11 +846,7 @@ todo:
         - read ../../draft/2024/09/20240922.04.md
         - read undefined
         - read undefined
-    - '60': learn Orbitdb
-      readme: |
-        - read 2024.07.15. 14:00 draft
-        - read 2024.07.17. 16:00 draft
-        - https://api.orbitdb.org/
+        - read ../../draft/2025/20250226.01.md
     - '60': learn js implement of ipfs
       readme: |
         - https://docs.ipfs.tech/reference/js/api/#get-started
@@ -887,8 +891,6 @@ todo:
     - '60': 学习'Electron'，创作一个范例。
     - '60': 用代码中的对象或类，产生数据库创建SQL脚本、ER图（mermaid）
   raw:
-    - '30': 复习形神庄第九节
-    - '30': 复习形神庄第十节
     - '30': 复习五元庄第一式
     - '30': 复习五元庄第二式
     - '30': 复习五元庄第三式

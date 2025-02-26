@@ -1,0 +1,103 @@
+date: '20250226'
+mode: '1'
+plan: 1a
+time:
+  - begin: '20250226045600'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20250226051100'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20250226061100'
+    amount: 45
+    type: food
+    name: 早餐
+  - begin: '20250226065600'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20250226074100'
+    amount: 3
+    type: free
+    name: 休整
+  - begin: '20250226074500'
+    amount: 0
+    redo: 60
+    type: work
+    name: 静默工作
+    subject: js
+    title: js class
+    readme: |
+      - https://zh.javascript.info/class
+      - https://www.w3school.com.cn/js/pro_js_object_oriented.asp
+      - 在FSM实践一下。
+      - yaml文件，obj in js，main.js之间是什么关系？其他语言怎么处理？放在schema框架统一再斟酌。
+      - read ../../draft/2024/09/20240907160000.md
+      - read ../../draft/2024/09/20240909160000.md
+      - read ../../draft/2024/09/20240915160000.md
+      - read ../../draft/2024/09/20240920.02.md
+      - read ../../draft/2024/09/20240922.04.md
+      - read undefined
+      - read undefined
+    output: ../../draft/2025/20250226.01.md
+    namelink: http://simp.ly/p/xtgD4F
+  - begin: '20250226084500'
+    amount: 45
+    type: free
+    name: 休整
+  - begin: '20250226093000'
+    amount: 30
+    redo: 90
+    type: work
+    name: 静默工作
+    subject: ego
+    title: 新版实时手稿
+    output: ../../draft/2025/20250226.02.md
+    namelink: http://simp.ly/p/j1SspP
+  - begin: '20250226110000'
+    amount: 180
+    type: food
+    name: 备餐、午餐午休
+  - begin: '20250226140000'
+    amount: 30
+    type: work
+    name: 静默工作
+    subject: raw
+    title: 复习形神庄第九节
+    output: ../../draft/2025/20250226.03.md
+    namelink: http://simp.ly/p/8t3vlk
+  - begin: '20250226143000'
+    amount: 30
+    type: work
+    name: 静默工作
+    subject: raw
+    title: 复习形神庄第十节
+    output: ../../draft/2025/20250226.04.md
+    namelink: http://simp.ly/p/5k9gJy
+  - begin: '20250226150000'
+    amount: 60
+    type: free
+    name: 休整
+  - begin: '20250226160000'
+    amount: 0
+    redo: 60
+    type: work
+    name: 静默工作
+    subject: js
+    title: learn Orbitdb
+    readme: |
+      - read 2024.07.15. 14:00 draft
+      - read 2024.07.17. 16:00 draft
+      - https://api.orbitdb.org/
+    output: ../../draft/2025/20250226.05.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20250226170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20250226190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交

@@ -1,0 +1,28 @@
+date: 2025-02-25
+VoucherID: 
+  - "4200002552202502256857736616"
+  - "4200002570202502257648627986"
+  - "2025022522001431991424141223"
+  - "2025022522001431991424479009"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit: 
+    - AccountTitle: donation.else
+      asset: rmb
+      amount: 13.97
+  credit: 
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 2.00
+    - AccountTitle: 现金.微信零钱
+      asset: rmb
+      amount: 11.97
+comment: 
+  - name: 地铁车票
+    amount: 2
+    unit: 张
+    asset: 11.97
+  - name: 公交车票
+    amount: 2
+    unit: 张
+    asset: 2.00
