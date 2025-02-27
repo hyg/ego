@@ -587,7 +587,7 @@ time:
     raw: 465
     infra: 120
     xuemen: 150
-    js: 90
+    js: 180
 todo:
   PSMD:
     - '195': 根据香港《公司條例》调整1609的部署方案 https://www.elegislation.gov.hk/hk/cap622
@@ -833,6 +833,7 @@ todo:
         - read 2024.07.17. 16:00 draft
         - https://api.orbitdb.org/
         - read ../../draft/2025/20250226.05.md
+        - read ../../draft/2025/20250227.03.md
     - '60': js class
       readme: |
         - https://zh.javascript.info/class
@@ -891,8 +892,12 @@ todo:
     - '60': 学习'Electron'，创作一个范例。
     - '60': 用代码中的对象或类，产生数据库创建SQL脚本、ER图（mermaid）
   raw:
-    - '30': 复习五元庄第一式
     - '30': 复习五元庄第二式
+      readme: |
+        - read ../../draft/2025/20250227.02.md
+    - '30': 复习五元庄第一式
+      readme: |
+        - read ../../draft/2025/20250227.01.md
     - '30': 复习五元庄第三式
     - '30': 复习五元庄第四式
     - '30': 复习五元庄第五式

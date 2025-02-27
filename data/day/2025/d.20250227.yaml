@@ -1,0 +1,68 @@
+date: '20250227'
+mode: '1'
+plan: 1d
+time:
+  - begin: '20250227084900'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20250227090400'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20250227100400'
+    amount: 45
+    type: food
+    name: 午餐
+  - begin: '20250227104900'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20250227113400'
+    amount: 145
+    type: free
+    name: 休整
+  - begin: '20250227140000'
+    amount: 0
+    redo: 30
+    type: work
+    name: 静默工作
+    subject: raw
+    title: 复习五元庄第一式
+    output: ../../draft/2025/20250227.01.md
+    namelink: http://simp.ly/p/8t3vlk
+  - begin: '20250227143000'
+    amount: 0
+    redo: 30
+    type: work
+    name: 静默工作
+    subject: raw
+    title: 复习五元庄第二式
+    output: ../../draft/2025/20250227.02.md
+    namelink: http://simp.ly/p/5k9gJy
+  - begin: '20250227150000'
+    amount: 60
+    type: free
+    name: 休整
+  - begin: '20250227160000'
+    amount: 90
+    redo: 60
+    type: work
+    name: 静默工作
+    subject: js
+    title: learn Orbitdb
+    readme: |
+      - read 2024.07.15. 14:00 draft
+      - read 2024.07.17. 16:00 draft
+      - https://api.orbitdb.org/
+      - read ../../draft/2025/20250226.05.md
+    output: ../../draft/2025/20250227.03.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20250227170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20250227190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
