@@ -795,6 +795,10 @@ todo:
       readme: |
         - https://services.odata.org/
         - http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html
+    - '60': instantdb
+      readme: |
+        - https://www.instantdb.com
+        - https://github.com/instantdb/instant
     - '60': markmap
       readme: |
         - https://markmap.js.org/
