@@ -587,7 +587,7 @@ time:
     raw: 525
     infra: 120
     xuemen: 150
-    js: 180
+    js: 240
 todo:
   PSMD:
     - '195': 根据香港《公司條例》调整1609的部署方案 https://www.elegislation.gov.hk/hk/cap622
@@ -839,6 +839,7 @@ todo:
         - read ../../draft/2025/20250226.05.md
         - read ../../draft/2025/20250227.03.md
         - read ../../draft/2025/20250228.03.md
+        - read ../../draft/2025/20250304.01.md
     - '60': js class
       readme: |
         - https://zh.javascript.info/class

@@ -1,0 +1,23 @@
+date: 2025-03-03
+VoucherID: 
+  - "2025030322001431991448630169"
+  - "4200002523202503036980326649"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit: 
+    - AccountTitle: raw.med
+      asset: rmb
+      amount: 789.00
+  credit: 
+    - AccountTitle: 现金.微信零钱
+      asset: rmb
+      amount: 789.00
+comment: 
+  - name: 挂号费
+    amount: 1
+    unit: 次
+    asset: 50.00
+  - name: 补牙
+    amount: 1
+    unit: 次
+    asset: 739.00
