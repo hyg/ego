@@ -1,0 +1,70 @@
+date: '20250306'
+mode: '1'
+plan: 1d
+time:
+  - begin: '20250306081700'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20250306083200'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20250306093200'
+    amount: 45
+    type: food
+    name: 午餐
+  - begin: '20250306101700'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20250306110200'
+    amount: 177
+    type: free
+    name: 休整
+  - begin: '20250306140000'
+    amount: 45
+    type: work
+    name: 静默工作
+    subject: xuemen
+    title: 月初事务
+    output: ../../draft/2025/20250306.01.md
+    namelink: http://simp.ly/p/8t3vlk
+  - begin: '20250306143000'
+    amount: 15
+    type: work
+    name: 静默工作
+    subject: raw
+    title: 复习五元庄第三式
+    output: ../../draft/2025/20250306.02.md
+    namelink: http://simp.ly/p/5k9gJy
+  - begin: '20250306150000'
+    amount: 60
+    type: free
+    name: 休整
+  - begin: '20250306160000'
+    amount: 0
+    redo: 60
+    type: work
+    name: 静默工作
+    subject: js
+    title: learn Orbitdb
+    readme: |
+      - read 2024.07.15. 14:00 draft
+      - read 2024.07.17. 16:00 draft
+      - https://api.orbitdb.org/
+      - read ../../draft/2025/20250226.05.md
+      - read ../../draft/2025/20250227.03.md
+      - read ../../draft/2025/20250228.03.md
+      - read ../../draft/2025/20250304.01.md
+      - read ../../draft/2025/20250305.01.md
+    output: ../../draft/2025/20250306.03.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20250306170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20250306190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交

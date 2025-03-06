@@ -584,9 +584,9 @@ time:
     ego: 690
     PSMD: 2990
     learn: 325
-    raw: 525
+    raw: 540
     infra: 120
-    xuemen: 150
+    xuemen: 195
     js: 240
 todo:
   PSMD:
@@ -840,6 +840,8 @@ todo:
         - read ../../draft/2025/20250227.03.md
         - read ../../draft/2025/20250228.03.md
         - read ../../draft/2025/20250304.01.md
+        - read ../../draft/2025/20250305.01.md
+        - read ../../draft/2025/20250306.03.md
     - '60': js class
       readme: |
         - https://zh.javascript.info/class
@@ -898,7 +900,7 @@ todo:
     - '60': 学习'Electron'，创作一个范例。
     - '60': 用代码中的对象或类，产生数据库创建SQL脚本、ER图（mermaid）
   raw:
-    - '30': 复习五元庄第三式
+    - '60': 新版本food预算决算
     - '30': 复习五元庄第四式
     - '30': 复习五元庄第五式
     - '30': 复习五元庄第六式
