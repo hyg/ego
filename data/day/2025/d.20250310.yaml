@@ -1,0 +1,63 @@
+date: '20250310'
+mode: '1'
+plan: 1d
+time:
+  - begin: '20250310073600'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20250310075100'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20250310085100'
+    amount: 45
+    type: food
+    name: 午餐
+  - begin: '20250310093600'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20250310102100'
+    amount: 218
+    type: free
+    name: 休整
+  - begin: '20250310140000'
+    amount: 0
+    redo: 30
+    type: work
+    name: 静默工作
+    subject: raw
+    title: 复习五元庄第四式
+    output: ../../draft/2025/20250310.01.md
+    namelink: http://simp.ly/p/8t3vlk
+  - begin: '20250310143000'
+    amount: 0
+    redo: 30
+    type: work
+    name: 静默工作
+    subject: raw
+    title: 复习五元庄第五式
+    output: ../../draft/2025/20250310.02.md
+    namelink: http://simp.ly/p/5k9gJy
+  - begin: '20250310150000'
+    amount: 60
+    type: free
+    name: 休整
+  - begin: '20250310160000'
+    amount: 30
+    redo: 60
+    type: work
+    name: 静默工作
+    subject: learn
+    title: 复习ipld
+    output: ../../draft/2025/20250310.03.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20250310170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20250310190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交

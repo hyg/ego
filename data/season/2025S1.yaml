@@ -583,7 +583,7 @@ time:
   sold:
     ego: 690
     PSMD: 2990
-    learn: 325
+    learn: 355
     raw: 540
     infra: 120
     xuemen: 195
@@ -788,6 +788,9 @@ todo:
         - read ../../draft/2024/10/20241003.03.md
         - read ../../draft/2024/10/20241004.01.md
   learn:
+    - '60': 复习ipld
+      readme: |
+        - read ../../draft/2025/20250310.03.md
     - '90': 飞书 nodejs sdk
       readme: |
         - https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/server-side-sdk/nodejs-sdk/preparation-before-development
@@ -902,9 +905,13 @@ todo:
     - '60': 学习'Electron'，创作一个范例。
     - '60': 用代码中的对象或类，产生数据库创建SQL脚本、ER图（mermaid）
   raw:
-    - '60': 新版本food预算决算
-    - '30': 复习五元庄第四式
     - '30': 复习五元庄第五式
+      readme: |
+        - read ../../draft/2025/20250310.02.md
+    - '30': 复习五元庄第四式
+      readme: |
+        - read ../../draft/2025/20250310.01.md
+    - '60': 新版本food预算决算
     - '30': 复习五元庄第六式
     - '30': 复习五元庄第七式
     - '30': 复习五元庄第八式
