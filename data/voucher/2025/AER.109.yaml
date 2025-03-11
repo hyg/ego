@@ -1,0 +1,17 @@
+date: 2025-03-11
+VoucherID: "19250311162010030049315910126146"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit: 
+    - AccountTitle: raw.med
+      asset: rmb
+      amount: 67.42
+  credit: 
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 67.42
+comment: 
+  - name: 育青卤鸡腿
+    amount: 1380
+    unit: g
+    asset: 67.42

@@ -1,0 +1,17 @@
+date: 2025-03-11
+VoucherID: "19250311002010030024606811158115"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit: 
+    - AccountTitle: raw.med
+      asset: rmb
+      amount: 81.68
+  credit: 
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 81.68
+comment: 
+  - name: mature multi
+    amount: 400
+    unit: 片
+    asset: 81.68
