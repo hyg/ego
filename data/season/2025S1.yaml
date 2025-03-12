@@ -583,11 +583,11 @@ time:
   sold:
     ego: 690
     PSMD: 2990
-    learn: 475
-    raw: 540
+    learn: 535
+    raw: 600
     infra: 120
     xuemen: 195
-    js: 360
+    js: 600
 todo:
   PSMD:
     - '195': 根据香港《公司條例》调整1609的部署方案 https://www.elegislation.gov.hk/hk/cap622
@@ -788,6 +788,11 @@ todo:
         - read ../../draft/2024/10/20241003.03.md
         - read ../../draft/2024/10/20241004.01.md
   learn:
+    - '60': 复习ipns
+      readme: |
+        - https://github.com/ipfs/js-ipns
+        - https://ipfs.github.io/js-ipns/
+        - https://github.com/ipfs-examples/js-ipfs-browser-ipns-publish
     - '90': 飞书 nodejs sdk
       readme: |
         - https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/server-side-sdk/nodejs-sdk/preparation-before-development
@@ -799,6 +804,7 @@ todo:
       readme: |
         - https://www.instantdb.com
         - https://github.com/instantdb/instant
+    - '30': js debug in vscodium
     - '60': markmap
       readme: |
         - https://markmap.js.org/
@@ -902,14 +908,6 @@ todo:
     - '60': 学习'Electron'，创作一个范例。
     - '60': 用代码中的对象或类，产生数据库创建SQL脚本、ER图（mermaid）
   raw:
-    - '30': 复习五元庄第四式
-      readme: |
-        - read ../../draft/2025/20250310.01.md
-        - read ../../draft/2025/20250311.02.md
-    - '30': 复习五元庄第五式
-      readme: |
-        - read ../../draft/2025/20250310.02.md
-        - read ../../draft/2025/20250311.01.md
     - '60': 新版本food预算决算
     - '30': 复习五元庄第六式
     - '30': 复习五元庄第七式
