@@ -583,11 +583,11 @@ time:
   sold:
     ego: 690
     PSMD: 2990
-    learn: 535
+    learn: 595
     raw: 600
     infra: 120
     xuemen: 195
-    js: 600
+    js: 580
 todo:
   PSMD:
     - '195': 根据香港《公司條例》调整1609的部署方案 https://www.elegislation.gov.hk/hk/cap622
@@ -788,11 +788,12 @@ todo:
         - read ../../draft/2024/10/20241003.03.md
         - read ../../draft/2024/10/20241004.01.md
   learn:
-    - '60': 复习ipns
+    - '90': 复习ipns
       readme: |
         - https://github.com/ipfs/js-ipns
         - https://ipfs.github.io/js-ipns/
         - https://github.com/ipfs-examples/js-ipfs-browser-ipns-publish
+        - read ../../draft/2025/20250313.01.md
     - '90': 飞书 nodejs sdk
       readme: |
         - https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/server-side-sdk/nodejs-sdk/preparation-before-development

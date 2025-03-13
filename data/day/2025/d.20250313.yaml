@@ -1,0 +1,45 @@
+date: '20250313'
+mode: '1'
+plan: 1e
+time:
+  - begin: '20250313110200'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20250313111700'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20250313121700'
+    amount: 45
+    type: food
+    name: 午餐
+  - begin: '20250313130200'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20250313134700'
+    amount: 132
+    type: free
+    name: 休整
+  - begin: '20250313160000'
+    amount: 60
+    redo: 90
+    type: work
+    name: 静默工作
+    subject: learn
+    title: 复习ipns
+    readme: |
+      - https://github.com/ipfs/js-ipns
+      - https://ipfs.github.io/js-ipns/
+      - https://github.com/ipfs-examples/js-ipfs-browser-ipns-publish
+    output: ../../draft/2025/20250313.01.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20250313170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20250313190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
