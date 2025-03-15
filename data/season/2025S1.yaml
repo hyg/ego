@@ -583,8 +583,8 @@ time:
   sold:
     ego: 690
     PSMD: 2990
-    learn: 915
-    raw: 600
+    learn: 1035
+    raw: 660
     infra: 120
     xuemen: 195
     js: 580
@@ -788,7 +788,7 @@ todo:
         - read ../../draft/2024/10/20241003.03.md
         - read ../../draft/2024/10/20241004.01.md
   learn:
-    - '60': 复习dat
+    - '90': 复习dat
       readme: |
         - D:\huangyg\git\draft\2024\07\20240715160000.md
         - https://github.com/RangerMauve/hyper-sdk
@@ -796,6 +796,7 @@ todo:
         - https://docs.pears.com/
         - D:\huangyg\git\draft\2024\07\20240703140000.md
         - https://blog.mauve.moe/posts/protocol-comparisons
+        - read ../../draft/2025/20250315.03.md
     - '90': 复习ipns
       readme: |
         - https://github.com/ipfs/js-ipns
@@ -918,12 +919,6 @@ todo:
     - '60': 学习'Electron'，创作一个范例。
     - '60': 用代码中的对象或类，产生数据库创建SQL脚本、ER图（mermaid）
   raw:
-    - '30': 复习五元庄第七式
-      readme: |
-        - read ../../draft/2025/20250314.02.md
-    - '30': 复习五元庄第六式
-      readme: |
-        - read ../../draft/2025/20250314.01.md
     - '60': 新版本food预算决算
     - '30': 复习五元庄第八式
     - '30': 复习五元庄第九式

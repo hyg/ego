@@ -1,0 +1,76 @@
+date: '20250315'
+mode: '1'
+plan: 1c
+time:
+  - begin: '20250315064700'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20250315070200'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20250315080200'
+    amount: 45
+    type: food
+    name: 早餐
+  - begin: '20250315084700'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20250315093200'
+    amount: 87
+    type: free
+    name: 休整
+  - begin: '20250315110000'
+    amount: 180
+    type: food
+    name: 备餐、午餐午休
+  - begin: '20250315140000'
+    amount: 30
+    type: work
+    name: 静默工作
+    subject: raw
+    title: 复习五元庄第七式
+    readme: |
+      - read ../../draft/2025/20250314.02.md
+    output: ../../draft/2025/20250315.01.md
+    namelink: http://simp.ly/p/8t3vlk
+  - begin: '20250315143000'
+    amount: 30
+    type: work
+    name: 静默工作
+    subject: raw
+    title: 复习五元庄第六式
+    readme: |
+      - read ../../draft/2025/20250314.01.md
+    output: ../../draft/2025/20250315.02.md
+    namelink: http://simp.ly/p/5k9gJy
+  - begin: '20250315150000'
+    amount: 60
+    type: free
+    name: 休整
+  - begin: '20250315160000'
+    amount: 120
+    redo: 90
+    type: work
+    name: 静默工作
+    subject: learn
+    title: 复习dat
+    readme: |
+      - D:\huangyg\git\draft\2024\07\20240715160000.md
+      - https://github.com/RangerMauve/hyper-sdk
+      - https://docs.dat.foundation/docs/install
+      - https://docs.pears.com/
+      - D:\huangyg\git\draft\2024\07\20240703140000.md
+      - https://blog.mauve.moe/posts/protocol-comparisons
+    output: ../../draft/2025/20250315.03.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20250315170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20250315190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
