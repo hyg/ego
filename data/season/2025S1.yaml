@@ -584,7 +584,7 @@ time:
     ego: 690
     PSMD: 2990
     learn: 1035
-    raw: 680
+    raw: 1250
     infra: 120
     xuemen: 195
     js: 700
@@ -911,8 +911,14 @@ todo:
     - '60': 用代码中的对象或类，产生数据库创建SQL脚本、ER图（mermaid）
   raw:
     - '60': 新版本food预算决算
-    - '30': 复习五元庄第十式
+      readme: |
+        - read undefined
     - '30': 复习五元庄第十一式
+      readme: |
+        - read undefined
+    - '30': 复习五元庄第十式
+      readme: |
+        - read undefined
     - '30': 复习五元庄第十二式
     - '30': 复习五元庄第十三式
     - '30': 复习脏真归元法
