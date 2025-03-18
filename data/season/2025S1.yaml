@@ -587,7 +587,7 @@ time:
     raw: 1250
     infra: 120
     xuemen: 195
-    js: 700
+    js: 820
 todo:
   PSMD:
     - '195': 根据香港《公司條例》调整1609的部署方案 https://www.elegislation.gov.hk/hk/cap622
@@ -863,9 +863,8 @@ todo:
         - read ../../draft/2024/09/20240915160000.md
         - read ../../draft/2024/09/20240920.02.md
         - read ../../draft/2024/09/20240922.04.md
-        - read undefined
-        - read undefined
         - read ../../draft/2025/20250226.01.md
+        - read ../../draft/2025/20250318.01.md
     - '60': learn js implement of ipfs
       readme: |
         - https://docs.ipfs.tech/reference/js/api/#get-started
@@ -894,6 +893,12 @@ todo:
             - 使用新的模块化设计
             - 使用新的data model
         - '30': 新版raw.js的子命令-营养成分排序
+    - '90': learn graphql
+      readme: |
+        - https://www.graphql-js.org/docs/
+        - https://github.com/graphql/graphql-js
+        - https://the-guild.dev/graphql/tools
+        - https://github.com/ardatan/graphql-tools
     - '60': 学习 nodejs test框架
       readme: |
         - https://github.com/Vanessa219/vditor
