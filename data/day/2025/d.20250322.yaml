@@ -1,0 +1,82 @@
+date: '20250322'
+mode: '2'
+plan: 2b
+time:
+  - begin: '20250322062900'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20250322064400'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20250322074400'
+    amount: 45
+    type: food
+    name: 早餐
+  - begin: '20250322082900'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20250322091400'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20250322093000'
+    amount: 180
+    redo: 90
+    type: work
+    name: 工作
+    subject: ego
+    title: 新版基础模型
+    output: ../../draft/2025/20250322.01.md
+    namelink: http://simp.ly/p/WZ077p
+  - begin: '20250322110000'
+    amount: 180
+    type: food
+    name: 备餐、午餐午休
+  - begin: '20250322140000'
+    amount: 90
+    redo: 90
+    type: work
+    name: 工作
+    subject: ego
+    title: 新版实时手稿
+    readme: |
+      - read ../../draft/2025/20250226.02.md
+    output: ../../draft/2025/20250322.02.md
+    namelink: http://simp.ly/p/lsBYG9
+  - begin: '20250322153000'
+    amount: 30
+    type: free
+    name: 休整
+  - begin: '20250322160000'
+    amount: 0
+    redo: 60
+    type: work
+    name: 工作
+    subject: js
+    title: js class
+    readme: |
+      - https://zh.javascript.info/class
+      - https://www.w3school.com.cn/js/pro_js_object_oriented.asp
+      - 在FSM实践一下。
+      - yaml文件，obj in js，main.js之间是什么关系？其他语言怎么处理？放在schema框架统一再斟酌。
+      - read ../../draft/2024/09/20240907160000.md
+      - read ../../draft/2024/09/20240909160000.md
+      - read ../../draft/2024/09/20240915160000.md
+      - read ../../draft/2024/09/20240920.02.md
+      - read ../../draft/2024/09/20240922.04.md
+      - read ../../draft/2025/20250226.01.md
+      - read ../../draft/2025/20250318.01.md
+      - read ../../draft/2025/20250320.01.md
+      - read ../../draft/2025/20250321.01.md
+    namelink: http://simp.ly/p/MpcbHD
+  - begin: '20250322170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20250322190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
