@@ -587,7 +587,7 @@ time:
     raw: 1250
     infra: 120
     xuemen: 195
-    js: 1060
+    js: 1120
 todo:
   PSMD:
     - '195': 根据香港《公司條例》调整1609的部署方案 https://www.elegislation.gov.hk/hk/cap622
@@ -856,22 +856,6 @@ todo:
       readme: |
         - https://zh.javascript.info/promise-api
   js:
-    - '60': js class
-      readme: |
-        - https://zh.javascript.info/class
-        - https://www.w3school.com.cn/js/pro_js_object_oriented.asp
-        - 在FSM实践一下。
-        - yaml文件，obj in js，main.js之间是什么关系？其他语言怎么处理？放在schema框架统一再斟酌。
-        - read ../../draft/2024/09/20240907160000.md
-        - read ../../draft/2024/09/20240909160000.md
-        - read ../../draft/2024/09/20240915160000.md
-        - read ../../draft/2024/09/20240920.02.md
-        - read ../../draft/2024/09/20240922.04.md
-        - read ../../draft/2025/20250226.01.md
-        - read ../../draft/2025/20250318.01.md
-        - read ../../draft/2025/20250320.01.md
-        - read ../../draft/2025/20250321.01.md
-        - read undefined
     - '60': learn js implement of ipfs
       readme: |
         - https://docs.ipfs.tech/reference/js/api/#get-started
