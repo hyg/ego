@@ -1,0 +1,45 @@
+date: '20250324'
+mode: '1'
+plan: 1e
+time:
+  - begin: '20250324114300'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20250324115800'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20250324125800'
+    amount: 45
+    type: food
+    name: 午餐
+  - begin: '20250324134300'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20250324142800'
+    amount: 91
+    type: free
+    name: 休整
+  - begin: '20250324160000'
+    amount: 60
+    redo: 60
+    type: work
+    name: 静默工作
+    subject: js
+    title: learn js implement of ipfs
+    readme: |
+      - https://docs.ipfs.tech/reference/js/api/#get-started
+      - https://github.com/ipfs/kubo
+      - https://github.com/elastic-ipfs/elastic-ipfs
+    output: ../../draft/2025/20250324.01.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20250324170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20250324190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交

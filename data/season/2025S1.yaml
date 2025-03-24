@@ -587,7 +587,7 @@ time:
     raw: 1250
     infra: 120
     xuemen: 195
-    js: 1120
+    js: 1180
 todo:
   PSMD:
     - '195': 根据香港《公司條例》调整1609的部署方案 https://www.elegislation.gov.hk/hk/cap622
@@ -824,6 +824,13 @@ todo:
         - https://www.npmjs.com/package/mutable-webtorrent
         - https://github.com/lmatteis/dmt
         - https://webtorrent.io/docs
+    - '60': xLog
+      readme: |
+        - https://xlog.app/
+        - https://www.xsync.app/
+        - https://xchar.app/
+        - https://rss3.io/
+        - https://crossbell.js.org/
     - '60': markmap
       readme: |
         - https://markmap.js.org/
@@ -861,6 +868,7 @@ todo:
         - https://docs.ipfs.tech/reference/js/api/#get-started
         - https://github.com/ipfs/kubo
         - https://github.com/elastic-ipfs/elastic-ipfs
+        - read ../../draft/2025/20250324.01.md
     - '60': 基于dat,hypercore,hyperswarm等模块的浏览器动态页面范例。
     - '60': git sample
       readme: |
