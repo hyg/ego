@@ -587,7 +587,7 @@ time:
     raw: 1250
     infra: 120
     xuemen: 195
-    js: 1180
+    js: 1240
 todo:
   PSMD:
     - '195': 根据香港《公司條例》调整1609的部署方案 https://www.elegislation.gov.hk/hk/cap622
@@ -863,12 +863,6 @@ todo:
       readme: |
         - https://zh.javascript.info/promise-api
   js:
-    - '60': learn js implement of ipfs
-      readme: |
-        - https://docs.ipfs.tech/reference/js/api/#get-started
-        - https://github.com/ipfs/kubo
-        - https://github.com/elastic-ipfs/elastic-ipfs
-        - read ../../draft/2025/20250324.01.md
     - '60': 基于dat,hypercore,hyperswarm等模块的浏览器动态页面范例。
     - '60': git sample
       readme: |
