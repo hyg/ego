@@ -1,0 +1,41 @@
+date: '20250326'
+mode: '1'
+plan: 1e
+time:
+  - begin: '20250326113900'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20250326115400'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20250326125400'
+    amount: 45
+    type: food
+    name: 午餐
+  - begin: '20250326133900'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20250326142400'
+    amount: 95
+    type: free
+    name: 休整
+  - begin: '20250326160000'
+    amount: 90
+    redo: 60
+    type: work
+    name: 静默工作
+    subject: js
+    title: 基于dat,hypercore,hyperswarm等模块的浏览器动态页面范例。
+    output: ../../draft/2025/20250326.01.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20250326170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20250326190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交

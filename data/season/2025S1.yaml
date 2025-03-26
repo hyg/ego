@@ -587,7 +587,7 @@ time:
     raw: 1250
     infra: 120
     xuemen: 195
-    js: 1240
+    js: 1330
 todo:
   PSMD:
     - '195': 根据香港《公司條例》调整1609的部署方案 https://www.elegislation.gov.hk/hk/cap622
@@ -810,6 +810,15 @@ todo:
     - '90': 飞书 nodejs sdk
       readme: |
         - https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/server-side-sdk/nodejs-sdk/preparation-before-development
+    - '90': webcontainers
+      readme: |
+        - https://webcontainers.io/
+        - https://stackblitz.com/
+        - https://nodejs.org/en/learn/getting-started/differences-between-nodejs-and-the-browser
+      bind:
+        - '60': 基于dat,hypercore,hyperswarm等模块的浏览器动态页面范例。
+          readme: |
+            - read ../../draft/2025/20250326.01.md
     - '60': oData simple
       readme: |
         - https://services.odata.org/
@@ -863,7 +872,6 @@ todo:
       readme: |
         - https://zh.javascript.info/promise-api
   js:
-    - '60': 基于dat,hypercore,hyperswarm等模块的浏览器动态页面范例。
     - '60': git sample
       readme: |
         - https://isomorphic-git.org/docs/en/snippets
