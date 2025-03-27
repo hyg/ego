@@ -581,7 +581,7 @@ time:
     learn: 2000
     js: 1000
   sold:
-    ego: 960
+    ego: 1090
     PSMD: 2990
     learn: 1035
     raw: 1250
@@ -900,6 +900,12 @@ todo:
         - https://github.com/graphql/graphql-js
         - https://the-guild.dev/graphql/tools
         - https://github.com/ardatan/graphql-tools
+        - https://aosabook.org/en/500L/dagoba-an-in-memory-graph-database.html
+    - '90': implement a programming language in JavaScript
+      readme: |
+        - https://lisperator.net/pltut/
+        - https://github.com/keyz/the-super-tiny-interpreter
+        - https://github.com/jamiebuilds/the-super-tiny-compiler
     - '60': 学习 nodejs test框架
       readme: |
         - https://github.com/Vanessa219/vditor
@@ -917,8 +923,6 @@ todo:
     - '60': 用代码中的对象或类，产生数据库创建SQL脚本、ER图（mermaid）
   raw:
     - '60': 新版本food预算决算
-      readme: |
-        - read undefined
     - '30': 复习五元庄第十一式
       readme: |
         - read undefined

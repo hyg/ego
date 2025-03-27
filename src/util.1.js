@@ -1,5 +1,7 @@
 const crypto = require('crypto');
 const dayjs = require('dayjs');
+const simpleGit = require('simple-git');
+const GIT_SSH_COMMAND = 'C:/Progra~1/PuTTY/plink.exe';
 var customParseFormat = require("dayjs/plugin/customParseFormat");
 
 module.exports = {
@@ -25,7 +27,31 @@ module.exports = {
         var thedate = dayjs(date, 'YYYYMMDD')
         //console.log(thedate.format());
         return thedate.toDate();
-    }
+    },
+    gitstep: async function(path,msg,remote,branch){
+        let statusSummary = null;
+     try {
+        statusSummary = await simpleGit(path).status();
+     } catch (e) {
+        // handle the error
+     }
+     if(statusSummary.files.length){
+        console.log("file changed:",statusSummary.files);
+        simpleGit(path,{ config: ['core.autocrlf=false'] })
+        .env('GIT_SSH_COMMAND', GIT_SSH_COMMAND)
+        .add('./*')
+        .commit(msg)
+        .push(remote, branch)
+        .then((data) => {
+           console.log('success:',path,"\n",data);
+        })
+        .catch((err) => {
+            console.log(err);
+        });
+     }else{
+        console.log("non file changed:",path);
+     }
+  }
 }
 
 /* 
