@@ -5,5 +5,12 @@
     "decimal.js": "^10.4.3",
     "js-yaml": "^4.1.0",
     "simple-git": "^3.27.0"
+  },
+  "scripts": {
+    "entry": "node ego asset entry",
+    "i1": "node ego day init 1",
+    "i2": "node ego day init 2",
+    "over": "node ego day over",
+    "git": "git add . && git commit -m \"package.json script\" & git push all"
   }
 }

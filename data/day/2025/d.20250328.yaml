@@ -1,0 +1,60 @@
+date: '20250328'
+mode: '1'
+plan: 1e
+time:
+  - begin: '20250328112500'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20250328114000'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20250328124000'
+    amount: 45
+    type: food
+    name: 午餐
+  - begin: '20250328132500'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20250328141000'
+    amount: 109
+    type: free
+    name: 休整
+  - begin: '20250328180000'
+    amount: 90
+    type: work
+    name: 静默工作
+    subject: learn
+    title: npm scripts
+    output: ../../draft/2025/20250328.a.md
+  - begin: '20250328160000'
+    amount: 0
+    redo: 60
+    type: work
+    name: 静默工作
+    subject: raw
+    title: 新版本food预算决算
+  - begin: '20250328160000'
+    amount: 0
+    redo: 60
+    type: work
+    name: 静默工作
+    subject: js
+    title: git sample
+    readme: |
+      - http://gitlet.maryrosecook.com/docs/gitlet.html
+      - https://kushagra.dev/blog/build-git-learn-git/
+      - https://isomorphic-git.org/docs/en/snippets
+      - https://isomorphic-git.org/docs/en/quickstart
+    output: ../../draft/2025/20250328.01.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20250328170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20250328190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交

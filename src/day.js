@@ -268,6 +268,7 @@ module.exports = {
         }
         log("make day plan file: %s\n%s", dayplanfilename, dayplanstr);
 
+        util.gitstep("D:\\huangyg\\git\\blog", "morning", "all", 'master');
         return dayplanstr;
     },
     // 时间片amount=0的：
@@ -276,7 +277,7 @@ module.exports = {
     cleardayobj: function (dayobj) {
         for (var i in dayobj.time) {
             var timeperiod = dayobj.time[i];
-            if (timeperiod.amount == 0) {
+            if (timeperiod.amount == 0 && timeperiod.output != null) {
                 fs.unlinkSync(timeperiod.output);
                 delete timeperiod.output;
             }

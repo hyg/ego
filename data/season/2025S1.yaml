@@ -583,7 +583,7 @@ time:
   sold:
     ego: 1090
     PSMD: 2990
-    learn: 1035
+    learn: 1125
     raw: 1250
     infra: 120
     xuemen: 195
@@ -874,6 +874,8 @@ todo:
   js:
     - '60': git sample
       readme: |
+        - http://gitlet.maryrosecook.com/docs/gitlet.html
+        - https://kushagra.dev/blog/build-git-learn-git/
         - https://isomorphic-git.org/docs/en/snippets
         - https://isomorphic-git.org/docs/en/quickstart
     - '60': 在代码中自动提交git库
@@ -914,6 +916,12 @@ todo:
         - https://bun.sh/
         bind:
           - '90': 实际编写自己的测试范例
+          - '60': lint
+            readme: |
+              - https://www.javascriptcn.com/post/675439161b963fe9cc4d25ce
+              - https://www.jslint.com/
+              - https://jshint.com/
+              - https://zh-hans.eslint.org/docs/latest/use/getting-started              
     - '60': 向外提供js文件的范例，为代码层级互通做准备
     - '60': giiter.im bot sample
       readme: |

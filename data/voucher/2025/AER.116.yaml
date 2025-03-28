@@ -1,0 +1,17 @@
+date: 2025-03-28
+VoucherID: "19250328152010030593963426052636"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit: 
+    - AccountTitle: raw.site.bj1
+      asset: rmb
+      amount: 10.88
+  credit: 
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 10.88
+comment: 
+  - name: 杀蟑螂饵剂
+    amount: 10
+    unit: g
+    asset: 10.88
