@@ -581,7 +581,7 @@ time:
     learn: 2000
     js: 1000
   sold:
-    ego: 1090
+    ego: 1270
     PSMD: 2990
     learn: 1125
     raw: 1250
@@ -878,10 +878,11 @@ todo:
         - https://kushagra.dev/blog/build-git-learn-git/
         - https://isomorphic-git.org/docs/en/snippets
         - https://isomorphic-git.org/docs/en/quickstart
-    - '60': 在代码中自动提交git库
-      readme: |
-        - D:\huangyg\git\draft\2024\04\20240430140000.md
-        - 2024.6.13. 16:00 draft
+      bind:
+        - '60': 在代码中自动提交git库
+          readme: |
+            - D:\huangyg\git\draft\2024\04\20240430140000.md
+            - 2024.6.13. 16:00 draft
     - '60': learn factory, constructor, prototype
       readme: |
         - https://juejin.cn/post/6844903653774458888
