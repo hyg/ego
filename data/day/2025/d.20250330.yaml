@@ -1,0 +1,84 @@
+date: '20250330'
+mode: '2'
+plan: 2b
+time:
+  - begin: '20250330052000'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20250330053500'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20250330063500'
+    amount: 45
+    type: food
+    name: 早餐
+  - begin: '20250330072000'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20250330080500'
+    amount: 175
+    type: free
+    name: 休整
+  - begin: '20250330180000'
+    amount: 240
+    redo: 90
+    type: work
+    name: 工作
+    subject: ego
+    title: 新版实时手稿
+    readme: |
+      - read ../../draft/2025/20250226.02.md
+      - read ../../draft/2025/20250322.02.md
+    output: ../../draft/2025/20250330.01.md
+    namelink: http://simp.ly/p/WZ077p
+  - begin: '20250330110000'
+    amount: 180
+    type: food
+    name: 备餐、午餐午休
+  - begin: '20250330140000'
+    amount: 180
+    type: work
+    name: 工作
+    subject: raw
+    title: 资源管理器替代
+    output: ../../draft/2025/20250330.a.md
+  - begin: '20250330140000'
+    amount: 0
+    redo: 90
+    type: work
+    name: 工作
+    subject: ego
+    title: 新版基础模型
+    readme: |
+      - read ../../draft/2025/20250322.01.md
+    output: ../../draft/2025/20250330.02.md
+    namelink: http://simp.ly/p/lsBYG9
+  - begin: '20250330153000'
+    amount: 30
+    type: free
+    name: 休整
+  - begin: '20250330160000'
+    amount: 0
+    redo: 60
+    type: work
+    name: 工作
+    subject: js
+    title: git sample
+    readme: |
+      - http://gitlet.maryrosecook.com/docs/gitlet.html
+      - https://kushagra.dev/blog/build-git-learn-git/
+      - https://isomorphic-git.org/docs/en/snippets
+      - https://isomorphic-git.org/docs/en/quickstart
+    output: ../../draft/2025/20250330.03.md
+    namelink: http://simp.ly/p/MpcbHD
+  - begin: '20250330170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20250330190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交

@@ -581,10 +581,10 @@ time:
     learn: 2000
     js: 1000
   sold:
-    ego: 1270
+    ego: 1510
     PSMD: 2990
     learn: 1125
-    raw: 1250
+    raw: 1430
     infra: 120
     xuemen: 195
     js: 1330
@@ -699,13 +699,14 @@ todo:
       readnme: |
         - 考虑upgradeby的实现。
   ego:
+    - '90': 新版基础模型
+      readme: |
+        - read ../../draft/2025/20250322.01.md
     - '90': 新版实时手稿
       readme: |
         - read ../../draft/2025/20250226.02.md
         - read ../../draft/2025/20250322.02.md
-    - '90': 新版基础模型
-      readme: |
-        - read ../../draft/2025/20250322.01.md
+        - read ../../draft/2025/20250330.01.md
     - '90': 新版本任务、子任务的数据结构
       readme: |
         - read ../../draft/2024/10/20241001.01.md
@@ -807,6 +808,12 @@ todo:
         - https://ipfs.github.io/js-ipns/
         - https://github.com/ipfs-examples/js-ipfs-browser-ipns-publish
         - read ../../draft/2025/20250313.01.md
+    - '90': 腾讯文档sdk
+      readme: |
+        - https://docs.qq.com/open/developers
+        - https://docs.qq.com/open/document/websdk/
+        - https://docs.qq.com/open/document/app/openapi/v2/file/files/permission/set.html
+          - https://docs.qq.com/open/document/app/openapi/v2/file/files/permission/common.html
     - '90': 飞书 nodejs sdk
       readme: |
         - https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/server-side-sdk/nodejs-sdk/preparation-before-development
@@ -878,11 +885,10 @@ todo:
         - https://kushagra.dev/blog/build-git-learn-git/
         - https://isomorphic-git.org/docs/en/snippets
         - https://isomorphic-git.org/docs/en/quickstart
-      bind:
-        - '60': 在代码中自动提交git库
-          readme: |
-            - D:\huangyg\git\draft\2024\04\20240430140000.md
-            - 2024.6.13. 16:00 draft
+    - '60': 在代码中自动提交git库
+      readme: |
+        - D:\huangyg\git\draft\2024\04\20240430140000.md
+        - 2024.6.13. 16:00 draft
     - '60': learn factory, constructor, prototype
       readme: |
         - https://juejin.cn/post/6844903653774458888
@@ -931,7 +937,6 @@ todo:
     - '60': 学习'Electron'，创作一个范例。
     - '60': 用代码中的对象或类，产生数据库创建SQL脚本、ER图（mermaid）
   raw:
-    - '60': 新版本food预算决算
     - '30': 复习五元庄第十一式
       readme: |
         - read undefined
@@ -944,23 +949,20 @@ todo:
     - '60': 熟悉内脏之间的关系
       readme: |
         - read ../../draft/2024/09/20240917143000.md
-    - '60': 设计四季度时间表
+    - '60': 设计二季度时间表
       readme: |
         - 两片休整时间联合调节的算法需要整理。
         - 餐谱和饱腹感时间需要综合算计。
         - read ../../draft/2024/09/20240904143000.md
         - read ../../draft/2024/09/20240907140000.md
-    - '90': 整理代码，理顺food.js几个成员函数之间的调用关系
-      readme: |
-        - read ../../draft/2024/09/20240907143000.md
-    - '60': 设计四季度时间表
-      readme: |
-        - 两片休整时间联合调节的算法需要整理。
-        - 餐谱和饱腹感时间需要综合算计。
-        - read ../../draft/2024/09/20240904143000.md
-        - read ../../draft/2024/09/20240907140000.md
-    - '60': 新版食材排序，包括升序、降序、特定值距离、多种营养成分特定值组合距离。
     - '60': 新版营养成分详情，允许多种营养成分。
+      bind:
+        - '90': 整理代码，理顺food.js几个成员函数之间的调用关系
+          readme: |
+            - read ../../draft/2024/09/20240907143000.md
+          bind:
+            - '60': 新版本food预算决算
+        - '60': 新版食材排序，包括升序、降序、特定值距离、多种营养成分特定值组合距离。
   xuemen:
     - '195': kernel模型升级
       readme: |
