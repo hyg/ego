@@ -278,7 +278,12 @@ module.exports = {
         for (var i in dayobj.time) {
             var timeperiod = dayobj.time[i];
             if (timeperiod.amount == 0 && timeperiod.output != null) {
-                fs.unlinkSync(timeperiod.output);
+                try {
+                    fs.unlinkSync(timeperiod.output);
+                } catch (error) {
+                    console.error(error);
+                }
+
                 delete timeperiod.output;
             }
         }
