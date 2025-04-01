@@ -1,0 +1,82 @@
+date: '20250401'
+mode: '1'
+plan: 1d
+time:
+  - begin: '20250401083500'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20250401085000'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20250401095000'
+    amount: 45
+    type: food
+    name: 午餐
+  - begin: '20250401103500'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20250401112000'
+    amount: 159
+    type: free
+    name: 休整
+  - begin: '20250401180000'
+    amount: 180
+    type: work
+    name: 静默工作
+    subject: ego
+    title: 新版设计
+    output: ../../draft/2025/20250401.a.md
+  - begin: '20250401210000'
+    amount: 150
+    type: work
+    name: 静默工作
+    subject: PSMD
+    title: 交流和总结
+    output: ../../draft/2025/20250401.b.md
+  - begin: '20250401140000'
+    amount: 0
+    redo: 30
+    type: work
+    name: 静默工作
+    subject: raw
+    title: 复习五元庄第十二式
+    output: ../../draft/2025/20250401.01.md
+    namelink: http://simp.ly/p/8t3vlk
+  - begin: '20250401143000'
+    amount: 0
+    redo: 30
+    type: work
+    name: 静默工作
+    subject: raw
+    title: 复习五元庄第十三式
+    output: ../../draft/2025/20250401.02.md
+    namelink: http://simp.ly/p/5k9gJy
+  - begin: '20250401150000'
+    amount: 60
+    type: free
+    name: 休整
+  - begin: '20250401160000'
+    amount: 0
+    redo: 60
+    type: work
+    name: 静默工作
+    subject: js
+    title: git sample
+    readme: |
+      - http://gitlet.maryrosecook.com/docs/gitlet.html
+      - https://kushagra.dev/blog/build-git-learn-git/
+      - https://isomorphic-git.org/docs/en/snippets
+      - https://isomorphic-git.org/docs/en/quickstart
+    output: ../../draft/2025/20250401.03.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20250401170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20250401190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
