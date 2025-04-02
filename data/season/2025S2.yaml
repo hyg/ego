@@ -584,7 +584,7 @@ time:
     ego: 180
     PSMD: 150
     raw: 0
-    js: 0
+    js: 60
 todo:
   PSMD:
     - '195': 根据香港《公司條例》调整1609的部署方案 https://www.elegislation.gov.hk/hk/cap622
@@ -876,12 +876,6 @@ todo:
       readme: |
         - https://zh.javascript.info/promise-api
   js:
-    - '60': git sample
-      readme: |
-        - http://gitlet.maryrosecook.com/docs/gitlet.html
-        - https://kushagra.dev/blog/build-git-learn-git/
-        - https://isomorphic-git.org/docs/en/snippets
-        - https://isomorphic-git.org/docs/en/quickstart
     - '60': 在代码中自动提交git库
       readme: |
         - D:\huangyg\git\draft\2024\04\20240430140000.md
