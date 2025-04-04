@@ -1,0 +1,92 @@
+date: '20250404'
+mode: '2'
+plan: 2b
+time:
+  - begin: '20250404050000'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20250404051500'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20250404061500'
+    amount: 45
+    type: food
+    name: 早餐
+  - begin: '20250404070000'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20250404074500'
+    amount: 104
+    type: free
+    name: 休整
+  - begin: '20250404093000'
+    amount: 30
+    type: work
+    name: 工作
+    subject: learn
+    title: 复习dat
+    readme: |
+      - D:\huangyg\git\draft\2024\07\20240715160000.md
+      - https://github.com/RangerMauve/hyper-sdk
+      - https://docs.dat.foundation/docs/install
+      - https://docs.pears.com/
+      - D:\huangyg\git\draft\2024\07\20240703140000.md
+      - https://blog.mauve.moe/posts/protocol-comparisons
+      - read ../../draft/2025/20250315.03.md
+    output: ../../draft/2025/20250404.01.md
+    namelink: http://simp.ly/p/WZ077p
+  - begin: '20250404100000'
+    amount: 60
+    type: work
+    name: 工作
+    subject: PSMD
+    title: 了解RedaHomes003
+    readme: |
+      - https://github.com/SarahZhao527/RedaHomes003
+    output: ../../draft/2025/20250404.a.md
+  - begin: '20250404110000'
+    amount: 180
+    type: food
+    name: 备餐、午餐午休
+  - begin: '20250404140000'
+    amount: 45
+    type: work
+    name: 工作
+    subject: learn
+    title: 复习ipns
+    readme: |
+      - https://github.com/ipfs/js-ipns
+      - https://ipfs.github.io/js-ipns/
+      - https://github.com/ipfs-examples/js-ipfs-browser-ipns-publish
+      - read ../../draft/2025/20250313.01.md
+    output: ../../draft/2025/20250404.02.md
+    namelink: http://simp.ly/p/lsBYG9
+  - begin: '20250404144500'
+    amount: 180
+    type: work
+    name: 工作
+    subject: ego
+    title: 基础模型
+    output: ../../draft/2025/20250404.b.md
+  - begin: '20250404174500'
+    amount: 105
+    type: food
+    name: 晚餐
+  - begin: '20250404193000'
+    amount: 60
+    type: work
+    name: 工作
+    subject: PSMD
+    title: 1609的分立、合并。
+    readme: |
+      - read ../../draft/2025/20250125.01.md
+      - read ../../draft/2025/20250403.03.md
+    output: ../../draft/2025/20250404.03.md
+    namelink: http://simp.ly/p/MpcbHD
+  - begin: '20250404203000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交

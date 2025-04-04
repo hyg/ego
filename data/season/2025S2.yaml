@@ -581,16 +581,13 @@ time:
     learn: 2000
     js: 1000
   sold:
-    ego: 180
-    PSMD: 405
+    ego: 360
+    PSMD: 525
     raw: 0
     js: 60
+    learn: 75
 todo:
   PSMD:
-    - '60': 1609的分立、合并。
-      readme: |
-        - read ../../draft/2025/20250125.01.md
-        - read ../../draft/2025/20250403.03.md
     - '90': 子1609
       readme: |
         - read ../../draft/2025/20250125.02.md
@@ -699,9 +696,12 @@ todo:
       readnme: |
         - 考虑upgradeby的实现。
   ego:
-    - '90': 新版基础模型
+    - '195': 新版基础模型
       readme: |
         - read ../../draft/2025/20250322.01.md
+    - '195': 新版ego, instance or model, any manifest
+      readme: |
+        - read ../../draft/2024/09/20240925.01.md
     - '90': 新版实时手稿
       readme: |
         - read ../../draft/2025/20250226.02.md
@@ -731,9 +731,6 @@ todo:
             - schema means "task level and stage defined by schema"
             - schema manifest code: generate tasks by level and stage define by schema
             - schame level 2 schema for code: schema for develop "generate tasks by level and stage define by schema" 
-    - '195': 新版ego, instance or model, any manifest
-      readme: |
-        - read ../../draft/2024/09/20240925.01.md
     - '60': schema manifest law v0
       readme: |
         - read 2024.07.21 07:45 draft
@@ -793,21 +790,7 @@ todo:
         - read ../../draft/2024/10/20241003.03.md
         - read ../../draft/2024/10/20241004.01.md
   learn:
-    - '90': 复习dat
-      readme: |
-        - D:\huangyg\git\draft\2024\07\20240715160000.md
-        - https://github.com/RangerMauve/hyper-sdk
-        - https://docs.dat.foundation/docs/install
-        - https://docs.pears.com/
-        - D:\huangyg\git\draft\2024\07\20240703140000.md
-        - https://blog.mauve.moe/posts/protocol-comparisons
-        - read ../../draft/2025/20250315.03.md
-    - '90': 复习ipns
-      readme: |
-        - https://github.com/ipfs/js-ipns
-        - https://ipfs.github.io/js-ipns/
-        - https://github.com/ipfs-examples/js-ipfs-browser-ipns-publish
-        - read ../../draft/2025/20250313.01.md
+    - '90': 热更新
     - '90': 腾讯文档sdk
       readme: |
         - https://docs.qq.com/open/developers
@@ -847,6 +830,9 @@ todo:
         - https://xchar.app/
         - https://rss3.io/
         - https://crossbell.js.org/
+    - '60': clerk统一用户管理
+      readme: |
+        - https://clerk.com/
     - '60': markmap
       readme: |
         - https://markmap.js.org/

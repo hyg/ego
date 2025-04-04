@@ -1,0 +1,17 @@
+date: 2025-04-03
+VoucherID: "2025040322001431991404164566"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit: 
+    - AccountTitle: xuemen
+      asset: rmb
+      amount: 800.00
+  credit: 
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 800.00
+comment: 
+  - name: 企业邮箱
+    amount: 1
+    unit: 年
+    asset: 800.00
