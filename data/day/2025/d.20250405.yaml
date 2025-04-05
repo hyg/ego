@@ -1,0 +1,63 @@
+date: '20250405'
+mode: '1'
+plan: 1d
+time:
+  - begin: '20250405082000'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20250405083500'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20250405093500'
+    amount: 45
+    type: food
+    name: 午餐
+  - begin: '20250405102000'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20250405110500'
+    amount: 174
+    type: free
+    name: 休整
+  - begin: '20250405140000'
+    amount: 30
+    type: work
+    name: 静默工作
+    subject: raw
+    title: 复习五元庄第十三式
+    output: ../../draft/2025/20250405.01.md
+    namelink: http://simp.ly/p/8t3vlk
+  - begin: '20250405143000'
+    amount: 30
+    type: work
+    name: 静默工作
+    subject: raw
+    title: 复习五元庄第十二式
+    output: ../../draft/2025/20250405.02.md
+    namelink: http://simp.ly/p/5k9gJy
+  - begin: '20250405150000'
+    amount: 60
+    type: free
+    name: 休整
+  - begin: '20250405160000'
+    amount: 60
+    type: work
+    name: 静默工作
+    subject: js
+    title: 在代码中自动提交git库
+    readme: |
+      - D:\huangyg\git\draft\2024\04\20240430140000.md
+      - 2024.6.13. 16:00 draft
+    output: ../../draft/2025/20250405.03.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20250405170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20250405190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交

@@ -583,8 +583,8 @@ time:
   sold:
     ego: 360
     PSMD: 525
-    raw: 0
-    js: 60
+    raw: 60
+    js: 120
     learn: 75
 todo:
   PSMD:
@@ -865,10 +865,6 @@ todo:
       readme: |
         - https://zh.javascript.info/promise-api
   js:
-    - '60': 在代码中自动提交git库
-      readme: |
-        - D:\huangyg\git\draft\2024\04\20240430140000.md
-        - 2024.6.13. 16:00 draft
     - '60': learn factory, constructor, prototype
       readme: |
         - https://juejin.cn/post/6844903653774458888
@@ -917,8 +913,6 @@ todo:
     - '60': 学习'Electron'，创作一个范例。
     - '60': 用代码中的对象或类，产生数据库创建SQL脚本、ER图（mermaid）
   raw:
-    - '30': 复习五元庄第十三式
-    - '30': 复习五元庄第十二式
     - '30': 复习脏真归元法
     - '60': 熟悉内脏之间的关系
       readme: |
