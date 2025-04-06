@@ -583,9 +583,9 @@ time:
   sold:
     ego: 360
     PSMD: 525
-    raw: 60
+    raw: 90
     js: 120
-    learn: 75
+    learn: 105
 todo:
   PSMD:
     - '90': 子1609
@@ -817,7 +817,6 @@ todo:
       readme: |
         - https://www.instantdb.com
         - https://github.com/instantdb/instant
-    - '30': js debug in vscodium
     - '60': BEP 46
       readme: |
         - https://www.npmjs.com/package/mutable-webtorrent
@@ -913,7 +912,6 @@ todo:
     - '60': 学习'Electron'，创作一个范例。
     - '60': 用代码中的对象或类，产生数据库创建SQL脚本、ER图（mermaid）
   raw:
-    - '30': 复习脏真归元法
     - '60': 熟悉内脏之间的关系
       readme: |
         - read ../../draft/2024/09/20240917143000.md
