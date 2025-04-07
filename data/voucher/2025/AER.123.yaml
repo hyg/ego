@@ -1,0 +1,28 @@
+date: 2025-04-07
+VoucherID: "2010000420250407000001377093"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit: 
+    - AccountTitle: xuemen
+      asset: rmb
+      amount: 5000.00
+    - AccountTitle: raw.site.bj1
+      asset: rmb
+      amount: 27012.00
+  credit: 
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 32000.00
+comment: 
+  - name: 房租
+    amount: 6
+    unit: 月
+    asset: 27000.00
+  - name: 注册地址
+    amount: 6
+    unit: 月
+    asset: 5000.00
+  - name: 手续费金额
+    amount: 1
+    unit: 次
+    asset: 12.00

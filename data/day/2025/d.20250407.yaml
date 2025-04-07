@@ -1,0 +1,68 @@
+date: '20250407'
+mode: '2'
+plan: 2c
+time:
+  - begin: '20250407073600'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20250407075100'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20250407085100'
+    amount: 45
+    type: food
+    name: 早餐
+  - begin: '20250407093600'
+    amount: 84
+    type: work
+    name: 工作
+    subject: xuemen
+    title: 月初事务
+    output: ../../draft/2025/20250407.a.md
+  - begin: '20250407110000'
+    amount: 180
+    type: food
+    name: 备餐、午餐午休
+  - begin: '20250407140000'
+    amount: 180
+    type: work
+    name: 工作
+    subject: ego
+    title: 新版基础概念准备
+    output: ../../draft/2025/20250407.b.md
+  - begin: '20250407140000'
+    amount: 0
+    redo: 90
+    type: work
+    name: 工作
+    subject: PSMD
+    title: 子1609
+    readme: |
+      - read ../../draft/2025/20250125.02.md
+    output: ../../draft/2025/20250407.01.md
+    namelink: http://simp.ly/p/lsBYG9
+  - begin: '20250407153000'
+    amount: 30
+    type: free
+    name: 休整
+  - begin: '20250407160000'
+    amount: 0
+    redo: 60
+    type: work
+    name: 工作
+    subject: raw
+    title: 熟悉内脏之间的关系
+    readme: |
+      - read ../../draft/2024/09/20240917143000.md
+    output: ../../draft/2025/20250407.02.md
+    namelink: http://simp.ly/p/MpcbHD
+  - begin: '20250407170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20250407190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交

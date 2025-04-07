@@ -1,0 +1,17 @@
+date: 2025-04-07
+VoucherID: "19250407162010030877155976010889"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit: 
+    - AccountTitle: raw.food
+      asset: rmb
+      amount: 0.10
+  credit: 
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 0.10
+comment: 
+  - name: 拼多多会员月卡
+    amount: 3
+    unit: 月
+    asset: 0.10
