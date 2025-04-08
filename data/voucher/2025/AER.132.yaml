@@ -1,0 +1,17 @@
+date: 2025-04-08
+VoucherID: "19250408152000030864601558052945"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit: 
+    - AccountTitle: raw.med
+      asset: rmb
+      amount: 49.88
+  credit: 
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 49.88
+comment: 
+  - name: 硒片
+    amount: 1
+    unit: 瓶
+    asset: 49.88

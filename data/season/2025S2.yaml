@@ -587,6 +587,7 @@ time:
     js: 120
     learn: 105
     xuemen: 84
+    infra: 240
 todo:
   PSMD:
     - '90': 子1609
@@ -757,12 +758,6 @@ todo:
         - day metada
         - draft文件名
   infra:
-    - '195': schema立项。
-      readme: |
-        - read ../../draft/2024/09/20240919140000.md
-        - read ../../draft/2025/20250110.01.md
-        - read ../../draft/2025/20250112.01.md
-        - read ../../draft/2025/20250116.01.md
     - '60': 范例--利用js模块组合实现合同条款的组合。
       readme: |
         - read ../../draft/2024/10/20241004.05.md
@@ -786,6 +781,13 @@ todo:
         - read ../../draft/2024/12/20241206.01.md
         - read ../../draft/2024/12/20241211.03.md
         - read ../../draft/2024/12/20241212.03.md
+    - '90': schema立项。
+      readme: |
+        - read ../../draft/2024/09/20240919140000.md
+        - read ../../draft/2025/20250110.01.md
+        - read ../../draft/2025/20250112.01.md
+        - read ../../draft/2025/20250116.01.md
+        - read ../../draft/2025/20250408.01.md
     - '60': 动态菜单设计。
       readme: |
         - read ../../draft/2024/09/20240921.02.md

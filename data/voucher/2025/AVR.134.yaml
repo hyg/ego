@@ -1,0 +1,11 @@
+date: 2025-04-08 11:43:06
+title: 微信零钱账单
+VoucherID: "4200002706202504080334200652"
+VoucherType: 交易单号
+amount: 21.00
+summary: EMS
+comment:
+  - name: 商户单号
+    value: 20250408229101909451171678674944
+  - name: 快递单号
+    value: 1388321855222

@@ -1,0 +1,96 @@
+date: '20250408'
+mode: '2'
+plan: 2a
+time:
+  - begin: '20250408045300'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20250408050800'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20250408060800'
+    amount: 45
+    type: food
+    name: 早餐
+  - begin: '20250408065300'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20250408073800'
+    amount: 6
+    type: free
+    name: 休整
+  - begin: '20250408074500'
+    amount: 240
+    redo: 90
+    type: work
+    name: 工作
+    subject: infra
+    title: schema立项。
+    readme: |
+      - read ../../draft/2024/09/20240919140000.md
+      - read ../../draft/2025/20250110.01.md
+      - read ../../draft/2025/20250112.01.md
+      - read ../../draft/2025/20250116.01.md
+    output: ../../draft/2025/20250408.01.md
+    namelink: http://simp.ly/p/3GXNTh
+  - begin: '20250408110000'
+    amount: 180
+    type: food
+    name: 备餐、午餐午休
+  - begin: '20250408140000'
+    amount: 0
+    redo: 90
+    type: work
+    name: 工作
+    subject: PSMD
+    title: 子1609
+    readme: |
+      - read ../../draft/2025/20250125.02.md
+    output: ../../draft/2025/20250408.02.md
+    namelink: http://simp.ly/p/lsBYG9
+  - begin: '20250408153000'
+    amount: 30
+    type: free
+    name: 休整
+  - begin: '20250408160000'
+    amount: 0
+    redo: 60
+    type: work
+    name: 工作
+    subject: infra
+    title: 范例--利用js模块组合实现合同条款的组合。
+    readme: |
+      - read ../../draft/2024/10/20241004.05.md
+      - read ../../draft/2024/11/20241118.03.md
+      - read ../../draft/2024/11/20241119.02.md
+      - read ../../draft/2024/11/20241120.03.md
+      - read ../../draft/2024/11/20241121.03.md
+      - read ../../draft/2024/11/20241122.03.md
+      - read ../../draft/2024/11/20241123.03.md
+      - read ../../draft/2024/11/20241124.03.md
+      - read ../../draft/2024/11/20241125.03.md
+      - read ../../draft/2024/11/20241126.01.md
+      - read ../../draft/2024/11/20241127.02.md
+      - read ../../draft/2024/11/20241128.01.md
+      - read ../../draft/2024/11/20241129.01.md
+      - read ../../draft/2024/11/20241130.01.md
+      - read ../../draft/2024/12/20241201.04.md
+      - read ../../draft/2024/12/20241202.03.md
+      - read ../../draft/2024/12/20241203.01.md
+      - read ../../draft/2024/12/20241204.03.md
+      - read ../../draft/2024/12/20241206.01.md
+      - read ../../draft/2024/12/20241211.03.md
+      - read ../../draft/2024/12/20241212.03.md
+    output: ../../draft/2025/20250408.03.md
+    namelink: http://simp.ly/p/MpcbHD
+  - begin: '20250408170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20250408190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
