@@ -1,0 +1,17 @@
+date: 2025-04-09
+VoucherID: "19250409082000030885220177031886"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit: 
+    - AccountTitle: donation.parent
+      asset: rmb
+      amount: 38.79
+  credit: 
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 38.79
+comment: 
+  - name: 哈萨克斯坦面粉
+    amount: 5000
+    unit: g
+    asset: 38.79
