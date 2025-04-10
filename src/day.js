@@ -356,7 +356,12 @@ module.exports = {
             log("debug, day plan file: %s\n%s", daylogfilename, daylogstr);
         }
 
-        this.gitop(indexstr);
+        if(indexstr == ""){
+            this.gitop("day over with non draft.");    
+        }else{
+            this.gitop(indexstr);
+        }
+        
         return daylogfilename;
     },
     makeoutputlist: function (dayobj) {
