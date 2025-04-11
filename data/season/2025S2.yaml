@@ -799,6 +799,9 @@ todo:
         - read ../../draft/2024/10/20241003.03.md
         - read ../../draft/2024/10/20241004.01.md
   learn:
+    - '30': clerk统一用户管理
+      readme: |
+        - https://clerk.com/
     - '90': 热更新
     - '90': 腾讯文档sdk
       readme: |
@@ -838,9 +841,6 @@ todo:
         - https://xchar.app/
         - https://rss3.io/
         - https://crossbell.js.org/
-    - '60': clerk统一用户管理
-      readme: |
-        - https://clerk.com/
     - '60': markmap
       readme: |
         - https://markmap.js.org/
