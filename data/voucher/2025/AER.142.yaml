@@ -1,0 +1,17 @@
+date: 2025-04-13
+VoucherID: "19250413112000030978847753084419"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit: 
+    - AccountTitle: raw.supply
+      asset: rmb
+      amount: 10.25
+  credit: 
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 10.25
+comment: 
+  - name: 黄芪水
+    amount: 120
+    unit: ml
+    asset: 10.25

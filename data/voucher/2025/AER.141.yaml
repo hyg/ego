@@ -1,0 +1,17 @@
+date: 2025-04-13
+VoucherID: "19250413102010031034329762010955"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit: 
+    - AccountTitle: raw.supply
+      asset: rmb
+      amount: 8.41
+  credit: 
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 8.41
+comment: 
+  - name: 双重薄荷牙膏
+    amount: 360
+    unit: g
+    asset: 8.41

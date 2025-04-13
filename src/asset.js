@@ -78,6 +78,7 @@ module.exports = {
             "raw.site.wz": {id: "10.3.2.",name: "raw.site.wz",balance: {"rmb": 0.0}},
             "raw.fun": {id: 10.4,name: "raw.fun",balance: {"rmb": 0.0}},
             "raw.shell": {id: 10.5,name: "raw.shell",balance: {"rmb": 0.0}},
+            "raw.supply": {id: 10.6,name: "raw.supply",balance: {"rmb": 0.0}},
             "donation": {id: 20,name: "donation",balance: {"rmb": 0.0}},
             "donation.parent": {id: 20.1,name: "donation.parent",balance: {"rmb": 0.0}},
             "donation.younger": {id: 20.2,name: "donation.younger",balance: {"rmb": 0.0}},
