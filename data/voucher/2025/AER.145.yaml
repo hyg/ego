@@ -1,0 +1,17 @@
+date: 2025-04-16
+VoucherID: "19250416192000031074411099010839"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit: 
+    - AccountTitle: donation.parent
+      asset: rmb
+      amount: 22.31
+  credit: 
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 22.31
+comment: 
+  - name: 芦笋
+    amount: 1500
+    unit: g
+    asset: 22.31
