@@ -54,8 +54,7 @@ time:
     type: free
     name: 休整
   - begin: '20250418160000'
-    amount: 0
-    redo: 60
+    amount: 60
     type: work
     name: 工作
     subject: ego

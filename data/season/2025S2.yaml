@@ -581,7 +581,7 @@ time:
     learn: 2000
     js: 1000
   sold:
-    ego: 990
+    ego: 1050
     PSMD: 660
     raw: 90
     js: 120
