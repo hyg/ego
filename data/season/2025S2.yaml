@@ -581,8 +581,8 @@ time:
     learn: 2000
     js: 1000
   sold:
-    ego: 795
-    PSMD: 615
+    ego: 990
+    PSMD: 660
     raw: 90
     js: 120
     learn: 105
@@ -593,6 +593,7 @@ todo:
     - '90': 根据香港《公司條例》调整1609的部署方案 https://www.elegislation.gov.hk/hk/cap622
       readme: |
         - read ../../draft/2025/20250403.01.md
+        - read ../../draft/2025/20250418.02.md
     - '90': 子1609
       readme: |
         - read ../../draft/2025/20250125.02.md
@@ -699,10 +700,12 @@ todo:
       readnme: |
         - 考虑upgradeby的实现。
   ego:
+    - '60': redahomes
     - '195': 新版基础模型
       readme: |
         - read ../../draft/2025/20250322.01.md
         - read ../../draft/2025/20250417.01.md
+        - read ../../draft/2025/20250418.01.md
     - '195': 新版ego, instance or model, any manifest
       readme: |
         - read ../../draft/2024/09/20240925.01.md

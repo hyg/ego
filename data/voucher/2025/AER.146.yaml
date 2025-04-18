@@ -1,0 +1,33 @@
+date: 2025-04-18
+VoucherID: "19250418062000031114496211010926"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit: 
+    - AccountTitle: raw.food
+      asset: rmb
+      amount: 103.38
+  credit: 
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 103.38
+comment: 
+  - name: 鸡腿肉
+    amount: 1650
+    unit: g
+    asset: 45.00
+  - name: 极美滋儿童奥尔良腌料
+    amount: 105
+    unit: g
+    asset: 8.01
+  - name: 极美滋水煎鸡排调料
+    amount: 108
+    unit: g
+    asset: 9.01
+  - name: 阳光一号桔柚特小果
+    amount: 4000
+    unit: g
+    asset: 32.19
+  - name: 油莎豆
+    amount: 450
+    unit: g
+    asset: 9.18
