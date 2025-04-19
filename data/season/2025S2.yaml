@@ -581,12 +581,12 @@ time:
     learn: 2000
     js: 1000
   sold:
-    ego: 1050
-    PSMD: 660
+    ego: 1095
+    PSMD: 720
     raw: 90
     js: 120
     learn: 105
-    xuemen: 204
+    xuemen: 219
     infra: 240
 todo:
   PSMD:
@@ -949,7 +949,6 @@ todo:
     - '195': kernel模型升级
       readme: |
         - read ../../draft/2024/11/20241120.01.md
-    - '30': 月初事务
     - '195': 重新设计S2状态下的学门基本管理制度
     - '60': term.e6f0caec -> xuemen COD metadata-S2状态下的部门模型
 comment:
