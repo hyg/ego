@@ -590,14 +590,14 @@ time:
     infra: 240
 todo:
   PSMD:
-    - '90': 根据香港《公司條例》调整1609的部署方案 https://www.elegislation.gov.hk/hk/cap622
-      readme: |
-        - read ../../draft/2025/20250403.01.md
-        - read ../../draft/2025/20250418.02.md
     - '90': 子1609
       readme: |
         - read ../../draft/2025/20250125.02.md
         - read ../../draft/2025/20250416.01.md
+    - '90': 根据香港《公司條例》调整1609的部署方案 https://www.elegislation.gov.hk/hk/cap622
+      readme: |
+        - read ../../draft/2025/20250403.01.md
+        - read ../../draft/2025/20250418.02.md
     - '90': 整理新版本term的manifest code
       readme: |
         - 为了显示而设计的term model，并不适合与代码绑定。
