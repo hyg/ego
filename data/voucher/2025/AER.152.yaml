@@ -1,0 +1,17 @@
+date: 2025-04-25
+VoucherID: "19250425132010031356698895052984"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit: 
+    - AccountTitle: raw.food
+      asset: rmb
+      amount: 105.97
+  credit: 
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 105.97
+comment: 
+  - name: 去骨羊后腿肉
+    amount: 1500
+    unit: g
+    asset: 105.97
