@@ -37,7 +37,7 @@ module.exports = {
      }
      if(statusSummary.files.length){
         console.log("file changed:",statusSummary.files);
-        simpleGit(path,{ config: ['core.autocrlf=false'] })
+        simpleGit(path,{ config: ['core.autocrlf=false','http.https://github.com.proxy=http://127.0.0.1:9910'] })
         .env('GIT_SSH_COMMAND', GIT_SSH_COMMAND)
         .add('./*')
         .commit(msg)
