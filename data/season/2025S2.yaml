@@ -581,11 +581,11 @@ time:
     learn: 2000
     js: 1000
   sold:
-    ego: 1095
+    ego: 1155
     PSMD: 990
     raw: 90
     js: 120
-    learn: 418
+    learn: 508
     xuemen: 219
     infra: 240
 todo:
@@ -701,7 +701,9 @@ todo:
       readnme: |
         - 考虑upgradeby的实现。
   ego:
-    - '30': entry的科目归并
+    - '60': entry的科目归并
+      readme: |
+        - read ../../draft/2025/20250502.01.md
     - '60': redahomes
     - '195': 新版基础模型
       readme: |
@@ -807,6 +809,7 @@ todo:
         - read ../../draft/2024/10/20241003.03.md
         - read ../../draft/2024/10/20241004.01.md
   learn:
+    - '195': 量子力学的各种诠释
     - '30': clerk统一用户管理
       readme: |
         - https://clerk.com/
@@ -929,6 +932,7 @@ todo:
     - '60': 学习'Electron'，创作一个范例。
     - '60': 用代码中的对象或类，产生数据库创建SQL脚本、ER图（mermaid）
   raw:
+    - '60': 新版food plan
     - '60': 熟悉内脏之间的关系
       readme: |
         - read ../../draft/2024/09/20240917143000.md
@@ -947,6 +951,7 @@ todo:
             - '60': 新版本food预算决算
         - '60': 新版食材排序，包括升序、降序、特定值距离、多种营养成分特定值组合距离。
   xuemen:
+    - '30': 月初事务
     - '195': kernel模型升级
       readme: |
         - read ../../draft/2024/11/20241120.01.md

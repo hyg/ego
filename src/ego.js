@@ -25,10 +25,10 @@ const daycommand = program
 daycommand
     .command("init <mode>")
     .description('初始化：绑定时间模版，创建日计划、次日规划、手稿及元数据文件。')
-    .option("-d, -diff <diff>","目标日期相对于今天的天数。",0)
-    .action((mode,opt) => {
-        log("init:%s %s", mode,opt);
-        var dayobj = day.makedayobj(mode,parseInt(opt.Diff));
+    .option("-d, -diff <diff>", "目标日期相对于今天的天数。", 0)
+    .action((mode, opt) => {
+        log("init:%s %s", mode, opt);
+        var dayobj = day.makedayobj(mode, parseInt(opt.Diff));
         day.makedayplan(dayobj);
         day.maketomorrowinfo();
     });
@@ -90,11 +90,9 @@ seasoncommand
         season.plan();
     });
 
-
-    const assetcommand = program
+const assetcommand = program
     .command('asset')
     .description('资产管理功能');
-
 
 assetcommand
     .command("entry")
@@ -105,4 +103,21 @@ assetcommand
         asset.entry();
     });
 
+assetcommand
+    .command("account [account]")
+    .description('科目明细')
+    .action((account) => {
+        log("account detail:",account);
+        //season.debug = false;
+        asset.accountdetail(account);
+    });
+
+assetcommand
+    .command("year [year]")
+    .description('年度报告')
+    .action((year) => {
+        log("year report:", year);
+        //season.debug = false;
+        asset.yearreport(year);
+    });
 program.parse();

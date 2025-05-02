@@ -1,0 +1,17 @@
+date: 2025-05-01
+VoucherID: "19250501222000031487019671115640"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit: 
+    - AccountTitle: raw.food
+      asset: rmb
+      amount: 52.14
+  credit: 
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 52.14
+comment: 
+  - name: 河套牌麦芯粉
+    amount: 5000
+    unit: g
+    asset: 52.20
