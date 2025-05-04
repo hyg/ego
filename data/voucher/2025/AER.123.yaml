@@ -12,7 +12,7 @@ AccountingEntry:
   credit: 
     - AccountTitle: 银行存款
       asset: rmb
-      amount: 32000.00
+      amount: 32012.00
 comment: 
   - name: 房租
     amount: 6
