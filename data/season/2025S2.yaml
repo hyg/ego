@@ -582,19 +582,20 @@ time:
     js: 1000
   sold:
     ego: 1215
-    PSMD: 990
+    PSMD: 1080
     raw: 90
     js: 120
-    learn: 568
+    learn: 763
     xuemen: 269
-    infra: 300
+    infra: 360
 todo:
   PSMD:
-    - '90': 子1609
+    - '90': 子1609:基于公司、合同
       readme: |
         - read ../../draft/2025/20250125.02.md
         - read ../../draft/2025/20250416.01.md
         - read ../../draft/2025/20250427.01.md
+        - read ../../draft/2025/20250505.02.md
     - '90': 根据香港《公司條例》调整1609的部署方案 https://www.elegislation.gov.hk/hk/cap622
       readme: |
         - read ../../draft/2025/20250403.01.md
@@ -704,6 +705,7 @@ todo:
     - '30': entry的按月报表
       readme: |
         - read ../../draft/2025/20250504.02.md
+    - '30': draft汇总
     - '60': entry的科目归并
       readme: |
         - read ../../draft/2025/20250502.01.md
@@ -770,7 +772,7 @@ todo:
         - day metada
         - draft文件名
   infra:
-    - '60': 范例--利用js模块组合实现合同条款的组合。
+    - '90': 范例--利用js模块组合实现合同条款的组合。
       readme: |
         - read ../../draft/2024/10/20241004.05.md
         - read ../../draft/2024/11/20241118.03.md
@@ -794,6 +796,7 @@ todo:
         - read ../../draft/2024/12/20241211.03.md
         - read ../../draft/2024/12/20241212.03.md
         - read ../../draft/2025/20250503.03.md
+        - read ../../draft/2025/20250505.03.md
     - '90': schema立项。
       readme: |
         - read ../../draft/2024/09/20240919140000.md
@@ -812,7 +815,11 @@ todo:
         - read ../../draft/2024/10/20241003.03.md
         - read ../../draft/2024/10/20241004.01.md
   learn:
-    - '195': 量子力学的各种诠释
+    - '90': 量子力学的各种诠释:基于门电路、event机制的思想实验
+      readme: |
+        - read ../../draft/2025/20250505.01.md
+    - '30': 狄拉克算子
+    - '30': 重新规划vscodium workspace
     - '90': 热更新
     - '90': 腾讯文档sdk
       readme: |
@@ -932,6 +939,7 @@ todo:
     - '60': 学习'Electron'，创作一个范例。
     - '60': 用代码中的对象或类，产生数据库创建SQL脚本、ER图（mermaid）
   raw:
+    - '30': 脚脉
     - '60': 新版food plan
     - '60': 熟悉内脏之间的关系
       readme: |
