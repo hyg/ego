@@ -162,13 +162,15 @@ module.exports = {
                 waitinglist[time[i].amount.toString()].shift(); */
 
                 //var timestr = "## 计划 " + beginhour.toString().padStart(2, "0") + ":" + beginminute.toString().padStart(2, "0") + " ~ " + endhour.toString().padStart(2, "0") + ":" + endminute.toString().padStart(2, "0") + "\n" + timeperiod.subject + ": [" + timeperiod.title + "]\n\n";
-                var timestr = "## " + timeperiod.subject + ": [" + timeperiod.title + "]\n\n";
+                //var timestr = "## " + timeperiod.subject + ": [" + timeperiod.title + "]\n\n";
+                var draftstr = this.initdraft(timeperiod);
+                //log(draftstr);
 
                 if (this.debug == false) {
-                    fs.writeFileSync(timeperiod.output, timestr);
-                    log("save time slice draft file name:%s\n%s", timeperiod.output, timestr);
+                    fs.writeFileSync(timeperiod.output, draftstr);
+                    log("save time slice draft file name:%s\n%s", timeperiod.output, draftstr);
                 } else {
-                    log("debug, time slice draft file name:%s\n%s", timeperiod.output, timestr);
+                    log("debug, time slice draft file name:%s\n%s", timeperiod.output, draftstr);
                 }
 
             }
@@ -193,6 +195,23 @@ module.exports = {
 
 
         return dayobj;
+    },
+    initdraft: function(timeperiod){
+        var draftstr = "## " + timeperiod.subject + ": [" + timeperiod.title + "]\n\n";
+        if(timeperiod.readme != null){
+            //log("timeperiod.readme:",timeperiod.readme);
+            var readme = yaml.load(timeperiod.readme);
+            log("readme:",readme);
+            for(var id in readme){
+                var item = readme[id];
+                log("item:",item);
+                draftstr += "### " +item + "\n\n";
+                if(item.substring(0,4) == "read"){
+                    draftstr += fs.readFileSync(item.substring(5), 'utf8') + "\n\n";
+                }
+            }
+        }
+        return draftstr ;
     },
     maketable: function (dayobj) {
         var tablestr = `| 时间片 | 时长 | 用途 | 手稿 |

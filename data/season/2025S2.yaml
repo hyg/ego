@@ -581,7 +581,7 @@ time:
     learn: 2000
     js: 1000
   sold:
-    ego: 1215
+    ego: 1305
     PSMD: 1080
     raw: 90
     js: 120
@@ -590,7 +590,7 @@ time:
     infra: 360
 todo:
   PSMD:
-    - '90': 子1609:基于公司、合同
+    - '195': 子1609:基于公司、合同
       readme: |
         - read ../../draft/2025/20250125.02.md
         - read ../../draft/2025/20250416.01.md
@@ -702,13 +702,12 @@ todo:
       readnme: |
         - 考虑upgradeby的实现。
   ego:
-    - '30': entry的按月报表
-      readme: |
-        - read ../../draft/2025/20250504.02.md
-    - '30': draft汇总
     - '60': entry的科目归并
       readme: |
         - read ../../draft/2025/20250502.01.md
+    - '30': entry的按月报表
+      readme: |
+        - read ../../draft/2025/20250504.02.md
     - '60': redahomes
     - '195': 新版基础模型
       readme: |

@@ -1,0 +1,17 @@
+date: 2025-05-06
+VoucherID: "2025050622001431991454719577"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit: 
+    - AccountTitle: xuemen
+      asset: rmb
+      amount: 238.68
+  credit: 
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 238.68
+comment: 
+  - name: ECS服务器
+    amount: 1
+    unit: 年
+    asset: 238.68

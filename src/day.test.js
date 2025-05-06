@@ -34,7 +34,7 @@ const day = require('./day.js');
     var dayobj;
     assert.ok(dayobj = day.loaddayobj(-1));
     assert.ok(day.makeoutputlist(dayobj));
-}); */
+});
 
 test('make day log',(t)=>{
     day.debug = true;
@@ -43,7 +43,13 @@ test('make day log',(t)=>{
     assert.ok(day.makedaylog(dayobj));
 });
 
-/* test('make tomorrow info',(t)=>{
+test('make tomorrow info',(t)=>{
     day.debug = true;
     assert.ok(day.maketomorrowinfo());
 }); */
+
+test('init draft',(t)=>{
+    day.debug = true;
+
+    assert.ok(day.makedayobj(2,-1));
+});
