@@ -200,7 +200,8 @@ module.exports = {
         var draftstr = "## " + timeperiod.subject + ": [" + timeperiod.title + "]\n\n";
         if(timeperiod.readme != null){
             //log("timeperiod.readme:",timeperiod.readme);
-            var readme = yaml.load(timeperiod.readme);
+            //var readme = yaml.load(timeperiod.readme);
+            var readme = timeperiod.readme;
             log("readme:",readme);
             for(var id in readme){
                 var item = readme[id];

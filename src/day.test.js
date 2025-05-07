@@ -51,5 +51,5 @@ test('make tomorrow info',(t)=>{
 test('init draft',(t)=>{
     day.debug = true;
 
-    assert.ok(day.makedayobj(2,-1));
+    assert.ok(day.makedayobj(2,-2));
 });
