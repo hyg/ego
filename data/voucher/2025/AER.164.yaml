@@ -1,0 +1,40 @@
+date: 2025-05-09
+VoucherID: "19250509172010031716905866053015"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit: 
+    - AccountTitle: raw.food
+      asset: rmb
+      amount: 92.94
+    - AccountTitle: raw.site.bj1
+      asset: rmb
+      amount: 4.15
+  credit: 
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 97.09
+comment: 
+  - name: 腊肉
+    amount: 500
+    unit: g
+    asset: 18.84
+  - name: 腊鸭腿
+    amount: 8
+    unit: 只
+    asset: 25.67
+  - name: 青麦碾转
+    amount: 500
+    unit: g
+    asset: 15.56
+  - name: 青麦仁
+    amount: 2000
+    unit: g
+    asset: 32.87
+  - name: O型圈套装
+    amount: 1
+    unit: 套
+    asset: 4.19
+  - name: 多多钱包余额
+    amount: 0.04
+    unit: 元
+    asset: -0.04

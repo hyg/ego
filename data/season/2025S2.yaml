@@ -682,12 +682,12 @@ todo:
       readnme: |
         - 考虑upgradeby的实现。
   ego:
-    - '60': entry的科目归并
-      readme:
-        - read ../../draft/2025/20250502.01.md
     - '30': entry的按月报表
       readme:
         - read ../../draft/2025/20250504.02.md
+    - '60': entry的科目归并
+      readme:
+        - read ../../draft/2025/20250502.01.md
     - '60': redahomes
     - '195': 新版基础模型
       readme:
@@ -772,6 +772,7 @@ todo:
         - read ../../draft/2024/10/20241003.03.md
         - read ../../draft/2024/10/20241004.01.md
   learn:
+    - '60': 复习思想实验的数学基础
     - '90': 量子力学的各种诠释:基于门电路、event机制的思想实验
       readme:
         - read ../../draft/2025/20250505.01.md
