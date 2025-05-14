@@ -1,0 +1,18 @@
+date: 2025-05-14
+VoucherID: "19250514162000031820982519105386"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit: 
+    - AccountTitle: raw.food
+      asset: rmb
+      amount: 97.68
+  credit: 
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 97.68
+comment: 
+  - name: 河套全脂奶粉
+    amount: 2500
+    unit: g
+    asset: 97.68
+
