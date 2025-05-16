@@ -1,0 +1,17 @@
+date: 2025-05-16
+VoucherID: "2025051622001431991456112732"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit: 
+    - AccountTitle: ego.it
+      asset: rmb
+      amount: 95.00
+  credit: 
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 95.00
+comment: 
+  - name: mars22.com域名
+    amount: 500
+    unit: g
+    asset: 13.80
