@@ -14,7 +14,7 @@ AccountingEntry:
     - AccountTitle: 银行存款
       asset: rmb
       amount: 2.00
-    - AccountTitle: 现金.微信零钱
+    - AccountTitle: 微信零钱
       asset: rmb
       amount: 13.98
 comment: 

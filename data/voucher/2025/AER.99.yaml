@@ -7,7 +7,7 @@ AccountingEntry:
       asset: rmb
       amount: 2.90
   credit: 
-    - AccountTitle: 现金.微信零钱
+    - AccountTitle: 微信零钱
       asset: rmb
       amount: 2.90
 comment: 

@@ -3,7 +3,7 @@ VoucherID: "1000039901000501287098581212078"
 AccountingSoftwareID: 
 AccountingEntry: 
   debit: 
-    - AccountTitle: 现金.微信零钱
+    - AccountTitle: 微信零钱
       asset: rmb
       amount: 188.88
   credit: 

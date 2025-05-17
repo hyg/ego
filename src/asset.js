@@ -153,7 +153,7 @@ module.exports = {
             "总账":{ id: 0, name: "总账", debit:{"rmb": 0.0},credit:{"rmb": 0.0},balance: { "rmb": 0.0 } },
             "银行存款": { id: 1, name: "银行存款",ftitle:"总账",  debit:{"rmb": 0.0},credit:{"rmb": 0.0},balance: { "rmb": 0.0 } },
             "现金": { id: 2, name: "现金", ftitle:"总账", debit:{"rmb": 0.0},credit:{"rmb": 0.0},balance: { "rmb": 0.0 } },
-            "现金.微信零钱": { id: 2.1, name: "现金.微信零钱", ftitle:"现金", debit:{"rmb": 0.0},credit:{"rmb": 0.0},balance: { "rmb": 0.0 } },
+            "微信零钱": { id: 2.1, name: "微信零钱", ftitle:"现金", debit:{"rmb": 0.0},credit:{"rmb": 0.0},balance: { "rmb": 0.0 } },
             "raw": { id: 10, name: "raw", ftitle:"总账",  debit:{"rmb": 0.0},credit:{"rmb": 0.0},balance: { "rmb": 0.0 } },
             "raw.food": { id: 10.1, name: "raw.food", ftitle:"raw",  debit:{"rmb": 0.0},credit:{"rmb": 0.0},balance: { "rmb": 0.0 } },
             "raw.med": { id: 10.2, name: "raw.med", ftitle:"raw",  debit:{"rmb": 0.0},credit:{"rmb": 0.0},balance: { "rmb": 0.0 } },

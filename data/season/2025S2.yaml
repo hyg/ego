@@ -682,9 +682,6 @@ todo:
       readnme: |
         - 考虑upgradeby的实现。
   ego:
-    - '30': entry的按月报表
-      readme:
-        - read ../../draft/2025/20250504.02.md
     - '60': entry的科目归并
       readme:
         - read ../../draft/2025/20250502.01.md
@@ -775,11 +772,11 @@ todo:
     - '60': 复习思想实验的数学基础
       readme:
         - read ../../draft/2025/20250424.b.md
+    - '30': 重新规划vscodium workspace
+    - '30': 狄拉克算子
     - '90': 量子力学的各种诠释:基于门电路、event机制的思想实验
       readme:
         - read ../../draft/2025/20250505.01.md
-    - '30': 狄拉克算子
-    - '30': 重新规划vscodium workspace
     - '90': 热更新
     - '90': 腾讯文档sdk
       readme:
@@ -897,7 +894,6 @@ todo:
     - '60': 学习'Electron'，创作一个范例。
     - '60': 用代码中的对象或类，产生数据库创建SQL脚本、ER图（mermaid）
   raw:
-    - '30': 脚脉
     - '60': 新版food plan
     - '60': 熟悉内脏之间的关系
       readme:
