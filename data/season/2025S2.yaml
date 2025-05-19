@@ -853,6 +853,16 @@ todo:
       readme:
         - https://zh.javascript.info/promise-api
   js:
+    - '60': IndexedDB + dexie
+    - '60': pouchdb + leveldb
+    - '60': lowdb
+    - '60': nedb
+    - '30': rxdb
+    - '30': LokiJS
+    - '30': node-dirty
+    - '30': tiny,https://www.npmjs.com/package/tiny
+    - '60': TinyDB
+    - '60': embedded dbs
     - '60': learn factory, constructor, prototype
       readme:
         - https://juejin.cn/post/6844903653774458888
