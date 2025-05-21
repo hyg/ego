@@ -24,7 +24,7 @@ time:
     name: 休整
   - begin: '20250520140000'
     amount: 0
-    redo: 0
+    redo: 30
     type: work
     name: 静默工作
     subject: ego
@@ -33,7 +33,7 @@ time:
     namelink: http://simp.ly/p/8t3vlk
   - begin: '20250520143000'
     amount: 0
-    redo: 0
+    redo: 30
     type: work
     name: 静默工作
     subject: raw
@@ -46,7 +46,7 @@ time:
     name: 休整
   - begin: '20250520160000'
     amount: 0
-    redo: 0
+    redo: 60
     type: work
     name: 静默工作
     subject: learn

@@ -1,0 +1,41 @@
+date: '20250521'
+mode: '1'
+plan: 1e
+time:
+  - begin: '20250521112000'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20250521113500'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20250521123500'
+    amount: 45
+    type: food
+    name: 午餐
+  - begin: '20250521132000'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20250521140500'
+    amount: 114
+    type: free
+    name: 休整
+  - begin: '20250521160000'
+    amount: 0
+    redo: 60
+    type: work
+    name: 静默工作
+    subject: js
+    title: IndexedDB + dexie
+    output: ../../draft/2025/20250521.01.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20250521170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20250521190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交

@@ -682,7 +682,7 @@ todo:
       readnme: |
         - 考虑upgradeby的实现。
   ego:
-    - '0': entry的按月归并
+    - '30': entry的按月归并
     - '60': entry的科目归并
       readme:
         - read ../../draft/2025/20250502.01.md
@@ -770,7 +770,7 @@ todo:
         - read ../../draft/2024/10/20241003.03.md
         - read ../../draft/2024/10/20241004.01.md
   learn:
-    - '0': 真随机数发生器
+    - '60': 真随机数发生器
       readme:
         - https://sca.gov.cn/sca/zxfw/2017-04/25/content_1011723.shtml
         - https://www.random.org/
@@ -910,7 +910,7 @@ todo:
     - '60': 学习'Electron'，创作一个范例。
     - '60': 用代码中的对象或类，产生数据库创建SQL脚本、ER图（mermaid）
   raw:
-    - '0': 脚脉
+    - '30': 脚脉
     - '60': 新版food plan
     - '60': 熟悉内脏之间的关系
       readme:
