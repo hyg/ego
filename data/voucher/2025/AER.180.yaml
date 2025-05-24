@@ -1,0 +1,33 @@
+date: 2025-05-23
+VoucherID:
+  - "2025052322001431991441920636"
+  - "2025052322001431991443898216"
+  - "4200002412202505234853590200"
+  - "4200002750202505233336966611"
+  - "4200002678202505236916241849"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit: 
+    - AccountTitle: raw.med
+      asset: rmb
+      amount: 65.97
+  credit: 
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 2.00
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 63.97
+comment: 
+  - name: 公交车
+    amount: 2
+    unit: 次
+    asset: 2.00
+  - name: 地铁
+    amount: 2
+    unit: 次
+    asset: 13.97
+  - name: 医事服务费
+    amount: 1
+    unit: 次
+    asset: 50.00

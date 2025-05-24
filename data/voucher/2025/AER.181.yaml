@@ -1,0 +1,17 @@
+date: 2025-05-23
+VoucherID: "2025052322001131991443106614"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit: 
+    - AccountTitle: raw.food
+      asset: rmb
+      amount: 24.00
+  credit: 
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 24.00
+comment: 
+  - name: 干炒牛河
+    amount: 1
+    unit: 份
+    asset: 24.00

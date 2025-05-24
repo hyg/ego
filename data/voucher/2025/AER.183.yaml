@@ -1,0 +1,44 @@
+date: 2025-05-24
+VoucherID: "19250524202010032154382882126477"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit: 
+    - AccountTitle: raw.food
+      asset: rmb
+      amount: 109.64
+    - AccountTitle: raw.supply
+      asset: rmb
+      amount: 14.26
+  credit: 
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 123.90
+comment: 
+  - name: 奶酪
+    amount: 450
+    unit: g
+    asset: 27.27
+  - name: 玉米面条
+    amount: 800
+    unit: g
+    asset: 15.74
+  - name: 猪脚姜
+    amount: 320
+    unit: g
+    asset: 16.79
+  - name: 豆瓣酱
+    amount: 900
+    unit: g
+    asset: 34.33
+  - name: 无盐细挂面
+    amount: 1600
+    unit: g
+    asset: 15.55
+  - name: 无香洗衣液
+    amount: 500
+    unit: g
+    asset: 14.26
+  - name: 多多钱包余额
+    amount: 0.04
+    unit: rmb
+    asset: -0.04
