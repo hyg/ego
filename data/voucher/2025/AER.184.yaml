@@ -1,0 +1,28 @@
+date: 2025-05-25
+VoucherID: "19250525172010032181427172147201"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit: 
+    - AccountTitle: raw.food
+      asset: rmb
+      amount: 35.18
+    - AccountTitle: raw.supply
+      asset: rmb
+      amount: 6.88
+  credit: 
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 42.06
+comment: 
+  - name: 牙膏真空吸头
+    amount: 1
+    unit: 个
+    asset: 6.88
+  - name: 人参果
+    amount: 4250
+    unit: g
+    asset: 35.22
+  - name: 多多钱包余额
+    amount: 0.04
+    unit: rmb
+    asset: -0.04

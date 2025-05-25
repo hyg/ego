@@ -1,0 +1,75 @@
+date: '20250525'
+mode: '1'
+plan: 1d
+time:
+  - begin: '20250525094500'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20250525100000'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20250525110000'
+    amount: 45
+    type: food
+    name: 午餐
+  - begin: '20250525114500'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20250525123000'
+    amount: 89
+    type: free
+    name: 休整
+  - begin: '20250525140000'
+    amount: 45
+    redo: 60
+    type: work
+    name: 静默工作
+    subject: ego
+    title: entry的按月归并
+    output: ../../draft/2025/20250525.01.md
+    namelink: http://simp.ly/p/8t3vlk
+  - begin: '20250525143000'
+    amount: 15
+    type: work
+    name: 静默工作
+    subject: raw
+    title: 脚脉
+    output: ../../draft/2025/20250525.02.md
+    namelink: http://simp.ly/p/5k9gJy
+  - begin: '20250525150000'
+    amount: 60
+    type: free
+    name: 休整
+  - begin: '20250525160000'
+    amount: 120
+    redo: 60
+    type: work
+    name: 静默工作
+    subject: learn
+    title: 真随机数发生器
+    readme:
+      - https://sca.gov.cn/sca/zxfw/2017-04/25/content_1011723.shtml
+      - https://www.random.org/clients/http/
+      - https://numbergenerator.org/true-random-numbers
+      - https://www.npmjs.com/package/crypto-random-string
+      - https://www.npmjs.com/package/randomfill
+      - https://www.npmjs.com/package/true-random
+      - https://www.npmjs.com/package/trng2
+      - https://www.npmjs.com/package/fiddlles-trng
+      - https://www.npmjs.com/package/drng
+      - https://blog.csdn.net/qq_31661311/article/details/145425577
+      - node.js crypto.randomBytes
+      - https://www.example-code.com/nodejs/prng_export_entropy.asp
+    output: ../../draft/2025/20250525.03.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20250525170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20250525190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交

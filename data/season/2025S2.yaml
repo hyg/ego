@@ -566,11 +566,11 @@ time:
     learn: 2000
     js: 1000
   sold:
-    ego: 1305
+    ego: 1350
     PSMD: 1080
-    raw: 90
+    raw: 105
     js: 120
-    learn: 763
+    learn: 883
     xuemen: 269
     infra: 600
 todo:
@@ -682,7 +682,9 @@ todo:
       readnme: |
         - 考虑upgradeby的实现。
   ego:
-    - '30': entry的按月归并
+    - '60': entry的按月归并
+      readme: |
+        - read ../../draft/2025/20250525.01.md
     - '60': entry的科目归并
       readme:
         - read ../../draft/2025/20250502.01.md
@@ -771,10 +773,8 @@ todo:
         - read ../../draft/2024/10/20241004.01.md
   learn:
     - '60': 真随机数发生器
-      readme:
-        - https://sca.gov.cn/sca/zxfw/2017-04/25/content_1011723.shtml
-        - https://www.random.org/
-        - https://www.random.org/clients/http/
+      readme: |
+        https://sca.gov.cn/sca/zxfw/2017-04/25/content_1011723.shtml,https://www.random.org/clients/http/,https://numbergenerator.org/true-random-numbers,https://www.npmjs.com/package/crypto-random-string,https://www.npmjs.com/package/randomfill,https://www.npmjs.com/package/true-random,https://www.npmjs.com/package/trng2,https://www.npmjs.com/package/fiddlles-trng,https://www.npmjs.com/package/drng,https://blog.csdn.net/qq_31661311/article/details/145425577,node.js crypto.randomBytes,https://www.example-code.com/nodejs/prng_export_entropy.asp- read ../../draft/2025/20250525.03.md
     - '60': 复习思想实验的数学基础
       readme:
         - read ../../draft/2025/20250424.b.md
@@ -910,7 +910,6 @@ todo:
     - '60': 学习'Electron'，创作一个范例。
     - '60': 用代码中的对象或类，产生数据库创建SQL脚本、ER图（mermaid）
   raw:
-    - '30': 脚脉
     - '60': 新版food plan
     - '60': 熟悉内脏之间的关系
       readme:
