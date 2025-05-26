@@ -1,0 +1,68 @@
+date: '20250526'
+mode: '1'
+plan: 1d
+time:
+  - begin: '20250526085600'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20250526091100'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20250526101100'
+    amount: 45
+    type: food
+    name: 午餐
+  - begin: '20250526105600'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20250526114100'
+    amount: 138
+    type: free
+    name: 休整
+  - begin: '20250526174000'
+    amount: 45
+    type: work
+    name: 静默工作
+    subject: learn
+    title: 重新规划vscodium workspace
+    output: ../../draft/2025/20250526.01.md
+    namelink: http://simp.ly/p/8t3vlk
+  - begin: '20250526143000'
+    amount: 45
+    redo: 60
+    type: work
+    name: 静默工作
+    subject: learn
+    title: 量子物理的数学基础
+    readme:
+      - https://baike.baidu.com/item/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95/11421
+      - https://zhuanlan.zhihu.com/p/629852598
+    output: ../../draft/2025/20250526.02.md
+    namelink: http://simp.ly/p/5k9gJy
+  - begin: '20250526150000'
+    amount: 60
+    type: free
+    name: 休整
+  - begin: '20250526160000'
+    amount: 60
+    redo: 90
+    type: work
+    name: 静默工作
+    subject: ego
+    title: entry的按月归并
+    readme:
+      - read ../../draft/2025/20250525.01.md
+      - https://sql.js.org
+    output: ../../draft/2025/20250526.03.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20250526170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20250526190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
