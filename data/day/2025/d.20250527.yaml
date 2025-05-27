@@ -35,7 +35,7 @@ time:
       - https://www.zhihu.com/question/8262443681/answer/1910424769247032544
     output: ../../draft/2025/20250527.a.md
   - begin: '20250527170000'
-    amount: 60
+    amount: 90
     type: work
     name: 静默工作
     subject: ego

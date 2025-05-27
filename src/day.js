@@ -324,8 +324,6 @@ module.exports = {
         for (var i in dayobj.time) {
             var timeperiod = dayobj.time[i];
             var begintime = util.str2time(timeperiod.begin);
-            log(timeperiod.output);
-            log("read "+timeperiod.output);
 
             if (datestr == util.datestr()) {
                 if (timeperiod.redo == true) {
