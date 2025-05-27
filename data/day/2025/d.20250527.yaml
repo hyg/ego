@@ -27,6 +27,25 @@ time:
     type: work
     name: 静默工作
     subject: learn
+    title: cursor rules
+    readme:
+      - https://blog.csdn.net/lc19890709/article/details/147702482
+      - RIPER-5
+      - https://www.zhihu.com/question/8262443681/answer/1910424769247032544
+    output: ../../draft/2025/20250527.a.md
+  - begin: '20250527170000'
+    amount: 60
+    type: work
+    name: 静默工作
+    subject: ego
+    title: todoitem的readme
+    output: ../../draft/2025/20250527.b.md
+  - begin: '20250527160000'
+    amount: 0
+    redo: 60
+    type: work
+    name: 静默工作
+    subject: learn
     title: 量子物理的数学基础
     readme:
       - https://baike.baidu.com/item/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95/11421

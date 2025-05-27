@@ -796,11 +796,6 @@ todo:
     - '90': 量子力学的各种诠释:基于门电路、event机制的思想实验
       readme:
         - read ../../draft/2025/20250505.01.md
-    - '60': cursor rules
-      readme:
-        - https://blog.csdn.net/lc19890709/article/details/147702482
-        - RIPER-5
-        - https://www.zhihu.com/question/8262443681/answer/1910424769247032544
     - '90': 热更新
     - '90': MCP in ts
       readme: 
