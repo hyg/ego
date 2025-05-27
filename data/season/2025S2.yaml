@@ -679,12 +679,15 @@ todo:
         - read ../../draft/2024/11/20241115.01.md
         - read ../../draft/2024/11/20241117.05.md
     - '90': term metadata的序号，分为显示序号和唯一id两种。
-      readnme: |
+      readnme:
         - 考虑upgradeby的实现。
   ego:
+    - '60': todo item中readme的传递（数组复制）
     - '90': entry的按月归并
-      readme: |
-        read ../../draft/2025/20250525.01.md,https://sql.js.org- read ../../draft/2025/20250526.03.md
+      readme:
+        - read ../../draft/2025/20250525.01.md
+        - https://sql.js.org
+        - read ../../draft/2025/20250526.03.md
     - '60': entry的科目归并
       readme:
         - read ../../draft/2025/20250502.01.md
@@ -772,19 +775,36 @@ todo:
         - read ../../draft/2024/10/20241003.03.md
         - read ../../draft/2024/10/20241004.01.md
   learn:
-    - '60': 量子物理的数学基础
-      readme: |
-        https://baike.baidu.com/item/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95/11421,https://zhuanlan.zhihu.com/p/629852598- read ../../draft/2025/20250526.02.md
     - '60': 真随机数发生器
-      readme: |
-        https://sca.gov.cn/sca/zxfw/2017-04/25/content_1011723.shtml,https://www.random.org/clients/http/,https://numbergenerator.org/true-random-numbers,https://www.npmjs.com/package/crypto-random-string,https://www.npmjs.com/package/randomfill,https://www.npmjs.com/package/true-random,https://www.npmjs.com/package/trng2,https://www.npmjs.com/package/fiddlles-trng,https://www.npmjs.com/package/drng,https://blog.csdn.net/qq_31661311/article/details/145425577,node.js crypto.randomBytes,https://www.example-code.com/nodejs/prng_export_entropy.asp- read ../../draft/2025/20250525.03.md
+      readme:
+        - https://sca.gov.cn/sca/zxfw/2017-04/25/content_1011723.shtml
+        - https://www.random.org/clients/http/
+        - https://numbergenerator.org/true-random-numbers
+        - https://www.npmjs.com/package/crypto-random-string
+        - https://www.npmjs.com/package/randomfill
+        - https://www.npmjs.com/package/true-random
+        - https://www.npmjs.com/package/trng2
+        - https://www.npmjs.com/package/fiddlles-trng
+        - https://www.npmjs.com/package/drng
+        - https://blog.csdn.net/qq_31661311/article/details/145425577
+        - node.js crypto.randomBytes
+        - https://www.example-code.com/nodejs/prng_export_entropy.asp
+        - read ../../draft/2025/20250525.03.md
     - '60': 复习思想实验的数学基础
       readme:
         - read ../../draft/2025/20250424.b.md
     - '90': 量子力学的各种诠释:基于门电路、event机制的思想实验
       readme:
         - read ../../draft/2025/20250505.01.md
+    - '60': cursor rules
+      readme:
+        - https://blog.csdn.net/lc19890709/article/details/147702482
+        - RIPER-5
+        - https://www.zhihu.com/question/8262443681/answer/1910424769247032544
     - '90': 热更新
+    - '90': MCP in ts
+      readme: 
+        - https://github.com/modelcontextprotocol/typescript-sdk
     - '90': 腾讯文档sdk
       readme:
         - https://docs.qq.com/open/developers

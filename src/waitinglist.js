@@ -62,7 +62,8 @@ module.exports = {
                             todoitem.name = todoobj[restSorted[j]][k][amounttype];
                             todoitem.id = k;
                             if (todoobj[restSorted[j]][k]["readme"] != null) {
-                                todoitem.readme = todoobj[restSorted[j]][k]["readme"];
+                                //todoitem.readme = todoobj[restSorted[j]][k]["readme"];
+                                todoitem.readme = [...todoobj[restSorted[j]][k]["readme"]];
                             }
                             waitinglist[amounttype].push(todoitem);
                         }

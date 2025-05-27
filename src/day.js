@@ -135,7 +135,8 @@ module.exports = {
                 timeperiod.subject = waitinglist[amount.toString()][0].task;
                 timeperiod.title = waitinglist[amount.toString()][0].name;
                 if (waitinglist[amount.toString()][0].readme != null) {
-                    timeperiod.readme = waitinglist[amount.toString()][0].readme;
+                    //timeperiod.readme = waitinglist[amount.toString()][0].readme;
+                    timeperiod.readme = [...waitinglist[amount.toString()][0].readme];
                 }
                 //timeperiod.output = path.draftrepopath + date.slice(0, 4) + "/" + date.slice(4, 6) + "/" + begintime + ".md";
                 draftcnt++;
@@ -201,7 +202,7 @@ module.exports = {
         if(timeperiod.readme != null){
             //log("timeperiod.readme:",timeperiod.readme);
             //var readme = yaml.load(timeperiod.readme);
-            var readme = timeperiod.readme;
+            var readme = [...timeperiod.readme];
             log("readme:",readme);
             for(var id in readme){
                 var item = readme[id];
