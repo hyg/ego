@@ -324,6 +324,8 @@ module.exports = {
         for (var i in dayobj.time) {
             var timeperiod = dayobj.time[i];
             var begintime = util.str2time(timeperiod.begin);
+            log(timeperiod.output);
+            log("read "+timeperiod.output);
 
             if (datestr == util.datestr()) {
                 if (timeperiod.redo == true) {
@@ -336,14 +338,18 @@ module.exports = {
                         if (timeperiod.amount == 0) {
                             season.addtodoitem(seasonobj, timeperiod.subject, timeperiod.title, timeperiod.redo, timeperiod.readme);
                         } else {
-                            season.addtodoitem(seasonobj, timeperiod.subject, timeperiod.title, timeperiod.redo, timeperiod.readme + "- read " + timeperiod.output + "\n");
+                            timeperiod.readme.push("read  " + timeperiod.output);
+                            //season.addtodoitem(seasonobj, timeperiod.subject, timeperiod.title, timeperiod.redo, timeperiod.readme + "- read " + timeperiod.output + "\n");
+                            season.addtodoitem(seasonobj, timeperiod.subject, timeperiod.title, timeperiod.redo, timeperiod.readme);
                         }
 
                     } else {
                         if (timeperiod.amount == 0) {
                             season.addtodoitem(seasonobj, timeperiod.subject, timeperiod.title, timeperiod.redo, null);
                         } else {
-                            season.addtodoitem(seasonobj, timeperiod.subject, timeperiod.title, timeperiod.redo, "- read " + timeperiod.output + "\n");
+                            timeperiod.readme = new array("read  " + timeperiod.output);
+                            season.addtodoitem(seasonobj, timeperiod.subject, timeperiod.title, timeperiod.redo, timeperiod.readme);
+                            //season.addtodoitem(seasonobj, timeperiod.subject, timeperiod.title, timeperiod.redo, "- read " + timeperiod.output + "\n");
                         }
                     }
 

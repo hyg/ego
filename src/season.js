@@ -91,7 +91,7 @@ module.exports = {
         return seasonobj;
     },
     addtodoitem(seasonobj, task, name, amount, readme) {
-        log("add the todo item to %s: %s", task, name);
+        log("add the todo item to %s: %s", task, name,amount,readme);
 
         log("before add todo item:\n" + yaml.dump(seasonobj.todo[task]));
         var todoarray = seasonobj.todo[task];
