@@ -570,7 +570,7 @@ time:
     PSMD: 1080
     raw: 105
     js: 120
-    learn: 1033
+    learn: 1123
     xuemen: 269
     infra: 600
 todo:
@@ -682,7 +682,6 @@ todo:
       readnme:
         - 考虑upgradeby的实现。
   ego:
-    - '60': todo item中readme的传递（数组复制）
     - '90': entry的按月归并
       readme:
         - read ../../draft/2025/20250525.01.md
@@ -775,6 +774,14 @@ todo:
         - read ../../draft/2024/10/20241003.03.md
         - read ../../draft/2024/10/20241004.01.md
   learn:
+    - '90': query yaml file or js obj
+      readme:
+        - https://www.npmjs.com/package/json-query
+        - https://www.lodashjs.com/docs/lodash.findKey
+        - https://www.npmjs.com/package/jora
+        - https://www.npmjs.com/package/jsonpath
+        - https://www.npmjs.com/package/@pulumi/query
+        - read  ../../draft/2025/20250528.01.md
     - '60': 量子物理的数学基础
       readme:
         - https://baike.baidu.com/item/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95/11421
