@@ -568,8 +568,8 @@ time:
   sold:
     ego: 1500
     PSMD: 1080
-    raw: 105
-    js: 120
+    raw: 285
+    js: 210
     learn: 1123
     xuemen: 269
     infra: 600
@@ -774,14 +774,6 @@ todo:
         - read ../../draft/2024/10/20241003.03.md
         - read ../../draft/2024/10/20241004.01.md
   learn:
-    - '90': query yaml file or js obj
-      readme:
-        - https://www.npmjs.com/package/json-query
-        - https://www.lodashjs.com/docs/lodash.findKey
-        - https://www.npmjs.com/package/jora
-        - https://www.npmjs.com/package/jsonpath
-        - https://www.npmjs.com/package/@pulumi/query
-        - read  ../../draft/2025/20250528.01.md
     - '60': 量子物理的数学基础
       readme:
         - https://baike.baidu.com/item/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95/11421
@@ -887,16 +879,16 @@ todo:
       readme:
         - https://zh.javascript.info/promise-api
   js:
-    - '60': IndexedDB + dexie
-    - '60': pouchdb + leveldb
-    - '60': lowdb
-    - '60': nedb
-    - '30': rxdb
-    - '30': LokiJS
-    - '30': node-dirty
-    - '30': tiny,https://www.npmjs.com/package/tiny
-    - '60': TinyDB
-    - '60': embedded dbs
+    - '60': jora
+    - '30': lodash.findkey
+    - '90': query yaml file or js obj
+      readme:
+        - https://www.npmjs.com/package/json-query
+        - https://www.lodashjs.com/docs/lodash.findKey
+        - https://www.npmjs.com/package/jora
+        - https://www.npmjs.com/package/jsonpath
+        - https://www.npmjs.com/package/@pulumi/query
+        - read  ../../draft/2025/20250528.01.md
     - '60': learn factory, constructor, prototype
       readme:
         - https://juejin.cn/post/6844903653774458888
@@ -941,19 +933,30 @@ todo:
       readme:
         - https://github.com/matrix-org/matrix-js-sdk
         - http://matrix-org.github.io/matrix-js-sdk/index.html
+    - '60': embedded dbs
+      readme:
+        - IndexedDB + dexie
+        - pouchdb + leveldb
+        - lowdb
+        - nedb
+        - rxdb
+        - LokiJS
+        - node-dirty
+        - tiny,https://www.npmjs.com/package/tiny
+        - TinyDB
     - '60': 学习'Electron'，创作一个范例。
     - '60': 用代码中的对象或类，产生数据库创建SQL脚本、ER图（mermaid）
   raw:
     - '60': 新版food plan
-    - '60': 熟悉内脏之间的关系
-      readme:
-        - read ../../draft/2024/09/20240917143000.md
-    - '60': 设计二季度时间表
+    - '60': 设计三季度时间表
       readme:
         - 两片休整时间联合调节的算法需要整理。
         - 餐谱和饱腹感时间需要综合算计。
         - read ../../draft/2024/09/20240904143000.md
         - read ../../draft/2024/09/20240907140000.md
+    - '60': 熟悉内脏之间的关系
+      readme:
+        - read ../../draft/2024/09/20240917143000.md
     - '60': 新版营养成分详情，允许多种营养成分。
       bind:
         - '90': 整理代码，理顺food.js几个成员函数之间的调用关系

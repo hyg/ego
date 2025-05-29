@@ -1,0 +1,21 @@
+date: 2025-05-29
+VoucherID: "19250529202010032277738212157745"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit: 
+    - AccountTitle: raw.food
+      asset: rmb
+      amount: 22.68
+  credit: 
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 22.68
+comment: 
+  - name: 蒸肉米粉
+    amount: 250
+    unit: g
+    asset: 8.89
+  - name: 黄山烧饼
+    amount: 680
+    unit: g
+    asset: 13.79

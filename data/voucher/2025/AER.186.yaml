@@ -1,0 +1,17 @@
+date: 2025-05-29
+VoucherID: "10001071012025052900048195258137"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit: 
+    - AccountTitle: raw.med
+      asset: rmb
+      amount: 40.00
+  credit: 
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 40.00
+comment: 
+  - name: 冲牙器维修和运费
+    amount: 1
+    unit: 台
+    asset: 40.00
