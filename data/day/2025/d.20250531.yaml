@@ -20,6 +20,7 @@ time:
     name: 会议、自习
   - begin: '20250531141500'
     amount: 180
+    redo: 90
     type: work
     name: 静默工作
     subject: xuemen
