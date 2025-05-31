@@ -1,0 +1,50 @@
+date: '20250531'
+mode: '1'
+plan: 1e
+time:
+  - begin: '20250531113000'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20250531114500'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20250531124500'
+    amount: 45
+    type: food
+    name: 午餐
+  - begin: '20250531133000'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20250531141500'
+    amount: 180
+    type: work
+    name: 静默工作
+    subject: xuemen
+    title: mail server
+    readme:
+      - https://stalw.art
+    output: ../../draft/2025/20250531.a.md
+  - begin: '20250531160000'
+    amount: 0
+    redo: 60
+    type: work
+    name: 静默工作
+    subject: learn
+    title: 量子物理的数学基础
+    readme:
+      - https://baike.baidu.com/item/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95/11421
+      - https://zhuanlan.zhihu.com/p/629852598
+      - read ../../draft/2025/20250526.02.md
+    output: ../../draft/2025/20250531.01.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20250531170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20250531190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
