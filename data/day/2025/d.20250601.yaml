@@ -1,0 +1,71 @@
+date: '20250601'
+mode: '1'
+plan: 1d
+time:
+  - begin: '20250601100600'
+    amount: 20
+    type: free
+    name: 休整
+  - begin: '20250601103600'
+    amount: 74
+    type: prepare
+    name: 备餐、运动
+  - begin: '20250601115000'
+    amount: 88
+    type: food
+    name: 午餐
+  - begin: '20250601131800'
+    amount: 84
+    type: discuss
+    name: 会议、自习
+  - begin: '20250601144200'
+    amount: 33
+    type: work
+    name: 静默工作
+    subject: js
+    title: lodash.findkey
+    output: ../../draft/2025/20250601.01.md
+    namelink: http://simp.ly/p/8t3vlk
+  - begin: '20250601151500'
+    amount: 51
+    type: work
+    name: 静默工作
+    subject: js
+    title: jsonquerylang.org
+    output: ../../draft/2025/20250601.02.md
+    namelink: http://simp.ly/p/5k9gJy
+  - begin: '202506011606000'
+    amount: 34
+    type: free
+    name: 休整
+  - begin: '20250601164000'
+    amount: 105
+    redo: 90
+    type: work
+    name: 静默工作
+    subject: js
+    title: openpgp v6.1.1.
+    output: ../../draft/2025/20250601.a.md
+  - begin: '20250601160000'
+    amount: 0
+    redo: 60
+    type: work
+    name: 静默工作
+    subject: learn
+    title: 量子物理的数学基础
+    readme:
+      - https://baike.baidu.com/item/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95/11421
+      - https://zhuanlan.zhihu.com/p/629852598
+      - read ../../draft/2025/20250526.02.md
+      - read ../../draft/2025/20250417.01.md
+      - read ../../draft/2025/20250407.b.md
+    output: ../../draft/2025/20250601.03.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20250601182500'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20250601190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交

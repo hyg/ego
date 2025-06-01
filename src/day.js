@@ -209,7 +209,7 @@ module.exports = {
                 log("item:",item);
                 draftstr += "### " +item + "\n\n";
                 if(item.substring(0,4) == "read"){
-                    draftstr += fs.readFileSync(item.substring(5), 'utf8') + "\n\n";
+                    draftstr += "##" + fs.readFileSync(item.substring(5), 'utf8') + "\n\n";
                 }
             }
         }
@@ -345,7 +345,7 @@ module.exports = {
                         if (timeperiod.amount == 0) {
                             season.addtodoitem(seasonobj, timeperiod.subject, timeperiod.title, timeperiod.redo, null);
                         } else {
-                            timeperiod.readme = new array("read  " + timeperiod.output);
+                            timeperiod.readme = new Array("read  " + timeperiod.output);
                             season.addtodoitem(seasonobj, timeperiod.subject, timeperiod.title, timeperiod.redo, timeperiod.readme);
                             //season.addtodoitem(seasonobj, timeperiod.subject, timeperiod.title, timeperiod.redo, "- read " + timeperiod.output + "\n");
                         }
