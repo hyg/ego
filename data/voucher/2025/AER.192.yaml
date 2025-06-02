@@ -1,0 +1,17 @@
+date: 2025-06-02
+VoucherID: "19250602092000032306409610147536"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit: 
+    - AccountTitle: raw.supply
+      asset: rmb
+      amount: 7.56
+  credit: 
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 7.56
+comment: 
+  - name: 剃须泡沫
+    amount: 250
+    unit: ml
+    asset: 7.56

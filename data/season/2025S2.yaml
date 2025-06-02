@@ -942,6 +942,9 @@ todo:
             - https://zh-hans.eslint.org/docs/latest/use/getting-started
     - '60': 向外提供js文件的范例，为代码层级互通做准备
     - '90': duckdb
+    - '90': editor.js
+      readme:
+        - https://editorjs.io/
     - '60': giiter.im bot sample
       readme:
         - https://github.com/matrix-org/matrix-js-sdk

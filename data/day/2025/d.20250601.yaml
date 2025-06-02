@@ -62,10 +62,10 @@ time:
     output: ../../draft/2025/20250601.03.md
     namelink: http://simp.ly/p/4QDThK
   - begin: '20250601182500'
-    amount: 120
+    amount: 70
     type: food
     name: 晚餐
-  - begin: '20250601190000'
-    amount: 60
+  - begin: '20250601193500'
+    amount: 15
     type: check
     name: 讨论、整理提交
