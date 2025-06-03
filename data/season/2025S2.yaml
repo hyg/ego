@@ -570,8 +570,8 @@ time:
     PSMD: 1080
     raw: 285
     js: 474
-    learn: 1123
-    xuemen: 449
+    learn: 1431
+    xuemen: 501
     infra: 600
 todo:
   PSMD:
@@ -782,9 +782,6 @@ todo:
         - read ../../draft/2025/20250526.02.md
         - read ../../draft/2025/20250417.01.md
         - read ../../draft/2025/20250407.b.md
-    - '30': 整理学术工具
-      readme:
-        - https://www.microsoft.com/en-us/research/articles/microsoft-academic-to-expand-horizons-with-community-driven-approach/
     - '60': cursor rules
       readme:
         - https://blog.csdn.net/lc19890709/article/details/147702482
@@ -982,11 +979,6 @@ todo:
             - '60': 新版本food预算决算
         - '60': 新版食材排序，包括升序、降序、特定值距离、多种营养成分特定值组合距离。
   xuemen:
-    - '30': acme
-      readme:
-        - https://cloud.tencent.com/developer/article/2367988
-        - https://letsencrypt.org/zh-cn/docs/client-options/
-        - https://certbot.eff.org/
     - '90': mail server
       readme:
         - https://stalw.art

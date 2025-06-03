@@ -1,0 +1,83 @@
+date: '20250603'
+mode: '1'
+plan: 1d
+time:
+  - begin: '20250603082800'
+    amount: 35
+    type: free
+    name: 休整
+  - begin: '20250603090400'
+    amount: 73
+    type: prepare
+    name: 备餐、运动
+  - begin: '20250603101700'
+    amount: 73
+    type: food
+    name: 早餐
+  - begin: '20250603113000'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20250603121500'
+    amount: 45
+    type: free
+    name: 休整
+  - begin: '20250603130000'
+    amount: 52
+    type: work
+    name: 静默工作
+    subject: xuemen
+    title: acme
+    readme:
+      - https://cloud.tencent.com/developer/article/2367988
+      - https://letsencrypt.org/zh-cn/docs/client-options/
+      - https://certbot.eff.org/
+    output: ../../draft/2025/20250603.01.md
+    namelink: http://simp.ly/p/8t3vlk
+  - begin: '20250603135200'
+    amount: 68
+    type: work
+    name: 静默工作
+    subject: learn
+    title: 整理学术工具
+    readme:
+      - https://www.microsoft.com/en-us/research/articles/microsoft-academic-to-expand-horizons-with-community-driven-approach/
+    output: ../../draft/2025/20250603.02.md
+    namelink: http://simp.ly/p/5k9gJy
+  - begin: '20250603150000'
+    amount: 30
+    type: prepare
+    name: 备餐
+  - begin: '20250603153000'
+    amount: 60
+    type: food
+    name: 午餐
+  - begin: '20250603160000'
+    amount: 0
+    redo: 60
+    type: work
+    name: 静默工作
+    subject: learn
+    title: 量子物理的数学基础
+    readme:
+      - https://baike.baidu.com/item/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95/11421
+      - https://zhuanlan.zhihu.com/p/629852598
+      - read ../../draft/2025/20250526.02.md
+      - read ../../draft/2025/20250417.01.md
+      - read ../../draft/2025/20250407.b.md
+    output: ../../draft/2025/20250603.03.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20250603163000'
+    amount: 240
+    type: work
+    name: 静默工作
+    subject: learn
+    title: 整理学术工具
+  - begin: '20250603170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20250603190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
