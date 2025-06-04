@@ -1,0 +1,23 @@
+date: 2025-06-04
+VoucherID: 
+  - "4200002706202506042749425521"
+  - "4200002755202506044046850662"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit: 
+    - AccountTitle: ego.it
+      asset: rmb
+      amount: 176.00
+  credit: 
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 176.00
+comment: 
+  - name: 手机
+    amount: 50
+    unit: rmb
+    asset: 50.00
+  - name: 固话宽带
+    amount: 126.00
+    unit: rmb
+    asset: 126.00

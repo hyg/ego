@@ -73,11 +73,11 @@ time:
     name: 静默工作
     subject: learn
     title: 整理学术工具
-  - begin: '20250603170000'
+  - begin: '20250603203000'
     amount: 120
     type: food
     name: 晚餐
-  - begin: '20250603190000'
+  - begin: '20250603223000'
     amount: 60
     type: check
     name: 讨论、整理提交

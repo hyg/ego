@@ -568,8 +568,8 @@ time:
   sold:
     ego: 1500
     PSMD: 1080
-    raw: 285
-    js: 474
+    raw: 345
+    js: 684
     learn: 1431
     xuemen: 501
     infra: 600
@@ -882,10 +882,12 @@ todo:
       readme:
         - https://zh.javascript.info/promise-api
   js:
+    - '30': debug in vscodium
+      readme:
+        - https://code.visualstudio.com/docs/nodejs/nodejs-debugging
     - '90': openpgp v6.1.1.
       readme:
         - read  ../../draft/2025/20250601.a.md
-    - '60': jora
     - '90': query yaml file or js obj
       readme:
         - https://www.npmjs.com/package/json-query
@@ -895,6 +897,26 @@ todo:
         - https://www.npmjs.com/package/jsonpath
         - https://www.npmjs.com/package/@pulumi/query
         - read  ../../draft/2025/20250528.01.md
+    - '30': ai.js
+      readme:
+        - https://aijs.themaximalist.com/
+        - https://github.com/themaximalist/ai.js/
+    - '60': AI SDK
+      readme:
+        - https://github.com/vercel/ai
+        - https://ai-sdk.dev/
+    - '60': LangChain.js
+      readme:
+        - https://github.com/langchain-ai/langchainjs
+        - https://js.langchain.com
+    - '60': learn brain.js
+      readme:
+        - https://github.com/BrainJS/brain.js
+        - https://brain.js.org/
+      bind:
+        - '60': TensorFlow.js
+          readme:
+            - https://github.com/tensorflow/tfjs
     - '60': learn factory, constructor, prototype
       readme:
         - https://juejin.cn/post/6844903653774458888
@@ -909,9 +931,38 @@ todo:
             - 使用新的模块化设计
             - 使用新的data model
         - '30': 新版raw.js的子命令-营养成分排序
-    - '30': debug in vscodium
+    - '60': copilot
       readme:
-        - https://code.visualstudio.com/docs/nodejs/nodejs-debugging
+        - https://github.com/features/copilot
+    - '60': node.js
+      readme:
+        - https://github.com/yunnysunny/nodebook
+        - https://node.whyun.com/
+      bind:
+        - '60': debug
+          readme:
+            - https://github.com/nswbmw/node-in-debugging
+        - '60': The Node.js best practices list (July 2024)
+          readme:
+            - https://github.com/goldbergyoni/nodebestpractices
+        - '60': 学习 nodejs test框架
+          readme:
+            - https://github.com/Vanessa219/vditor - https://nodejs.cn/api/test.html
+            - https://github.com/markedjs/marked
+            - https://bun.sh/
+          bind:
+            - '90': 实际编写自己的测试范例
+            - '60': lint
+              readme:
+                - https://www.javascriptcn.com/post/675439161b963fe9cc4d25ce
+                - https://www.jslint.com/
+                - https://jshint.com/
+                - https://zh-hans.eslint.org/docs/latest/use/getting-started
+        - '60': nodejs server side dev
+          readme:
+            - https://github.com/qufei1993/Nodejs-Roadmap
+            - https://www.nodejs.red
+    - '60': passportjs
     - '90': learn graphql
       readme:
         - https://www.graphql-js.org/docs/
@@ -924,19 +975,9 @@ todo:
         - https://lisperator.net/pltut/
         - https://github.com/keyz/the-super-tiny-interpreter
         - https://github.com/jamiebuilds/the-super-tiny-compiler
-    - '60': 学习 nodejs test框架
+    - '60': 浏览器自动化
       readme:
-        - https://github.com/Vanessa219/vditor - https://nodejs.cn/api/test.html
-        - https://github.com/markedjs/marked
-        - https://bun.sh/
-      bind:
-        - '90': 实际编写自己的测试范例
-        - '60': lint
-          readme:
-            - https://www.javascriptcn.com/post/675439161b963fe9cc4d25ce
-            - https://www.jslint.com/
-            - https://jshint.com/
-            - https://zh-hans.eslint.org/docs/latest/use/getting-started
+        - https://github.com/microsoft/playwright-dotnet
     - '60': 向外提供js文件的范例，为代码层级互通做准备
     - '90': duckdb
     - '90': editor.js
@@ -960,7 +1001,7 @@ todo:
     - '60': 学习'Electron'，创作一个范例。
     - '60': 用代码中的对象或类，产生数据库创建SQL脚本、ER图（mermaid）
   raw:
-    - '60': 新版food plan
+    - '60': 整理 resource.md
     - '60': 设计三季度时间表
       readme:
         - 两片休整时间联合调节的算法需要整理。
@@ -979,6 +1020,7 @@ todo:
             - '60': 新版本food预算决算
         - '60': 新版食材排序，包括升序、降序、特定值距离、多种营养成分特定值组合距离。
   xuemen:
+    - '30': 月初事务
     - '90': mail server
       readme:
         - https://stalw.art

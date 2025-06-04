@@ -1,0 +1,17 @@
+date: 2025-06-03
+VoucherID: "19250603222010032406030077157998"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit: 
+    - AccountTitle: raw.food
+      asset: rmb
+      amount: 31.90
+  credit: 
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 31.90
+comment: 
+  - name: 伦晚脐橙
+    amount: 2500
+    unit: g
+    asset: 31.90

@@ -1,0 +1,65 @@
+date: '20250604'
+mode: '1'
+plan: 1d
+time:
+  - begin: '20250604100000'
+    amount: 37
+    type: free
+    name: 休整
+  - begin: '20250604103700'
+    amount: 66
+    type: prepare
+    name: 备餐、运动
+  - begin: '20250604114300'
+    amount: 57
+    type: food
+    name: 午餐
+  - begin: '20250604124000'
+    amount: 80
+    type: free
+    name: 休整
+  - begin: '20250604140000'
+    amount: 60
+    type: work
+    name: 静默工作
+    subject: js
+    title: jora
+    output: ../../draft/2025/20250604.01.md
+    namelink: http://simp.ly/p/8t3vlk
+  - begin: '20250604143000'
+    amount: 0
+    redo: 30
+    type: work
+    name: 静默工作
+    subject: js
+    title: debug in vscodium
+    readme:
+      - https://code.visualstudio.com/docs/nodejs/nodejs-debugging
+    output: ../../draft/2025/20250604.02.md
+    namelink: http://simp.ly/p/5k9gJy
+  - begin: '20250604150000'
+    amount: 60
+    type: free
+    name: 休整
+  - begin: '20250604160000'
+    amount: 60
+    type: work
+    name: 静默工作
+    subject: raw
+    title: 新版food plan
+    output: ../../draft/2025/20250604.03.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20250604170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20250604190000'
+    amount: 150
+    type: work
+    name: 静默工作
+    subject: js
+    title: jora
+  - begin: '20250604213000'
+    amount: 10
+    type: check
+    name: 讨论、整理提交
