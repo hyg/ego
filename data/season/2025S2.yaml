@@ -566,12 +566,12 @@ time:
     learn: 2000
     js: 1000
   sold:
-    ego: 1500
+    ego: 1712
     PSMD: 1080
     raw: 345
     js: 684
     learn: 1431
-    xuemen: 501
+    xuemen: 511
     infra: 600
 todo:
   PSMD:
@@ -682,15 +682,22 @@ todo:
       readnme:
         - 考虑upgradeby的实现。
   ego:
-    - '90': entry的按月归并
+    - '90': 整理js对象检索的代码
       readme:
-        - read ../../draft/2025/20250525.01.md
-        - https://sql.js.org
-        - read ../../draft/2025/20250526.03.md
-    - '60': entry的科目归并
+        - read  ../../draft/2025/20250605.03.md
+    - '90': 基于真实数据标志财务报表
       readme:
-        - read ../../draft/2025/20250502.01.md
-    - '60': redahomes
+        - read ../../draft/2025/20250605.01.md
+      bind:
+        - '90': 重新设计财务的基础元数据格式
+        - '90': entry的按月归并
+          readme:
+            - read ../../draft/2025/20250525.01.md
+            - https://sql.js.org
+            - read ../../draft/2025/20250526.03.md
+        - '60': entry的科目归并
+          readme:
+            - read ../../draft/2025/20250502.01.md
     - '195': 新版基础模型
       readme:
         - read ../../draft/2025/20250322.01.md
@@ -1001,7 +1008,7 @@ todo:
     - '60': 学习'Electron'，创作一个范例。
     - '60': 用代码中的对象或类，产生数据库创建SQL脚本、ER图（mermaid）
   raw:
-    - '60': 整理 resource.md
+    - '195': 整理 resource.md
     - '60': 设计三季度时间表
       readme:
         - 两片休整时间联合调节的算法需要整理。
@@ -1020,7 +1027,6 @@ todo:
             - '60': 新版本food预算决算
         - '60': 新版食材排序，包括升序、降序、特定值距离、多种营养成分特定值组合距离。
   xuemen:
-    - '30': 月初事务
     - '90': mail server
       readme:
         - https://stalw.art
