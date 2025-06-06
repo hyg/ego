@@ -1,0 +1,17 @@
+date: 2025-06-06
+VoucherID: "19250606072000032403522567126601"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit: 
+    - AccountTitle: raw.supply
+      asset: rmb
+      amount: 9.10
+  credit: 
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 9.10
+comment: 
+  - name: 旁氏氨基酸洗面奶
+    amount: 110
+    unit: g
+    asset: 9.10

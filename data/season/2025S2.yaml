@@ -569,10 +569,10 @@ time:
     ego: 1712
     PSMD: 1080
     raw: 345
-    js: 684
-    learn: 1431
+    js: 784
+    learn: 1544
     xuemen: 511
-    infra: 600
+    infra: 630
 todo:
   PSMD:
     - '195': 子1609:基于公司、合同
@@ -759,11 +759,12 @@ todo:
         - day metada
         - draft文件名
   infra:
-    - '90': 范例--利用js模块组合实现合同条款的组合。
+    - '60': 范例--利用js模块组合实现合同条款的组合。
       readme:
         - read ../../draft/2024/10/20241004.05.md
         - read ../../draft/2025/20250503.03.md
         - read ../../draft/2025/20250505.03.md
+        - read  ../../draft/2025/20250606.01.md
     - '90': schema立项。
       readme:
         - read ../../draft/2024/09/20240919140000.md
@@ -789,6 +790,15 @@ todo:
         - read ../../draft/2025/20250526.02.md
         - read ../../draft/2025/20250417.01.md
         - read ../../draft/2025/20250407.b.md
+        - read  ../../draft/2025/20250606.04.md
+    - '30': 佯谬及二次革命
+      readme:
+        - https://wuli.iphy.ac.cn/en/article/pdf/preview/10.7693/wl20221201.pdf
+        - read  ../../draft/2025/20250606.02.md
+    - '30': Helix editor
+      readme:
+        - https://docs.helix-editor.cn/title-page.html
+        - https://zhuanlan.zhihu.com/p/680116339
     - '60': cursor rules
       readme:
         - https://blog.csdn.net/lc19890709/article/details/147702482
@@ -889,9 +899,6 @@ todo:
       readme:
         - https://zh.javascript.info/promise-api
   js:
-    - '30': debug in vscodium
-      readme:
-        - https://code.visualstudio.com/docs/nodejs/nodejs-debugging
     - '90': openpgp v6.1.1.
       readme:
         - read  ../../draft/2025/20250601.a.md
