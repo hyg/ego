@@ -684,7 +684,7 @@ todo:
   ego:
     - '90': 整理js对象检索的代码
       readme:
-        - read  ../../draft/2025/20250605.03.md
+        - read ../../draft/2025/20250605.03.md
     - '90': 基于真实数据标志财务报表
       readme:
         - read ../../draft/2025/20250605.01.md
@@ -764,7 +764,7 @@ todo:
         - read ../../draft/2024/10/20241004.05.md
         - read ../../draft/2025/20250503.03.md
         - read ../../draft/2025/20250505.03.md
-        - read  ../../draft/2025/20250606.01.md
+        - read ../../draft/2025/20250606.01.md
     - '90': schema立项。
       readme:
         - read ../../draft/2024/09/20240919140000.md
@@ -783,6 +783,14 @@ todo:
         - read ../../draft/2024/10/20241003.03.md
         - read ../../draft/2024/10/20241004.01.md
   learn:
+    - '30': Helix editor
+      readme:
+        - https://docs.helix-editor.cn/title-page.html
+        - https://zhuanlan.zhihu.com/p/680116339
+    - '30': 佯谬及二次革命
+      readme:
+        - https://wuli.iphy.ac.cn/en/article/pdf/preview/10.7693/wl20221201.pdf
+        - read ../../draft/2025/20250606.02.md
     - '60': 量子物理的数学基础
       readme:
         - https://baike.baidu.com/item/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95/11421
@@ -790,21 +798,13 @@ todo:
         - read ../../draft/2025/20250526.02.md
         - read ../../draft/2025/20250417.01.md
         - read ../../draft/2025/20250407.b.md
-        - read  ../../draft/2025/20250606.04.md
-    - '30': 佯谬及二次革命
-      readme:
-        - https://wuli.iphy.ac.cn/en/article/pdf/preview/10.7693/wl20221201.pdf
-        - read  ../../draft/2025/20250606.02.md
-    - '30': Helix editor
-      readme:
-        - https://docs.helix-editor.cn/title-page.html
-        - https://zhuanlan.zhihu.com/p/680116339
+        - read ../../draft/2025/20250606.04.md
     - '60': cursor rules
       readme:
         - https://blog.csdn.net/lc19890709/article/details/147702482
         - RIPER-5
         - https://www.zhihu.com/question/8262443681/answer/1910424769247032544
-        - read  ../../draft/2025/20250527.a.md
+        - read ../../draft/2025/20250527.a.md
     - '60': 真随机数发生器
       readme:
         - https://sca.gov.cn/sca/zxfw/2017-04/25/content_1011723.shtml
@@ -901,7 +901,7 @@ todo:
   js:
     - '90': openpgp v6.1.1.
       readme:
-        - read  ../../draft/2025/20250601.a.md
+        - read ../../draft/2025/20250601.a.md
     - '90': query yaml file or js obj
       readme:
         - https://www.npmjs.com/package/json-query
@@ -910,7 +910,7 @@ todo:
         - https://jsonquerylang.org/
         - https://www.npmjs.com/package/jsonpath
         - https://www.npmjs.com/package/@pulumi/query
-        - read  ../../draft/2025/20250528.01.md
+        - read ../../draft/2025/20250528.01.md
     - '30': ai.js
       readme:
         - https://aijs.themaximalist.com/
@@ -1037,7 +1037,7 @@ todo:
     - '90': mail server
       readme:
         - https://stalw.art
-        - read  ../../draft/2025/20250531.a.md
+        - read ../../draft/2025/20250531.a.md
     - '90': 2024年报
     - '195': kernel模型升级
       readme:

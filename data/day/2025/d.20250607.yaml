@@ -1,0 +1,89 @@
+date: '20250607'
+mode: '1'
+plan: 1b
+time:
+  - begin: '20250607092200'
+    amount: 21
+    type: free
+    name: 休整
+  - begin: '20250607094300'
+    amount: 82
+    type: prepare
+    name: 备餐、运动
+  - begin: '20250607110500'
+    amount: 75
+    type: food
+    name: 午餐
+  - begin: '20250607122000'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20250607091300'
+    amount: 16
+    type: free
+    name: 休整
+  - begin: '20250607093000'
+    amount: 0
+    redo: 90
+    type: work
+    name: 静默工作
+    subject: ego
+    title: 整理js对象检索的代码
+    readme:
+      - read ../../draft/2025/20250605.03.md
+    output: ../../draft/2025/20250607.01.md
+    namelink: http://simp.ly/p/j1SspP
+  - begin: '20250607110000'
+    amount: 180
+    type: food
+    name: 备餐、午餐午休
+  - begin: '20250607140000'
+    amount: 0
+    redo: 30
+    type: work
+    name: 静默工作
+    subject: learn
+    title: 佯谬及二次革命
+    readme:
+      - https://wuli.iphy.ac.cn/en/article/pdf/preview/10.7693/wl20221201.pdf
+      - read ../../draft/2025/20250606.02.md
+    output: ../../draft/2025/20250607.02.md
+    namelink: http://simp.ly/p/8t3vlk
+  - begin: '20250607143000'
+    amount: 0
+    redo: 30
+    type: work
+    name: 静默工作
+    subject: learn
+    title: Helix editor
+    readme:
+      - https://docs.helix-editor.cn/title-page.html
+      - https://zhuanlan.zhihu.com/p/680116339
+    output: ../../draft/2025/20250607.03.md
+    namelink: http://simp.ly/p/5k9gJy
+  - begin: '20250607150000'
+    amount: 60
+    type: free
+    name: 休整
+  - begin: '20250607160000'
+    amount: 0
+    redo: 60
+    type: work
+    name: 静默工作
+    subject: infra
+    title: 范例--利用js模块组合实现合同条款的组合。
+    readme:
+      - read ../../draft/2024/10/20241004.05.md
+      - read ../../draft/2025/20250503.03.md
+      - read ../../draft/2025/20250505.03.md
+      - read ../../draft/2025/20250606.01.md
+    output: ../../draft/2025/20250607.04.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20250607170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20250607190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交

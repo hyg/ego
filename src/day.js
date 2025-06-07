@@ -336,7 +336,7 @@ module.exports = {
                         if (timeperiod.amount == 0) {
                             season.addtodoitem(seasonobj, timeperiod.subject, timeperiod.title, timeperiod.redo, timeperiod.readme);
                         } else {
-                            timeperiod.readme.push("read  " + timeperiod.output);
+                            timeperiod.readme.push("read " + timeperiod.output);
                             //season.addtodoitem(seasonobj, timeperiod.subject, timeperiod.title, timeperiod.redo, timeperiod.readme + "- read " + timeperiod.output + "\n");
                             season.addtodoitem(seasonobj, timeperiod.subject, timeperiod.title, timeperiod.redo, timeperiod.readme);
                         }
@@ -345,7 +345,7 @@ module.exports = {
                         if (timeperiod.amount == 0) {
                             season.addtodoitem(seasonobj, timeperiod.subject, timeperiod.title, timeperiod.redo, null);
                         } else {
-                            timeperiod.readme = new Array("read  " + timeperiod.output);
+                            timeperiod.readme = new Array("read " + timeperiod.output);
                             season.addtodoitem(seasonobj, timeperiod.subject, timeperiod.title, timeperiod.redo, timeperiod.readme);
                             //season.addtodoitem(seasonobj, timeperiod.subject, timeperiod.title, timeperiod.redo, "- read " + timeperiod.output + "\n");
                         }

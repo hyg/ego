@@ -1,0 +1,36 @@
+date: 2025-06-07
+VoucherID: "19250607132000032432371872010708"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit: 
+    - AccountTitle: raw.food
+      asset: rmb
+      amount: 75.61
+    - AccountTitle: raw.shell
+      asset: rmb
+      amount: 34.27
+  credit: 
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 109.88
+comment: 
+  - name: polo衫
+    amount: 1
+    unit: 件
+    asset: 34.29
+  - name: 多多钱包余额
+    amount: 0.02
+    unit: g
+    asset: -0.02
+  - name: 可可粉
+    amount: 160
+    unit: g
+    asset: 33.82
+  - name: 全脂奶粉
+    amount: 1050
+    unit: g
+    asset: 31.48
+  - name: 红烧扣肉罐头
+    amount: 397
+    unit: g
+    asset: 10.31
