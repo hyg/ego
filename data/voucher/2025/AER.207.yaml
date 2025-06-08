@@ -1,0 +1,17 @@
+date: 2025-06-08
+VoucherID: "2025060822001431991415851489"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit: 
+    - AccountTitle: xuemen
+      asset: rmb
+      amount: 128.00
+  credit: 
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 128.00
+comment: 
+  - name: 阿里云服务购买
+    amount: 128
+    unit: rmb
+    asset: 128.00

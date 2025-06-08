@@ -1,0 +1,23 @@
+date: 2025-06-08
+VoucherID: 
+  - "19250608112010032513015421136659"
+  - "19250608152000032459047625073728"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit: 
+    - AccountTitle: raw.shell
+      asset: rmb
+      amount: 52.76
+  credit: 
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 52.76
+comment: 
+  - name: 速干衬衫
+    amount: 1
+    unit: 件
+    asset: 28.85
+  - name: 速干衬衫
+    amount: 1
+    unit: 件
+    asset: 23.91

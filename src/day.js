@@ -24,9 +24,23 @@ module.exports = {
         //var dateStr = year + "" + month + "" + day;
         var dateStr = util.datestr(diff);
         log("dateStr:", dateStr);
-
+        var healthobj;
         var healthpath = path.rawrepopath + "health/d." + dateStr + ".yaml";
-        var healthobj = yaml.load(fs.readFileSync(healthpath, 'utf8', { schema: yaml.FAILSAFE_SCHEMA }));
+        var lastfilename = path.rawrepopath + "health/.last.yaml";
+        try {
+            if (fs.existsSync(healthpath)) {
+                healthobj = yaml.load(fs.readFileSync(healthpath, 'utf8', { schema: yaml.FAILSAFE_SCHEMA }));
+            } else if ((diff == 0) && (fs.existsSync(lastfilename))) {
+                healthobj = yaml.load(fs.readFileSync(lastfilename, 'utf8', { schema: yaml.FAILSAFE_SCHEMA }));
+            } else {
+                log("health metadata is not exists.");
+            }
+        } catch (e) {
+            // failure
+            log("yaml read error:" + e);
+        }
+
+
         var waketime = healthobj.wake.time;
 
         return waketime;
@@ -42,8 +56,16 @@ module.exports = {
     loaddayobj: function (diff = 0) {
         log("diff:", diff);
         var dayfilename = this.dayfilename(diff);
-        var dayobj = yaml.load(fs.readFileSync(dayfilename, 'utf8', { schema: yaml.FAILSAFE_SCHEMA }));
-
+        try {
+            if (fs.existsSync(dayfilename)) {
+                dayobj = yaml.load(fs.readFileSync(dayfilename, 'utf8', { schema: yaml.FAILSAFE_SCHEMA }));
+            } else {
+                log("day obj is not exists.");
+            }
+        } catch (e) {
+            // failure
+            log("yaml read error:" + e);
+        }
         return dayobj;
     },
     loaddayobjbydate: function (datestr) {
@@ -197,23 +219,23 @@ module.exports = {
 
         return dayobj;
     },
-    initdraft: function(timeperiod){
+    initdraft: function (timeperiod) {
         var draftstr = "## " + timeperiod.subject + ": [" + timeperiod.title + "]\n\n";
-        if(timeperiod.readme != null){
+        if (timeperiod.readme != null) {
             //log("timeperiod.readme:",timeperiod.readme);
             //var readme = yaml.load(timeperiod.readme);
             var readme = [...timeperiod.readme];
-            log("readme:",readme);
-            for(var id in readme){
+            log("readme:", readme);
+            for (var id in readme) {
                 var item = readme[id];
-                log("item:",item);
-                draftstr += "### " +item + "\n\n";
-                if(item.substring(0,4) == "read"){
+                log("item:", item);
+                draftstr += "### " + item + "\n\n";
+                if (item.substring(0, 4) == "read") {
                     draftstr += "##" + fs.readFileSync(item.substring(5), 'utf8') + "\n\n";
                 }
             }
         }
-        return draftstr ;
+        return draftstr;
     },
     maketable: function (dayobj) {
         var tablestr = `| 时间片 | 时长 | 用途 | 手稿 |
@@ -381,12 +403,12 @@ module.exports = {
             log("debug, day plan file: %s\n%s", daylogfilename, daylogstr);
         }
 
-        if(indexstr == ""){
-            this.gitop("day over with non draft.");    
-        }else{
+        if (indexstr == "") {
+            this.gitop("day over with non draft.");
+        } else {
             this.gitop(indexstr);
         }
-        
+
         return daylogfilename;
     },
     makeoutputlist: function (dayobj) {
