@@ -1,0 +1,74 @@
+date: '20250609'
+mode: '1'
+plan: 1d
+time:
+  - begin: '20250609083700'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20250609085200'
+    amount: 51
+    type: prepare
+    name: 备餐、运动
+  - begin: '20250609094300'
+    amount: 45
+    type: food
+    name: 午餐
+  - begin: '20250609103700'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20250609112200'
+    amount: 157
+    type: free
+    name: 休整
+  - begin: '20250609140000'
+    amount: 90
+    redo: 30
+    type: work
+    name: 静默工作
+    subject: learn
+    title: Helix editor
+    readme:
+      - https://docs.helix-editor.cn/title-page.html
+      - https://zhuanlan.zhihu.com/p/680116339
+    output: ../../draft/2025/20250609.01.md
+    namelink: http://simp.ly/p/8t3vlk
+  - begin: '20250609143000'
+    amount: 0
+    redo: 30
+    type: work
+    name: 静默工作
+    subject: learn
+    title: 佯谬及二次革命
+    readme:
+      - https://wuli.iphy.ac.cn/en/article/pdf/preview/10.7693/wl20221201.pdf
+      - read ../../draft/2025/20250606.02.md
+    output: ../../draft/2025/20250609.02.md
+    namelink: http://simp.ly/p/5k9gJy
+  - begin: '20250609150000'
+    amount: 60
+    type: free
+    name: 休整
+  - begin: '20250609160000'
+    amount: 0
+    redo: 60
+    type: work
+    name: 静默工作
+    subject: infra
+    title: 范例--利用js模块组合实现合同条款的组合。
+    readme:
+      - read ../../draft/2024/10/20241004.05.md
+      - read ../../draft/2025/20250503.03.md
+      - read ../../draft/2025/20250505.03.md
+      - read ../../draft/2025/20250606.01.md
+    output: ../../draft/2025/20250609.03.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20250609170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20250609190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
