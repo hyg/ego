@@ -1,0 +1,23 @@
+date: 2025-06-11
+VoucherID:
+  - "19250611162010032602398925158130"
+  - "19250611162010032607676259073701"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit: 
+    - AccountTitle: donation.parent
+      asset: rmb
+      amount: 93.04
+  credit: 
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 93.04
+comment: 
+  - name: 珍珠油杏
+    amount: 2250
+    unit: g
+    asset: 31.07
+  - name: 瑞香红苹果
+    amount: 2250
+    unit: g
+    asset: 61.97

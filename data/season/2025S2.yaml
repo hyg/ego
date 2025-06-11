@@ -570,7 +570,7 @@ time:
     PSMD: 1080
     raw: 345
     js: 784
-    learn: 1694
+    learn: 1784
     xuemen: 511
     infra: 690
 todo:
@@ -784,12 +784,6 @@ todo:
         - read ../../draft/2024/10/20241003.03.md
         - read ../../draft/2024/10/20241004.01.md
   learn:
-    - '30': Helix editor
-      readme:
-        - https://docs.helix-editor.cn/title-page.html
-        - https://zhuanlan.zhihu.com/p/680116339
-        - read ../../draft/2025/20250609.01.md
-        - read ../../draft/2025/20250610.02.md
     - '30': 佯谬及二次革命
       readme:
         - https://wuli.iphy.ac.cn/en/article/pdf/preview/10.7693/wl20221201.pdf

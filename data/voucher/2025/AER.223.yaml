@@ -1,0 +1,25 @@
+date: 2025-06-11
+VoucherID: "19250611212010032613404090157983"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit: 
+    - AccountTitle: raw.food
+      asset: rmb
+      amount: 3.76
+  credit: 
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 3.76
+comment: 
+  - name: 蒲草香干
+    amount: 672
+    unit: g
+    asset: 15.90
+  - name: 绿豆饼+红豆饼
+    amount: 640
+    unit: g
+    asset: 14.70
+  - name: 免单返券
+    amount: 26.84
+    unit: rmb
+    asset: -26.84
