@@ -566,13 +566,13 @@ time:
     learn: 2000
     js: 1000
   sold:
-    ego: 1712
+    ego: 1772
     PSMD: 1080
     raw: 345
     js: 784
     learn: 1784
     xuemen: 511
-    infra: 690
+    infra: 825
 todo:
   PSMD:
     - '195': 子1609:基于公司、合同
@@ -765,6 +765,7 @@ todo:
         - read ../../draft/2025/20250505.03.md
         - read ../../draft/2025/20250606.01.md
         - read ../../draft/2025/20250610.03.md
+        - read ../../draft/2025/20250613.02.md
     - '90': schema立项。
       readme:
         - read ../../draft/2024/09/20240919140000.md
