@@ -19,44 +19,24 @@ time:
     type: discuss
     name: 会议、自习
   - begin: '20250614081500'
-    amount: 180
+    amount: 105
     type: free
     name: 休整
-  - begin: '20250614074500'
-    amount: 0
+  - begin: '20250614100000'
+    amount: 75
     redo: 195
     type: work
     name: 工作
     subject: PSMD
-    title: 子1609:基于公司、合同
-    readme:
-      - read ../../draft/2025/20250125.02.md
-      - read ../../draft/2025/20250416.01.md
-      - read ../../draft/2025/20250427.01.md
-      - read ../../draft/2025/20250505.02.md
-    output: ../../draft/2025/20250614.01.md
-    namelink: http://simp.ly/p/3GXNTh
+    title: exsamples
+    output: ../../draft/2025/20250614.a.md
   - begin: '20250614111500'
     amount: 165
     type: food
     name: 备餐、午餐午休
   - begin: '20250614140000'
-    amount: 90
-    type: work
-    name: 工作
-    subject: PSMD
-    title: 根据香港《公司條例》调整1609的部署方案 https://www.elegislation.gov.hk/hk/cap622
-    readme:
-      - read ../../draft/2025/20250403.01.md
-      - read ../../draft/2025/20250418.02.md
-    output: ../../draft/2025/20250614.02.md
-    namelink: http://simp.ly/p/lsBYG9
-  - begin: '20250614153000'
-    amount: 30
-    type: free
-    name: 休整
-  - begin: '20250614160000'
-    amount: 60
+    amount: 70
+    redo: 60
     type: work
     name: 工作
     subject: infra
@@ -70,11 +50,47 @@ time:
       - read ../../draft/2025/20250613.02.md
     output: ../../draft/2025/20250614.03.md
     namelink: http://simp.ly/p/MpcbHD
-  - begin: '20250614170000'
+  - begin: '20250614151000'
+    amount: 0
+    redo: 90
+    type: work
+    name: 工作
+    subject: PSMD
+    title: 根据香港《公司條例》调整1609的部署方案 https://www.elegislation.gov.hk/hk/cap622
+    readme:
+      - read ../../draft/2025/20250403.01.md
+      - read ../../draft/2025/20250418.02.md
+    output: ../../draft/2025/20250614.02.md
+    namelink: http://simp.ly/p/lsBYG9
+  - begin: '20250614151000'
+    amount: 20
+    type: free
+    name: 休整
+  - begin: '20250614153000'
+    amount: 180
+    type: work
+    name: 工作
+    subject: PSMD
+    title: exsampls
+  - begin: '20250614160000'
+    amount: 0
+    redo: 195
+    type: work
+    name: 工作
+    subject: PSMD
+    title: 子1609:基于公司、合同
+    readme:
+      - read ../../draft/2025/20250125.02.md
+      - read ../../draft/2025/20250416.01.md
+      - read ../../draft/2025/20250427.01.md
+      - read ../../draft/2025/20250505.02.md
+    output: ../../draft/2025/20250614.01.md
+    namelink: http://simp.ly/p/3GXNTh
+  - begin: '20250614183000'
     amount: 120
     type: food
     name: 晚餐
-  - begin: '20250614190000'
+  - begin: '202506142030000'
     amount: 60
     type: check
     name: 讨论、整理提交
