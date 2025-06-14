@@ -1,0 +1,17 @@
+date: 2025-06-13
+VoucherID: "19250613092000032573576166094789"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit: 
+    - AccountTitle: donation.parent
+      asset: rmb
+      amount: 7.60
+  credit: 
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 7.60
+comment: 
+  - name: 十三村原味腐乳
+    amount: 200
+    unit: g
+    asset: 7.60
