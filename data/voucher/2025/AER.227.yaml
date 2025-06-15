@@ -1,0 +1,17 @@
+date: 2025-06-15
+VoucherID: "19250615052000032628817878137092"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit: 
+    - AccountTitle: raw.shell
+      asset: rmb
+      amount: 30.17
+  credit: 
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 30.17
+comment: 
+  - name: 凡客polo
+    amount: 1
+    unit: 件
+    asset: 30.17

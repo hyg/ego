@@ -566,13 +566,13 @@ time:
     learn: 2000
     js: 1000
   sold:
-    ego: 1772
+    ego: 1862
     PSMD: 1335
     raw: 345
     js: 784
     learn: 1784
     xuemen: 511
-    infra: 895
+    infra: 955
 todo:
   PSMD:
     - '90': 根据香港《公司條例》调整1609的部署方案 https://www.elegislation.gov.hk/hk/cap622
@@ -773,6 +773,7 @@ todo:
         - read ../../draft/2025/20250610.03.md
         - read ../../draft/2025/20250613.02.md
         - read ../../draft/2025/20250614.03.md
+        - read ../../draft/2025/20250615.03.md
     - '90': schema立项。
       readme:
         - read ../../draft/2024/09/20240919140000.md
