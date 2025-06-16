@@ -1,0 +1,76 @@
+date: '20250616'
+mode: '2'
+plan: 2a
+time:
+  - begin: '20250616042400'
+    amount: 17
+    type: free
+    name: 休整
+  - begin: '20250616044100'
+    amount: 51
+    type: prepare
+    name: 备餐、运动
+  - begin: '20250616053200'
+    amount: 74
+    type: food
+    name: 早餐
+  - begin: '20250616064600'
+    amount: 69
+    type: free
+    name: 休整
+  - begin: '20250616075500'
+    amount: 125
+    type: work
+    name: 工作
+    subject: raw
+    title: 整理 resource.md
+    output: ../../draft/2025/20250616.01.md
+    namelink: http://simp.ly/p/3GXNTh
+  - begin: '20250616100000'
+    amount: 60
+    type: free
+    name: 休整
+  - begin: '20250616110000'
+    amount: 180
+    type: food
+    name: 备餐、午餐午休
+  - begin: '20250616140000'
+    amount: 0
+    redo: 90
+    type: work
+    name: 工作
+    subject: PSMD
+    title: 整理default模型
+    readme:
+      - read ../../draft/2024/10/20241007.01.md
+      - read ../../draft/2024/10/20241010.02.md
+      - read ../../draft/2024/10/20241011.01.md
+      - read ../../draft/2024/11/20241106.01.md
+    output: ../../draft/2025/20250616.02.md
+    namelink: http://simp.ly/p/lsBYG9
+  - begin: '20250616153000'
+    amount: 30
+    type: free
+    name: 休整
+  - begin: '20250616160000'
+    amount: 0
+    redo: 60
+    type: work
+    name: 工作
+    subject: raw
+    title: 设计三季度时间表
+    readme:
+      - 两片休整时间联合调节的算法需要整理。
+      - 餐谱和饱腹感时间需要综合算计。
+      - read ../../draft/2024/09/20240904143000.md
+      - read ../../draft/2024/09/20240907140000.md
+    output: ../../draft/2025/20250616.03.md
+    namelink: http://simp.ly/p/MpcbHD
+  - begin: '20250616170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20250616190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交

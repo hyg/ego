@@ -568,26 +568,29 @@ time:
   sold:
     ego: 1862
     PSMD: 1335
-    raw: 345
+    raw: 470
     js: 784
     learn: 1784
     xuemen: 511
     infra: 955
 todo:
   PSMD:
-    - '90': 根据香港《公司條例》调整1609的部署方案 https://www.elegislation.gov.hk/hk/cap622
+    - '90': 整理default模型
       readme:
-        - read ../../draft/2025/20250403.01.md
-        - read ../../draft/2025/20250418.02.md
-    - '195': exsamples
-      readme:
-        - read ../../draft/2025/20250614.a.md
+        - read ../../draft/2024/10/20241007.01.md
+        - read ../../draft/2024/10/20241010.02.md
+        - read ../../draft/2024/10/20241011.01.md
+        - read ../../draft/2024/11/20241106.01.md
     - '195': 子1609:基于公司、合同
       readme:
         - read ../../draft/2025/20250125.02.md
         - read ../../draft/2025/20250416.01.md
         - read ../../draft/2025/20250427.01.md
         - read ../../draft/2025/20250505.02.md
+    - '90': 根据香港《公司條例》调整1609的部署方案 https://www.elegislation.gov.hk/hk/cap622
+      readme:
+        - read ../../draft/2025/20250403.01.md
+        - read ../../draft/2025/20250418.02.md
     - '90': 整理新版本term的manifest code
       readme:
         - 为了显示而设计的term model，并不适合与代码绑定。
@@ -609,27 +612,6 @@ todo:
     - '90': 智在科技项目准备
       readme:
         - read ../../draft/2025/20250115.01.md
-    - '90': 整理default模型
-      readme:
-        - read ../../draft/2024/09/20240930.02.md
-        - read ../../draft/2024/10/20241002.01.md
-        - read ../../draft/2024/10/20241004.02.md
-        - read ../../draft/2024/10/20241007.01.md
-        - read ../../draft/2024/10/20241010.02.md
-        - read ../../draft/2024/10/20241011.01.md
-        - read ../../draft/2024/10/20241016.01.md
-        - read ../../draft/2024/10/20241017.01.md
-        - read ../../draft/2024/10/20241024.01.md
-        - read ../../draft/2024/10/20241028.01.md
-        - read ../../draft/2024/11/20241105.02.md
-        - read ../../draft/2024/11/20241106.01.md
-        - read ../../draft/2024/12/20241213.02.md
-        - read ../../draft/2025/20250109.02.md
-        - read ../../draft/2025/20250110.02.md
-        - read ../../draft/2025/20250111.02.md
-        - read ../../draft/2025/20250112.02.md
-        - read ../../draft/2025/20250113.02.md
-        - read ../../draft/2025/20250114.01.md
     - '195': machines model
       readme:
         - a sample instance of machine,FPM,FSM in manifest code
@@ -700,13 +682,6 @@ todo:
     - '60': entry的科目归并
       readme:
         - read ../../draft/2025/20250502.01.md
-    - '195': 新版基础模型
-      readme:
-        - read ../../draft/2025/20250322.01.md
-        - read ../../draft/2025/20250417.01.md
-        - read ../../draft/2025/20250418.01.md
-        - read ../../draft/2025/20250407.b.md
-        - read ../../draft/2025/20250613.a.md
     - '195': 新版ego, instance or model, any manifest
       readme:
         - read ../../draft/2024/09/20240925.01.md
@@ -764,6 +739,7 @@ todo:
         - day metada
         - draft文件名
   infra:
+    - '30': 整理fsm、psm的split、joint操作。
     - '60': 范例--利用js模块组合实现合同条款的组合。
       readme:
         - read ../../draft/2024/10/20241004.05.md
@@ -772,8 +748,6 @@ todo:
         - read ../../draft/2025/20250606.01.md
         - read ../../draft/2025/20250610.03.md
         - read ../../draft/2025/20250613.02.md
-        - read ../../draft/2025/20250614.03.md
-        - read ../../draft/2025/20250615.03.md
     - '90': schema立项。
       readme:
         - read ../../draft/2024/09/20240919140000.md
@@ -1022,7 +996,6 @@ todo:
     - '60': 学习'Electron'，创作一个范例。
     - '60': 用代码中的对象或类，产生数据库创建SQL脚本、ER图（mermaid）
   raw:
-    - '195': 整理 resource.md
     - '60': 设计三季度时间表
       readme:
         - 两片休整时间联合调节的算法需要整理。
