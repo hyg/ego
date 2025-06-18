@@ -1,17 +1,29 @@
-date: 2025-06-13
-VoucherID: "19250613092000032573576166094789"
+date: 2025-06-14
+VoucherID: "4200002722202506140270327159"
 AccountingSoftwareID: 
 AccountingEntry: 
   debit: 
-    - AccountTitle: donation.parent
+    - AccountTitle: raw.food
       asset: rmb
-      amount: 7.60
+      amount: 14.25
   credit: 
-    - AccountTitle: 银行存款
+    - AccountTitle: 微信零钱
       asset: rmb
-      amount: 7.60
+      amount: 14.25
 comment: 
-  - name: 十三村原味腐乳
-    amount: 200
+  - name: 油菜
+    amount: 500
     unit: g
-    asset: 7.60
+    asset: 1.89
+  - name: 鸡蛋
+    amount: 400
+    unit: g
+    asset: 6.39
+  - name: 菜心
+    amount: 350
+    unit: g
+    asset: 3.28
+  - name: 快菜
+    amount: 500
+    unit: g
+    asset: 2.69

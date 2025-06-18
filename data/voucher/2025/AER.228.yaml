@@ -1,0 +1,21 @@
+date: 2025-06-18
+VoucherID: "19250618162000032724212074042394"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit: 
+    - AccountTitle: donation.parent
+      asset: rmb
+      amount: 91.69
+  credit: 
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 91.69
+comment: 
+  - name: 黄金油桃
+    amount: 2500
+    unit: g
+    asset: 25.15
+  - name: 黄蜜大樱桃
+    amount: 1000
+    unit: g
+    asset: 66.54

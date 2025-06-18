@@ -1,17 +1,25 @@
-date: 2025-06-15
-VoucherID: "19250615052000032628817878137092"
+date: 2025-06-18
+VoucherID: "19250618162000032725777983073822"
 AccountingSoftwareID: 
 AccountingEntry: 
   debit: 
-    - AccountTitle: raw.shell
+    - AccountTitle: raw.food
       asset: rmb
-      amount: 30.17
+      amount: 43.59
   credit: 
     - AccountTitle: 银行存款
       asset: rmb
-      amount: 30.17
+      amount: 43.59
 comment: 
-  - name: 凡客polo
-    amount: 1
-    unit: 件
-    asset: 30.17
+  - name: 黄金油桃
+    amount: 1500
+    unit: g
+    asset: 19.98
+  - name: 崂山蜜杏
+    amount: 1000
+    unit: g
+    asset: 23.63
+  - name: 钱包余额
+    amount: 0.02
+    unit: rmb
+    asset: -0.02
