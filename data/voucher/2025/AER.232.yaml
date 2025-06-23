@@ -1,0 +1,17 @@
+date: 2025-06-23
+VoucherID: "19250623162000032854099165021289"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit: 
+    - AccountTitle: donation.parent
+      asset: rmb
+      amount: 31.68
+  credit: 
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 31.68
+comment: 
+  - name: 崂山蜜杏
+    amount: 2000
+    unit: g
+    asset: 31.68

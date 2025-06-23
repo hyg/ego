@@ -571,8 +571,8 @@ time:
     raw: 470
     js: 784
     learn: 1784
-    xuemen: 511
-    infra: 955
+    xuemen: 541
+    infra: 975
 todo:
   PSMD:
     - '90': 整理default模型
@@ -583,14 +583,23 @@ todo:
         - read ../../draft/2024/11/20241106.01.md
     - '195': machines model
       readme:
+        - read ../../draft/2024/07/20240723160000.md
+        - read ../../draft/2024/07/20240724093000.md
+        - read ../../draft/2024/07/20240725093000.md
+        - read ../../draft/2024/07/20240726093000.md
+        - read ../../draft/2024/07/20240730093000.md
+        - read ../../draft/2024/07/20240731093000.md
+        - read ../../draft/2024/08/20240801093000.md
+        - read ../../draft/2024/08/20240806140000.md
+        - read ../../draft/2024/08/20240807140000.md
+        - read ../../draft/2024/08/20240808093000.md
+        - read ../../draft/2024/09/20240915160000.md
+        - read ../../draft/2024/09/20240926.01.md
         - a sample instance of machine,FPM,FSM in manifest code
-        - read D:\huangyg\git\draft\2024\07\20240723160000.md
-        - read 2024.07.24. 09:30, 2024.07.25. 09:30, 2024.07.26. 09:30 draft
         - 实现FPM+FSM
         - 从FSM、FPM中抽象出统一的mechine
         - 实现joint、split机制
         - 先用javascript的class实现
-        - read ../../draft/2024/09/20240926.01.md
     - '90': 子1609:基于公司、合同
       readme:
         - read ../../draft/2025/20250125.02.md
@@ -1023,7 +1032,6 @@ todo:
       readme:
         - https://stalw.art
         - read ../../draft/2025/20250531.a.md
-    - '90': 2024年报
     - '195': kernel模型升级
       readme:
         - read ../../draft/2024/11/20241120.01.md
