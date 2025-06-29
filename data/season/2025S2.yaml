@@ -567,14 +567,20 @@ time:
     js: 1000
   sold:
     ego: 1862
-    PSMD: 1425
+    PSMD: 1335
     raw: 470
     js: 784
     learn: 1784
     xuemen: 541
-    infra: 1035
+    infra: 975
 todo:
   PSMD:
+    - '90': 整理default模型
+      readme:
+        - read ../../draft/2024/10/20241007.01.md
+        - read ../../draft/2024/10/20241010.02.md
+        - read ../../draft/2024/10/20241011.01.md
+        - read ../../draft/2024/11/20241106.01.md
     - '195': machines model
       readme:
         - read ../../draft/2024/07/20240723160000.md
@@ -747,6 +753,14 @@ todo:
         - day metada
         - draft文件名
   infra:
+    - '60': 范例--利用js模块组合实现合同条款的组合。
+      readme:
+        - read ../../draft/2024/10/20241004.05.md
+        - read ../../draft/2025/20250503.03.md
+        - read ../../draft/2025/20250505.03.md
+        - read ../../draft/2025/20250606.01.md
+        - read ../../draft/2025/20250610.03.md
+        - read ../../draft/2025/20250613.02.md
     - '30': 整理fsm、psm的split、joint操作。
     - '90': schema立项。
       readme:
