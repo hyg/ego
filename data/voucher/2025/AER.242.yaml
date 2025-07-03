@@ -1,0 +1,17 @@
+date: 2025-07-03
+VoucherID: "19250703132000033073969813010786"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit:
+    - AccountTitle: donation.parent
+      asset: rmb
+      amount: 30.89
+  credit: 
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 30.89
+comment: 
+  - name: 荷兰香蜜杏
+    amount: 1000
+    unit: g
+    asset: 30.89

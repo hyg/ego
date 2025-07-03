@@ -569,6 +569,7 @@ time:
     PSMD: 0
     ego: 0
     infra: 0
+    learn: 0
 todo:
   PSMD:
     - '90': 整理default模型
