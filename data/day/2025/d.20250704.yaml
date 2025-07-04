@@ -1,0 +1,70 @@
+date: '20250704'
+mode: '2'
+plan: 2c
+time:
+  - begin: '20250704072800'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20250704074300'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20250704084300'
+    amount: 45
+    type: food
+    name: 早餐
+  - begin: '20250704092800'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20250704101300'
+    amount: 46
+    type: free
+    name: 休整
+  - begin: '20250704110000'
+    amount: 180
+    type: food
+    name: 备餐、午餐午休
+  - begin: '20250704140000'
+    amount: 90
+    redo: 60
+    type: work
+    name: 工作
+    subject: PSMD
+    title: 整理default模型
+    readme:
+      - read ../../draft/2024/10/20241007.01.md
+      - read ../../draft/2024/10/20241010.02.md
+      - read ../../draft/2024/10/20241011.01.md
+      - read ../../draft/2024/11/20241106.01.md
+    output: ../../draft/2025/20250704.01.md
+    namelink: http://simp.ly/p/lsBYG9
+  - begin: '20250704153000'
+    amount: 30
+    type: free
+    name: 休整
+  - begin: '20250704160000'
+    amount: 60
+    redo: 60
+    type: work
+    name: 工作
+    subject: infra
+    title: 范例--利用js模块组合实现合同条款的组合。
+    readme:
+      - read ../../draft/2024/10/20241004.05.md
+      - read ../../draft/2025/20250503.03.md
+      - read ../../draft/2025/20250505.03.md
+      - read ../../draft/2025/20250606.01.md
+      - read ../../draft/2025/20250610.03.md
+      - read ../../draft/2025/20250613.02.md
+    output: ../../draft/2025/20250704.02.md
+    namelink: http://simp.ly/p/MpcbHD
+  - begin: '20250704170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20250704190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交

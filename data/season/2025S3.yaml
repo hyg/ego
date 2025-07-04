@@ -566,18 +566,19 @@ time:
     learn: 2000
     js: 1000
   sold:
-    PSMD: 0
+    PSMD: 90
     ego: 0
-    infra: 0
+    infra: 60
     learn: 0
 todo:
   PSMD:
-    - '90': 整理default模型
+    - '60': 整理default模型
       readme:
         - read ../../draft/2024/10/20241007.01.md
         - read ../../draft/2024/10/20241010.02.md
         - read ../../draft/2024/10/20241011.01.md
         - read ../../draft/2024/11/20241106.01.md
+        - read ../../draft/2025/20250704.01.md
     - '195': machines model
       readme:
         - read ../../draft/2024/07/20240723160000.md
@@ -758,6 +759,7 @@ todo:
         - read ../../draft/2025/20250606.01.md
         - read ../../draft/2025/20250610.03.md
         - read ../../draft/2025/20250613.02.md
+        - read ../../draft/2025/20250704.02.md
     - '30': 整理fsm、psm的split、joint操作。
     - '90': schema立项。
       readme:
