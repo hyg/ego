@@ -751,6 +751,7 @@ todo:
         - day metada
         - draft文件名
   infra:
+    - '30': 整理fsm、psm的split、joint操作。
     - '60': 范例--利用js模块组合实现合同条款的组合。
       readme:
         - read ../../draft/2024/10/20241004.05.md
@@ -760,7 +761,6 @@ todo:
         - read ../../draft/2025/20250610.03.md
         - read ../../draft/2025/20250613.02.md
         - read ../../draft/2025/20250704.02.md
-    - '30': 整理fsm、psm的split、joint操作。
     - '90': schema立项。
       readme:
         - read ../../draft/2024/09/20240919140000.md

@@ -1,0 +1,73 @@
+date: '20250705'
+mode: '1'
+plan: 1d
+time:
+  - begin: '20250705094300'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20250705095800'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20250705105800'
+    amount: 45
+    type: food
+    name: 午餐
+  - begin: '20250705114300'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20250705122800'
+    amount: 91
+    type: free
+    name: 休整
+  - begin: '20250705140000'
+    amount: 0
+    redo: 30
+    type: work
+    name: 静默工作
+    subject: learn
+    title: 佯谬及二次革命
+    readme:
+      - https://wuli.iphy.ac.cn/en/article/pdf/preview/10.7693/wl20221201.pdf
+      - read ../../draft/2025/20250606.02.md
+      - read ../../draft/2025/20250610.01.md
+    output: ../../draft/2025/20250705.01.md
+    namelink: http://simp.ly/p/8t3vlk
+  - begin: '20250705143000'
+    amount: 0
+    redo: 30
+    type: work
+    name: 静默工作
+    subject: infra
+    title: 整理fsm、psm的split、joint操作。
+    output: ../../draft/2025/20250705.02.md
+    namelink: http://simp.ly/p/5k9gJy
+  - begin: '20250705150000'
+    amount: 60
+    type: free
+    name: 休整
+  - begin: '20250705160000'
+    amount: 0
+    redo: 60
+    type: work
+    name: 静默工作
+    subject: PSMD
+    title: 整理default模型
+    readme:
+      - read ../../draft/2024/10/20241007.01.md
+      - read ../../draft/2024/10/20241010.02.md
+      - read ../../draft/2024/10/20241011.01.md
+      - read ../../draft/2024/11/20241106.01.md
+      - read ../../draft/2025/20250704.01.md
+    output: ../../draft/2025/20250705.03.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20250705170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20250705190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交

@@ -1,0 +1,17 @@
+date: 2025-07-05
+VoucherID: "19250705032000033118068130094743"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit:
+    - AccountTitle: raw.med
+      asset: rmb
+      amount: 17.67
+  credit: 
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 17.67
+comment: 
+  - name: 脱敏糊剂
+    amount: 120
+    unit: g
+    asset: 17.67
