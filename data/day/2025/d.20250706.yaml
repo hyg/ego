@@ -1,0 +1,47 @@
+date: '20250706'
+mode: '1'
+plan: 1e
+time:
+  - begin: '20250706111100'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20250706112600'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20250706122600'
+    amount: 45
+    type: food
+    name: 午餐
+  - begin: '20250706131100'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20250706135600'
+    amount: 123
+    type: free
+    name: 休整
+  - begin: '20250706160000'
+    amount: 0
+    redo: 60
+    type: work
+    name: 静默工作
+    subject: PSMD
+    title: 整理default模型
+    readme:
+      - read ../../draft/2024/10/20241007.01.md
+      - read ../../draft/2024/10/20241010.02.md
+      - read ../../draft/2024/10/20241011.01.md
+      - read ../../draft/2024/11/20241106.01.md
+      - read ../../draft/2025/20250704.01.md
+    output: ../../draft/2025/20250706.01.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20250706170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20250706190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
