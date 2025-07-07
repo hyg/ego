@@ -570,15 +570,15 @@ time:
     ego: 0
     infra: 60
     learn: 0
+    raw: 0
 todo:
   PSMD:
-    - '60': 整理default模型
+    - '90': 整理default模型
       readme:
         - read ../../draft/2024/10/20241007.01.md
         - read ../../draft/2024/10/20241010.02.md
         - read ../../draft/2024/10/20241011.01.md
         - read ../../draft/2024/11/20241106.01.md
-        - read ../../draft/2025/20250704.01.md
     - '195': machines model
       readme:
         - read ../../draft/2024/07/20240723160000.md
@@ -679,12 +679,12 @@ todo:
       readnme:
         - 考虑upgradeby的实现。
   ego:
-    - '90': 基于真实数据标志财务报表
-      readme:
-        - read ../../draft/2025/20250605.01.md
     - '90': 整理js对象检索的代码
       readme:
         - read ../../draft/2025/20250605.03.md
+    - '90': 基于真实数据标志财务报表
+      readme:
+        - read ../../draft/2025/20250605.01.md
     - '90': 重新设计财务的基础元数据格式
     - '90': entry的按月归并
       readme:

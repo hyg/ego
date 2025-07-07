@@ -1,0 +1,17 @@
+date: 2025-07-07
+VoucherID: "19250707082000033163684363084404"
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit:
+    - AccountTitle: raw.shell
+      asset: rmb
+      amount: 21.51
+  credit: 
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 21.51
+comment: 
+  - name: 日高短袖polo
+    amount: 1
+    unit: 件
+    asset: 21.51
