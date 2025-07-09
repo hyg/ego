@@ -1,17 +1,25 @@
 date: 2025-07-08
-VoucherID: "4200002729202507088149811643"
+VoucherID: "19250708202010033280139877053006"
 AccountingSoftwareID: 
 AccountingEntry: 
   debit:
     - AccountTitle: raw.food
       asset: rmb
-      amount: 9.00
+      amount: 92.39
   credit: 
-    - AccountTitle: 微信零钱
+    - AccountTitle: 银行存款
       asset: rmb
-      amount: 9.00
+      amount: 92.39
 comment: 
-  - name: 炸鸡块
-    amount: 8
-    unit: 块
-    asset: 9.00
+  - name: 苏翠一号
+    amount: 4500
+    unit: g
+    asset: 30.54
+  - name: 钦蜜九号
+    amount: 1500
+    unit: g
+    asset: 42.34
+  - name: 黄油玫瑰饼
+    amount: 520
+    unit: g
+    asset: 19.52
