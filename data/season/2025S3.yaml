@@ -568,8 +568,8 @@ time:
   sold:
     PSMD: 90
     ego: 0
-    infra: 60
-    learn: 0
+    infra: 95
+    learn: 96
     raw: 0
 todo:
   PSMD:
@@ -751,7 +751,6 @@ todo:
         - day metada
         - draft文件名
   infra:
-    - '30': 整理fsm、psm的split、joint操作。
     - '60': 范例--利用js模块组合实现合同条款的组合。
       readme:
         - read ../../draft/2024/10/20241004.05.md
@@ -780,12 +779,7 @@ todo:
         - read ../../draft/2024/10/20241003.03.md
         - read ../../draft/2024/10/20241004.01.md
   learn:
-    - '30': 佯谬及二次革命
-      readme:
-        - https://wuli.iphy.ac.cn/en/article/pdf/preview/10.7693/wl20221201.pdf
-        - read ../../draft/2025/20250606.02.md
-        - read ../../draft/2025/20250610.01.md
-    - '60': 量子物理的数学基础
+    - '90': 量子物理的数学基础
       readme:
         - https://baike.baidu.com/item/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95/11421
         - https://zhuanlan.zhihu.com/p/629852598
@@ -793,6 +787,13 @@ todo:
         - read ../../draft/2025/20250417.01.md
         - read ../../draft/2025/20250407.b.md
         - read ../../draft/2025/20250606.04.md
+        - read ../../draft/2025/20250710.03.md
+    - '60': 佯谬及二次革命
+      readme:
+        - https://wuli.iphy.ac.cn/en/article/pdf/preview/10.7693/wl20221201.pdf
+        - read ../../draft/2025/20250606.02.md
+        - read ../../draft/2025/20250610.01.md
+        - read ../../draft/2025/20250710.01.md
     - '60': cursor rules
       readme:
         - https://blog.csdn.net/lc19890709/article/details/147702482
