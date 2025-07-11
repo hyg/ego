@@ -567,8 +567,8 @@ time:
     js: 1000
   sold:
     PSMD: 90
-    ego: 0
-    infra: 95
+    ego: 120
+    infra: 275
     learn: 96
     raw: 0
 todo:
@@ -704,6 +704,7 @@ todo:
         - https://arxiv.org/abs/2307.01874
         - in the quantum world even points of view are uncertain:https://www.quantamagazine.org/in-the-quantum-world-even-points-of-view-are-uncertain-20241122/
         - https://arxiv.org/abs/2402.10267
+        - read ../../draft/2025/20250711.a.md
     - '90': 新版实时手稿
       readme:
         - read ../../draft/2025/20250226.02.md
@@ -760,6 +761,7 @@ todo:
         - read ../../draft/2025/20250610.03.md
         - read ../../draft/2025/20250613.02.md
         - read ../../draft/2025/20250704.02.md
+        - read ../../draft/2025/20250711.02.md
     - '90': schema立项。
       readme:
         - read ../../draft/2024/09/20240919140000.md
@@ -1010,7 +1012,7 @@ todo:
     - '60': 学习'Electron'，创作一个范例。
     - '60': 用代码中的对象或类，产生数据库创建SQL脚本、ER图（mermaid）
   raw:
-    - '60': 设计三季度时间表
+    - '60': 设计新的季度时间表
       readme:
         - 两片休整时间联合调节的算法需要整理。
         - 餐谱和饱腹感时间需要综合算计。
@@ -1028,6 +1030,7 @@ todo:
             - '60': 新版本food预算决算
         - '60': 新版食材排序，包括升序、降序、特定值距离、多种营养成分特定值组合距离。
   xuemen:
+    - '30': 月初事务
     - '90': mail server
       readme:
         - https://stalw.art
