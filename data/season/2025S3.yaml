@@ -567,10 +567,12 @@ time:
     js: 1000
   sold:
     PSMD: 90
-    ego: 120
+    ego: 140
     infra: 275
     learn: 96
     raw: 0
+    xuemen: 90
+    js: 30
 todo:
   PSMD:
     - '90': 整理default模型
@@ -754,7 +756,6 @@ todo:
   infra:
     - '60': 范例--利用js模块组合实现合同条款的组合。
       readme:
-        - read ../../draft/2024/10/20241004.05.md
         - read ../../draft/2025/20250503.03.md
         - read ../../draft/2025/20250505.03.md
         - read ../../draft/2025/20250606.01.md
@@ -908,10 +909,6 @@ todo:
         - https://www.npmjs.com/package/jsonpath
         - https://www.npmjs.com/package/@pulumi/query
         - read ../../draft/2025/20250528.01.md
-    - '30': ai.js
-      readme:
-        - https://aijs.themaximalist.com/
-        - https://github.com/themaximalist/ai.js/
     - '60': AI SDK
       readme:
         - https://github.com/vercel/ai
@@ -1030,7 +1027,6 @@ todo:
             - '60': 新版本food预算决算
         - '60': 新版食材排序，包括升序、降序、特定值距离、多种营养成分特定值组合距离。
   xuemen:
-    - '30': 月初事务
     - '90': mail server
       readme:
         - https://stalw.art
