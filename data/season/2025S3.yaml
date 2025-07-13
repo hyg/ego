@@ -569,7 +569,7 @@ time:
     PSMD: 90
     ego: 140
     infra: 275
-    learn: 96
+    learn: 171
     raw: 0
     xuemen: 90
     js: 30
@@ -606,7 +606,7 @@ todo:
         - read ../../draft/2025/20250416.01.md
         - read ../../draft/2025/20250427.01.md
         - read ../../draft/2025/20250505.02.md
-    - '90': 根据香港《公司條例》调整1609的部署方案 https://www.elegislation.gov.hk/hk/cap622
+    - '60': 根据香港《公司條例》调整1609的部署方案 https://www.elegislation.gov.hk/hk/cap622
       readme:
         - read ../../draft/2025/20250403.01.md
         - read ../../draft/2025/20250418.02.md
@@ -642,7 +642,7 @@ todo:
         - 以修订和任免定义的层级嵌入到machine模型。
     - '195': term + COM matedata -> deploy metadata -> deploy view
     - '90': 以1406为例检查知识图谱和blawx的语法
-    - '60': 整理闫岸家政能力讨论
+    - '30': 整理闫岸家政能力讨论
       readme:
         - read ../../draft/2024/09/20240924.01.md
         - read ../../draft/2024/09/20240925.03.md
@@ -681,19 +681,19 @@ todo:
       readnme:
         - 考虑upgradeby的实现。
   ego:
-    - '90': 整理js对象检索的代码
+    - '60': 整理js对象检索的代码
       readme:
         - read ../../draft/2025/20250605.03.md
     - '90': 基于真实数据标志财务报表
       readme:
         - read ../../draft/2025/20250605.01.md
     - '90': 重新设计财务的基础元数据格式
-    - '90': entry的按月归并
+    - '60': entry的按月归并
       readme:
         - read ../../draft/2025/20250525.01.md
         - https://sql.js.org
         - read ../../draft/2025/20250526.03.md
-    - '60': entry的科目归并
+    - '30': entry的科目归并
       readme:
         - read ../../draft/2025/20250502.01.md
     - '195': 新版ego, instance or model, any manifest
@@ -743,12 +743,12 @@ todo:
     - '60': 整理task及其相互关系
       readme:
         - readme 2024.07.20. 09:30 draft
-    - '60': 用js代码完成日小结后的git操作。
+    - '30': 用js代码完成日小结后的git操作。
       readme:
         - 参考：D:\huangyg\git\draft\2024\04\20240430140000.md
         - 在各task metadata中给出git库的路径，每天根据实际任务去操作。
     - '60': 重新设计ego.js的命令行参数，合并函数，整理代码。
-    - '60': 时间改为ISO8601格式
+    - '30': 时间改为ISO8601格式
       readme:
         - season metadata
         - day metada
@@ -797,43 +797,22 @@ todo:
         - read ../../draft/2025/20250606.02.md
         - read ../../draft/2025/20250610.01.md
         - read ../../draft/2025/20250710.01.md
-    - '60': cursor rules
-      readme:
-        - https://blog.csdn.net/lc19890709/article/details/147702482
-        - RIPER-5
-        - https://www.zhihu.com/question/8262443681/answer/1910424769247032544
-        - read ../../draft/2025/20250527.a.md
-    - '60': 真随机数发生器
-      readme:
-        - https://sca.gov.cn/sca/zxfw/2017-04/25/content_1011723.shtml
-        - https://www.random.org/clients/http/
-        - https://numbergenerator.org/true-random-numbers
-        - https://www.npmjs.com/package/crypto-random-string
-        - https://www.npmjs.com/package/randomfill
-        - https://www.npmjs.com/package/true-random
-        - https://www.npmjs.com/package/trng2
-        - https://www.npmjs.com/package/fiddlles-trng
-        - https://www.npmjs.com/package/drng
-        - https://blog.csdn.net/qq_31661311/article/details/145425577
-        - node.js crypto.randomBytes
-        - https://www.example-code.com/nodejs/prng_export_entropy.asp
-        - read ../../draft/2025/20250525.03.md
     - '60': 复习思想实验的数学基础
       readme:
         - read ../../draft/2025/20250424.b.md
-    - '90': 量子力学的各种诠释:基于门电路、event机制的思想实验
+    - '60': 量子力学的各种诠释:基于门电路、event机制的思想实验
       readme:
         - read ../../draft/2025/20250505.01.md
     - '90': 热更新
     - '90': MCP in ts
       readme:
         - https://github.com/modelcontextprotocol/typescript-sdk
-    - '90': 腾讯文档sdk
+    - '60': 腾讯文档sdk
       readme:
         - https://docs.qq.com/open/developers
         - https://docs.qq.com/open/document/websdk/
         - https://docs.qq.com/open/document/app/openapi/v2/file/files/permission/set.html - https://docs.qq.com/open/document/app/openapi/v2/file/files/permission/common.html
-    - '90': 飞书 nodejs sdk
+    - '60': 飞书 nodejs sdk
       readme:
         - https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/server-side-sdk/nodejs-sdk/preparation-before-development
     - '90': webcontainers
@@ -845,11 +824,11 @@ todo:
         - '60': 基于dat,hypercore,hyperswarm等模块的浏览器动态页面范例。
           readme:
             - read ../../draft/2025/20250326.01.md
-    - '60': oData simple
+    - '30': oData simple
       readme:
         - https://services.odata.org/
         - http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html
-    - '60': instantdb
+    - '30': instantdb
       readme:
         - https://www.instantdb.com
         - https://github.com/instantdb/instant
@@ -858,31 +837,31 @@ todo:
         - https://www.npmjs.com/package/mutable-webtorrent
         - https://github.com/lmatteis/dmt
         - https://webtorrent.io/docs
-    - '60': xLog
+    - '30': xLog
       readme:
         - https://xlog.app/
         - https://www.xsync.app/
         - https://xchar.app/
         - https://rss3.io/
         - https://crossbell.js.org/
-    - '60': markmap
+    - '30': markmap
       readme:
         - https://markmap.js.org/
         - file:///C:/Users/hyg/Downloads/markmap.html
-    - '60': MapLibre sample
+    - '30': MapLibre sample
       readme:
         - https://maplibre.org/
         - https://maplibre.org/maplibre-gl-js/docs/
         - https://github.com/maplibre/maplibre-gl-js
     - '60': PSMD term in helia dag-json https://www.npmjs.com/package/@helia/dag-json
     - '60': learn Blogging on the Decentralized Web https://proto.school/blog
-    - '60': 在nodejs读写OFD文件。
+    - '30': 在nodejs读写OFD文件。
       readme:
         - https://github.com/ofdrw/ofdrw
         - https://blog.csdn.net/lishangke/article/details/135245444
         - https://www.npmjs.com/package/ofd.js/v/0.8.0
     - '60': https://proto.school/basics  IPFS,P2P Data Links with Content Addressing
-    - '60': learn web-llm
+    - '30': learn web-llm
     - '60': 开发YARRRML范例
     - '90': 把PSMD的data、src部分升级到rdf，如果升级成功则作为范例。
     - '60': Windows PowerShell
@@ -897,6 +876,10 @@ todo:
       readme:
         - https://zh.javascript.info/promise-api
   js:
+    - '60': Vector Database in nodejs
+      readme:
+        - https://www.dongaigc.com/p/Stevenic/vectra
+        - https://therightsw.com/vector-database-crud
     - '90': openpgp v6.1.1.
       readme:
         - read ../../draft/2025/20250601.a.md
@@ -909,15 +892,15 @@ todo:
         - https://www.npmjs.com/package/jsonpath
         - https://www.npmjs.com/package/@pulumi/query
         - read ../../draft/2025/20250528.01.md
-    - '60': AI SDK
+    - '30': AI SDK
       readme:
         - https://github.com/vercel/ai
         - https://ai-sdk.dev/
-    - '60': LangChain.js
+    - '30': LangChain.js
       readme:
         - https://github.com/langchain-ai/langchainjs
         - https://js.langchain.com
-    - '60': learn brain.js
+    - '30': learn brain.js
       readme:
         - https://github.com/BrainJS/brain.js
         - https://brain.js.org/
@@ -939,10 +922,10 @@ todo:
             - 使用新的模块化设计
             - 使用新的data model
         - '30': 新版raw.js的子命令-营养成分排序
-    - '60': copilot
+    - '30': copilot
       readme:
         - https://github.com/features/copilot
-    - '60': node.js
+    - '30': node.js
       readme:
         - https://github.com/yunnysunny/nodebook
         - https://node.whyun.com/
@@ -970,7 +953,7 @@ todo:
           readme:
             - https://github.com/qufei1993/Nodejs-Roadmap
             - https://www.nodejs.red
-    - '60': passportjs
+    - '30': passportjs
     - '90': learn graphql
       readme:
         - https://www.graphql-js.org/docs/
@@ -987,7 +970,7 @@ todo:
       readme:
         - https://github.com/microsoft/playwright-dotnet
     - '60': 向外提供js文件的范例，为代码层级互通做准备
-    - '90': duckdb
+    - '30': duckdb
     - '90': editor.js
       readme:
         - https://editorjs.io/

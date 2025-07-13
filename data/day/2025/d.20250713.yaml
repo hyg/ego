@@ -1,0 +1,82 @@
+date: '20250713'
+mode: '1'
+plan: 1d
+time:
+  - begin: '20250713083300'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20250713084800'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20250713094800'
+    amount: 45
+    type: food
+    name: 午餐
+  - begin: '20250713103300'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20250713111800'
+    amount: 161
+    type: free
+    name: 休整
+  - begin: '20250713140000'
+    amount: 30
+    type: work
+    name: 静默工作
+    subject: learn
+    title: cursor rules
+    readme:
+      - https://blog.csdn.net/lc19890709/article/details/147702482
+      - RIPER-5
+      - https://www.zhihu.com/question/8262443681/answer/1910424769247032544
+      - read ../../draft/2025/20250527.a.md
+    output: ../../draft/2025/20250713.01.md
+    namelink: http://simp.ly/p/8t3vlk
+  - begin: '20250713143000'
+    amount: 45
+    type: work
+    name: 静默工作
+    subject: learn
+    title: 真随机数发生器
+    readme:
+      - https://sca.gov.cn/sca/zxfw/2017-04/25/content_1011723.shtml
+      - https://www.random.org/clients/http/
+      - https://numbergenerator.org/true-random-numbers
+      - https://www.npmjs.com/package/crypto-random-string
+      - https://www.npmjs.com/package/randomfill
+      - https://www.npmjs.com/package/true-random
+      - https://www.npmjs.com/package/trng2
+      - https://www.npmjs.com/package/fiddlles-trng
+      - https://www.npmjs.com/package/drng
+      - https://blog.csdn.net/qq_31661311/article/details/145425577
+      - node.js crypto.randomBytes
+      - https://www.example-code.com/nodejs/prng_export_entropy.asp
+      - read ../../draft/2025/20250525.03.md
+    output: ../../draft/2025/20250713.02.md
+    namelink: http://simp.ly/p/5k9gJy
+  - begin: '20250713151500'
+    amount: 45
+    type: free
+    name: 休整
+  - begin: '20250713160000'
+    amount: 0
+    redo: 60
+    type: work
+    name: 静默工作
+    subject: ego
+    title: 整理js对象检索的代码
+    readme:
+      - read ../../draft/2025/20250605.03.md
+    output: ../../draft/2025/20250713.03.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20250713170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20250713190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
