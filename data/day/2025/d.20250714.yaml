@@ -1,0 +1,83 @@
+date: '20250714'
+mode: '2'
+plan: 2b
+time:
+  - begin: '20250714052500'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20250714054000'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20250714064000'
+    amount: 45
+    type: food
+    name: 早餐
+  - begin: '20250714072500'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20250714081000'
+    amount: 79
+    type: free
+    name: 休整
+  - begin: '20250714093000'
+    amount: 0
+    redo: 90
+    type: work
+    name: 工作
+    subject: PSMD
+    title: 整理default模型
+    readme:
+      - read ../../draft/2024/10/20241007.01.md
+      - read ../../draft/2024/10/20241010.02.md
+      - read ../../draft/2024/10/20241011.01.md
+      - read ../../draft/2024/11/20241106.01.md
+      - read ../../draft/2025/20250704.01.md
+    output: ../../draft/2025/20250714.01.md
+    namelink: http://simp.ly/p/WZ077p
+  - begin: '20250714110000'
+    amount: 180
+    type: food
+    name: 备餐、午餐午休
+  - begin: '20250714140000'
+    amount: 70
+    redo: 60
+    type: work
+    name: 工作
+    subject: learn
+    title: 量子物理的数学基础
+    readme:
+      - https://baike.baidu.com/item/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95/11421
+      - https://zhuanlan.zhihu.com/p/629852598
+      - read ../../draft/2025/20250526.02.md
+      - read ../../draft/2025/20250417.01.md
+      - read ../../draft/2025/20250407.b.md
+      - read ../../draft/2025/20250606.04.md
+      - read ../../draft/2025/20250710.03.md
+    output: ../../draft/2025/20250714.02.md
+    namelink: http://simp.ly/p/lsBYG9
+  - begin: '20250714153000'
+    amount: 30
+    type: free
+    name: 休整
+  - begin: '20250714160000'
+    amount: 60
+    redo: 90
+    type: work
+    name: 工作
+    subject: ego
+    title: 整理js对象检索的代码
+    readme:
+      - read ../../draft/2025/20250605.03.md
+    output: ../../draft/2025/20250714.03.md
+    namelink: http://simp.ly/p/MpcbHD
+  - begin: '20250714170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20250714190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
