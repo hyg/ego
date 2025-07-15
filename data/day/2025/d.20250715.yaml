@@ -1,0 +1,73 @@
+date: '20250715'
+mode: '1'
+plan: 1d
+time:
+  - begin: '20250715081100'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20250715082600'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20250715092600'
+    amount: 45
+    type: food
+    name: 午餐
+  - begin: '20250715101100'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20250715105600'
+    amount: 183
+    type: free
+    name: 休整
+  - begin: '20250715140000'
+    amount: 120
+    type: work
+    name: 静默工作
+    subject: js
+    title: AI SDK
+    readme:
+      - https://github.com/vercel/ai
+      - https://ai-sdk.dev/
+    output: ../../draft/2025/20250715.01.md
+    namelink: http://simp.ly/p/8t3vlk
+  - begin: '20250715143000'
+    amount: 0
+    redo: 30
+    type: work
+    name: 静默工作
+    subject: js
+    title: LangChain.js
+    readme:
+      - https://github.com/langchain-ai/langchainjs
+      - https://js.langchain.com
+    output: ../../draft/2025/20250715.02.md
+    namelink: http://simp.ly/p/5k9gJy
+  - begin: '20250715160000'
+    amount: 106
+    redo: 195
+    type: work
+    name: 静默工作
+    subject: learn
+    title: 量子物理的数学基础
+    readme:
+      - https://baike.baidu.com/item/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95/11421
+      - https://zhuanlan.zhihu.com/p/629852598
+      - read ../../draft/2025/20250526.02.md
+      - read ../../draft/2025/20250417.01.md
+      - read ../../draft/2025/20250407.b.md
+      - read ../../draft/2025/20250606.04.md
+      - read ../../draft/2025/20250710.03.md
+      - read ../../draft/2025/20250714.02.md
+    output: ../../draft/2025/20250715.03.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20250715170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20250715190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交

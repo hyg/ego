@@ -569,10 +569,10 @@ time:
     PSMD: 90
     ego: 200
     infra: 275
-    learn: 241
+    learn: 347
     raw: 0
     xuemen: 90
-    js: 30
+    js: 150
 todo:
   PSMD:
     - '90': 整理default模型
@@ -784,7 +784,7 @@ todo:
         - read ../../draft/2024/10/20241003.03.md
         - read ../../draft/2024/10/20241004.01.md
   learn:
-    - '60': 量子物理的数学基础
+    - '195': 量子物理的数学基础
       readme:
         - https://baike.baidu.com/item/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95/11421
         - https://zhuanlan.zhihu.com/p/629852598
@@ -794,6 +794,7 @@ todo:
         - read ../../draft/2025/20250606.04.md
         - read ../../draft/2025/20250710.03.md
         - read ../../draft/2025/20250714.02.md
+        - read ../../draft/2025/20250715.03.md
     - '60': 佯谬及二次革命
       readme:
         - https://wuli.iphy.ac.cn/en/article/pdf/preview/10.7693/wl20221201.pdf
@@ -884,6 +885,10 @@ todo:
       readme:
         - https://zh.javascript.info/promise-api
   js:
+    - '30': LangChain.js
+      readme:
+        - https://github.com/langchain-ai/langchainjs
+        - https://js.langchain.com
     - '60': Vector Database in nodejs
       readme:
         - https://www.dongaigc.com/p/Stevenic/vectra
@@ -900,14 +905,6 @@ todo:
         - https://www.npmjs.com/package/jsonpath
         - https://www.npmjs.com/package/@pulumi/query
         - read ../../draft/2025/20250528.01.md
-    - '30': AI SDK
-      readme:
-        - https://github.com/vercel/ai
-        - https://ai-sdk.dev/
-    - '30': LangChain.js
-      readme:
-        - https://github.com/langchain-ai/langchainjs
-        - https://js.langchain.com
     - '30': learn brain.js
       readme:
         - https://github.com/BrainJS/brain.js
