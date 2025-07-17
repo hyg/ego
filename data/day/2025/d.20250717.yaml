@@ -1,0 +1,78 @@
+date: '20250717'
+mode: '1'
+plan: 1d
+time:
+  - begin: '20250717090100'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20250717091600'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20250717101600'
+    amount: 45
+    type: food
+    name: 午餐
+  - begin: '20250717110100'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20250717114600'
+    amount: 133
+    type: free
+    name: 休整
+  - begin: '20250717140000'
+    amount: 60
+    redo: 60
+    type: work
+    name: 静默工作
+    subject: js
+    title: LangChain.js
+    readme:
+      - https://github.com/langchain-ai/langchainjs
+      - https://js.langchain.com
+      - https://docs.langchain.com.cn/
+    output: ../../draft/2025/20250717.01.md
+    namelink: http://simp.ly/p/8t3vlk
+  - begin: '20250717143000'
+    amount: 0
+    redo: 30
+    type: work
+    name: 静默工作
+    subject: learn
+    title: 演化计算（Evolutionary Computation）和大模型结合的研判
+    readme:
+      - https://www.wangxubin.site/Blogs/posts/ec-in-llm-era/
+      - https://zhuanlan.zhihu.com/p/432162132
+      - https://blog.csdn.net/2401_84204413/article/details/145206561
+    output: ../../draft/2025/20250717.02.md
+    namelink: http://simp.ly/p/5k9gJy
+  - begin: '20250717150000'
+    amount: 60
+    type: free
+    name: 休整
+  - begin: '20250717160000'
+    amount: 60
+    type: work
+    name: 静默工作
+    subject: infra
+    title: 范例--利用js模块组合实现合同条款的组合。
+    readme:
+      - read ../../draft/2025/20250503.03.md
+      - read ../../draft/2025/20250505.03.md
+      - read ../../draft/2025/20250606.01.md
+      - read ../../draft/2025/20250610.03.md
+      - read ../../draft/2025/20250613.02.md
+      - read ../../draft/2025/20250704.02.md
+      - read ../../draft/2025/20250711.02.md
+    output: ../../draft/2025/20250717.03.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20250717170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20250717190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交

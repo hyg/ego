@@ -568,11 +568,11 @@ time:
   sold:
     PSMD: 90
     ego: 200
-    infra: 275
+    infra: 335
     learn: 587
     raw: 0
     xuemen: 90
-    js: 150
+    js: 210
 todo:
   PSMD:
     - '90': 整理default模型
@@ -756,15 +756,6 @@ todo:
         - day metada
         - draft文件名
   infra:
-    - '60': 范例--利用js模块组合实现合同条款的组合。
-      readme:
-        - read ../../draft/2025/20250503.03.md
-        - read ../../draft/2025/20250505.03.md
-        - read ../../draft/2025/20250606.01.md
-        - read ../../draft/2025/20250610.03.md
-        - read ../../draft/2025/20250613.02.md
-        - read ../../draft/2025/20250704.02.md
-        - read ../../draft/2025/20250711.02.md
     - '90': schema立项。
       readme:
         - read ../../draft/2024/09/20240919140000.md
@@ -784,6 +775,11 @@ todo:
         - read ../../draft/2024/10/20241003.03.md
         - read ../../draft/2024/10/20241004.01.md
   learn:
+    - '30': 演化计算（Evolutionary Computation）和大模型结合的研判
+      readme:
+        - https://www.wangxubin.site/Blogs/posts/ec-in-llm-era/
+        - https://zhuanlan.zhihu.com/p/432162132
+        - https://blog.csdn.net/2401_84204413/article/details/145206561
     - '60': 佯谬及二次革命
       readme:
         - https://wuli.iphy.ac.cn/en/article/pdf/preview/10.7693/wl20221201.pdf
@@ -793,11 +789,6 @@ todo:
     - '60': 量子力学的各种诠释:基于门电路、event机制的思想实验
       readme:
         - read ../../draft/2025/20250505.01.md
-    - '30': 演化计算（Evolutionary Computation）和大模型结合的研判
-      readme:
-        - https://www.wangxubin.site/Blogs/posts/ec-in-llm-era/
-        - https://zhuanlan.zhihu.com/p/432162132
-        - https://blog.csdn.net/2401_84204413/article/details/145206561
     - '90': 热更新
     - '195': 量子物理的数学基础
       readme:
@@ -883,15 +874,17 @@ todo:
       readme:
         - https://zh.javascript.info/promise-api
   js:
+    - '60': LangChain.js
+      readme:
+        - https://github.com/langchain-ai/langchainjs
+        - https://js.langchain.com
+        - https://docs.langchain.com.cn/
+        - read ../../draft/2025/20250717.01.md
     - '60': ai-sdk + moonshot
       readme:
         - https://ai-sdk.dev/docs/foundations/providers-and-models
         - https://platform.moonshot.cn/docs/introduction
         - toolcalls, json mode,MCP(model context protocol),agentic
-    - '30': LangChain.js
-      readme:
-        - https://github.com/langchain-ai/langchainjs
-        - https://js.langchain.com
     - '60': Vector Database in nodejs
       readme:
         - https://www.dongaigc.com/p/Stevenic/vectra
