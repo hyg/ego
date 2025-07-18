@@ -567,9 +567,9 @@ time:
     js: 1000
   sold:
     PSMD: 90
-    ego: 200
+    ego: 290
     infra: 335
-    learn: 587
+    learn: 737
     raw: 0
     xuemen: 90
     js: 210
@@ -695,9 +695,6 @@ todo:
         - read ../../draft/2025/20250525.01.md
         - https://sql.js.org
         - read ../../draft/2025/20250526.03.md
-    - '30': entry的科目归并
-      readme:
-        - read ../../draft/2025/20250502.01.md
     - '195': 新版ego, instance or model, any manifest
       readme:
         - read ../../draft/2024/09/20240925.01.md
@@ -775,17 +772,15 @@ todo:
         - read ../../draft/2024/10/20241003.03.md
         - read ../../draft/2024/10/20241004.01.md
   learn:
-    - '30': 演化计算（Evolutionary Computation）和大模型结合的研判
-      readme:
-        - https://www.wangxubin.site/Blogs/posts/ec-in-llm-era/
-        - https://zhuanlan.zhihu.com/p/432162132
-        - https://blog.csdn.net/2401_84204413/article/details/145206561
     - '60': 佯谬及二次革命
       readme:
         - https://wuli.iphy.ac.cn/en/article/pdf/preview/10.7693/wl20221201.pdf
         - read ../../draft/2025/20250606.02.md
         - read ../../draft/2025/20250610.01.md
         - read ../../draft/2025/20250710.01.md
+    - '90': claude code + kimi K2
+      readme:
+        - read ../../draft/2025/20250718.a.md
     - '60': 量子力学的各种诠释:基于门电路、event机制的思想实验
       readme:
         - read ../../draft/2025/20250505.01.md
@@ -805,6 +800,8 @@ todo:
     - '90': MCP in ts
       readme:
         - https://github.com/modelcontextprotocol/typescript-sdk
+    - '60': claude code router
+    - '30': playwright
     - '60': 腾讯文档sdk
       readme:
         - https://docs.qq.com/open/developers
