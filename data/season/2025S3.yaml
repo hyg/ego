@@ -569,10 +569,10 @@ time:
     PSMD: 90
     ego: 290
     infra: 335
-    learn: 737
+    learn: 1081
     raw: 0
     xuemen: 90
-    js: 210
+    js: 250
 todo:
   PSMD:
     - '90': 整理default模型
@@ -772,15 +772,13 @@ todo:
         - read ../../draft/2024/10/20241003.03.md
         - read ../../draft/2024/10/20241004.01.md
   learn:
-    - '60': 佯谬及二次革命
+    - '60': jami bot
       readme:
-        - https://wuli.iphy.ac.cn/en/article/pdf/preview/10.7693/wl20221201.pdf
-        - read ../../draft/2025/20250606.02.md
-        - read ../../draft/2025/20250610.01.md
-        - read ../../draft/2025/20250710.01.md
+        - read ../../draft/2025/20250719.a.md
     - '90': claude code + kimi K2
       readme:
         - read ../../draft/2025/20250718.a.md
+    - '30': react ink
     - '60': 量子力学的各种诠释:基于门电路、event机制的思想实验
       readme:
         - read ../../draft/2025/20250505.01.md
@@ -801,7 +799,6 @@ todo:
       readme:
         - https://github.com/modelcontextprotocol/typescript-sdk
     - '60': claude code router
-    - '30': playwright
     - '60': 腾讯文档sdk
       readme:
         - https://docs.qq.com/open/developers
@@ -871,6 +868,10 @@ todo:
       readme:
         - https://zh.javascript.info/promise-api
   js:
+    - '60': giiter.im bot sample
+      readme:
+        - https://github.com/matrix-org/matrix-js-sdk
+        - http://matrix-org.github.io/matrix-js-sdk/index.html
     - '60': LangChain.js
       readme:
         - https://github.com/langchain-ai/langchainjs
@@ -898,14 +899,9 @@ todo:
         - https://www.npmjs.com/package/jsonpath
         - https://www.npmjs.com/package/@pulumi/query
         - read ../../draft/2025/20250528.01.md
-    - '30': learn brain.js
+    - '60': TensorFlow.js
       readme:
-        - https://github.com/BrainJS/brain.js
-        - https://brain.js.org/
-      bind:
-        - '60': TensorFlow.js
-          readme:
-            - https://github.com/tensorflow/tfjs
+        - https://github.com/tensorflow/tfjs
     - '60': learn factory, constructor, prototype
       readme:
         - https://juejin.cn/post/6844903653774458888
@@ -972,10 +968,6 @@ todo:
     - '90': editor.js
       readme:
         - https://editorjs.io/
-    - '60': giiter.im bot sample
-      readme:
-        - https://github.com/matrix-org/matrix-js-sdk
-        - http://matrix-org.github.io/matrix-js-sdk/index.html
     - '60': embedded dbs
       readme:
         - IndexedDB + dexie
