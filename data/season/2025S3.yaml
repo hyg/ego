@@ -569,13 +569,13 @@ time:
     PSMD: 90
     ego: 290
     infra: 335
-    learn: 1081
+    learn: 1501
     raw: 0
     xuemen: 90
-    js: 250
+    js: 340
 todo:
   PSMD:
-    - '90': 整理default模型
+    - '60': 整理default模型
       readme:
         - read ../../draft/2024/10/20241007.01.md
         - read ../../draft/2024/10/20241010.02.md
@@ -682,6 +682,9 @@ todo:
       readnme:
         - 考虑upgradeby的实现。
   ego:
+    - '60': 整理task及其相互关系
+      readme:
+        - readme 2024.07.20. 09:30 draft
     - '90': 整理js对象检索的代码
       readme:
         - read ../../draft/2025/20250605.03.md
@@ -739,9 +742,6 @@ todo:
         - read 2024.07.21 07:45 draft
       bind:
         - '90': schema level 2 schema for law v1
-    - '60': 整理task及其相互关系
-      readme:
-        - readme 2024.07.20. 09:30 draft
     - '30': 用js代码完成日小结后的git操作。
       readme:
         - 参考：D:\huangyg\git\draft\2024\04\20240430140000.md
@@ -753,14 +753,6 @@ todo:
         - day metada
         - draft文件名
   infra:
-    - '90': schema立项。
-      readme:
-        - read ../../draft/2024/09/20240919140000.md
-        - read ../../draft/2025/20250110.01.md
-        - read ../../draft/2025/20250112.01.md
-        - read ../../draft/2025/20250116.01.md
-        - read ../../draft/2025/20250408.01.md
-        - read ../../draft/2025/20250613.a.md
     - '60': 动态菜单设计。
       readme:
         - read ../../draft/2024/09/20240921.02.md
@@ -771,7 +763,22 @@ todo:
         - read ../../draft/2024/10/20241002.02.md
         - read ../../draft/2024/10/20241003.03.md
         - read ../../draft/2024/10/20241004.01.md
+    - '90': schema立项。
+      readme:
+        - read ../../draft/2024/09/20240919140000.md
+        - read ../../draft/2025/20250110.01.md
+        - read ../../draft/2025/20250112.01.md
+        - read ../../draft/2025/20250116.01.md
+        - read ../../draft/2025/20250408.01.md
+        - read ../../draft/2025/20250613.a.md
   learn:
+    - '90': 去中心化节点
+      readme:
+        - read ../../draft/2025/20250720.a.md
+    - '60': MCP in nodejs
+      readme:
+        - read ../../draft/2025/20250720.01.md
+    - '60': node-datachannel
     - '60': jami bot
       readme:
         - read ../../draft/2025/20250719.a.md
@@ -868,10 +875,6 @@ todo:
       readme:
         - https://zh.javascript.info/promise-api
   js:
-    - '60': giiter.im bot sample
-      readme:
-        - https://github.com/matrix-org/matrix-js-sdk
-        - http://matrix-org.github.io/matrix-js-sdk/index.html
     - '60': LangChain.js
       readme:
         - https://github.com/langchain-ai/langchainjs
@@ -1000,13 +1003,13 @@ todo:
             - '60': 新版本food预算决算
         - '60': 新版食材排序，包括升序、降序、特定值距离、多种营养成分特定值组合距离。
   xuemen:
+    - '195': kernel模型升级
+      readme:
+        - read ../../draft/2024/11/20241120.01.md
     - '90': mail server
       readme:
         - https://stalw.art
         - read ../../draft/2025/20250531.a.md
-    - '195': kernel模型升级
-      readme:
-        - read ../../draft/2024/11/20241120.01.md
     - '195': 重新设计S2状态下的学门基本管理制度
     - '60': term.e6f0caec -> xuemen COD metadata-S2状态下的部门模型
 comment:
