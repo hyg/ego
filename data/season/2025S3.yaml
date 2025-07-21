@@ -569,19 +569,12 @@ time:
     PSMD: 90
     ego: 290
     infra: 335
-    learn: 1501
+    learn: 1816
     raw: 0
     xuemen: 90
     js: 340
 todo:
   PSMD:
-    - '60': 整理default模型
-      readme:
-        - read ../../draft/2024/10/20241007.01.md
-        - read ../../draft/2024/10/20241010.02.md
-        - read ../../draft/2024/10/20241011.01.md
-        - read ../../draft/2024/11/20241106.01.md
-        - read ../../draft/2025/20250704.01.md
     - '195': machines model
       readme:
         - read ../../draft/2024/07/20240723160000.md
@@ -607,6 +600,13 @@ todo:
         - read ../../draft/2025/20250416.01.md
         - read ../../draft/2025/20250427.01.md
         - read ../../draft/2025/20250505.02.md
+    - '60': 整理default模型
+      readme:
+        - read ../../draft/2024/10/20241007.01.md
+        - read ../../draft/2024/10/20241010.02.md
+        - read ../../draft/2024/10/20241011.01.md
+        - read ../../draft/2024/11/20241106.01.md
+        - read ../../draft/2025/20250704.01.md
     - '60': 根据香港《公司條例》调整1609的部署方案 https://www.elegislation.gov.hk/hk/cap622
       readme:
         - read ../../draft/2025/20250403.01.md
@@ -684,7 +684,7 @@ todo:
   ego:
     - '60': 整理task及其相互关系
       readme:
-        - readme 2024.07.20. 09:30 draft
+        - read ../../draft/2024/07/20240704093000.md
     - '90': 整理js对象检索的代码
       readme:
         - read ../../draft/2025/20250605.03.md
@@ -753,6 +753,7 @@ todo:
         - day metada
         - draft文件名
   infra:
+    - '60': 结合AI进展重新规划架构
     - '60': 动态菜单设计。
       readme:
         - read ../../draft/2024/09/20240921.02.md
@@ -775,6 +776,7 @@ todo:
     - '90': 去中心化节点
       readme:
         - read ../../draft/2025/20250720.a.md
+        - read ../../draft/2025/20250721.01.md
     - '60': MCP in nodejs
       readme:
         - read ../../draft/2025/20250720.01.md
