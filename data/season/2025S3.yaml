@@ -566,7 +566,7 @@ time:
     learn: 2000
     js: 1000
   sold:
-    PSMD: 90
+    PSMD: 450
     ego: 290
     infra: 335
     learn: 1816
@@ -575,6 +575,9 @@ time:
     js: 340
 todo:
   PSMD:
+    - '60': 筹备会议 by claude.md
+      readme:
+        - read ../../draft/2025/20250722.02.md
     - '195': machines model
       readme:
         - read ../../draft/2024/07/20240723160000.md
@@ -773,13 +776,13 @@ todo:
         - read ../../draft/2025/20250408.01.md
         - read ../../draft/2025/20250613.a.md
   learn:
+    - '195': MCP in nodejs
+      readme:
+        - read ../../draft/2025/20250720.01.md
     - '90': 去中心化节点
       readme:
         - read ../../draft/2025/20250720.a.md
         - read ../../draft/2025/20250721.01.md
-    - '60': MCP in nodejs
-      readme:
-        - read ../../draft/2025/20250720.01.md
     - '60': node-datachannel
     - '60': jami bot
       readme:
@@ -883,11 +886,16 @@ todo:
         - https://js.langchain.com
         - https://docs.langchain.com.cn/
         - read ../../draft/2025/20250717.01.md
-    - '60': ai-sdk + moonshot
+    - '30': a2a-js
       readme:
-        - https://ai-sdk.dev/docs/foundations/providers-and-models
-        - https://platform.moonshot.cn/docs/introduction
-        - toolcalls, json mode,MCP(model context protocol),agentic
+        - https://a2aprotocol.ai/blog/a2a-javascript-sdk-zh
+        - https://agent2agent.info/zh-cn/docs/examples/javascript/
+        - null
+        - '60': ai-sdk + moonshot
+          readme:
+            - https://ai-sdk.dev/docs/foundations/providers-and-models
+            - https://platform.moonshot.cn/docs/introduction
+            - toolcalls, json mode,MCP(model context protocol),agentic
     - '60': Vector Database in nodejs
       readme:
         - https://www.dongaigc.com/p/Stevenic/vectra
@@ -1005,13 +1013,20 @@ todo:
             - '60': 新版本food预算决算
         - '60': 新版食材排序，包括升序、降序、特定值距离、多种营养成分特定值组合距离。
   xuemen:
-    - '195': kernel模型升级
-      readme:
-        - read ../../draft/2024/11/20241120.01.md
     - '90': mail server
       readme:
         - https://stalw.art
         - read ../../draft/2025/20250531.a.md
+    - '60': 根据最新政策文件，考虑AER、AVR文件升级。
+      readme:
+        - http://kjs.mof.gov.cn/gongzuotongzhi/202505/t20250519_3964023.htm
+        - https://zcool.17win.com/knowledge/996b8380aafc43c1a436b1ae3396076a
+        - https://www.xbrl-cn.org/2025/0519/271458.shtml
+        - http://www.xbrl.org
+        - https://www.xbrl-cn.org/
+    - '195': kernel模型升级
+      readme:
+        - read ../../draft/2024/11/20241120.01.md
     - '195': 重新设计S2状态下的学门基本管理制度
     - '60': term.e6f0caec -> xuemen COD metadata-S2状态下的部门模型
 comment:
