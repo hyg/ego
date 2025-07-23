@@ -569,7 +569,7 @@ time:
     PSMD: 450
     ego: 290
     infra: 335
-    learn: 1816
+    learn: 2236
     raw: 0
     xuemen: 90
     js: 340
@@ -776,6 +776,7 @@ todo:
         - read ../../draft/2025/20250408.01.md
         - read ../../draft/2025/20250613.a.md
   learn:
+    - '30': react ink
     - '195': MCP in nodejs
       readme:
         - read ../../draft/2025/20250720.01.md
@@ -790,7 +791,6 @@ todo:
     - '90': claude code + kimi K2
       readme:
         - read ../../draft/2025/20250718.a.md
-    - '30': react ink
     - '60': 量子力学的各种诠释:基于门电路、event机制的思想实验
       readme:
         - read ../../draft/2025/20250505.01.md
@@ -880,22 +880,21 @@ todo:
       readme:
         - https://zh.javascript.info/promise-api
   js:
+    - '30': a2a-js
+      readme:
+        - https://a2aprotocol.ai/blog/a2a-javascript-sdk-zh
+        - https://agent2agent.info/zh-cn/docs/examples/javascript/
     - '60': LangChain.js
       readme:
         - https://github.com/langchain-ai/langchainjs
         - https://js.langchain.com
         - https://docs.langchain.com.cn/
         - read ../../draft/2025/20250717.01.md
-    - '30': a2a-js
+    - '60': ai-sdk + moonshot
       readme:
-        - https://a2aprotocol.ai/blog/a2a-javascript-sdk-zh
-        - https://agent2agent.info/zh-cn/docs/examples/javascript/
-        - null
-        - '60': ai-sdk + moonshot
-          readme:
-            - https://ai-sdk.dev/docs/foundations/providers-and-models
-            - https://platform.moonshot.cn/docs/introduction
-            - toolcalls, json mode,MCP(model context protocol),agentic
+        - https://ai-sdk.dev/docs/foundations/providers-and-models
+        - https://platform.moonshot.cn/docs/introduction
+        - toolcalls, json mode,MCP(model context protocol),agentic
     - '60': Vector Database in nodejs
       readme:
         - https://www.dongaigc.com/p/Stevenic/vectra
