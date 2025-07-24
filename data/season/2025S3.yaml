@@ -566,15 +566,18 @@ time:
     learn: 2000
     js: 1000
   sold:
-    PSMD: 450
+    PSMD: 510
     ego: 290
     infra: 335
-    learn: 2236
+    learn: 2751
     raw: 0
     xuemen: 90
     js: 340
 todo:
   PSMD:
+    - '30': PSMD agent AI的内部角色和功能
+      readme:
+        - read ../../draft/2025/20250724.03.md
     - '60': 筹备会议 by claude.md
       readme:
         - read ../../draft/2025/20250722.02.md
@@ -688,7 +691,7 @@ todo:
     - '60': 整理task及其相互关系
       readme:
         - read ../../draft/2024/07/20240704093000.md
-    - '90': 整理js对象检索的代码
+    - '60': 整理js对象检索的代码
       readme:
         - read ../../draft/2025/20250605.03.md
         - read ../../draft/2025/20250714.03.md
@@ -776,21 +779,31 @@ todo:
         - read ../../draft/2025/20250408.01.md
         - read ../../draft/2025/20250613.a.md
   learn:
+    - '30': claude code + kimi K2 @ bailian
+      readme:
+        - read ../../draft/2025/20250724.a.md
+    - '60': 百炼平台API
+      readme:
+        - read ../../draft/2025/20250724.02.md
+    - '60': 去中心化节点
+      readme:
+        - read ../../draft/2025/20250720.a.md
+        - read ../../draft/2025/20250721.01.md
+        - read ../../draft/2025/20250724.01.md
+    - '60': 智谱API开发
+      readme:
+        - https://open.bigmodel.cn/
+    - '90': claude code + kimi K2
+      readme:
+        - read ../../draft/2025/20250718.a.md
     - '30': react ink
     - '195': MCP in nodejs
       readme:
         - read ../../draft/2025/20250720.01.md
-    - '90': 去中心化节点
-      readme:
-        - read ../../draft/2025/20250720.a.md
-        - read ../../draft/2025/20250721.01.md
     - '60': node-datachannel
     - '60': jami bot
       readme:
         - read ../../draft/2025/20250719.a.md
-    - '90': claude code + kimi K2
-      readme:
-        - read ../../draft/2025/20250718.a.md
     - '60': 量子力学的各种诠释:基于门电路、event机制的思想实验
       readme:
         - read ../../draft/2025/20250505.01.md
@@ -1012,10 +1025,6 @@ todo:
             - '60': 新版本food预算决算
         - '60': 新版食材排序，包括升序、降序、特定值距离、多种营养成分特定值组合距离。
   xuemen:
-    - '90': mail server
-      readme:
-        - https://stalw.art
-        - read ../../draft/2025/20250531.a.md
     - '60': 根据最新政策文件，考虑AER、AVR文件升级。
       readme:
         - http://kjs.mof.gov.cn/gongzuotongzhi/202505/t20250519_3964023.htm
@@ -1026,6 +1035,10 @@ todo:
     - '195': kernel模型升级
       readme:
         - read ../../draft/2024/11/20241120.01.md
+    - '90': mail server
+      readme:
+        - https://stalw.art
+        - read ../../draft/2025/20250531.a.md
     - '195': 重新设计S2状态下的学门基本管理制度
     - '60': term.e6f0caec -> xuemen COD metadata-S2状态下的部门模型
 comment:

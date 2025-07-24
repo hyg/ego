@@ -1,0 +1,17 @@
+date: 2025-07-24
+VoucherID: 4200002762202507240500499215
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit:
+    - AccountTitle: raw.food
+      asset: rmb
+      amount: 9.90
+  credit: 
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 9.90
+comment: 
+  - name: 小象超市月卡
+    amount: 1
+    unit: 月
+    asset: 9.90

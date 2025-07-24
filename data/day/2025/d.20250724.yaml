@@ -1,0 +1,78 @@
+date: '20250724'
+mode: '2'
+plan: 2b
+time:
+  - begin: '20250724052200'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20250724053700'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20250724063700'
+    amount: 45
+    type: food
+    name: 早餐
+  - begin: '20250724072200'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20250724080700'
+    amount: 82
+    type: free
+    name: 休整
+  - begin: '20250724093000'
+    amount: 195
+    redo: 60
+    type: work
+    name: 工作
+    subject: learn
+    title: 去中心化节点
+    readme:
+      - read ../../draft/2025/20250720.a.md
+      - read ../../draft/2025/20250721.01.md
+    output: ../../draft/2025/20250724.01.md
+    namelink: http://simp.ly/p/WZ077p
+  - begin: '20250724124500'
+    amount: 137
+    type: food
+    name: 备餐、午餐午休
+  - begin: '202507241407000'
+    amount: 100
+    redo: 60
+    type: work
+    name: 工作
+    subject: learn
+    title: 百炼平台API
+    output: ../../draft/2025/20250724.02.md
+    namelink: http://simp.ly/p/lsBYG9
+  - begin: '20250724153000'
+    amount: 30
+    type: free
+    name: 休整
+  - begin: '20250724160000'
+    amount: 60
+    redo: 30
+    type: work
+    name: 工作
+    subject: PSMD
+    title: PSMD agent AI的内部角色和功能
+    output: ../../draft/2025/20250724.03.md
+    namelink: http://simp.ly/p/MpcbHD
+  - begin: '20250724170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20250724190000'
+    amount: 220
+    redo: 30
+    type: work
+    name: 工作
+    subject: learn
+    title: claude code + kimi K2 @ bailian
+    output: ../../draft/2025/20250724.a.md
+  - begin: '20250724190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
