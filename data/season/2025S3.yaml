@@ -566,21 +566,23 @@ time:
     learn: 2000
     js: 1000
   sold:
-    PSMD: 510
+    PSMD: 750
     ego: 290
-    infra: 335
-    learn: 2751
+    infra: 425
+    learn: 2841
     raw: 0
     xuemen: 90
     js: 340
 todo:
   PSMD:
-    - '30': PSMD agent AI的内部角色和功能
-      readme:
-        - read ../../draft/2025/20250724.03.md
     - '60': 筹备会议 by claude.md
       readme:
         - read ../../draft/2025/20250722.02.md
+        - read ../../draft/2025/20250725.03.md
+    - '30': PSMD agent AI的内部角色和功能
+      readme:
+        - read ../../draft/2025/20250724.03.md
+        - read ../../draft/2025/20250725.01.md
     - '195': machines model
       readme:
         - read ../../draft/2024/07/20240723160000.md
@@ -760,6 +762,8 @@ todo:
         - draft文件名
   infra:
     - '60': 结合AI进展重新规划架构
+      readme:
+        - read ../../draft/2025/20250725.02.md
     - '60': 动态菜单设计。
       readme:
         - read ../../draft/2024/09/20240921.02.md
@@ -796,10 +800,12 @@ todo:
     - '90': claude code + kimi K2
       readme:
         - read ../../draft/2025/20250718.a.md
+    - '30': AutoGen
     - '30': react ink
     - '195': MCP in nodejs
       readme:
         - read ../../draft/2025/20250720.01.md
+    - '30': TLA+
     - '60': node-datachannel
     - '60': jami bot
       readme:
