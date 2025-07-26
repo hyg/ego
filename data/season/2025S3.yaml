@@ -566,19 +566,20 @@ time:
     learn: 2000
     js: 1000
   sold:
-    PSMD: 750
+    PSMD: 910
     ego: 290
     infra: 425
     learn: 2841
-    raw: 0
+    raw: 70
     xuemen: 90
-    js: 340
+    js: 370
 todo:
   PSMD:
-    - '60': 筹备会议 by claude.md
+    - '60': 筹备会议 by role+prompt
       readme:
         - read ../../draft/2025/20250722.02.md
         - read ../../draft/2025/20250725.03.md
+        - read ../../draft/2025/20250726.03.md
     - '30': PSMD agent AI的内部角色和功能
       readme:
         - read ../../draft/2025/20250724.03.md
@@ -791,6 +792,8 @@ todo:
         - read ../../draft/2025/20250724.02.md
     - '60': 去中心化节点
       readme:
+        - https://yjs.dev/
+        - https://loco-sync.com
         - read ../../draft/2025/20250720.a.md
         - read ../../draft/2025/20250721.01.md
         - read ../../draft/2025/20250724.01.md
@@ -903,6 +906,7 @@ todo:
       readme:
         - https://a2aprotocol.ai/blog/a2a-javascript-sdk-zh
         - https://agent2agent.info/zh-cn/docs/examples/javascript/
+        - read ../../draft/2025/20250726.01.md
     - '60': LangChain.js
       readme:
         - https://github.com/langchain-ai/langchainjs
