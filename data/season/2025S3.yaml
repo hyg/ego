@@ -566,24 +566,26 @@ time:
     learn: 2000
     js: 1000
   sold:
-    PSMD: 910
+    PSMD: 1100
     ego: 290
     infra: 425
-    learn: 2841
+    learn: 3081
     raw: 70
     xuemen: 90
     js: 370
 todo:
   PSMD:
-    - '60': 筹备会议 by role+prompt
+    - '60': PSMD agent AI的内部角色和功能
+      readme:
+        - read ../../draft/2025/20250724.03.md
+        - read ../../draft/2025/20250725.01.md
+        - read ../../draft/2025/20250727.02.md
+    - '90': 筹备会议 by role+prompt
       readme:
         - read ../../draft/2025/20250722.02.md
         - read ../../draft/2025/20250725.03.md
         - read ../../draft/2025/20250726.03.md
-    - '30': PSMD agent AI的内部角色和功能
-      readme:
-        - read ../../draft/2025/20250724.03.md
-        - read ../../draft/2025/20250725.01.md
+        - read ../../draft/2025/20250727.01.md
     - '195': machines model
       readme:
         - read ../../draft/2024/07/20240723160000.md
@@ -691,7 +693,7 @@ todo:
       readnme:
         - 考虑upgradeby的实现。
   ego:
-    - '60': 整理task及其相互关系
+    - '90': 整理task及其相互关系
       readme:
         - read ../../draft/2024/07/20240704093000.md
     - '60': 整理js对象检索的代码
@@ -783,10 +785,43 @@ todo:
         - read ../../draft/2025/20250116.01.md
         - read ../../draft/2025/20250408.01.md
         - read ../../draft/2025/20250613.a.md
+    - '195': Rete/Phreak算法的自主实现
   learn:
+    - '90': 业务规则引擎
+      readme:
+        - read ../../draft/2025/20250727.a.md
+    - '60': ANP（Agent Network Protocol）
+      readme:
+        - https://agent-network-protocol.com/
+        - https://m.jellow.club/users/e0e8bda8-1848-43ba-84dc-1959ba8e9529
+    - '30': Agent Protocol https://agentprotocol.ai/
+    - '60': ethers.js v6，Node.js 最流行的以太坊交互库。
+      readme:
+        - https://rpc.sepolia.org
+        - https://sepolia.etherscan.io
+        - https://sepoliafaucet.com
     - '30': claude code + kimi K2 @ bailian
       readme:
         - read ../../draft/2025/20250724.a.md
+    - '30': NER（命名实体识别）RE（关系抽取）
+      readme:
+        - compromise
+        - node-hanlp
+        - https://www.npmjs.com/package/node-nlp
+        - https://www.npmjs.com/package/natural
+        - 从文本抽取实体和关系，json格式
+        - 从文本中抽取三元组：文本：{输入文本} 格式：(头实体, 关系, 尾实体)
+    - '30': Rete/Phreak算法
+    - '60': 业务规则引擎（BRMS）
+      readme:
+        - https://www.drools.org
+        - Red Hat KIE Group:Red Hat Process Automation Manager 7.x/8.x 已提供 kie-server-standalone.jar, java -jar kie-server.jar 即可启动
+        - https://kogito.kie.org/
+        - Kogito-js wasm  kie/kogito-dmn-loader（npm）
+        - https://www.npmjs.com/package/nools
+        - https://www.npmjs.com/package/rules-js
+        - https://www.npmjs.com/package/json-rules-engine
+        - read ../../draft/2005/20250726.a.md
     - '60': 百炼平台API
       readme:
         - read ../../draft/2025/20250724.02.md
@@ -810,6 +845,13 @@ todo:
         - read ../../draft/2025/20250720.01.md
     - '30': TLA+
     - '60': node-datachannel
+    - '30': 国产区块链产品
+      readme:
+        - antchain-sdk-nodejs
+        - tbaas-sdk-nodejs
+    - '30': Virtuals Protocol
+      readme:
+        - https://whitepaper.virtuals.io/
     - '60': jami bot
       readme:
         - read ../../draft/2025/20250719.a.md
