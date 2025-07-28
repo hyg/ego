@@ -567,7 +567,7 @@ time:
     js: 1000
   sold:
     PSMD: 1100
-    ego: 290
+    ego: 720
     infra: 425
     learn: 3081
     raw: 70
@@ -696,6 +696,7 @@ todo:
     - '90': 整理task及其相互关系
       readme:
         - read ../../draft/2024/07/20240704093000.md
+        - read ../../draft/2025/20250728.01.md
     - '60': 整理js对象检索的代码
       readme:
         - read ../../draft/2025/20250605.03.md
@@ -955,6 +956,9 @@ todo:
         - https://js.langchain.com
         - https://docs.langchain.com.cn/
         - read ../../draft/2025/20250717.01.md
+    - '30': graphviz
+      readme:
+        - https://www.npmjs.com/package/graphviz
     - '60': ai-sdk + moonshot
       readme:
         - https://ai-sdk.dev/docs/foundations/providers-and-models
