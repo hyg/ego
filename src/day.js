@@ -222,6 +222,10 @@ module.exports = {
         return dayobj;
     },
     initdraft: function (timeperiod) {
+        if(timeperiod.type == 'check'){
+            draftstr = "## " + check + ": [零散笔记]\n\n";
+        }
+
         var draftstr = "## " + timeperiod.subject + ": [" + timeperiod.title + "]\n\n";
         if (timeperiod.readme != null) {
             //log("timeperiod.readme:",timeperiod.readme);
@@ -294,7 +298,7 @@ module.exports = {
                     indexstr = indexstr + "- " + begintime.Format("hh:mm") + "~" + endtime.Format("hh:mm") + "\t" + timeperiod.subject + ": [" + timeperiod.title + "](" + linkstr + ")\n";
                 }
                 if (timeperiod.type == "check") {
-                    indexstr = indexstr + "- " + begintime.Format("hh:mm") + "~" + endtime.Format("hh:mm") + "\t[零散笔记](" + linkstr + ")\n";
+                    indexstr = indexstr + "- " + begintime.Format("hh:mm") + "~" + endtime.Format("hh:mm") + "\tcheck: [零散笔记](" + linkstr + ")\n";
                 }
             }
         }
