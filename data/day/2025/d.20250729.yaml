@@ -19,11 +19,15 @@ time:
     type: discuss
     name: 会议、自习
   - begin: '20250729110500'
-    amount: 174
-    type: free
-    name: 休整
+    amount: 184
+    type: work
+    name: 静默工作
+    subject: learn
+    title: 业务规则引擎
+    output: ../../draft/2025/20250729.a.md
   - begin: '20250729140000'
-    amount: 30
+    amount: 0
+    redo: 30
     type: work
     name: 静默工作
     subject: js
@@ -35,7 +39,8 @@ time:
     output: ../../draft/2025/20250729.01.md
     namelink: http://simp.ly/p/8t3vlk
   - begin: '20250729143000'
-    amount: 30
+    amount: 0
+    redo: 30
     type: work
     name: 静默工作
     subject: js
@@ -44,12 +49,19 @@ time:
       - https://www.npmjs.com/package/graphviz
     output: ../../draft/2025/20250729.02.md
     namelink: http://simp.ly/p/5k9gJy
-  - begin: '20250729150000'
+  - begin: '20250729141000'
     amount: 60
     type: free
     name: 休整
+  - begin: '20250729151000'
+    amount: 230
+    type: work
+    name: 静默工作
+    subject: learn
+    title: 业务规则引擎
   - begin: '20250729160000'
-    amount: 60
+    amount: 0
+    redo: 60
     type: work
     name: 静默工作
     subject: PSMD
@@ -60,11 +72,12 @@ time:
       - read ../../draft/2025/20250727.02.md
     output: ../../draft/2025/20250729.03.md
     namelink: http://simp.ly/p/4QDThK
-  - begin: '20250729170000'
+  - begin: '20250729191000'
     amount: 120
     type: food
     name: 晚餐
-  - begin: '20250729190000'
+  - begin: '20250729211000'
     amount: 60
     type: check
     name: 讨论、整理提交
+    output: ../../draft/2025/20250729.b.md

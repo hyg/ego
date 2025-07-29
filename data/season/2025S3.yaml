@@ -566,15 +566,20 @@ time:
     learn: 2000
     js: 1000
   sold:
-    PSMD: 1160
+    PSMD: 1100
     ego: 720
     infra: 425
-    learn: 3081
+    learn: 3495
     raw: 70
     xuemen: 90
-    js: 430
+    js: 370
 todo:
   PSMD:
+    - '60': PSMD agent AI的内部角色和功能
+      readme:
+        - read ../../draft/2025/20250724.03.md
+        - read ../../draft/2025/20250725.01.md
+        - read ../../draft/2025/20250727.02.md
     - '90': 筹备会议 by role+prompt
       readme:
         - read ../../draft/2025/20250722.02.md
@@ -948,6 +953,14 @@ todo:
       readme:
         - https://zh.javascript.info/promise-api
   js:
+    - '30': graphviz
+      readme:
+        - https://www.npmjs.com/package/graphviz
+    - '30': a2a-js
+      readme:
+        - https://a2aprotocol.ai/blog/a2a-javascript-sdk-zh
+        - https://agent2agent.info/zh-cn/docs/examples/javascript/
+        - read ../../draft/2025/20250726.01.md
     - '30': nodejs中调用jar
       readme:
         - node-java
