@@ -152,7 +152,9 @@ module.exports = {
             timeperiod.amount = amount;
             timeperiod.type = timeslice.type;
             timeperiod.name = timeslice.name;
-
+            if (timeslice.type == "check"){
+                timeperiod.output = path.draftrepopath + date.slice(0, 4) + "/" + date + "." + draftcnt.toString().padStart(2, '0') + ".md";
+            }
             if (timeslice.type == "work") {
                 timeperiod.subject = waitinglist[amount.toString()][0].task;
                 timeperiod.title = waitinglist[amount.toString()][0].name;

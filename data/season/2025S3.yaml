@@ -566,20 +566,15 @@ time:
     learn: 2000
     js: 1000
   sold:
-    PSMD: 1100
+    PSMD: 1160
     ego: 720
     infra: 425
     learn: 3081
     raw: 70
     xuemen: 90
-    js: 370
+    js: 430
 todo:
   PSMD:
-    - '60': PSMD agent AI的内部角色和功能
-      readme:
-        - read ../../draft/2025/20250724.03.md
-        - read ../../draft/2025/20250725.01.md
-        - read ../../draft/2025/20250727.02.md
     - '90': 筹备会议 by role+prompt
       readme:
         - read ../../draft/2025/20250722.02.md
@@ -791,6 +786,7 @@ todo:
     - '90': 业务规则引擎
       readme:
         - read ../../draft/2025/20250727.a.md
+        - read ../../draft/2025/20250729.a.md
     - '60': ANP（Agent Network Protocol）
       readme:
         - https://agent-network-protocol.com/
@@ -819,6 +815,7 @@ todo:
         - Red Hat KIE Group:Red Hat Process Automation Manager 7.x/8.x 已提供 kie-server-standalone.jar, java -jar kie-server.jar 即可启动
         - https://kogito.kie.org/
         - Kogito-js wasm  kie/kogito-dmn-loader（npm）
+        - https://bpmn.io/toolkit/dmn-js/
         - https://www.npmjs.com/package/nools
         - https://www.npmjs.com/package/rules-js
         - https://www.npmjs.com/package/json-rules-engine
@@ -833,6 +830,12 @@ todo:
         - read ../../draft/2025/20250720.a.md
         - read ../../draft/2025/20250721.01.md
         - read ../../draft/2025/20250724.01.md
+    - '60': 长安链智能合约
+      readme:
+        - https://docs.chainmaker.org.cn/v2.3.7/html/sdk/NodejsSDK%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E.html
+    - '60': Hyperledger Fabric智能合约
+      readme:
+        - https://hyperledgercn.github.io/hyperledgerDocs/sdk_node_zh/
     - '60': 智谱API开发
       readme:
         - https://open.bigmodel.cn/
@@ -945,20 +948,16 @@ todo:
       readme:
         - https://zh.javascript.info/promise-api
   js:
-    - '30': a2a-js
+    - '30': nodejs中调用jar
       readme:
-        - https://a2aprotocol.ai/blog/a2a-javascript-sdk-zh
-        - https://agent2agent.info/zh-cn/docs/examples/javascript/
-        - read ../../draft/2025/20250726.01.md
+        - node-java
+        - java-bridge
     - '60': LangChain.js
       readme:
         - https://github.com/langchain-ai/langchainjs
         - https://js.langchain.com
         - https://docs.langchain.com.cn/
         - read ../../draft/2025/20250717.01.md
-    - '30': graphviz
-      readme:
-        - https://www.npmjs.com/package/graphviz
     - '60': ai-sdk + moonshot
       readme:
         - https://ai-sdk.dev/docs/foundations/providers-and-models
