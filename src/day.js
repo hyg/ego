@@ -293,6 +293,9 @@ module.exports = {
                 if (timeperiod.type == "work") {
                     indexstr = indexstr + "- " + begintime.Format("hh:mm") + "~" + endtime.Format("hh:mm") + "\t" + timeperiod.subject + ": [" + timeperiod.title + "](" + linkstr + ")\n";
                 }
+                if (timeperiod.type == "check") {
+                    indexstr = indexstr + "- " + begintime.Format("hh:mm") + "~" + endtime.Format("hh:mm") + "\t[零散笔记](" + linkstr + ")\n";
+                }
             }
         }
 
