@@ -153,6 +153,7 @@ module.exports = {
             timeperiod.type = timeslice.type;
             timeperiod.name = timeslice.name;
             if (timeslice.type == "check"){
+                draftcnt++
                 timeperiod.output = path.draftrepopath + date.slice(0, 4) + "/" + date + "." + draftcnt.toString().padStart(2, '0') + ".md";
             }
             if (timeslice.type == "work") {
