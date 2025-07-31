@@ -567,7 +567,7 @@ time:
     js: 1000
   sold:
     PSMD: 1610
-    ego: 720
+    ego: 940
     infra: 425
     learn: 3495
     raw: 70
@@ -698,6 +698,7 @@ todo:
       readme:
         - read ../../draft/2024/07/20240704093000.md
         - read ../../draft/2025/20250728.01.md
+        - read ../../draft/2025/20250731.01.md
     - '60': 整理js对象检索的代码
       readme:
         - read ../../draft/2025/20250605.03.md

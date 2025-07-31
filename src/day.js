@@ -152,9 +152,19 @@ module.exports = {
             timeperiod.amount = amount;
             timeperiod.type = timeslice.type;
             timeperiod.name = timeslice.name;
-            if (timeslice.type == "check"){
+            if (timeslice.type == "check") {
                 draftcnt++
                 timeperiod.output = path.draftrepopath + date.slice(0, 4) + "/" + date + "." + draftcnt.toString().padStart(2, '0') + ".md";
+
+                var draftstr = this.initdraft(timeperiod);
+                //log(draftstr);
+
+                if (this.debug == false) {
+                    fs.writeFileSync(timeperiod.output, draftstr);
+                    log("save time slice draft file name:%s\n%s", timeperiod.output, draftstr);
+                } else {
+                    log("debug, time slice draft file name:%s\n%s", timeperiod.output, draftstr);
+                }
             }
             if (timeslice.type == "work") {
                 timeperiod.subject = waitinglist[amount.toString()][0].task;
@@ -223,7 +233,7 @@ module.exports = {
         return dayobj;
     },
     initdraft: function (timeperiod) {
-        if(timeperiod.type == 'check'){
+        if (timeperiod.type == 'check') {
             draftstr = "## " + check + ": [零散笔记]\n\n";
         }
 
