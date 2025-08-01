@@ -566,15 +566,21 @@ time:
     learn: 2000
     js: 1000
   sold:
-    PSMD: 1670
-    ego: 1030
+    PSMD: 1610
+    ego: 940
     infra: 425
-    learn: 3585
+    learn: 3495
     raw: 70
     xuemen: 90
     js: 370
 todo:
   PSMD:
+    - '60': PSMD agent AI的内部角色和功能
+      readme:
+        - read ../../draft/2025/20250724.03.md
+        - read ../../draft/2025/20250725.01.md
+        - read ../../draft/2025/20250727.02.md
+        - read ../../draft/2025/20250730.03.md
     - '90': 筹备会议 by role+prompt
       readme:
         - read ../../draft/2025/20250722.02.md
@@ -688,6 +694,11 @@ todo:
       readnme:
         - 考虑upgradeby的实现。
   ego:
+    - '90': 整理task及其相互关系
+      readme:
+        - read ../../draft/2024/07/20240704093000.md
+        - read ../../draft/2025/20250728.01.md
+        - read ../../draft/2025/20250731.01.md
     - '60': 整理js对象检索的代码
       readme:
         - read ../../draft/2025/20250605.03.md
@@ -779,6 +790,10 @@ todo:
         - read ../../draft/2025/20250613.a.md
     - '195': Rete/Phreak算法的自主实现
   learn:
+    - '90': 业务规则引擎
+      readme:
+        - read ../../draft/2025/20250727.a.md
+        - read ../../draft/2025/20250729.a.md
     - '60': ANP（Agent Network Protocol）
       readme:
         - https://agent-network-protocol.com/
