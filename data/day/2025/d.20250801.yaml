@@ -1,0 +1,77 @@
+date: '20250801'
+mode: '2'
+plan: 2b
+time:
+  - begin: '20250801055700'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20250801061200'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20250801071200'
+    amount: 45
+    type: food
+    name: 早餐
+  - begin: '20250801075700'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20250801084200'
+    amount: 47
+    type: free
+    name: 休整
+  - begin: '20250801093000'
+    amount: 90
+    type: work
+    name: 工作
+    subject: ego
+    title: 整理task及其相互关系
+    readme:
+      - read ../../draft/2024/07/20240704093000.md
+      - read ../../draft/2025/20250728.01.md
+      - read ../../draft/2025/20250731.01.md
+    output: ../../draft/2025/20250801.01.md
+    namelink: http://simp.ly/p/WZ077p
+  - begin: '20250801110000'
+    amount: 180
+    type: food
+    name: 备餐、午餐午休
+  - begin: '20250801140000'
+    amount: 90
+    type: work
+    name: 工作
+    subject: learn
+    title: 业务规则引擎
+    readme:
+      - read ../../draft/2025/20250727.a.md
+      - read ../../draft/2025/20250729.a.md
+    output: ../../draft/2025/20250801.02.md
+    namelink: http://simp.ly/p/lsBYG9
+  - begin: '20250801153000'
+    amount: 30
+    type: free
+    name: 休整
+  - begin: '20250801160000'
+    amount: 60
+    type: work
+    name: 工作
+    subject: PSMD
+    title: PSMD agent AI的内部角色和功能
+    readme:
+      - read ../../draft/2025/20250724.03.md
+      - read ../../draft/2025/20250725.01.md
+      - read ../../draft/2025/20250727.02.md
+      - read ../../draft/2025/20250730.03.md
+    output: ../../draft/2025/20250801.03.md
+    namelink: http://simp.ly/p/MpcbHD
+  - begin: '20250801170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20250801190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
+    output: ../../draft/2025/20250801.04.md

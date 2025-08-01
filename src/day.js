@@ -234,7 +234,8 @@ module.exports = {
     },
     initdraft: function (timeperiod) {
         if (timeperiod.type == 'check') {
-            draftstr = "## " + check + ": [零散笔记]\n\n";
+            draftstr = "## check: [零散笔记]\n\n";
+            return draftstr;
         }
 
         var draftstr = "## " + timeperiod.subject + ": [" + timeperiod.title + "]\n\n";
