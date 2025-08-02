@@ -8,6 +8,7 @@
   },
   "scripts": {
     "entry": "node ego asset entry",
+    "plan": "node ego day plan",
     "i1": "node ego day init 1",
     "i2": "node ego day init 2",
     "over": "node ego day over",

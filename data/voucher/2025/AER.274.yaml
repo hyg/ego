@@ -1,0 +1,61 @@
+date: 2025-08-02
+VoucherID: 19250802142000033728712546021191
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit:
+    - AccountTitle: raw.food
+      asset: rmb
+      amount: 171.10
+  credit: 
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 171.10
+comment: 
+  - name: 蛋挞皮
+    amount: 600
+    unit: g
+    asset: 14.72
+  - name: 墨江紫米
+    amount: 1000
+    unit: g
+    asset: 13.48
+  - name: 蒸肉米粉
+    amount: 440
+    unit: g
+    asset: 11.02
+  - name: 姜汁
+    amount: 500
+    unit: g
+    asset: 15.24
+  - name: 安尼斯19号意面
+    amount: 500
+    unit: g
+    asset: 11.19
+  - name: 安尼斯61号意面
+    amount: 500
+    unit: g
+    asset: 14.30
+  - name: 沙棘原浆
+    amount: 1500
+    unit: g
+    asset: 17.86
+  - name: 麦胚芽
+    amount: 1000
+    unit: g
+    asset: 14.31
+  - name: 西梅原浆
+    amount: 500
+    unit: g
+    asset: 12.62
+  - name: 土豆
+    amount: 2500
+    unit: g
+    asset: 18.15
+  - name: 雀巢炼乳
+    amount: 80
+    unit: g
+    asset: 8.13
+  - name: 鸡心李子
+    amount: 1500
+    unit: g
+    asset: 20.23

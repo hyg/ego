@@ -567,9 +567,9 @@ time:
     js: 1000
   sold:
     PSMD: 1610
-    ego: 940
+    ego: 970
     infra: 425
-    learn: 3495
+    learn: 3805
     raw: 70
     xuemen: 90
     js: 370
@@ -694,6 +694,9 @@ todo:
       readnme:
         - 考虑upgradeby的实现。
   ego:
+    - '30': AI特殊监管区设想
+      readme:
+        - read ../../draft/2025/20250802.01.md
     - '90': 整理task及其相互关系
       readme:
         - read ../../draft/2024/07/20240704093000.md
