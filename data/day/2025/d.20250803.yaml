@@ -1,0 +1,71 @@
+date: '20250803'
+mode: '1'
+plan: 1d
+time:
+  - begin: '20250803082000'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20250803083500'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20250803093500'
+    amount: 45
+    type: food
+    name: 午餐
+  - begin: '20250803102000'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20250803110500'
+    amount: 114
+    type: free
+    name: 休整
+  - begin: '20250803130000'
+    amount: 350
+    redo: 30
+    type: work
+    name: 静默工作
+    subject: ego
+    title: AI特殊监管区设想
+    readme:
+      - read ../../draft/2025/20250802.01.md
+    output: ../../draft/2025/20250803.01.md
+    namelink: http://simp.ly/p/8t3vlk
+  - begin: '20250803143000'
+    amount: 0
+    redo: 30
+    type: work
+    name: 静默工作
+    subject: js
+    title: a2a-js
+    readme:
+      - https://a2aprotocol.ai/blog/a2a-javascript-sdk-zh
+      - https://agent2agent.info/zh-cn/docs/examples/javascript/
+      - read ../../draft/2025/20250726.01.md
+    output: ../../draft/2025/20250803.02.md
+    namelink: http://simp.ly/p/5k9gJy
+  - begin: '20250803160000'
+    amount: 0
+    redo: 60
+    type: work
+    name: 静默工作
+    subject: PSMD
+    title: PSMD agent AI的内部角色和功能
+    readme:
+      - read ../../draft/2025/20250724.03.md
+      - read ../../draft/2025/20250725.01.md
+      - read ../../draft/2025/20250727.02.md
+      - read ../../draft/2025/20250730.03.md
+    output: ../../draft/2025/20250803.03.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20250803185000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20250803205000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
+    output: ../../draft/2025/20250803.04.md
