@@ -567,12 +567,12 @@ time:
     js: 1000
   sold:
     PSMD: 1670
-    ego: 1320
-    infra: 425
+    ego: 1350
+    infra: 485
     learn: 3895
     raw: 70
     xuemen: 90
-    js: 370
+    js: 400
 todo:
   PSMD:
     - '90': 筹备会议 by role+prompt
@@ -688,10 +688,6 @@ todo:
       readnme:
         - 考虑upgradeby的实现。
   ego:
-    - '30': AI特殊监管区设想
-      readme:
-        - read ../../draft/2025/20250802.01.md
-        - read ../../draft/2025/20250803.01.md
     - '90': 整理task及其相互关系
       readme:
         - read ../../draft/2024/07/20240704093000.md
@@ -765,9 +761,6 @@ todo:
         - day metada
         - draft文件名
   infra:
-    - '60': 结合AI进展重新规划架构
-      readme:
-        - read ../../draft/2025/20250725.02.md
     - '60': 动态菜单设计。
       readme:
         - read ../../draft/2024/09/20240921.02.md
@@ -949,11 +942,12 @@ todo:
       readme:
         - https://zh.javascript.info/promise-api
   js:
-    - '30': a2a-js
+    - '60': a2a-js
       readme:
         - https://a2aprotocol.ai/blog/a2a-javascript-sdk-zh
         - https://agent2agent.info/zh-cn/docs/examples/javascript/
         - read ../../draft/2025/20250726.01.md
+        - read ../../draft/2025/20250805.02.md
     - '30': graphviz
       readme:
         - https://www.npmjs.com/package/graphviz

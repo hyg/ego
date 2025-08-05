@@ -1,0 +1,71 @@
+date: '20250805'
+mode: '1'
+plan: 1d
+time:
+  - begin: '20250805095700'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20250805101200'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20250805111200'
+    amount: 45
+    type: food
+    name: 午餐
+  - begin: '20250805115700'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20250805124200'
+    amount: 77
+    type: free
+    name: 休整
+  - begin: '20250805140000'
+    amount: 30
+    type: work
+    name: 静默工作
+    subject: ego
+    title: AI特殊监管区设想
+    readme:
+      - read ../../draft/2025/20250802.01.md
+      - read ../../draft/2025/20250803.01.md
+    output: ../../draft/2025/20250805.01.md
+    namelink: http://simp.ly/p/8t3vlk
+  - begin: '20250805143000'
+    amount: 30
+    redo: 60
+    type: work
+    name: 静默工作
+    subject: js
+    title: a2a-js
+    readme:
+      - https://a2aprotocol.ai/blog/a2a-javascript-sdk-zh
+      - https://agent2agent.info/zh-cn/docs/examples/javascript/
+      - read ../../draft/2025/20250726.01.md
+    output: ../../draft/2025/20250805.02.md
+    namelink: http://simp.ly/p/5k9gJy
+  - begin: '20250805150000'
+    amount: 60
+    type: free
+    name: 休整
+  - begin: '20250805160000'
+    amount: 60
+    type: work
+    name: 静默工作
+    subject: infra
+    title: 结合AI进展重新规划架构
+    readme:
+      - read ../../draft/2025/20250725.02.md
+    output: ../../draft/2025/20250805.03.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20250805170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20250805190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
+    output: ../../draft/2025/20250805.04.md
