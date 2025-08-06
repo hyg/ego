@@ -569,10 +569,10 @@ time:
     PSMD: 1670
     ego: 1350
     infra: 485
-    learn: 3895
+    learn: 4195
     raw: 70
     xuemen: 90
-    js: 400
+    js: 430
 todo:
   PSMD:
     - '90': 筹备会议 by role+prompt
@@ -942,19 +942,15 @@ todo:
       readme:
         - https://zh.javascript.info/promise-api
   js:
+    - '30': graphviz
+      readme:
+        - https://www.npmjs.com/package/graphviz
     - '60': a2a-js
       readme:
         - https://a2aprotocol.ai/blog/a2a-javascript-sdk-zh
         - https://agent2agent.info/zh-cn/docs/examples/javascript/
         - read ../../draft/2025/20250726.01.md
         - read ../../draft/2025/20250805.02.md
-    - '30': graphviz
-      readme:
-        - https://www.npmjs.com/package/graphviz
-    - '30': nodejs中调用jar
-      readme:
-        - node-java
-        - java-bridge
     - '60': LangChain.js
       readme:
         - https://github.com/langchain-ai/langchainjs
