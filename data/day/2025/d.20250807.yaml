@@ -1,0 +1,76 @@
+date: '20250807'
+mode: '1'
+plan: 1d
+time:
+  - begin: '20250807092000'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20250807093500'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20250807103500'
+    amount: 45
+    type: food
+    name: 午餐
+  - begin: '20250807112000'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20250807120500'
+    amount: 114
+    type: free
+    name: 休整
+  - begin: '20250807140000'
+    amount: 66
+    type: work
+    name: 静默工作
+    subject: js
+    title: graphviz
+    readme:
+      - https://www.npmjs.com/package/graphviz
+    output: ../../draft/2025/20250807.01.md
+    namelink: http://simp.ly/p/8t3vlk
+  - begin: '20250807143000'
+    amount: 0
+    redo: 30
+    type: work
+    name: 静默工作
+    subject: learn
+    title: Agent Protocol https://agentprotocol.ai/
+    namelink: http://simp.ly/p/5k9gJy
+  - begin: '20250807150600'
+    amount: 220
+    type: work
+    name: 静默工作
+    subject: learn
+    title: 整理本地模型
+    output: ../../draft/2025/20250807.02.md
+  - begin: '20250807160000'
+    amount: 0
+    redo: 60
+    type: work
+    name: 静默工作
+    subject: infra
+    title: 动态菜单设计。
+    readme:
+      - read ../../draft/2024/09/20240921.02.md
+      - read ../../draft/2024/09/20240922.02.md
+      - read ../../draft/2024/09/20240923.03.md
+      - read ../../draft/2024/09/20240924.03.md
+      - read ../../draft/2024/09/20240930.03.md
+      - read ../../draft/2024/10/20241002.02.md
+      - read ../../draft/2024/10/20241003.03.md
+      - read ../../draft/2024/10/20241004.01.md
+    output: ../../draft/2025/20250807.03.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20250807184500'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20250807204500'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
+    output: ../../draft/2025/20250807.04.md

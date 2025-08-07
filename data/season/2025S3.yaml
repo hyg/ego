@@ -569,10 +569,10 @@ time:
     PSMD: 1670
     ego: 1350
     infra: 485
-    learn: 4195
+    learn: 4415
     raw: 70
     xuemen: 90
-    js: 430
+    js: 496
 todo:
   PSMD:
     - '90': 筹备会议 by role+prompt
@@ -781,11 +781,11 @@ todo:
         - read ../../draft/2025/20250613.a.md
     - '195': Rete/Phreak算法的自主实现
   learn:
+    - '30': Agent Protocol https://agentprotocol.ai/
     - '60': ANP（Agent Network Protocol）
       readme:
         - https://agent-network-protocol.com/
         - https://m.jellow.club/users/e0e8bda8-1848-43ba-84dc-1959ba8e9529
-    - '30': Agent Protocol https://agentprotocol.ai/
     - '60': ethers.js v6，Node.js 最流行的以太坊交互库。
       readme:
         - https://rpc.sepolia.org
@@ -942,9 +942,6 @@ todo:
       readme:
         - https://zh.javascript.info/promise-api
   js:
-    - '30': graphviz
-      readme:
-        - https://www.npmjs.com/package/graphviz
     - '60': a2a-js
       readme:
         - https://a2aprotocol.ai/blog/a2a-javascript-sdk-zh
