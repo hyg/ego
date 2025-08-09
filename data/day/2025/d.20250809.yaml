@@ -1,0 +1,70 @@
+date: '20250809'
+mode: '1'
+plan: 1d
+time:
+  - begin: '20250809100300'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20250809101800'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20250809111800'
+    amount: 45
+    type: food
+    name: 午餐
+  - begin: '20250809120300'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20250809124800'
+    amount: 71
+    type: free
+    name: 休整
+  - begin: '20250809140000'
+    amount: 30
+    type: work
+    name: 静默工作
+    subject: js
+    title: nextcloud
+    readme:
+      - https://www.npmjs.com/package/nextcloud-node-client/v/1.5.1
+    output: ../../draft/2025/20250809.01.md
+    namelink: http://simp.ly/p/8t3vlk
+  - begin: '20250809143000'
+    amount: 30
+    type: work
+    name: 静默工作
+    subject: learn
+    title: NER（命名实体识别）RE（关系抽取）
+    readme:
+      - compromise
+      - node-hanlp
+      - https://www.npmjs.com/package/node-nlp
+      - https://www.npmjs.com/package/natural
+      - 从文本抽取实体和关系，json格式
+      - 从文本中抽取三元组：文本：{输入文本} 格式：(头实体, 关系, 尾实体)
+    output: ../../draft/2025/20250809.02.md
+    namelink: http://simp.ly/p/5k9gJy
+  - begin: '20250809150000'
+    amount: 60
+    type: free
+    name: 休整
+  - begin: '20250809160000'
+    amount: 60
+    type: work
+    name: 静默工作
+    subject: ego
+    title: 同步新日志到webDAV。使用新的共享外链。
+    output: ../../draft/2025/20250809.03.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20250809170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20250809190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
+    output: ../../draft/2025/20250809.04.md
