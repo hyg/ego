@@ -793,6 +793,7 @@ todo:
         - https://www.npmjs.com/package/rules-js
         - https://www.npmjs.com/package/json-rules-engine
         - read ../../draft/2005/20250726.a.md
+        - https://www.npmjs.com/package/node-rules
     - '60': 百炼平台API
       readme:
         - read ../../draft/2025/20250724.02.md
