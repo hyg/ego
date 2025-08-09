@@ -567,12 +567,12 @@ time:
     js: 1000
   sold:
     PSMD: 1670
-    ego: 1410
+    ego: 1350
     infra: 545
-    learn: 4505
+    learn: 4475
     raw: 70
     xuemen: 90
-    js: 526
+    js: 496
 todo:
   PSMD:
     - '90': 筹备会议 by role+prompt
@@ -688,6 +688,7 @@ todo:
       readnme:
         - 考虑upgradeby的实现。
   ego:
+    - '60': 同步新日志到webDAV。使用新的共享外链。
     - '30': 整理simplenote文件，准备转移到webDAV.
     - '90': 整理task及其相互关系
       readme:
@@ -772,6 +773,14 @@ todo:
         - read ../../draft/2025/20250613.a.md
     - '195': Rete/Phreak算法的自主实现
   learn:
+    - '30': NER（命名实体识别）RE（关系抽取）
+      readme:
+        - compromise
+        - node-hanlp
+        - https://www.npmjs.com/package/node-nlp
+        - https://www.npmjs.com/package/natural
+        - 从文本抽取实体和关系，json格式
+        - 从文本中抽取三元组：文本：{输入文本} 格式：(头实体, 关系, 尾实体)
     - '60': ANP（Agent Network Protocol）
       readme:
         - https://agent-network-protocol.com/
@@ -922,6 +931,9 @@ todo:
       readme:
         - https://zh.javascript.info/promise-api
   js:
+    - '30': nextcloud
+      readme:
+        - https://www.npmjs.com/package/nextcloud-node-client/v/1.5.1
     - '60': a2a-js
       readme:
         - https://a2aprotocol.ai/blog/a2a-javascript-sdk-zh

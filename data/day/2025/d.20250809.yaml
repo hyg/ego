@@ -23,7 +23,8 @@ time:
     type: free
     name: 休整
   - begin: '20250809140000'
-    amount: 30
+    amount: 0
+    redo: 30
     type: work
     name: 静默工作
     subject: js
@@ -33,7 +34,8 @@ time:
     output: ../../draft/2025/20250809.01.md
     namelink: http://simp.ly/p/8t3vlk
   - begin: '20250809143000'
-    amount: 30
+    amount: 0
+    redo: 30
     type: work
     name: 静默工作
     subject: learn
@@ -52,7 +54,8 @@ time:
     type: free
     name: 休整
   - begin: '20250809160000'
-    amount: 60
+    amount: 0
+    redo: 60
     type: work
     name: 静默工作
     subject: ego
