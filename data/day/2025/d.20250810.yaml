@@ -1,0 +1,64 @@
+date: '20250810'
+mode: '2'
+plan: 2c
+time:
+  - begin: '20250810075600'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20250810081100'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20250810091100'
+    amount: 45
+    type: food
+    name: 早餐
+  - begin: '20250810095600'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20250810104100'
+    amount: 18
+    type: free
+    name: 休整
+  - begin: '20250810110000'
+    amount: 180
+    type: food
+    name: 备餐、午餐午休
+  - begin: '20250810140000'
+    amount: 90
+    redo: 90
+    type: work
+    name: 工作
+    subject: PSMD
+    title: 筹备会议 by role+prompt
+    readme:
+      - read ../../draft/2025/20250722.02.md
+      - read ../../draft/2025/20250725.03.md
+      - read ../../draft/2025/20250726.03.md
+      - read ../../draft/2025/20250727.01.md
+    output: ../../draft/2025/20250810.01.md
+    namelink: http://simp.ly/p/lsBYG9
+  - begin: '20250810153000'
+    amount: 30
+    type: free
+    name: 休整
+  - begin: '20250810160000'
+    amount: 110
+    redo: 60
+    type: work
+    name: 工作
+    subject: ego
+    title: 同步新日志到webDAV。使用新的共享外链。
+    output: ../../draft/2025/20250810.02.md
+    namelink: http://simp.ly/p/MpcbHD
+  - begin: '20250810170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20250810190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
+    output: ../../draft/2025/20250810.03.md

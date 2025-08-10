@@ -566,8 +566,8 @@ time:
     learn: 2000
     js: 1000
   sold:
-    PSMD: 1670
-    ego: 1350
+    PSMD: 1760
+    ego: 1460
     infra: 545
     learn: 4475
     raw: 70
@@ -581,6 +581,7 @@ todo:
         - read ../../draft/2025/20250725.03.md
         - read ../../draft/2025/20250726.03.md
         - read ../../draft/2025/20250727.01.md
+        - read ../../draft/2025/20250810.01.md
     - '195': machines model
       readme:
         - read ../../draft/2024/07/20240723160000.md
@@ -689,6 +690,8 @@ todo:
         - 考虑upgradeby的实现。
   ego:
     - '60': 同步新日志到webDAV。使用新的共享外链。
+      readme:
+        - read ../../draft/2025/20250810.02.md
     - '30': 整理simplenote文件，准备转移到webDAV.
     - '90': 整理task及其相互关系
       readme:
@@ -773,6 +776,54 @@ todo:
         - read ../../draft/2025/20250613.a.md
     - '195': Rete/Phreak算法的自主实现
   learn:
+    - '30': LegalRuleML（Legal Rule Markup Language）
+    - '30': SBVR（OMG业务语义词汇与规则）
+    - '30': Akoma Ntoso（结构化法务文档）
+    - '30': OutSystems, Mendix,
+    - '30': Zapier
+    - '30': IFTTT
+    - '30': OutSystems, Zapier
+    - '30': 描述逻辑（Description Logic, DL）
+    - '30': CEV（Contract Expression Language）
+    - '30': XACML 4.0 / ODRL 2.2
+    - '30': RuleML,结构化规则语言（如RuleML的核心子集）
+    - '30': CloudEvent（JSON 格式，spec 1.0+）
+    - '30': Semantic Version + Content-Addressable Storage（如 OCI Artifacts 存 DMN/Regos）
+    - '30': Ontology + SWRL（Semantic Web Rule Language）
+    - '30': Common Logic (ISO/IEC 24707)
+    - '30': Camunda Zeebe / Temporal.io
+    - '30': Flink Complex Event Processing，直接运行 DMN 4Flink 或 Rego-on-Flink 扩展。
+    - '60': 领域特定语言（DSL）,Xtext,ANTLR
+    - '30': OpenFGA/SpiceDB(Zanzibar模型)
+    - '30': XACML（存量）
+    - '30': SHACL（RDF/图谱场景）
+    - '30': Esper EPL
+    - '30': Apache Flink SQL
+    - '30': ksqlDB（Kafka）
+    - '30': 宣告式流程 DCR Graphs/Declare
+    - '30': JSON-LD / YAML + Schema（轻量级）
+    - '30': BPMN-DMN,执行引擎（Camunda、Flowable、Flink DMN、Trisotech 等）
+    - '60': Drools/DRL替代
+      readme:
+        - IBM Operational Decision Manager（ODM）
+        - Red Hat Decision Manager
+        - Camunda
+        - Flink DMN
+        - AWS Decision Services
+        - AWS Cedar
+        - HashiCorp Sentinel
+        - Togai
+        - Pyke（Python规则引擎）
+        - FEEL（Friendly Enough Expression Language）
+        - Tracardi / Open Policy Agent (OPA)
+        - RuleBook
+        - Logic Programming 工具：Prolog / ErgoAI
+        - JSON Rules Engine
+        - OpenRules
+        - Google Cloud Rules
+    - '30': 消息总线（Kafka / RabbitMQ）
+    - '30': 规则解析引擎（如：RDF4J + SWRLAPI 或 自研DSL解析器）
+    - '30': Digital Twin of Governance
     - '30': NER（命名实体识别）RE（关系抽取）
       readme:
         - compromise
@@ -934,6 +985,15 @@ todo:
     - '30': nextcloud
       readme:
         - https://www.npmjs.com/package/nextcloud-node-client/v/1.5.1
+    - '60': IM bot
+      readme:
+        - https://xmtp.org/
+        - npm install @xmtp/xmtp-js
+        - https://www.npmjs.com/package/matrix-js-sdk
+        - https://www.dialect.to/
+        - npm install @dialect-sdk/web3
+        - https://orbitdb.org 基础上自己开发应用层。
+        - 抗审核的广播：https://nostr.how
     - '60': a2a-js
       readme:
         - https://a2aprotocol.ai/blog/a2a-javascript-sdk-zh
