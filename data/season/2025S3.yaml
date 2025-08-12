@@ -777,6 +777,7 @@ todo:
     - '195': Rete/Phreak算法的自主实现
   learn:
     - '30': LegalRuleML（Legal Rule Markup Language）
+    - '30': Tauri + Rust
     - '30': SBVR（OMG业务语义词汇与规则）
     - '30': Akoma Ntoso（结构化法务文档）
     - '30': OutSystems, Mendix,

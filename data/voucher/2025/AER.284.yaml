@@ -1,0 +1,17 @@
+date: 2025-08-12
+VoucherID: 4200002790202508121455008026
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit:
+    - AccountTitle: raw.food
+      asset: rmb
+      amount: 8.90
+  credit: 
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 8.90
+comment: 
+  - name: 王致和减盐玫瑰腐乳
+    amount: 250
+    unit: g
+    asset: 8.90
