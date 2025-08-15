@@ -575,7 +575,7 @@ time:
     js: 496
 todo:
   PSMD:
-    - '90': 筹备会议 by role+prompt
+    - '60': 筹备会议 by role+prompt
       readme:
         - read ../../draft/2025/20250722.02.md
         - read ../../draft/2025/20250725.03.md
@@ -689,7 +689,7 @@ todo:
       readnme:
         - 考虑upgradeby的实现。
   ego:
-    - '60': 同步新日志到webDAV。使用新的共享外链。
+    - '90': 同步新日志到webDAV。使用新的共享外链。
       readme:
         - read ../../draft/2025/20250810.02.md
     - '30': 整理simplenote文件，准备转移到webDAV.
