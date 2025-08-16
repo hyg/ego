@@ -1,0 +1,47 @@
+date: '20250816'
+mode: '1'
+plan: 1e
+time:
+  - begin: '20250816103400'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20250816104900'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20250816114900'
+    amount: 45
+    type: food
+    name: 午餐
+  - begin: '20250816123400'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20250816131900'
+    amount: 160
+    type: free
+    name: 休整
+  - begin: '20250816160000'
+    amount: 60
+    type: work
+    name: 静默工作
+    subject: PSMD
+    title: 筹备会议 by role+prompt
+    readme:
+      - read ../../draft/2025/20250722.02.md
+      - read ../../draft/2025/20250725.03.md
+      - read ../../draft/2025/20250726.03.md
+      - read ../../draft/2025/20250727.01.md
+      - read ../../draft/2025/20250810.01.md
+    output: ../../draft/2025/20250816.01.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20250816170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20250816190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
+    output: ../../draft/2025/20250816.02.md

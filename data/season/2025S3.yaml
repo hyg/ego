@@ -566,7 +566,7 @@ time:
     learn: 2000
     js: 1000
   sold:
-    PSMD: 1760
+    PSMD: 1820
     ego: 1460
     infra: 545
     learn: 4475
@@ -575,13 +575,6 @@ time:
     js: 496
 todo:
   PSMD:
-    - '60': 筹备会议 by role+prompt
-      readme:
-        - read ../../draft/2025/20250722.02.md
-        - read ../../draft/2025/20250725.03.md
-        - read ../../draft/2025/20250726.03.md
-        - read ../../draft/2025/20250727.01.md
-        - read ../../draft/2025/20250810.01.md
     - '195': machines model
       readme:
         - read ../../draft/2024/07/20240723160000.md
