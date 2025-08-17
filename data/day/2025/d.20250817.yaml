@@ -1,0 +1,71 @@
+date: '20250817'
+mode: '1'
+plan: 1d
+time:
+  - begin: '20250817082600'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20250817084100'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20250817094100'
+    amount: 45
+    type: food
+    name: 午餐
+  - begin: '20250817102600'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20250817111100'
+    amount: 168
+    type: free
+    name: 休整
+  - begin: '20250817140000'
+    amount: 0
+    redo: 30
+    type: work
+    name: 静默工作
+    subject: js
+    title: nextcloud
+    readme:
+      - https://www.npmjs.com/package/nextcloud-node-client/v/1.5.1
+    output: ../../draft/2025/20250817.01.md
+    namelink: http://simp.ly/p/8t3vlk
+  - begin: '20250817143000'
+    amount: 0
+    redo: 30
+    type: work
+    name: 静默工作
+    subject: learn
+    title: LegalRuleML（Legal Rule Markup Language）
+    output: ../../draft/2025/20250817.02.md
+    namelink: http://simp.ly/p/5k9gJy
+  - begin: '20250817150000'
+    amount: 60
+    type: free
+    name: 休整
+  - begin: '20250817160000'
+    amount: 0
+    redo: 60
+    type: work
+    name: 静默工作
+    subject: raw
+    title: 设计新的季度时间表
+    readme:
+      - 两片休整时间联合调节的算法需要整理。
+      - 餐谱和饱腹感时间需要综合算计。
+      - read ../../draft/2024/09/20240904143000.md
+      - read ../../draft/2024/09/20240907140000.md
+    output: ../../draft/2025/20250817.03.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20250817170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20250817190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
+    output: ../../draft/2025/20250817.04.md
