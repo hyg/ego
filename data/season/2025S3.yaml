@@ -819,6 +819,7 @@ todo:
     - '30': 规则解析引擎（如：RDF4J + SWRLAPI 或 自研DSL解析器）
     - '30': Digital Twin of Governance
     - '60': 个人财务助理 https://open.chanjet.com/
+    - '195': Julia
     - '30': NER（命名实体识别）RE（关系抽取）
       readme:
         - compromise
