@@ -769,6 +769,7 @@ todo:
         - read ../../draft/2025/20250613.a.md
     - '195': Rete/Phreak算法的自主实现
   learn:
+    - '30': ABAC / CBAC - Attribute/Condition-Based Access Control
     - '30': LegalRuleML（Legal Rule Markup Language）
     - '30': Tauri + Rust
     - '30': SBVR（OMG业务语义词汇与规则）
@@ -1106,12 +1107,6 @@ todo:
     - '60': 学习'Electron'，创作一个范例。
     - '60': 用代码中的对象或类，产生数据库创建SQL脚本、ER图（mermaid）
   raw:
-    - '60': 设计新的季度时间表
-      readme:
-        - 两片休整时间联合调节的算法需要整理。
-        - 餐谱和饱腹感时间需要综合算计。
-        - read ../../draft/2024/09/20240904143000.md
-        - read ../../draft/2024/09/20240907140000.md
     - '60': 熟悉内脏之间的关系
       readme:
         - read ../../draft/2024/09/20240917143000.md
