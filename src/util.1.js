@@ -19,39 +19,39 @@ module.exports = {
         dayjs.extend(customParseFormat);
         var thedate = dayjs(date, "YYYYMMDDHHmmss");
         //console.log(thedate.format());
-        
+
         return thedate.toDate();
     },
-    str2date: function(date){
+    str2date: function (date) {
         dayjs.extend(customParseFormat);
         var thedate = dayjs(date, 'YYYYMMDD')
         //console.log(thedate.format());
         return thedate.toDate();
     },
-    gitstep: async function(path,msg,remote,branch){
+    gitstep: async function (path, msg, remote, branch) {
         let statusSummary = null;
-     try {
-        statusSummary = await simpleGit(path).status();
-     } catch (e) {
-        // handle the error
-     }
-     if(statusSummary.files.length){
-        console.log("file changed:",statusSummary.files);
-        simpleGit(path,{ config: ['core.autocrlf=false','http.https://github.com.proxy=http://127.0.0.1:9910'] })
-        .env('GIT_SSH_COMMAND', GIT_SSH_COMMAND)
-        .add('./*')
-        .commit(msg)
-        .push(remote, branch)
-        .then((data) => {
-           console.log('success:',path,"\n",data);
-        })
-        .catch((err) => {
-            console.log(err);
-        });
-     }else{
-        console.log("non file changed:",path);
-     }
-  }
+        try {
+            statusSummary = await simpleGit(path).status();
+        } catch (e) {
+            // handle the error
+        }
+        if (statusSummary.files.length) {
+            console.log("file changed:", statusSummary.files);
+            simpleGit(path, { config: ['core.autocrlf=false', 'http.https://github.com.proxy=http://127.0.0.1:9910'] })
+                .env('GIT_SSH_COMMAND', GIT_SSH_COMMAND)
+                .add('./*')
+                .commit(msg)
+                .push(remote, branch)
+                .then((data) => {
+                    console.log('success:', path, "\n", data);
+                })
+                .catch((err) => {
+                    console.log(err);
+                });
+        } else {
+            console.log("non file changed:", path);
+        }
+    }
 }
 
 /* 

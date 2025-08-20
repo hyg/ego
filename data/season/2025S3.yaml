@@ -769,6 +769,10 @@ todo:
         - read ../../draft/2025/20250613.a.md
     - '195': Rete/Phreak算法的自主实现
   learn:
+    - '60': CometAPI
+    - '30': OpenAI Response API
+      readme:
+        - 测试火山引擎的豆包模型是否支持。
     - '30': ABAC / CBAC - Attribute/Condition-Based Access Control
     - '30': LegalRuleML（Legal Rule Markup Language）
     - '30': Tauri + Rust

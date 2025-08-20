@@ -506,6 +506,6 @@ module.exports = {
         await util.gitstep("D:\\huangyg\\git\\blog", commitmsg, "all", 'master');
         await util.gitstep("D:\\huangyg\\git\\draft", commitmsg, "gitee", 'master');
         await util.gitstep("D:\\huangyg\\git\\ego", commitmsg, "all", 'vat');
-        await util.gitstep("D:\\huangyg\\git\\js.sample", commitmsg, "all", 'master');
+        await util.gitstep("D:\\huangyg\\git\\sample", commitmsg, "all", 'master');
     }
 }
