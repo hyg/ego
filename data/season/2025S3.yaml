@@ -762,9 +762,6 @@ todo:
     - '90': schema立项。
       readme:
         - read ../../draft/2024/09/20240919140000.md
-        - read ../../draft/2025/20250110.01.md
-        - read ../../draft/2025/20250112.01.md
-        - read ../../draft/2025/20250116.01.md
         - read ../../draft/2025/20250408.01.md
         - read ../../draft/2025/20250613.a.md
     - '195': Rete/Phreak算法的自主实现
