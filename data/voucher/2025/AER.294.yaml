@@ -1,0 +1,17 @@
+date: 2025-08-27
+VoucherID: 4200002738202508276925578296
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit:
+    - AccountTitle: raw.site.bj1
+      asset: rmb
+      amount: 300.00
+  credit: 
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 300.00
+comment: 
+  - name: 电费
+    amount: 300
+    unit: rmb
+    asset: 300.00
