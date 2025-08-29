@@ -1,0 +1,17 @@
+date: 2025-08-29
+VoucherID: 4200002739202508292689334397
+AccountingSoftwareID: 
+AccountingEntry: 
+  debit:
+    - AccountTitle: raw.med
+      asset: rmb
+      amount: 10.90
+  credit: 
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 10.90
+comment: 
+  - name: Y型牙线
+    amount: 72
+    unit: 根
+    asset: 10.90
