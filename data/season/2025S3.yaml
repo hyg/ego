@@ -571,7 +571,7 @@ time:
     infra: 545
     learn: 4475
     raw: 130
-    xuemen: 90
+    xuemen: 150
     js: 496
 todo:
   PSMD:
@@ -1128,6 +1128,7 @@ todo:
         - https://www.xbrl-cn.org/2025/0519/271458.shtml
         - http://www.xbrl.org
         - https://www.xbrl-cn.org/
+        - read ../../draft/2025/20250901.01.md
     - '195': kernel模型升级
       readme:
         - read ../../draft/2024/11/20241120.01.md
