@@ -1,0 +1,44 @@
+date: '20250902'
+mode: '1'
+plan: 1e
+time:
+  - begin: '20250902115100'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20250902120600'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20250902130600'
+    amount: 45
+    type: food
+    name: 午餐
+  - begin: '20250902135100'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20250902143600'
+    amount: 83
+    type: free
+    name: 休整
+  - begin: '20250902160000'
+    amount: 60
+    type: work
+    name: 静默工作
+    subject: raw
+    title: 熟悉内脏之间的关系
+    readme:
+      - read ../../draft/2024/09/20240917143000.md
+      - read ../../draft/2025/20250830.01.md
+    output: ../../draft/2025/20250902.01.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20250902170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20250902190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
+    output: ../../draft/2025/20250902.02.md
