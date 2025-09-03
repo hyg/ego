@@ -572,7 +572,7 @@ time:
     learn: 4475
     raw: 190
     xuemen: 150
-    js: 496
+    js: 796
 todo:
   PSMD:
     - '195': machines model
@@ -682,10 +682,10 @@ todo:
       readnme:
         - 考虑upgradeby的实现。
   ego:
+    - '30': 整理simplenote文件，准备转移到webDAV.
     - '90': 同步新日志到webDAV。使用新的共享外链。
       readme:
         - read ../../draft/2025/20250810.02.md
-    - '30': 整理simplenote文件，准备转移到webDAV.
     - '90': 整理task及其相互关系
       readme:
         - read ../../draft/2024/07/20240704093000.md
@@ -980,9 +980,11 @@ todo:
       readme:
         - https://zh.javascript.info/promise-api
   js:
-    - '30': nextcloud
+    - '60': nextcloud
       readme:
-        - https://www.npmjs.com/package/nextcloud-node-client/v/1.5.1
+        - https://www.npmjs.com/package/@nextcloud/files
+        - read ../../draft/2025/20250810.02.md
+        - read ../../draft/2025/20250903.01.md
     - '60': IM bot
       readme:
         - https://xmtp.org/
