@@ -1,0 +1,70 @@
+date: '20250904'
+mode: '2'
+plan: 2c
+time:
+  - begin: '20250904080400'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20250904081900'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20250904091900'
+    amount: 45
+    type: food
+    name: 早餐
+  - begin: '20250904100400'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20250904104900'
+    amount: 10
+    type: free
+    name: 休整
+  - begin: '20250904110000'
+    amount: 180
+    type: food
+    name: 备餐、午餐午休
+  - begin: '20250904140000'
+    amount: 0
+    redo: 90
+    type: work
+    name: 工作
+    subject: infra
+    title: schema立项。
+    readme:
+      - read ../../draft/2024/09/20240919140000.md
+      - read ../../draft/2025/20250408.01.md
+      - read ../../draft/2025/20250613.a.md
+    output: ../../draft/2025/20250904.01.md
+    namelink: http://simp.ly/p/lsBYG9
+  - begin: '20250904153000'
+    amount: 30
+    type: free
+    name: 休整
+  - begin: '20250904160000'
+    amount: 0
+    redo: 60
+    type: work
+    name: 工作
+    subject: xuemen
+    title: 根据最新政策文件，考虑AER、AVR文件升级。
+    readme:
+      - http://kjs.mof.gov.cn/gongzuotongzhi/202505/t20250519_3964023.htm
+      - https://zcool.17win.com/knowledge/996b8380aafc43c1a436b1ae3396076a
+      - https://www.xbrl-cn.org/2025/0519/271458.shtml
+      - http://www.xbrl.org
+      - https://www.xbrl-cn.org/
+      - read ../../draft/2025/20250901.01.md
+    output: ../../draft/2025/20250904.02.md
+    namelink: http://simp.ly/p/MpcbHD
+  - begin: '20250904170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20250904190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
+    output: ../../draft/2025/20250904.03.md
