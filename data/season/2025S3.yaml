@@ -759,11 +759,6 @@ todo:
         - day metada
         - draft文件名
   infra:
-    - '90': schema立项。
-      readme:
-        - read ../../draft/2024/09/20240919140000.md
-        - read ../../draft/2025/20250408.01.md
-        - read ../../draft/2025/20250613.a.md
     - '195': Rete/Phreak算法的自主实现
   learn:
     - '60': CometAPI
@@ -1119,14 +1114,6 @@ todo:
             - '60': 新版本food预算决算
         - '60': 新版食材排序，包括升序、降序、特定值距离、多种营养成分特定值组合距离。
   xuemen:
-    - '60': 根据最新政策文件，考虑AER、AVR文件升级。
-      readme:
-        - http://kjs.mof.gov.cn/gongzuotongzhi/202505/t20250519_3964023.htm
-        - https://zcool.17win.com/knowledge/996b8380aafc43c1a436b1ae3396076a
-        - https://www.xbrl-cn.org/2025/0519/271458.shtml
-        - http://www.xbrl.org
-        - https://www.xbrl-cn.org/
-        - read ../../draft/2025/20250901.01.md
     - '195': kernel模型升级
       readme:
         - read ../../draft/2024/11/20241120.01.md
