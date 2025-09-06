@@ -1,0 +1,18 @@
+date: 2025-09-06
+VoucherID: 4200002873202509062600121701
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: raw.supply
+      asset: rmb
+      amount: 5.70
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 5.70
+comment: 
+  - name: 15cm白垫纸
+    amount: 100
+    unit: 张
+    asset: 5.70
+
