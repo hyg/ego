@@ -1,0 +1,41 @@
+date: '20250907'
+mode: '1'
+plan: 1e
+time:
+  - begin: '20250907115200'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20250907120700'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20250907130700'
+    amount: 45
+    type: food
+    name: 午餐
+  - begin: '20250907135200'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20250907143700'
+    amount: 82
+    type: free
+    name: 休整
+  - begin: '20250907160000'
+    amount: 60
+    type: work
+    name: 静默工作
+    subject: raw
+    title: 新版营养成分详情，允许多种营养成分。
+    output: ../../draft/2025/20250907.01.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20250907170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20250907190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
+    output: ../../draft/2025/20250907.02.md
