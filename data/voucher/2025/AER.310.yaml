@@ -1,0 +1,17 @@
+date: 2025-09-08
+VoucherID: 4200002784202509081958855064
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: donation.parent
+      asset: rmb
+      amount: 92.80
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 92.80
+comment:
+  - name: 冲牙器
+    amount: 1
+    unit: 套
+    asset: 92.80

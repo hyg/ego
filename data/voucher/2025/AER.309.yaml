@@ -5,7 +5,7 @@ AccountingEntry:
   debit:
     - AccountTitle: raw.food
       asset: rmb
-      amount: N30.69
+      amount: 30.69
   credit:
     - AccountTitle: 微信零钱
       asset: rmb
