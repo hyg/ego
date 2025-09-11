@@ -1,0 +1,42 @@
+date: '20250911'
+mode: '1'
+plan: 1e
+time:
+  - begin: '20250911114300'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20250911115800'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20250911125800'
+    amount: 45
+    type: food
+    name: 午餐
+  - begin: '20250911134300'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20250911142800'
+    amount: 91
+    type: free
+    name: 休整
+  - begin: '20250911160000'
+    amount: 0
+    redo: 60
+    type: work
+    name: 静默工作
+    subject: raw
+    title: 新版本food预算决算
+    output: ../../draft/2025/20250911.01.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20250911170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20250911190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
+    output: ../../draft/2025/20250911.02.md
