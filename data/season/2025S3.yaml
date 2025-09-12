@@ -567,9 +567,9 @@ time:
     js: 1000
   sold:
     PSMD: 1820
-    ego: 1460
+    ego: 1490
     infra: 545
-    learn: 4475
+    learn: 4505
     raw: 250
     xuemen: 150
     js: 796
@@ -682,7 +682,6 @@ todo:
       readnme:
         - 考虑upgradeby的实现。
   ego:
-    - '30': 整理simplenote文件，准备转移到webDAV.
     - '90': 同步新日志到webDAV。使用新的共享外链。
       readme:
         - read ../../draft/2025/20250810.02.md
@@ -762,9 +761,6 @@ todo:
     - '195': Rete/Phreak算法的自主实现
   learn:
     - '60': CometAPI
-    - '30': OpenAI Response API
-      readme:
-        - 测试火山引擎的豆包模型是否支持。
     - '30': ABAC / CBAC - Attribute/Condition-Based Access Control
     - '30': LegalRuleML（Legal Rule Markup Language）
     - '30': Tauri + Rust
