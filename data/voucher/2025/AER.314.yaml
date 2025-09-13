@@ -1,0 +1,17 @@
+date: 2025-09-13
+VoucherID: 4200002774202509132201633150
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: raw.food
+      asset: rmb
+      amount: 27.50
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 27.50
+comment:
+  - name: 百香果
+    amount: 1500
+    unit: g
+    asset: 27.50
