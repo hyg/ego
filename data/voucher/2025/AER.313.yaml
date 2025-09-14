@@ -5,16 +5,16 @@ AccountingEntry:
   debit:
     - AccountTitle: raw.food
       asset: rmb
-      amount: 142.73
+      amount: 32.83
   credit:
     - AccountTitle: 微信零钱
       asset: rmb
-      amount: 142.73
+      amount: 32.83
 comment:
-  - name: 牦牛肉
+  - name: 牦牛肉(未成团退款)
     amount: 2000
     unit: g
-    asset: 109.90
+    asset: 0
   - name: 京白梨
     amount: 2500
     unit: g
