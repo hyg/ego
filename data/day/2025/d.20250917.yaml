@@ -24,6 +24,7 @@ time:
     name: 休整
   - begin: '20250917160000'
     amount: 60
+    redo: 60
     type: work
     name: 静默工作
     subject: js
