@@ -682,6 +682,12 @@ todo:
       readnme:
         - 考虑upgradeby的实现。
   ego:
+    - '60': nextcloud
+      readme:
+        - https://www.npmjs.com/package/@nextcloud/files
+        - read ../../draft/2025/20250810.02.md
+        - read ../../draft/2025/20250903.01.md
+        - read ../../draft/2025/20250917.01.md
     - '90': 同步新日志到webDAV。使用新的共享外链。
       readme:
         - read ../../draft/2025/20250810.02.md
@@ -760,9 +766,9 @@ todo:
   infra:
     - '195': Rete/Phreak算法的自主实现
   learn:
-    - '60': CometAPI
-    - '30': ABAC / CBAC - Attribute/Condition-Based Access Control
     - '30': LegalRuleML（Legal Rule Markup Language）
+    - '30': ABAC / CBAC - Attribute/Condition-Based Access Control
+    - '60': CometAPI
     - '30': Tauri + Rust
     - '30': SBVR（OMG业务语义词汇与规则）
     - '30': Akoma Ntoso（结构化法务文档）

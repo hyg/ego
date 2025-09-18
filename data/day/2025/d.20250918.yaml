@@ -1,0 +1,72 @@
+date: '20250918'
+mode: '1'
+plan: 1d
+time:
+  - begin: '20250918085100'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20250918090600'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20250918100600'
+    amount: 45
+    type: food
+    name: 午餐
+  - begin: '20250918105100'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20250918113600'
+    amount: 143
+    type: free
+    name: 休整
+  - begin: '20250918140000'
+    amount: 0
+    redo: 30
+    type: work
+    name: 静默工作
+    subject: learn
+    title: ABAC / CBAC - Attribute/Condition-Based Access Control
+    output: ../../draft/2025/20250918.01.md
+    namelink: http://simp.ly/p/8t3vlk
+  - begin: '20250918143000'
+    amount: 0
+    redo: 30
+    type: work
+    name: 静默工作
+    subject: learn
+    title: LegalRuleML（Legal Rule Markup Language）
+    output: ../../draft/2025/20250918.02.md
+    namelink: http://simp.ly/p/5k9gJy
+  - begin: '20250918150000'
+    amount: 60
+    type: free
+    name: 休整
+  - begin: '20250918160000'
+    amount: 0
+    redo: 60
+    type: work
+    name: 静默工作
+    subject: js
+    title: IM bot
+    readme:
+      - https://xmtp.org/
+      - npm install @xmtp/xmtp-js
+      - https://www.npmjs.com/package/matrix-js-sdk
+      - https://www.dialect.to/
+      - npm install @dialect-sdk/web3
+      - https://orbitdb.org 基础上自己开发应用层。
+      - 抗审核的广播：https://nostr.how
+    output: ../../draft/2025/20250918.03.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20250918170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20250918190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
+    output: ../../draft/2025/20250918.04.md
