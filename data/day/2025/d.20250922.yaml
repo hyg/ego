@@ -1,0 +1,62 @@
+date: '20250922'
+mode: '1'
+plan: 1d
+time:
+  - begin: '20250922081800'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20250922083300'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20250922093300'
+    amount: 45
+    type: food
+    name: 午餐
+  - begin: '20250922101800'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20250922110300'
+    amount: 176
+    type: free
+    name: 休整
+  - begin: '20250922124000'
+    amount: 120
+    type: work
+    name: 静默工作
+    subject: PSMD
+    title: 部署者-建模者初始协议
+    output: ../../draft/2025/20250922.01.md
+    namelink: http://simp.ly/p/8t3vlk
+  - begin: '20250922144000'
+    amount: 20
+    type: work
+    name: 静默工作
+    subject: PSMD
+    title: 责权利三元组的数据结构
+    output: ../../draft/2025/20250922.02.md
+    namelink: http://simp.ly/p/5k9gJy
+  - begin: '20250922150000'
+    amount: 60
+    type: free
+    name: 休整
+  - begin: '20250922160000'
+    amount: 90
+    redo: 60
+    type: work
+    name: 静默工作
+    subject: PSMD
+    title: 健康消费合作社建模
+    output: ../../draft/2025/20250922.03.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20250922170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20250922190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
+    output: ../../draft/2025/20250922.04.md
