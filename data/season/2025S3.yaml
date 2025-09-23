@@ -566,19 +566,22 @@ time:
     learn: 2000
     js: 1000
   sold:
-    PSMD: 2050
+    PSMD: 2305
     ego: 1490
-    infra: 545
+    infra: 635
     learn: 4505
     raw: 250
     xuemen: 150
     js: 856
 todo:
   PSMD:
-    - '60': 健康消费合作社建模
+    - '90': SOP(Standard Operation Procedure)数据结构
+      readme:
+        - read ../../draft/2025/20250923.03.md
+    - '195': 健康消费合作社建模
       readme:
         - read ../../draft/2025/20250922.03.md
-    - '30': SOP(Standard Operation Procedure)数据结构
+        - read ../../draft/2025/20250923.01.md
     - '195': machines model
       readme:
         - read ../../draft/2024/07/20240723160000.md
@@ -768,9 +771,18 @@ todo:
         - day metada
         - draft文件名
   infra:
+    - '60': 新版通用页面
+      readme:
+        - read ../../draft/2025/20250923.02.md
     - '30': 封装新版密钥工具集
     - '195': Rete/Phreak算法的自主实现
   learn:
+    - '60': https://jsonlogic.com/
+    - '60': The Open Quantum Safe (OQS) project
+      readme:
+        - https://openquantumsafe.org/
+        - https://github.com/open-quantum-safe/liboqs
+        - https://github.com/open-quantum-safe/openssl
     - '30': LegalRuleML（Legal Rule Markup Language）
     - '30': ABAC / CBAC - Attribute/Condition-Based Access Control
     - '60': CometAPI

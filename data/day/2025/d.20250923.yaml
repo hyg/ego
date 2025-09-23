@@ -1,0 +1,70 @@
+date: '20250923'
+mode: '2'
+plan: 2a
+time:
+  - begin: '20250923043100'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20250923044600'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20250923054600'
+    amount: 45
+    type: food
+    name: 早餐
+  - begin: '20250923063100'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20250923071600'
+    amount: 28
+    type: free
+    name: 休整
+  - begin: '20250923074500'
+    amount: 195
+    redo: 195
+    type: work
+    name: 工作
+    subject: PSMD
+    title: 健康消费合作社建模
+    readme:
+      - read ../../draft/2025/20250922.03.md
+    output: ../../draft/2025/20250923.01.md
+    namelink: http://simp.ly/p/3GXNTh
+  - begin: '20250923110000'
+    amount: 180
+    type: food
+    name: 备餐、午餐午休
+  - begin: '20250923140000'
+    amount: 90
+    redo: 60
+    type: work
+    name: 工作
+    subject: infra
+    title: 新版通用页面
+    output: ../../draft/2025/20250923.02.md
+    namelink: http://simp.ly/p/lsBYG9
+  - begin: '20250923153000'
+    amount: 30
+    type: free
+    name: 休整
+  - begin: '20250923160000'
+    amount: 60
+    redo: 90
+    type: work
+    name: 工作
+    subject: PSMD
+    title: SOP(Standard Operation Procedure)数据结构
+    output: ../../draft/2025/20250923.03.md
+    namelink: http://simp.ly/p/MpcbHD
+  - begin: '20250923170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20250923190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
+    output: ../../draft/2025/20250923.04.md
