@@ -771,9 +771,6 @@ todo:
         - day metada
         - draft文件名
   infra:
-    - '60': 新版通用页面
-      readme:
-        - read ../../draft/2025/20250923.02.md
     - '30': 封装新版密钥工具集
     - '195': Rete/Phreak算法的自主实现
   learn:
