@@ -1,0 +1,17 @@
+date: 2025-09-26
+VoucherID: 4200002819202509262761163954
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: raw.food
+      asset: rmb
+      amount: 32.98
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 32.98
+comment:
+  - name: 泰森轻食鸡胸肉
+    amount: 1000
+    unit: g
+    asset: 32.98

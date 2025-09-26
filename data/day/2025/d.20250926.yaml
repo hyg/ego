@@ -1,0 +1,47 @@
+date: '20250926'
+mode: '1'
+plan: 1e
+time:
+  - begin: '20250926104700'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20250926110200'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20250926120200'
+    amount: 45
+    type: food
+    name: 午餐
+  - begin: '20250926124700'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20250926133200'
+    amount: 147
+    type: free
+    name: 休整
+  - begin: '20250926160000'
+    amount: 0
+    redo: 60
+    type: work
+    name: 静默工作
+    subject: ego
+    title: nextcloud
+    readme:
+      - https://www.npmjs.com/package/@nextcloud/files
+      - read ../../draft/2025/20250810.02.md
+      - read ../../draft/2025/20250903.01.md
+      - read ../../draft/2025/20250917.01.md
+    output: ../../draft/2025/20250926.01.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20250926170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20250926190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
+    output: ../../draft/2025/20250926.02.md

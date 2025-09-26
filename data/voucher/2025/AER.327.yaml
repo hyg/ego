@@ -1,0 +1,32 @@
+date: 2025-09-26
+VoucherID: 4200002770202509267387923605
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: raw.food
+      asset: rmb
+      amount: 75.97
+    - AccountTitle: raw.supply
+      asset: rmb
+      amount: 4.61
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 80.58
+comment:
+  - name: 盼月枣肉核桃月饼
+    amount: 720
+    unit: g
+    asset: 18.63
+  - name: 安居儿五仁月饼
+    amount: 640
+    unit: g
+    asset: 30.45
+  - name: 甘青全麦粉
+    amount: 5000
+    unit: g
+    asset: 26.89
+  - name: 北瑞乳胶手套S-7
+    amount: 1
+    unit: 套
+    asset: 4.61

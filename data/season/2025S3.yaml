@@ -689,12 +689,6 @@ todo:
       readnme:
         - 考虑upgradeby的实现。
   ego:
-    - '60': nextcloud
-      readme:
-        - https://www.npmjs.com/package/@nextcloud/files
-        - read ../../draft/2025/20250810.02.md
-        - read ../../draft/2025/20250903.01.md
-        - read ../../draft/2025/20250917.01.md
     - '90': 同步新日志到webDAV。使用新的共享外链。
       readme:
         - read ../../draft/2025/20250810.02.md
