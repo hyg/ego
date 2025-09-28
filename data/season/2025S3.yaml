@@ -985,15 +985,6 @@ todo:
       readme:
         - https://zh.javascript.info/promise-api
   js:
-    - '60': IM bot
-      readme:
-        - https://xmtp.org/
-        - npm install @xmtp/xmtp-js
-        - https://www.npmjs.com/package/matrix-js-sdk
-        - https://www.dialect.to/
-        - npm install @dialect-sdk/web3
-        - https://orbitdb.org 基础上自己开发应用层。
-        - 抗审核的广播：https://nostr.how
     - '60': a2a-js
       readme:
         - https://a2aprotocol.ai/blog/a2a-javascript-sdk-zh

@@ -1,0 +1,50 @@
+date: '20250928'
+mode: '1'
+plan: 1e
+time:
+  - begin: '20250928111800'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20250928113300'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20250928123300'
+    amount: 45
+    type: food
+    name: 午餐
+  - begin: '20250928131800'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20250928140300'
+    amount: 116
+    type: free
+    name: 休整
+  - begin: '20250928160000'
+    amount: 0
+    redo: 60
+    type: work
+    name: 静默工作
+    subject: js
+    title: IM bot
+    readme:
+      - https://xmtp.org/
+      - npm install @xmtp/xmtp-js
+      - https://www.npmjs.com/package/matrix-js-sdk
+      - https://www.dialect.to/
+      - npm install @dialect-sdk/web3
+      - https://orbitdb.org 基础上自己开发应用层。
+      - 抗审核的广播：https://nostr.how
+    output: ../../draft/2025/20250928.01.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20250928170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20250928190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
+    output: ../../draft/2025/20250928.02.md
