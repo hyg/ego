@@ -1,0 +1,47 @@
+date: '20250930'
+mode: '1'
+plan: 1e
+time:
+  - begin: '20250930115300'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20250930120800'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20250930130800'
+    amount: 45
+    type: food
+    name: 午餐
+  - begin: '20250930135300'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20250930143800'
+    amount: 81
+    type: free
+    name: 休整
+  - begin: '20250930160000'
+    amount: 0
+    redo: 60
+    type: work
+    name: 静默工作
+    subject: js
+    title: a2a-js
+    readme:
+      - https://a2aprotocol.ai/blog/a2a-javascript-sdk-zh
+      - https://agent2agent.info/zh-cn/docs/examples/javascript/
+      - read ../../draft/2025/20250726.01.md
+      - read ../../draft/2025/20250805.02.md
+    output: ../../draft/2025/20250930.01.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20250930170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20250930190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
+    output: ../../draft/2025/20250930.02.md

@@ -1,0 +1,21 @@
+date: 2025-09-30
+VoucherID: 4200002849202509309661854277
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: donation.parent
+      asset: rmb
+      amount: 57.23
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 57.23
+comment:
+  - name: 枣肉核桃月饼
+    amount: 720
+    unit: g
+    asset: 21.40
+  - name: 京白梨
+    amount: 2500
+    unit: g
+    asset: 35.83
