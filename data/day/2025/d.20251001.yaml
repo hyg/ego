@@ -1,0 +1,66 @@
+date: '20251001'
+mode: '1'
+plan: 1d
+time:
+  - begin: '20251001082600'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20251001084100'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20251001094100'
+    amount: 45
+    type: food
+    name: 午餐
+  - begin: '20251001102600'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20251001111100'
+    amount: 168
+    type: free
+    name: 休整
+  - begin: '20251001140000'
+    amount: 30
+    type: work
+    name: 静默工作
+    subject: infra
+    title: 封装新版密钥工具集
+    output: ../../draft/2025/20251001.01.md
+    namelink: http://simp.ly/p/8t3vlk
+  - begin: '20251001143000'
+    amount: 30
+    type: work
+    name: 静默工作
+    subject: learn
+    title: LegalRuleML（Legal Rule Markup Language）
+    output: ../../draft/2025/20251001.02.md
+    namelink: http://simp.ly/p/5k9gJy
+  - begin: '20251001150000'
+    amount: 60
+    type: free
+    name: 休整
+  - begin: '20251001160000'
+    amount: 60
+    type: work
+    name: 静默工作
+    subject: js
+    title: a2a-js
+    readme:
+      - https://a2aprotocol.ai/blog/a2a-javascript-sdk-zh
+      - https://agent2agent.info/zh-cn/docs/examples/javascript/
+      - read ../../draft/2025/20250726.01.md
+      - read ../../draft/2025/20250805.02.md
+    output: ../../draft/2025/20251001.03.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20251001170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20251001190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
+    output: ../../draft/2025/20251001.04.md

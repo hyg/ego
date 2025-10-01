@@ -1,0 +1,17 @@
+date: 2025-10-01
+VoucherID: 4200002829202510010004305342
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: donation.parent
+      asset: rmb
+      amount: 57.60
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 57.60
+comment:
+  - name: 秦脆苹果
+    amount: 4250
+    unit: g
+    asset: 57.60

@@ -1,0 +1,17 @@
+date: 2025-10-01
+VoucherID: 1000050001202510011321847001522
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 3000.00
+  credit:
+    - AccountTitle: donation.parent
+      asset: rmb
+      amount: 3000.00
+comment:
+  - name: 红包
+    amount: 3000
+    unit: rmb
+    asset: 3000.00
