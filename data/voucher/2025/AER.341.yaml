@@ -1,0 +1,17 @@
+date: 2025-10-02
+VoucherID: 2025100222001831991406962068
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: raw.med
+      asset: rmb
+      amount: 18.00
+  credit:
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 18.00
+comment:
+  - name: 15联益生菌
+    amount: 80
+    unit: g
+    asset: 18.00

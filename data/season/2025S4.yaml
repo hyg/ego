@@ -569,6 +569,7 @@ time:
     infra: 30
     learn: 30
     js: 60
+    PSMD: 0
 todo:
   PSMD:
     - '90': SOP(Standard Operation Procedure)数据结构
