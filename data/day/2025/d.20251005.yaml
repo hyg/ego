@@ -1,0 +1,63 @@
+date: '20251005'
+mode: '2'
+plan: 2c
+time:
+  - begin: '20251005070800'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20251005072300'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20251005082300'
+    amount: 45
+    type: food
+    name: 早餐
+  - begin: '20251005090800'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20251005095300'
+    amount: 66
+    type: free
+    name: 休整
+  - begin: '20251005110000'
+    amount: 180
+    type: food
+    name: 备餐、午餐午休
+  - begin: '20251005140000'
+    amount: 0
+    redo: 90
+    type: work
+    name: 工作
+    subject: PSMD
+    title: SOP(Standard Operation Procedure)数据结构
+    readme:
+      - read ../../draft/2025/20250923.03.md
+    output: ../../draft/2025/20251005.01.md
+    namelink: http://simp.ly/p/lsBYG9
+  - begin: '20251005153000'
+    amount: 30
+    type: free
+    name: 休整
+  - begin: '20251005160000'
+    amount: 0
+    redo: 60
+    type: work
+    name: 工作
+    subject: learn
+    title: Tauri + Rust
+    readme:
+      - read ../../draft/2025/20251004.02.md
+    output: ../../draft/2025/20251005.02.md
+    namelink: http://simp.ly/p/MpcbHD
+  - begin: '20251005170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20251005190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
+    output: ../../draft/2025/20251005.03.md
