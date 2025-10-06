@@ -1,0 +1,17 @@
+date: 2025-10-06
+VoucherID: 2025100622001831991440427361
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: donation.parent
+      asset: rmb
+      amount: 27.00
+  credit:
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 27.00
+comment:
+  - name: 冻干益生菌
+    amount: 180
+    unit: g
+    asset: 27.00

@@ -1,0 +1,64 @@
+date: '20251006'
+mode: '1'
+plan: 1d
+time:
+  - begin: '20251006100600'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20251006102100'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20251006112100'
+    amount: 45
+    type: food
+    name: 午餐
+  - begin: '20251006120600'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20251006125100'
+    amount: 68
+    type: free
+    name: 休整
+  - begin: '20251006140000'
+    amount: 30
+    type: work
+    name: 静默工作
+    subject: learn
+    title: SBVR（OMG业务语义词汇与规则）
+    output: ../../draft/2025/20251006.01.md
+    namelink: http://simp.ly/p/8t3vlk
+  - begin: '20251006143000'
+    amount: 30
+    type: work
+    name: 静默工作
+    subject: learn
+    title: Akoma Ntoso（结构化法务文档）
+    output: ../../draft/2025/20251006.02.md
+    namelink: http://simp.ly/p/5k9gJy
+  - begin: '20251006150000'
+    amount: 60
+    type: free
+    name: 休整
+  - begin: '20251006160000'
+    amount: 60
+    redo: 60
+    type: work
+    name: 静默工作
+    subject: learn
+    title: Tauri + Rust
+    readme:
+      - read ../../draft/2025/20251004.02.md
+    output: ../../draft/2025/20251006.03.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20251006170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20251006190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
+    output: ../../draft/2025/20251006.04.md

@@ -768,6 +768,8 @@ todo:
     - '30': 封装新版密钥工具集
     - '195': Rete/Phreak算法的自主实现
   learn:
+    - '30': SALI (Legal Matter Standard)
+    - '30': LEDES™ (Legal Electronic Data Exchange Standard)
     - '60': https://jsonlogic.com/
     - '60': The Open Quantum Safe (OQS) project
       readme:

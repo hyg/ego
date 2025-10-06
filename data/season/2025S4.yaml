@@ -567,7 +567,7 @@ time:
     js: 1000
   sold:
     infra: 30
-    learn: 150
+    learn: 270
     js: 60
     PSMD: 0
 todo:
@@ -767,14 +767,13 @@ todo:
     - '60': Tauri + Rust
       readme:
         - read ../../draft/2025/20251004.02.md
+        - read ../../draft/2025/20251006.03.md
     - '60': The Open Quantum Safe (OQS) project
       readme:
         - https://openquantumsafe.org/
         - https://github.com/open-quantum-safe/liboqs
         - https://github.com/open-quantum-safe/openssl
     - '60': CometAPI
-    - '30': SBVR（OMG业务语义词汇与规则）
-    - '30': Akoma Ntoso（结构化法务文档）
     - '30': OutSystems, Mendix,
     - '30': Zapier
     - '30': IFTTT
