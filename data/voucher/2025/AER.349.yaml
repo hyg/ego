@@ -1,0 +1,17 @@
+date: 2025-10-06
+VoucherID: 2025100622001131991439846337
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: raw.food
+      asset: rmb
+      amount: 39.90
+  credit:
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 39.90
+comment:
+  - name: 谢花面南瓜
+    amount: 4500
+    unit: g
+    asset: 39.90
