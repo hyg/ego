@@ -567,7 +567,7 @@ time:
     js: 1000
   sold:
     infra: 30
-    learn: 270
+    learn: 290
     js: 60
     PSMD: 90
     ego: 0
@@ -770,14 +770,18 @@ todo:
       readme:
         - read ../../draft/2025/20251004.02.md
         - read ../../draft/2025/20251006.03.md
+    - '60': Zapier
+      readme:
+        - read ../../draft/2025/20251010.02.md
+    - '60': OutSystems, Mendix,
+      readme:
+        - read ../../draft/2025/20251010.01.md
     - '60': The Open Quantum Safe (OQS) project
       readme:
         - https://openquantumsafe.org/
         - https://github.com/open-quantum-safe/liboqs
         - https://github.com/open-quantum-safe/openssl
     - '60': CometAPI
-    - '30': OutSystems, Mendix,
-    - '30': Zapier
     - '30': IFTTT
     - '30': OutSystems, Zapier
     - '30': 描述逻辑（Description Logic, DL）
