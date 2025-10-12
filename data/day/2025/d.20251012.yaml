@@ -1,0 +1,42 @@
+date: '20251012'
+mode: '1'
+plan: 1e
+time:
+  - begin: '20251012102400'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20251012103900'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20251012113900'
+    amount: 45
+    type: food
+    name: 午餐
+  - begin: '20251012122400'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20251012130900'
+    amount: 170
+    type: free
+    name: 休整
+  - begin: '20251012160000'
+    amount: 0
+    redo: 60
+    type: work
+    name: 静默工作
+    subject: learn
+    title: indexdb
+    output: ../../draft/2025/20251012.01.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20251012170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20251012190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
+    output: ../../draft/2025/20251012.02.md

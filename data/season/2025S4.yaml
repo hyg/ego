@@ -766,6 +766,7 @@ todo:
   infra:
     - '195': Rete/Phreak算法的自主实现
   learn:
+    - '60': indexdb
     - '60': Tauri + Rust
       readme:
         - read ../../draft/2025/20251004.02.md
