@@ -567,7 +567,7 @@ time:
     js: 1000
   sold:
     infra: 30
-    learn: 290
+    learn: 430
     js: 60
     PSMD: 90
     ego: 0
@@ -767,6 +767,9 @@ todo:
     - '195': Rete/Phreak算法的自主实现
   learn:
     - '60': indexdb
+      readme:
+        - read ../../draft/2025/20251013.03.md
+    - '30': Libsodium.js
     - '60': Tauri + Rust
       readme:
         - read ../../draft/2025/20251004.02.md
@@ -783,8 +786,6 @@ todo:
         - https://github.com/open-quantum-safe/liboqs
         - https://github.com/open-quantum-safe/openssl
     - '60': CometAPI
-    - '30': IFTTT
-    - '30': OutSystems, Zapier
     - '30': 描述逻辑（Description Logic, DL）
     - '30': CEV（Contract Expression Language）
     - '30': XACML 4.0 / ODRL 2.2
