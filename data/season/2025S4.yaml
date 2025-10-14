@@ -567,7 +567,7 @@ time:
     js: 1000
   sold:
     infra: 30
-    learn: 595
+    learn: 565
     js: 60
     PSMD: 90
     ego: 0
@@ -766,6 +766,7 @@ todo:
   infra:
     - '195': Rete/Phreak算法的自主实现
   learn:
+    - '30': 描述逻辑（Description Logic, DL）
     - '60': Tauri + Rust
       readme:
         - read ../../draft/2025/20251004.02.md
