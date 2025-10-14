@@ -1,0 +1,63 @@
+date: '20251014'
+mode: '1'
+plan: 1d
+time:
+  - begin: '20251014092600'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20251014094100'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20251014104100'
+    amount: 45
+    type: food
+    name: 午餐
+  - begin: '20251014112600'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20251014121100'
+    amount: 108
+    type: free
+    name: 休整
+  - begin: '20251014140000'
+    amount: 75
+    type: work
+    name: 静默工作
+    subject: learn
+    title: Libsodium.js
+    output: ../../draft/2025/20251014.01.md
+    namelink: http://simp.ly/p/8t3vlk
+  - begin: '20251014143000'
+    amount: 30
+    type: work
+    name: 静默工作
+    subject: learn
+    title: 描述逻辑（Description Logic, DL）
+    output: ../../draft/2025/20251014.02.md
+    namelink: http://simp.ly/p/5k9gJy
+  - begin: '20251014150000'
+    amount: 60
+    type: free
+    name: 休整
+  - begin: '20251014160000'
+    amount: 60
+    type: work
+    name: 静默工作
+    subject: learn
+    title: indexdb
+    readme:
+      - read ../../draft/2025/20251013.03.md
+    output: ../../draft/2025/20251014.03.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20251014170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20251014190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
+    output: ../../draft/2025/20251014.04.md
