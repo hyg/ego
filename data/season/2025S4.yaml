@@ -567,7 +567,7 @@ time:
     js: 1000
   sold:
     infra: 30
-    learn: 710
+    learn: 830
     js: 60
     PSMD: 90
     ego: 0
@@ -766,11 +766,6 @@ todo:
   infra:
     - '195': Rete/Phreak算法的自主实现
   learn:
-    - '60': Tauri + Rust
-      readme:
-        - read ../../draft/2025/20251004.02.md
-        - read ../../draft/2025/20251006.03.md
-        - read ../../draft/2025/20251015.03.md
     - '60': Zapier
       readme:
         - read ../../draft/2025/20251010.02.md
@@ -783,8 +778,6 @@ todo:
         - https://github.com/open-quantum-safe/liboqs
         - https://github.com/open-quantum-safe/openssl
     - '60': CometAPI
-    - '30': XACML 4.0 / ODRL 2.2
-    - '30': RuleML,结构化规则语言（如RuleML的核心子集）
     - '30': CloudEvent（JSON 格式，spec 1.0+）
     - '30': Semantic Version + Content-Addressable Storage（如 OCI Artifacts 存 DMN/Regos）
     - '30': Ontology + SWRL（Semantic Web Rule Language）
