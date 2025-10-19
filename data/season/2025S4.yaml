@@ -567,7 +567,7 @@ time:
     js: 1000
   sold:
     infra: 30
-    learn: 830
+    learn: 1032
     js: 60
     PSMD: 90
     ego: 0
@@ -764,6 +764,7 @@ todo:
         - day metada
         - draft文件名
   infra:
+    - '195': petri引擎设计
     - '195': Rete/Phreak算法的自主实现
   learn:
     - '60': Tauri + Rust
@@ -771,8 +772,12 @@ todo:
         - read ../../draft/2025/20251004.02.md
         - read ../../draft/2025/20251006.03.md
         - read ../../draft/2025/20251015.03.md
-    - '30': https://www.pnml.org/
-    - '30': RuleML,结构化规则语言（如RuleML的核心子集）
+        - read ../../draft/2025/20251019.03.md
+    - '30': SCXML (State Chart XML)
+    - '30': UML State Machine XMI | Harel Statecharts
+    - '30': TLA+
+    - '30': Alloy
+    - '30': VDM (Vienna Development Method)
     - '60': Zapier
       readme:
         - read ../../draft/2025/20251010.02.md
