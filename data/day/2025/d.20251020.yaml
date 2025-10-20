@@ -1,0 +1,67 @@
+date: '20251020'
+mode: '1'
+plan: 1d
+time:
+  - begin: '20251020095900'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20251020101400'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20251020111400'
+    amount: 45
+    type: food
+    name: 午餐
+  - begin: '20251020115900'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20251020124400'
+    amount: 75
+    type: free
+    name: 休整
+  - begin: '20251020140000'
+    amount: 50
+    type: work
+    name: 静默工作
+    subject: learn
+    title: SCXML (State Chart XML)
+    output: ../../draft/2025/20251020.01.md
+    namelink: http://simp.ly/p/8t3vlk
+  - begin: '20251020145000'
+    amount: 50
+    type: work
+    name: 静默工作
+    subject: learn
+    title: UML State Machine XMI | Harel Statecharts
+    output: ../../draft/2025/20251020.02.md
+    namelink: http://simp.ly/p/5k9gJy
+  - begin: '20251020154000'
+    amount: 20
+    type: free
+    name: 休整
+  - begin: '20251020160000'
+    amount: 90
+    redo: 90
+    type: work
+    name: 静默工作
+    subject: learn
+    title: Tauri + Rust
+    readme:
+      - read ../../draft/2025/20251004.02.md
+      - read ../../draft/2025/20251006.03.md
+      - read ../../draft/2025/20251015.03.md
+      - read ../../draft/2025/20251019.03.md
+    output: ../../draft/2025/20251020.03.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20251020170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20251020190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
+    output: ../../draft/2025/20251020.04.md

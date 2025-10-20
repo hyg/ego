@@ -1,0 +1,17 @@
+date: 2025-10-20
+VoucherID: 4200002856202510206156195399
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: raw.med
+      asset: rmb
+      amount: 7.95
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 7.95
+comment:
+  - name: 黄芪精华液
+    amount: 30
+    unit: ml
+    asset: 7.95

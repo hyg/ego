@@ -567,7 +567,7 @@ time:
     js: 1000
   sold:
     infra: 30
-    learn: 1032
+    learn: 1222
     js: 60
     PSMD: 90
     ego: 0
@@ -688,6 +688,7 @@ todo:
       readnme:
         - 考虑upgradeby的实现。
   ego:
+    - '60': 细化ego对task的资源分配
     - '90': 同步新日志到webDAV。使用新的共享外链。
       readme:
         - read ../../draft/2025/20250810.02.md
@@ -764,17 +765,21 @@ todo:
         - day metada
         - draft文件名
   infra:
-    - '195': petri引擎设计
+    - '90': 设计静态数据（git库）和实时交互的分工。如何共同支撑PSMD和ego项目。
+    - '195': petri网工作流引擎设计
     - '195': Rete/Phreak算法的自主实现
   learn:
-    - '60': Tauri + Rust
+    - '90': Tauri + Rust
       readme:
         - read ../../draft/2025/20251004.02.md
         - read ../../draft/2025/20251006.03.md
         - read ../../draft/2025/20251015.03.md
         - read ../../draft/2025/20251019.03.md
-    - '30': SCXML (State Chart XML)
-    - '30': UML State Machine XMI | Harel Statecharts
+        - read ../../draft/2025/20251020.03.md
+    - '60': 按petri网定义设计几个实例
+      bind:
+        - '30': 学习优秀的petri网设计案例
+    - '30': XSTATE https://xstate.js.org/
     - '30': TLA+
     - '30': Alloy
     - '30': VDM (Vienna Development Method)
