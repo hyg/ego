@@ -1,0 +1,21 @@
+date: 2025-10-21
+VoucherID: 2025102122001831991419318345
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: donation.parent
+      asset: rmb
+      amount: 166.00
+  credit:
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 166.00
+comment:
+  - name: 小分子肽
+    amount: 1200
+    unit: g
+    asset: 116.00
+  - name: 胶原蛋白肽
+    amount: 1000
+    unit: g
+    asset: 50.00

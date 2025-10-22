@@ -1,0 +1,17 @@
+date: 2025-10-22
+VoucherID: 4200002963202510229201143479
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: donation.parent
+      asset: rmb
+      amount: 111.20
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 111.20
+comment:
+  - name: 羊后腿肉
+    amount: 1500
+    unit: g
+    asset: 111.20

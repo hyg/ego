@@ -1,0 +1,25 @@
+date: 2025-10-21
+VoucherID: 4200002910202510216682793978
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: raw.food
+      asset: rmb
+      amount: 11.50
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 11.50
+comment:
+  - name: 芹菜
+    amount: 500
+    unit: g
+    asset: 3.90
+  - name: 象大厨经典卤水豆腐
+    amount: 435
+    unit: g
+    asset: 4.20
+  - name: 象大厨北豆腐
+    amount: 450
+    unit: g
+    asset: 3.40

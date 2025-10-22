@@ -570,7 +570,7 @@ time:
     learn: 1222
     js: 60
     PSMD: 90
-    ego: 90
+    ego: 150
 todo:
   PSMD:
     - '90': SOP(Standard Operation Procedure)数据结构
@@ -691,6 +691,7 @@ todo:
     - '60': 细化ego对task的资源分配
       readme:
         - read ../../draft/2025/20251021.01.md
+        - read ../../draft/2025/20251022.01.md
     - '90': 同步新日志到webDAV。使用新的共享外链。
       readme:
         - read ../../draft/2025/20250810.02.md
