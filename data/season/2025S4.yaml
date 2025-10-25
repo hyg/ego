@@ -571,6 +571,7 @@ time:
     js: 60
     PSMD: 90
     ego: 210
+    xuemen: 195
 todo:
   PSMD:
     - '90': SOP(Standard Operation Procedure)数据结构

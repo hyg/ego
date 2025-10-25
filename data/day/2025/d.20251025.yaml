@@ -1,0 +1,74 @@
+date: '20251025'
+mode: '2'
+plan: 2a
+time:
+  - begin: '20251025035900'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20251025041400'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20251025051400'
+    amount: 45
+    type: food
+    name: 早餐
+  - begin: '20251025055900'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20251025064400'
+    amount: 60
+    type: free
+    name: 休整
+  - begin: '20251025074500'
+    amount: 195
+    type: work
+    name: 工作
+    subject: xuemen
+    title: 助力企业转型 推动产业创新
+    output: ../../draft/2025/20251025.01.md
+    namelink: http://simp.ly/p/3GXNTh
+  - begin: '20251025110000'
+    amount: 180
+    type: food
+    name: 备餐、午餐午休
+  - begin: '20251025140000'
+    amount: 0
+    redo: 90
+    type: work
+    name: 工作
+    subject: PSMD
+    title: SOP(Standard Operation Procedure)数据结构
+    readme:
+      - read ../../draft/2025/20250923.03.md
+      - read ../../draft/2025/20251008.01.md
+    output: ../../draft/2025/20251025.02.md
+    namelink: http://simp.ly/p/lsBYG9
+  - begin: '20251025153000'
+    amount: 30
+    type: free
+    name: 休整
+  - begin: '20251025160000'
+    amount: 0
+    redo: 60
+    type: work
+    name: 工作
+    subject: ego
+    title: 细化ego对task的资源分配
+    readme:
+      - read ../../draft/2025/20251021.01.md
+      - read ../../draft/2025/20251022.01.md
+      - read ../../draft/2025/20251024.01.md
+    output: ../../draft/2025/20251025.03.md
+    namelink: http://simp.ly/p/MpcbHD
+  - begin: '20251025170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20251025190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
+    output: ../../draft/2025/20251025.04.md
