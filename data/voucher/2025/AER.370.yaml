@@ -1,0 +1,21 @@
+date: 2025-10-26
+VoucherID: 4200002945202510266605362454
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: donation.parent
+      asset: rmb
+      amount: 100.40
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 100.40
+comment:
+  - name: 兔后腿
+    amount: 8
+    unit: 只
+    asset: 59.23
+  - name: 瑞玉猕猴桃
+    amount: 2400
+    unit: g
+    asset: 41.17
