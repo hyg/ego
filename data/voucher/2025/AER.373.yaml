@@ -1,0 +1,17 @@
+date: 2025-10-27
+VoucherID: 4200002857202510278718499865
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: raw.food
+      asset: rmb
+      amount: 47.40
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 47.40
+comment:
+  - name: 大成香煎鸡排
+    amount: 20
+    unit: 片
+    asset: 47.40

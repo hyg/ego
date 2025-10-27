@@ -1,0 +1,17 @@
+date: 2025-10-27
+VoucherID: 4200002919202510271223631338
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: raw.supply
+      asset: rmb
+      amount: 8.57
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 8.57
+comment:
+  - name: 消毒湿巾
+    amount: 100
+    unit: 张
+    asset: 8.57

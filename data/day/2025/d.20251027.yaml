@@ -1,0 +1,69 @@
+date: '20251027'
+mode: '1'
+plan: 1d
+time:
+  - begin: '20251027095900'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20251027101400'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20251027111400'
+    amount: 45
+    type: food
+    name: 午餐
+  - begin: '20251027115900'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20251027124400'
+    amount: 75
+    type: free
+    name: 休整
+  - begin: '20251027140000'
+    amount: 90
+    redo: 60
+    type: work
+    name: 静默工作
+    subject: learn
+    title: XSTATE https://xstate.js.org/
+    readme:
+      - read ../../draft/2025/20251026.01.md
+    output: ../../draft/2025/20251027.01.md
+    namelink: http://simp.ly/p/8t3vlk
+  - begin: '20251027143000'
+    amount: 30
+    type: work
+    name: 静默工作
+    subject: learn
+    title: redux https://cn.redux.js.org
+    output: ../../draft/2025/20251027.02.md
+    namelink: http://simp.ly/p/5k9gJy
+  - begin: '20251027150000'
+    amount: 60
+    type: free
+    name: 休整
+  - begin: '20251027160000'
+    amount: 0
+    redo: 60
+    type: work
+    name: 静默工作
+    subject: ego
+    title: 细化ego对task的资源分配
+    readme:
+      - read ../../draft/2025/20251021.01.md
+      - read ../../draft/2025/20251022.01.md
+      - read ../../draft/2025/20251024.01.md
+    output: ../../draft/2025/20251027.03.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20251027170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20251027190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
+    output: ../../draft/2025/20251027.04.md
