@@ -568,7 +568,7 @@ time:
   sold:
     infra: 30
     learn: 1402
-    js: 60
+    js: 75
     PSMD: 90
     ego: 270
     xuemen: 195
@@ -995,12 +995,6 @@ todo:
       readme:
         - https://zh.javascript.info/promise-api
   js:
-    - '60': LangChain.js
-      readme:
-        - https://github.com/langchain-ai/langchainjs
-        - https://js.langchain.com
-        - https://docs.langchain.com.cn/
-        - read ../../draft/2025/20250717.01.md
     - '60': ai-sdk + moonshot
       readme:
         - https://ai-sdk.dev/docs/foundations/providers-and-models

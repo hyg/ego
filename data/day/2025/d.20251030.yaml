@@ -1,0 +1,46 @@
+date: '20251030'
+mode: '1'
+plan: 1e
+time:
+  - begin: '20251030105000'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20251030110500'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20251030120500'
+    amount: 45
+    type: food
+    name: 午餐
+  - begin: '20251030125000'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20251030133500'
+    amount: 144
+    type: free
+    name: 休整
+  - begin: '20251030160000'
+    amount: 15
+    type: work
+    name: 静默工作
+    subject: js
+    title: LangChain.js
+    readme:
+      - https://github.com/langchain-ai/langchainjs
+      - https://js.langchain.com
+      - https://docs.langchain.com.cn/
+      - read ../../draft/2025/20250717.01.md
+    output: ../../draft/2025/20251030.01.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20251030170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20251030190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
+    output: ../../draft/2025/20251030.02.md

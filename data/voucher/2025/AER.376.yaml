@@ -1,0 +1,29 @@
+date: 2025-10-30
+VoucherID: 19251030152010036365626710105609
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: raw.food
+      asset: rmb
+      amount: 86.39
+  credit:
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 86.39
+comment:
+  - name: 番石榴
+    amount: 2500
+    unit: g
+    asset: 24.01
+  - name: 黄皮酱
+    amount: 320
+    unit: g
+    asset: 6.71
+  - name: 螺蛳粉
+    amount: 1890
+    unit: g
+    asset: 30.80
+  - name: 沙棘原浆
+    amount: 1000
+    unit: g
+    asset: 24.87
