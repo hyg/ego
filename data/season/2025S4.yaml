@@ -567,10 +567,10 @@ time:
     js: 1000
   sold:
     infra: 30
-    learn: 1402
-    js: 75
+    learn: 1447
+    js: 90
     PSMD: 90
-    ego: 270
+    ego: 330
     xuemen: 195
 todo:
   PSMD:
@@ -689,7 +689,6 @@ todo:
       readnme:
         - 考虑upgradeby的实现。
   ego:
-    - '30': 各层级各类资产的定价
     - '90': 同步新日志到webDAV。使用新的共享外链。
       readme:
         - read ../../draft/2025/20250810.02.md
@@ -777,7 +776,6 @@ todo:
     - '60': 按petri网定义设计几个实例
       bind:
         - '30': 学习优秀的petri网设计案例
-    - '30': Alloy
     - '30': VDM (Vienna Development Method)
     - '60': Zapier
       readme:
@@ -995,11 +993,6 @@ todo:
       readme:
         - https://zh.javascript.info/promise-api
   js:
-    - '60': ai-sdk + moonshot
-      readme:
-        - https://ai-sdk.dev/docs/foundations/providers-and-models
-        - https://platform.moonshot.cn/docs/introduction
-        - toolcalls, json mode,MCP(model context protocol),agentic
     - '60': Vector Database in nodejs
       readme:
         - https://www.dongaigc.com/p/Stevenic/vectra
