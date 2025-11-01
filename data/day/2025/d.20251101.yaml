@@ -1,0 +1,45 @@
+date: '20251101'
+mode: '1'
+plan: 1e
+time:
+  - begin: '20251101120300'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20251101121800'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20251101131800'
+    amount: 45
+    type: food
+    name: 午餐
+  - begin: '20251101140300'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20251101144800'
+    amount: 71
+    type: free
+    name: 休整
+  - begin: '20251101160000'
+    amount: 0
+    redo: 30
+    type: work
+    name: 静默工作
+    subject: js
+    title: Vector Database in nodejs
+    readme:
+      - https://www.dongaigc.com/p/Stevenic/vectra
+      - https://therightsw.com/vector-database-crud
+    output: ../../draft/2025/20251101.01.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20251101170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20251101190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
+    output: ../../draft/2025/20251101.02.md

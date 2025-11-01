@@ -993,7 +993,7 @@ todo:
       readme:
         - https://zh.javascript.info/promise-api
   js:
-    - '60': Vector Database in nodejs
+    - '30': Vector Database in nodejs
       readme:
         - https://www.dongaigc.com/p/Stevenic/vectra
         - https://therightsw.com/vector-database-crud

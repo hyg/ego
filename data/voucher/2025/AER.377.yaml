@@ -1,0 +1,17 @@
+date: 2025-10-31
+VoucherID: 4200002863202510317733164100
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: raw.shell
+      asset: rmb
+      amount: 162.00
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 162.00
+comment:
+  - name: 冬季训练服
+    amount: 1
+    unit: 套
+    asset: 162.00

@@ -1,0 +1,17 @@
+date: 2025-10-31
+VoucherID: 2025103122001831991431527081
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: raw.shell
+      asset: rmb
+      amount: 74.40
+  credit:
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 74.40
+comment:
+  - name: 毛巾
+    amount: 8
+    unit: 条
+    asset: 74.40
