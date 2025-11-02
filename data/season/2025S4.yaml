@@ -567,7 +567,7 @@ time:
     js: 1000
   sold:
     infra: 30
-    learn: 1447
+    learn: 1507
     js: 90
     PSMD: 90
     ego: 330
@@ -769,10 +769,6 @@ todo:
     - '195': petri网工作流引擎设计
     - '195': Rete/Phreak算法的自主实现
   learn:
-    - '60': XSTATE https://xstate.js.org/
-      readme:
-        - read ../../draft/2025/20251026.01.md
-        - read ../../draft/2025/20251027.01.md
     - '60': 按petri网定义设计几个实例
       bind:
         - '30': 学习优秀的petri网设计案例
