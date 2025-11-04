@@ -1,0 +1,17 @@
+date: 2025-11-04
+VoucherID: 2025110422001131991457748196
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: donation.parent
+      asset: rmb
+      amount: 158.00
+  credit:
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 158.00
+comment:
+  - name: 华为手环10
+    amount: 1
+    unit: 个
+    asset: 158.00
