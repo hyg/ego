@@ -1,0 +1,35 @@
+date: 2025-11-05
+VoucherID: 
+  - 1000000000202511051747857020150
+  - 4200002866202511050315094960
+  - 4200002916202511053333625956
+  - 10001073012025110500918844560173
+  - 4200002956202511059985368279
+  - 4200002962202511056328999934
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: donation.else
+      asset: rmb
+      amount: 161.18
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 161.18
+comment:
+  - name: 打车到龙园派出所
+    amount: 1
+    unit: 次
+    asset: 50.18
+  - name: 身份证工本费
+    amount: 2
+    unit: 份
+    asset: 80.00
+  - name: 身份证复印费
+    amount: 1
+    unit: 张
+    asset: 1.00
+  - name: 身份证快递费
+    amount: 2
+    unit: 份
+    asset: 30.00

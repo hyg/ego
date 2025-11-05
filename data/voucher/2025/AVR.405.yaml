@@ -1,0 +1,9 @@
+date: 2025-11-05 12:27:05
+title: 微信支付账单
+VoucherID: 4200002907202511055903229398
+VoucherType: 交易单号
+amount: 600.00
+summary: 电费
+comment:
+  - name: 商户单号
+    value: 可在支持的商户扫码退款

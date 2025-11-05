@@ -1,0 +1,81 @@
+date: '20251105'
+mode: '1'
+plan: 1b
+time:
+  - begin: '20251105055700'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20251105061200'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20251105071200'
+    amount: 45
+    type: food
+    name: 早餐
+  - begin: '20251105075700'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20251105084200'
+    amount: 47
+    type: free
+    name: 休整
+  - begin: '20251105093000'
+    amount: 90
+    type: work
+    name: 静默工作
+    subject: raw
+    title: 外勤，补办zhaoyh身份证
+    output: ../../draft/2025/20251105.01.md
+    namelink: http://simp.ly/p/j1SspP
+  - begin: '20251105110000'
+    amount: 180
+    type: food
+    name: 备餐、午餐午休
+  - begin: '20251105140000'
+    amount: 0
+    redo: 60
+    type: work
+    name: 静默工作
+    subject: js
+    title: Vector Database in nodejs
+    readme:
+      - https://www.dongaigc.com/p/Stevenic/vectra
+      - https://therightsw.com/vector-database-crud
+    output: ../../draft/2025/20251105.02.md
+    namelink: http://simp.ly/p/8t3vlk
+  - begin: '20251105143000'
+    amount: 30
+    type: work
+    name: 静默工作
+    subject: learn
+    title: VDM (Vienna Development Method)
+    output: ../../draft/2025/20251105.03.md
+    namelink: http://simp.ly/p/5k9gJy
+  - begin: '20251105150000'
+    amount: 60
+    type: free
+    name: 休整
+  - begin: '20251105160000'
+    amount: 0
+    redo: 60
+    type: work
+    name: 静默工作
+    subject: PSMD
+    title: SOP(Standard Operation Procedure)数据结构
+    readme:
+      - read ../../draft/2025/20250923.03.md
+      - read ../../draft/2025/20251008.01.md
+    output: ../../draft/2025/20251105.04.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20251105170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20251105190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
+    output: ../../draft/2025/20251105.05.md

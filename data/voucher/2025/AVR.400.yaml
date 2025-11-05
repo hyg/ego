@@ -1,0 +1,9 @@
+date: 2025-11-05 08:40:00
+title: 微信支付账单
+VoucherID: 1000000000202511051747857020150
+VoucherType: 服务单号
+amount: 50.18
+summary: 打车
+comment:
+  - name: 商户单号
+    value: T1435540877926840236

@@ -567,14 +567,15 @@ time:
     js: 1000
   sold:
     infra: 30
-    learn: 1447
+    learn: 1477
     js: 90
     PSMD: 90
     ego: 330
     xuemen: 195
+    raw: 90
 todo:
   PSMD:
-    - '90': SOP(Standard Operation Procedure)数据结构
+    - '60': SOP(Standard Operation Procedure)数据结构
       readme:
         - read ../../draft/2025/20250923.03.md
         - read ../../draft/2025/20251008.01.md
@@ -689,7 +690,7 @@ todo:
       readnme:
         - 考虑upgradeby的实现。
   ego:
-    - '90': 同步新日志到webDAV。使用新的共享外链。
+    - '60': 同步新日志到webDAV。使用新的共享外链。
       readme:
         - read ../../draft/2025/20250810.02.md
     - '90': 整理task及其相互关系
@@ -765,10 +766,11 @@ todo:
         - day metada
         - draft文件名
   infra:
-    - '90': 设计静态数据（git库）和实时交互的分工。如何共同支撑PSMD和ego项目。
+    - '60': 设计静态数据（git库）和实时交互的分工。如何共同支撑PSMD和ego项目。
     - '195': petri网工作流引擎设计
     - '195': Rete/Phreak算法的自主实现
   learn:
+    - '60': Chroma sample
     - '60': XSTATE https://xstate.js.org/
       readme:
         - read ../../draft/2025/20251026.01.md
@@ -776,7 +778,6 @@ todo:
     - '60': 按petri网定义设计几个实例
       bind:
         - '30': 学习优秀的petri网设计案例
-    - '30': VDM (Vienna Development Method)
     - '60': Zapier
       readme:
         - read ../../draft/2025/20251010.02.md
@@ -993,7 +994,7 @@ todo:
       readme:
         - https://zh.javascript.info/promise-api
   js:
-    - '30': Vector Database in nodejs
+    - '60': Vector Database in nodejs
       readme:
         - https://www.dongaigc.com/p/Stevenic/vectra
         - https://therightsw.com/vector-database-crud
