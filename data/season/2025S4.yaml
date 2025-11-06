@@ -771,6 +771,7 @@ todo:
     - '195': Rete/Phreak算法的自主实现
   learn:
     - '60': Chroma sample
+    - '60': lanceDB sample
     - '60': XSTATE https://xstate.js.org/
       readme:
         - read ../../draft/2025/20251026.01.md
@@ -994,6 +995,13 @@ todo:
       readme:
         - https://zh.javascript.info/promise-api
   js:
+    - '90': node.js
+      readme:
+        - https://github.com/yunnysunny/nodebook
+        - https://node.whyun.com/
+    - '30': copilot
+      readme:
+        - https://github.com/features/copilot
     - '60': Vector Database in nodejs
       readme:
         - https://www.dongaigc.com/p/Stevenic/vectra
@@ -1027,37 +1035,29 @@ todo:
             - 使用新的模块化设计
             - 使用新的data model
         - '30': 新版raw.js的子命令-营养成分排序
-    - '30': copilot
+    - '60': debug
       readme:
-        - https://github.com/features/copilot
-    - '30': node.js
+        - https://github.com/nswbmw/node-in-debugging
+    - '60': The Node.js best practices list (July 2024)
       readme:
-        - https://github.com/yunnysunny/nodebook
-        - https://node.whyun.com/
+        - https://github.com/goldbergyoni/nodebestpractices
+    - '60': 学习 nodejs test框架
+      readme:
+        - https://github.com/Vanessa219/vditor - https://nodejs.cn/api/test.html
+        - https://github.com/markedjs/marked
+        - https://bun.sh/
       bind:
-        - '60': debug
+        - '90': 实际编写自己的测试范例
+        - '60': lint
           readme:
-            - https://github.com/nswbmw/node-in-debugging
-        - '60': The Node.js best practices list (July 2024)
-          readme:
-            - https://github.com/goldbergyoni/nodebestpractices
-        - '60': 学习 nodejs test框架
-          readme:
-            - https://github.com/Vanessa219/vditor - https://nodejs.cn/api/test.html
-            - https://github.com/markedjs/marked
-            - https://bun.sh/
-          bind:
-            - '90': 实际编写自己的测试范例
-            - '60': lint
-              readme:
-                - https://www.javascriptcn.com/post/675439161b963fe9cc4d25ce
-                - https://www.jslint.com/
-                - https://jshint.com/
-                - https://zh-hans.eslint.org/docs/latest/use/getting-started
-        - '60': nodejs server side dev
-          readme:
-            - https://github.com/qufei1993/Nodejs-Roadmap
-            - https://www.nodejs.red
+            - https://www.javascriptcn.com/post/675439161b963fe9cc4d25ce
+            - https://www.jslint.com/
+            - https://jshint.com/
+            - https://zh-hans.eslint.org/docs/latest/use/getting-started
+    - '60': nodejs server side dev
+      readme:
+        - https://github.com/qufei1993/Nodejs-Roadmap
+        - https://www.nodejs.red
     - '30': passportjs
     - '90': learn graphql
       readme:

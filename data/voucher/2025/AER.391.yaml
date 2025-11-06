@@ -1,0 +1,17 @@
+date: 2025-11-06
+VoucherID: 4200002918202511060952529151
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: raw.med
+      asset: rmb
+      amount: 113.00
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 113.00
+comment:
+  - name: 流感疫苗
+    amount: 1
+    unit: 次
+    asset: 113.00
