@@ -1,0 +1,25 @@
+date: 2025-11-07
+VoucherID: 4200002884202511071801528391
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: donation.parent
+      asset: rmb
+      amount: 102.23
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 102.23
+comment:
+  - name: 瑞玉猕猴桃
+    amount: 2400
+    unit: g
+    asset: 41.40
+  - name: 火晶柿子
+    amount: 2400
+    unit: g
+    asset: 32.32
+  - name: 山农酥梨
+    amount: 2250
+    unit: g
+    asset: 28.51
