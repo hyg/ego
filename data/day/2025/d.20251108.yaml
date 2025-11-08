@@ -1,0 +1,67 @@
+date: '20251108'
+mode: '1'
+plan: 1d
+time:
+  - begin: '20251108084200'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20251108085700'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20251108095700'
+    amount: 45
+    type: food
+    name: 午餐
+  - begin: '20251108104200'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20251108112700'
+    amount: 152
+    type: free
+    name: 休整
+  - begin: '20251108140000'
+    amount: 10
+    type: work
+    name: 静默工作
+    subject: js
+    title: copilot
+    readme:
+      - https://github.com/features/copilot
+    output: ../../draft/2025/20251108.01.md
+    namelink: http://simp.ly/p/8t3vlk
+  - begin: '20251108141000'
+    amount: 50
+    type: work
+    name: 静默工作
+    subject: learn
+    title: CloudEvent（JSON 格式，spec 1.0+）
+    output: ../../draft/2025/20251108.02.md
+    namelink: http://simp.ly/p/5k9gJy
+  - begin: '20251108150000'
+    amount: 60
+    type: free
+    name: 休整
+  - begin: '20251108160000'
+    amount: 0
+    redo: 60
+    type: work
+    name: 静默工作
+    subject: PSMD
+    title: SOP(Standard Operation Procedure)数据结构
+    readme:
+      - read ../../draft/2025/20250923.03.md
+      - read ../../draft/2025/20251008.01.md
+    output: ../../draft/2025/20251108.03.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20251108170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20251108190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
+    output: ../../draft/2025/20251108.04.md
