@@ -567,7 +567,7 @@ time:
     js: 1000
   sold:
     infra: 30
-    learn: 1527
+    learn: 1707
     js: 100
     PSMD: 90
     ego: 330
@@ -770,6 +770,7 @@ todo:
     - '195': petri网工作流引擎设计
     - '195': Rete/Phreak算法的自主实现
   learn:
+    - '30': Ontology + SWRL（Semantic Web Rule Language）
     - '60': Chroma sample
     - '60': lanceDB sample
     - '60': XSTATE https://xstate.js.org/
@@ -791,8 +792,6 @@ todo:
         - https://github.com/open-quantum-safe/liboqs
         - https://github.com/open-quantum-safe/openssl
     - '60': CometAPI
-    - '30': Semantic Version + Content-Addressable Storage（如 OCI Artifacts 存 DMN/Regos）
-    - '30': Ontology + SWRL（Semantic Web Rule Language）
     - '30': Common Logic (ISO/IEC 24707)
     - '30': Camunda Zeebe / Temporal.io
     - '30': Flink Complex Event Processing，直接运行 DMN 4Flink 或 Rego-on-Flink 扩展。
