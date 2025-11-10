@@ -1,0 +1,33 @@
+date: 2025-11-10
+VoucherID: 19251110182000036670610554105352
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: raw.food
+      asset: rmb
+      amount: 91.57
+  credit:
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 91.57
+comment:
+  - name: 百香果
+    amount: 1500
+    unit: g
+    asset: 16.88
+  - name: 鸡汤
+    amount: 3500
+    unit: g
+    asset: 35.26
+  - name: 月饼
+    amount: 500
+    unit: g
+    asset: 17.59
+  - name: 黄心菜
+    amount: 2500
+    unit: g
+    asset: 21.92
+  - name: 多多钱包余额
+    amount: 0.08
+    unit: rmb
+    asset: -0.08
