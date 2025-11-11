@@ -1,0 +1,46 @@
+date: '20251111'
+mode: '1'
+plan: 1e
+time:
+  - begin: '20251111112500'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20251111114000'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20251111124000'
+    amount: 45
+    type: food
+    name: 午餐
+  - begin: '20251111132500'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20251111141000'
+    amount: 109
+    type: free
+    name: 休整
+  - begin: '20251111160000'
+    amount: 60
+    redo: 60
+    type: work
+    name: 静默工作
+    subject: PSMD
+    title: SOP(Standard Operation Procedure)数据结构
+    readme:
+      - read ../../draft/2025/20250923.03.md
+      - read ../../draft/2025/20251008.01.md
+      - read ../../draft/2025/20251110.01.md
+    output: ../../draft/2025/20251111.01.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20251111170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20251111190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
+    output: ../../draft/2025/20251111.02.md

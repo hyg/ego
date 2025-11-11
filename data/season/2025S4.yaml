@@ -569,7 +569,7 @@ time:
     infra: 30
     learn: 1707
     js: 100
-    PSMD: 210
+    PSMD: 270
     ego: 330
     xuemen: 195
     raw: 90
@@ -580,6 +580,7 @@ todo:
         - read ../../draft/2025/20250923.03.md
         - read ../../draft/2025/20251008.01.md
         - read ../../draft/2025/20251110.01.md
+        - read ../../draft/2025/20251111.01.md
     - '195': 健康消费合作社建模
       readme:
         - read ../../draft/2025/20250922.03.md
