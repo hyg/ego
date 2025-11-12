@@ -569,18 +569,19 @@ time:
     infra: 30
     learn: 1707
     js: 100
-    PSMD: 270
+    PSMD: 360
     ego: 330
     xuemen: 195
     raw: 90
 todo:
   PSMD:
-    - '60': SOP(Standard Operation Procedure)数据结构
+    - '90': SOP(Standard Operation Procedure)数据结构
       readme:
         - read ../../draft/2025/20250923.03.md
         - read ../../draft/2025/20251008.01.md
         - read ../../draft/2025/20251110.01.md
         - read ../../draft/2025/20251111.01.md
+        - read ../../draft/2025/20251112.01.md
     - '195': 健康消费合作社建模
       readme:
         - read ../../draft/2025/20250922.03.md
@@ -1095,6 +1096,7 @@ todo:
         - read ../../draft/2024/09/20240907143000.md
     - '60': 新版食材排序，包括升序、降序、特定值距离、多种营养成分特定值组合距离。
   xuemen:
+    - '60': 月度事务
     - '195': kernel模型升级
       readme:
         - read ../../draft/2024/11/20241120.01.md
