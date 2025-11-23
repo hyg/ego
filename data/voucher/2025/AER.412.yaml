@@ -1,0 +1,17 @@
+date: 2025-11-23
+VoucherID: 4200002862202511236986990671
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: donation.parent
+      asset: rmb
+      amount: 20.44
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 20.44
+comment:
+  - name: 山农酥梨
+    amount: 2250
+    unit: g
+    asset: 20.44
