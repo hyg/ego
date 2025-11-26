@@ -1,0 +1,17 @@
+date: 2025-11-26
+VoucherID: 4200002850202511266806234430
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: raw.food
+      asset: rmb
+      amount: 9.99
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 9.99
+comment:
+  - name: 维纳斯黄金苹果
+    amount: 900
+    unit: g
+    asset: 9.99
