@@ -1,0 +1,25 @@
+date: 2025-11-28
+VoucherID: 4200002875202511288475404322
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: donation.parent
+      asset: rmb
+      amount: 80.37
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 80.37
+comment:
+  - name: 瑞玉
+    amount: 2350
+    unit: g
+    asset: 33.60
+  - name: 维纳斯黄金
+    amount: 2250
+    unit: g
+    asset: 38.54
+  - name: 麦胚芽
+    amount: 600
+    unit: g
+    asset: 8.23

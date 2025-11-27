@@ -1,0 +1,17 @@
+date: 2025-11-27
+VoucherID: 4200002882202511271706010062
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: raw.supply
+      asset: rmb
+      amount: 0.09
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 0.09
+comment:
+  - name: 7号电池
+    amount: 4
+    unit: 节
+    asset: 0.09
