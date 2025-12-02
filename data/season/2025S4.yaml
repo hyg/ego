@@ -773,8 +773,8 @@ todo:
     - '195': petri网工作流引擎设计
     - '195': Rete/Phreak算法的自主实现
   learn:
-    - '30': Common Logic (ISO/IEC 24707)
     - '30': Ontology + SWRL（Semantic Web Rule Language）
+    - '30': Common Logic (ISO/IEC 24707)
     - '60': Chroma sample
     - '60': lanceDB sample
     - '60': XSTATE https://xstate.js.org/
