@@ -1,0 +1,17 @@
+date: 2025-12-03
+VoucherID: 4200002917202512032793684748
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: raw.supply
+      asset: rmb
+      amount: 16.75
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 16.75
+comment:
+  - name: 取暖贴
+    amount: 30
+    unit: 张
+    asset: 16.75
