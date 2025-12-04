@@ -1,0 +1,46 @@
+date: 2025-12-03
+VoucherID: 4200002917202512032793684748
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: raw.food
+      asset: rmb
+      amount: 52.09
+    - AccountTitle: raw.supply
+      asset: rmb
+      amount: 6.81
+    - AccountTitle: raw.med
+      asset: rmb
+      amount: 6.44
+    - AccountTitle: donation.parent
+      asset: rmb
+      amount: 16.47
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 81.81
+comment:
+  - name: 必理通
+    amount: 5
+    unit: g
+    asset: 6.44
+  - name: 牙缝刷
+    amount: 20
+    unit: 支
+    asset: 6.81
+  - name: 炖肉料
+    amount: 160
+    unit: g
+    asset: 16.47
+  - name: 麦胚芽
+    amount: 600
+    unit: g
+    asset: 7.36
+  - name: 龙稻18
+    amount: 5000
+    unit: g
+    asset: 29.47
+  - name: 山农酥梨
+    amount: 2500
+    unit: g
+    asset: 15.26
