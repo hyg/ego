@@ -567,11 +567,11 @@ time:
     js: 1000
   sold:
     infra: 30
-    learn: 1707
+    learn: 1737
     js: 100
     PSMD: 360
     ego: 330
-    xuemen: 195
+    xuemen: 225
     raw: 90
 todo:
   PSMD:
@@ -773,7 +773,7 @@ todo:
     - '195': petri网工作流引擎设计
     - '195': Rete/Phreak算法的自主实现
   learn:
-    - '30': Ontology + SWRL（Semantic Web Rule Language）
+    - '30': SPIN (SPARQL Inferencing Notation）/SHACL)
     - '30': Common Logic (ISO/IEC 24707)
     - '60': Chroma sample
     - '60': lanceDB sample
@@ -1096,7 +1096,6 @@ todo:
         - read ../../draft/2024/09/20240907143000.md
     - '60': 新版食材排序，包括升序、降序、特定值距离、多种营养成分特定值组合距离。
   xuemen:
-    - '60': 月度事务
     - '195': kernel模型升级
       readme:
         - read ../../draft/2024/11/20241120.01.md
