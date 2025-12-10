@@ -1,0 +1,98 @@
+date: '20251210'
+mode: '1'
+plan: 1a
+time:
+  - begin: '20251210040900'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20251210042400'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20251210052400'
+    amount: 45
+    type: food
+    name: 早餐
+  - begin: '20251210060900'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20251210065400'
+    amount: 50
+    type: free
+    name: 休整
+  - begin: '20251210074500'
+    amount: 0
+    redo: 60
+    type: work
+    name: 静默工作
+    subject: ego
+    title: 同步新日志到webDAV。使用新的共享外链。
+    readme:
+      - read ../../draft/2025/20250810.02.md
+    output: ../../draft/2025/20251210.01.md
+    namelink: http://simp.ly/p/xtgD4F
+  - begin: '20251210084500'
+    amount: 45
+    type: free
+    name: 休整
+  - begin: '20251210093000'
+    amount: 0
+    redo: 90
+    type: work
+    name: 静默工作
+    subject: PSMD
+    title: SOP(Standard Operation Procedure)数据结构
+    readme:
+      - read ../../draft/2025/20250923.03.md
+      - read ../../draft/2025/20251008.01.md
+      - read ../../draft/2025/20251110.01.md
+      - read ../../draft/2025/20251111.01.md
+      - read ../../draft/2025/20251112.01.md
+    output: ../../draft/2025/20251210.02.md
+    namelink: http://simp.ly/p/j1SspP
+  - begin: '20251210110000'
+    amount: 180
+    type: food
+    name: 备餐、午餐午休
+  - begin: '20251210140000'
+    amount: 0
+    redo: 30
+    type: work
+    name: 静默工作
+    subject: learn
+    title: SPIN (SPARQL Inferencing Notation）/SHACL)
+    output: ../../draft/2025/20251210.03.md
+    namelink: http://simp.ly/p/8t3vlk
+  - begin: '20251210143000'
+    amount: 0
+    redo: 30
+    type: work
+    name: 静默工作
+    subject: learn
+    title: Common Logic (ISO/IEC 24707)
+    output: ../../draft/2025/20251210.04.md
+    namelink: http://simp.ly/p/5k9gJy
+  - begin: '20251210150000'
+    amount: 60
+    type: free
+    name: 休整
+  - begin: '20251210160000'
+    amount: 0
+    redo: 60
+    type: work
+    name: 静默工作
+    subject: infra
+    title: 设计静态数据（git库）和实时交互的分工。如何共同支撑PSMD和ego项目。
+    output: ../../draft/2025/20251210.05.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20251210170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20251210190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
+    output: ../../draft/2025/20251210.06.md
