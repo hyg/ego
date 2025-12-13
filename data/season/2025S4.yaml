@@ -571,7 +571,7 @@ time:
     js: 100
     PSMD: 360
     ego: 330
-    xuemen: 225
+    xuemen: 225o
     raw: 90
 todo:
   PSMD:
@@ -1097,9 +1097,6 @@ todo:
         - read ../../draft/2024/09/20240907143000.md
     - '60': 新版食材排序，包括升序、降序、特定值距离、多种营养成分特定值组合距离。
   xuemen:
-    - '195': kernel模型升级
-      readme:
-        - read ../../draft/2024/11/20241120.01.md
     - '90': mail server
       readme:
         - https://stalw.art
