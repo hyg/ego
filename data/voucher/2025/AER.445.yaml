@@ -1,0 +1,17 @@
+date: 2025-12-16
+VoucherID: 4200002891202512160531419508
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: raw.supply
+      asset: rmb
+      amount: 9.52
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 9.52
+comment:
+  - name: 剃须泡沫
+    amount: 250
+    unit: ml
+    asset: 9.52
