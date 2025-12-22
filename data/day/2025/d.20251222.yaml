@@ -1,0 +1,76 @@
+date: '20251222'
+mode: '2'
+plan: 2a
+time:
+  - begin: '20251222015300'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20251222020800'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20251222030800'
+    amount: 45
+    type: food
+    name: 早餐
+  - begin: '20251222035300'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20251222043800'
+    amount: 186
+    type: free
+    name: 休整
+  - begin: '20251222074500'
+    amount: 0
+    redo: 195
+    type: work
+    name: 工作
+    subject: PSMD
+    title: 整理手稿
+    output: ../../draft/2025/20251222.01.md
+    namelink: http://simp.ly/p/3GXNTh
+  - begin: '20251222110000'
+    amount: 180
+    type: food
+    name: 备餐、午餐午休
+  - begin: '20251222140000'
+    amount: 0
+    redo: 90
+    type: work
+    name: 工作
+    subject: PSMD
+    title: SOP(Standard Operation Procedure)数据结构
+    readme:
+      - read ../../draft/2025/20250923.03.md
+      - read ../../draft/2025/20251008.01.md
+      - read ../../draft/2025/20251110.01.md
+      - read ../../draft/2025/20251111.01.md
+      - read ../../draft/2025/20251112.01.md
+    output: ../../draft/2025/20251222.02.md
+    namelink: http://simp.ly/p/lsBYG9
+  - begin: '20251222153000'
+    amount: 30
+    type: free
+    name: 休整
+  - begin: '20251222160000'
+    amount: 0
+    redo: 60
+    type: work
+    name: 工作
+    subject: ego
+    title: 同步新日志到webDAV。使用新的共享外链。
+    readme:
+      - read ../../draft/2025/20250810.02.md
+    output: ../../draft/2025/20251222.03.md
+    namelink: http://simp.ly/p/MpcbHD
+  - begin: '20251222170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20251222190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
+    output: ../../draft/2025/20251222.04.md
