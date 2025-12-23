@@ -1,0 +1,17 @@
+date: 2025-12-23
+VoucherID: 2025122322001831991406015504
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: raw.supply
+      asset: rmb
+      amount: 39.00
+  credit:
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 39.00
+comment:
+  - name: 浴巾
+    amount: 1
+    unit: 张
+    asset: 39.00
