@@ -1,0 +1,78 @@
+date: '20251229'
+mode: '2'
+plan: 2a
+time:
+  - begin: '20251229020900'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20251229022400'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20251229032400'
+    amount: 45
+    type: food
+    name: 早餐
+  - begin: '20251229040900'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20251229045400'
+    amount: 170
+    type: free
+    name: 休整
+  - begin: '20251229074500'
+    amount: 0
+    redo: 195
+    type: work
+    name: 工作
+    subject: PSMD
+    title: 健康消费合作社建模
+    readme:
+      - read ../../draft/2025/20250922.03.md
+      - read ../../draft/2025/20250923.01.md
+    output: ../../draft/2025/20251229.01.md
+    namelink: http://simp.ly/p/3GXNTh
+  - begin: '20251229110000'
+    amount: 180
+    type: food
+    name: 备餐、午餐午休
+  - begin: '20251229140000'
+    amount: 0
+    redo: 90
+    type: work
+    name: 工作
+    subject: ego
+    title: 整理task及其相互关系
+    readme:
+      - read ../../draft/2024/07/20240704093000.md
+      - read ../../draft/2025/20250728.01.md
+      - read ../../draft/2025/20250731.01.md
+    output: ../../draft/2025/20251229.02.md
+    namelink: http://simp.ly/p/lsBYG9
+  - begin: '20251229153000'
+    amount: 30
+    type: free
+    name: 休整
+  - begin: '20251229160000'
+    amount: 0
+    redo: 60
+    type: work
+    name: 工作
+    subject: ego
+    title: 整理js对象检索的代码
+    readme:
+      - read ../../draft/2025/20250605.03.md
+      - read ../../draft/2025/20250714.03.md
+    output: ../../draft/2025/20251229.03.md
+    namelink: http://simp.ly/p/MpcbHD
+  - begin: '20251229170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20251229190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
+    output: ../../draft/2025/20251229.04.md

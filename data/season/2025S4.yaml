@@ -569,7 +569,7 @@ time:
     infra: 30
     learn: 1737
     js: 100
-    PSMD: 360o00000000000
+    PSMD: 360o000000000000
     ego: 330
     xuemen: 225o
     raw: 90
@@ -686,15 +686,15 @@ todo:
       readnme:
         - 考虑upgradeby的实现。
   ego:
+    - '60': 整理js对象检索的代码
+      readme:
+        - read ../../draft/2025/20250605.03.md
+        - read ../../draft/2025/20250714.03.md
     - '90': 整理task及其相互关系
       readme:
         - read ../../draft/2024/07/20240704093000.md
         - read ../../draft/2025/20250728.01.md
         - read ../../draft/2025/20250731.01.md
-    - '60': 整理js对象检索的代码
-      readme:
-        - read ../../draft/2025/20250605.03.md
-        - read ../../draft/2025/20250714.03.md
     - '90': 基于真实数据标志财务报表
       readme:
         - read ../../draft/2025/20250605.01.md
