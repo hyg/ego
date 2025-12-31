@@ -23,7 +23,7 @@ time:
     type: free
     name: 休整
   - begin: '20251213074500'
-    amount: o
+    amount: 0
     rexo: 195
     type: work
     name: 工作
