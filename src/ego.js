@@ -95,12 +95,12 @@ const assetcommand = program
     .description('资产管理功能');
 
 assetcommand
-    .command("entry")
+    .command("entry [year]")
     .description('分录')
-    .action(() => {
-        log("entry");
+    .action((year) => {
+        log("year entry: ",year);
         //season.debug = false;
-        asset.entry();
+        asset.entry(year);
     });
 
 assetcommand

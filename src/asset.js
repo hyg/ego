@@ -10,10 +10,10 @@ function log(...s) {
 
 module.exports = {
     debug: true,
-    accountdetail: function (account) {
+    accountdetail: function (account,year) {
         var AssetType = this.loadAssetType();
         var Account = this.loadAccount();
-        var AERmap = this.loadAER(2025);
+        var AERmap = this.loadAER(year);
 
         var detail = new Array();
         var total = new Object();
@@ -61,10 +61,10 @@ module.exports = {
     yearreport: function (year) {
 
     },
-    entry: function () {
+    entry: function (year) {
         var AssetType = this.loadAssetType();
         var Account = this.loadAccount();
-        var AERmap = this.loadAER(2025);
+        var AERmap = this.loadAER(year);
 
         for (var file in AERmap) {
             var AER = AERmap[file];

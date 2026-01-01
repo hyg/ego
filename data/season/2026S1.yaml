@@ -566,15 +566,22 @@ time:
     learn: 2000
     js: 1000
   sold:
-    infra: 0
-    learn: 0
-    js: 0
     PSMD: 0
-    ego: 0
-    xuemen: 0
-    raw: 0
 todo:
   PSMD:
+    - '60': 整理default模型
+      readme:
+        - read ../../draft/2024/10/20241007.01.md
+        - read ../../draft/2024/10/20241010.02.md
+        - read ../../draft/2024/10/20241011.01.md
+        - read ../../draft/2024/11/20241106.01.md
+        - read ../../draft/2025/20250704.01.md
+    - '90': 子1609:基于公司、合同
+      readme:
+        - read ../../draft/2025/20250125.02.md
+        - read ../../draft/2025/20250416.01.md
+        - read ../../draft/2025/20250427.01.md
+        - read ../../draft/2025/20250505.02.md
     - '195': machines model
       readme:
         - read ../../draft/2024/07/20240723160000.md
@@ -594,19 +601,6 @@ todo:
         - 从FSM、FPM中抽象出统一的mechine
         - 实现joint、split机制
         - 先用javascript的class实现
-    - '90': 子1609:基于公司、合同
-      readme:
-        - read ../../draft/2025/20250125.02.md
-        - read ../../draft/2025/20250416.01.md
-        - read ../../draft/2025/20250427.01.md
-        - read ../../draft/2025/20250505.02.md
-    - '60': 整理default模型
-      readme:
-        - read ../../draft/2024/10/20241007.01.md
-        - read ../../draft/2024/10/20241010.02.md
-        - read ../../draft/2024/10/20241011.01.md
-        - read ../../draft/2024/11/20241106.01.md
-        - read ../../draft/2025/20250704.01.md
     - '60': 根据香港《公司條例》调整1609的部署方案 https://www.elegislation.gov.hk/hk/cap622
       readme:
         - read ../../draft/2025/20250403.01.md

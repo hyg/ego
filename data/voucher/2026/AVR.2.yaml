@@ -1,0 +1,9 @@
+date: 2025-01-01 09:10:30
+title: 微信支付账单
+VoucherID: 1000039901000601017114733346574
+VoucherType: 交易单号
+amount: 200
+summary: 红包
+comment:
+  - name: 商户单号
+    value: 1000039901202601017114733346574

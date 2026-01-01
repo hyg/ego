@@ -1,0 +1,17 @@
+date: 2026-01-01
+VoucherID: 2026010122001831991459981092
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: raw.food
+      asset: rmb
+      amount: 34.00
+  credit:
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 34.00
+comment:
+  - name: 黑咖啡
+    amount: 400
+    unit: g
+    asset: 34.00
