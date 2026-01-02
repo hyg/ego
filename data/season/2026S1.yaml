@@ -567,6 +567,8 @@ time:
     js: 1000
   sold:
     PSMD: 0
+    xuemen: 0
+    ego: 0
 todo:
   PSMD:
     - '60': 整理default模型
