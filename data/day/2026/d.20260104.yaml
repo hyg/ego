@@ -1,0 +1,80 @@
+date: '20260104'
+mode: '2'
+plan: 2b
+time:
+  - begin: '20260104055100'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20260104060600'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20260104070600'
+    amount: 45
+    type: food
+    name: 早餐
+  - begin: '20260104075100'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20260104083600'
+    amount: 53
+    type: free
+    name: 休整
+  - begin: '20260104093000'
+    amount: 0
+    redo: 90
+    type: work
+    name: 工作
+    subject: ego
+    title: 整理task及其相互关系
+    readme:
+      - read ../../draft/2024/07/20240704093000.md
+      - read ../../draft/2025/20250728.01.md
+      - read ../../draft/2025/20250731.01.md
+    output: ../../draft/2026/20260104.01.md
+    namelink: http://simp.ly/p/WZ077p
+  - begin: '20260104110000'
+    amount: 180
+    type: food
+    name: 备餐、午餐午休
+  - begin: '20260104140000'
+    amount: 0
+    redo: 90
+    type: work
+    name: 工作
+    subject: ego
+    title: 基于真实数据标志财务报表
+    readme:
+      - read ../../draft/2025/20250605.01.md
+    output: ../../draft/2026/20260104.02.md
+    namelink: http://simp.ly/p/lsBYG9
+  - begin: '20260104153000'
+    amount: 30
+    type: free
+    name: 休整
+  - begin: '20260104160000'
+    amount: 0
+    redo: 60
+    type: work
+    name: 工作
+    subject: PSMD
+    title: 整理default模型
+    readme:
+      - read ../../draft/2024/10/20241007.01.md
+      - read ../../draft/2024/10/20241010.02.md
+      - read ../../draft/2024/10/20241011.01.md
+      - read ../../draft/2024/11/20241106.01.md
+      - read ../../draft/2025/20250704.01.md
+    output: ../../draft/2026/20260104.03.md
+    namelink: http://simp.ly/p/MpcbHD
+  - begin: '20260104170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20260104190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
+    output: ../../draft/2026/20260104.04.md
