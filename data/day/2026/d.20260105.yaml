@@ -1,0 +1,76 @@
+date: '20260105'
+mode: '2'
+plan: 2a
+time:
+  - begin: '20260105003400'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20260105004900'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20260105014900'
+    amount: 45
+    type: food
+    name: 早餐
+  - begin: '20260105023400'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20260105031900'
+    amount: 265
+    type: free
+    name: 休整
+  - begin: '20260105074500'
+    amount: 0
+    redo: 195
+    type: work
+    name: 工作
+    subject: xuemen
+    title: 重新设计S2状态下的学门基本管理制度
+    output: ../../draft/2026/20260105.01.md
+    namelink: http://simp.ly/p/3GXNTh
+  - begin: '20260105110000'
+    amount: 180
+    type: food
+    name: 备餐、午餐午休
+  - begin: '20260105140000'
+    amount: 0
+    redo: 90
+    type: work
+    name: 工作
+    subject: ego
+    title: 基于真实数据标志财务报表
+    readme:
+      - read ../../draft/2025/20250605.01.md
+    output: ../../draft/2026/20260105.02.md
+    namelink: http://simp.ly/p/lsBYG9
+  - begin: '20260105153000'
+    amount: 30
+    type: free
+    name: 休整
+  - begin: '20260105160000'
+    amount: 0
+    redo: 60
+    type: work
+    name: 工作
+    subject: PSMD
+    title: 整理default模型
+    readme:
+      - read ../../draft/2024/10/20241007.01.md
+      - read ../../draft/2024/10/20241010.02.md
+      - read ../../draft/2024/10/20241011.01.md
+      - read ../../draft/2024/11/20241106.01.md
+      - read ../../draft/2025/20250704.01.md
+    output: ../../draft/2026/20260105.03.md
+    namelink: http://simp.ly/p/MpcbHD
+  - begin: '20260105170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20260105190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
+    output: ../../draft/2026/20260105.04.md
