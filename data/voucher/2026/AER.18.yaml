@@ -1,0 +1,17 @@
+date: 2026-01-08
+VoucherID: 4200003009202601087198299017
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: donation.else
+      asset: rmb
+      amount: 13.60
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 13.60
+comment:
+  - name: 快递费
+    amount: 2
+    unit: 公斤
+    asset: 13.60

@@ -1,0 +1,25 @@
+date: 2026-01-08
+VoucherID: 
+  - 2026010822001431991431739494
+  - 2026010822001431991436972883
+  - 2026010822001431991435074699
+  - 2026010822001431991433439209
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: donation.else
+      asset: rmb
+      amount: 14.00
+  credit:
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 14.00
+comment:
+  - name: 公交车
+    amount: 2
+    unit: 次
+    asset: 2.00
+  - name: 地铁
+    amount: 2
+    unit: 次
+    asset: 12.00

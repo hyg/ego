@@ -1,0 +1,17 @@
+date: 2026-01-08
+VoucherID: 4200003012202601085107178605
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: raw.site.bj1
+      asset: rmb
+      amount: 25.00
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 25.00
+comment:
+  - name: 自来水费
+    amount: 5
+    unit: 立方米
+    asset: 25.00

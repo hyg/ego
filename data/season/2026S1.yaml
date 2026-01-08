@@ -569,6 +569,8 @@ time:
     PSMD: 0
     xuemen: 0
     ego: 0
+    raw: 195
+    infra: 0
 todo:
   PSMD:
     - '90': 子1609:基于公司、合同
@@ -1059,7 +1061,6 @@ todo:
     - '60': 学习'Electron'，创作一个范例。
     - '60': 用代码中的对象或类，产生数据库创建SQL脚本、ER图（mermaid）
   raw:
-    - '195': 逛图书展
     - '90': 整理代码，理顺food.js几个成员函数之间的调用关系
       readme:
         - read ../../draft/2024/09/20240907143000.md
