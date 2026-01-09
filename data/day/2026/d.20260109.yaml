@@ -1,0 +1,94 @@
+date: '20260109'
+mode: '2'
+plan: 2a
+time:
+  - begin: '20260109040500'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20260109042000'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20260109052000'
+    amount: 45
+    type: food
+    name: 早餐
+  - begin: '20260109060500'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20260109065000'
+    amount: 54
+    type: free
+    name: 休整
+  - begin: '20260109074500'
+    amount: 0
+    redo: 195
+    type: work
+    name: 工作
+    subject: PSMD
+    title: machines model
+    readme:
+      - read ../../draft/2024/07/20240723160000.md
+      - read ../../draft/2024/07/20240724093000.md
+      - read ../../draft/2024/07/20240725093000.md
+      - read ../../draft/2024/07/20240726093000.md
+      - read ../../draft/2024/07/20240730093000.md
+      - read ../../draft/2024/07/20240731093000.md
+      - read ../../draft/2024/08/20240801093000.md
+      - read ../../draft/2024/08/20240806140000.md
+      - read ../../draft/2024/08/20240807140000.md
+      - read ../../draft/2024/08/20240808093000.md
+      - read ../../draft/2024/09/20240915160000.md
+      - read ../../draft/2024/09/20240926.01.md
+      - a sample instance of machine,FPM,FSM in manifest code
+      - 实现FPM+FSM
+      - 从FSM、FPM中抽象出统一的mechine
+      - 实现joint、split机制
+      - 先用javascript的class实现
+    output: ../../draft/2026/20260109.01.md
+    namelink: http://simp.ly/p/3GXNTh
+  - begin: '20260109110000'
+    amount: 180
+    type: food
+    name: 备餐、午餐午休
+  - begin: '20260109140000'
+    amount: 0
+    redo: 90
+    type: work
+    name: 工作
+    subject: PSMD
+    title: 子1609:基于公司、合同
+    readme:
+      - read ../../draft/2025/20250125.02.md
+      - read ../../draft/2025/20250416.01.md
+      - read ../../draft/2025/20250427.01.md
+      - read ../../draft/2025/20250505.02.md
+    output: ../../draft/2026/20260109.02.md
+    namelink: http://simp.ly/p/lsBYG9
+  - begin: '20260109153000'
+    amount: 30
+    type: free
+    name: 休整
+  - begin: '20260109160000'
+    amount: 0
+    rdo: 60
+    type: work
+    name: 工作
+    subject: PSMD
+    title: 根据香港《公司條例》调整1609的部署方案 https://www.elegislation.gov.hk/hk/cap622
+    readme:
+      - read ../../draft/2025/20250403.01.md
+      - read ../../draft/2025/20250418.02.md
+    output: ../../draft/2026/20260109.03.md
+    namelink: http://simp.ly/p/MpcbHD
+  - begin: '20260109170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20260109190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
+    output: ../../draft/2026/20260109.04.md
