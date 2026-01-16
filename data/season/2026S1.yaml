@@ -571,6 +571,7 @@ time:
     ego: 0
     raw: 195
     infra: 0
+    learn: 0
 todo:
   PSMD:
     - '90': 子1609:基于公司、合同
@@ -739,9 +740,9 @@ todo:
     - '195': petri网工作流引擎设计
     - '195': Rete/Phreak算法的自主实现
   learn:
-    - '30': Common Logic (ISO/IEC 24707)
-    - '30': SPIN (SPARQL Inferencing Notation）/SHACL)
     - '60': Chroma sample
+    - '30': SPIN (SPARQL Inferencing Notation）/SHACL)
+    - '30': Common Logic (ISO/IEC 24707)
     - '60': lanceDB sample
     - '60': XSTATE https://xstate.js.org/
       readme:
