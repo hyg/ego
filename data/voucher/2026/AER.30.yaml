@@ -1,0 +1,17 @@
+date: 2026-01-18
+VoucherID: 2026011822001131991426968759
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: donation.parent
+      asset: rmb
+      amount: 108.89
+  credit:
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 108.89
+comment:
+  - name: 海正硫酸氨基葡萄糖
+    amount: 10
+    unit: 盒
+    asset: 108.89
