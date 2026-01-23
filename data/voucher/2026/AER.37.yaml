@@ -1,0 +1,17 @@
+date: 2026-01-23
+VoucherID: 2026012322001431991452055111
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: xuemen
+      asset: rmb
+      amount: 179.00
+  credit:
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 179.00
+comment:
+  - name: 域名年费
+    amount: 179
+    unit: rmb
+    asset: 179.00
