@@ -574,31 +574,6 @@ time:
     learn: 0
 todo:
   PSMD:
-    - '90': 子1609:基于公司、合同
-      readme:
-        - read ../../draft/2025/20250125.02.md
-        - read ../../draft/2025/20250416.01.md
-        - read ../../draft/2025/20250427.01.md
-        - read ../../draft/2025/20250505.02.md
-    - '195': machines model
-      readme:
-        - read ../../draft/2024/07/20240723160000.md
-        - read ../../draft/2024/07/20240724093000.md
-        - read ../../draft/2024/07/20240725093000.md
-        - read ../../draft/2024/07/20240726093000.md
-        - read ../../draft/2024/07/20240730093000.md
-        - read ../../draft/2024/07/20240731093000.md
-        - read ../../draft/2024/08/20240801093000.md
-        - read ../../draft/2024/08/20240806140000.md
-        - read ../../draft/2024/08/20240807140000.md
-        - read ../../draft/2024/08/20240808093000.md
-        - read ../../draft/2024/09/20240915160000.md
-        - read ../../draft/2024/09/20240926.01.md
-        - a sample instance of machine,FPM,FSM in manifest code
-        - 实现FPM+FSM
-        - 从FSM、FPM中抽象出统一的mechine
-        - 实现joint、split机制
-        - 先用javascript的class实现
     - '90': 整理新版本term的manifest code
       readme:
         - 为了显示而设计的term model，并不适合与代码绑定。
@@ -736,11 +711,10 @@ todo:
         - day metada
         - draft文件名
   infra:
-    - '90': 设计静态数据（git库）和实时交互的分工。如何共同支撑PSMD和ego项目。
     - '195': petri网工作流引擎设计
+    - '90': 设计静态数据（git库）和实时交互的分工。如何共同支撑PSMD和ego项目。
     - '195': Rete/Phreak算法的自主实现
   learn:
-    - '60': Chroma sample
     - '30': SPIN (SPARQL Inferencing Notation）/SHACL)
     - '30': Common Logic (ISO/IEC 24707)
     - '60': lanceDB sample
