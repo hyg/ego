@@ -571,7 +571,7 @@ time:
     ego: 0
     raw: 195
     infra: 195
-    learn: 0
+    learn: 195
     js: 60
 todo:
   PSMD:
