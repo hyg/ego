@@ -702,9 +702,17 @@ todo:
     - '60': Zapier
       readme:
         - read ../../draft/2025/20251010.02.md
+    - '60': Polygon/Arbitrum
     - '60': OutSystems, Mendix,
       readme:
         - read ../../draft/2025/20251010.01.md
+    - '90': 去中心化的向量数据库，用于业务发现。
+      readme:
+        - Glacier DeVector（Glacier Network）
+        - Chromia 链上向量数据库
+        - Vektaris（基于ICP区块链）
+        - 基于IPFS的混合方案 - Rivalz Network：使用OrbitDB（基于IPFS的分布式数据库）专门管理向量数据，AI Agent通过嵌入向量处理存储数据 - ETHGlobal项目：向量索引存储在Filecoin，通过FVM（Filecoin虚拟机）部署NFT智能合约，映射NFT ID到数据CID - Pinata：提供内置向量化系统，文件上传到私有IPFS网络时自动生成向量嵌入
+        - pgvector + 区块链的自定义方案
     - '60': The Open Quantum Safe (OQS) project
       readme:
         - https://openquantumsafe.org/
@@ -1005,6 +1013,7 @@ todo:
     - '60': 新版食材排序，包括升序、降序、特定值距离、多种营养成分特定值组合距离。
       readme:
         - read ../../draft/2026/20260204.03.md
+    - '30': 月初事务
     - '90': 整理代码，理顺food.js几个成员函数之间的调用关系
       readme:
         - read ../../draft/2024/09/20240907143000.md
