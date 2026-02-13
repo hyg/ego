@@ -566,7 +566,7 @@ time:
     learn: 2000
     js: 1000
   sold:
-    PSMD: 285
+    PSMD: 480
     xuemen: 0
     ego: 0
     raw: 255
@@ -580,6 +580,8 @@ todo:
         - 条款文本嵌入到machine模型。
         - 以修订和任免定义的层级嵌入到machine模型。
     - '195': term + COM matedata -> deploy metadata -> deploy view
+      readme:
+        - read ../../draft/2026/20260213.01.md
     - '195': 会话skill套装设计
       readme:
         - read ../../draft/2026/20260210.a.md
