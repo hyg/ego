@@ -1,0 +1,75 @@
+date: '20260214'
+mode: '2'
+plan: 2a
+time:
+  - begin: '20260214041400'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20260214042900'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20260214052900'
+    amount: 45
+    type: food
+    name: 早餐
+  - begin: '20260214061400'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20260214065900'
+    amount: 45
+    type: free
+    name: 休整
+  - begin: '20260214074500'
+    amount: 0
+    redo: 195
+    type: work
+    name: 工作
+    subject: PSMD
+    title: term + COM matedata -> deploy metadata -> deploy view
+    readme:
+      - read ../../draft/2026/20260213.01.md
+    output: ../../draft/2026/20260214.01.md
+    namelink: http://simp.ly/p/3GXNTh
+  - begin: '20260214110000'
+    amount: 180
+    type: food
+    name: 备餐、午餐午休
+  - begin: '20260214140000'
+    amount: 0
+    redo: 90
+    type: work
+    name: 工作
+    subject: PSMD
+    title: 整理新版本term的manifest text
+    readme:
+      - 条款文本嵌入到machine模型。
+      - 以修订和任免定义的层级嵌入到machine模型。
+    output: ../../draft/2026/20260214.02.md
+    namelink: http://simp.ly/p/lsBYG9
+  - begin: '20260214153000'
+    amount: 30
+    type: free
+    name: 休整
+  - begin: '20260214160000'
+    amount: 0
+    redo: 60
+    type: work
+    name: 工作
+    subject: raw
+    title: 新版食材排序，包括升序、降序、特定值距离、多种营养成分特定值组合距离。
+    readme:
+      - read ../../draft/2026/20260204.03.md
+    output: ../../draft/2026/20260214.03.md
+    namelink: http://simp.ly/p/MpcbHD
+  - begin: '20260214170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20260214190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
+    output: ../../draft/2026/20260214.04.md
