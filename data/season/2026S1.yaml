@@ -575,10 +575,6 @@ time:
     js: 60
 todo:
   PSMD:
-    - '90': 整理新版本term的manifest text
-      readme:
-        - 条款文本嵌入到machine模型。
-        - 以修订和任免定义的层级嵌入到machine模型。
     - '195': term + COM matedata -> deploy metadata -> deploy view
       readme:
         - read ../../draft/2026/20260213.01.md
@@ -625,17 +621,12 @@ todo:
       readnme:
         - 考虑upgradeby的实现。
   ego:
-    - '90': 整理task及其相互关系
-      readme:
-        - read ../../draft/2024/07/20240704093000.md
-        - read ../../draft/2025/20250728.01.md
-        - read ../../draft/2025/20250731.01.md
-    - '90': 重新设计财务的基础元数据格式
     - '60': entry的按月归并
       readme:
         - read ../../draft/2025/20250525.01.md
         - https://sql.js.org
         - read ../../draft/2025/20250526.03.md
+    - '90': 重新设计财务的基础元数据格式
     - '195': 新版ego, instance or model, any manifest
       readme:
         - read ../../draft/2024/09/20240925.01.md
@@ -1018,9 +1009,6 @@ todo:
     - '60': 学习'Electron'，创作一个范例。
     - '60': 用代码中的对象或类，产生数据库创建SQL脚本、ER图（mermaid）
   raw:
-    - '60': 新版食材排序，包括升序、降序、特定值距离、多种营养成分特定值组合距离。
-      readme:
-        - read ../../draft/2026/20260204.03.md
     - '30': 月初事务
     - '90': 整理代码，理顺food.js几个成员函数之间的调用关系
       readme:
