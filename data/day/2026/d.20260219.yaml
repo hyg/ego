@@ -1,0 +1,74 @@
+date: '20260219'
+mode: '2'
+plan: 2b
+time:
+  - begin: '20260219061900'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20260219063400'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20260219073400'
+    amount: 45
+    type: food
+    name: 早餐
+  - begin: '20260219081900'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20260219090400'
+    amount: 25
+    type: free
+    name: 休整
+  - begin: '20260219093000'
+    amount: 0
+    redo: 90
+    type: work
+    name: 工作
+    subject: infra
+    title: 结合skill.md的人机混合协作网络
+    readme:
+      - read ../../draft/2026/20260209.a.md
+    output: ../../draft/2026/20260219.01.md
+    namelink: http://simp.ly/p/WZ077p
+  - begin: '20260219110000'
+    amount: 180
+    type: food
+    name: 备餐、午餐午休
+  - begin: '20260219140000'
+    amount: 0
+    redo: 90
+    type: work
+    name: 工作
+    subject: infra
+    title: 设计静态数据（git库）和实时交互的分工。如何共同支撑PSMD和ego项目。
+    output: ../../draft/2026/20260219.02.md
+    namelink: http://simp.ly/p/lsBYG9
+  - begin: '20260219153000'
+    amount: 30
+    type: free
+    name: 休整
+  - begin: '20260219160000'
+    amount: 0
+    redo: 60
+    type: work
+    name: 工作
+    subject: ego
+    title: entry的按月归并
+    readme:
+      - read ../../draft/2025/20250525.01.md
+      - https://sql.js.org
+      - read ../../draft/2025/20250526.03.md
+    output: ../../draft/2026/20260219.03.md
+    namelink: http://simp.ly/p/MpcbHD
+  - begin: '20260219170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20260219190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
+    output: ../../draft/2026/20260219.04.md

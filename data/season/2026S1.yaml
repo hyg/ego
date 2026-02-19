@@ -682,10 +682,10 @@ todo:
         - day metada
         - draft文件名
   infra:
+    - '90': 设计静态数据（git库）和实时交互的分工。如何共同支撑PSMD和ego项目。
     - '90': 结合skill.md的人机混合协作网络
       readme:
         - read ../../draft/2026/20260209.a.md
-    - '90': 设计静态数据（git库）和实时交互的分工。如何共同支撑PSMD和ego项目。
   learn:
     - '30': SPIN (SPARQL Inferencing Notation）/SHACL)
     - '30': Common Logic (ISO/IEC 24707)
