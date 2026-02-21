@@ -1,0 +1,63 @@
+date: '20260221'
+mode: '2'
+plan: 2c
+time:
+  - begin: '20260221074600'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20260221080100'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20260221090100'
+    amount: 45
+    type: food
+    name: 早餐
+  - begin: '20260221094600'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20260221103100'
+    amount: 28
+    type: free
+    name: 休整
+  - begin: '20260221110000'
+    amount: 180
+    type: food
+    name: 备餐、午餐午休
+  - begin: '20260221140000'
+    amount: 0
+    redo: 90
+    type: work
+    name: 工作
+    subject: js
+    title: openpgp v6.1.1.
+    readme:
+      - read ../../draft/2025/20250601.a.md
+    output: ../../draft/2026/20260221.01.md
+    namelink: http://simp.ly/p/lsBYG9
+  - begin: '20260221153000'
+    amount: 30
+    type: free
+    name: 休整
+  - begin: '20260221160000'
+    amount: 0
+    redo: 60
+    type: work
+    name: 工作
+    subject: js
+    title: TensorFlow.js
+    readme:
+      - https://github.com/tensorflow/tfjs
+    output: ../../draft/2026/20260221.02.md
+    namelink: http://simp.ly/p/MpcbHD
+  - begin: '20260221170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20260221190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
+    output: ../../draft/2026/20260221.03.md

@@ -1,0 +1,68 @@
+date: '20260220'
+mode: '2'
+plan: 2b
+time:
+  - begin: '20260220062400'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20260220063900'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20260220073900'
+    amount: 45
+    type: food
+    name: 早餐
+  - begin: '20260220082400'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20260220090900'
+    amount: 20
+    type: free
+    name: 休整
+  - begin: '20260220093000'
+    amount: 90
+    type: work
+    name: 工作
+    subject: ego
+    title: 重新设计财务的基础元数据格式
+    output: ../../draft/2026/20260220.01.md
+    namelink: http://simp.ly/p/WZ077p
+  - begin: '20260220110000'
+    amount: 180
+    type: food
+    name: 备餐、午餐午休
+  - begin: '20260220140000'
+    amount: 90
+    type: work
+    name: 工作
+    subject: js
+    title: node.js
+    readme:
+      - https://github.com/yunnysunny/nodebook
+      - https://node.whyun.com/
+    output: ../../draft/2026/20260220.02.md
+    namelink: http://simp.ly/p/lsBYG9
+  - begin: '20260220153000'
+    amount: 30
+    type: free
+    name: 休整
+  - begin: '20260220160000'
+    amount: 60
+    type: work
+    name: 工作
+    subject: learn
+    title: lanceDB sample
+    output: ../../draft/2026/20260220.03.md
+    namelink: http://simp.ly/p/MpcbHD
+  - begin: '20260220170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20260220190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
+    output: ../../draft/2026/20260220.04.md

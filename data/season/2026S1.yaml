@@ -568,11 +568,11 @@ time:
   sold:
     PSMD: 480
     xuemen: 0
-    ego: 0
+    ego: 90
     raw: 255
     infra: 225
-    learn: 195
-    js: 60
+    learn: 255
+    js: 150
 todo:
   PSMD:
     - '195': term + COM matedata -> deploy metadata -> deploy view
@@ -621,12 +621,6 @@ todo:
       readnme:
         - 考虑upgradeby的实现。
   ego:
-    - '60': entry的按月归并
-      readme:
-        - read ../../draft/2025/20250525.01.md
-        - https://sql.js.org
-        - read ../../draft/2025/20250526.03.md
-    - '90': 重新设计财务的基础元数据格式
     - '195': 新版ego, instance or model, any manifest
       readme:
         - read ../../draft/2024/09/20240925.01.md
@@ -681,15 +675,10 @@ todo:
         - season metadata
         - day metada
         - draft文件名
-  infra:
-    - '90': 设计静态数据（git库）和实时交互的分工。如何共同支撑PSMD和ego项目。
-    - '90': 结合skill.md的人机混合协作网络
-      readme:
-        - read ../../draft/2026/20260209.a.md
+  infra: []
   learn:
     - '30': SPIN (SPARQL Inferencing Notation）/SHACL)
     - '30': Common Logic (ISO/IEC 24707)
-    - '60': lanceDB sample
     - '60': Farcaster
     - '60': XSTATE https://xstate.js.org/
       readme:
@@ -918,10 +907,9 @@ todo:
       readme:
         - https://zh.javascript.info/promise-api
   js:
-    - '90': node.js
+    - '60': TensorFlow.js
       readme:
-        - https://github.com/yunnysunny/nodebook
-        - https://node.whyun.com/
+        - https://github.com/tensorflow/tfjs
     - '90': openpgp v6.1.1.
       readme:
         - read ../../draft/2025/20250601.a.md
@@ -934,9 +922,6 @@ todo:
         - https://www.npmjs.com/package/jsonpath
         - https://www.npmjs.com/package/@pulumi/query
         - read ../../draft/2025/20250528.01.md
-    - '60': TensorFlow.js
-      readme:
-        - https://github.com/tensorflow/tfjs
     - '60': learn factory, constructor, prototype
       readme:
         - https://juejin.cn/post/6844903653774458888
