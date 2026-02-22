@@ -569,9 +569,9 @@ time:
     PSMD: 480
     xuemen: 0
     ego: 90
-    raw: 255
+    raw: 285
     infra: 225
-    learn: 255
+    learn: 315
     js: 150
 todo:
   PSMD:
@@ -677,6 +677,9 @@ todo:
         - draft文件名
   infra: []
   learn:
+    - '60': 抽象语法树
+      readme:
+        - read ../../draft/2026/20260222.03.md
     - '30': SPIN (SPARQL Inferencing Notation）/SHACL)
     - '30': Common Logic (ISO/IEC 24707)
     - '60': Farcaster
@@ -994,7 +997,6 @@ todo:
     - '60': 学习'Electron'，创作一个范例。
     - '60': 用代码中的对象或类，产生数据库创建SQL脚本、ER图（mermaid）
   raw:
-    - '30': 月初事务
     - '90': 整理代码，理顺food.js几个成员函数之间的调用关系
       readme:
         - read ../../draft/2024/09/20240907143000.md
