@@ -1,0 +1,30 @@
+date: 2026-02-27
+VoucherID: 4200002983202602272871933857
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: raw.food
+      asset: rmb
+      amount: 66.99
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 66.99
+comment:
+  - name: 苏州青
+    amount: 2500
+    unit: g
+    asset: 15.28
+  - name: 原味腐乳
+    amount: 200
+    unit: g
+    asset: 10.45
+  - name: 脆肉鲩鱼头
+    amount: 500
+    unit: g
+    asset: 22.95
+  - name: 脆肉鲩鱼尾
+    amount: 500
+    unit: g
+    asset: 18.31
+

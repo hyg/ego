@@ -1,0 +1,66 @@
+date: '20260227'
+mode: '1'
+plan: 1d
+time:
+  - begin: '20260227085200'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20260227090700'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20260227100700'
+    amount: 45
+    type: food
+    name: 午餐
+  - begin: '20260227105200'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20260227113700'
+    amount: 142
+    type: free
+    name: 休整
+  - begin: '20260227140000'
+    amount: 0
+    redo: 30
+    type: work
+    name: 静默工作
+    subject: learn
+    title: Common Logic (ISO/IEC 24707)
+    output: ../../draft/2026/20260227.01.md
+    namelink: http://simp.ly/p/8t3vlk
+  - begin: '20260227143000'
+    amount: 0
+    redo: 30
+    type: work
+    name: 静默工作
+    subject: learn
+    title: SPIN (SPARQL Inferencing Notation）/SHACL)
+    output: ../../draft/2026/20260227.02.md
+    namelink: http://simp.ly/p/5k9gJy
+  - begin: '20260227150000'
+    amount: 60
+    type: free
+    name: 休整
+  - begin: '20260227160000'
+    amount: 0
+    redo: 60
+    type: work
+    name: 静默工作
+    subject: learn
+    title: 抽象语法树
+    readme:
+      - read ../../draft/2026/20260222.03.md
+    output: ../../draft/2026/20260227.03.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20260227170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20260227190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
+    output: ../../draft/2026/20260227.04.md

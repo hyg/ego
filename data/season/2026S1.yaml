@@ -677,11 +677,6 @@ todo:
         - draft文件名
   infra: []
   learn:
-    - '60': 抽象语法树
-      readme:
-        - read ../../draft/2026/20260222.03.md
-    - '30': Common Logic (ISO/IEC 24707)
-    - '30': SPIN (SPARQL Inferencing Notation）/SHACL)
     - '60': Farcaster
     - '60': XSTATE https://xstate.js.org/
       readme:
