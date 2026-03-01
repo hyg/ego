@@ -323,7 +323,8 @@ module.exports = {
         var date = util.str2date(datestr);
 
         var dayplanstr = "# " + date.Format("yyyy.MM.dd.") + "\n日计划\n\n"
-            + "根据[ego模型时间接口](https://gitee.com/hyg/blog/blob/master/timeflow.md)，今天绑定模版" + dayobj.mode + "(" + dayobj.plan + ")。\n\n"
+            //+ "根据[ego模型时间接口](https://gitee.com/hyg/blog/blob/master/timeflow.md)，本月安排常规工作，今天绑定模版" + dayobj.mode + "(" + dayobj.plan + ")。\n\n"
+            + "根据[ego模型时间接口](https://gitee.com/hyg/blog/blob/master/timeflow.md)，本月安排休整和总结，今天绑定模版" + dayobj.mode + "(" + dayobj.plan + ")。\n\n"
             + this.maketable(dayobj) + "\n---\n\n" + this.makeindex(dayobj, "plan");
 
         var dayplanfilename = path.blogrepopath + "release/time/d." + datestr + ".md";
@@ -410,7 +411,8 @@ module.exports = {
         var indexstr = this.makeindex(dayobj, "log");
 
         var daylogstr = "# " + date.Format("yyyy.MM.dd.") + "\n日小结\n\n"
-            + "<a id=\"top\"></a>\n" + "根据[ego模型时间接口](https://gitee.com/hyg/blog/blob/master/timeflow.md)，今天绑定模版" + dayobj.mode + "(" + dayobj.plan + ")。\n\n"
+            //+ "<a id=\"top\"></a>\n" + "根据[ego模型时间接口](https://gitee.com/hyg/blog/blob/master/timeflow.md)，本月安排常规工作，今天绑定模版" + dayobj.mode + "(" + dayobj.plan + ")。\n\n"
+            + "<a id=\"top\"></a>\n" + "根据[ego模型时间接口](https://gitee.com/hyg/blog/blob/master/timeflow.md)，本月安排休整和总结，今天绑定模版" + dayobj.mode + "(" + dayobj.plan + ")。\n\n"
             + "<a id=\"index\"></a>\n" + indexstr
             + season.makestattable(seasonobj)
             + wl.makebrieflist(waitinglist)
@@ -467,8 +469,9 @@ module.exports = {
         var date = util.str2date(datestr);
         var seasonobj = season.loadseasonobj();
         //var waitinglist = wl.makewaitinglist(seasonobj);
-
-        var dayinfostr = "# " + date.Format("yyyy.MM.dd.") + "\n\n根据[ego模型时间接口](https://gitee.com/hyg/blog/blob/master/timeflow.md)，每天早起根据身心状况绑定模版。" + "\n\n---\n";
+        
+        //var dayinfostr = "# " + date.Format("yyyy.MM.dd.") + "\n\n根据[ego模型时间接口](https://gitee.com/hyg/blog/blob/master/timeflow.md)，安排常规工作，每天早起根据身心状况绑定模版。" + "\n\n---\n";
+        var dayinfostr = "# " + date.Format("yyyy.MM.dd.") + "\n\n根据[ego模型时间接口](https://gitee.com/hyg/blog/blob/master/timeflow.md)，三月份安排休整和总结，每天早起根据身心状况绑定模版。" + "\n\n---\n";
         for (var plan in seasonobj.dayplan) {
             var waitinglist = wl.makewaitinglist(seasonobj);
             //log("plan:",plan);

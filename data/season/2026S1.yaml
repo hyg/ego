@@ -566,9 +566,9 @@ time:
     learn: 2000
     js: 1000
   sold:
-    PSMD: 480
+    PSMD: 510
     xuemen: 0
-    ego: 90
+    ego: 120
     raw: 285
     infra: 225
     learn: 315
@@ -582,45 +582,15 @@ todo:
       readme:
         - read ../../draft/2026/20260210.a.md
     - '90': 以1406为例检查知识图谱和blawx的语法
-    - '30': 整理闫岸家政能力讨论
-      readme:
-        - read ../../draft/2024/09/20240924.01.md
-        - read ../../draft/2024/09/20240925.03.md
-        - read ../../draft/2024/10/20241011.03.md
-        - read ../../draft/2024/10/20241013.03.md
-        - read ../../draft/2024/10/20241014.02.md
-        - read ../../draft/2024/10/20241015.03.md
-        - read ../../draft/2024/10/20241016.04.md
-        - read ../../draft/2024/10/20241017.02.md
-        - read ../../draft/2024/10/20241019.01.md
-        - read ../../draft/2024/10/20241020.03.md
-        - read ../../draft/2024/10/20241021.01.md
-        - read ../../draft/2024/10/20241022.03.md
-        - read ../../draft/2024/10/20241023.01.md
-        - read ../../draft/2024/10/20241024.02.md
-        - read ../../draft/2024/10/20241025.03.md
-        - read ../../draft/2024/10/20241026.03.md
-        - read ../../draft/2024/10/20241027.03.md
-        - read ../../draft/2024/10/20241028.03.md
-        - read ../../draft/2024/10/20241029.03.md
-        - read ../../draft/2024/10/20241030.03.md
-        - read ../../draft/2024/10/20241031.02.md
-        - read ../../draft/2024/11/20241101.03.md
-        - read ../../draft/2024/11/20241104.01.md
-        - read ../../draft/2024/11/20241105.03.md
-        - read ../../draft/2024/11/20241106.03.md
-        - read ../../draft/2024/11/20241107.03.md
-        - read ../../draft/2024/11/20241108.01.md
-        - read ../../draft/2024/11/20241110.01.md
-        - read ../../draft/2024/11/20241111.03.md
-        - read ../../draft/2024/11/20241112.01.md
-        - read ../../draft/2024/11/20241114.04.md
-        - read ../../draft/2024/11/20241115.01.md
-        - read ../../draft/2024/11/20241117.05.md
     - '90': term metadata的序号，分为显示序号和唯一id两种。
       readnme:
         - 考虑upgradeby的实现。
   ego:
+    - '30': 用js代码完成日小结后的git操作。
+      readme:
+        - 参考：D:\huangyg\git\draft\2024\04\20240430140000.md
+        - 在各task metadata中给出git库的路径，每天根据实际任务去操作。
+        - read ../../draft/2026/20260301.02.md
     - '195': 新版ego, instance or model, any manifest
       readme:
         - read ../../draft/2024/09/20240925.01.md
@@ -665,10 +635,6 @@ todo:
         - read 2024.07.21 07:45 draft
       bind:
         - '90': schema level 2 schema for law v1
-    - '30': 用js代码完成日小结后的git操作。
-      readme:
-        - 参考：D:\huangyg\git\draft\2024\04\20240430140000.md
-        - 在各task metadata中给出git库的路径，每天根据实际任务去操作。
     - '60': 重新设计ego.js的命令行参数，合并函数，整理代码。
     - '30': 时间改为ISO8601格式
       readme:
