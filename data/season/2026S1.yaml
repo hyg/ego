@@ -569,7 +569,7 @@ time:
     PSMD: 510
     xuemen: 0
     ego: 120
-    raw: 285
+    raw: 315
     infra: 225
     learn: 315
     js: 150
@@ -644,6 +644,16 @@ todo:
   infra: []
   learn:
     - '60': Farcaster
+    - '90': HPKE（Hybrid Public Key Encryption，RFC 9180）
+      readme:
+        - npm install @hpke/hpke-js
+        - https://jsr.io/@dajiaji/hpke
+        - panva/hpke @github
+        - npm install @hpke/hybridkem-x25519-kyber768
+        - https://www.rfc-editor.org/rfc/rfc9180.txt
+        - https://asecuritysite.com/blog/2023-06-06_For-Security--Go-Hybrid--Hybrid-Public-Key-Encryption--HPKE--and-RFC-9180-1911da1ff831.html
+        - https://blog.cloudflare.com/hybrid-public-key-encryption/
+        - https://cryspen.com/post/hpke_spec/
     - '60': XSTATE https://xstate.js.org/
       readme:
         - read ../../draft/2025/20251026.01.md
@@ -871,12 +881,12 @@ todo:
       readme:
         - https://zh.javascript.info/promise-api
   js:
-    - '60': TensorFlow.js
-      readme:
-        - https://github.com/tensorflow/tfjs
     - '90': openpgp v6.1.1.
       readme:
         - read ../../draft/2025/20250601.a.md
+    - '60': TensorFlow.js
+      readme:
+        - https://github.com/tensorflow/tfjs
     - '90': query yaml file or js obj
       readme:
         - https://www.npmjs.com/package/json-query
@@ -961,7 +971,9 @@ todo:
     - '90': 整理代码，理顺food.js几个成员函数之间的调用关系
       readme:
         - read ../../draft/2024/09/20240907143000.md
-  xuemen: []
+        - read ../../draft/2026/20260302.01.md
+  xuemen:
+    - '30': 月初事务
 comment:
   '20240520': |
     - 需要一套合理的分类谱系
