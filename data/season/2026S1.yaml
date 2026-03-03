@@ -567,7 +567,7 @@ time:
     js: 1000
   sold:
     PSMD: 510
-    xuemen: 0
+    xuemen: 30
     ego: 120
     raw: 315
     infra: 225
@@ -972,8 +972,7 @@ todo:
       readme:
         - read ../../draft/2024/09/20240907143000.md
         - read ../../draft/2026/20260302.01.md
-  xuemen:
-    - '30': 月初事务
+  xuemen: []
 comment:
   '20240520': |
     - 需要一套合理的分类谱系

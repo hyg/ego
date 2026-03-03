@@ -1,0 +1,82 @@
+date: '20260303'
+mode: '1'
+plan: 1b
+time:
+  - begin: '20260303062000'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20260303063500'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20260303073500'
+    amount: 45
+    type: food
+    name: 早餐
+  - begin: '20260303082000'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20260303090500'
+    amount: 24
+    type: free
+    name: 休整
+  - begin: '20260303093000'
+    amount: 0
+    redo: 90
+    type: work
+    name: 静默工作
+    subject: js
+    title: openpgp v6.1.1.
+    readme:
+      - read ../../draft/2025/20250601.a.md
+    output: ../../draft/2026/20260303.01.md
+    namelink: http://simp.ly/p/j1SspP
+  - begin: '20260303110000'
+    amount: 180
+    type: food
+    name: 备餐、午餐午休
+  - begin: '20260303140000'
+    amount: 0
+    redo: 30
+    type: work
+    name: 静默工作
+    subject: ego
+    title: 用js代码完成日小结后的git操作。
+    readme:
+      - 参考：D:\huangyg\git\draft\2024\04\20240430140000.md
+      - 在各task metadata中给出git库的路径，每天根据实际任务去操作。
+      - read ../../draft/2026/20260301.02.md
+    output: ../../draft/2026/20260303.02.md
+    namelink: http://simp.ly/p/8t3vlk
+  - begin: '20260303143000'
+    amount: 30
+    type: work
+    name: 静默工作
+    subject: xuemen
+    title: 月初事务
+    output: ../../draft/2026/20260303.03.md
+    namelink: http://simp.ly/p/5k9gJy
+  - begin: '20260303150000'
+    amount: 60
+    type: free
+    name: 休整
+  - begin: '20260303160000'
+    amount: 0
+    redo: 60
+    type: work
+    name: 静默工作
+    subject: learn
+    title: Farcaster
+    output: ../../draft/2026/20260303.04.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20260303170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20260303190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
+    output: ../../draft/2026/20260303.05.md
