@@ -1,0 +1,73 @@
+date: '20260304'
+mode: '2'
+plan: 2b
+time:
+  - begin: '20260304061200'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20260304062700'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20260304072700'
+    amount: 45
+    type: food
+    name: 早餐
+  - begin: '20260304081200'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20260304085700'
+    amount: 32
+    type: free
+    name: 休整
+  - begin: '20260304093000'
+    amount: 0
+    redo: 90
+    type: work
+    name: 工作
+    subject: js
+    title: openpgp v6.1.1.
+    readme:
+      - read ../../draft/2025/20250601.a.md
+    output: ../../draft/2026/20260304.01.md
+    namelink: http://simp.ly/p/WZ077p
+  - begin: '20260304110000'
+    amount: 180
+    type: food
+    name: 备餐、午餐午休
+  - begin: '20260304140000'
+    amount: 0
+    redo: 90
+    type: work
+    name: 工作
+    subject: raw
+    title: 整理代码，理顺food.js几个成员函数之间的调用关系
+    readme:
+      - read ../../draft/2024/09/20240907143000.md
+      - read ../../draft/2026/20260302.01.md
+    output: ../../draft/2026/20260304.02.md
+    namelink: http://simp.ly/p/lsBYG9
+  - begin: '20260304153000'
+    amount: 30
+    type: free
+    name: 休整
+  - begin: '20260304160000'
+    amount: 0
+    redo: 60
+    type: work
+    name: 工作
+    subject: learn
+    title: Farcaster
+    output: ../../draft/2026/20260304.03.md
+    namelink: http://simp.ly/p/MpcbHD
+  - begin: '20260304170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20260304190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
+    output: ../../draft/2026/20260304.04.md
