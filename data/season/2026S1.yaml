@@ -586,6 +586,11 @@ todo:
       readnme:
         - 考虑upgradeby的实现。
   ego:
+    - '30': 时间改为ISO8601格式
+      readme:
+        - season metadata
+        - day metada
+        - draft文件名
     - '30': 用js代码完成日小结后的git操作。
       readme:
         - 参考：D:\huangyg\git\draft\2024\04\20240430140000.md
@@ -636,11 +641,6 @@ todo:
       bind:
         - '90': schema level 2 schema for law v1
     - '60': 重新设计ego.js的命令行参数，合并函数，整理代码。
-    - '30': 时间改为ISO8601格式
-      readme:
-        - season metadata
-        - day metada
-        - draft文件名
   infra: []
   learn:
     - '60': Farcaster
