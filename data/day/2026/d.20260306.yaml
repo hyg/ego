@@ -1,0 +1,72 @@
+date: '20260306'
+mode: '1'
+plan: 1d
+time:
+  - begin: '20260306081900'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20260306083400'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20260306093400'
+    amount: 45
+    type: food
+    name: 午餐
+  - begin: '20260306101900'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20260306110400'
+    amount: 175
+    type: free
+    name: 休整
+  - begin: '20260306140000'
+    amount: 0
+    redo: 30
+    type: work
+    name: 静默工作
+    subject: ego
+    title: 时间改为ISO8601格式
+    readme:
+      - season metadata
+      - day metada
+      - draft文件名
+    output: ../../draft/2026/20260306.01.md
+    namelink: http://simp.ly/p/8t3vlk
+  - begin: '20260306143000'
+    amount: 0
+    redo: 30
+    type: work
+    name: 静默工作
+    subject: ego
+    title: 用js代码完成日小结后的git操作。
+    readme:
+      - 参考：D:\huangyg\git\draft\2024\04\20240430140000.md
+      - 在各task metadata中给出git库的路径，每天根据实际任务去操作。
+      - read ../../draft/2026/20260301.02.md
+    output: ../../draft/2026/20260306.02.md
+    namelink: http://simp.ly/p/5k9gJy
+  - begin: '20260306150000'
+    amount: 60
+    type: free
+    name: 休整
+  - begin: '20260306160000'
+    amount: 0
+    redo: 60
+    type: work
+    name: 静默工作
+    subject: learn
+    title: Farcaster
+    output: ../../draft/2026/20260306.03.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20260306170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20260306190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
+    output: ../../draft/2026/20260306.04.md

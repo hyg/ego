@@ -586,16 +586,16 @@ todo:
       readnme:
         - 考虑upgradeby的实现。
   ego:
-    - '30': 时间改为ISO8601格式
-      readme:
-        - season metadata
-        - day metada
-        - draft文件名
     - '30': 用js代码完成日小结后的git操作。
       readme:
         - 参考：D:\huangyg\git\draft\2024\04\20240430140000.md
         - 在各task metadata中给出git库的路径，每天根据实际任务去操作。
         - read ../../draft/2026/20260301.02.md
+    - '30': 时间改为ISO8601格式
+      readme:
+        - season metadata
+        - day metada
+        - draft文件名
     - '195': 新版ego, instance or model, any manifest
       readme:
         - read ../../draft/2024/09/20240925.01.md
