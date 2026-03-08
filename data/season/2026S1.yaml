@@ -633,6 +633,11 @@ todo:
     - '60': 重新设计ego.js的命令行参数，合并函数，整理代码。
   infra: []
   learn:
+    - '60': XSTATE https://xstate.js.org/
+      readme:
+        - read ../../draft/2025/20251026.01.md
+        - read ../../draft/2025/20251027.01.md
+    - '30': Camunda Zeebe / Temporal.io
     - '90': HPKE（Hybrid Public Key Encryption，RFC 9180）
       readme:
         - npm install @hpke/hpke-js
@@ -643,10 +648,6 @@ todo:
         - https://asecuritysite.com/blog/2023-06-06_For-Security--Go-Hybrid--Hybrid-Public-Key-Encryption--HPKE--and-RFC-9180-1911da1ff831.html
         - https://blog.cloudflare.com/hybrid-public-key-encryption/
         - https://cryspen.com/post/hpke_spec/
-    - '60': XSTATE https://xstate.js.org/
-      readme:
-        - read ../../draft/2025/20251026.01.md
-        - read ../../draft/2025/20251027.01.md
     - '60': 按petri网定义设计几个实例
       bind:
         - '30': 学习优秀的petri网设计案例
@@ -670,7 +671,6 @@ todo:
         - https://github.com/open-quantum-safe/liboqs
         - https://github.com/open-quantum-safe/openssl
     - '60': CometAPI
-    - '30': Camunda Zeebe / Temporal.io
     - '30': Flink Complex Event Processing，直接运行 DMN 4Flink 或 Rego-on-Flink 扩展。
     - '60': 领域特定语言（DSL）,Xtext,ANTLR
     - '30': OpenFGA/SpiceDB(Zanzibar模型)
@@ -870,6 +870,7 @@ todo:
       readme:
         - https://zh.javascript.info/promise-api
   js:
+    - '30': passportjs
     - '90': openpgp v6.1.1.
       readme:
         - read ../../draft/2025/20250601.a.md
@@ -922,7 +923,6 @@ todo:
       readme:
         - https://github.com/qufei1993/Nodejs-Roadmap
         - https://www.nodejs.red
-    - '30': passportjs
     - '90': learn graphql
       readme:
         - https://www.graphql-js.org/docs/

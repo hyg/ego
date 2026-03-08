@@ -1,0 +1,67 @@
+date: '20260308'
+mode: '1'
+plan: 1d
+time:
+  - begin: '20260308093700'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20260308095200'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20260308105200'
+    amount: 45
+    type: food
+    name: 午餐
+  - begin: '20260308113700'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20260308122200'
+    amount: 97
+    type: free
+    name: 休整
+  - begin: '20260308140000'
+    amount: 0
+    redo: 30
+    type: work
+    name: 静默工作
+    subject: js
+    title: passportjs
+    output: ../../draft/2026/20260308.01.md
+    namelink: http://simp.ly/p/8t3vlk
+  - begin: '20260308143000'
+    amount: 0
+    redo: 30
+    type: work
+    name: 静默工作
+    subject: learn
+    title: Camunda Zeebe / Temporal.io
+    output: ../../draft/2026/20260308.02.md
+    namelink: http://simp.ly/p/5k9gJy
+  - begin: '20260308150000'
+    amount: 60
+    type: free
+    name: 休整
+  - begin: '20260308160000'
+    amount: 0
+    redo: 60
+    type: work
+    name: 静默工作
+    subject: learn
+    title: XSTATE https://xstate.js.org/
+    readme:
+      - read ../../draft/2025/20251026.01.md
+      - read ../../draft/2025/20251027.01.md
+    output: ../../draft/2026/20260308.03.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20260308170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20260308190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
+    output: ../../draft/2026/20260308.04.md
