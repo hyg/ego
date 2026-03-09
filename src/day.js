@@ -344,9 +344,13 @@ module.exports = {
             let timeperiod = dayobj.time[i];
             if (timeperiod.amount == 0 && timeperiod.output != null) {
                 try {
-                    fs.unlinkSync(timeperiod.output);
+                    if (fs.existsSync(timeperiod.output)) {
+                        fs.unlinkSync(timeperiod.output);
+                    } else {
+                        log("output file not exists, skip delete:", timeperiod.output);
+                    }
                 } catch (error) {
-                    console.error(error);
+                    log("delete output file failed:", timeperiod.output, error.code);
                 }
 
                 delete timeperiod.output;
