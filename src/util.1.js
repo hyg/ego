@@ -2,31 +2,49 @@ const crypto = require('crypto');
 const dayjs = require('dayjs');
 const simpleGit = require('simple-git');
 const GIT_SSH_COMMAND = 'C:/Progra~1/PuTTY/plink.exe';
-var customParseFormat = require("dayjs/plugin/customParseFormat");
+const customParseFormat = require("dayjs/plugin/customParseFormat");
+dayjs.extend(customParseFormat);
 
 module.exports = {
+    dayjs: dayjs,
     datestr: function (diff = 0) {
-        var now = dayjs();
+        let now = dayjs();
         const thedate = now.add(diff, 'day');
 
         return thedate.format("YYYYMMDD");
     },
     makemetafileid: function (name) {
-        var hashid = crypto.createHash("sha256").update(name).digest("hex").slice(0, 8);
+        let hashid = crypto.createHash("sha256").update(name).digest("hex").slice(0, 8);
         return hashid;
     },
     str2time: function (date) {
-        dayjs.extend(customParseFormat);
-        var thedate = dayjs(date, "YYYYMMDDHHmmss");
-        //console.log(thedate.format());
-
+        let thedate = dayjs(date, "YYYYMMDDHHmmss");
         return thedate.toDate();
     },
     str2date: function (date) {
-        dayjs.extend(customParseFormat);
-        var thedate = dayjs(date, 'YYYYMMDD')
-        //console.log(thedate.format());
-        return thedate.toDate();
+        let thedate = dayjs(date, 'YYYYMMDD')
+        return thedate;
+    },
+    format: function (date, fmt) {
+        if (date instanceof Date) {
+            date = dayjs(date.valueOf());
+        } else if (!(date instanceof dayjs)) {
+            date = dayjs(date);
+        }
+        let formatMap = {
+            'yyyy': 'YYYY',
+            'MM': 'MM',
+            'dd': 'DD',
+            'hh': 'HH',
+            'mm': 'mm',
+            'ss': 'ss',
+            'S': 'SSS'
+        };
+        let dayjsFmt = fmt;
+        for (let key in formatMap) {
+            dayjsFmt = dayjsFmt.replace(new RegExp(key, 'g'), formatMap[key]);
+        }
+        return date.format(dayjsFmt);
     },
     gitstep: async function (path, msg, remote, branch) {
         let statusSummary = null;
@@ -62,7 +80,7 @@ module.exports = {
 (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18  
  */
 Date.prototype.Format = function (fmt) {
-    var o = {
+    let o = {
         "M+": this.getMonth() + 1, //月份 
         "d+": this.getDate(), //日 
         "h+": this.getHours(), //小时 
@@ -73,7 +91,7 @@ Date.prototype.Format = function (fmt) {
     };
     if (/(y+)/.test(fmt))
         fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
-    for (var k in o) {
+    for (let k in o) {
         if (new RegExp("(" + k + ")").test(fmt)) {
             fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
         }
@@ -93,7 +111,7 @@ Date.prototype.Format = function (fmt) {
     * (new Date()).pattern("yyyy-M-d h:m:s.S") ==> 2006-7-2 8:9:4.18   
 */
 Date.prototype.pattern = function (fmt) {
-    var o = {
+    let o = {
         "M+": this.getMonth() + 1, //月份         
         "d+": this.getDate(), //日         
         "h+": this.getHours() % 12 == 0 ? 12 : this.getHours() % 12, //小时         
@@ -103,7 +121,7 @@ Date.prototype.pattern = function (fmt) {
         "q+": Math.floor((this.getMonth() + 3) / 3), //季度         
         "S": this.getMilliseconds() //毫秒         
     };
-    var week = {
+    let week = {
         "0": "/u65e5",
         "1": "/u4e00",
         "2": "/u4e8c",
@@ -118,7 +136,7 @@ Date.prototype.pattern = function (fmt) {
     if (/(E+)/.test(fmt)) {
         fmt = fmt.replace(RegExp.$1, ((RegExp.$1.length > 1) ? (RegExp.$1.length > 2 ? "/u661f/u671f" : "/u5468") : "") + week[this.getDay() + ""]);
     }
-    for (var k in o) {
+    for (let k in o) {
         if (new RegExp("(" + k + ")").test(fmt)) {
             fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
         }

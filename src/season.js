@@ -1,7 +1,8 @@
-var fs = require('fs');
-var yaml = require('js-yaml');
-var path = require('./path.js');
-var util = require('./util.1.js');
+const fs = require('fs');
+const yaml = require('js-yaml');
+const path = require('./path.js');
+const util = require('./util.1.js');
+const dayjs = require('dayjs');
 
 function log(...s) {
     s[0] = log.caller.name + "> " + s[0];
@@ -11,30 +12,30 @@ function log(...s) {
 module.exports = {
     debug: true,
     seasonfilename: function (datestr = "") {
-        var theDate = new Date();
+        let theDate;
         if (datestr != "") {
             theDate = util.str2date(datestr);
+        } else {
+            theDate = dayjs();
         }
-        //log("theDate = ", theDate.toString());
 
-        var year = theDate.getFullYear();
-        var month = theDate.getMonth() + 1;
-        //var day = theDate.getDate();
-        var season = Math.ceil(month / 3);
+        let year = theDate.year();
+        let month = theDate.month() + 1;
+        let season = Math.ceil(month / 3);
 
-        var seasonfilename = path.datapath + "season/" + year + "S" + season + ".yaml";
+        let seasonfilename = path.datapath + "season/" + year + "S" + season + ".yaml";
         return seasonfilename;
     },
     loadseasonobj: function (datestr = "") {
         //log("datestr:",datestr);
-        var seasonfilename = this.seasonfilename(datestr);
+        let seasonfilename = this.seasonfilename(datestr);
         log("seasonfilename:", seasonfilename);
-        var seasonobj = yaml.load(fs.readFileSync(seasonfilename, 'utf8', { schema: yaml.FAILSAFE_SCHEMA }));
+        let seasonobj = yaml.load(fs.readFileSync(seasonfilename, 'utf8', { schema: yaml.FAILSAFE_SCHEMA }));
 
         return seasonobj;
     },
     dumpseasonobj: function (seasonobj) {
-        var seasonfilename = this.seasonfilename();
+        let seasonfilename = this.seasonfilename();
         if (this.debug == false) {
             fs.writeFileSync(seasonfilename, yaml.dump(seasonobj, { 'lineWidth': -1 }));
         }
@@ -42,20 +43,20 @@ module.exports = {
         //log("seasonobj.todo:\n%s", yaml.dump(seasonobj.todo, { 'lineWidth': -1 }));
     },
     updatesold: function (seasonobj) {
-        var sold = new Object();
-        var firstdateofseason = seasonobj.year + seasonobj.beginmonth.toString().padStart(2, "0") + seasonobj.beginday.toString().padStart(2, "0");
-        var lastdateofseason = seasonobj.year + seasonobj.lastmonth.toString().padStart(2, "0") + seasonobj.lastday.toString().padStart(2, "0");
+        let sold = new Object();
+        let firstdateofseason = seasonobj.year + seasonobj.beginmonth.toString().padStart(2, "0") + seasonobj.beginday.toString().padStart(2, "0");
+        let lastdateofseason = seasonobj.year + seasonobj.lastmonth.toString().padStart(2, "0") + seasonobj.lastday.toString().padStart(2, "0");
 
-        var daymetadatapath = path.daymetadatapath + seasonobj.year + "/";
+        let daymetadatapath = path.daymetadatapath + seasonobj.year + "/";
         if (fs.existsSync(daymetadatapath)) {
             fs.readdirSync(daymetadatapath).forEach(file => {
                 if (file.substring(file.lastIndexOf(".")) == ".yaml") {
-                    var date = file.slice(2, 10);
+                    let date = file.slice(2, 10);
                     //log("date:",date);
                     if ((date >= firstdateofseason) & (date <= lastdateofseason)) {
                         //log("file:",file);
-                        var dayobj = yaml.load(fs.readFileSync(daymetadatapath + file, 'utf8', { schema: yaml.FAILSAFE_SCHEMA }));
-                        for (var tid in dayobj.time) {
+                        let dayobj = yaml.load(fs.readFileSync(daymetadatapath + file, 'utf8', { schema: yaml.FAILSAFE_SCHEMA }));
+                        for (let tid in dayobj.time) {
                             if (dayobj.time[tid].subject != null) {
                                 if (sold[dayobj.time[tid].subject] != null) {
                                     sold[dayobj.time[tid].subject] = sold[dayobj.time[tid].subject] + dayobj.time[tid].amount;
@@ -94,13 +95,13 @@ module.exports = {
         log("add the todo item to %s: %s", task, name,amount,readme);
 
         log("before add todo item:\n" + yaml.dump(seasonobj.todo[task]));
-        var todoarray = seasonobj.todo[task];
+        let todoarray = seasonobj.todo[task];
         if (this.findtodoitem(todoarray, name)) {
             log("the todo item already there.");
             return seasonobj;
         }
 
-        var item = new Object();
+        let item = new Object();
         item[amount] = name;
         if (readme != null) {
             item.readme = readme;
@@ -113,10 +114,10 @@ module.exports = {
         return seasonobj;
     },
     findtodoitem(todoarray, name) {
-        var bhas = false;
+        let bhas = false;
 
-        for (var i in todoarray) {
-            for (var key in todoarray[i]) {
+        for (let i in todoarray) {
+            for (let key in todoarray[i]) {
                 if (!isNaN(parseInt(key))) {
                     if (name == todoarray[i][key]) {
                         bhas = true;
@@ -135,9 +136,9 @@ module.exports = {
         return bhas;
     },
     makestattable: function (seasonobj) {
-        var statobj = new Object();
+        let statobj = new Object();
         statobj.total = { alloc: 0, sold: 0, hold: 0, todo: 0 };
-        for (var task in seasonobj.time.alloc) {
+        for (let task in seasonobj.time.alloc) {
             statobj[task] = new Object();
             statobj[task].alloc = parseInt(seasonobj.time.alloc[task]);
             if (seasonobj.time.sold[task] != null) {
@@ -151,7 +152,7 @@ module.exports = {
             statobj.total.sold = statobj.total.sold + statobj[task].sold;
             statobj[task].todo = 0;
         }
-        for (var task in seasonobj.time.sold) {
+        for (let task in seasonobj.time.sold) {
             if (statobj[task] == null) {
                 statobj[task] = new Object();
                 statobj[task].alloc = 0;
@@ -164,15 +165,15 @@ module.exports = {
             }
         }
         statobj.total.hold = statobj.total.alloc - statobj.total.sold;
-        for (var task in seasonobj.todo) {
+        for (let task in seasonobj.todo) {
             statobj[task].todo = this.todosum(seasonobj.todo[task]);
             statobj.total.todo = statobj.total.todo + statobj[task].todo;
         }
 
-        var seasonstatstr = `\n---\nseason stat:\n\n| task | alloc | sold | hold | todo |
+        let seasonstatstr = `\n---\nseason stat:\n\n| task | alloc | sold | hold | todo |
 | :---: | ---: | ---: | ---: | ---: |
 `;
-        for (var task in statobj) {
+        for (let task in statobj) {
             seasonstatstr = seasonstatstr + "| " + task + " | " + statobj[task].alloc + " | " + statobj[task].sold + " | " + statobj[task].hold + " | " + statobj[task].todo + " |\n";
         }
 
@@ -182,10 +183,10 @@ module.exports = {
         return seasonstatstr;
     },
     todosum: function (todoarray) {
-        var sum = 0;
+        let sum = 0;
 
-        for (var i in todoarray) {
-            for (var key in todoarray[i]) {
+        for (let i in todoarray) {
+            for (let key in todoarray[i]) {
                 if (!isNaN(parseInt(key))) {
                     sum = sum + parseInt(key);
                 } else if (key == "bind") {
@@ -197,22 +198,22 @@ module.exports = {
         return sum;
     },
     stat: function (date) {
-        var seasonobj = this.loadseasonobj(date);
+        let seasonobj = this.loadseasonobj(date);
 
-        var modestat = new Object();
-        var planstat = new Object();
-        var firstdateofseason = seasonobj.year + seasonobj.beginmonth.toString().padStart(2, "0") + seasonobj.beginday.toString().padStart(2, "0");
-        var lastdateofseason = seasonobj.year + seasonobj.lastmonth.toString().padStart(2, "0") + seasonobj.lastday.toString().padStart(2, "0");
+        let modestat = new Object();
+        let planstat = new Object();
+        let firstdateofseason = seasonobj.year + seasonobj.beginmonth.toString().padStart(2, "0") + seasonobj.beginday.toString().padStart(2, "0");
+        let lastdateofseason = seasonobj.year + seasonobj.lastmonth.toString().padStart(2, "0") + seasonobj.lastday.toString().padStart(2, "0");
 
-        var daymetadatapath = path.daymetadatapath + seasonobj.year + "/";
+        let daymetadatapath = path.daymetadatapath + seasonobj.year + "/";
         if (fs.existsSync(daymetadatapath)) {
             fs.readdirSync(daymetadatapath).forEach(file => {
                 if (file.substring(file.lastIndexOf(".")) == ".yaml") {
-                    var date = file.slice(2, 10);
+                    let date = file.slice(2, 10);
                     //log("date:",date);
                     if ((date >= firstdateofseason) & (date <= lastdateofseason)) {
                         //log("file:",file);
-                        var dayobj = yaml.load(fs.readFileSync(daymetadatapath + file, 'utf8', { schema: yaml.FAILSAFE_SCHEMA }));
+                        let dayobj = yaml.load(fs.readFileSync(daymetadatapath + file, 'utf8', { schema: yaml.FAILSAFE_SCHEMA }));
 
                         if (dayobj.mode == undefined) {
                             log("mode undefined:", dayobj.date);
@@ -238,15 +239,15 @@ module.exports = {
         console.table(planstat);
     },
     plan: function () {
-        var seasonobj = this.loadseasonobj("");
+        let seasonobj = this.loadseasonobj("");
 
         if (seasonobj.time.timeslice == null) {
-            var timeslice = new Object();
-            var timesum = 0;
+            let timeslice = new Object();
+            let timesum = 0;
 
-            for (var plan in seasonobj.time.plan) {
+            for (let plan in seasonobj.time.plan) {
                 //log("plan:",plan);
-                for (var slice in seasonobj.dayplan[plan].timeslice) {
+                for (let slice in seasonobj.dayplan[plan].timeslice) {
                     if (timeslice[slice] == null) {
                         //log("slice:",slice);
                         timeslice[slice] = seasonobj.dayplan[plan].timeslice[slice] * seasonobj.time.plan[plan];

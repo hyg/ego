@@ -1,7 +1,7 @@
-var fs = require('fs');
-var yaml = require('js-yaml');
-var path = require('./path.js');
-var util = require('./util.1.js');
+const fs = require('fs');
+const yaml = require('js-yaml');
+const path = require('./path.js');
+const util = require('./util.1.js');
 
 function log(...s) {
     s[0] = log.caller.name + "> " + s[0];
@@ -11,21 +11,21 @@ function log(...s) {
 module.exports = {
     debug: true,
     accountdetail: function (account,year) {
-        var AssetType = this.loadAssetType();
-        var Account = this.loadAccount();
-        var AERmap = this.loadAER(year);
+        let AssetType = this.loadAssetType();
+        let Account = this.loadAccount();
+        let AERmap = this.loadAER(year);
 
-        var detail = new Array();
-        var total = new Object();
+        let detail = new Array();
+        let total = new Object();
         total.debit = 0;
         total.credit = 0;
 
-        for (var file in AERmap) {
-            var AER = AERmap[file];
-            for (var id in AER.AccountingEntry.debit) {
-                var item = AER.AccountingEntry.debit[id];
+        for (let file in AERmap) {
+            let AER = AERmap[file];
+            for (let id in AER.AccountingEntry.debit) {
+                let item = AER.AccountingEntry.debit[id];
                 if (account == item.AccountTitle) {
-                    var record = new Object();
+                    let record = new Object();
                     record.date = AER.date;
                     record.VoucherID = AER.VoucherID;
                     record.asset = item.asset;
@@ -34,10 +34,10 @@ module.exports = {
 
                     total.debit += item.amount;
                 }
-            } for (var id in AER.AccountingEntry.credit) {
-                var item = AER.AccountingEntry.credit[id];
+            } for (let id in AER.AccountingEntry.credit) {
+                let item = AER.AccountingEntry.credit[id];
                 if (account == item.AccountTitle) {
-                    var record = new Object();
+                    let record = new Object();
                     record.date = AER.date;
                     record.VoucherID = AER.VoucherID;
                     record.asset = item.asset;
@@ -62,18 +62,18 @@ module.exports = {
 
     },
     entry: function (year) {
-        var AssetType = this.loadAssetType();
-        var Account = this.loadAccount();
-        var AERmap = this.loadAER(year);
+        let AssetType = this.loadAssetType();
+        let Account = this.loadAccount();
+        let AERmap = this.loadAER(year);
 
-        for (var file in AERmap) {
-            var AER = AERmap[file];
-            for (var id in AER.AccountingEntry.debit) {
-                var item = AER.AccountingEntry.debit[id];
+        for (let file in AERmap) {
+            let AER = AERmap[file];
+            for (let id in AER.AccountingEntry.debit) {
+                let item = AER.AccountingEntry.debit[id];
                 if (Account[item.AccountTitle].record == undefined) {
                     Account[item.AccountTitle].record = new Array();
                 }
-                var record = new Object();
+                let record = new Object();
                 record.date = AER.date;
                 record.voucherID = AER.VoucherID;
                 record.asset = item.asset;
@@ -84,12 +84,12 @@ module.exports = {
                 //Account[item.AccountTitle].balance[item.asset] += item.amount;
                 //Account[item.AccountTitle].balance[item.asset] = Math.round((Account[item.AccountTitle].balance[item.asset]) * 100) / 100;
             }
-            for (var id in AER.AccountingEntry.credit) {
-                var item = AER.AccountingEntry.credit[id];
+            for (let id in AER.AccountingEntry.credit) {
+                let item = AER.AccountingEntry.credit[id];
                 if (Account[item.AccountTitle].record == undefined) {
                     Account[item.AccountTitle].record = new Array();
                 }
-                var record = new Object();
+                let record = new Object();
                 record.date = AER.date;
                 record.voucherID = AER.VoucherID;
                 record.asset = item.asset;
@@ -106,11 +106,11 @@ module.exports = {
         console.table(Account, ["id", "debit", "credit", "balance"]);
     },
     loadAER(year) {
-        var AERmap = new Object();
-        var voucherfolder = path.voucherpath + year;
+        let AERmap = new Object();
+        let voucherfolder = path.voucherpath + year;
         fs.readdirSync(voucherfolder).forEach(file => {
             if (file.substr(0, 4) == "AER.") {
-                var AER = yaml.load(fs.readFileSync(voucherfolder + "/" + file, 'utf8'));
+                let AER = yaml.load(fs.readFileSync(voucherfolder + "/" + file, 'utf8'));
                 AERmap[file] = AER;
             }
         });

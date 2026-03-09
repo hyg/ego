@@ -12,7 +12,7 @@ test('make waitinglist',(t)=>{
 test('make waitinglist brief list',(t)=>{
     wl.debug = true;
     season.debug = true;
-    var waitinglist;
+    let waitinglist;
     assert.ok(waitinglist = wl.makewaitinglist(season.loadseasonobj()));
     assert.ok(wl.makebrieflist(waitinglist));
 });

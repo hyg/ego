@@ -1,7 +1,7 @@
-var fs = require('fs');
-var yaml = require('js-yaml');
-var path = require('./path.js');
-var util = require('./util.js');
+const fs = require('fs');
+const yaml = require('js-yaml');
+const path = require('./path.js');
+const util = require('./util.js');
 
 function log(s) {
     console.log(log.caller.name + ">", s);
@@ -10,23 +10,23 @@ function log(s) {
 module.exports = {
     debug: true,
     devmakedayplan: function (date, mode) {
-        var year = date.slice(0, 4);
-        var month = date.slice(4, 6);
-        var day = date.slice(6, 8);
-        var seasonpath = "../data/season/2024S3.yaml";
-        var seasonobj = yaml.load(fs.readFileSync(seasonpath, 'utf8', { schema: yaml.FAILSAFE_SCHEMA }));
-        var waitinglist = this.makewaitinglist();
+        let year = date.slice(0, 4);
+        let month = date.slice(4, 6);
+        let day = date.slice(6, 8);
+        let seasonpath = "../data/season/2024S3.yaml";
+        let seasonobj = yaml.load(fs.readFileSync(seasonpath, 'utf8', { schema: yaml.FAILSAFE_SCHEMA }));
+        let waitinglist = this.makewaitinglist();
         //console.log("devmakedayplan()> waitinglist:",yaml.dump(waitinglist));
 
-        var healthpath = path.rawrepopath + "health/d." + date + ".yaml";
+        let healthpath = path.rawrepopath + "health/d." + date + ".yaml";
         //console.log("devmakedayplan()> healthpath:",healthpath);
-        var healthobj = yaml.load(fs.readFileSync(healthpath, 'utf8', { schema: yaml.FAILSAFE_SCHEMA }));
-        var waketime = healthobj.wake.time % 1000000;
+        let healthobj = yaml.load(fs.readFileSync(healthpath, 'utf8', { schema: yaml.FAILSAFE_SCHEMA }));
+        let waketime = healthobj.wake.time % 1000000;
         console.log("devmakedayplan()> waketime:", waketime);
-        var dayplan = "";
+        let dayplan = "";
 
-        for (var plan in seasonobj.map[mode]) {
-            var item = seasonobj.map[mode][plan];
+        for (let plan in seasonobj.map[mode]) {
+            let item = seasonobj.map[mode][plan];
             if ((waketime >= item.start) && (waketime <= item.end)) {
                 dayplan = plan;
                 break;
@@ -38,24 +38,24 @@ module.exports = {
         }
         console.log("devmakedayplan()> dayplan:", dayplan);
 
-        var draftmetadata = new Object();
-        var drafttimearray = new Array();
+        let draftmetadata = new Object();
+        let drafttimearray = new Array();
 
         draftmetadata.date = parseInt(date);
         draftmetadata.mode = parseInt(mode);
         draftmetadata.plan = parseInt(dayplan);
 
-        var planstr = `| 时间片 | 时长 | 用途 | 手稿 |
+        let planstr = `| 时间片 | 时长 | 用途 | 手稿 |
 | --- | --- | --- | --- |
 `;
-        var draftstr = "";
-        var indexstr = "";
-        var time = seasonobj.dayplan[dayplan].time;
-        var beginhour, beginminute, amount, endhour, endminute, begintime, nextbeiginhour, nextbeginminute;
+        let draftstr = "";
+        let indexstr = "";
+        let time = seasonobj.dayplan[dayplan].time;
+        let beginhour, beginminute, amount, endhour, endminute, begintime, nextbeiginhour, nextbeginminute;
         nextbeiginhour = parseInt(waketime / 10000);
         nextbeginminute = parseInt((waketime % 10000) / 100);
-        for (var i in time) {
-            var timeslice = time[i];
+        for (let i in time) {
+            let timeslice = time[i];
 
             if (timeslice.beginhour != null) {
                 beginhour = timeslice.beginhour;
@@ -80,7 +80,7 @@ module.exports = {
             console.log("devmakedayplan()> timeslice:", i, timeslice.type, beginhour, beginminute, amount, endhour, endminute);
 
             if (timeslice.type == "work") {
-                var timeperiod = new Object();
+                let timeperiod = new Object();
                 timeperiod.begin = begintime;
                 timeperiod.amount = amount;
                 timeperiod.type = "work";
@@ -92,7 +92,7 @@ module.exports = {
                 timeperiod.output = "draft/" + date.slice(0, 4) + "/" + date.slice(4, 6) + "/" + timeperiod.begin + ".md";
                 drafttimearray.push(timeperiod);
                 console.log("devmakedayplan() > delete the job from %s:\n%s", waitinglist[amount.toString()][0].task, waitinglist[amount.toString()][0].name);
-                for (var j in seasonobj.todo[timeperiod.subject]) {
+                for (let j in seasonobj.todo[timeperiod.subject]) {
                     //console.log("devmakedayplan() > seasonobj.todo[timeperiod.subject][j][timeperiod.amount]: "+seasonobj.todo[timeperiod.subject][j][timeperiod.amount] + " timeperiod.name: "+ timeperiod.name)
                     if (seasonobj.todo[timeperiod.subject][j][timeperiod.amount] == timeperiod.name) {
                         console.log("devmakedayplan()> before delete todo item, waitinglist: %d %d\n" + yaml.dump(waitinglist[amount.toString()][0]), i, j);
@@ -108,19 +108,19 @@ module.exports = {
                 //delete it from waitinglist
                 waitinglist[time[i].amount.toString()].shift();
 
-                var draftfilename = path.draftrepopath + date.slice(0, 4) + "/" + date.slice(4, 6) + "/" + begintime + ".md";
+                let draftfilename = path.draftrepopath + date.slice(0, 4) + "/" + date.slice(4, 6) + "/" + begintime + ".md";
                 draftstr = timeperiod.subject + ":" + timeperiod.name;
                 if (timeslice.namelink != null) {
                     draftstr = draftstr + "  [在线](" + timeslice.namelink + ")";
                 }
                 draftstr = draftstr + " [离线](" + draftfilename + ")";
-                var mailtostr = " <a href=\"mailto:huangyg@mars22.com?subject=关于" + year + "." + month + "." + day + ".[" + timeperiod.name + "]任务&body=日期: " + date + "%0D%0A序号: " + i + "%0D%0A手稿:" + draftfilename + "%0D%0A---请勿修改邮件主题及以上内容 从下一行开始写您的想法---%0D%0A\">[想法]</a>";
+                let mailtostr = " <a href=\"mailto:huangyg@mars22.com?subject=关于" + year + "." + month + "." + day + ".[" + timeperiod.name + "]任务&body=日期: " + date + "%0D%0A序号: " + i + "%0D%0A手稿:" + draftfilename + "%0D%0A---请勿修改邮件主题及以上内容 从下一行开始写您的想法---%0D%0A\">[想法]</a>";
                 draftstr = draftstr + mailtostr;
 
                 indexstr = indexstr + "- " + beginhour.toString().padStart(2, "0") + ":" + beginminute.toString().padStart(2, "0") + "\t" + timeperiod.subject + ": [" + timeperiod.name + "](../" + path.gitpath + timeperiod.output + ")\n";
-                var timestr = "## " + beginhour.toString().padStart(2, "0") + ":" + beginminute.toString().padStart(2, "0") + " ~ " + endhour.toString().padStart(2, "0") + ":" + endminute.toString().padStart(2, "0") + "\n" + timeperiod.subject + ": [" + timeperiod.name + "]\n\n";
+                let timestr = "## " + beginhour.toString().padStart(2, "0") + ":" + beginminute.toString().padStart(2, "0") + " ~ " + endhour.toString().padStart(2, "0") + ":" + endminute.toString().padStart(2, "0") + "\n" + timeperiod.subject + ": [" + timeperiod.name + "]\n\n";
 
-                var timeviewfilename = path.draftrepopath + date.slice(0, 4) + "/" + date.slice(4, 6) + "/" + begintime + ".md";
+                let timeviewfilename = path.draftrepopath + date.slice(0, 4) + "/" + date.slice(4, 6) + "/" + begintime + ".md";
                 if (this.debug == false) {
                     fs.writeFileSync(timeviewfilename, timestr);
                 }
@@ -136,11 +136,11 @@ module.exports = {
         }
         planstr = planstr + "\n" + seasonobj.dayplan[plan].readme;
 
-        var dayplanstr = "# " + year + "." + month + "." + day + ".\n计划  \n\n根据[ego模型时间接口](https://gitee.com/hyg/blog/blob/master/timeflow.md)，今天绑定模版" + mode + "(" + dayplan + ")。\n\n" + planstr + "\n---\n\n" + indexstr;
-        var dayplanfilename = path.blogrepopath + "release/time/d." + date + ".md";
+        let dayplanstr = "# " + year + "." + month + "." + day + ".\n计划  \n\n根据[ego模型时间接口](https://gitee.com/hyg/blog/blob/master/timeflow.md)，今天绑定模版" + mode + "(" + dayplan + ")。\n\n" + planstr + "\n---\n\n" + indexstr;
+        let dayplanfilename = path.blogrepopath + "release/time/d." + date + ".md";
 
         draftmetadata.time = drafttimearray;
-        var draftmetafilename = "../data/draft" + "/" + year + "/" + "d." + date + ".yaml";
+        let draftmetafilename = "../data/draft" + "/" + year + "/" + "d." + date + ".yaml";
 
         if (this.debug == false) {
             fs.writeFileSync(draftmetafilename, yaml.dump(draftmetadata, { 'lineWidth': -1 }));
@@ -154,24 +154,24 @@ module.exports = {
 
     },
     makedaydraft: function (date, plan) {
-        var year = date.slice(0, 4);
-        var month = date.slice(4, 6);
-        var season = Math.ceil(parseInt(month) / 3);
-        var seasonpath = "../data/season/" + year + "S" + season + ".yaml";
+        let year = date.slice(0, 4);
+        let month = date.slice(4, 6);
+        let season = Math.ceil(parseInt(month) / 3);
+        let seasonpath = "../data/season/" + year + "S" + season + ".yaml";
         //console.log("seasonpath:" + seasonpath);
-        var seasonobj = yaml.load(fs.readFileSync(seasonpath, 'utf8', { schema: yaml.FAILSAFE_SCHEMA }));
-        var time = seasonobj.dayplan[plan].time;
-        var waitinglist = this.makewaitinglist();
+        let seasonobj = yaml.load(fs.readFileSync(seasonpath, 'utf8', { schema: yaml.FAILSAFE_SCHEMA }));
+        let time = seasonobj.dayplan[plan].time;
+        let waitinglist = this.makewaitinglist();
 
-        var draftmetadata = new Object();
-        var drafttimearray = new Array();
+        let draftmetadata = new Object();
+        let drafttimearray = new Array();
         //console.log(typeof(date));
         draftmetadata.date = parseInt(date);
         //draftmetadata.plan = parseInt(plan);
         draftmetadata.plan = plan;
-        for (var i in time) {
+        for (let i in time) {
             if (time[i].type == "work") {
-                var timeperiod = new Object();
+                let timeperiod = new Object();
                 timeperiod.begin = date + time[i].beginhour.toString().padStart(2, '0') + time[i].beginminute.toString().padStart(2, '0') + "00";
                 timeperiod.amount = time[i].amount;
                 timeperiod.type = "work";
@@ -186,7 +186,7 @@ module.exports = {
                 drafttimearray.push(timeperiod);
 
                 console.log("delete the job from %s:\n%s", waitinglist[time[i].amount.toString()][0].task, waitinglist[time[i].amount.toString()][0].name);
-                for (var j in seasonobj.todo[timeperiod.subject]) {
+                for (let j in seasonobj.todo[timeperiod.subject]) {
                     //console.log("makedaydraft() > seasonobj.todo[timeperiod.subject][j][timeperiod.amount]: "+seasonobj.todo[timeperiod.subject][j][timeperiod.amount] + " timeperiod.name: "+ timeperiod.name)
                     if (seasonobj.todo[timeperiod.subject][j][timeperiod.amount] == timeperiod.name) {
                         console.log("makedaydraft()> before delete todo item, waitinglist: %d %d\n" + yaml.dump(waitinglist[time[i].amount.toString()][0]), i, j);
@@ -207,8 +207,8 @@ module.exports = {
         }
         draftmetadata.time = drafttimearray;
 
-        //var draftmetafilename = path.draftrepopath + year + "/" + month + "/" + "d." + date + ".yaml";
-        var draftmetafilename = "../data/draft" + "/" + year + "/" + "d." + date + ".yaml";
+        //let draftmetafilename = path.draftrepopath + year + "/" + month + "/" + "d." + date + ".yaml";
+        let draftmetafilename = "../data/draft" + "/" + year + "/" + "d." + date + ".yaml";
         console.log(draftmetafilename);
         console.log(yaml.dump(draftmetadata));
         if (this.debug == false) {
@@ -219,11 +219,11 @@ module.exports = {
         console.log("seasonobj.todo:\n%s", yaml.dump(seasonobj.todo, { 'lineWidth': -1 }));
     },
     makedayplan: function (date) {
-        var year = date.slice(0, 4);
-        var month = date.slice(4, 6);
-        var day = date.slice(6, 8);
-        var draftmetafilename = "../data/draft" + "/" + year + "/" + "d." + date + ".yaml";
-        var draftmetadata;
+        let year = date.slice(0, 4);
+        let month = date.slice(4, 6);
+        let day = date.slice(6, 8);
+        let draftmetafilename = "../data/draft" + "/" + year + "/" + "d." + date + ".yaml";
+        let draftmetadata;
         try {
             if (fs.existsSync(draftmetafilename)) {
                 draftmetadata = yaml.load(fs.readFileSync(draftmetafilename, 'utf8', { schema: yaml.FAILSAFE_SCHEMA }));
@@ -236,33 +236,33 @@ module.exports = {
             console.log("yaml read error！" + e);
             process.exit();
         }
-        var plan = draftmetadata.plan;
+        let plan = draftmetadata.plan;
 
-        var timeslicename = new Object();
-        for (var i in draftmetadata.time) {
+        let timeslicename = new Object();
+        for (let i in draftmetadata.time) {
             timeslicename[draftmetadata.time[i].begin] = draftmetadata.time[i].name;
         }
 
-        var season = Math.ceil(parseInt(month) / 3);
-        var seasonpath = "../data/season/" + year + "S" + season + ".yaml";
+        let season = Math.ceil(parseInt(month) / 3);
+        let seasonpath = "../data/season/" + year + "S" + season + ".yaml";
         //console.log("seasonpath:" + seasonpath);
-        var seasonobj = yaml.load(fs.readFileSync(seasonpath, 'utf8', { schema: yaml.FAILSAFE_SCHEMA }));
-        var time = seasonobj.dayplan[plan].time;
+        let seasonobj = yaml.load(fs.readFileSync(seasonpath, 'utf8', { schema: yaml.FAILSAFE_SCHEMA }));
+        let time = seasonobj.dayplan[plan].time;
 
-        var planstr = `| 时间片 | 时长 | 用途 | 手稿 |
+        let planstr = `| 时间片 | 时长 | 用途 | 手稿 |
 | --- | --- | --- | --- |
 `;
-        for (var i in seasonobj.dayplan[plan].time) {
-            var timeslice = seasonobj.dayplan[plan].time[i];
-            var beginhour = timeslice.beginhour;
-            var beginminute = timeslice.beginminute;
-            var amount = timeslice.amount;
-            var endhour = beginhour + parseInt((beginminute + amount - 1) / 60);
-            var endminute = (beginminute + amount - 1) % 60;
+        for (let i in seasonobj.dayplan[plan].time) {
+            let timeslice = seasonobj.dayplan[plan].time[i];
+            let beginhour = timeslice.beginhour;
+            let beginminute = timeslice.beginminute;
+            let amount = timeslice.amount;
+            let endhour = beginhour + parseInt((beginminute + amount - 1) / 60);
+            let endminute = (beginminute + amount - 1) % 60;
 
-            var begintime = date + beginhour.toString().padStart(2, '0') + beginminute.toString().padStart(2, '0') + "00";
+            let begintime = date + beginhour.toString().padStart(2, '0') + beginminute.toString().padStart(2, '0') + "00";
 
-            var draftstr = "";
+            let draftstr = "";
             if (timeslicename[begintime] != null) {
                 draftstr = draftstr + timeslicename[begintime] + "  ";
             }
@@ -270,10 +270,10 @@ module.exports = {
                 draftstr = draftstr + "[在线](" + timeslice.namelink + ")";
             }
             if (timeslice.type == "work") {
-                var draftfilename = path.draftrepopath + date.slice(0, 4) + "/" + date.slice(4, 6) + "/" + begintime + ".md";
+                let draftfilename = path.draftrepopath + date.slice(0, 4) + "/" + date.slice(4, 6) + "/" + begintime + ".md";
                 draftstr = draftstr + " [离线](" + draftfilename + ")";
 
-                var mailtostr = " <a href=\"mailto:huangyg@mars22.com?subject=关于" + year + "." + month + "." + day + ".[" + timeslicename[begintime] + "]任务&body=日期: " + date + "%0D%0A序号: " + i + "%0D%0A手稿:" + draftfilename + "%0D%0A---请勿修改邮件主题及以上内容 从下一行开始写您的想法---%0D%0A\">[想法]</a>";
+                let mailtostr = " <a href=\"mailto:huangyg@mars22.com?subject=关于" + year + "." + month + "." + day + ".[" + timeslicename[begintime] + "]任务&body=日期: " + date + "%0D%0A序号: " + i + "%0D%0A手稿:" + draftfilename + "%0D%0A---请勿修改邮件主题及以上内容 从下一行开始写您的想法---%0D%0A\">[想法]</a>";
                 draftstr = draftstr + mailtostr;
             }
 
@@ -282,27 +282,27 @@ module.exports = {
         planstr = planstr + "\n" + seasonobj.dayplan[plan].readme;
         //console.log("planstr:\n"+planstr);
 
-        var dayplan = "# " + year + "." + month + "." + day + ".\n计划  \n\n根据[ego模型时间接口](https://gitee.com/hyg/blog/blob/master/timeflow.md)，今天绑定模版" + plan + "。\n\n" + planstr + "\n---\n\n";
+        let dayplan = "# " + year + "." + month + "." + day + ".\n计划  \n\n根据[ego模型时间接口](https://gitee.com/hyg/blog/blob/master/timeflow.md)，今天绑定模版" + plan + "。\n\n" + planstr + "\n---\n\n";
 
-        for (var i in draftmetadata.time) {
-            var subject = draftmetadata.time[i].subject;
-            var taskname = draftmetadata.time[i].name;
+        for (let i in draftmetadata.time) {
+            let subject = draftmetadata.time[i].subject;
+            let taskname = draftmetadata.time[i].name;
             if (taskname === undefined) {
                 taskname = "无名任务";
             }
-            var output = draftmetadata.time[i].output;
+            let output = draftmetadata.time[i].output;
 
-            var begintime = draftmetadata.time[i].begin;
-            var beginhour = parseInt((begintime - parseInt(begintime / 1000000) * 1000000) / 10000);
-            var beginminute = parseInt((begintime - parseInt(begintime / 10000) * 10000) / 100);
-            var amount = draftmetadata.time[i].amount;
-            var endhour = beginhour + parseInt((beginminute + amount) / 60);
-            var endminute = (beginminute + amount) % 60;
+            let begintime = draftmetadata.time[i].begin;
+            let beginhour = parseInt((begintime - parseInt(begintime / 1000000) * 1000000) / 10000);
+            let beginminute = parseInt((begintime - parseInt(begintime / 10000) * 10000) / 100);
+            let amount = draftmetadata.time[i].amount;
+            let endhour = beginhour + parseInt((beginminute + amount) / 60);
+            let endminute = (beginminute + amount) % 60;
             //console.log(begintime,beginhour,beginminute,amount,endhour,endminute);
             dayplan = dayplan + "- " + beginhour.toString().padStart(2, "0") + ":" + beginminute.toString().padStart(2, "0") + "\t" + subject + "  [" + taskname + "](../" + path.gitpath + output + ")\n";
-            var timestr = "## " + beginhour.toString().padStart(2, "0") + ":" + beginminute.toString().padStart(2, "0") + " ~ " + endhour.toString().padStart(2, "0") + ":" + endminute.toString().padStart(2, "0") + "\n" + taskname + "\n\n";
+            let timestr = "## " + beginhour.toString().padStart(2, "0") + ":" + beginminute.toString().padStart(2, "0") + " ~ " + endhour.toString().padStart(2, "0") + ":" + endminute.toString().padStart(2, "0") + "\n" + taskname + "\n\n";
 
-            var timeviewfilename = path.draftrepopath + date.slice(0, 4) + "/" + date.slice(4, 6) + "/" + begintime + ".md";
+            let timeviewfilename = path.draftrepopath + date.slice(0, 4) + "/" + date.slice(4, 6) + "/" + begintime + ".md";
             console.log("time slice draft file name:" + timeviewfilename);
             console.log(timestr);
             if (this.debug == false) {
@@ -310,26 +310,26 @@ module.exports = {
             }
         }
 
-        var dayplanfilename = path.blogrepopath + "release/time/d." + date + ".md";
+        let dayplanfilename = path.blogrepopath + "release/time/d." + date + ".md";
         console.log("dayplan file name:\n" + dayplanfilename + "\ncontent:\n" + dayplan);
         if (this.debug == false) {
             fs.writeFileSync(dayplanfilename, dayplan);
         }
     },
     makewaitinglist: function () {
-        var date = util.datestr();
-        var year = date.slice(0, 4);
-        var month = date.slice(4, 6);
-        var season = Math.ceil(parseInt(month) / 3);
-        var seasonpath = "../data/season/" + year + "S" + season + ".yaml";
+        let date = util.datestr();
+        let year = date.slice(0, 4);
+        let month = date.slice(4, 6);
+        let season = Math.ceil(parseInt(month) / 3);
+        let seasonpath = "../data/season/" + year + "S" + season + ".yaml";
         //console.log("seasonpath:" + seasonpath);
-        var seasonobj = yaml.load(fs.readFileSync(seasonpath, 'utf8', { schema: yaml.FAILSAFE_SCHEMA }));
-        var todoobj = seasonobj.todo;
-        var timeobj = seasonobj.time;
+        let seasonobj = yaml.load(fs.readFileSync(seasonpath, 'utf8', { schema: yaml.FAILSAFE_SCHEMA }));
+        let todoobj = seasonobj.todo;
+        let timeobj = seasonobj.time;
 
-        var rest = new Object();
-        var resttotal = 0;
-        for (var task in timeobj.alloc) {
+        let rest = new Object();
+        let resttotal = 0;
+        for (let task in timeobj.alloc) {
             if (timeobj.sold[task] != null) {
                 rest[task] = timeobj.alloc[task] - timeobj.sold[task];
             } else {
@@ -339,37 +339,37 @@ module.exports = {
         }
         //console.log("resttotal:",resttotal);
         //console.log("rest:\n"+yaml.dump(rest));
-        var restSorted = Object.keys(rest).sort(function (a, b) { return rest[b] - rest[a] });
+        let restSorted = Object.keys(rest).sort(function (a, b) { return rest[b] - rest[a] });
         //console.log("resetSOrted:\n"+ yaml.dump(restSorted));
 
         // init the waitinglist
-        var dayplanobj = seasonobj.dayplan;
-        var waitinglist = new Object();
-        for (var planid in dayplanobj) {
-            for (var amounttype in dayplanobj[planid].supply) {
+        let dayplanobj = seasonobj.dayplan;
+        let waitinglist = new Object();
+        for (let planid in dayplanobj) {
+            for (let amounttype in dayplanobj[planid].supply) {
                 if (waitinglist[amounttype] == null) {
                     // a new amount type
-                    var amounttypelist = new Array();
+                    let amounttypelist = new Array();
                     waitinglist[amounttype] = amounttypelist;
                 }
             }
         }
         //console.log("waitinglist:\n",yaml.dump(waitinglist));
 
-        var hasobj = true;
-        var k = 0;
+        let hasobj = true;
+        let k = 0;
         while (hasobj) {
             hasobj = false;
             // search the k th member of todo list of each task
             //console.log("search the %d th member...",k);
-            for (var j = 0; j < restSorted.length; j++) {
+            for (let j = 0; j < restSorted.length; j++) {
                 //console.log("search the %d th task:%s\n",j,restSorted[j]);
-                for (var amounttype in waitinglist) {
+                for (let amounttype in waitinglist) {
                     if (todoobj[restSorted[j]][k] != null) {
                         //console.log("find a item:",yaml.dump(todoobj[restSorted[j]][k]));
                         hasobj = true;
                         if (todoobj[restSorted[j]][k][amounttype] != null) {
-                            var atask = new Object();
+                            let atask = new Object();
                             atask.task = restSorted[j];
                             atask.name = todoobj[restSorted[j]][k][amounttype];
                             atask.id = k;
@@ -388,26 +388,26 @@ module.exports = {
         return waitinglist;
     },
     testdayplan: function () {
-        var date = util.datestr();
-        var year = date.slice(0, 4);
-        var month = date.slice(4, 6);
-        var season = Math.ceil(parseInt(month) / 3);
-        var seasonpath = "../data/season/" + year + "S" + season + ".yaml";
+        let date = util.datestr();
+        let year = date.slice(0, 4);
+        let month = date.slice(4, 6);
+        let season = Math.ceil(parseInt(month) / 3);
+        let seasonpath = "../data/season/" + year + "S" + season + ".yaml";
         //console.log("seasonpath:" + seasonpath);
-        var seasonobj = yaml.load(fs.readFileSync(seasonpath, 'utf8', { schema: yaml.FAILSAFE_SCHEMA }));
-        var dayplanobj = seasonobj.dayplan;
+        let seasonobj = yaml.load(fs.readFileSync(seasonpath, 'utf8', { schema: yaml.FAILSAFE_SCHEMA }));
+        let dayplanobj = seasonobj.dayplan;
 
-        for (var plan in dayplanobj) {
-            var waitinglist = this.makewaitinglist();
-            var time = seasonobj.dayplan[plan].time;
+        for (let plan in dayplanobj) {
+            let waitinglist = this.makewaitinglist();
+            let time = seasonobj.dayplan[plan].time;
 
-            var draftmetadata = new Object();
-            var drafttimearray = new Array();
+            let draftmetadata = new Object();
+            let drafttimearray = new Array();
             draftmetadata.date = parseInt(date);
             draftmetadata.plan = parseInt(plan);
-            for (var i in time) {
+            for (let i in time) {
                 if (time[i].type == "work") {
-                    var timeperiod = new Object();
+                    let timeperiod = new Object();
                     timeperiod.begin = date + time[i].beginhour.toString().padStart(2, '0') + time[i].beginminute.toString().padStart(2, '0') + "00";
                     timeperiod.amount = time[i].amount;
                     timeperiod.type = "work";

@@ -1,0 +1,190 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Season",
+  "description": "Season metadata schema for ego time management system",
+  "type": "object",
+  "required": ["year", "season", "beginmonth", "beginday", "lastmonth", "lastday", "timetype", "map", "dayplan"],
+  "properties": {
+    "year": {
+      "type": "integer",
+      "minimum": 2000,
+      "maximum": 2100,
+      "description": "Year of the season"
+    },
+    "season": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 4,
+      "description": "Season number (1-4)"
+    },
+    "beginmonth": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 12,
+      "description": "Start month of the season"
+    },
+    "beginday": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 31,
+      "description": "Start day of the season"
+    },
+    "lastmonth": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 12,
+      "description": "End month of the season"
+    },
+    "lastday": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 31,
+      "description": "End day of the season"
+    },
+    "timetype": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name"],
+        "properties": {
+          "name": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "map": {
+      "type": "object",
+      "description": "Day type to time slot mapping",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "object",
+          "required": ["start", "end"],
+          "properties": {
+            "start": {
+              "type": "integer"
+            },
+            "end": {
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "dayplan": {
+      "type": "object",
+      "description": "Day plan templates",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "timeslice": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "integer"
+            }
+          },
+          "time": {
+            "type": "array",
+            "items": {
+              "$ref": "#/definitions/TimeSlice"
+            }
+          },
+          "readme": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "time": {
+      "type": "object",
+      "properties": {
+        "alloc": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "integer"
+          }
+        },
+        "sold": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "integer"
+          }
+        }
+      }
+    },
+    "todo": {
+      "type": "object",
+      "description": "Todo items organized by category",
+      "additionalProperties": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "readme": {
+              "anyOf": [
+                { "type": "array", "items": { "type": "string" } },
+                { "type": "string" }
+              ]
+            },
+            "readnme": {
+              "anyOf": [
+                { "type": "array", "items": { "type": "string" } },
+                { "type": "string" }
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "TimeSlice": {
+      "type": "object",
+      "oneOf": [
+        {
+          "required": ["amount", "type", "name"]
+        },
+        {
+          "required": ["endhour", "endminute", "type", "name"]
+        }
+      ],
+      "properties": {
+        "amount": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "type": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "beginhour": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 23
+        },
+        "beginminute": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 59
+        },
+        "endhour": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 23
+        },
+        "endminute": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 59
+        },
+        "namelink": {
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    }
+  }
+}

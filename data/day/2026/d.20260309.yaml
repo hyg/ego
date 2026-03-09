@@ -1,0 +1,45 @@
+date: '20260309'
+mode: '1'
+plan: 1e
+time:
+  - begin: '20260309104500'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20260309110000'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20260309120000'
+    amount: 45
+    type: food
+    name: 午餐
+  - begin: '20260309124500'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20260309133000'
+    amount: 149
+    type: free
+    name: 休整
+  - begin: '20260309160000'
+    amount: 0
+    redo: 60
+    type: work
+    name: 静默工作
+    subject: learn
+    title: XSTATE https://xstate.js.org/
+    readme:
+      - read ../../draft/2025/20251026.01.md
+      - read ../../draft/2025/20251027.01.md
+    output: ../../draft/2026/20260309.01.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20260309170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20260309190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
+    output: ../../draft/2026/20260309.02.md

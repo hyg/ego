@@ -1,0 +1,96 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Day",
+  "description": "Day metadata schema for ego time management system",
+  "type": "object",
+  "required": ["date", "mode", "plan", "time"],
+  "properties": {
+    "date": {
+      "type": "string",
+      "pattern": "^[0-9]{8}$",
+      "description": "Date in YYYYMMDD format"
+    },
+    "mode": {
+      "type": "string",
+      "description": "Mode identifier"
+    },
+    "plan": {
+      "type": "string",
+      "description": "Plan identifier"
+    },
+    "time": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/DayTimeSlice"
+      }
+    }
+  },
+  "definitions": {
+    "DayTimeSlice": {
+      "type": "object",
+      "required": ["amount", "type", "name"],
+      "properties": {
+        "begin": {
+          "type": "string",
+          "pattern": "^[0-9]{14}$",
+          "description": "Begin time in YYYYMMDDHHMMSS format"
+        },
+        "amount": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Duration in minutes"
+        },
+        "type": {
+          "type": "string",
+          "enum": ["work", "free", "discuss", "learn", "prepare", "sleep", "food", "check"],
+          "description": "Time type"
+        },
+        "name": {
+          "type": "string",
+          "description": "Time slice name"
+        },
+        "subject": {
+          "type": "string",
+          "description": "Subject/task identifier"
+        },
+        "title": {
+          "type": "string",
+          "description": "Task title"
+        },
+        "readme": {
+          "oneOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            {
+              "type": "string"
+            }
+          ],
+          "description": "Task readme/notes"
+        },
+        "output": {
+          "type": "string",
+          "description": "Output file path"
+        },
+        "namelink": {
+          "type": "string",
+          "format": "uri",
+          "description": "Link to related resource"
+        },
+        "redo": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Redo duration in minutes"
+        },
+        "trueamount": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Actual duration in minutes"
+        }
+      }
+    }
+  }
+}

@@ -10,5 +10,9 @@ module.exports = {
     viewpath: "../view/",
     //daymetadatapath: "../data/draft/"
     daymetadatapath: "../data/day/",
-    voucherpath: "../data/voucher/"
+    voucherpath: "../data/voucher/",
+    bloggitpath: "../../blog",
+    draftgitpath: "../../draft",
+    egogitpath: "../../ego",
+    samplegitpath: "../../sample"
 }

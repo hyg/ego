@@ -3,7 +3,7 @@ const season = require('./season.js');
 const asset = require('./asset.js');
 
 const { Command } = require('commander');
-var program = new Command();
+const program = new Command();
 
 function log(...s) {
     s[0] = log.caller.name + "> " + s[0];
@@ -28,7 +28,7 @@ daycommand
     .option("-d, -diff <diff>", "目标日期相对于今天的天数。", 0)
     .action((mode, opt) => {
         log("init:%s %s", mode, opt);
-        var dayobj = day.makedayobj(mode, parseInt(opt.Diff));
+        let dayobj = day.makedayobj(mode, parseInt(opt.Diff));
         day.makedayplan(dayobj);
         day.maketomorrowinfo();
     });
@@ -39,11 +39,11 @@ daycommand
     .action((date) => {
         log("over:", date);
         if (date == undefined) {
-            var dayobj = day.loaddayobj();
+            let dayobj = day.loaddayobj();
             day.makedaylog(dayobj);
             day.maketomorrowinfo();
         } else {
-            var dayobj = day.loaddayobjbydate(date);
+            let dayobj = day.loaddayobjbydate(date);
             day.makedaylog(dayobj);
         }
     });
@@ -62,7 +62,7 @@ daycommand
     .description('测试新代码')
     .action((data) => {
         log("test:", data);
-        var dayobj = day.loaddayobj();
+        let dayobj = day.loaddayobj();
         day.makedayplan(dayobj);
         day.maketomorrowinfo();
     });

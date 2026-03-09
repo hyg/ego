@@ -1,0 +1,128 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Task",
+  "description": "Task metadata schema for ego project management",
+  "type": "object",
+  "required": ["name", "id", "parent id"],
+  "properties": {
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Task name"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Task unique identifier"
+    },
+    "parent id": {
+      "type": "integer",
+      "description": "Parent task ID (0 for root tasks)"
+    },
+    "start": {
+      "anyOf": [
+        { "type": "string" },
+        { "type": "object" }
+      ],
+      "description": "Task start date/time"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["active", "done", "crit", "unknown", "milestone"],
+      "description": "Task status"
+    },
+    "dependencies": {
+      "anyOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "Task dependencies"
+    },
+    "readme": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "Task readme/description"
+    },
+    "path": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "path": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "log": {
+      "type": "object",
+      "description": "Task execution log",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "output": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "todo": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "priority": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "string"
+              }
+            ]
+          },
+          "content": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "totaltime": {
+      "type": "integer",
+      "description": "Total time spent on task in minutes"
+    },
+    "firstlog": {
+      "type": "string",
+      "description": "First log timestamp"
+    },
+    "treetotaltime": {
+      "type": "integer",
+      "description": "Total time including subtasks"
+    }
+  }
+}

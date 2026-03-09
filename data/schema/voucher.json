@@ -1,0 +1,58 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Voucher",
+  "description": "Voucher/f receipt schema for ego financial tracking",
+  "type": "object",
+  "required": ["date", "title", "VoucherID", "VoucherType", "amount", "summary"],
+  "properties": {
+    "date": {
+      "anyOf": [
+        { "type": "string" },
+        { "type": "object" }
+      ],
+      "description": "Transaction date and time"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Voucher title"
+    },
+    "VoucherID": {
+      "anyOf": [
+        { "type": "string" },
+        { "type": "number" }
+      ],
+      "description": "Voucher ID or transaction number"
+    },
+    "VoucherType": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Voucher type"
+    },
+    "amount": {
+      "type": "number",
+      "description": "Transaction amount"
+    },
+    "summary": {
+      "type": "string",
+      "description": "Transaction summary"
+    },
+    "comment": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "value": {
+            "anyOf": [
+              { "type": "string" },
+              { "type": "number" }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

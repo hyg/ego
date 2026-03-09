@@ -31,14 +31,14 @@ const day = require('./day.js');
 
 /* test('make day output list',(t)=>{
     day.debug = true;
-    var dayobj;
+    let dayobj;
     assert.ok(dayobj = day.loaddayobj(-1));
     assert.ok(day.makeoutputlist(dayobj));
 });
 
 test('make day log',(t)=>{
     day.debug = true;
-    var dayobj;
+    let dayobj;
     assert.ok(dayobj = day.loaddayobj(-2));
     assert.ok(day.makedaylog(dayobj));
 });

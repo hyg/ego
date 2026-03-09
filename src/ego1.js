@@ -30,25 +30,25 @@ program
   .action((options) => {
     log(options);
     if (options.init) {
-      var date = util.datestr();
-      var tomorrow = util.datestr(1);
-      var plan = options.init;
+      let date = util.datestr();
+      let tomorrow = util.datestr(1);
+      let plan = options.init;
       start.devmakedayplan(date, plan);
       //start.makedaydraft(date, plan);
       //start.makedayplan(date);
       finish.maketomorowinfo(tomorrow);
     } else if (options.over) {
-      var date = util.datestr();
+      let date = util.datestr();
       log("date:", date);
 
       finish.updateseason(date);
       finish.makedaylog(date);
 
-      var tomorrow = util.datestr(1);
+      let tomorrow = util.datestr(1);
       finish.maketomorowinfo(tomorrow);
 
     } else if (options.plan) {
-      var date = util.datestr();
+      let date = util.datestr();
       finish.updateseason(date);
       start.testdayplan();
     } else if (options.test) {
