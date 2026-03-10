@@ -633,10 +633,7 @@ todo:
     - '60': 重新设计ego.js的命令行参数，合并函数，整理代码。
   infra: []
   learn:
-    - '60': XSTATE https://xstate.js.org/
-      readme:
-        - read ../../draft/2025/20251026.01.md
-        - read ../../draft/2025/20251027.01.md
+    - '90': XSTATE https://xstate.js.org
     - '30': Camunda Zeebe / Temporal.io
     - '90': HPKE（Hybrid Public Key Encryption，RFC 9180）
       readme:

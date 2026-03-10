@@ -56,6 +56,7 @@ module.exports = {
     loaddayobj: function (diff = 0) {
         log("diff:", diff);
         let dayfilename = this.dayfilename(diff);
+        let dayobj;
         try {
             if (fs.existsSync(dayfilename)) {
                 dayobj = yaml.load(fs.readFileSync(dayfilename, 'utf8', { schema: yaml.FAILSAFE_SCHEMA }));
@@ -234,7 +235,7 @@ module.exports = {
     },
     initdraft: function (timeperiod) {
         if (timeperiod.type == 'check') {
-            draftstr = "## check: [零散笔记]\n\n";
+            let draftstr = "## check: [零散笔记]\n\n";
             return draftstr;
         }
 
