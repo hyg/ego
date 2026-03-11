@@ -634,7 +634,6 @@ todo:
   infra: []
   learn:
     - '90': XSTATE https://xstate.js.org
-    - '30': Camunda Zeebe / Temporal.io
     - '90': HPKE（Hybrid Public Key Encryption，RFC 9180）
       readme:
         - npm install @hpke/hpke-js
@@ -867,13 +866,9 @@ todo:
       readme:
         - https://zh.javascript.info/promise-api
   js:
-    - '30': passportjs
     - '90': openpgp v6.1.1.
       readme:
         - read ../../draft/2025/20250601.a.md
-    - '60': TensorFlow.js
-      readme:
-        - https://github.com/tensorflow/tfjs
     - '90': query yaml file or js obj
       readme:
         - https://www.npmjs.com/package/json-query
