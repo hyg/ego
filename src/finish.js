@@ -1,16 +1,16 @@
 const fs = require('fs');
 const yaml = require('js-yaml');
-const path = require('./path.js');
+const config = require('./config.js');
 const start = require('./start.js');
 
 module.exports = {
-    debug: true,
-    maketomorowinfo: function (date) {
+    debug: false,
+    maketomorrowinfo: function (date) {
         let year = date.slice(0, 4);
         let month = date.slice(4, 6);
         let day = date.slice(6, 8);
         let season = Math.ceil(parseInt(month) / 3);
-        let seasonpath = "../data/season/" + year + "S" + season + ".yaml";
+        let seasonpath = config.dataseasonpath + util.parseTemplate(config.templates.season, { year: year, season: season });
         let seasonobj = yaml.load(fs.readFileSync(seasonpath, 'utf8', { schema: yaml.FAILSAFE_SCHEMA }));
 
         let dayinfostr = "# " + year + "." + month + "." + day + ".\n\n根据[ego模型时间接口](https://gitee.com/hyg/blog/blob/master/timeflow.md)，每天早起根据身心状况绑定模版。" + "\n\n---\n";
@@ -26,7 +26,7 @@ module.exports = {
             }
             dayinfostr = dayinfostr + "\n---\n";
         }
-        let dayinfofilename = path.blogrepopath + "release/time/d." + date + ".md";
+        let dayinfofilename = config.blogrepopath + "release/time/" + util.parseTemplate(config.templates.blogTime, { date: date });
         let mailtostr = "<a href=\"mailto:huangyg@mars22.com?subject=关于" + year + "." + month + "." + day + ".任务排序的建议&body=date: " + date +"%0D%0Afile: " + dayinfofilename + "%0D%0A---请勿修改邮件主题及以上内容---%0D%0A\">发送电子邮件</a>" ;
         dayinfostr = dayinfostr + "对任务排序的建议请点击这个链接" + mailtostr + "，日计划确定后会在本页面发布。";
         
@@ -40,12 +40,12 @@ module.exports = {
         let month = date.slice(4, 6);
         let day = date.slice(6, 8);
         let season = Math.ceil(parseInt(month) / 3);
-        let seasonpath = "../data/season/" + year + "S" + season + ".yaml";
+        let seasonpath = config.dataseasonpath + util.parseTemplate(config.templates.season, { year: year, season: season });
         //console.log("seasonpath:" + seasonpath);
         let seasonobj = yaml.load(fs.readFileSync(seasonpath, 'utf8', { schema: yaml.FAILSAFE_SCHEMA }));
 
-        //let draftmetafilename = path.draftrepopath + year + "/" + month + "/" + "d." + date + ".yaml";
-        let draftmetafilename = "../data/draft" + "/" + year + "/" + "d." + date + ".yaml";
+        //let draftmetafilename = config.draftrepopath + year + "/" + month + "/" + "d." + date + ".yaml";
+        let draftmetafilename = "../data/draft" + "/" + year + "/" + util.parseTemplate(config.templates.draftMeta, { date: date });
         let draftmetadata;
         try {
             if (fs.existsSync(draftmetafilename)) {
@@ -70,7 +70,7 @@ module.exports = {
 
         let indexstr = "<a id=\"index\"></a>\n";
         let logstr = "";
-        for (t in draftmetadata.time) {
+        for (let t in draftmetadata.time) {
             let timelog = draftmetadata.time[t];
             //console.log(typeof(timelog.begin));
             let hour = timelog.begin.toString().slice(8, 10);
@@ -83,7 +83,7 @@ module.exports = {
 
             indexstr = indexstr + "- " + hour + ":" + minute + "\t[" + taskname + "](#" + timelog.begin + ")  \n";
 
-            let outputfilename = path.gitpath + timelog.output;
+            let outputfilename = config.gitpath + timelog.output;
             let outputstr = fs.readFileSync(outputfilename, 'utf8')
             let mailtostr = "<a href=\"mailto:huangyg@mars22.com?subject=关于" + year + "." + month + "." + day + ".[" + taskname + "]任务&body=日期: " + date +"%0D%0A序号: " + t + "%0D%0A手稿:" + outputfilename + "%0D%0A---请勿修改邮件主题及以上内容 从下一行开始写您的想法---%0D%0A\">[email]</a>" ;
             logstr = logstr + "\n---\n\n" + mailtostr + " | [top](#top) | [index](#index)\n<a id=\"" + timelog.begin + "\"></a>\n" + outputstr;
@@ -149,10 +149,10 @@ module.exports = {
 
 
 
-        let daylog = daylog + indexstr + seasonstatstr + waitingliststr + logstr;
+        daylog = daylog + indexstr + seasonstatstr + waitingliststr + logstr;
         //console.log(daylog);
 
-        let daylogfilename = path.blogrepopath + "release/time/d." + date + ".md";
+        let daylogfilename = config.blogrepopath + "release/time/" + util.parseTemplate(config.templates.blogTime, { date: date });
         console.log("daylog file name:\n" + daylogfilename + "\ncontent:\n" + daylog);
         if (this.debug == false) {
             fs.writeFileSync(daylogfilename, daylog);
@@ -163,7 +163,7 @@ module.exports = {
         let month = date.slice(4, 6);
         let day = date.slice(6, 8);
         let season = Math.ceil(parseInt(month) / 3);
-        let seasonpath = "../data/season/" + year + "S" + season + ".yaml";
+        let seasonpath = config.dataseasonpath + util.parseTemplate(config.templates.season, { year: year, season: season });
         //console.log("seasonpath:" + seasonpath);
         let seasonobj = yaml.load(fs.readFileSync(seasonpath, 'utf8', { schema: yaml.FAILSAFE_SCHEMA }));
 
@@ -173,7 +173,7 @@ module.exports = {
         let sold = new Object();
         // old path 
         for (let m = parseInt(seasonobj.beginmonth); m <= parseInt(seasonobj.lastmonth); m++) {
-            let draftmetapath = path.draftrepopath + seasonobj.year + "/" + m.toString().padStart(2, "0") + "/";
+            let draftmetapath = config.draftrepopath + seasonobj.year + "/" + m.toString().padStart(2, "0") + "/";
             //let draftmetafilename = "../data/draft" + "/" + year + "/" ;
             if (fs.existsSync(draftmetapath)) {
                 //console.log("draftmetadata path exist:" + draftmetapath);

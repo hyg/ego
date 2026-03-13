@@ -1,7 +1,7 @@
 const fs = require('fs');
 const yaml = require('js-yaml');
-const path = require('./path.js');
-const util = require('./util.1.js');
+const config = require('./config.js');
+const util = require('./util.js');
 
 function log(...s) {
     s[0] = log.caller.name + "> " + s[0];
@@ -107,7 +107,7 @@ module.exports = {
     },
     loadAER(year) {
         let AERmap = new Object();
-        let voucherfolder = path.voucherpath + year;
+        let voucherfolder = config.voucherpath + year;
         fs.readdirSync(voucherfolder).forEach(file => {
             if (file.substr(0, 4) == "AER.") {
                 let AER = yaml.load(fs.readFileSync(voucherfolder + "/" + file, 'utf8'));
@@ -148,7 +148,7 @@ module.exports = {
         return Account;
     },
     loadAccount() {
-        account =
+        let account =
         {
             "总账": { id: 0, name: "总账", debit: { "rmb": 0.0 }, credit: { "rmb": 0.0 }, balance: { "rmb": 0.0 } },
             "银行存款": { id: 1, name: "银行存款", ftitle: "总账", debit: { "rmb": 0.0 }, credit: { "rmb": 0.0 }, balance: { "rmb": 0.0 } },

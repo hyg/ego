@@ -1,6 +1,6 @@
 const fs = require('fs');
 const yaml = require('js-yaml');
-const path = require('./path.js');
+const config = require('./config.js');
 const util = require('./util.js');
 const start = require('./start.js');
 const finish = require('./finish.js');

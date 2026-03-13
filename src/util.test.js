@@ -1,6 +1,6 @@
 const test = require('node:test');
 const assert = require('assert');
-const util = require('./util.1.js');
+const util = require('./util.js');
 const dayjs = require('dayjs');
 
 test('make meta file id',(t)=>{
@@ -56,4 +56,55 @@ test('format date milliseconds', (t) => {
 
 test('util exports dayjs', (t) => {
     assert.strictEqual(util.dayjs, dayjs);
+});
+
+test('parseTemplate: season template', (t) => {
+    const result = util.parseTemplate("{year}S{season}.yaml", { year: "2025", season: "1" });
+    assert.strictEqual(result, "2025S1.yaml");
+});
+
+test('parseTemplate: day template', (t) => {
+    const result = util.parseTemplate("d.{date}.yaml", { date: "20250313" });
+    assert.strictEqual(result, "d.20250313.yaml");
+});
+
+test('parseTemplate: blog post template', (t) => {
+    const result = util.parseTemplate("d.{date}.md", { date: "20250313" });
+    assert.strictEqual(result, "d.20250313.md");
+});
+
+test('parseTemplate: blog time plan template', (t) => {
+    const result = util.parseTemplate("release/time/d.{date}.md", { date: "20250313" });
+    assert.strictEqual(result, "release/time/d.20250313.md");
+});
+
+test('parseTemplate: draft template with multiple params', (t) => {
+    const result = util.parseTemplate("{date}.{seq}.md", { date: "20250313", seq: "01" });
+    assert.strictEqual(result, "20250313.01.md");
+});
+
+test('parseTemplate: unknown placeholder remains', (t) => {
+    const result = util.parseTemplate("{year}{unknown}.yaml", { year: "2025" });
+    assert.strictEqual(result, "2025{unknown}.yaml");
+});
+
+test('parseTemplate: empty params object', (t) => {
+    const result = util.parseTemplate("{year}.yaml", {});
+    assert.strictEqual(result, "{year}.yaml");
+});
+
+test('parseTemplate: no placeholders', (t) => {
+    const result = util.parseTemplate("static/filename.txt", { year: "2025" });
+    assert.strictEqual(result, "static/filename.txt");
+});
+
+test('parseTemplate: multiple same placeholders', (t) => {
+    const result = util.parseTemplate("{date}/{date}.md", { date: "20250313" });
+    assert.strictEqual(result, "20250313/20250313.md");
+});
+
+test('parseTemplate: with config templates', (t) => {
+    const config = require('./config.js');
+    const result = util.parseTemplate(config.templates.season, { year: "2024", season: "3" });
+    assert.strictEqual(result, "2024S3.yaml");
 });

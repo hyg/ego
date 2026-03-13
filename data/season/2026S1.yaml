@@ -633,9 +633,6 @@ todo:
     - '60': 重新设计ego.js的命令行参数，合并函数，整理代码。
   infra: []
   learn:
-    - '60': 按petri网定义设计几个实例
-    - '30': OpenFGA/SpiceDB(Zanzibar模型)
-    - '30': Flink Complex Event Processing，直接运行 DMN 4Flink 或 Rego-on-Flink 扩展。
     - '90': XSTATE https://xstate.js.org
     - '90': HPKE（Hybrid Public Key Encryption，RFC 9180）
       readme:

@@ -1,6 +1,6 @@
 const fs = require('fs');
 const yaml = require('js-yaml');
-const path = require('./path.js');
+const config = require('./config.js');
 const util = require('./util.js');
 
 function log(s) {
@@ -8,7 +8,7 @@ function log(s) {
 }
 
 module.exports = {
-    debug: true,
+    debug: false,
     devmakedayplan: function (date, mode) {
         let year = date.slice(0, 4);
         let month = date.slice(4, 6);
@@ -18,7 +18,7 @@ module.exports = {
         let waitinglist = this.makewaitinglist();
         //console.log("devmakedayplan()> waitinglist:",yaml.dump(waitinglist));
 
-        let healthpath = path.rawrepopath + "health/d." + date + ".yaml";
+        let healthpath = config.rawrepopath + "health/" + util.parseTemplate(config.templates.health, { date: date });
         //console.log("devmakedayplan()> healthpath:",healthpath);
         let healthobj = yaml.load(fs.readFileSync(healthpath, 'utf8', { schema: yaml.FAILSAFE_SCHEMA }));
         let waketime = healthobj.wake.time % 1000000;
@@ -89,7 +89,7 @@ module.exports = {
                 if (waitinglist[amount.toString()][0].readme != null) {
                     timeperiod.readme = waitinglist[amount.toString()][0].readme;
                 }
-                timeperiod.output = "draft/" + date.slice(0, 4) + "/" + date.slice(4, 6) + "/" + timeperiod.begin + ".md";
+                timeperiod.output = "draft/" + date.slice(0, 4) + "/" + timeperiod.begin + ".md";
                 drafttimearray.push(timeperiod);
                 console.log("devmakedayplan() > delete the job from %s:\n%s", waitinglist[amount.toString()][0].task, waitinglist[amount.toString()][0].name);
                 for (let j in seasonobj.todo[timeperiod.subject]) {
@@ -108,7 +108,7 @@ module.exports = {
                 //delete it from waitinglist
                 waitinglist[time[i].amount.toString()].shift();
 
-                let draftfilename = path.draftrepopath + date.slice(0, 4) + "/" + date.slice(4, 6) + "/" + begintime + ".md";
+                let draftfilename = config.draftrepopath + date.slice(0, 4) + "/" + timeperiod.begin + ".md";
                 draftstr = timeperiod.subject + ":" + timeperiod.name;
                 if (timeslice.namelink != null) {
                     draftstr = draftstr + "  [在线](" + timeslice.namelink + ")";
@@ -117,10 +117,10 @@ module.exports = {
                 let mailtostr = " <a href=\"mailto:huangyg@mars22.com?subject=关于" + year + "." + month + "." + day + ".[" + timeperiod.name + "]任务&body=日期: " + date + "%0D%0A序号: " + i + "%0D%0A手稿:" + draftfilename + "%0D%0A---请勿修改邮件主题及以上内容 从下一行开始写您的想法---%0D%0A\">[想法]</a>";
                 draftstr = draftstr + mailtostr;
 
-                indexstr = indexstr + "- " + beginhour.toString().padStart(2, "0") + ":" + beginminute.toString().padStart(2, "0") + "\t" + timeperiod.subject + ": [" + timeperiod.name + "](../" + path.gitpath + timeperiod.output + ")\n";
+                indexstr = indexstr + "- " + beginhour.toString().padStart(2, "0") + ":" + beginminute.toString().padStart(2, "0") + "\t" + timeperiod.subject + ": [" + timeperiod.name + "](../" + config.gitpath + timeperiod.output + ")\n";
                 let timestr = "## " + beginhour.toString().padStart(2, "0") + ":" + beginminute.toString().padStart(2, "0") + " ~ " + endhour.toString().padStart(2, "0") + ":" + endminute.toString().padStart(2, "0") + "\n" + timeperiod.subject + ": [" + timeperiod.name + "]\n\n";
 
-                let timeviewfilename = path.draftrepopath + date.slice(0, 4) + "/" + date.slice(4, 6) + "/" + begintime + ".md";
+                let timeviewfilename = config.draftrepopath + date.slice(0, 4) + "/" + timeperiod.begin + ".md";
                 if (this.debug == false) {
                     fs.writeFileSync(timeviewfilename, timestr);
                 }
@@ -137,10 +137,10 @@ module.exports = {
         planstr = planstr + "\n" + seasonobj.dayplan[plan].readme;
 
         let dayplanstr = "# " + year + "." + month + "." + day + ".\n计划  \n\n根据[ego模型时间接口](https://gitee.com/hyg/blog/blob/master/timeflow.md)，今天绑定模版" + mode + "(" + dayplan + ")。\n\n" + planstr + "\n---\n\n" + indexstr;
-        let dayplanfilename = path.blogrepopath + "release/time/d." + date + ".md";
+        let dayplanfilename = config.blogrepopath + "release/time/" + util.parseTemplate(config.templates.blogTime, { date: date });
 
         draftmetadata.time = drafttimearray;
-        let draftmetafilename = "../data/draft" + "/" + year + "/" + "d." + date + ".yaml";
+        let draftmetafilename = "../data/draft" + "/" + year + "/" + util.parseTemplate(config.templates.draftMeta, { date: date });
 
         if (this.debug == false) {
             fs.writeFileSync(draftmetafilename, yaml.dump(draftmetadata, { 'lineWidth': -1 }));
@@ -157,7 +157,7 @@ module.exports = {
         let year = date.slice(0, 4);
         let month = date.slice(4, 6);
         let season = Math.ceil(parseInt(month) / 3);
-        let seasonpath = "../data/season/" + year + "S" + season + ".yaml";
+        let seasonpath = config.dataseasonpath + util.parseTemplate(config.templates.season, { year: year, season: season });
         //console.log("seasonpath:" + seasonpath);
         let seasonobj = yaml.load(fs.readFileSync(seasonpath, 'utf8', { schema: yaml.FAILSAFE_SCHEMA }));
         let time = seasonobj.dayplan[plan].time;
@@ -182,7 +182,7 @@ module.exports = {
                 }
                 //timeperiod.subject = "tbd";
                 //timeperiod.name = "tbd";
-                timeperiod.output = "draft/" + date.slice(0, 4) + "/" + date.slice(4, 6) + "/" + timeperiod.begin + ".md";
+                timeperiod.output = "draft/" + date.slice(0, 4) + "/" + timeperiod.begin + ".md";
                 drafttimearray.push(timeperiod);
 
                 console.log("delete the job from %s:\n%s", waitinglist[time[i].amount.toString()][0].task, waitinglist[time[i].amount.toString()][0].name);
@@ -207,8 +207,8 @@ module.exports = {
         }
         draftmetadata.time = drafttimearray;
 
-        //let draftmetafilename = path.draftrepopath + year + "/" + month + "/" + "d." + date + ".yaml";
-        let draftmetafilename = "../data/draft" + "/" + year + "/" + "d." + date + ".yaml";
+        //let draftmetafilename = config.draftrepopath + year + "/" + month + "/" + "d." + date + ".yaml";
+        let draftmetafilename = "../data/draft" + "/" + year + "/" + util.parseTemplate(config.templates.draftMeta, { date: date });
         console.log(draftmetafilename);
         console.log(yaml.dump(draftmetadata));
         if (this.debug == false) {
@@ -222,7 +222,7 @@ module.exports = {
         let year = date.slice(0, 4);
         let month = date.slice(4, 6);
         let day = date.slice(6, 8);
-        let draftmetafilename = "../data/draft" + "/" + year + "/" + "d." + date + ".yaml";
+        let draftmetafilename = "../data/draft" + "/" + year + "/" + util.parseTemplate(config.templates.draftMeta, { date: date });
         let draftmetadata;
         try {
             if (fs.existsSync(draftmetafilename)) {
@@ -244,7 +244,7 @@ module.exports = {
         }
 
         let season = Math.ceil(parseInt(month) / 3);
-        let seasonpath = "../data/season/" + year + "S" + season + ".yaml";
+        let seasonpath = config.dataseasonpath + util.parseTemplate(config.templates.season, { year: year, season: season });
         //console.log("seasonpath:" + seasonpath);
         let seasonobj = yaml.load(fs.readFileSync(seasonpath, 'utf8', { schema: yaml.FAILSAFE_SCHEMA }));
         let time = seasonobj.dayplan[plan].time;
@@ -270,7 +270,7 @@ module.exports = {
                 draftstr = draftstr + "[在线](" + timeslice.namelink + ")";
             }
             if (timeslice.type == "work") {
-                let draftfilename = path.draftrepopath + date.slice(0, 4) + "/" + date.slice(4, 6) + "/" + begintime + ".md";
+                let draftfilename = config.draftrepopath + date.slice(0, 4) + "/" + begintime + ".md";
                 draftstr = draftstr + " [离线](" + draftfilename + ")";
 
                 let mailtostr = " <a href=\"mailto:huangyg@mars22.com?subject=关于" + year + "." + month + "." + day + ".[" + timeslicename[begintime] + "]任务&body=日期: " + date + "%0D%0A序号: " + i + "%0D%0A手稿:" + draftfilename + "%0D%0A---请勿修改邮件主题及以上内容 从下一行开始写您的想法---%0D%0A\">[想法]</a>";
@@ -299,10 +299,10 @@ module.exports = {
             let endhour = beginhour + parseInt((beginminute + amount) / 60);
             let endminute = (beginminute + amount) % 60;
             //console.log(begintime,beginhour,beginminute,amount,endhour,endminute);
-            dayplan = dayplan + "- " + beginhour.toString().padStart(2, "0") + ":" + beginminute.toString().padStart(2, "0") + "\t" + subject + "  [" + taskname + "](../" + path.gitpath + output + ")\n";
+            dayplan = dayplan + "- " + beginhour.toString().padStart(2, "0") + ":" + beginminute.toString().padStart(2, "0") + "\t" + subject + "  [" + taskname + "](../" + config.gitpath + output + ")\n";
             let timestr = "## " + beginhour.toString().padStart(2, "0") + ":" + beginminute.toString().padStart(2, "0") + " ~ " + endhour.toString().padStart(2, "0") + ":" + endminute.toString().padStart(2, "0") + "\n" + taskname + "\n\n";
 
-            let timeviewfilename = path.draftrepopath + date.slice(0, 4) + "/" + date.slice(4, 6) + "/" + begintime + ".md";
+            let timeviewfilename = config.draftrepopath + date.slice(0, 4) + "/" + begintime + ".md";
             console.log("time slice draft file name:" + timeviewfilename);
             console.log(timestr);
             if (this.debug == false) {
@@ -310,7 +310,7 @@ module.exports = {
             }
         }
 
-        let dayplanfilename = path.blogrepopath + "release/time/d." + date + ".md";
+        let dayplanfilename = config.blogrepopath + "release/time/" + util.parseTemplate(config.templates.blogTime, { date: date });
         console.log("dayplan file name:\n" + dayplanfilename + "\ncontent:\n" + dayplan);
         if (this.debug == false) {
             fs.writeFileSync(dayplanfilename, dayplan);
@@ -321,7 +321,7 @@ module.exports = {
         let year = date.slice(0, 4);
         let month = date.slice(4, 6);
         let season = Math.ceil(parseInt(month) / 3);
-        let seasonpath = "../data/season/" + year + "S" + season + ".yaml";
+        let seasonpath = config.dataseasonpath + util.parseTemplate(config.templates.season, { year: year, season: season });
         //console.log("seasonpath:" + seasonpath);
         let seasonobj = yaml.load(fs.readFileSync(seasonpath, 'utf8', { schema: yaml.FAILSAFE_SCHEMA }));
         let todoobj = seasonobj.todo;
@@ -392,7 +392,7 @@ module.exports = {
         let year = date.slice(0, 4);
         let month = date.slice(4, 6);
         let season = Math.ceil(parseInt(month) / 3);
-        let seasonpath = "../data/season/" + year + "S" + season + ".yaml";
+        let seasonpath = config.dataseasonpath + util.parseTemplate(config.templates.season, { year: year, season: season });
         //console.log("seasonpath:" + seasonpath);
         let seasonobj = yaml.load(fs.readFileSync(seasonpath, 'utf8', { schema: yaml.FAILSAFE_SCHEMA }));
         let dayplanobj = seasonobj.dayplan;
@@ -416,7 +416,7 @@ module.exports = {
                     if (waitinglist[time[i].amount.toString()][0].readme != null) {
                         timeperiod.readme = waitinglist[time[i].amount.toString()][0].readme;
                     }
-                    timeperiod.output = "draft/" + date.slice(0, 4) + "/" + date.slice(4, 6) + "/" + timeperiod.begin + ".md";
+                    timeperiod.output = "draft/" + date.slice(0, 4) + "/" + timeperiod.begin + ".md";
                     drafttimearray.push(timeperiod);
                     //console.log("drafttimearray:",yaml.dump(drafttimearray));
                     //deleta it from season.todo

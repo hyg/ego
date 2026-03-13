@@ -1,8 +1,8 @@
 const fs = require('fs');
 const yaml = require('js-yaml');
-const path = require('./path.js');
-const util = require('./util.1.js');
-const dayjs = require('dayjs');
+const config = require('./config.js');
+const util = require('./util.js');
+//const dayjs = require('dayjs');
 
 function log(...s) {
     s[0] = log.caller.name + "> " + s[0];
@@ -10,20 +10,20 @@ function log(...s) {
 }
 
 module.exports = {
-    debug: true,
+    debug: false,
     seasonfilename: function (datestr = "") {
         let theDate;
         if (datestr != "") {
             theDate = util.str2date(datestr);
         } else {
-            theDate = dayjs();
+            theDate = util.dayjs();
         }
 
         let year = theDate.year();
         let month = theDate.month() + 1;
         let season = Math.ceil(month / 3);
 
-        let seasonfilename = path.datapath + "season/" + year + "S" + season + ".yaml";
+        let seasonfilename = config.dataseasonpath + util.parseTemplate(config.templates.season, { year: year, season: season });
         return seasonfilename;
     },
     loadseasonobj: function (datestr = "") {
@@ -47,7 +47,7 @@ module.exports = {
         let firstdateofseason = seasonobj.year + seasonobj.beginmonth.toString().padStart(2, "0") + seasonobj.beginday.toString().padStart(2, "0");
         let lastdateofseason = seasonobj.year + seasonobj.lastmonth.toString().padStart(2, "0") + seasonobj.lastday.toString().padStart(2, "0");
 
-        let daymetadatapath = path.daymetadatapath + seasonobj.year + "/";
+        let daymetadatapath = config.daymetadatapath + seasonobj.year + "/";
         if (fs.existsSync(daymetadatapath)) {
             fs.readdirSync(daymetadatapath).forEach(file => {
                 if (file.substring(file.lastIndexOf(".")) == ".yaml") {
@@ -92,7 +92,7 @@ module.exports = {
         return seasonobj;
     },
     addtodoitem(seasonobj, task, name, amount, readme) {
-        log("add the todo item to %s: %s", task, name,amount,readme);
+        log("add the todo item to %s: \n%s\n%d\n%s", task, name,amount,readme ? readme.join("\n") : "");
 
         log("before add todo item:\n" + yaml.dump(seasonobj.todo[task]));
         let todoarray = seasonobj.todo[task];
@@ -205,7 +205,7 @@ module.exports = {
         let firstdateofseason = seasonobj.year + seasonobj.beginmonth.toString().padStart(2, "0") + seasonobj.beginday.toString().padStart(2, "0");
         let lastdateofseason = seasonobj.year + seasonobj.lastmonth.toString().padStart(2, "0") + seasonobj.lastday.toString().padStart(2, "0");
 
-        let daymetadatapath = path.daymetadatapath + seasonobj.year + "/";
+        let daymetadatapath = config.daymetadatapath + seasonobj.year + "/";
         if (fs.existsSync(daymetadatapath)) {
             fs.readdirSync(daymetadatapath).forEach(file => {
                 if (file.substring(file.lastIndexOf(".")) == ".yaml") {
