@@ -862,6 +862,12 @@ todo:
       readme:
         - https://zh.javascript.info/promise-api
   js:
+    - '60': learn factory, constructor, prototype
+      readme:
+        - https://juejin.cn/post/6844903653774458888
+        - https://segmentfault.com/a/1190000019054466
+        - https://www.javascripttutorial.net/javascript-factory-functions/
+        - https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/Objects/Object_prototypes
     - '90': openpgp v6.1.1.
       readme:
         - read ../../draft/2025/20250601.a.md
@@ -874,20 +880,13 @@ todo:
         - https://www.npmjs.com/package/jsonpath
         - https://www.npmjs.com/package/@pulumi/query
         - read ../../draft/2025/20250528.01.md
-    - '60': learn factory, constructor, prototype
+    - '30': 新版raw.js的子命令-营养成分详情
       readme:
-        - https://juejin.cn/post/6844903653774458888
-        - https://segmentfault.com/a/1190000019054466
-        - https://www.javascripttutorial.net/javascript-factory-functions/
-        - https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/Objects/Object_prototypes
-      bind:
-        - '30': 新版raw.js的子命令-营养成分详情
-          readme:
-            - 可选多种营养成分
-            - 考虑不同UI
-            - 使用新的模块化设计
-            - 使用新的data model
-        - '30': 新版raw.js的子命令-营养成分排序
+        - 可选多种营养成分
+        - 考虑不同UI
+        - 使用新的模块化设计
+        - 使用新的data model
+    - '30': 新版raw.js的子命令-营养成分排序
     - '60': debug
       readme:
         - https://github.com/nswbmw/node-in-debugging
