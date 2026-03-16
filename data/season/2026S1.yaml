@@ -633,6 +633,7 @@ todo:
     - '60': 重新设计ego.js的命令行参数，合并函数，整理代码。
   infra: []
   learn:
+    - '30': 学习优秀的petri网设计案例
     - '90': XSTATE https://xstate.js.org
     - '90': HPKE（Hybrid Public Key Encryption，RFC 9180）
       readme:
@@ -644,7 +645,6 @@ todo:
         - https://asecuritysite.com/blog/2023-06-06_For-Security--Go-Hybrid--Hybrid-Public-Key-Encryption--HPKE--and-RFC-9180-1911da1ff831.html
         - https://blog.cloudflare.com/hybrid-public-key-encryption/
         - https://cryspen.com/post/hpke_spec/
-    - '30': 学习优秀的petri网设计案例
     - '60': Zapier
       readme:
         - read ../../draft/2025/20251010.02.md
@@ -868,6 +868,12 @@ todo:
         - https://segmentfault.com/a/1190000019054466
         - https://www.javascripttutorial.net/javascript-factory-functions/
         - https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/Objects/Object_prototypes
+    - '30': 新版raw.js的子命令-营养成分详情
+      readme:
+        - 可选多种营养成分
+        - 考虑不同UI
+        - 使用新的模块化设计
+        - 使用新的data model
     - '90': openpgp v6.1.1.
       readme:
         - read ../../draft/2025/20250601.a.md
@@ -880,12 +886,6 @@ todo:
         - https://www.npmjs.com/package/jsonpath
         - https://www.npmjs.com/package/@pulumi/query
         - read ../../draft/2025/20250528.01.md
-    - '30': 新版raw.js的子命令-营养成分详情
-      readme:
-        - 可选多种营养成分
-        - 考虑不同UI
-        - 使用新的模块化设计
-        - 使用新的data model
     - '30': 新版raw.js的子命令-营养成分排序
     - '60': debug
       readme:
