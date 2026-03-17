@@ -572,7 +572,7 @@ time:
     raw: 315
     infra: 225
     learn: 315
-    js: 150
+    js: 210
 todo:
   PSMD:
     - '195': term + COM matedata -> deploy metadata -> deploy view
@@ -862,12 +862,6 @@ todo:
       readme:
         - https://zh.javascript.info/promise-api
   js:
-    - '60': learn factory, constructor, prototype
-      readme:
-        - https://juejin.cn/post/6844903653774458888
-        - https://segmentfault.com/a/1190000019054466
-        - https://www.javascripttutorial.net/javascript-factory-functions/
-        - https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/Objects/Object_prototypes
     - '30': 新版raw.js的子命令-营养成分详情
       readme:
         - 可选多种营养成分
