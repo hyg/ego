@@ -1,0 +1,64 @@
+date: '20260318'
+mode: '2'
+plan: 2c
+time:
+  - begin: '20260318075600'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20260318081100'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20260318091100'
+    amount: 45
+    type: food
+    name: 早餐
+  - begin: '20260318095600'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20260318104100'
+    amount: 18
+    type: free
+    name: 休整
+  - begin: '20260318110000'
+    amount: 180
+    type: food
+    name: 备餐、午餐午休
+  - begin: '20260318140000'
+    amount: 0
+    redo: 90
+    type: work
+    name: 工作
+    subject: raw
+    title: 整理代码，理顺food.js几个成员函数之间的调用关系
+    readme:
+      - read ../../draft/2024/09/20240907143000.md
+      - read ../../draft/2026/20260302.01.md
+    output: ../../draft/2026/20260318.01.md
+    namelink: http://simp.ly/p/lsBYG9
+  - begin: '20260318153000'
+    amount: 30
+    type: free
+    name: 休整
+  - begin: '20260318160000'
+    amount: 0
+    redo: 60
+    type: work
+    name: 工作
+    subject: learn
+    title: Zapier
+    readme:
+      - read ../../draft/2025/20251010.02.md
+    output: ../../draft/2026/20260318.02.md
+    namelink: http://simp.ly/p/MpcbHD
+  - begin: '20260318170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20260318190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
+    output: ../../draft/2026/20260318.03.md
