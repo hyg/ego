@@ -633,9 +633,6 @@ todo:
     - '60': 重新设计ego.js的命令行参数，合并函数，整理代码。
   infra: []
   learn:
-    - '60': Zapier
-      readme:
-        - read ../../draft/2025/20251010.02.md
     - '30': 学习优秀的petri网设计案例
     - '90': XSTATE https://xstate.js.org
     - '90': HPKE（Hybrid Public Key Encryption，RFC 9180）
