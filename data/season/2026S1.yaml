@@ -633,6 +633,9 @@ todo:
     - '60': 重新设计ego.js的命令行参数，合并函数，整理代码。
   infra: []
   learn:
+    - '60': OutSystems, Mendix,
+      readme:
+        - read ../../draft/2025/20251010.01.md
     - '90': Polygon/Arbitrum
     - '30': 学习优秀的petri网设计案例
     - '90': XSTATE https://xstate.js.org
@@ -646,9 +649,6 @@ todo:
         - https://asecuritysite.com/blog/2023-06-06_For-Security--Go-Hybrid--Hybrid-Public-Key-Encryption--HPKE--and-RFC-9180-1911da1ff831.html
         - https://blog.cloudflare.com/hybrid-public-key-encryption/
         - https://cryspen.com/post/hpke_spec/
-    - '60': OutSystems, Mendix,
-      readme:
-        - read ../../draft/2025/20251010.01.md
     - '90': 去中心化的向量数据库，用于业务发现。
       readme:
         - Glacier DeVector（Glacier Network）
