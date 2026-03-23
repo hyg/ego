@@ -636,8 +636,8 @@ todo:
     - '60': OutSystems, Mendix,
       readme:
         - read ../../draft/2025/20251010.01.md
-    - '90': Polygon/Arbitrum
     - '30': 学习优秀的petri网设计案例
+    - '90': Polygon/Arbitrum
     - '90': XSTATE https://xstate.js.org
     - '90': HPKE（Hybrid Public Key Encryption，RFC 9180）
       readme:
