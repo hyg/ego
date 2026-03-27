@@ -10,7 +10,7 @@ function log(...s) {
 }
 
 module.exports = {
-    debug: true,
+    debug: false,
     seasonfilename: function (datestr = "") {
         let theDate;
         if (datestr != "") {

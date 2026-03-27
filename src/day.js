@@ -11,7 +11,7 @@ function log(...s) {
 }
 
 module.exports = {
-    debug: true,
+    debug: false,
     getwaketime: function (diff = 0) {
         log("diff:", diff);
         let theDate = new Date();

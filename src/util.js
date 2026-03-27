@@ -49,6 +49,28 @@ module.exports = {
         }
         return date.format(dayjsFmt);
     },
+    /**
+     * 新安装 Windows 环境的 SSH 配置步骤：
+     *
+     * 1. 启用 ssh-agent 服务（管理员 PowerShell）：
+     *    Set-Service ssh-agent -StartupType Automatic
+     *    Start-Service ssh-agent
+     *
+     * 2. 生成或导入 SSH 密钥，添加到 ssh-agent：
+     *    ssh-keygen -t ed25519 -C "your@email.com"
+     *    ssh-add C:\Users\<用户名>\.ssh\id_ed25519
+     *
+     * 3. 配置 git 使用 Windows 自带的 OpenSSH（不是 Git 自带的 ssh）：
+     *    git config --global core.sshCommand "C:\Windows\System32\OpenSSH\ssh.exe -o StrictHostKeyChecking=accept-new"
+     *
+     * 4. 将公钥注册到远程平台（gitee / github / bitbucket 等）。
+     *
+     * 原理：
+     * - 命令行 git push：读取 core.sshCommand，由 Windows ssh 连接 ssh-agent 完成认证。
+     * - bun over（Node.js）：simple-git 的 push 不继承控制台 stdin，ssh 无法交互输入密码短语，
+     *   因此本函数用 execSync 调 git push 并设 stdio:'inherit'，同时通过 GIT_SSH_COMMAND
+     *   指定 Windows ssh，确保子进程也能连接 ssh-agent。
+     */
     gitstep: async function (path, msg, remote, branch) {
         let statusSummary = null;
         try {
