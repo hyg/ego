@@ -2,7 +2,8 @@ const crypto = require('crypto');
 const dayjs = require('dayjs');
 
 // 在加载 simple-git 之前设置环境变量，确保 git 进程能继承
-process.env.GIT_SSH_COMMAND = 'ssh -o StrictHostKeyChecking=accept-new';
+// 使用 ssh 命令并添加 Key 路径，确保使用正确的密钥
+process.env.GIT_SSH_COMMAND = 'ssh -i C:/Users/hyg/.ssh/id_ed25519 -o StrictHostKeyChecking=accept-new -o IdentitiesOnly=yes';
 
 const simpleGit = require('simple-git');
 const customParseFormat = require("dayjs/plugin/customParseFormat");
