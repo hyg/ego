@@ -1,7 +1,10 @@
 const crypto = require('crypto');
 const dayjs = require('dayjs');
+
+// 在加载 simple-git 之前设置环境变量，确保 git 进程能继承
+process.env.GIT_SSH_COMMAND = 'ssh -o StrictHostKeyChecking=accept-new';
+
 const simpleGit = require('simple-git');
-const GIT_SSH_COMMAND = 'ssh -o StrictHostKeyChecking=accept-new';
 const customParseFormat = require("dayjs/plugin/customParseFormat");
 dayjs.extend(customParseFormat);
 
@@ -60,8 +63,6 @@ module.exports = {
         if (statusSummary.files.length) {
             console.log("file changed:", statusSummary.files);
             try {
-                // 设置进程级别的 SSH 环境变量
-                process.env.GIT_SSH_COMMAND = GIT_SSH_COMMAND;
                 const git = simpleGit(path, { config: ['core.autocrlf=false'] });
                 await git.add('.');
                 await git.commit(msg);
