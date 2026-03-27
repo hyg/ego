@@ -60,7 +60,8 @@ module.exports = {
             console.log("file changed:", statusSummary.files);
             try {
                 // 使用 .env() 方法传递 GIT_SSH_COMMAND，需要展开 process.env
-                const GIT_SSH_COMMAND = 'ssh -i C:/Users/hyg/.ssh/id_ed25519 -o StrictHostKeyChecking=accept-new -o IdentitiesOnly=yes';
+                // SSH 配置文件已设置密钥，只需传递基本命令
+                const GIT_SSH_COMMAND = 'ssh -o StrictHostKeyChecking=accept-new';
                 const git = simpleGit(path, { config: ['core.autocrlf=false'] })
                     .env({ ...process.env, GIT_SSH_COMMAND });
                 await git.add('.');
