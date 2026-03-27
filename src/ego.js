@@ -10,7 +10,7 @@ function log(...s) {
     console.log(...s);
 }
 
-const debug = false;
+const debug = true;
 day.debug = debug;
 
 program

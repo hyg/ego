@@ -1,0 +1,44 @@
+date: '20260327'
+mode: '1'
+plan: 1e
+time:
+  - begin: '20260327113700'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20260327115200'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20260327125200'
+    amount: 45
+    type: food
+    name: 午餐
+  - begin: '20260327133700'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20260327142200'
+    amount: 97
+    type: free
+    name: 休整
+  - begin: '20260327160000'
+    amount: 0
+    redo: 60
+    type: work
+    name: 静默工作
+    subject: js
+    title: debug
+    readme:
+      - https://github.com/nswbmw/node-in-debugging
+    output: ../../draft/2026/20260327.01.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20260327170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20260327190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
+    output: ../../draft/2026/20260327.02.md

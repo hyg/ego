@@ -11,7 +11,7 @@ const program = new Command();
 
 const log = s => console.log(s);
 
-const debug = false;
+const debug = true;
 start.debug = debug;
 finish.debug = debug;
 

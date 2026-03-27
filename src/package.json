@@ -14,6 +14,6 @@
     "i1": "node ego day init 1",
     "i2": "node ego day init 2",
     "over": "node ego day over",
-    "git": "git add . && git commit -m \"package.json script\" & git push all"
+    "git": "git add . && git commit -m \"package.json script\" && git push all"
   }
 }

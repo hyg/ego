@@ -1,7 +1,7 @@
 const crypto = require('crypto');
 const dayjs = require('dayjs');
 const simpleGit = require('simple-git');
-const GIT_SSH_COMMAND = 'C:/Progra~1/PuTTY/plink.exe';
+const GIT_SSH_COMMAND = 'ssh -o StrictHostKeyChecking=accept-new';
 const customParseFormat = require("dayjs/plugin/customParseFormat");
 dayjs.extend(customParseFormat);
 
@@ -54,22 +54,21 @@ module.exports = {
         try {
             statusSummary = await simpleGit(path).status();
         } catch (e) {
-            // handle the error
+            console.error("git status error:", e);
+            throw e;
         }
         if (statusSummary.files.length) {
             console.log("file changed:", statusSummary.files);
-            //simpleGit(path, { config: ['core.autocrlf=false', 'http.https://github.com.proxy=http://127.0.0.1:9910'] })
-            simpleGit(path, { config: ['core.autocrlf=false'] })
-                .env('GIT_SSH_COMMAND', GIT_SSH_COMMAND)
-                .add('./*')
-                .commit(msg)
-                .push(remote, branch)
-                .then((data) => {
-                    console.log('success:', path, "\n", data);
-                })
-                .catch((err) => {
-                    console.log(err);
-                });
+            try {
+                const git = simpleGit(path, { config: ['core.autocrlf=false'] });
+                await git.env('GIT_SSH_COMMAND', GIT_SSH_COMMAND).add('.');
+                await git.commit(msg);
+                await git.push(remote, branch);
+                console.log('success:', path);
+            } catch (err) {
+                console.error("git operation failed:", err);
+                throw err;
+            }
         } else {
             console.log("non file changed:", path);
         }

@@ -633,9 +633,6 @@ todo:
     - '60': 重新设计ego.js的命令行参数，合并函数，整理代码。
   infra: []
   learn:
-    - '60': OutSystems, Mendix,
-      readme:
-        - read ../../draft/2025/20251010.01.md
     - '30': 学习优秀的petri网设计案例
     - '90': Polygon/Arbitrum
     - '90': XSTATE https://xstate.js.org
@@ -859,6 +856,9 @@ todo:
       readme:
         - https://zh.javascript.info/promise-api
   js:
+    - '60': debug
+      readme:
+        - https://github.com/nswbmw/node-in-debugging
     - '30': 新版raw.js的子命令-营养成分详情
       readme:
         - 可选多种营养成分
@@ -878,9 +878,6 @@ todo:
         - https://www.npmjs.com/package/@pulumi/query
         - read ../../draft/2025/20250528.01.md
     - '30': 新版raw.js的子命令-营养成分排序
-    - '60': debug
-      readme:
-        - https://github.com/nswbmw/node-in-debugging
     - '60': The Node.js best practices list (July 2024)
       readme:
         - https://github.com/goldbergyoni/nodebestpractices
