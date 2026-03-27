@@ -60,12 +60,9 @@ module.exports = {
         if (statusSummary.files.length) {
             console.log("file changed:", statusSummary.files);
             try {
-                const git = simpleGit(path, { 
-                    config: ['core.autocrlf=false'],
-                    env: {
-                        GIT_SSH_COMMAND: GIT_SSH_COMMAND
-                    }
-                });
+                // 设置进程级别的 SSH 环境变量
+                process.env.GIT_SSH_COMMAND = GIT_SSH_COMMAND;
+                const git = simpleGit(path, { config: ['core.autocrlf=false'] });
                 await git.add('.');
                 await git.commit(msg);
                 await git.push(remote, branch);
