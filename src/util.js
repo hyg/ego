@@ -60,8 +60,13 @@ module.exports = {
         if (statusSummary.files.length) {
             console.log("file changed:", statusSummary.files);
             try {
-                const git = simpleGit(path, { config: ['core.autocrlf=false'] });
-                await git.env('GIT_SSH_COMMAND', GIT_SSH_COMMAND).add('.');
+                const git = simpleGit(path, { 
+                    config: ['core.autocrlf=false'],
+                    env: {
+                        GIT_SSH_COMMAND: GIT_SSH_COMMAND
+                    }
+                });
+                await git.add('.');
                 await git.commit(msg);
                 await git.push(remote, branch);
                 console.log('success:', path);
