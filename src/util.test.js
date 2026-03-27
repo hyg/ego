@@ -108,3 +108,33 @@ test('parseTemplate: with config templates', (t) => {
     const result = util.parseTemplate(config.templates.season, { year: "2024", season: "3" });
     assert.strictEqual(result, "2024S3.yaml");
 });
+
+test('gitstep: test git operation', async (t) => {
+    const path = require('path');
+    const fs = require('fs');
+    
+    // 使用 ego 项目根目录作为测试路径
+    const testPath = path.join(__dirname, '..');
+    const testFile = path.join(testPath, 'test_gitstep_marker.txt');
+    
+    try {
+        // 创建一个测试文件
+        fs.writeFileSync(testFile, 'gitstep test at ' + new Date().toISOString());
+        console.log('created test file:', testFile);
+        
+        // 执行 gitstep
+        await util.gitstep(testPath, 'test gitstep from util.test.js', 'gitee', 'master');
+        
+        // 清理测试文件
+        if (fs.existsSync(testFile)) {
+            fs.unlinkSync(testFile);
+        }
+    } catch (err) {
+        console.error('gitstep test error:', err.message);
+        // 清理测试文件
+        if (fs.existsSync(testFile)) {
+            fs.unlinkSync(testFile);
+        }
+        throw err;
+    }
+});
