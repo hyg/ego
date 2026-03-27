@@ -1,6 +1,7 @@
 const crypto = require('crypto');
 const dayjs = require('dayjs');
 const simpleGit = require('simple-git');
+const { execSync } = require('child_process');
 const customParseFormat = require("dayjs/plugin/customParseFormat");
 dayjs.extend(customParseFormat);
 
@@ -59,14 +60,14 @@ module.exports = {
         if (statusSummary.files.length) {
             console.log("file changed:", statusSummary.files);
             try {
-                // 使用 .env() 方法传递 GIT_SSH_COMMAND，需要展开 process.env
-                // SSH 配置文件已设置密钥，只需传递基本命令
-                const GIT_SSH_COMMAND = 'ssh -o StrictHostKeyChecking=accept-new';
-                const git = simpleGit(path, { config: ['core.autocrlf=false'] })
-                    .env({ ...process.env, GIT_SSH_COMMAND });
+                const git = simpleGit(path, { config: ['core.autocrlf=false'] });
                 await git.add('.');
                 await git.commit(msg);
-                await git.push(remote, branch);
+                execSync(`git push ${remote} ${branch}`, {
+                    cwd: path,
+                    stdio: 'inherit',
+                    env: { ...process.env, GIT_SSH: 'C:\\Windows\\System32\\OpenSSH\\ssh.exe' }
+                });
                 console.log('success:', path);
             } catch (err) {
                 console.error("git operation failed:", err);
