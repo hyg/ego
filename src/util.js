@@ -66,7 +66,7 @@ module.exports = {
                 execSync(`git push ${remote} ${branch}`, {
                     cwd: path,
                     stdio: 'inherit',
-                    env: { ...process.env, GIT_SSH: 'C:\\Windows\\System32\\OpenSSH\\ssh.exe' }
+                    env: { ...process.env, GIT_SSH_COMMAND: '"C:\\Windows\\System32\\OpenSSH\\ssh.exe" -o StrictHostKeyChecking=accept-new' }
                 });
                 console.log('success:', path);
             } catch (err) {
