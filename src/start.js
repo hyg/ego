@@ -8,7 +8,7 @@ function log(s) {
 }
 
 module.exports = {
-    debug: true,
+    debug: false,
     devmakedayplan: function (date, mode) {
         let year = date.slice(0, 4);
         let month = date.slice(4, 6);
