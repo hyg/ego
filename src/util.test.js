@@ -2,6 +2,19 @@ const test = require('node:test');
 const assert = require('assert');
 const util = require('./util.js');
 const dayjs = require('dayjs');
+const { execSync } = require('child_process');
+
+test('ssh-agent: can connect to agent and list keys', (t) => {
+    const output = execSync('"C:\\Windows\\System32\\OpenSSH\\ssh-add.exe" -l', { encoding: 'utf8' });
+    assert.match(output, /ED25519|RSA|SHA256/);
+    console.log('ssh-agent keys:', output.trim());
+});
+
+test('ssh-agent: can authenticate to gitee via Windows ssh', (t) => {
+    const output = execSync('"C:\\Windows\\System32\\OpenSSH\\ssh.exe" -T git@gitee.com', { encoding: 'utf8', timeout: 15000 });
+    assert.match(output, /successfully authenticated|你好/);
+    console.log('gitee auth:', output.trim());
+});
 
 test('make meta file id',(t)=>{
     assert.strictEqual(util.makemetafileid("入门目录202404151600-3"),"4b12ac08");

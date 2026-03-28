@@ -67,9 +67,8 @@ module.exports = {
      *
      * 原理：
      * - 命令行 git push：读取 core.sshCommand，由 Windows ssh 连接 ssh-agent 完成认证。
-     * - bun over（Node.js）：simple-git 的 push 不继承控制台 stdin，ssh 无法交互输入密码短语，
-     *   因此本函数用 execSync 调 git push 并设 stdio:'inherit'，同时通过 GIT_SSH_COMMAND
-     *   指定 Windows ssh，确保子进程也能连接 ssh-agent。
+     * - bun over（Node.js）：通过 .env() 传入 GIT_SSH_COMMAND，simple-git 调起的 git 子进程
+     *   使用 Windows ssh 连接 ssh-agent，无需交互输入密码短语。
      */
     gitstep: async function (path, msg, remote, branch) {
         let statusSummary = null;
@@ -82,14 +81,11 @@ module.exports = {
         if (statusSummary.files.length) {
             console.log("file changed:", statusSummary.files);
             try {
-                const git = simpleGit(path, { config: ['core.autocrlf=false'] });
+                const git = simpleGit(path, { config: ['core.autocrlf=false'] })
+                    .env({ ...process.env, GIT_SSH_COMMAND: '"C:\\Windows\\System32\\OpenSSH\\ssh.exe" -o StrictHostKeyChecking=accept-new' });
                 await git.add('.');
                 await git.commit(msg);
-                execSync(`git push ${remote} ${branch}`, {
-                    cwd: path,
-                    stdio: 'inherit',
-                    env: { ...process.env, GIT_SSH_COMMAND: '"C:\\Windows\\System32\\OpenSSH\\ssh.exe" -o StrictHostKeyChecking=accept-new' }
-                });
+                await git.push(remote, branch);
                 console.log('success:', path);
             } catch (err) {
                 console.error("git operation failed:", err);
