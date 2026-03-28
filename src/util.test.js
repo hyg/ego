@@ -12,8 +12,9 @@ test('ssh-agent: can connect to agent and list keys', (t) => {
 
 test('ssh-agent: can authenticate to gitee via Windows ssh', (t) => {
     const output = execSync('"C:\\Windows\\System32\\OpenSSH\\ssh.exe" -T git@gitee.com', { encoding: 'utf8', timeout: 15000 });
-    assert.match(output, /successfully authenticated|你好/);
-    console.log('gitee auth:', output.trim());
+    const clean = output.replace(/\x1B\[[0-9;]*m/g, '');
+    assert.match(clean, /successfully authenticated|你好/);
+    console.log('gitee auth:', clean.trim());
 });
 
 test('make meta file id',(t)=>{
