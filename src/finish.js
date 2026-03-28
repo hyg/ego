@@ -4,7 +4,7 @@ const config = require('./config.js');
 const start = require('./start.js');
 
 module.exports = {
-    debug: false,
+    debug: true,
     maketomorrowinfo: function (date) {
         let year = date.slice(0, 4);
         let month = date.slice(4, 6);
