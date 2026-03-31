@@ -1,0 +1,17 @@
+date: 2026-03-31
+VoucherID: 4200003071202603311097717444
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: ego.it
+      asset: rmb
+      amount: 360.00
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 360.00
+comment:
+  - name: 计算机学会年费
+    amount: 1
+    unit: year
+    asset: 360.00

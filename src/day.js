@@ -4,10 +4,31 @@ const config = require('./config.js');
 const util = require('./util.js');
 const season = require('./season.js');
 const wl = require('./waitinglist.js');
+const task = require('./task.js');
+const draft = require('./draft.js');
 
 function log(...s) {
     s[0] = log.caller.name + "> " + s[0];
     console.log(...s);
+}
+
+// 判断是否为旧格式季度（2026S1及以前）
+function isLegacySeason(datestr) {
+    let theDate;
+    if (datestr && datestr !== "") {
+        theDate = util.str2date(datestr);
+    } else {
+        theDate = util.dayjs();
+    }
+    const year = theDate.year();
+    const month = theDate.month() + 1;
+    const seasonNum = Math.ceil(month / 3);
+    return year < 2026 || (year === 2026 && seasonNum < 2);
+}
+
+// 判断timeperiod是否使用新格式（有task和todo字段）
+function isNewFormat(timeperiod) {
+    return timeperiod.task && timeperiod.todo;
 }
 
 module.exports = {
@@ -233,16 +254,31 @@ module.exports = {
 
         return dayobj;
     },
-    initdraft: function (timeperiod) {
+    initdraft: function (timeperiod, dateStr) {
         if (timeperiod.type == 'check') {
             let draftstr = "## check: [零散笔记]\n\n";
             return draftstr;
         }
 
+        // 新格式：使用task.todo字段，从task获取历史手稿
+        if (isNewFormat(timeperiod)) {
+            const taskId = timeperiod.task;
+            const todoName = timeperiod.todo;
+            
+            let draftstr = "## " + taskId + ": [" + todoName + "]\n\n";
+            
+            // 从task获取历史手稿并汇编
+            const historyDrafts = draft.assembleHistoryDrafts(taskId, todoName);
+            if (historyDrafts) {
+                draftstr += historyDrafts;
+            }
+            
+            return draftstr;
+        }
+        
+        // 旧格式：使用subject.title字段，从readme获取
         let draftstr = "## " + timeperiod.subject + ": [" + timeperiod.title + "]\n\n";
         if (timeperiod.readme != null) {
-            //log("timeperiod.readme:",timeperiod.readme);
-            //let readme = yaml.load(timeperiod.readme);
             let readme = [...timeperiod.readme];
             log("readme:", readme);
             for (let id in readme) {
@@ -273,13 +309,25 @@ module.exports = {
             let draftstr = "";
             if (timeslice.type == "work") {
                 let draftfilename = config.draftrepopath + year + "/" + timeslice.begin + ".md";
-                draftstr = draftstr + timeslice.subject + ":" + timeslice.title + " ";
+                
+                // 新格式：使用task.todo字段
+                if (isNewFormat(timeslice)) {
+                    draftstr = draftstr + timeslice.task + ":" + timeslice.todo + " ";
+                } else {
+                    // 旧格式：使用subject.title字段
+                    draftstr = draftstr + timeslice.subject + ":" + timeslice.title + " ";
+                }
 
                 if (timeslice.namelink != null) {
                     draftstr = draftstr + "[在线](" + timeslice.namelink + ")";
                 }
                 draftstr = draftstr + " [离线](" + draftfilename + ")";
-                let mailtostr = " <a href=\"mailto:huangyg@mars22.com?subject=关于" + year + "." + month + "." + day + ".[" + timeslice.subject + ":" + timeslice.title + "]任务&body=日期: " + dayobj.date + "%0D%0A序号: " + i + "%0D%0A手稿:" + draftfilename + "%0D%0A---请勿修改邮件主题及以上内容 从下一行开始写您的想法---%0D%0A\">[想法]</a>";
+                
+                // 构建邮件主题
+                let taskTodoStr = isNewFormat(timeslice) 
+                    ? timeslice.task + ":" + timeslice.todo 
+                    : timeslice.subject + ":" + timeslice.title;
+                let mailtostr = " <a href=\"mailto:huangyg@mars22.com?subject=关于" + year + "." + month + "." + day + ".[" + taskTodoStr + "]任务&body=日期: " + dayobj.date + "%0D%0A序号: " + i + "%0D%0A手稿:" + draftfilename + "%0D%0A---请勿修改邮件主题及以上内容 从下一行开始写您的想法---%0D%0A\">[想法]</a>";
                 draftstr = draftstr + mailtostr;
             }
             tablestr = tablestr + "| " + util.format(begintime, "hh:mm") + "~" + util.format(endtime, "hh:mm") + " | " + timeslice.amount + " | " + timeslice.name + " | " + draftstr + " |\n";
@@ -323,9 +371,11 @@ module.exports = {
         let datestr = dayobj.date;
         let date = util.str2date(datestr);
 
+        let month = parseInt(dayobj.date.slice(4, 6));
+        let isLastMonthOfQuarter = [3, 6, 9, 12].includes(month);
+        let monthDesc = isLastMonthOfQuarter ? "本月安排休整和总结" : "本月安排常规工作";
         let dayplanstr = "# " + date.format("YYYY.MM.DD.") + "\n日计划\n\n"
-            //+ "根据[ego模型时间接口](https://gitee.com/hyg/blog/blob/master/timeflow.md)，本月安排常规工作，今天绑定模版" + dayobj.mode + "(" + dayobj.plan + ")。\n\n"
-            + "根据[ego模型时间接口](https://gitee.com/hyg/blog/blob/master/timeflow.md)，本月安排休整和总结，今天绑定模版" + dayobj.mode + "(" + dayobj.plan + ")。\n\n"
+            + "根据[ego模型时间接口](https://gitee.com/hyg/blog/blob/master/timeflow.md)，" + monthDesc + "，今天绑定模版" + dayobj.mode + "(" + dayobj.plan + ")。\n\n"
             + this.maketable(dayobj) + "\n---\n\n" + this.makeindex(dayobj, "plan");
 
         let dayplanfilename = config.blogrepopath + "release/time/" + util.parseTemplate(config.templates.blogTime, { date: datestr });
@@ -415,9 +465,11 @@ module.exports = {
         log("datestr:", datestr);
         let indexstr = this.makeindex(dayobj, "log");
 
+        let month = parseInt(dayobj.date.slice(4, 6));
+        let isLastMonthOfQuarter = [3, 6, 9, 12].includes(month);
+        let monthDesc = isLastMonthOfQuarter ? "本月安排休整和总结" : "本月安排常规工作";
         let daylogstr = "# " + date.format("YYYY.MM.DD.") + "\n日小结\n\n"
-            //+ "<a id=\"top\"></a>\n" + "根据[ego模型时间接口](https://gitee.com/hyg/blog/blob/master/timeflow.md)，本月安排常规工作，今天绑定模版" + dayobj.mode + "(" + dayobj.plan + ")。\n\n"
-            + "<a id=\"top\"></a>\n" + "根据[ego模型时间接口](https://gitee.com/hyg/blog/blob/master/timeflow.md)，本月安排休整和总结，今天绑定模版" + dayobj.mode + "(" + dayobj.plan + ")。\n\n"
+            + "<a id=\"top\"></a>\n" + "根据[ego模型时间接口](https://gitee.com/hyg/blog/blob/master/timeflow.md)，" + monthDesc + "，今天绑定模版" + dayobj.mode + "(" + dayobj.plan + ")。\n\n"
             + "<a id=\"index\"></a>\n" + indexstr
             + season.makestattable(seasonobj)
             + wl.makebrieflist(waitinglist)
@@ -475,8 +527,10 @@ module.exports = {
         let seasonobj = season.loadseasonobj();
         //let waitinglist = wl.makewaitinglist(seasonobj);
         
-        //let dayinfostr = "# " + date.Format("yyyy.MM.dd.") + "\n\n根据[ego模型时间接口](https://gitee.com/hyg/blog/blob/master/timeflow.md)，安排常规工作，每天早起根据身心状况绑定模版。" + "\n\n---\n";
-        let dayinfostr = "# " + date.format("YYYY.MM.DD.") + "\n\n根据[ego模型时间接口](https://gitee.com/hyg/blog/blob/master/timeflow.md)，三月份安排休整和总结，每天早起根据身心状况绑定模版。" + "\n\n---\n";
+        let month = parseInt(datestr.slice(4, 6));
+        let isLastMonthOfQuarter = [3, 6, 9, 12].includes(month);
+        let monthDesc = isLastMonthOfQuarter ? "安排休整和总结" : "安排常规工作";
+        let dayinfostr = "# " + date.format("YYYY.MM.DD.") + "\n\n根据[ego模型时间接口](https://gitee.com/hyg/blog/blob/master/timeflow.md)，" + monthDesc + "，每天早起根据身心状况绑定模版。" + "\n\n---\n";
         for (let plan in seasonobj.dayplan) {
             let waitinglist = wl.makewaitinglist(seasonobj);
             //log("plan:",plan);

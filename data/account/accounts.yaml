@@ -1,0 +1,54 @@
+总账:
+  id: 0
+  name: "总账"
+  ftitle: null
+
+ego:
+  id: 20
+  name: "ego"
+  ftitle: "总账"
+
+raw:
+  id: 10
+  name: "raw"
+  ftitle: "总账"
+
+PSMD:
+  id: 100
+  name: "PSMD"
+  ftitle: "ego"
+
+infra:
+  id: 101
+  name: "infra"
+  ftitle: "ego"
+
+xuemen:
+  id: 102
+  name: "xuemen"
+  ftitle: "ego"
+
+learn:
+  id: 103
+  name: "learn"
+  ftitle: "ego"
+
+js:
+  id: 104
+  name: "js"
+  ftitle: "ego"
+
+raw.food:
+  id: 10.1
+  name: "raw.food"
+  ftitle: "raw"
+
+raw.site:
+  id: 10.3
+  name: "raw.site"
+  ftitle: "raw"
+
+raw.fun:
+  id: 10.4
+  name: "raw.fun"
+  ftitle: "raw"

@@ -1,0 +1,7 @@
+id: xuemen
+name: xuemen
+type: contract
+parent: ego
+git_repo: ../../xuemen
+jt_balance: 0
+todos: []

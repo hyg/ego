@@ -1,0 +1,7 @@
+id: infra
+name: infra
+type: contract
+parent: ego
+git_repo: ../../infra
+jt_balance: 0
+todos: []

@@ -1,4 +1,5 @@
 const fs = require('fs');
+const path = require('path');
 const yaml = require('js-yaml');
 const config = require('./config.js');
 const util = require('./util.js');
@@ -7,6 +8,11 @@ const util = require('./util.js');
 function log(...s) {
     s[0] = log.caller.name + "> " + s[0];
     console.log(...s);
+}
+
+// 获取绝对路径（从src目录出发）
+function getAbsolutePath(relativePath) {
+    return path.resolve(__dirname, relativePath);
 }
 
 module.exports = {
@@ -23,7 +29,7 @@ module.exports = {
         let month = theDate.month() + 1;
         let season = Math.ceil(month / 3);
 
-        let seasonfilename = config.dataseasonpath + util.parseTemplate(config.templates.season, { year: year, season: season });
+        let seasonfilename = path.join(getAbsolutePath(config.dataseasonpath), util.parseTemplate(config.templates.season, { year: year, season: season }));
         return seasonfilename;
     },
     loadseasonobj: function (datestr = "") {
@@ -264,5 +270,27 @@ module.exports = {
             log("timesum:", timesum);
             this.dumpseasonobj(seasonobj);
         }
+    },
+    // 获取季度定价配置
+    getPricing: function (datestr = "") {
+        let seasonobj = this.loadseasonobj(datestr);
+        if (seasonobj.pricing) {
+            return seasonobj.pricing;
+        }
+        // 默认定价
+        return {
+            template_1: 1,
+            template_2: 2
+        };
+    },
+    // 获取模版的JT价格
+    getTemplateJTPrice: function (templateType, datestr = "") {
+        const pricing = this.getPricing(datestr);
+        // 模版二（2a, 2b, 2c）使用template_2价格
+        if (templateType && templateType.toString().startsWith('2')) {
+            return pricing.template_2;
+        }
+        // 模版一（1a-1f）使用template_1价格
+        return pricing.template_1;
     }
 }

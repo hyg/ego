@@ -1,0 +1,69 @@
+id: PSMD
+name: PSMD项目
+type: contract
+front: external
+parent: ego
+git_repo: ../../psmd
+resources:
+  time: 4000
+  rmb: 0
+contract:
+  partner: 工作伙伴A
+  deadline: '2026-03-31'
+  deliverables:
+    - 术语规范
+    - 元数据系统
+children: []
+todos:
+  - name: term + COM matedata -> deploy metadata -> deploy view
+    status: pending
+    time_slices:
+      - date: '20260213'
+        amount: 195
+        template: 2a
+        jt_cost: 390
+        draft: 2026/20260213.01.md
+    history_drafts:
+      - 2026/20260213.01.md
+  - name: 会话skill套装设计
+    status: pending
+    time_slices:
+      - date: '20260210'
+        amount: 195
+        template: 2a
+        jt_cost: 390
+        draft: 2026/20260210.a.md
+    history_drafts:
+      - 2026/20260210.a.md
+  - name: 以1406为例检查知识图谱和blawx的语法
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: term metadata的序号，分为显示序号和唯一id两种
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: term metadata的序号，分为显示序号和唯一id两种。
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name:
+      - 考虑upgradeby的实现。
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name:
+      - 考虑upgradeby的实现。
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name:
+      - 考虑upgradeby的实现。
+    status: pending
+    time_slices: []
+    history_drafts: []
+derivation:
+  source: null
+  type: null
+  trigger: null
+jt_balance: 150

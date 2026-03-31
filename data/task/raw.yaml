@@ -1,0 +1,28 @@
+id: raw
+name: raw身体维护
+type: special
+front: null
+parent: null
+git_repo: ../../raw
+resources:
+  time: 1000
+  rmb: 0
+internal_goals:
+  - 维持身体健康
+  - 提供高质量工作时间
+children:
+  - id: raw.food
+  - id: raw.site
+  - id: raw.fun
+todos:
+  - name: 整理代码，理顺food.js几个成员函数之间的调用关系
+    status: pending
+    time_slices: []
+    history_drafts:
+      - ../../draft/2024/09/20240907143000.md
+      - ../../draft/2026/20260302.01.md
+income_source: ego购买时间
+derivation:
+  source: null
+  type: null
+  trigger: null

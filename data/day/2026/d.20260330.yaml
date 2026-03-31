@@ -1,0 +1,71 @@
+date: '20260330'
+mode: '1'
+plan: 1d
+time:
+  - begin: '20260330085000'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20260330090500'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20260330100500'
+    amount: 45
+    type: food
+    name: 午餐
+  - begin: '20260330105000'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20260330113500'
+    amount: 144
+    type: free
+    name: 休整
+  - begin: '20260330140000'
+    amount: 0
+    redo: 30
+    type: work
+    name: 静默工作
+    subject: learn
+    title: 学习优秀的petri网设计案例
+    output: ../../draft/2026/20260330.01.md
+    namelink: http://simp.ly/p/8t3vlk
+  - begin: '20260330143000'
+    amount: 0
+    redo: 30
+    type: work
+    name: 静默工作
+    subject: js
+    title: 新版raw.js的子命令-营养成分详情
+    readme:
+      - 可选多种营养成分
+      - 考虑不同UI
+      - 使用新的模块化设计
+      - 使用新的data model
+    output: ../../draft/2026/20260330.02.md
+    namelink: http://simp.ly/p/5k9gJy
+  - begin: '20260330150000'
+    amount: 60
+    type: free
+    name: 休整
+  - begin: '20260330160000'
+    amount: 0
+    redo: 60
+    type: work
+    name: 静默工作
+    subject: js
+    title: debug
+    readme:
+      - https://github.com/nswbmw/node-in-debugging
+    output: ../../draft/2026/20260330.03.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20260330170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20260330190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
+    output: ../../draft/2026/20260330.04.md
