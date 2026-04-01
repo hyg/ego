@@ -1,4 +1,5 @@
 const fs = require('fs');
+const path = require('path');
 const yaml = require('js-yaml');
 const config = require('./config.js');
 const task = require('./task.js');
@@ -25,6 +26,9 @@ module.exports = {
         const allTasks = task.listTasks();
         const candidates = [];
         
+        // 获取每个task最近一次获得时间片的时间
+        const lastWorkDates = this.getLastWorkDates();
+        
         for (const taskId of allTasks) {
             const taskData = task.loadTask(taskId);
             if (!taskData || !taskData.todos) continue;
@@ -39,7 +43,8 @@ module.exports = {
                         front_type: front.getFrontType(taskId),
                         deadline: taskData.contract?.deadline,
                         jt_balance: taskData.jt_balance || 0,
-                        priority: front.getTodoPriority(taskId, todo.name)
+                        priority: front.getTodoPriority(taskId, todo.name),
+                        last_work_date: lastWorkDates[taskId] || '00000000'  // 被闲置越久越优先
                     });
                 }
             }
@@ -48,8 +53,42 @@ module.exports = {
         return candidates;
     },
     
+    // 获取每个task最近一次获得工作时间片的日期
+    getLastWorkDates: function () {
+        const lastWorkDates = {};
+        const today = new Date();
+        
+        // 查询最近30天的day元数据
+        for (let i = 0; i < 30; i++) {
+            const date = new Date(today);
+            date.setDate(date.getDate() - i);
+            const dateStr = date.toISOString().slice(0, 10).replace(/-/g, '');
+            const year = dateStr.substring(0, 4);
+            const dayFilePath = path.join(__dirname, '..', 'data', 'day', year, `d.${dateStr}.yaml`);
+            
+            if (fs.existsSync(dayFilePath)) {
+                try {
+                    const dayData = yaml.load(fs.readFileSync(dayFilePath, 'utf8'));
+                    if (dayData.time) {
+                        for (const t of dayData.time) {
+                            if ((t.type === 'work' || t.type === 'discuss' || t.type === 'check') && t.task) {
+                                if (!lastWorkDates[t.task] || dateStr > lastWorkDates[t.task]) {
+                                    lastWorkDates[t.task] = dateStr;
+                                }
+                            }
+                        }
+                    }
+                } catch (e) {
+                    // ignore
+                }
+            }
+        }
+        
+        return lastWorkDates;
+    },
+    
     // 按原则排序todo
-    sortTodosByPrinciples: function (candidates, recentTaskIds = []) {
+    sortTodosByPrinciples: function (candidates, excludeTaskIds = []) {
         return candidates.sort((a, b) => {
             // 原则一：有完成期限优先
             if (a.deadline && !b.deadline) return -1;
@@ -64,11 +103,9 @@ module.exports = {
                 return b.jt_balance - a.jt_balance;
             }
             
-            // 原则三：交叉进行（最近做过的降低优先级）
-            const aRecent = recentTaskIds.includes(a.task_id) ? 1 : 0;
-            const bRecent = recentTaskIds.includes(b.task_id) ? 1 : 0;
-            if (aRecent !== bRecent) {
-                return aRecent - bRecent;
+            // 原则三：被闲置越久越优先（last_work_date越小越优先）
+            if (a.last_work_date !== b.last_work_date) {
+                return a.last_work_date.localeCompare(b.last_work_date);
             }
             
             // 最后按优先级分数
@@ -77,7 +114,7 @@ module.exports = {
     },
     
     // 选择todo绑定时间片
-    selectTodoForTimeSlice: function (timeSliceAmount, templateType, recentTaskIds = []) {
+    selectTodoForTimeSlice: function (timeSliceAmount, templateType, excludeTaskIds = []) {
         const candidates = this.getCandidateTodos();
         
         if (candidates.length === 0) {
@@ -91,17 +128,26 @@ module.exports = {
         const jtCost = timeSliceAmount * jtRate;
         
         // 过滤出JT余额足够的todo
-        const affordable = candidates.filter(c => c.jt_balance >= jtCost);
+        let affordable = candidates.filter(c => c.jt_balance >= jtCost);
+        
+        // 模版一：跳过已选task（相邻时间片不安排同一task）
+        if (excludeTaskIds.length > 0) {
+            const filtered = affordable.filter(c => !excludeTaskIds.includes(c.task_id));
+            if (filtered.length > 0) {
+                affordable = filtered;
+            }
+            // 如果过滤后没有可选的，则允许重复选择
+        }
         
         if (affordable.length === 0) {
             log("no affordable todos, jt cost:", jtCost);
             // 返回JT余额最高的todo（可能需要先分配JT）
-            const sorted = this.sortTodosByPrinciples(candidates, recentTaskIds);
+            const sorted = this.sortTodosByPrinciples(candidates, excludeTaskIds);
             return sorted[0];
         }
         
         // 按原则排序
-        const sorted = this.sortTodosByPrinciples(affordable, recentTaskIds);
+        const sorted = this.sortTodosByPrinciples(affordable, excludeTaskIds);
         const selected = sorted[0];
         
         log("selected todo:", selected.title, "jt cost:", jtCost);

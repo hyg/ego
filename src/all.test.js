@@ -21,6 +21,7 @@ runTest('./account.test.js');
 runTest('./draft.test.js');
 runTest('./front.test.js');
 runTest('./allocator.test.js');
+runTest('./journal.test.js');
 runTest('./migrate.test.js');
 
 // 输出汇总结果

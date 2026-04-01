@@ -1,9 +1,16 @@
 year: 2026
-season: 1
-beginmonth: 1
+season: 2
+beginmonth: 4
 beginday: 1
-lastmonth: 3
-lastday: 31
+lastmonth: 6
+lastday: 30
+pricing:
+  template_1: 1
+  template_2: 2
+allocation_principles:
+  - 有完成期限的task优先
+  - 按JT余额分配
+  - 交叉进行，避免小项目长期轮不到
 timetype:
   - name: work
   - name: free
@@ -573,6 +580,16 @@ time:
     infra: 225
     learn: 315
     js: 210
+jt:
+  sum: 18040
+  alloc:
+    PSMD: 5500
+    ego: 4540
+    infra: 3000
+    xuemen: 1000
+    raw: 1000
+    learn: 2000
+    js: 1000
 todo:
   PSMD:
     - '195': term + COM matedata -> deploy metadata -> deploy view
@@ -868,22 +885,13 @@ todo:
         - https://www.npmjs.com/package/@pulumi/query
         - read ../../draft/2025/20250528.01.md
     - '30': 新版raw.js的子命令-营养成分排序
-    - '60': The Node.js best practices list (July 2024)
+    - '90': 实际编写自己的测试范例
+    - '60': lint
       readme:
-        - https://github.com/goldbergyoni/nodebestpractices
-    - '60': 学习 nodejs test框架
-      readme:
-        - https://github.com/Vanessa219/vditor - https://nodejs.cn/api/test.html
-        - https://github.com/markedjs/marked
-        - https://bun.sh/
-      bind:
-        - '90': 实际编写自己的测试范例
-        - '60': lint
-          readme:
-            - https://www.javascriptcn.com/post/675439161b963fe9cc4d25ce
-            - https://www.jslint.com/
-            - https://jshint.com/
-            - https://zh-hans.eslint.org/docs/latest/use/getting-started
+        - https://www.javascriptcn.com/post/675439161b963fe9cc4d25ce
+        - https://www.jslint.com/
+        - https://jshint.com/
+        - https://zh-hans.eslint.org/docs/latest/use/getting-started
     - '60': nodejs server side dev
       readme:
         - https://github.com/qufei1993/Nodejs-Roadmap

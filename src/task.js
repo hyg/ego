@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const crypto = require('crypto');
 const yaml = require('js-yaml');
 const config = require('./config.js');
 
@@ -11,6 +12,11 @@ function log(...s) {
 // 获取绝对路径（从src目录出发）
 function getAbsolutePath(relativePath) {
     return path.resolve(__dirname, relativePath);
+}
+
+// 生成name的哈希ID（前8位）
+function generateId(name) {
+    return crypto.createHash('md5').update(name).digest('hex').substring(0, 8);
 }
 
 module.exports = {
@@ -151,5 +157,8 @@ module.exports = {
         return tasks
             .map(id => this.loadTask(id))
             .filter(task => task && task.contract && task.contract.deadline);
-    }
+    },
+    
+    // 生成name的哈希ID（前8位）
+    generateId: generateId
 };

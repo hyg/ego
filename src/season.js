@@ -40,8 +40,8 @@ module.exports = {
 
         return seasonobj;
     },
-    dumpseasonobj: function (seasonobj) {
-        let seasonfilename = this.seasonfilename();
+    dumpseasonobj: function (seasonobj, datestr = "") {
+        let seasonfilename = this.seasonfilename(datestr);
         if (this.debug == false) {
             fs.writeFileSync(seasonfilename, yaml.dump(seasonobj, { 'lineWidth': -1 }));
         }

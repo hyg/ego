@@ -39,7 +39,8 @@ test('parseTitle - 只有task没有todo', () => {
 test('loadTask - 加载存在的task', () => {
     const taskData = task.loadTask('PSMD');
     assert.ok(taskData !== null);
-    assert.strictEqual(taskData.id, 'PSMD');
+    // id现在是哈希值（8位十六进制）
+    assert.ok(/^[0-9a-f]{8}$/.test(taskData.id));
     assert.ok(Array.isArray(taskData.todos));
 });
 

@@ -23,7 +23,8 @@ console.log('=== migrate.js 测试 ===');
 test('loadTask - 加载task', () => {
     const taskData = migrate.loadTask('PSMD');
     assert.ok(taskData);
-    assert.strictEqual(taskData.id, 'PSMD');
+    // id现在是哈希值（8位十六进制）
+    assert.ok(/^[0-9a-f]{8}$/.test(taskData.id));
 });
 
 test('saveTask - 保存task', () => {

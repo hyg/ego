@@ -6,6 +6,8 @@ const season = require('./season.js');
 const wl = require('./waitinglist.js');
 const task = require('./task.js');
 const draft = require('./draft.js');
+const allocator = require('./allocator.js');
+const journal = require('./journal.js');
 
 function log(...s) {
     s[0] = log.caller.name + "> " + s[0];
@@ -134,6 +136,7 @@ module.exports = {
         let dayobj = new Object();
         let timearray = new Array();
         let draftcnt = 0;
+        let todayTaskIds = [];  // 记录今天已选择的task（用于模版一避免相邻时间片选同一task）
 
         dayobj.date = date;
         dayobj.mode = mode;
@@ -189,11 +192,32 @@ module.exports = {
                 }
             }
             if (timeslice.type == "work") {
-                timeperiod.subject = waitinglist[amount.toString()][0].task;
-                timeperiod.title = waitinglist[amount.toString()][0].name;
-                if (waitinglist[amount.toString()][0].readme != null) {
-                    //timeperiod.readme = waitinglist[amount.toString()][0].readme;
-                    timeperiod.readme = [...waitinglist[amount.toString()][0].readme];
+                // 使用allocator选择todo（锋面优先原则）
+                let templateType = dayplan.charAt(0);  // 获取模版类型（1或2）
+                let selected = allocator.selectTodoForTimeSlice(amount, templateType, todayTaskIds);
+                
+                if (selected) {
+                    // 使用新格式（task、todo字段）
+                    timeperiod.task = selected.task_id;
+                    timeperiod.todo = selected.todo_name;
+                    
+                    // 记录今天已选择的task（模版一避免相邻时间片选同一task）
+                    todayTaskIds.push(selected.task_id);
+                    
+                    // 获取todo的readme
+                    let todoObj = task.getTodo(selected.task_id, selected.todo_name);
+                    if (todoObj && todoObj.history_drafts && todoObj.history_drafts.length > 0) {
+                        timeperiod.readme = todoObj.history_drafts.map(d => "read ../../draft/" + d);
+                    }
+                } else {
+                    // fallback: 使用旧逻辑
+                    log("allocator returned null, using waitinglist fallback");
+                    timeperiod.subject = waitinglist[amount.toString()][0].task;
+                    timeperiod.title = waitinglist[amount.toString()][0].name;
+                    if (waitinglist[amount.toString()][0].readme != null) {
+                        timeperiod.readme = [...waitinglist[amount.toString()][0].readme];
+                    }
+                    todayTaskIds.push(timeperiod.subject);
                 }
                 //timeperiod.output = config.draftrepopath + date.slice(0, 4) + "/" + date.slice(4, 6) + "/" + begintime + ".md";
                 draftcnt++;
@@ -244,7 +268,7 @@ module.exports = {
 
         this.dumpdayobj(dayobj, diff);
         season.debug = this.debug;
-        season.dumpseasonobj(seasonobj);
+        season.dumpseasonobj(seasonobj, date);
         if (this.debug == false) {
             log("dump seasonobj, todo:\n%s", yaml.dump(seasonobj.todo, { 'lineWidth': -1 }));
         } else {
@@ -356,7 +380,10 @@ module.exports = {
                 }
 
                 if (timeperiod.type == "work") {
-                    indexstr = indexstr + "- " + util.format(begintime, "hh:mm") + "~" + util.format(endtime, "hh:mm") + "\t" + timeperiod.subject + ": [" + timeperiod.title + "](" + linkstr + ")\n";
+                    // 支持新旧格式
+                    let taskName = isNewFormat(timeperiod) ? timeperiod.task : timeperiod.subject;
+                    let todoName = isNewFormat(timeperiod) ? timeperiod.todo : timeperiod.title;
+                    indexstr = indexstr + "- " + util.format(begintime, "hh:mm") + "~" + util.format(endtime, "hh:mm") + "\t" + taskName + ": [" + todoName + "](" + linkstr + ")\n";
                 }
                 if (timeperiod.type == "check") {
                     indexstr = indexstr + "- " + util.format(begintime, "hh:mm") + "~" + util.format(endtime, "hh:mm") + "\tcheck: [零散笔记](" + linkstr + ")\n";
@@ -460,7 +487,14 @@ module.exports = {
 
         }
 
-        season.dumpseasonobj(seasonobj);
+        // 二季度及以后：在over时结算实际使用时间（分录）
+        if (!isLegacySeason(datestr)) {
+            journal.debug = this.debug;
+            const vouchers = journal.settleAllTimeSlices(dayobj);
+            log("settled vouchers:", vouchers.length);
+        }
+
+        season.dumpseasonobj(seasonobj, datestr);
         let waitinglist = wl.makewaitinglist(seasonobj);
         log("datestr:", datestr);
         let indexstr = this.makeindex(dayobj, "log");
