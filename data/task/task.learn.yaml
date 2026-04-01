@@ -1,0 +1,22 @@
+name: learn
+id: 339d8d14
+parent id: 0
+start: 1975-03-22T00:00:00.000Z
+dependencies: null
+path:
+  - name: reading
+    path: ..\..\note\task
+    readme: |
+      文字类学习
+  - name: js
+    path: ..\..\js.sample\task
+    readme: |
+      javascript族编程学习
+readme: |
+  学习通用知识
+step:
+  - time: null
+    name: null
+    status: null
+    readme: ''
+log: null

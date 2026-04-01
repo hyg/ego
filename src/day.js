@@ -447,51 +447,52 @@ module.exports = {
         let seasonobj = season.loadseasonobj(datestr);
         seasonobj = season.updatesold(seasonobj);
 
-        for (let i in dayobj.time) {
-            let timeperiod = dayobj.time[i];
-            let begintime = util.str2time(timeperiod.begin);
-
-            if (datestr == util.datestr()) {
-                if (timeperiod.redo == true) {
-                    season.addtodoitem(seasonobj, timeperiod.subject, timeperiod.title, timeperiod.amount, timeperiod.readme);
-                    if (timeperiod.trueamount != null) {
-                        timeperiod.amount = timeperiod.trueamount;
-                    }
-                } else if (timeperiod.redo != null) {
-                    if (timeperiod.readme != null) {
-                        if (timeperiod.amount == 0) {
-                            season.addtodoitem(seasonobj, timeperiod.subject, timeperiod.title, timeperiod.redo, timeperiod.readme);
-                        } else {
-                            timeperiod.readme.push("read " + timeperiod.output);
-                            //season.addtodoitem(seasonobj, timeperiod.subject, timeperiod.title, timeperiod.redo, timeperiod.readme + "- read " + timeperiod.output + "\n");
-                            season.addtodoitem(seasonobj, timeperiod.subject, timeperiod.title, timeperiod.redo, timeperiod.readme);
-                        }
-
-                    } else {
-                        if (timeperiod.amount == 0) {
-                            season.addtodoitem(seasonobj, timeperiod.subject, timeperiod.title, timeperiod.redo, null);
-                        } else {
-                            timeperiod.readme = new Array("read " + timeperiod.output);
-                            season.addtodoitem(seasonobj, timeperiod.subject, timeperiod.title, timeperiod.redo, timeperiod.readme);
-                            //season.addtodoitem(seasonobj, timeperiod.subject, timeperiod.title, timeperiod.redo, "- read " + timeperiod.output + "\n");
-                        }
-                    }
-
-                    if (timeperiod.trueamount != null) {
-                        timeperiod.amount = timeperiod.trueamount;
-                    }
-                }
-            } else {
-                log("not today, don't redo.");
-            }
-
-        }
-
-        // 二季度及以后：在over时结算实际使用时间（分录）
+        // 二季度及以后：使用新的journal模块结算
         if (!isLegacySeason(datestr)) {
             journal.debug = this.debug;
-            const vouchers = journal.settleAllTimeSlices(dayobj);
-            log("settled vouchers:", vouchers.length);
+            const result = journal.settleDayObj(dayobj);
+            log("settled vouchers:", result.vouchers.length);
+            log("total JT:", result.totalJT);
+            log("total artifacts:", result.totalArtifacts);
+            log("writeback todos:", result.writebackTodos.length);
+        } else {
+            // 旧版本：使用addtodoitem逻辑
+            for (let i in dayobj.time) {
+                let timeperiod = dayobj.time[i];
+                let begintime = util.str2time(timeperiod.begin);
+
+                if (datestr == util.datestr()) {
+                    if (timeperiod.redo == true) {
+                        season.addtodoitem(seasonobj, timeperiod.subject, timeperiod.title, timeperiod.amount, timeperiod.readme);
+                        if (timeperiod.trueamount != null) {
+                            timeperiod.amount = timeperiod.trueamount;
+                        }
+                    } else if (timeperiod.redo != null) {
+                        if (timeperiod.readme != null) {
+                            if (timeperiod.amount == 0) {
+                                season.addtodoitem(seasonobj, timeperiod.subject, timeperiod.title, timeperiod.redo, timeperiod.readme);
+                            } else {
+                                timeperiod.readme.push("read " + timeperiod.output);
+                                season.addtodoitem(seasonobj, timeperiod.subject, timeperiod.title, timeperiod.redo, timeperiod.readme);
+                            }
+
+                        } else {
+                            if (timeperiod.amount == 0) {
+                                season.addtodoitem(seasonobj, timeperiod.subject, timeperiod.title, timeperiod.redo, null);
+                            } else {
+                                timeperiod.readme = new Array("read " + timeperiod.output);
+                                season.addtodoitem(seasonobj, timeperiod.subject, timeperiod.title, timeperiod.redo, timeperiod.readme);
+                            }
+                        }
+
+                        if (timeperiod.trueamount != null) {
+                            timeperiod.amount = timeperiod.trueamount;
+                        }
+                    }
+                } else {
+                    log("not today, don't redo.");
+                }
+            }
         }
 
         season.dumpseasonobj(seasonobj, datestr);

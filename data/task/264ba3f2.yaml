@@ -19,6 +19,7 @@ children: []
 todos:
   - name: 权利分配语法 & engine
     status: pending
+    amount: 60
   - name: 部署语法
     status: pending
   - name: SOP engine
@@ -58,11 +59,6 @@ todos:
     time_slices: []
     history_drafts: []
   - name: term metadata的序号，分为显示序号和唯一id两种。 - 考虑upgradeby的实现。
-    status: pending
-    time_slices: []
-    history_drafts: []
-  - name:
-      - 考虑upgradeby的实现。
     status: pending
     time_slices: []
     history_drafts: []

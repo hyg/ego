@@ -19,7 +19,7 @@ children:
   - id: xuemen
   - id: learn
   - id: js
-jt_balance: 4540
+jt_balance: 4170
 todos:
   - name: JT的发行和回收
     status: pending
