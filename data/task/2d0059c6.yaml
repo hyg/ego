@@ -3,7 +3,7 @@ name: infra
 type: contract
 parent: ego
 git_repo: ../../infra
-jt_balance: 3000
+token_balance: 3000
 contract:
   partner: PSMD
   deadline: '2026-04-22'

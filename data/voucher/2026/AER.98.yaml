@@ -1,27 +1,27 @@
 date: '20260401'
-VoucherID: O20260401t0mtqz
+VoucherID: ''
 AccountingEntry:
   debit:
     - AccountTitle: ego
       asset: time
       amount: 60
     - AccountTitle: raw
-      asset: jt
+      asset: token
       amount: 60
-    - AccountTitle: ego.artifact
-      asset: artifact
+    - AccountTitle: ego
+      asset: artifact.draft
       amount: 1
   credit:
     - AccountTitle: raw
       asset: time
       amount: 60
     - AccountTitle: ego
-      asset: jt
+      asset: token
       amount: 60
     - AccountTitle: ego
       asset: time
       amount: 60
 comment:
   - type: check
-    jt: 60
+    token: 60
     artifact: ../../draft/2026/20260401.02.md

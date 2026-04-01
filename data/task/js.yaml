@@ -3,7 +3,7 @@ name: js
 type: contract
 parent: ego
 git_repo: ../../js
-jt_balance: 1000
+token_balance: 1000
 todos:
   - name: openpgp v6.1.1.
     status: pending

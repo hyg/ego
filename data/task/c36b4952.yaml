@@ -3,5 +3,5 @@ name: xuemen
 type: contract
 parent: ego
 git_repo: ../../xuemen
-jt_balance: 1000
+token_balance: 1000
 todos: []

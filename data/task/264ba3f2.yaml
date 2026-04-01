@@ -86,4 +86,4 @@ derivation:
   source: null
   type: null
   trigger: null
-jt_balance: 5700
+token_balance: 5700

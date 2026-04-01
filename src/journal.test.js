@@ -24,17 +24,17 @@ console.log('=== journal.js 测试 ===');
 // 加载测试数据
 const dayData = yaml.load(fs.readFileSync(path.join(__dirname, '../data/day/2026/d.20260401.yaml'), 'utf8'));
 
-test('parseTimeSlice - discuss不计入JT', () => {
+test('parseTimeSlice - discuss不计入token', () => {
     const slice = dayData.time.find(t => t.type === 'discuss');
     const result = journal.parseTimeSlice(slice, '20260401', '1e');
-    assert.strictEqual(result.jtAmount, 0);
+    assert.strictEqual(result.tokenAmount, 0);
     assert.strictEqual(result.entries.length, 0);
 });
 
 test('parseTimeSlice - check由ego购买', () => {
     const slice = dayData.time.find(t => t.type === 'check');
     const result = journal.parseTimeSlice(slice, '20260401', '1e');
-    assert.strictEqual(result.jtAmount, 60);
+    assert.strictEqual(result.tokenAmount, 60);
     assert.strictEqual(result.artifactCount, 1);
     assert.strictEqual(result.entries.length, 6);
 });
@@ -45,7 +45,7 @@ test('parseTimeSlice - work有redo字段表示未完成', () => {
     assert.strictEqual(result.isCompleted, false);
     assert.strictEqual(result.actualTime, 0);
     assert.strictEqual(result.redoEstimate, 60);
-    assert.strictEqual(result.jtAmount, 0);
+    assert.strictEqual(result.tokenAmount, 0);
     assert.strictEqual(result.actions.length, 1);
     assert.strictEqual(result.actions[0].type, 'writeback_todo');
 });
@@ -54,7 +54,7 @@ test('parseTimeSlice - work消耗时间产生artifact', () => {
     const slice = dayData.time.find(t => t.type === 'work' && t.task === 'ego');
     const result = journal.parseTimeSlice(slice, '20260401', '1e');
     assert.strictEqual(result.actualTime, 370);
-    assert.strictEqual(result.jtAmount, 370);
+    assert.strictEqual(result.tokenAmount, 370);
     assert.strictEqual(result.artifactCount, 1);
     assert.strictEqual(result.entries.length, 6);
     
@@ -65,17 +65,17 @@ test('parseTimeSlice - work消耗时间产生artifact', () => {
         .reduce((sum, e) => sum + e.amount, 0);
     assert.strictEqual(egoTimeDebit, egoTimeCredit, 'ego.time should balance');
     
-    // 验证JT科目平衡
-    const jtDebit = result.entries.filter(e => e.asset === 'jt' && e.direction === 'debit')
+    // 验证token科目平衡
+    const tokenDebit = result.entries.filter(e => e.asset === 'token' && e.direction === 'debit')
         .reduce((sum, e) => sum + e.amount, 0);
-    const jtCredit = result.entries.filter(e => e.asset === 'jt' && e.direction === 'credit')
+    const tokenCredit = result.entries.filter(e => e.asset === 'token' && e.direction === 'credit')
         .reduce((sum, e) => sum + e.amount, 0);
-    assert.strictEqual(jtDebit, jtCredit, 'jt should balance');
+    assert.strictEqual(tokenDebit, tokenCredit, 'token should balance');
 });
 
 test('parseDayObj - 解析完整dayobj', () => {
     const parsed = journal.parseDayObj(dayData);
-    assert.strictEqual(parsed.totalJT, 430);
+    assert.strictEqual(parsed.totalToken, 430);
     assert.strictEqual(parsed.totalArtifacts, 2);
     assert.strictEqual(parsed.results.length, dayData.time.length);
 });
@@ -84,7 +84,7 @@ test('formatOutput - 格式化输出', () => {
     journal.debug = true;
     const parsed = journal.parseDayObj(dayData);
     const output = journal.formatOutput(parsed);
-    assert.ok(output.includes('今日消耗JT总计: 430'));
+    assert.ok(output.includes('今日消耗token总计: 430'));
     assert.ok(output.includes('今日产出artifact: 2'));
     journal.debug = false;
 });

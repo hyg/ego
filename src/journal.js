@@ -15,7 +15,7 @@ function log(...s) {
  * 分录规则系统
  * 
  * 规则：
- * - discuss: 不计入JT消耗（raw不对外销售）
+ * - discuss: 不计入token消耗（raw不对外销售）
  * - check: 由ego购买时间，归档artifact
  * - work: 由task购买时间，消耗时间产生artifact
  * - 有redo字段: 未完成，写回task元数据
@@ -30,13 +30,13 @@ module.exports = {
             type: timeSlice.type,
             entries: [],
             actions: [],
-            jtAmount: 0,
+            tokenAmount: 0,
             artifactCount: 0
         };
         
-        // discuss: 不计入JT消耗
+        // discuss: 不计入token消耗
         if (timeSlice.type === 'discuss') {
-            result.description = '不计入JT消耗（raw不对外销售）';
+            result.description = '不计入token消耗（raw不对外销售）';
             return result;
         }
         
@@ -58,14 +58,14 @@ module.exports = {
         const actualTime = timeSlice.amount;
         const pricing = season.getPricing(datestr);
         const templateType = plan ? plan.charAt(0) : 1;
-        const jtRate = templateType === '2' ? pricing.template_2 : pricing.template_1;
-        const jtAmount = actualTime * jtRate;
+        const tokenRate = templateType === '2' ? pricing.template_2 : pricing.template_1;
+        const tokenAmount = actualTime * tokenRate;
         
         const result = {
             type: 'check',
             entries: [],
             actions: [],
-            jtAmount: jtAmount,
+            tokenAmount: tokenAmount,
             artifactCount: 1,
             description: 'ego购买时间，归档artifact'
         };
@@ -75,13 +75,13 @@ module.exports = {
             result.entries.push(
                 { account: 'ego', asset: 'time', amount: actualTime, direction: 'debit' },
                 { account: 'raw', asset: 'time', amount: actualTime, direction: 'credit' },
-                { account: 'raw', asset: 'jt', amount: jtAmount, direction: 'debit' },
-                { account: 'ego', asset: 'jt', amount: jtAmount, direction: 'credit' }
+                { account: 'raw', asset: 'token', amount: tokenAmount, direction: 'debit' },
+                { account: 'ego', asset: 'token', amount: tokenAmount, direction: 'credit' }
             );
             
             // [消耗时间→artifact]
             result.entries.push(
-                { account: 'ego.artifact', asset: 'artifact', amount: 1, direction: 'debit' },
+                { account: 'ego', asset: 'artifact.draft', amount: 1, direction: 'debit' },
                 { account: 'ego', asset: 'time', amount: actualTime, direction: 'credit' }
             );
             
@@ -101,7 +101,7 @@ module.exports = {
                 type: 'work',
                 entries: [],
                 actions: [],
-                jtAmount: 0,
+                tokenAmount: 0,
                 artifactCount: 0,
                 description: '无特定task，跳过'
             };
@@ -118,8 +118,8 @@ module.exports = {
         const isCompleted = !redoEstimate;
         const pricing = season.getPricing(datestr);
         const templateType = plan ? plan.charAt(0) : 1;
-        const jtRate = templateType === '2' ? pricing.template_2 : pricing.template_1;
-        const jtAmount = actualTime * jtRate;
+        const tokenRate = templateType === '2' ? pricing.template_2 : pricing.template_1;
+        const tokenAmount = actualTime * tokenRate;
         
         const result = {
             type: 'work',
@@ -127,7 +127,7 @@ module.exports = {
             todoName: todoName,
             entries: [],
             actions: [],
-            jtAmount: jtAmount,
+            tokenAmount: tokenAmount,
             artifactCount: actualTime > 0 ? 1 : 0,
             isCompleted: isCompleted,
             actualTime: actualTime,
@@ -139,13 +139,13 @@ module.exports = {
             result.entries.push(
                 { account: taskId, asset: 'time', amount: actualTime, direction: 'debit' },
                 { account: 'raw', asset: 'time', amount: actualTime, direction: 'credit' },
-                { account: 'raw', asset: 'jt', amount: jtAmount, direction: 'debit' },
-                { account: taskId, asset: 'jt', amount: jtAmount, direction: 'credit' }
+                { account: 'raw', asset: 'token', amount: tokenAmount, direction: 'debit' },
+                { account: taskId, asset: 'token', amount: tokenAmount, direction: 'credit' }
             );
             
             // [消耗时间→artifact]
             result.entries.push(
-                { account: taskId + '.artifact', asset: 'artifact', amount: 1, direction: 'debit' },
+                { account: taskId, asset: 'artifact.draft', amount: 1, direction: 'debit' },
                 { account: taskId, asset: 'time', amount: actualTime, direction: 'credit' }
             );
             
@@ -169,19 +169,19 @@ module.exports = {
     // 解析整个dayobj，返回所有分录和操作
     parseDayObj: function (dayobj) {
         const results = [];
-        let totalJT = 0;
+        let totalToken = 0;
         let totalArtifacts = 0;
         
         for (const timeSlice of dayobj.time) {
             const result = this.parseTimeSlice(timeSlice, dayobj.date, dayobj.plan);
             results.push(result);
-            totalJT += result.jtAmount;
+            totalToken += result.tokenAmount;
             totalArtifacts += result.artifactCount;
         }
         
         return {
             results: results,
-            totalJT: totalJT,
+            totalToken: totalToken,
             totalArtifacts: totalArtifacts
         };
     },
@@ -202,7 +202,7 @@ module.exports = {
                         task: result.taskId,
                         todo: result.todoName,
                         time: result.actualTime,
-                        jt: result.jtAmount,
+                        token: result.tokenAmount,
                         artifact: result.artifactFile
                     }]
                 );
@@ -216,21 +216,21 @@ module.exports = {
                 }
             }
             
-            // 更新task的JT余额
-            if (result.taskId && result.jtAmount > 0) {
+            // 更新task的token余额
+            if (result.taskId && result.tokenAmount > 0) {
                 const taskData = task.loadTask(result.taskId);
                 if (taskData) {
-                    if (!taskData.jt_balance) taskData.jt_balance = 0;
-                    taskData.jt_balance -= result.jtAmount;
+                    if (!taskData.token_balance) taskData.token_balance = 0;
+                    taskData.token_balance -= result.tokenAmount;
                     task.saveTask(taskData);
-                    log("updated task jt_balance:", result.taskId, taskData.jt_balance);
+                    log("updated task token_balance:", result.taskId, taskData.token_balance);
                 }
             }
         }
         
         return {
             vouchers: vouchers,
-            totalJT: parsed.totalJT,
+            totalToken: parsed.totalToken,
             totalArtifacts: parsed.totalArtifacts,
             writebackTodos: parsed.results.flatMap(r => r.actions)
         };
@@ -284,17 +284,17 @@ module.exports = {
             }
             
             if (result.type === 'check') {
-                output += `JT成本: ${result.jtAmount} JT (ego购买，归档artifact)\n`;
+                output += `token成本: ${result.tokenAmount} token (ego购买，归档artifact)\n`;
                 output += `产出: ${result.artifactCount}个artifact\n`;
                 if (result.entries.length > 0) {
                     output += `\n分录:\n`;
                     output += `  [购买时间]\n`;
                     output += `  借: ego (time) +${result.entries[0].amount}分钟\n`;
                     output += `  贷: raw (time) -${result.entries[1].amount}分钟\n`;
-                    output += `  借: raw (jt) +${result.entries[2].amount}JT\n`;
-                    output += `  贷: ego (jt) -${result.entries[3].amount}JT\n`;
+                    output += `  借: raw (token) +${result.entries[2].amount}token\n`;
+                    output += `  贷: ego (token) -${result.entries[3].amount}token\n`;
                     output += `  [消耗时间→artifact]\n`;
-                    output += `  借: ego.artifact +1 (归档成本: ${result.jtAmount}JT)\n`;
+                    output += `  借: ego.artifact +1 (归档成本: ${result.tokenAmount}token)\n`;
                     output += `  贷: ego (time) -${result.entries[5].amount}分钟\n`;
                     if (result.artifactFile) {
                         output += `  artifact文件: ${result.artifactFile}\n`;
@@ -313,7 +313,7 @@ module.exports = {
                 } else {
                     output += `状态: 已完成\n`;
                 }
-                output += `JT消耗: ${result.jtAmount} JT\n`;
+                output += `token消耗: ${result.tokenAmount} token\n`;
                 output += `产出: ${result.artifactCount}个artifact\n`;
                 
                 if (result.entries.length > 0) {
@@ -321,10 +321,10 @@ module.exports = {
                     output += `  [购买时间]\n`;
                     output += `  借: ${result.taskId} (time) +${result.entries[0].amount}分钟\n`;
                     output += `  贷: raw (time) -${result.entries[1].amount}分钟\n`;
-                    output += `  借: raw (jt) +${result.entries[2].amount}JT\n`;
-                    output += `  贷: ${result.taskId} (jt) -${result.entries[3].amount}JT\n`;
+                    output += `  借: raw (token) +${result.entries[2].amount}token\n`;
+                    output += `  贷: ${result.taskId} (token) -${result.entries[3].amount}token\n`;
                     output += `  [消耗时间→artifact]\n`;
-                    output += `  借: ${result.taskId}.artifact +1 (成本: ${result.jtAmount}JT)\n`;
+                    output += `  借: ${result.taskId} (artifact.draft) +1 (成本: ${result.tokenAmount}token)\n`;
                     output += `  贷: ${result.taskId} (time) -${result.entries[5].amount}分钟\n`;
                     if (result.artifactFile) {
                         output += `  artifact文件: ${result.artifactFile}\n`;
@@ -339,7 +339,7 @@ module.exports = {
         }
         
         output += `=== 汇总 ===\n`;
-        output += `今日消耗JT总计: ${parsed.totalJT} JT\n`;
+        output += `今日消耗token总计: ${parsed.totalToken} token\n`;
         output += `今日产出artifact: ${parsed.totalArtifacts} 个\n`;
         
         const writebacks = parsed.results.flatMap(r => r.actions);

@@ -3,7 +3,7 @@ name: learn
 type: contract
 parent: ego
 git_repo: ../../learn
-jt_balance: 0
+token_balance: 0
 todos:
   - name: Polygon/Arbitrum
     status: pending

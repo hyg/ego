@@ -17,7 +17,7 @@ module.exports = {
     // 分配原则
     PRINCIPLES: {
         DEADLINE_FIRST: 'deadline_first',      // 有完成期限优先
-        JT_BALANCE: 'jt_balance',              // 按JT余额
+        TOKEN_BALANCE: 'token_balance',        // 按token余额
         ROUND_ROBIN: 'round_robin'             // 交叉进行
     },
     
@@ -42,7 +42,7 @@ module.exports = {
                         status: todo.status,
                         front_type: front.getFrontType(taskId),
                         deadline: taskData.contract?.deadline,
-                        jt_balance: taskData.jt_balance || 0,
+                        token_balance: taskData.token_balance || 0,
                         priority: front.getTodoPriority(taskId, todo.name),
                         last_work_date: lastWorkDates[taskId] || '00000000'  // 被闲置越久越优先
                     });
@@ -98,9 +98,9 @@ module.exports = {
                 if (deadlineCompare !== 0) return deadlineCompare;
             }
             
-            // 原则二：按JT余额（余额多的优先，表示有资源可用）
-            if (a.jt_balance !== b.jt_balance) {
-                return b.jt_balance - a.jt_balance;
+            // 原则二：按token余额（余额多的优先，表示有资源可用）
+            if (a.token_balance !== b.token_balance) {
+                return b.token_balance - a.token_balance;
             }
             
             // 原则三：被闲置越久越优先（last_work_date越小越优先）
@@ -122,13 +122,13 @@ module.exports = {
             return null;
         }
         
-        // 计算JT成本
+        // 计算token成本
         const pricing = season.getPricing();
-        const jtRate = templateType.toString().startsWith('2') ? pricing.template_2 : pricing.template_1;
-        const jtCost = timeSliceAmount * jtRate;
+        const tokenRate = templateType.toString().startsWith('2') ? pricing.template_2 : pricing.template_1;
+        const tokenCost = timeSliceAmount * tokenRate;
         
-        // 过滤出JT余额足够的todo
-        let affordable = candidates.filter(c => c.jt_balance >= jtCost);
+        // 过滤出token余额足够的todo
+        let affordable = candidates.filter(c => c.token_balance >= tokenCost);
         
         // 模版一：跳过已选task（相邻时间片不安排同一task）
         if (excludeTaskIds.length > 0) {
@@ -140,8 +140,8 @@ module.exports = {
         }
         
         if (affordable.length === 0) {
-            log("no affordable todos, jt cost:", jtCost);
-            // 返回JT余额最高的todo（可能需要先分配JT）
+            log("no affordable todos, token cost:", tokenCost);
+            // 返回token余额最高的todo（可能需要先分配token）
             const sorted = this.sortTodosByPrinciples(candidates, excludeTaskIds);
             return sorted[0];
         }
@@ -150,10 +150,10 @@ module.exports = {
         const sorted = this.sortTodosByPrinciples(affordable, excludeTaskIds);
         const selected = sorted[0];
         
-        log("selected todo:", selected.title, "jt cost:", jtCost);
+        log("selected todo:", selected.title, "token cost:", tokenCost);
         return {
             ...selected,
-            jt_cost: jtCost,
+            token_cost: tokenCost,
             template: templateType
         };
     },
@@ -207,7 +207,7 @@ module.exports = {
                         ...slice,
                         task: selected.task_id,
                         todo: selected.todo_name,
-                        jt_cost: selected.jt_cost
+                        token_cost: selected.token_cost
                     });
                     
                     // 更新已使用task列表（用于交叉原则）
@@ -225,46 +225,46 @@ module.exports = {
         return selections;
     },
     
-    // 扣除todo的JT余额
-    deductJT: function (taskId, todoName, jtAmount) {
+    // 扣除todo的token余额
+    deductToken: function (taskId, todoName, tokenAmount) {
         const taskData = task.loadTask(taskId);
         if (!taskData) {
             log("task not found:", taskId);
             return false;
         }
         
-        if (!taskData.jt_balance) {
-            taskData.jt_balance = 0;
+        if (!taskData.token_balance) {
+            taskData.token_balance = 0;
         }
         
-        if (taskData.jt_balance < jtAmount) {
-            log("insufficient jt balance:", taskId, taskData.jt_balance, jtAmount);
+        if (taskData.token_balance < tokenAmount) {
+            log("insufficient token balance:", taskId, taskData.token_balance, tokenAmount);
             return false;
         }
         
-        taskData.jt_balance -= jtAmount;
+        taskData.token_balance -= tokenAmount;
         task.saveTask(taskData);
         
-        log("deducted jt:", taskId, jtAmount, "remaining:", taskData.jt_balance);
+        log("deducted token:", taskId, tokenAmount, "remaining:", taskData.token_balance);
         return true;
     },
     
-    // 分配JT给task（ego分配资源给子项目）
-    allocateJT: function (taskId, jtAmount) {
+    // 分配token给task（ego分配资源给子项目）
+    allocateToken: function (taskId, tokenAmount) {
         const taskData = task.loadTask(taskId);
         if (!taskData) {
             log("task not found:", taskId);
             return false;
         }
         
-        if (!taskData.jt_balance) {
-            taskData.jt_balance = 0;
+        if (!taskData.token_balance) {
+            taskData.token_balance = 0;
         }
         
-        taskData.jt_balance += jtAmount;
+        taskData.token_balance += tokenAmount;
         task.saveTask(taskData);
         
-        log("allocated jt:", taskId, jtAmount, "new balance:", taskData.jt_balance);
+        log("allocated token:", taskId, tokenAmount, "new balance:", taskData.token_balance);
         return true;
     }
 };

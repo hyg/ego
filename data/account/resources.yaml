@@ -1,20 +1,20 @@
 rmb:
   name: "人民币"
   unit: "元"
-  jt_rate: 60  # 1元 = 60JT（按时间机会成本）
+  token_rate: 60  # 1元 = 60 token（按时间机会成本）
 
 time:
   name: "时间"
   unit: "分钟"
-  jt_rate: 1   # 1分钟 = 1JT（基准）
+  token_rate: 1   # 1分钟 = 1 token（基准）
 
-jt:
-  name: "Joint Token"
-  unit: "JT"
-  jt_rate: 1   # 1JT = 1JT
+token:
+  name: "Token"
+  unit: "token"
+  token_rate: 1   # 1 token = 1 token
 
 # 未来扩展的资源类型
 # material:
 #   name: "物资"
 #   unit: "件"
-#   jt_rate: dynamic
+#   token_rate: dynamic

@@ -1,22 +1,22 @@
 date: '20260401'
-VoucherID: O20260401yer7ix
+VoucherID: ''
 AccountingEntry:
   debit:
     - AccountTitle: ego
       asset: time
       amount: 370
     - AccountTitle: raw
-      asset: jt
+      asset: token
       amount: 370
-    - AccountTitle: ego.artifact
-      asset: artifact
+    - AccountTitle: ego
+      asset: artifact.draft
       amount: 1
   credit:
     - AccountTitle: raw
       asset: time
       amount: 370
     - AccountTitle: ego
-      asset: jt
+      asset: token
       amount: 370
     - AccountTitle: ego
       asset: time
@@ -26,5 +26,5 @@ comment:
     task: ego
     todo: 整理edgeone、cnb、gitee的发布通道
     time: 370
-    jt: 370
+    token: 370
     artifact: ../../draft/2026/20260401.a.md

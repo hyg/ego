@@ -51,8 +51,8 @@ module.exports = {
         }
         // 默认资源类型
         return {
-            rmb: { name: "人民币", unit: "元", jt_rate: 60 },
-            time: { name: "时间", unit: "分钟", jt_rate: 1 }
+            rmb: { name: "人民币", unit: "元", token_rate: 60 },
+            time: { name: "时间", unit: "分钟", token_rate: 1 }
         };
     },
     
@@ -156,14 +156,23 @@ module.exports = {
     },
     
     // 创建凭证
-    createVoucher: function (type, entries, comment) {
+    createVoucher: function (type, entries, comment, externalVoucherId = null) {
         const date = new Date();
         const dateStr = date.toISOString().slice(0, 10).replace(/-/g, '');
-        const voucherId = type.toUpperCase().charAt(0) + dateStr + Math.random().toString(36).substr(2, 6);
+        const year = dateStr.substring(0, 4);
+        
+        // AER编号：每年从1开始递增
+        const existingAERs = this.loadAER(year);
+        const existingIds = Object.keys(existingAERs)
+            .map(f => parseInt(f.replace('AER.', '').replace('.yaml', '')))
+            .filter(n => !isNaN(n));
+        const nextId = existingIds.length > 0 ? Math.max(...existingIds) + 1 : 1;
+        const aerId = nextId.toString();
         
         const voucher = {
             date: dateStr,
-            VoucherID: voucherId,
+            // VoucherID指向外部凭证（AVR），如果没有外部凭证则不填
+            VoucherID: externalVoucherId || "",
             AccountingEntry: {
                 debit: [],
                 credit: []
@@ -186,13 +195,12 @@ module.exports = {
         }
         
         // 保存凭证
-        const year = dateStr.substring(0, 4);
         const voucherPath = config.voucherpath + year;
         if (!fs.existsSync(voucherPath)) {
             fs.mkdirSync(voucherPath, { recursive: true });
         }
         
-        const filePath = voucherPath + "/AER." + voucherId + ".yaml";
+        const filePath = voucherPath + "/AER." + aerId + ".yaml";
         if (this.debug == false) {
             fs.writeFileSync(filePath, yaml.dump(voucher, { 'lineWidth': -1 }));
             log("create voucher:", filePath);
@@ -208,38 +216,38 @@ module.exports = {
         const season = Math.ceil((date.getMonth() + 1) / 3);
         const pricing = this.loadPricing(year, season);
         
-        const jtRate = templateType.toString().startsWith('2') ? pricing.template_2 : pricing.template_1;
-        const jtAmount = amount * jtRate;
+        const tokenRate = templateType.toString().startsWith('2') ? pricing.template_2 : pricing.template_1;
+        const tokenAmount = amount * tokenRate;
         
         // 复式记账分录：
         // 借：task获得time（资产增加）
         // 贷：raw减少time（资产减少）
-        // 借：raw获得jt（资产增加）
-        // 贷：task减少jt（资产减少）
+        // 借：raw获得token（资产增加）
+        // 贷：task减少token（资产减少）
         return this.createVoucher(
             "buy_time",
             [
                 { account: taskId, asset: "time", amount: amount, direction: "debit" },
                 { account: "raw", asset: "time", amount: amount, direction: "credit" },
-                { account: "raw", asset: "jt", amount: jtAmount, direction: "debit" },
-                { account: taskId, asset: "jt", amount: jtAmount, direction: "credit" }
+                { account: "raw", asset: "token", amount: tokenAmount, direction: "debit" },
+                { account: taskId, asset: "token", amount: tokenAmount, direction: "credit" }
             ],
-            [{ name: "购买时间", task: taskId, template: templateType, time: amount, jt: jtAmount }]
+            [{ name: "购买时间", task: taskId, template: templateType, time: amount, token: tokenAmount }]
         );
     },
     
-    // ego分配JT给子项目
-    allocateJT: function (taskId, jtAmount) {
+    // ego分配token给子项目
+    allocateToken: function (taskId, tokenAmount) {
         // 复式记账分录：
-        // 借：子项目获得jt（资产增加）
-        // 贷：ego减少jt（资产减少）
+        // 借：子项目获得token（资产增加）
+        // 贷：ego减少token（资产减少）
         return this.createVoucher(
-            "allocate_jt",
+            "allocate_token",
             [
-                { account: taskId, asset: "jt", amount: jtAmount, direction: "debit" },
-                { account: "ego", asset: "jt", amount: jtAmount, direction: "credit" }
+                { account: taskId, asset: "token", amount: tokenAmount, direction: "debit" },
+                { account: "ego", asset: "token", amount: tokenAmount, direction: "credit" }
             ],
-            [{ name: "分配JT", task: taskId, jt: jtAmount }]
+            [{ name: "分配token", task: taskId, token: tokenAmount }]
         );
     },
     
@@ -249,8 +257,8 @@ module.exports = {
         const season = Math.ceil((new Date().getMonth() + 1) / 3);
         const pricing = this.loadPricing(year, season);
         
-        const jtRate = templateType.toString().startsWith('2') ? pricing.template_2 : pricing.template_1;
-        const jtAmount = amount * jtRate;
+        const tokenRate = templateType.toString().startsWith('2') ? pricing.template_2 : pricing.template_1;
+        const tokenAmount = amount * tokenRate;
         
         // 创建凭证：task减少时间，todo增加时间
         return this.createVoucher(
@@ -259,7 +267,7 @@ module.exports = {
                 { account: taskId, asset: "time", amount: amount, direction: "credit" },
                 { account: taskId + "." + todoName, asset: "time", amount: amount, direction: "debit" }
             ],
-            [{ name: "task分配时间给todo", task: taskId, todo: todoName, amount: amount, jt: jtAmount }]
+            [{ name: "task分配时间给todo", task: taskId, todo: todoName, amount: amount, token: tokenAmount }]
         );
     },
     
@@ -300,13 +308,13 @@ module.exports = {
         };
     },
     
-    // 计算汇率（JT对rmb）
+    // 计算汇率（token对rmb）
     calculateExchangeRate: function (year) {
         const egoBalance = this.getAccountBalance("ego", year);
         const rmbIncome = Math.abs(egoBalance.rmb || 0);
-        const jtCost = Math.abs(egoBalance.jt || 0);
+        const tokenCost = Math.abs(egoBalance.token || 0);
         
-        if (jtCost === 0) return 0;
-        return rmbIncome / jtCost;
+        if (tokenCost === 0) return 0;
+        return rmbIncome / tokenCost;
     }
 };

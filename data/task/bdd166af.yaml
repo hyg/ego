@@ -26,4 +26,4 @@ derivation:
   source: null
   type: null
   trigger: null
-jt_balance: 1000
+token_balance: 1000

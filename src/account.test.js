@@ -29,7 +29,7 @@ test('loadResources - 加载资源类型', () => {
     const resources = account.loadResources();
     assert.ok(resources.rmb);
     assert.ok(resources.time);
-    assert.ok(resources.jt);
+    assert.ok(resources.token);
 });
 
 test('loadPricing - 加载定价配置', () => {
@@ -41,15 +41,16 @@ test('loadPricing - 加载定价配置', () => {
 test('buyTimeFromRaw - 购买时间凭证', () => {
     const voucher = account.buyTimeFromRaw('PSMD', 2, 195);
     assert.ok(voucher);
-    assert.ok(voucher.VoucherID);
+    // VoucherID指向外部凭证，内部凭证可以为空
+    assert.ok(voucher.date);
     assert.strictEqual(voucher.AccountingEntry.debit.length, 2);
     assert.strictEqual(voucher.AccountingEntry.credit.length, 2);
 });
 
-test('allocateJT - 分配JT凭证', () => {
-    const voucher = account.allocateJT('PSMD', 1000);
+test('allocateToken - 分配token凭证', () => {
+    const voucher = account.allocateToken('PSMD', 1000);
     assert.ok(voucher);
-    assert.ok(voucher.VoucherID);
+    assert.ok(voucher.date);
     assert.strictEqual(voucher.AccountingEntry.debit.length, 1);
     assert.strictEqual(voucher.AccountingEntry.credit.length, 1);
 });
