@@ -22,9 +22,6 @@ AccountingEntry:
       asset: time
       amount: 60
 comment:
-  - type: work
-    task: ego
-    todo: JT的发行和回收
-    time: 60
+  - type: check
     token: 120
-    artifact: ../../draft/2026/20260402.02.md
+    artifact: ../../draft/2026/20260402.03.md
