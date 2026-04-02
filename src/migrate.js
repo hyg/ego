@@ -46,9 +46,9 @@ function loadSeason(year, season) {
     }
 }
 
-// 保存task文件
+// 保存task文件（使用name作为文件名）
 function saveTask(task) {
-    const filepath = path.join(config.taskPath, `${task.id}.yaml`);
+    const filepath = path.join(config.taskPath, `${task.name}.yaml`);
     const content = yaml.dump(task, { lineWidth: -1 });
     
     try {

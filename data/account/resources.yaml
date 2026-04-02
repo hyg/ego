@@ -13,8 +13,22 @@ token:
   unit: "token"
   token_rate: 1   # 1 token = 1 token
 
-# 未来扩展的资源类型
-# material:
-#   name: "物资"
-#   unit: "件"
-#   token_rate: dynamic
+artifact.draft:
+  name: "手稿"
+  unit: "篇"
+  token_rate: dynamic  # 按消耗时间计算
+
+artifact.code:
+  name: "代码"
+  unit: "份"
+  token_rate: dynamic
+
+artifact.document:
+  name: "文档"
+  unit: "份"
+  token_rate: dynamic
+
+artifact.sheet:
+  name: "表格"
+  unit: "份"
+  token_rate: dynamic

@@ -3,44 +3,34 @@
   name: "总账"
   ftitle: null
 
-ego:
-  id: 20
-  name: "ego"
+银行存款:
+  id: 1
+  name: "银行存款"
   ftitle: "总账"
+
+现金:
+  id: 2
+  name: "现金"
+  ftitle: "总账"
+
+微信零钱:
+  id: 2.1
+  name: "微信零钱"
+  ftitle: "现金"
 
 raw:
   id: 10
   name: "raw"
   ftitle: "总账"
 
-PSMD:
-  id: 100
-  name: "PSMD"
-  ftitle: "ego"
-
-infra:
-  id: 101
-  name: "infra"
-  ftitle: "ego"
-
-xuemen:
-  id: 102
-  name: "xuemen"
-  ftitle: "ego"
-
-learn:
-  id: 103
-  name: "learn"
-  ftitle: "ego"
-
-js:
-  id: 104
-  name: "js"
-  ftitle: "ego"
-
 raw.food:
   id: 10.1
   name: "raw.food"
+  ftitle: "raw"
+
+raw.med:
+  id: 10.2
+  name: "raw.med"
   ftitle: "raw"
 
 raw.site:
@@ -48,7 +38,82 @@ raw.site:
   name: "raw.site"
   ftitle: "raw"
 
+raw.site.bj1:
+  id: "10.3.1"
+  name: "raw.site.bj1"
+  ftitle: "raw.site"
+
+raw.site.wz:
+  id: "10.3.2"
+  name: "raw.site.wz"
+  ftitle: "raw.site"
+
 raw.fun:
   id: 10.4
   name: "raw.fun"
   ftitle: "raw"
+
+raw.shell:
+  id: 10.5
+  name: "raw.shell"
+  ftitle: "raw"
+
+raw.supply:
+  id: 10.6
+  name: "raw.supply"
+  ftitle: "raw"
+
+ego:
+  id: 20
+  name: "ego"
+  ftitle: "总账"
+
+ego.it:
+  id: 20.1
+  name: "ego.it"
+  ftitle: "ego"
+
+donation:
+  id: 30
+  name: "donation"
+  ftitle: "总账"
+
+donation.parent:
+  id: 30.1
+  name: "donation.parent"
+  ftitle: "donation"
+
+donation.younger:
+  id: 30.2
+  name: "donation.younger"
+  ftitle: "donation"
+
+donation.else:
+  id: 30.3
+  name: "donation.else"
+  ftitle: "donation"
+
+PSMD:
+  id: 264ba3f2
+  name: "PSMD"
+  ftitle: "ego"
+
+infra:
+  id: 2d0059c6
+  name: "infra"
+  ftitle: "ego"
+
+learn:
+  id: 339d8d14
+  name: "learn"
+  ftitle: "ego"
+
+js:
+  id: 32981a13
+  name: "js"
+  ftitle: "ego"
+
+xuemen:
+  id: c36b4952
+  name: "xuemen"
+  ftitle: "总账"

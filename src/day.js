@@ -3,7 +3,6 @@ const yaml = require('js-yaml');
 const config = require('./config.js');
 const util = require('./util.js');
 const season = require('./season.js');
-const wl = require('./waitinglist.js');
 const task = require('./task.js');
 const draft = require('./draft.js');
 const allocator = require('./allocator.js');
@@ -117,7 +116,8 @@ module.exports = {
         let waketime = this.getwaketime(diff) % 1000000;
         log("waketime:", waketime);
         let seasonobj = season.loadseasonobj(date);
-        let waitinglist = wl.makewaitinglist(seasonobj);
+        // 新版本不使用waitinglist，直接从task.yaml获取todo
+        let waitinglist = {};
 
         let dayplan = "";
         for (let plan in seasonobj.map[mode]) {
@@ -223,25 +223,7 @@ module.exports = {
                 draftcnt++;
                 timeperiod.output = config.draftrepopath + date.slice(0, 4) + "/" + util.parseTemplate(config.templates.draft, { date: date, seq: draftcnt.toString().padStart(2, '0') });
 
-                seasonobj = season.deletetodoitem(seasonobj, waitinglist[amount.toString()][0]);
-                waitinglist = wl.makewaitinglist(seasonobj);
-
-                /* log("delete the job from %s: [%s]", waitinglist[amount.toString()][0].task, waitinglist[amount.toString()][0].name);
-                for (let j in seasonobj.todo[timeperiod.subject]) {
-                    //log("seasonobj.todo[timeperiod.subject][j][timeperiod.amount]: "+seasonobj.todo[timeperiod.subject][j][timeperiod.amount] + " timeperiod.name: "+ timeperiod.name)
-                    if (seasonobj.todo[timeperiod.subject][j][timeperiod.amount] == timeperiod.name) {
-                        log("before delete todo item, waitinglist: " + i + " " + j + "\n" + yaml.dump(waitinglist[amount.toString()][0]));
-                        log("before delete todo item:\n" + yaml.dump(seasonobj.todo[timeperiod.subject]));
-                        if (seasonobj.todo[timeperiod.subject][j].bind != null) {
-                            seasonobj.todo[timeperiod.subject].splice(j, 1, ...seasonobj.todo[timeperiod.subject][j].bind);
-                        } else {
-                            seasonobj.todo[timeperiod.subject].splice(j, 1);
-                        }
-                        log("after delete todo item:\n" + yaml.dump(seasonobj.todo[timeperiod.subject]));
-                    }
-                }
-                //delete it from waitinglist
-                waitinglist[time[i].amount.toString()].shift(); */
+                // 新版本不再从season.todo删除，todo在task.yaml中管理
 
                 //let timestr = "## 计划 " + beginhour.toString().padStart(2, "0") + ":" + beginminute.toString().padStart(2, "0") + " ~ " + endhour.toString().padStart(2, "0") + ":" + endminute.toString().padStart(2, "0") + "\n" + timeperiod.subject + ": [" + timeperiod.title + "]\n\n";
                 //let timestr = "## " + timeperiod.subject + ": [" + timeperiod.title + "]\n\n";
@@ -496,7 +478,7 @@ module.exports = {
         }
 
         season.dumpseasonobj(seasonobj, datestr);
-        let waitinglist = wl.makewaitinglist(seasonobj);
+        // 新版本不使用waitinglist
         log("datestr:", datestr);
         let indexstr = this.makeindex(dayobj, "log");
 
@@ -507,7 +489,6 @@ module.exports = {
             + "<a id=\"top\"></a>\n" + "根据[ego模型时间接口](https://gitee.com/hyg/blog/blob/master/timeflow.md)，" + monthDesc + "，今天绑定模版" + dayobj.mode + "(" + dayobj.plan + ")。\n\n"
             + "<a id=\"index\"></a>\n" + indexstr
             + season.makestattable(seasonobj)
-            + wl.makebrieflist(waitinglist)
             + this.makeoutputlist(dayobj);
 
         let daylogfilename = config.blogrepopath + "release/time/" + util.parseTemplate(config.templates.blogTime, { date: datestr });
@@ -560,26 +541,22 @@ module.exports = {
         let datestr = util.datestr(1);
         let date = util.str2date(datestr);
         let seasonobj = season.loadseasonobj();
-        //let waitinglist = wl.makewaitinglist(seasonobj);
         
         let month = parseInt(datestr.slice(4, 6));
         let isLastMonthOfQuarter = [3, 6, 9, 12].includes(month);
         let monthDesc = isLastMonthOfQuarter ? "安排休整和总结" : "安排常规工作";
         let dayinfostr = "# " + date.format("YYYY.MM.DD.") + "\n\n根据[ego模型时间接口](https://gitee.com/hyg/blog/blob/master/timeflow.md)，" + monthDesc + "，每天早起根据身心状况绑定模版。" + "\n\n---\n";
         for (let plan in seasonobj.dayplan) {
-            let waitinglist = wl.makewaitinglist(seasonobj);
-            //log("plan:",plan);
-            //log("waitinglist:\n%s",waitinglist);
+            // 使用allocator获取todo
             let time = seasonobj.dayplan[plan].time;
             dayinfostr = dayinfostr + "如果绑定模版" + plan + "可能安排以下任务：\n\n";
             for (let i in time) {
                 if (time[i].type == "work") {
-                    //log("time[%d]:\n%s",i,time[i]);
-                    if (waitinglist[time[i].amount.toString()][0] != null) {
-                        dayinfostr = dayinfostr + "- " + time[i].beginhour.toString().padStart(2, '0') + ":" + time[i].beginminute.toString().padStart(2, '0') + "\t" + waitinglist[time[i].amount.toString()][0].name + " -" + waitinglist[time[i].amount.toString()][0].task + "[" + waitinglist[time[i].amount.toString()][0].id + "]\n";
-                        waitinglist[time[i].amount.toString()].shift();
+                    let selected = allocator.selectTodoForTimeSlice(time[i].amount, plan.charAt(0), []);
+                    if (selected) {
+                        dayinfostr = dayinfostr + "- " + time[i].beginhour.toString().padStart(2, '0') + ":" + time[i].beginminute.toString().padStart(2, '0') + "\t" + selected.todo_name + " -" + selected.task_id + "\n";
                     } else {
-                        log("waitinglist is empty. plan:%s time[%d] amount:%d", plan, i, time[i].amount);
+                        log("no todo available. plan:%s time[%d] amount:%d", plan, i, time[i].amount);
                     }
 
                 }

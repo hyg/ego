@@ -18,38 +18,46 @@ contract:
 children: []
 todos:
   - name: 权利分配语法 & engine
+    amount: 195
     status: pending
   - name: 部署语法
+    amount: 60
     status: pending
   - name: SOP engine
+    amount: 60
     status: pending
   - name: evaluate toolset
+    amount: 60
     status: pending
   - name: term + COM matedata -> deploy metadata -> deploy view
+    amount: 195
     status: pending
     time_slices:
       - date: '20260213'
         amount: 195
         template: 2a
-        jt_cost: 390
+        token_cost: 390
         draft: 2026/20260213.01.md
     history_drafts:
       - 2026/20260213.01.md
   - name: 会话skill套装设计
+    amount: 195
     status: pending
     time_slices:
       - date: '20260210'
         amount: 195
         template: 2a
-        jt_cost: 390
+        token_cost: 390
         draft: 2026/20260210.a.md
     history_drafts:
       - 2026/20260210.a.md
   - name: 以1406为例检查知识图谱和blawx的语法
+    amount: 90
     status: pending
     time_slices: []
     history_drafts: []
   - name: term metadata的序号，分为显示序号和唯一id两种
+    amount: 90
     status: pending
     time_slices: []
     history_drafts: []
@@ -57,7 +65,38 @@ todos:
     status: pending
     time_slices: []
     history_drafts: []
-  - name: term metadata的序号，分为显示序号和唯一id两种。 - 考虑upgradeby的实现。
+  - name:
+      - 考虑upgradeby的实现。
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name:
+      - 考虑upgradeby的实现。
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name:
+      - 考虑upgradeby的实现。
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name:
+      - 考虑upgradeby的实现。
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name:
+      - 考虑upgradeby的实现。
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name:
+      - 考虑upgradeby的实现。
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name:
+      - 考虑upgradeby的实现。
     status: pending
     time_slices: []
     history_drafts: []
@@ -85,4 +124,4 @@ derivation:
   source: null
   type: null
   trigger: null
-token_balance: 5700
+token_balance: 6220

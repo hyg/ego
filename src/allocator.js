@@ -21,8 +21,8 @@ module.exports = {
         ROUND_ROBIN: 'round_robin'             // 交叉进行
     },
     
-    // 获取候选todo列表
-    getCandidateTodos: function () {
+    // 获取候选todo列表（按时间长度分组）
+    getCandidateTodos: function (amount = null) {
         const allTasks = task.listTasks();
         const candidates = [];
         
@@ -35,16 +35,20 @@ module.exports = {
             
             for (const todo of taskData.todos) {
                 if (todo.status === 'pending' || todo.status === 'in_progress') {
+                    // 如果指定了amount，只返回匹配的todo
+                    if (amount !== null && todo.amount !== amount) continue;
+                    
                     candidates.push({
                         task_id: taskId,
                         todo_name: todo.name,
                         title: `${taskId}.${todo.name}`,
+                        amount: todo.amount || 60,  // 预估时间
                         status: todo.status,
                         front_type: front.getFrontType(taskId),
                         deadline: taskData.contract?.deadline,
                         token_balance: taskData.token_balance || 0,
                         priority: front.getTodoPriority(taskId, todo.name),
-                        last_work_date: lastWorkDates[taskId] || '00000000'  // 被闲置越久越优先
+                        last_work_date: lastWorkDates[taskId] || '00000000'
                     });
                 }
             }
@@ -114,14 +118,32 @@ module.exports = {
     },
     
     // 选择todo绑定时间片
+    // timeSliceAmount: 时间片长度（30、60、90、195）
+    // templateType: 模版类型（1或2）
+    // excludeTaskIds: 需要排除的task列表（模版一相邻work时间片不安排同一task）
     selectTodoForTimeSlice: function (timeSliceAmount, templateType, excludeTaskIds = []) {
-        const candidates = this.getCandidateTodos();
+        // 只获取匹配时间长度的todo
+        const candidates = this.getCandidateTodos(timeSliceAmount);
         
         if (candidates.length === 0) {
-            log("no candidate todos available");
+            log("no candidate todos for amount:", timeSliceAmount);
+            // 如果没有精确匹配的，放宽条件（amount相近的也可以）
+            const allCandidates = this.getCandidateTodos();
+            const similarCandidates = allCandidates.filter(c => {
+                // 允许预估时间大于等于时间片长度的todo
+                return c.amount >= timeSliceAmount;
+            });
+            if (similarCandidates.length > 0) {
+                return this.selectFromCandidates(similarCandidates, timeSliceAmount, templateType, excludeTaskIds);
+            }
             return null;
         }
         
+        return this.selectFromCandidates(candidates, timeSliceAmount, templateType, excludeTaskIds);
+    },
+    
+    // 从候选列表中选择todo
+    selectFromCandidates: function (candidates, timeSliceAmount, templateType, excludeTaskIds = []) {
         // 计算token成本
         const pricing = season.getPricing();
         const tokenRate = templateType.toString().startsWith('2') ? pricing.template_2 : pricing.template_1;
@@ -130,7 +152,7 @@ module.exports = {
         // 过滤出token余额足够的todo
         let affordable = candidates.filter(c => c.token_balance >= tokenCost);
         
-        // 模版一：跳过已选task（相邻时间片不安排同一task）
+        // 模版一：跳过已选task（相邻work时间片不安排同一task）
         if (excludeTaskIds.length > 0) {
             const filtered = affordable.filter(c => !excludeTaskIds.includes(c.task_id));
             if (filtered.length > 0) {
@@ -143,14 +165,14 @@ module.exports = {
             log("no affordable todos, token cost:", tokenCost);
             // 返回token余额最高的todo（可能需要先分配token）
             const sorted = this.sortTodosByPrinciples(candidates, excludeTaskIds);
-            return sorted[0];
+            return sorted[0] ? { ...sorted[0], token_cost: tokenCost, template: templateType } : null;
         }
         
         // 按原则排序
         const sorted = this.sortTodosByPrinciples(affordable, excludeTaskIds);
         const selected = sorted[0];
         
-        log("selected todo:", selected.title, "token cost:", tokenCost);
+        log("selected todo:", selected.title, "amount:", selected.amount, "token cost:", tokenCost);
         return {
             ...selected,
             token_cost: tokenCost,

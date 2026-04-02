@@ -17,7 +17,7 @@ function runTest(file) {
 
 // 运行所有测试
 runTest('./task.test.js');
-runTest('./account.test.js');
+runTest('./asset.test.js');
 runTest('./draft.test.js');
 runTest('./front.test.js');
 runTest('./allocator.test.js');

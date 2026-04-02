@@ -1,0 +1,17 @@
+date: 2026-04-02
+VoucherID: 2026040223001831991405241521
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: donation.parent
+      asset: rmb
+      amount: 68.40
+  credit:
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 68.40
+comment:
+  - name: 益生菌冻干粉
+    amount: 480
+    unit: g
+    asset: 68.40

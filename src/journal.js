@@ -2,7 +2,7 @@ const yaml = require('js-yaml');
 const fs = require('fs');
 const path = require('path');
 const config = require('./config.js');
-const account = require('./account.js');
+const asset = require('./asset.js');
 const task = require('./task.js');
 const season = require('./season.js');
 
@@ -194,7 +194,7 @@ module.exports = {
         for (const result of parsed.results) {
             if (result.entries.length > 0) {
                 // 生成凭证
-                const voucher = account.createVoucher(
+                const voucher = asset.createVoucher(
                     'over_settle',
                     result.entries,
                     [{ 

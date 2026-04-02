@@ -43,9 +43,9 @@ module.exports = {
         }
     },
     
-    // 保存task
+    // 保存task（使用name作为文件名）
     saveTask: function (task) {
-        const filePath = this.taskFilePath(task.id);
+        const filePath = this.taskFilePath(task.name);
         const taskStr = yaml.dump(task, { 'lineWidth': -1 });
         if (this.debug == false) {
             fs.writeFileSync(filePath, taskStr);

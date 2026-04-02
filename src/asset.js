@@ -1,4 +1,5 @@
 const fs = require('fs');
+const path = require('path');
 const yaml = require('js-yaml');
 const config = require('./config.js');
 const util = require('./util.js');
@@ -8,125 +9,136 @@ function log(...s) {
     console.log(...s);
 }
 
+// 获取绝对路径
+function getAbsolutePath(relativePath) {
+    return path.resolve(__dirname, relativePath);
+}
+
 module.exports = {
-    debug: true,
-    accountdetail: function (account,year) {
-        let AssetType = this.loadAssetType();
-        let Account = this.loadAccount();
-        let AERmap = this.loadAER(year);
-
-        let detail = new Array();
-        let total = new Object();
-        total.debit = 0;
-        total.credit = 0;
-
-        for (let file in AERmap) {
-            let AER = AERmap[file];
-            for (let id in AER.AccountingEntry.debit) {
-                let item = AER.AccountingEntry.debit[id];
-                if (account == item.AccountTitle) {
-                    let record = new Object();
-                    record.date = AER.date;
-                    record.VoucherID = AER.VoucherID;
-                    record.asset = item.asset;
-                    record.debit = item.amount;
-                    detail.push(record);
-
-                    total.debit += item.amount;
+    debug: false,
+    
+    // ========== 账户管理 ==========
+    
+    // 加载账户配置
+    loadAccount: function () {
+        const filePath = path.join(getAbsolutePath(config.datapath), "account", "accounts.yaml");
+        try {
+            if (fs.existsSync(filePath)) {
+                const accounts = yaml.load(fs.readFileSync(filePath, 'utf8'));
+                for (let title in accounts) {
+                    if (!accounts[title].debit) accounts[title].debit = {};
+                    if (!accounts[title].credit) accounts[title].credit = {};
+                    if (!accounts[title].balance) accounts[title].balance = {};
                 }
-            } for (let id in AER.AccountingEntry.credit) {
-                let item = AER.AccountingEntry.credit[id];
-                if (account == item.AccountTitle) {
-                    let record = new Object();
-                    record.date = AER.date;
-                    record.VoucherID = AER.VoucherID;
-                    record.asset = item.asset;
-                    record.credit = item.amount;
-                    detail.push(record);
-
-                    total.credit += item.amount;
-                }
+                return accounts;
             }
+        } catch (e) {
+            log("load accounts error:", e);
         }
-        //let keysSorted = Object.keys(detail).sort(function (a, b) { return (a.date-b.date)});
-        detail.sort(function (a, b) { return (a.date - b.date) })
-        //detail.push(total);
-
-        //log(yaml.dump(detail));
-        console.table(detail);
-
-        total.balance = total.credit - total.debit;
-        log(yaml.dump(total));
+        return {
+            "总账": { id: 0, name: "总账", ftitle: null, debit: {}, credit: {}, balance: {} },
+            "ego": { id: 20, name: "ego", ftitle: "总账", debit: {}, credit: {}, balance: {} },
+            "raw": { id: 10, name: "raw", ftitle: "总账", debit: {}, credit: {}, balance: {} }
+        };
     },
-    yearreport: function (year) {
-
-    },
-    entry: function (year) {
-        let AssetType = this.loadAssetType();
-        let Account = this.loadAccount();
-        let AERmap = this.loadAER(year);
-
-        for (let file in AERmap) {
-            let AER = AERmap[file];
-            for (let id in AER.AccountingEntry.debit) {
-                let item = AER.AccountingEntry.debit[id];
-                if (Account[item.AccountTitle].record == undefined) {
-                    Account[item.AccountTitle].record = new Array();
-                }
-                let record = new Object();
-                record.date = AER.date;
-                record.voucherID = AER.VoucherID;
-                record.asset = item.asset;
-                record.type = "debit";
-                record.amount = item.amount;
-                Account[item.AccountTitle].record.push(record);
-                Account = this.updatebalance(Account, item.AccountTitle, record.type, record.asset, record.amount);
-                //Account[item.AccountTitle].balance[item.asset] += item.amount;
-                //Account[item.AccountTitle].balance[item.asset] = Math.round((Account[item.AccountTitle].balance[item.asset]) * 100) / 100;
+    
+    // 加载资产类型配置
+    loadAssetType: function () {
+        const filePath = path.join(getAbsolutePath(config.datapath), "account", "resources.yaml");
+        try {
+            if (fs.existsSync(filePath)) {
+                return yaml.load(fs.readFileSync(filePath, 'utf8'));
             }
-            for (let id in AER.AccountingEntry.credit) {
-                let item = AER.AccountingEntry.credit[id];
-                if (Account[item.AccountTitle].record == undefined) {
-                    Account[item.AccountTitle].record = new Array();
-                }
-                let record = new Object();
-                record.date = AER.date;
-                record.voucherID = AER.VoucherID;
-                record.asset = item.asset;
-                record.type = "credit";
-                record.amount = item.amount;
-                Account[item.AccountTitle].record.push(record);
-                Account = this.updatebalance(Account, item.AccountTitle, record.type, record.asset, record.amount);
-                //Account[item.AccountTitle].balance[item.asset] -= item.amount;
-                //Account[item.AccountTitle].balance[item.asset] = Math.round((Account[item.AccountTitle].balance[item.asset]) * 100) / 100;
-            }
-            //log(file,Account["总账"].balance["rmb"]);
+        } catch (e) {
+            log("load resources error:", e);
         }
-        //log(yaml.dump(Account));
-        console.table(Account, ["id", "debit", "credit", "balance"]);
+        return {
+            rmb: { name: "人民币", unit: "元", token_rate: 60 },
+            time: { name: "时间", unit: "分钟", token_rate: 1 },
+            token: { name: "Token", unit: "token", token_rate: 1 }
+        };
     },
-    loadAER(year) {
-        let AERmap = new Object();
-        let voucherfolder = config.voucherpath + year;
-        fs.readdirSync(voucherfolder).forEach(file => {
-            if (file.substr(0, 4) == "AER.") {
-                let AER = yaml.load(fs.readFileSync(voucherfolder + "/" + file, 'utf8'));
-                AERmap[file] = AER;
-            }
-        });
+    
+    // ========== 凭证管理 ==========
+    
+    // 加载凭证
+    loadAER: function (year) {
+        let AERmap = {};
+        let voucherfolder = path.join(getAbsolutePath(config.voucherpath), year.toString());
+        if (fs.existsSync(voucherfolder)) {
+            fs.readdirSync(voucherfolder).forEach(file => {
+                if (file.startsWith("AER.") && file.endsWith(".yaml")) {
+                    try {
+                        let AER = yaml.load(fs.readFileSync(path.join(voucherfolder, file), 'utf8'));
+                        AERmap[file] = AER;
+                    } catch (e) {
+                        log("load AER error:", file, e);
+                    }
+                }
+            });
+        }
         return AERmap;
     },
-    loadAssetType() {
-        return { "rmb": { id: 1, name: "rmb" } };
+    
+    // 创建凭证
+    createVoucher: function (type, entries, comment, externalVoucherId = null) {
+        const date = new Date();
+        const dateStr = date.toISOString().slice(0, 10).replace(/-/g, '');
+        const year = dateStr.substring(0, 4);
+        
+        const existingAERs = this.loadAER(year);
+        const existingIds = Object.keys(existingAERs)
+            .map(f => parseInt(f.replace('AER.', '').replace('.yaml', '')))
+            .filter(n => !isNaN(n));
+        const nextId = existingIds.length > 0 ? Math.max(...existingIds) + 1 : 1;
+        const aerId = nextId.toString();
+        
+        const voucher = {
+            date: dateStr,
+            VoucherID: externalVoucherId || "",
+            AccountingEntry: { debit: [], credit: [] },
+            comment: comment || []
+        };
+        
+        for (const entry of entries) {
+            const item = {
+                AccountTitle: entry.account,
+                asset: entry.asset,
+                amount: entry.amount
+            };
+            if (entry.direction === 'debit') {
+                voucher.AccountingEntry.debit.push(item);
+            } else {
+                voucher.AccountingEntry.credit.push(item);
+            }
+        }
+        
+        const voucherPath = config.voucherpath + year;
+        if (!fs.existsSync(voucherPath)) {
+            fs.mkdirSync(voucherPath, { recursive: true });
+        }
+        
+        const filePath = voucherPath + "/AER." + aerId + ".yaml";
+        if (this.debug == false) {
+            fs.writeFileSync(filePath, yaml.dump(voucher, { 'lineWidth': -1 }));
+            log("create voucher:", filePath);
+        }
+        
+        return voucher;
     },
-    /*
-    Account: a object holding all data
-    title: account title
-    type: debit or credit
-    asset: type of asset, eg rmb
-    amount: .
-    */
+    
+    // ========== 余额计算 ==========
+    
+    // 更新余额
     updatebalance: function (Account, title, type, asset, amount) {
+        if (!Account[title]) {
+            Account[title] = { id: title, name: title, ftitle: null, debit: {}, credit: {}, balance: {} };
+        }
+        
+        if (!Account[title].debit[asset]) Account[title].debit[asset] = 0;
+        if (!Account[title].credit[asset]) Account[title].credit[asset] = 0;
+        if (!Account[title].balance[asset]) Account[title].balance[asset] = 0;
+        
         switch (type) {
             case "credit":
                 Account[title].credit[asset] += amount;
@@ -136,42 +148,227 @@ module.exports = {
                 Account[title].debit[asset] += amount;
                 Account[title].balance[asset] += amount;
                 break;
-            default: log("unknown type.");
-        };
-        Account[title].credit[asset] = Math.round((Account[title].credit[asset]) * 100) / 100;
-        Account[title].debit[asset] = Math.round((Account[title].debit[asset]) * 100) / 100;
-        Account[title].balance[asset] = Math.round((Account[title].balance[asset]) * 100) / 100;
-
-        if (Account[title].ftitle != undefined) {
+        }
+        
+        Account[title].credit[asset] = Math.round(Account[title].credit[asset] * 100) / 100;
+        Account[title].debit[asset] = Math.round(Account[title].debit[asset] * 100) / 100;
+        Account[title].balance[asset] = Math.round(Account[title].balance[asset] * 100) / 100;
+        
+        if (Account[title].ftitle) {
             Account = this.updatebalance(Account, Account[title].ftitle, type, asset, amount);
         }
+        
         return Account;
     },
-    loadAccount() {
-        let account =
-        {
-            "总账": { id: 0, name: "总账", debit: { "rmb": 0.0 }, credit: { "rmb": 0.0 }, balance: { "rmb": 0.0 } },
-            "银行存款": { id: 1, name: "银行存款", ftitle: "总账", debit: { "rmb": 0.0 }, credit: { "rmb": 0.0 }, balance: { "rmb": 0.0 } },
-            "现金": { id: 2, name: "现金", ftitle: "总账", debit: { "rmb": 0.0 }, credit: { "rmb": 0.0 }, balance: { "rmb": 0.0 } },
-            "微信零钱": { id: 2.1, name: "微信零钱", ftitle: "现金", debit: { "rmb": 0.0 }, credit: { "rmb": 0.0 }, balance: { "rmb": 0.0 } },
-            "raw": { id: 10, name: "raw", ftitle: "总账", debit: { "rmb": 0.0 }, credit: { "rmb": 0.0 }, balance: { "rmb": 0.0 } },
-            "raw.food": { id: 10.1, name: "raw.food", ftitle: "raw", debit: { "rmb": 0.0 }, credit: { "rmb": 0.0 }, balance: { "rmb": 0.0 } },
-            "raw.med": { id: 10.2, name: "raw.med", ftitle: "raw", debit: { "rmb": 0.0 }, credit: { "rmb": 0.0 }, balance: { "rmb": 0.0 } },
-            "raw.site": { id: 10.3, name: "raw.site", ftitle: "raw", debit: { "rmb": 0.0 }, credit: { "rmb": 0.0 }, balance: { "rmb": 0.0 } },
-            "raw.site.bj1": { id: "10.3.1.", name: "raw.site.bj1", ftitle: "raw.site", debit: { "rmb": 0.0 }, credit: { "rmb": 0.0 }, balance: { "rmb": 0.0 } },
-            "raw.site.wz": { id: "10.3.2.", name: "raw.site.wz", ftitle: "raw.site", debit: { "rmb": 0.0 }, credit: { "rmb": 0.0 }, balance: { "rmb": 0.0 } },
-            "raw.fun": { id: 10.4, name: "raw.fun", ftitle: "raw", debit: { "rmb": 0.0 }, credit: { "rmb": 0.0 }, balance: { "rmb": 0.0 } },
-            "raw.shell": { id: 10.5, name: "raw.shell", ftitle: "raw", debit: { "rmb": 0.0 }, credit: { "rmb": 0.0 }, balance: { "rmb": 0.0 } },
-            "raw.supply": { id: 10.6, name: "raw.supply", ftitle: "raw", debit: { "rmb": 0.0 }, credit: { "rmb": 0.0 }, balance: { "rmb": 0.0 } },
-            "ego": { id: 20, name: "ego", ftitle: "总账", debit: { "rmb": 0.0 }, credit: { "rmb": 0.0 }, balance: { "rmb": 0.0 } },
-            "ego.it": { id: 20.1, name: "ego.it", ftitle: "ego", debit: { "rmb": 0.0 }, credit: { "rmb": 0.0 }, balance: { "rmb": 0.0 } },
-            "donation": { id: 30, name: "donation", ftitle: "总账", debit: { "rmb": 0.0 }, credit: { "rmb": 0.0 }, balance: { "rmb": 0.0 } },
-            "donation.parent": { id: 30.1, name: "donation.parent", ftitle: "donation", debit: { "rmb": 0.0 }, credit: { "rmb": 0.0 }, balance: { "rmb": 0.0 } },
-            "donation.younger": { id: 30.2, name: "donation.younger", ftitle: "donation", debit: { "rmb": 0.0 }, credit: { "rmb": 0.0 }, balance: { "rmb": 0.0 } },
-            "donation.else": { id: 30.3, name: "donation.else", ftitle: "donation", debit: { "rmb": 0.0 }, credit: { "rmb": 0.0 }, balance: { "rmb": 0.0 } },
-            "PSMD": { id: 100, name: "PSMD", ftitle: "总账", debit: { "rmb": 0.0 }, credit: { "rmb": 0.0 }, balance: { "rmb": 0.0 } },
-            "xuemen": { id: 1000, name: "xuemen", ftitle: "总账", debit: { "rmb": 0.0 }, credit: { "rmb": 0.0 }, balance: { "rmb": 0.0 } }
+    
+    // 获取账户余额
+    getAccountBalance: function (accountTitle, year) {
+        let Account = this.loadAccount();
+        let AERmap = this.loadAER(year);
+        
+        for (let file in AERmap) {
+            let AER = AERmap[file];
+            for (let id in AER.AccountingEntry.debit) {
+                let item = AER.AccountingEntry.debit[id];
+                if (accountTitle === item.AccountTitle) {
+                    Account = this.updatebalance(Account, item.AccountTitle, "debit", item.asset, item.amount);
+                }
+            }
+            for (let id in AER.AccountingEntry.credit) {
+                let item = AER.AccountingEntry.credit[id];
+                if (accountTitle === item.AccountTitle) {
+                    Account = this.updatebalance(Account, item.AccountTitle, "credit", item.asset, item.amount);
+                }
+            }
+        }
+        
+        return Account[accountTitle] ? Account[accountTitle].balance : {};
+    },
+    
+    // 账目归并显示（按父子关系）
+    getConsolidatedView: function (accountId, year) {
+        let Account = this.loadAccount();
+        let AERmap = this.loadAER(year);
+        
+        for (let file in AERmap) {
+            let AER = AERmap[file];
+            for (let id in AER.AccountingEntry.debit) {
+                let item = AER.AccountingEntry.debit[id];
+                Account = this.updatebalance(Account, item.AccountTitle, "debit", item.asset, item.amount);
+            }
+            for (let id in AER.AccountingEntry.credit) {
+                let item = AER.AccountingEntry.credit[id];
+                Account = this.updatebalance(Account, item.AccountTitle, "credit", item.asset, item.amount);
+            }
+        }
+        
+        let selfBalance = Account[accountId] ? Account[accountId].balance : {};
+        let childrenBalance = {};
+        
+        for (let title in Account) {
+            if (Account[title].ftitle === accountId) {
+                for (let asset in Account[title].balance) {
+                    childrenBalance[asset] = (childrenBalance[asset] || 0) + Account[title].balance[asset];
+                }
+            }
+        }
+        
+        return {
+            self: selfBalance,
+            children: childrenBalance,
+            consolidated: {
+                ...selfBalance,
+                ...Object.fromEntries(
+                    Object.entries(childrenBalance).map(([asset, amount]) => [asset, (selfBalance[asset] || 0) + amount])
+                )
+            }
         };
-        return account;
+    },
+    
+    // ========== 显示 ==========
+    
+    // 显示账目（每种资源一个表格）
+    entry: function (year) {
+        let Account = this.loadAccount();
+        let AERmap = this.loadAER(year);
+        
+        // 计算所有账户的余额
+        for (let file in AERmap) {
+            let AER = AERmap[file];
+            for (let id in AER.AccountingEntry.debit) {
+                let item = AER.AccountingEntry.debit[id];
+                Account = this.updatebalance(Account, item.AccountTitle, "debit", item.asset, item.amount);
+            }
+            for (let id in AER.AccountingEntry.credit) {
+                let item = AER.AccountingEntry.credit[id];
+                Account = this.updatebalance(Account, item.AccountTitle, "credit", item.asset, item.amount);
+            }
+        }
+        
+        // 收集所有资源类型
+        let assetTypes = new Set();
+        for (let title in Account) {
+            for (let asset in Account[title].debit) assetTypes.add(asset);
+            for (let asset in Account[title].credit) assetTypes.add(asset);
+            for (let asset in Account[title].balance) assetTypes.add(asset);
+        }
+        
+        // 为每种资源显示一个表格
+        for (let asset of assetTypes) {
+            console.log(`\n=== ${asset} ===`);
+            let output = {};
+            for (let title in Account) {
+                let debit = Account[title].debit[asset] || 0;
+                let credit = Account[title].credit[asset] || 0;
+                let balance = Account[title].balance[asset] || 0;
+                
+                // 跳过全为0的账户
+                if (debit === 0 && credit === 0 && balance === 0) continue;
+                
+                output[title] = {
+                    id: Account[title].id,
+                    debit: debit,
+                    credit: credit,
+                    balance: balance
+                };
+            }
+            
+            if (Object.keys(output).length > 0) {
+                console.table(output, ["id", "debit", "credit", "balance"]);
+            }
+        }
+        
+        // 显示汇总
+        console.log('\n=== 汇总 ===');
+        let summary = {};
+        for (let title in Account) {
+            let hasData = false;
+            for (let asset in Account[title].balance) {
+                if (Account[title].balance[asset] !== 0) {
+                    hasData = true;
+                    break;
+                }
+            }
+            if (hasData) {
+                // 展开显示每种资源的余额
+                let balanceStr = '';
+                for (let asset in Account[title].balance) {
+                    if (Account[title].balance[asset] !== 0) {
+                        if (balanceStr) balanceStr += ', ';
+                        balanceStr += `${asset}: ${Account[title].balance[asset]}`;
+                    }
+                }
+                summary[title] = {
+                    id: Account[title].id,
+                    balance: balanceStr
+                };
+            }
+        }
+        console.table(summary, ["id", "balance"]);
+    },
+    
+    // ========== 业务操作 ==========
+    
+    // ego向raw购买时间
+    buyTimeFromRaw: function (taskId, templateType, amount) {
+        const date = new Date();
+        const year = date.getFullYear();
+        const season = Math.ceil((date.getMonth() + 1) / 3);
+        const pricing = this.loadPricing(year, season);
+        
+        const tokenRate = templateType.toString().startsWith('2') ? pricing.template_2 : pricing.template_1;
+        const tokenAmount = amount * tokenRate;
+        
+        return this.createVoucher("buy_time", [
+            { account: taskId, asset: "time", amount: amount, direction: "debit" },
+            { account: "raw", asset: "time", amount: amount, direction: "credit" },
+            { account: "raw", asset: "token", amount: tokenAmount, direction: "debit" },
+            { account: taskId, asset: "token", amount: tokenAmount, direction: "credit" }
+        ], [{ name: "购买时间", task: taskId, template: templateType, time: amount, token: tokenAmount }]);
+    },
+    
+    // ego分配token给子项目
+    allocateToken: function (taskId, tokenAmount) {
+        return this.createVoucher("allocate_token", [
+            { account: taskId, asset: "token", amount: tokenAmount, direction: "debit" },
+            { account: "ego", asset: "token", amount: tokenAmount, direction: "credit" }
+        ], [{ name: "分配token", task: taskId, token: tokenAmount }]);
+    },
+    
+    // task分配时间给todo
+    allocateTimeToTodo: function (taskId, todoName, amount, templateType) {
+        const year = new Date().getFullYear();
+        const season = Math.ceil((new Date().getMonth() + 1) / 3);
+        const pricing = this.loadPricing(year, season);
+        
+        const tokenRate = templateType.toString().startsWith('2') ? pricing.template_2 : pricing.template_1;
+        const tokenAmount = amount * tokenRate;
+        
+        return this.createVoucher("task_allocate_todo", [
+            { account: taskId, asset: "time", amount: amount, direction: "credit" },
+            { account: taskId + "." + todoName, asset: "time", amount: amount, direction: "debit" }
+        ], [{ name: "分配时间", task: taskId, todo: todoName, amount: amount, token: tokenAmount }]);
+    },
+    
+    // 加载季度定价配置
+    loadPricing: function (year, season) {
+        const filePath = path.join(getAbsolutePath(config.dataseasonpath), year + "S" + season + ".yaml");
+        try {
+            if (fs.existsSync(filePath)) {
+                const seasonData = yaml.load(fs.readFileSync(filePath, 'utf8'));
+                if (seasonData.pricing) return seasonData.pricing;
+            }
+        } catch (e) {
+            log("load pricing error:", e);
+        }
+        return { template_1: 1, template_2: 2 };
+    },
+    
+    // 计算汇率
+    calculateExchangeRate: function (year) {
+        const egoBalance = this.getAccountBalance("ego", year);
+        const rmbIncome = Math.abs(egoBalance.rmb || 0);
+        const tokenCost = Math.abs(egoBalance.token || 0);
+        return tokenCost === 0 ? 0 : rmbIncome / tokenCost;
     }
-}
+};
