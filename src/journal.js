@@ -159,7 +159,14 @@ module.exports = {
                 task_id: taskId,
                 todo_name: todoName,
                 amount: redoEstimate,
-                draft: timeSlice.output
+                draft: timeSlice.output,
+                time_slice: {
+                    date: datestr,
+                    amount: actualTime,
+                    template: plan,
+                    token_cost: tokenAmount,
+                    draft: timeSlice.output
+                }
             });
         }
         
@@ -248,6 +255,12 @@ module.exports = {
             taskData.todos = [];
         }
         
+        // 规范化draft路径（去除 ../../draft/ 前缀）
+        let draftPath = action.draft;
+        if (draftPath && draftPath.startsWith('../../draft/')) {
+            draftPath = draftPath.substring('../../draft/'.length);
+        }
+        
         // 查找现有todo
         let todo = taskData.todos.find(t => t.name === action.todo_name);
         
@@ -255,14 +268,62 @@ module.exports = {
             // 更新现有todo
             todo.status = 'pending';
             todo.amount = action.amount;
+            
+            // 追加time_slice（使用规范化路径，需去重）
+            if (action.time_slice) {
+                if (!todo.time_slices) {
+                    todo.time_slices = [];
+                }
+                const normalizedSlice = { ...action.time_slice };
+                if (normalizedSlice.draft && normalizedSlice.draft.startsWith('../../draft/')) {
+                    normalizedSlice.draft = normalizedSlice.draft.substring('../../draft/'.length);
+                }
+                
+                // 检查是否已存在相同日期和draft的时间片
+                const exists = todo.time_slices.some(s => 
+                    s.date === normalizedSlice.date && s.draft === normalizedSlice.draft
+                );
+                if (!exists) {
+                    todo.time_slices.push(normalizedSlice);
+                }
+            }
+            
+            // 追加history_draft（使用规范化路径）
+            if (draftPath) {
+                if (!todo.history_drafts) {
+                    todo.history_drafts = [];
+                }
+                // 清理并规范化所有现有路径，然后去重
+                const normalized = todo.history_drafts.map(d => {
+                    if (d.startsWith('../../draft/')) {
+                        return d.substring('../../draft/'.length);
+                    }
+                    return d;
+                });
+                todo.history_drafts = [...new Set(normalized)];
+                
+                // 追加新路径
+                if (!todo.history_drafts.includes(draftPath)) {
+                    todo.history_drafts.push(draftPath);
+                }
+            }
         } else {
-            // 创建新todo
+            // 创建新todo（规范化路径）
+            let normalizedTimeSlice = null;
+            if (action.time_slice) {
+                normalizedTimeSlice = { ...action.time_slice };
+                if (normalizedTimeSlice.draft && normalizedTimeSlice.draft.startsWith('../../draft/')) {
+                    normalizedTimeSlice.draft = normalizedTimeSlice.draft.substring('../../draft/'.length);
+                }
+            }
+            let normalizedDraftPath = draftPath;
+            
             taskData.todos.push({
                 name: action.todo_name,
                 status: 'pending',
                 amount: action.amount,
-                time_slices: [],
-                history_drafts: action.draft ? [action.draft] : []
+                time_slices: normalizedTimeSlice ? [normalizedTimeSlice] : [],
+                history_drafts: normalizedDraftPath ? [normalizedDraftPath] : []
             });
         }
         

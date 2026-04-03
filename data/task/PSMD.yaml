@@ -18,11 +18,33 @@ contract:
 children: []
 todos:
   - name: 权利分配语法 & engine
-    amount: 195
+    amount: 90
     status: pending
+    time_slices:
+      - date: '20260402'
+        amount: 90
+        template: 2c
+        token_cost: 180
+        draft: 2026/20260402.01.md
+      - date: '20260403'
+        amount: 90
+        template: 2b
+        token_cost: 180
+        draft: 2026/20260403.01.md
+    history_drafts:
+      - 2026/20260402.01.md
+      - 2026/20260403.01.md
   - name: 部署语法
     amount: 60
     status: pending
+    time_slices:
+      - date: '20260403'
+        amount: 60
+        template: 2b
+        token_cost: 120
+        draft: 2026/20260403.03.md
+    history_drafts:
+      - 2026/20260403.03.md
   - name: SOP engine
     amount: 60
     status: pending
@@ -124,4 +146,4 @@ derivation:
   source: null
   type: null
   trigger: null
-token_balance: 5680
+token_balance: 4660

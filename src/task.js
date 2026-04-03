@@ -95,10 +95,28 @@ module.exports = {
     // 获取todo的历史手稿列表
     getHistoryDrafts: function (taskId, todoName) {
         const todo = this.getTodo(taskId, todoName);
-        if (!todo || !todo.time_slices) return [];
-        return todo.time_slices
-            .filter(s => s.draft)
-            .map(s => s.draft);
+        if (!todo) return [];
+        
+        const drafts = [];
+        
+        // 优先使用顶层的 history_drafts 字段（新版本）
+        if (todo.history_drafts && todo.history_drafts.length > 0) {
+            drafts.push(...todo.history_drafts);
+        }
+        
+        // 兼容旧格式：从 time_slices 获取
+        if (todo.time_slices) {
+            const timeSliceDrafts = todo.time_slices
+                .filter(s => s.draft)
+                .map(s => s.draft);
+            for (const draft of timeSliceDrafts) {
+                if (!drafts.includes(draft)) {
+                    drafts.push(draft);
+                }
+            }
+        }
+        
+        return drafts;
     },
     
     // 添加time_slice到todo
