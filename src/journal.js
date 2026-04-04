@@ -265,8 +265,9 @@ module.exports = {
                 }
             }
             
-            // 删除voucher文件
-            const filepath = path.join(getAbsolutePath(config.voucherpath), year, filename);
+            // 删除voucher文件（从staging中删除）
+            const stagingPath = asset.getVoucherPath(year, 'staging');
+            const filepath = path.join(stagingPath, filename);
             if (fs.existsSync(filepath)) {
                 fs.unlinkSync(filepath);
                 log("removed voucher:", filename);

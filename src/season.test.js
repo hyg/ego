@@ -1,9 +1,12 @@
 const test = require('node:test');
 const assert = require('assert');
 const season = require('./season.js');
+const config = require('./config.js');
+
+const originalDebug = config.machine.debug;
+config.machine.debug = true;
 
 test('add a redo item into season',(t)=>{
-    season.debug = true;
     let seasonobj ;
     assert.ok(seasonobj = season.loadseasonobj());
 
@@ -19,16 +22,12 @@ test('get season metadata file name',(t)=>{
 });
 
 test('update season sold time',(t)=>{
-    season.debug = true;
-
     let seasonobj;
     assert.ok(seasonobj = season.loadseasonobj());
     assert.ok(season.updatesold(seasonobj));
 });
 
 test('delete todo item',(t)=>{
-    season.debug = true;
-    
     let seasonobj ;
     assert.ok(seasonobj = season.loadseasonobj());
     
@@ -85,9 +84,9 @@ test('delete todo item',(t)=>{
 });
 
 test('make season stat table',(t)=>{
-    season.debug = true;
-
     let seasonobj;
     assert.ok(seasonobj = season.loadseasonobj());
     assert.ok(season.makestattable(seasonobj));
 });
+
+config.machine.debug = originalDebug;

@@ -758,7 +758,7 @@ node task/task.js view      # generate task views
 
 ---
 
-## 10. 优先级排序
+## 10. 优先级排序（2026-04-04更新）
 
 | 优先级 | 问题 | 影响 | 建议方案 |
 |--------|------|------|----------|
@@ -771,38 +771,203 @@ node task/task.js view      # generate task views
 | **P2** | 目录结构混乱 | 组织性差 | 分离schema/data |
 | **P3** | 性能需优化 | 扩展性差 | 添加缓存 |
 | **P3** | 文档不一致 | 使用困难 | 更新README |
+| **P0** | token机制需求待确认 | 后续开发方向 | 先梳理需求文档 |
+
+### Token机制开发前提
+
+在实现token发行机制前，需要先：
+1. [ ] 确认alloc字段的语义（额度？利率？）
+2. [ ] 设计split/joint操作的数据结构
+3. [ ] 定义政策修订的议事规则
+4. [ ] 设计破产清算流程
 
 ---
 
-## 附录：检查清单
+## 11. Token发行机制（2026Q2+ 新需求）
 
-### 基础设置
-- [ ] 创建package.json
-- [ ] 安装依赖：npm install
-- [ ] 运行测试：npm test
+### 11.1 核心概念
 
-### 数据一致性
-- [ ] 统一entity.yaml中cognize定义
-- [ ] 更新huangyg.yaml使用路径形式
-- [ ] 统一日期时间格式
+| 概念 | 定义 |
+|------|------|
+| **Entity** | token发行主体（自然人、企业、AI及其共同体） |
+| **ego** | entity中负责发行/回收token的项目 |
+| **task** | 任务，不能发行token，可向ego借款 |
+| **artifact** | 任务产出，高价值artifact作为token锚定物 |
+| **JT (Joint Token)** | 两个entity合并时产生的联合token |
+| **汇率** | 由供需决定：浅层task购买深层artifact |
 
-### 代码质量
-- [ ] 合并waitinglist.js和start.js的makewaitinglist
-- [ ] 统一使用util.js的日期函数
-- [ ] 为所有yaml.load添加错误处理
-- [ ] 替换字符串拼接为path.join
+### 11.2 Token流转机制
 
-### 测试体系
-- [ ] 创建test/fixtures/目录
-- [ ] 添加season.test.js
-- [ ] 添加workflow.test.js
+```mermaid
+flowchart TD
+    A[Entity A 发行 token] --> B[task 向 ego 借款]
+    B --> C[task 执行任务产出 artifact]
+    C --> D{artifact 价值高?}
+    D -->|是| E[作为锚定物]
+    D -->|否| F[价值低或为零]
+    E --> G[其他 entity 购买]
+    G --> H[Entity A 获得收入]
+    H --> I[偿还 ego 借款+利息]
+    I --> J[循环或破产]
+    F --> K[token 贬值]
+    K --> L[可能破产清算]
+```
 
-### 文档
-- [ ] 更新README.md
-- [ ] 添加API文档
-- [ ] 统一示例代码格式
+### 11.3 split（分立）与joint（合并）
+
+```mermaid
+flowchart LR
+    subgraph split
+        A[entity A 的 task] --> B[split 操作]
+        B --> C[task 成为独立 entity]
+        C --> D[创建自己的 ego]
+        D --> E[发行自己的 token]
+    end
+    
+    subgraph joint
+        F[entity A] --> G[joint 操作]
+        H[entity B] --> G
+        G --> I[基于 A 和 B 的 token 产生 JT]
+        I --> J[以 JT 报价]
+    end
+```
+
+**规则**：
+- split：task从entity A中分立，创建独立entity，发行自己的token
+- joint：两个entity合并，基于各自token产生联合token（JT）
+
+### 11.4 政策层级机制
+
+```mermaid
+flowchart TB
+    subgraph 深层任务
+        A[容器任务/父任务] --> B[64天政策]
+        B --> C[128天政策]
+        C --> D[256天政策]
+    end
+    
+    subgraph 中层任务
+        E[子任务] --> F[8天政策]
+        F --> G[16天政策]
+        G --> H[32天政策]
+    end
+    
+    subgraph 浅层任务
+        I[孙子任务] --> J[1天政策]
+        J --> K[2天政策]
+        K --> L[4天政策]
+    end
+    
+    D --> G
+    H --> K
+    L --> M[需对外盈利]
+```
+
+**规则**：
+- 层级由最深层todo定义：容器任务 > 父任务 > 子任务
+- 深层任务获得更长周期的政策支持
+- 浅层任务需对外服务赚取token购买深层artifact
+
+### 11.5 政策修订与投票机制
+
+```mermaid
+sequenceDiagram
+    participant EntityA as entity A (甲方)
+    participant EntityB as entity B
+    participant EntityC as entity C
+    participant ego as ego系统
+    
+    EntityA->>ego: 提出政策修订动议
+    ego->>EntityB: 通知修订内容
+    ego->>EntityC: 通知修订内容
+    EntityB->>ego: 分配表决权重到特定时间段
+    EntityC->>ego: 分配表决权重到特定时间段
+    ego->>ego: 汇总投票结果
+    ego->>ego: 每日bun init时应用政策
+```
+
+**规则**：
+1. 合同甲方提出政策修订动议
+2. 其他entity收到通知后分配表决权重
+3. 权重可以分布在不同时间段
+4. 议事规则：适用最短时间政策（只有64天政策的时段执行64天，不执行128天+）
+
+### 11.6 借款与破产机制
+
+```mermaid
+flowchart TD
+    A[task 向 ego 借款] --> B[执行任务]
+    B --> C{产出 artifact}
+    C -->|高价值| D[出售获得收入]
+    C -->|低价值| E[收入不足]
+    D --> F[偿还本金+利息]
+    E --> G{收入 >= 利息?}
+    G -->|是| F
+    G -->|否| H[申请展期]
+    H --> I{能否达成新协议?}
+    I -->|是| F
+    I -->|否| J[破产清算]
+    J --> K[ego 接管 task]
+    K --> L[重新分配资源]
+    F --> M[继续或扩大规模]
+```
+
+**规则**：
+- task向ego借款购买时间，产生利息
+- 高价值artifact是最佳"抵押物"
+- 无力偿还时触发破产清算
+- ego应合理制定政策促进高价值artifact积累
+
+### 11.7 汇率形成机制
+
+```mermaid
+flowchart LR
+    subgraph 深层任务
+        A[entity A 深层任务] --> B[以 A 发行的 token 报价]
+    end
+    
+    subgraph 市场
+        C[浅层 task D] --> D[决定是否购买]
+    end
+    
+    B -->|供需| C
+    
+    D -->|购买| E[汇率形成]
+    D -->|拒绝| F[artifact 滞销]
+    
+    E --> G[A 的 token 升值]
+    F --> H[A 的 token 贬值/归零]
+```
+
+**规则**：
+- 深层task以自己entity发行的token报价
+- 浅层task需购买深层artifact来提升竞争力
+- 供不应求 → token升值
+- 供过于求 → token贬值甚至归零
 
 ---
 
-*分析日期: 2026-02-08*
-*分析范围: 非*.go和*.upgrade.md文件*
+## 12. 待确认的需求
+
+### 12.1 当前临时方案的问题
+
+当前`season.alloc`字段（如`PSMD: 4000`）是临时方案，可能存在内部矛盾：
+
+| 问题 | 说明 |
+|------|------|
+| 额度与利率 | alloc是借款额度还是预分配？利率如何体现？ |
+| split后的处理 | task分立后，原alloc如何转移？ |
+| joint后的处理 | 两个entity合并，alloc如何合并？ |
+| 政策冲突 | 同一task涉及多层政策时如何协调？ |
+
+### 12.2 待测试的边界场景
+
+1. **split场景**：PSMD从ego中分立，创建独立entity发行token
+2. **joint场景**：两个task合并产生JT
+3. **破产场景**：task无力偿还借款，ego接管并清算
+4. **政策冲突场景**：同一时间段多个entity竞争表决权
+
+---
+
+*分析日期: 2026-04-04*
+*分析范围: token发行机制需求*

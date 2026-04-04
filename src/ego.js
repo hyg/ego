@@ -1,6 +1,7 @@
 const day = require('./day.js');
 const season = require('./season.js');
 const asset = require('./asset.js');
+const yaml = require('js-yaml');
 
 const { Command } = require('commander');
 const program = new Command();
@@ -120,4 +121,53 @@ assetcommand
         //season.debug = false;
         asset.yearreport(year);
     });
+
+assetcommand
+    .command("confirmvoucher [date]")
+    .description('确认voucher：从staging移动到archive。可选指定日期范围。')
+    .action((date) => {
+        log("confirmvoucher:", date);
+        const fs = require('fs');
+        const path = require('path');
+        
+        const config = require('./config.js');
+        const asset = require('./asset.js');
+        
+        const years = ['2024', '2025', '2026'];
+        
+        for (const year of years) {
+            const stagingPath = asset.getVoucherPath(year, 'staging');
+            if (!fs.existsSync(stagingPath)) continue;
+            
+            const files = fs.readdirSync(stagingPath).filter(f => f.startsWith('AER.') && f.endsWith('.yaml'));
+            
+            for (const file of files) {
+                let shouldConfirm = true;
+                
+                if (date) {
+                    // date可以是日期（如20260404）或年份（如2026）
+                    // 只确认该日期之前的voucher
+                    const filePath = path.join(stagingPath, file);
+                    const content = fs.readFileSync(filePath, 'utf8');
+                    const voucher = yaml.load(content);
+                    const voucherDate = voucher.date ? voucher.date.toString().replace(/-/g, '').slice(0, 8) : '';
+                    
+                    if (date.length === 8) {
+                        // 精确日期
+                        shouldConfirm = voucherDate <= date;
+                    } else if (date.length === 4) {
+                        // 年份
+                        shouldConfirm = voucherDate.startsWith(date);
+                    }
+                }
+                
+                if (shouldConfirm) {
+                    asset.confirmVoucher(file, year);
+                }
+            }
+        }
+        
+        log("confirmvoucher done");
+    });
+
 program.parse();

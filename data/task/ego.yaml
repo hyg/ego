@@ -19,7 +19,7 @@ children:
   - id: xuemen
   - id: learn
   - id: js
-token_balance: 3240
+token_balance: 3210
 todos:
   - name: JT的发行和回收
     amount: 60
@@ -30,21 +30,6 @@ todos:
         template: 2c
         token_cost: 120
         draft: ../../draft/2026/20260402.02.md
-      - date: '20260402'
-        amount: 60
-        template: 2c
-        token_cost: 120
-        draft: 2026/20260402.02.md
-      - date: '20260402'
-        amount: 60
-        template: 2c
-        token_cost: 120
-        draft: 2026/20260402.02.md
-      - date: '20260402'
-        amount: 60
-        template: 2c
-        token_cost: 120
-        draft: 2026/20260402.02.md
     history_drafts:
       - 2026/20260402.02.md
   - name: 整理edgeone、cnb、gitee的发布通道

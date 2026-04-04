@@ -59,17 +59,28 @@ module.exports = {
         };
     },
     
+    // 获取voucher目录路径
+    getVoucherPath: function(year, subdir = '') {
+        const base = getAbsolutePath(config.voucherpath);
+        if (subdir) {
+            return path.join(base, subdir, year.toString());
+        }
+        return path.join(base, year.toString());
+    },
+    
     // ========== 凭证管理 ==========
     
-    // 加载凭证
+    // 加载凭证（合并staging和archive）
     loadAER: function (year) {
         let AERmap = {};
-        let voucherfolder = path.join(getAbsolutePath(config.voucherpath), year.toString());
-        if (fs.existsSync(voucherfolder)) {
-            fs.readdirSync(voucherfolder).forEach(file => {
+        
+        // 加载staging目录
+        const stagingPath = this.getVoucherPath(year, 'staging');
+        if (fs.existsSync(stagingPath)) {
+            fs.readdirSync(stagingPath).forEach(file => {
                 if (file.startsWith("AER.") && file.endsWith(".yaml")) {
                     try {
-                        let AER = yaml.load(fs.readFileSync(path.join(voucherfolder, file), 'utf8'));
+                        let AER = yaml.load(fs.readFileSync(path.join(stagingPath, file), 'utf8'));
                         AERmap[file] = AER;
                     } catch (e) {
                         log("load AER error:", file, e);
@@ -77,10 +88,52 @@ module.exports = {
                 }
             });
         }
+        
+        // 加载archive目录
+        const archivePath = this.getVoucherPath(year, 'archive');
+        if (fs.existsSync(archivePath)) {
+            fs.readdirSync(archivePath).forEach(file => {
+                if (file.startsWith("AER.") && file.endsWith(".yaml")) {
+                    try {
+                        let AER = yaml.load(fs.readFileSync(path.join(archivePath, file), 'utf8'));
+                        // archive中相同文件名的覆盖staging（如果staging有则忽略）
+                        if (!AERmap[file]) {
+                            AERmap[file] = AER;
+                        }
+                    } catch (e) {
+                        log("load AER error:", file, e);
+                    }
+                }
+            });
+        }
+        
         return AERmap;
     },
     
-    // 创建凭证
+    // 确认voucher（从staging移动到archive）
+    confirmVoucher: function(filename, year) {
+        const stagingPath = this.getVoucherPath(year, 'staging');
+        const archivePath = this.getVoucherPath(year, 'archive');
+        const stagingFile = path.join(stagingPath, filename);
+        const archiveFile = path.join(archivePath, filename);
+        
+        if (!fs.existsSync(stagingFile)) {
+            log("staging voucher not found:", filename);
+            return false;
+        }
+        
+        // 确保archive目录存在
+        if (!fs.existsSync(archivePath)) {
+            fs.mkdirSync(archivePath, { recursive: true });
+        }
+        
+        // 移动到archive
+        fs.renameSync(stagingFile, archiveFile);
+        log("confirmed voucher:", filename, "-> archive");
+        return true;
+    },
+    
+    // 创建凭证（写入staging目录）
     createVoucher: function (type, entries, comment, externalVoucherId = null) {
         const date = new Date();
         const dateStr = date.toISOString().slice(0, 10).replace(/-/g, '');
@@ -114,12 +167,13 @@ module.exports = {
             }
         }
         
-        const voucherPath = config.voucherpath + year;
-        if (!fs.existsSync(voucherPath)) {
-            fs.mkdirSync(voucherPath, { recursive: true });
+        // 写入staging目录
+        const stagingPath = this.getVoucherPath(year, 'staging');
+        if (!fs.existsSync(stagingPath)) {
+            fs.mkdirSync(stagingPath, { recursive: true });
         }
         
-        const filePath = voucherPath + "/AER." + aerId + ".yaml";
+        const filePath = stagingPath + "/AER." + aerId + ".yaml";
         if (this.debug == false) {
             fs.writeFileSync(filePath, yaml.dump(voucher, { 'lineWidth': -1 }));
             log("create voucher:", filePath);
