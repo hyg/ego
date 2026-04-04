@@ -25,10 +25,10 @@ const daycommand = program
 daycommand
     .command("init <mode>")
     .description('初始化：绑定时间模版，创建日计划、次日规划、手稿及元数据文件。')
-    .option("-d, -diff <diff>", "目标日期相对于今天的天数。", 0)
+    .option("-d, --diff <diff>", "目标日期相对于今天的天数。", 0)
     .action((mode, opt) => {
         log("init:%s %s", mode, opt);
-        let dayobj = day.makedayobj(mode, parseInt(opt.Diff));
+        let dayobj = day.makedayobj(mode, parseInt(opt.diff));
         day.makedayplan(dayobj);
         day.maketomorrowinfo();
     });

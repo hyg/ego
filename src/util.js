@@ -5,7 +5,18 @@ const { execSync } = require('child_process');
 const customParseFormat = require("dayjs/plugin/customParseFormat");
 dayjs.extend(customParseFormat);
 
+/**
+ * 统一日志函数
+ * 自动添加调用者模块和函数名前缀
+ */
+function log(...s) {
+    const caller = log.caller;
+    const callerName = caller ? caller.name : 'unknown';
+    console.log(callerName + "> " + s[0], ...s.slice(1));
+}
+
 module.exports = {
+    log: log,
     dayjs: dayjs,
     datestr: function (diff = 0) {
         let now = dayjs();

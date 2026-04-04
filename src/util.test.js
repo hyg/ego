@@ -123,6 +123,12 @@ test('parseTemplate: with config templates', (t) => {
     assert.strictEqual(result, "2024S3.yaml");
 });
 
+test('log function exists and callable', (t) => {
+    assert.strictEqual(typeof util.log, 'function');
+    // log should not throw
+    util.log("test message");
+});
+
 test('gitstep: test git operation', async (t) => {
     const path = require('path');
     const fs = require('fs');

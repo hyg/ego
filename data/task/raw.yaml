@@ -21,6 +21,60 @@ todos:
     history_drafts:
       - ../../draft/2024/09/20240907143000.md
       - ../../draft/2026/20260302.01.md
+    amount: 90
+  - name: 新版食材排序，包括升序、降序、特定值距离、多种营养成分特定值组合距离。
+    amount: 60
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: 设计三季度时间表
+    amount: 60
+    status: pending
+    time_slices: []
+    history_drafts:
+      - 2024/09/20240904143000.md
+      - 2024/09/20240907140000.md
+  - name: 熟悉内脏之间的关系
+    amount: 60
+    status: pending
+    time_slices: []
+    history_drafts:
+      - 2024/09/20240917143000.md
+  - name: 新版营养成分详情，允许多种营养成分。
+    amount: 60
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: 复习五元庄第十二式
+    amount: 30
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: 复习五元庄第十三式
+    amount: 30
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: 复习脏真归元法
+    amount: 30
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: 设计二季度时间表
+    amount: 60
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: 2025版管理excel
+    amount: 30
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: 设计四季度时间表
+    amount: 60
+    status: pending
+    time_slices: []
+    history_drafts: []
 income_source: ego购买时间
 derivation:
   source: null

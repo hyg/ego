@@ -87,58 +87,174 @@ todos:
     status: pending
     time_slices: []
     history_drafts: []
+    amount: 90
   - name:
       - 考虑upgradeby的实现。
     status: pending
     time_slices: []
     history_drafts: []
-  - name:
-      - 考虑upgradeby的实现。
+  - name: 健康消费合作社建模
+    amount: 195
+    status: pending
+    time_slices: []
+    history_drafts:
+      - 2025/20250922.03.md
+      - 2025/20250923.01.md
+  - name: machines model
+    amount: 195
+    status: pending
+    time_slices: []
+    history_drafts:
+      - 2024/07/20240723160000.md
+      - 2024/07/20240724093000.md
+      - 2024/07/20240725093000.md
+      - 2024/07/20240726093000.md
+      - 2024/07/20240730093000.md
+      - 2024/07/20240731093000.md
+      - 2024/08/20240801093000.md
+      - 2024/08/20240806140000.md
+      - 2024/08/20240807140000.md
+      - 2024/08/20240808093000.md
+      - 2024/09/20240915160000.md
+      - 2024/09/20240926.01.md
+  - name: 子1609:基于公司、合同
+    amount: 90
+    status: pending
+    time_slices: []
+    history_drafts:
+      - 2025/20250125.02.md
+      - 2025/20250416.01.md
+      - 2025/20250427.01.md
+      - 2025/20250505.02.md
+  - name: 整理default模型
+    amount: 60
+    status: pending
+    time_slices: []
+    history_drafts:
+      - 2024/10/20241007.01.md
+      - 2024/10/20241010.02.md
+      - 2024/10/20241011.01.md
+      - 2024/11/20241106.01.md
+      - 2025/20250704.01.md
+  - name: 根据香港《公司條例》调整1609的部署方案 https://www.elegislation.gov.hk/hk/cap622
+    amount: 60
+    status: pending
+    time_slices: []
+    history_drafts:
+      - 2025/20250403.01.md
+      - 2025/20250418.02.md
+  - name: 整理新版本term的manifest code
+    amount: 90
+    status: pending
+    time_slices: []
+    history_drafts:
+      - 2024/09/20240905140000.md
+      - 2024/09/20240906093000.md
+      - 2024/09/20240908140000.md
+      - 2024/09/20240909093000.md
+      - 2024/09/20240911093000.md
+      - 2024/09/20240912140000.md
+      - 2024/09/20240913093000.md
+      - 2024/09/20240918140000.md
+      - 2025/20250114.02.md
+      - 2025/20250115.02.md
+      - 2025/20250116.02.md
+  - name: 智在科技项目准备
+    amount: 90
+    status: pending
+    time_slices: []
+    history_drafts:
+      - 2025/20250115.01.md
+  - name: 整理新版本term的manifest text
+    amount: 90
     status: pending
     time_slices: []
     history_drafts: []
-  - name:
-      - 考虑upgradeby的实现。
+  - name: 整理闫岸家政能力讨论
+    amount: 30
+    status: pending
+    time_slices: []
+    history_drafts:
+      - 2024/09/20240924.01.md
+      - 2024/09/20240925.03.md
+      - 2024/10/20241011.03.md
+      - 2024/10/20241013.03.md
+      - 2024/10/20241014.02.md
+      - 2024/10/20241015.03.md
+      - 2024/10/20241016.04.md
+      - 2024/10/20241017.02.md
+      - 2024/10/20241019.01.md
+      - 2024/10/20241020.03.md
+      - 2024/10/20241021.01.md
+      - 2024/10/20241022.03.md
+      - 2024/10/20241023.01.md
+      - 2024/10/20241024.02.md
+      - 2024/10/20241025.03.md
+      - 2024/10/20241026.03.md
+      - 2024/10/20241027.03.md
+      - 2024/10/20241028.03.md
+      - 2024/10/20241029.03.md
+      - 2024/10/20241030.03.md
+      - 2024/10/20241031.02.md
+      - 2024/11/20241101.03.md
+      - 2024/11/20241104.01.md
+      - 2024/11/20241105.03.md
+      - 2024/11/20241106.03.md
+      - 2024/11/20241107.03.md
+      - 2024/11/20241108.01.md
+      - 2024/11/20241110.01.md
+      - 2024/11/20241111.03.md
+      - 2024/11/20241112.01.md
+      - 2024/11/20241114.04.md
+      - 2024/11/20241115.01.md
+      - 2024/11/20241117.05.md
+  - name: SOP(Standard Operation Procedure)数据结构
+    amount: 90
+    status: pending
+    time_slices: []
+    history_drafts:
+      - 2025/20250923.03.md
+  - name: 子1609
+    amount: 90
     status: pending
     time_slices: []
     history_drafts: []
-  - name:
-      - 考虑upgradeby的实现。
+  - name: 1609的分立、合并。
+    amount: 60
     status: pending
     time_slices: []
     history_drafts: []
-  - name:
-      - 考虑upgradeby的实现。
+  - name: 整理近期讨论，按照新版manifest text提炼几个有代表性的场景。
+    amount: 60
     status: pending
     time_slices: []
     history_drafts: []
-  - name:
-      - 考虑upgradeby的实现。
+  - name: 《中华人民共和国民营经济促进法（草案征求意见稿）》公开征求意见
+    amount: 60
     status: pending
     time_slices: []
     history_drafts: []
-  - name:
-      - 考虑upgradeby的实现。
+  - name: entity model增加自我认知、资源分配、元认知字段。
+    amount: 195
     status: pending
     time_slices: []
     history_drafts: []
-  - name:
-      - 考虑upgradeby的实现。
+  - name: 设计条款的可执行机制
+    amount: 60
     status: pending
     time_slices: []
     history_drafts: []
-  - name:
-      - 考虑upgradeby的实现。
+  - name: debug- D:\huangyg\git\PSMD\data\term.25c83dac.yaml interface字段混乱。
+    amount: 30
     status: pending
     time_slices: []
     history_drafts: []
-  - name:
-      - 考虑upgradeby的实现。
+  - name: 重新思考term metadata种的upgradeby，是否需要显示内容和id两种。
+    amount: 30
     status: pending
     time_slices: []
     history_drafts: []
-  - name:
-      - 考虑upgradeby的实现。
+  - name: 考虑upgradeby的实现。
     status: pending
     time_slices: []
     history_drafts: []

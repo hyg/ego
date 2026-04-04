@@ -157,8 +157,11 @@ module.exports = {
             const filtered = affordable.filter(c => !excludeTaskIds.includes(c.task_id));
             if (filtered.length > 0) {
                 affordable = filtered;
+            } else {
+                // 过滤后没有可选的，返回null让调用方知道需要人工处理
+                log("no todo after exclude, task_ids:", excludeTaskIds);
+                return null;
             }
-            // 如果过滤后没有可选的，则允许重复选择
         }
         
         if (affordable.length === 0) {

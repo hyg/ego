@@ -1,0 +1,17 @@
+date: 2026-04-04
+VoucherID: 4200003132202604046047137033
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: raw.supply
+      asset: rmb
+      amount: 7.69
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 7.69
+comment:
+  - name: 口香糖
+    amount: 5
+    unit: 板
+    asset: 7.69

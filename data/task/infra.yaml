@@ -12,3 +12,63 @@ contract:
 todos:
   - name: 节点软件
     status: pending
+  - name: 设计静态数据（git库）和实时交互的分工。如何共同支撑PSMD和ego项目。
+    amount: 60
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: petri网工作流引擎设计
+    amount: 195
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: Rete/Phreak算法的自主实现
+    amount: 195
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: 封装新版密钥工具集
+    amount: 30
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: 范例--利用js模块组合实现合同条款的组合。
+    amount: 60
+    status: pending
+    time_slices: []
+    history_drafts:
+      - 2024/10/20241004.05.md
+      - 2025/20250503.03.md
+      - 2025/20250505.03.md
+      - 2025/20250606.01.md
+      - 2025/20250610.03.md
+      - 2025/20250613.02.md
+  - name: 整理fsm、psm的split、joint操作。
+    amount: 30
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: schema立项。
+    amount: 90
+    status: pending
+    time_slices: []
+    history_drafts:
+      - 2024/09/20240919140000.md
+      - 2025/20250110.01.md
+      - 2025/20250112.01.md
+      - 2025/20250116.01.md
+      - 2025/20250408.01.md
+      - 2025/20250613.a.md
+  - name: 动态菜单设计。
+    amount: 60
+    status: pending
+    time_slices: []
+    history_drafts:
+      - 2024/09/20240921.02.md
+      - 2024/09/20240922.02.md
+      - 2024/09/20240923.03.md
+      - 2024/09/20240924.03.md
+      - 2024/09/20240930.03.md
+      - 2024/10/20241002.02.md
+      - 2024/10/20241003.03.md
+      - 2024/10/20241004.01.md

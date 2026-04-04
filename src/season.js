@@ -59,7 +59,7 @@ module.exports = {
                 if (file.substring(file.lastIndexOf(".")) == ".yaml") {
                     let date = file.slice(2, 10);
                     //log("date:",date);
-                    if ((date >= firstdateofseason) & (date <= lastdateofseason)) {
+                    if ((date >= firstdateofseason) && (date <= lastdateofseason)) {
                         //log("file:",file);
                         let dayobj = yaml.load(fs.readFileSync(daymetadatapath + file, 'utf8', { schema: yaml.FAILSAFE_SCHEMA }));
                         for (let tid in dayobj.time) {
@@ -217,7 +217,7 @@ module.exports = {
                 if (file.substring(file.lastIndexOf(".")) == ".yaml") {
                     let date = file.slice(2, 10);
                     //log("date:",date);
-                    if ((date >= firstdateofseason) & (date <= lastdateofseason)) {
+                    if ((date >= firstdateofseason) && (date <= lastdateofseason)) {
                         //log("file:",file);
                         let dayobj = yaml.load(fs.readFileSync(daymetadatapath + file, 'utf8', { schema: yaml.FAILSAFE_SCHEMA }));
 

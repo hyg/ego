@@ -9,112 +9,139 @@ todos:
     status: pending
     time_slices: []
     history_drafts: []
+    amount: 90
   - name: XSTATE https://xstate.js.org
     status: pending
     time_slices: []
     history_drafts: []
+    amount: 90
   - name: HPKE（Hybrid Public Key Encryption，RFC 9180）
     status: pending
     time_slices: []
     history_drafts: []
+    amount: 90
   - name: 去中心化的向量数据库，用于业务发现。
     status: pending
     time_slices: []
     history_drafts: []
+    amount: 90
   - name: The Open Quantum Safe (OQS) project
     status: pending
     time_slices: []
     history_drafts: []
+    amount: 60
   - name: CometAPI
     status: pending
     time_slices: []
     history_drafts: []
+    amount: 60
   - name: 领域特定语言（DSL）,Xtext,ANTLR
     status: pending
     time_slices: []
     history_drafts: []
+    amount: 60
   - name: XACML（存量）
     status: pending
     time_slices: []
     history_drafts: []
+    amount: 30
   - name: SHACL（RDF/图谱场景）
     status: pending
     time_slices: []
     history_drafts: []
+    amount: 30
   - name: Esper EPL
     status: pending
     time_slices: []
     history_drafts: []
+    amount: 30
   - name: Apache Flink SQL
     status: pending
     time_slices: []
     history_drafts: []
+    amount: 30
   - name: ksqlDB（Kafka）
     status: pending
     time_slices: []
     history_drafts: []
+    amount: 30
   - name: 宣告式流程 DCR Graphs/Declare
     status: pending
     time_slices: []
     history_drafts: []
+    amount: 30
   - name: JSON-LD / YAML + Schema（轻量级）
     status: pending
     time_slices: []
     history_drafts: []
+    amount: 30
   - name: BPMN-DMN,执行引擎（Camunda、Flowable、Flink DMN、Trisotech 等）
     status: pending
     time_slices: []
     history_drafts: []
+    amount: 30
   - name: Drools/DRL替代
     status: pending
     time_slices: []
     history_drafts: []
+    amount: 60
   - name: 消息总线（Kafka / RabbitMQ）
     status: pending
     time_slices: []
     history_drafts: []
+    amount: 30
   - name: 规则解析引擎（如：RDF4J + SWRLAPI 或 自研DSL解析器）
     status: pending
     time_slices: []
     history_drafts: []
+    amount: 30
   - name: Digital Twin of Governance
     status: pending
     time_slices: []
     history_drafts: []
+    amount: 30
   - name: 个人财务助理 https://open.chanjet.com/
     status: pending
     time_slices: []
     history_drafts: []
+    amount: 60
   - name: Julia
     status: pending
     time_slices: []
     history_drafts: []
+    amount: 195
   - name: NER（命名实体识别）RE（关系抽取）
     status: pending
     time_slices: []
     history_drafts: []
+    amount: 30
   - name: ANP（Agent Network Protocol）
     status: pending
     time_slices: []
     history_drafts: []
+    amount: 60
   - name: ethers.js v6，Node.js 最流行的以太坊交互库。
     status: pending
     time_slices: []
     history_drafts: []
+    amount: 60
   - name: Rete/Phreak算法
     status: pending
     time_slices: []
     history_drafts: []
+    amount: 30
   - name: 业务规则引擎（BRMS）
     status: pending
     time_slices: []
     history_drafts:
-      - ../../draft/2005/20250726.a.md
+      - ../../draft/2025/20250726.a.md
+    amount: 60
   - name: 百炼平台API
     status: pending
     time_slices: []
     history_drafts:
       - ../../draft/2025/20250724.02.md
+    amount: 60
   - name: 去中心化节点
     status: pending
     time_slices: []
@@ -122,66 +149,81 @@ todos:
       - ../../draft/2025/20250720.a.md
       - ../../draft/2025/20250721.01.md
       - ../../draft/2025/20250724.01.md
+    amount: 60
   - name: 长安链智能合约
     status: pending
     time_slices: []
     history_drafts: []
+    amount: 60
   - name: Hyperledger Fabric智能合约
     status: pending
     time_slices: []
     history_drafts: []
+    amount: 60
   - name: 智谱API开发
     status: pending
     time_slices: []
     history_drafts: []
+    amount: 60
   - name: claude code + kimi K2
     status: pending
     time_slices: []
     history_drafts:
       - ../../draft/2025/20250718.a.md
+    amount: 90
   - name: AutoGen
     status: pending
     time_slices: []
     history_drafts: []
+    amount: 30
   - name: react ink
     status: pending
     time_slices: []
     history_drafts: []
+    amount: 30
   - name: MCP in nodejs
     status: pending
     time_slices: []
     history_drafts:
       - ../../draft/2025/20250720.01.md
+    amount: 195
   - name: TLA+
     status: pending
     time_slices: []
     history_drafts: []
+    amount: 30
   - name: node-datachannel
     status: pending
     time_slices: []
     history_drafts: []
+    amount: 60
   - name: 国产区块链产品
     status: pending
     time_slices: []
     history_drafts: []
+    amount: 30
   - name: Virtuals Protocol
     status: pending
     time_slices: []
     history_drafts: []
+    amount: 30
   - name: jami bot
     status: pending
     time_slices: []
     history_drafts:
       - ../../draft/2025/20250719.a.md
+    amount: 60
   - name: 量子力学的各种诠释:基于门电路、event机制的思想实验
     status: pending
     time_slices: []
     history_drafts:
       - ../../draft/2025/20250505.01.md
+    amount: 60
   - name: 热更新
     status: pending
     time_slices: []
     history_drafts: []
+    amount: 90
   - name: 量子物理的数学基础
     status: pending
     time_slices: []
@@ -194,87 +236,373 @@ todos:
       - ../../draft/2025/20250714.02.md
       - ../../draft/2025/20250715.03.md
       - ../../draft/2025/20250424.b.md
+    amount: 195
   - name: MCP in ts
     status: pending
     time_slices: []
     history_drafts: []
+    amount: 90
   - name: claude code router
     status: pending
     time_slices: []
     history_drafts: []
+    amount: 60
   - name: 腾讯文档sdk
     status: pending
     time_slices: []
     history_drafts: []
+    amount: 60
   - name: 飞书 nodejs sdk
     status: pending
     time_slices: []
     history_drafts: []
+    amount: 60
   - name: webcontainers
     status: pending
     time_slices: []
     history_drafts: []
+    amount: 90
   - name: oData simple
     status: pending
     time_slices: []
     history_drafts: []
+    amount: 30
   - name: instantdb
     status: pending
     time_slices: []
     history_drafts: []
+    amount: 30
   - name: BEP 46
     status: pending
     time_slices: []
     history_drafts: []
+    amount: 60
   - name: xLog
     status: pending
     time_slices: []
     history_drafts: []
+    amount: 30
   - name: markmap
     status: pending
     time_slices: []
     history_drafts: []
+    amount: 30
   - name: MapLibre sample
     status: pending
     time_slices: []
     history_drafts: []
+    amount: 30
   - name: PSMD term in helia dag-json https://www.npmjs.com/package/@helia/dag-json
     status: pending
     time_slices: []
     history_drafts: []
+    amount: 60
   - name: learn Blogging on the Decentralized Web https://proto.school/blog
     status: pending
     time_slices: []
     history_drafts: []
+    amount: 60
   - name: 在nodejs读写OFD文件。
     status: pending
     time_slices: []
     history_drafts: []
+    amount: 30
   - name: https://proto.school/basics  IPFS,P2P Data Links with Content Addressing
     status: pending
     time_slices: []
     history_drafts: []
+    amount: 60
   - name: learn web-llm
     status: pending
     time_slices: []
     history_drafts: []
+    amount: 30
   - name: 开发YARRRML范例
     status: pending
     time_slices: []
     history_drafts: []
+    amount: 60
   - name: 把PSMD的data、src部分升级到rdf，如果升级成功则作为范例。
     status: pending
     time_slices: []
     history_drafts: []
+    amount: 90
   - name: Windows PowerShell
     status: pending
     time_slices: []
     history_drafts: []
+    amount: 60
   - name: rust入门
     status: pending
     time_slices: []
     history_drafts: []
+    amount: 195
   - name: 继续学习promise api
+    status: pending
+    time_slices: []
+    history_drafts: []
+    amount: 60
+  - name: Common Logic (ISO/IEC 24707)
+    amount: 30
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: SPIN (SPARQL Inferencing Notation）/SHACL)
+    amount: 30
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: Chroma sample
+    amount: 60
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: lanceDB sample
+    amount: 60
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: XSTATE https://xstate.js.org/
+    amount: 60
+    status: pending
+    time_slices: []
+    history_drafts:
+      - 2025/20251026.01.md
+      - 2025/20251027.01.md
+  - name: 按petri网定义设计几个实例
+    amount: 60
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: Zapier
+    amount: 60
+    status: pending
+    time_slices: []
+    history_drafts:
+      - 2025/20251010.02.md
+  - name: OutSystems, Mendix,
+    amount: 60
+    status: pending
+    time_slices: []
+    history_drafts:
+      - 2025/20251010.01.md
+  - name: Camunda Zeebe / Temporal.io
+    amount: 30
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: Flink Complex Event Processing，直接运行 DMN 4Flink 或 Rego-on-Flink 扩展。
+    amount: 30
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: OpenFGA/SpiceDB(Zanzibar模型)
+    amount: 30
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: SALI (Legal Matter Standard)
+    amount: 30
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: LEDES™ (Legal Electronic Data Exchange Standard)
+    amount: 30
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: https://jsonlogic.com/
+    amount: 60
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: LegalRuleML（Legal Rule Markup Language）
+    amount: 30
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: ABAC / CBAC - Attribute/Condition-Based Access Control
+    amount: 30
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: Tauri + Rust
+    amount: 30
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: SBVR（OMG业务语义词汇与规则）
+    amount: 30
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: Akoma Ntoso（结构化法务文档）
+    amount: 30
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: IFTTT
+    amount: 30
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: OutSystems, Zapier
+    amount: 30
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: 描述逻辑（Description Logic, DL）
+    amount: 30
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: CEV（Contract Expression Language）
+    amount: 30
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: XACML 4.0 / ODRL 2.2
+    amount: 30
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: RuleML,结构化规则语言（如RuleML的核心子集）
+    amount: 30
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: CloudEvent（JSON 格式，spec 1.0+）
+    amount: 30
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: Semantic Version + Content-Addressable Storage（如 OCI Artifacts 存 DMN/Regos）
+    amount: 30
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: Ontology + SWRL（Semantic Web Rule Language）
+    amount: 30
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: 佯谬及二次革命
+    amount: 30
+    status: pending
+    time_slices: []
+    history_drafts:
+      - 2025/20250606.02.md
+      - 2025/20250610.01.md
+  - name: cursor rules
+    amount: 60
+    status: pending
+    time_slices: []
+    history_drafts:
+      - 2025/20250527.a.md
+  - name: 真随机数发生器
+    amount: 60
+    status: pending
+    time_slices: []
+    history_drafts:
+      - 2025/20250525.03.md
+  - name: 复习思想实验的数学基础
+    amount: 60
+    status: pending
+    time_slices: []
+    history_drafts:
+      - 2025/20250424.b.md
+  - name: 复习dat
+    amount: 90
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: 复习ipns
+    amount: 90
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: js debug in vscodium
+    amount: 30
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: remoteStorage sample
+    amount: 30
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: firebase的开源替代
+    amount: 60
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: rxdb p2p NATS
+    amount: 60
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: axios爬虫
+    amount: 30
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: wordpress install and config
+    amount: 60
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: https://proto.school/merkle-dags IPLD,Merkle DAGs, Structuring Data for the Distributed Web
+    amount: 60
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: linkml, yaml-ld
+    amount: 60
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: 拟制说、目的财产说、实在说
+    amount: 90
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: Decentralized Identifiers
+    amount: 60
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: 寻找可编程的,去中心化的信息发布方式
+    amount: 30
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: 了解免安装web im的机制
+    amount: 30
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: github project
+    amount: 30
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: trello api
+    amount: 30
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: Document-Oriented数据库
+    amount: 30
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: 列存储（Wide Column Store/Column-Family）数据库
+    amount: 30
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: Query fundamentals https://console.neo4j.io
+    amount: 30
     status: pending
     time_slices: []
     history_drafts: []

@@ -4,4 +4,36 @@ type: contract
 parent: ego
 git_repo: ../../xuemen
 token_balance: 1000
-todos: []
+todos:
+  - name: mail server
+    amount: 90
+    status: pending
+    time_slices: []
+    history_drafts:
+      - 2025/20250531.a.md
+  - name: 重新设计S2状态下的学门基本管理制度
+    amount: 195
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: term.e6f0caec -> xuemen COD metadata-S2状态下的部门模型
+    amount: 60
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: kernel模型升级
+    amount: 195
+    status: pending
+    time_slices: []
+    history_drafts:
+      - 2024/11/20241120.01.md
+  - name: 整理财务报表
+    amount: 30
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: 月初财务工作
+    amount: 30
+    status: pending
+    time_slices: []
+    history_drafts: []

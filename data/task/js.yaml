@@ -10,60 +10,208 @@ todos:
     time_slices: []
     history_drafts:
       - ../../draft/2025/20250601.a.md
+    amount: 90
   - name: query yaml file or js obj
     status: pending
     time_slices: []
     history_drafts:
       - ../../draft/2025/20250528.01.md
+    amount: 90
   - name: 新版raw.js的子命令-营养成分排序
     status: pending
     time_slices: []
     history_drafts: []
+    amount: 30
   - name: The Node.js best practices list (July 2024)
     status: pending
     time_slices: []
     history_drafts: []
+    amount: 60
   - name: 学习 nodejs test框架
     status: pending
     time_slices: []
     history_drafts: []
+    amount: 60
   - name: nodejs server side dev
     status: pending
     time_slices: []
     history_drafts: []
+    amount: 60
   - name: learn graphql
     status: pending
     time_slices: []
     history_drafts: []
+    amount: 90
   - name: implement a programming language in JavaScript
     status: pending
     time_slices: []
     history_drafts: []
+    amount: 90
   - name: 浏览器自动化
     status: pending
     time_slices: []
     history_drafts: []
+    amount: 60
   - name: 向外提供js文件的范例，为代码层级互通做准备
     status: pending
     time_slices: []
     history_drafts: []
+    amount: 60
   - name: duckdb
     status: pending
     time_slices: []
     history_drafts: []
+    amount: 30
   - name: editor.js
     status: pending
     time_slices: []
     history_drafts: []
+    amount: 90
   - name: embedded dbs
     status: pending
     time_slices: []
     history_drafts: []
+    amount: 60
   - name: 学习'Electron'，创作一个范例。
     status: pending
     time_slices: []
     history_drafts: []
+    amount: 60
   - name: 用代码中的对象或类，产生数据库创建SQL脚本、ER图（mermaid）
+    status: pending
+    time_slices: []
+    history_drafts: []
+    amount: 60
+  - name: node.js
+    amount: 90
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: Vector Database in nodejs
+    amount: 60
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: TensorFlow.js
+    amount: 60
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: learn factory, constructor, prototype
+    amount: 60
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: debug
+    amount: 60
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: passportjs
+    amount: 30
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: a2a-js
+    amount: 60
+    status: pending
+    time_slices: []
+    history_drafts:
+      - 2025/20250726.01.md
+      - 2025/20250805.02.md
+  - name: LangChain.js
+    amount: 60
+    status: pending
+    time_slices: []
+    history_drafts:
+      - 2025/20250717.01.md
+  - name: ai-sdk + moonshot
+    amount: 60
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: copilot
+    amount: 30
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: ai.js
+    amount: 30
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: AI SDK
+    amount: 60
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: learn brain.js
+    amount: 60
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: giiter.im bot sample
+    amount: 60
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: git sample
+    amount: 60
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: 在代码中自动提交git库
+    amount: 60
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: 考虑sql.js是否使用。
+    amount: 30
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: 引用github等特定版本js文件的html模版
+    amount: 60
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: js class
+    amount: 60
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: learn Orbitdb
+    amount: 60
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: learn js implement of ipfs
+    amount: 60
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: 基于dat,hypercore,hyperswarm等模块的浏览器动态页面范例。
+    amount: 60
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: JSON Schema
+    amount: 30
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: 日期格式化
+    amount: 30
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: mermaid
+    amount: 30
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: text->id,protobuf-javascript
+    amount: 30
     status: pending
     time_slices: []
     history_drafts: []

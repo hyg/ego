@@ -97,7 +97,8 @@ module.exports = {
             date: dateStr,
             VoucherID: externalVoucherId || "",
             AccountingEntry: { debit: [], credit: [] },
-            comment: comment || []
+            comment: comment || [],
+            sourceDate: ""  // 结算日期，用于幂等检查
         };
         
         for (const entry of entries) {

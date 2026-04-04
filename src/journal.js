@@ -193,8 +193,100 @@ module.exports = {
         };
     },
     
+    // 检查当天是否已结算
+    isDaySettled: function (dateStr) {
+        const year = dateStr.substring(0, 4);
+        const existingAERs = asset.loadAER(year);
+        
+        for (const [filename, aer] of Object.entries(existingAERs)) {
+            // 优先检查sourceDate字段（新格式）
+            if (aer.sourceDate === dateStr) {
+                return { settled: true, filename: filename, voucher: aer };
+            }
+            // 兼容旧格式：检查date字段
+            const aerDate = aer.date ? aer.date.toString().replace(/-/g, '').slice(0, 8) : '';
+            if (aerDate === dateStr) {
+                return { settled: true, filename: filename, voucher: aer };
+            }
+        }
+        return { settled: false };
+    },
+    
+    // 清理已结算的数据（用于重新结算）
+    undoSettle: function (dateStr) {
+        const year = dateStr.substring(0, 4);
+        const existingAERs = asset.loadAER(year);
+        const vouchersToRemove = [];
+        
+        // 找到当天所有voucher（兼容新旧格式）
+        for (const [filename, aer] of Object.entries(existingAERs)) {
+            if (aer.sourceDate === dateStr) {
+                vouchersToRemove.push({ filename: filename, voucher: aer });
+                continue;
+            }
+            // 兼容旧格式
+            const aerDate = aer.date ? aer.date.toString().replace(/-/g, '').slice(0, 8) : '';
+            if (aerDate === dateStr) {
+                vouchersToRemove.push({ filename: filename, voucher: aer });
+            }
+        }
+        
+        if (vouchersToRemove.length === 0) {
+            return { undone: false, reason: 'no vouchers found' };
+        }
+        
+        // 恢复token余额并清理time_slices
+        for (const { filename, voucher } of vouchersToRemove) {
+            const comment = voucher.comment || [];
+            for (const c of comment) {
+                if (c.token && c.task) {
+                    const taskData = task.loadTask(c.task);
+                    if (taskData && taskData.token_balance !== undefined) {
+                        taskData.token_balance += c.token;
+                        
+                        // 清理对应的time_slices
+                        if (taskData.todos) {
+                            for (const todo of taskData.todos) {
+                                if (todo.name === c.todo && todo.time_slices) {
+                                    todo.time_slices = todo.time_slices.filter(ts => ts.date !== dateStr);
+                                }
+                                if (todo.name === c.todo && todo.history_drafts) {
+                                    const draftPath = c.artifact ? c.artifact.replace('../../draft/', '') : null;
+                                    if (draftPath) {
+                                        todo.history_drafts = todo.history_drafts.filter(d => !d.includes(dateStr));
+                                    }
+                                }
+                            }
+                        }
+                        
+                        task.saveTask(taskData);
+                        log("restored token_balance:", c.task, taskData.token_balance);
+                    }
+                }
+            }
+            
+            // 删除voucher文件
+            const filepath = path.join(getAbsolutePath(config.voucherpath), year, filename);
+            if (fs.existsSync(filepath)) {
+                fs.unlinkSync(filepath);
+                log("removed voucher:", filename);
+            }
+        }
+        
+        return { undone: true, count: vouchersToRemove.length };
+    },
+    
     // 执行结算（生成凭证并写入）
     settleDayObj: function (dayobj) {
+        const dateStr = dayobj.date.toString();
+        
+        // 检查是否已结算
+        const settleStatus = this.isDaySettled(dateStr);
+        if (settleStatus.settled) {
+            log("day already settled, undoing:", settleStatus.filename);
+            this.undoSettle(dateStr);
+        }
+        
         const parsed = this.parseDayObj(dayobj);
         const vouchers = [];
         
@@ -211,7 +303,9 @@ module.exports = {
                         time: result.actualTime,
                         token: result.tokenAmount,
                         artifact: result.artifactFile
-                    }]
+                    }],
+                    null,
+                    dateStr
                 );
                 vouchers.push(voucher);
             }

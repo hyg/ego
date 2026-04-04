@@ -104,12 +104,115 @@ todos:
     time_slices: []
     history_drafts:
       - ../../draft/2025/20250202.01.md
+    amount: 90
   - name: schema manifest law v0
     status: pending
     time_slices: []
     history_drafts:
       - 2024.07.21 07:45 draft
+    amount: 60
   - name: 重新设计ego.js的命令行参数，合并函数，整理代码。
+    status: pending
+    time_slices: []
+    history_drafts: []
+    amount: 60
+  - name: 整理js对象检索的代码
+    amount: 60
+    status: pending
+    time_slices: []
+    history_drafts:
+      - 2025/20250605.03.md
+      - 2025/20250714.03.md
+  - name: 整理task及其相互关系
+    amount: 90
+    status: pending
+    time_slices: []
+    history_drafts:
+      - 2024/07/20240704093000.md
+      - 2025/20250728.01.md
+      - 2025/20250731.01.md
+  - name: 基于真实数据标志财务报表
+    amount: 90
+    status: pending
+    time_slices: []
+    history_drafts:
+      - 2025/20250605.01.md
+  - name: 重新设计财务的基础元数据格式
+    amount: 90
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: entry的按月归并
+    amount: 60
+    status: pending
+    time_slices: []
+    history_drafts:
+      - 2025/20250525.01.md
+      - 2025/20250526.03.md
+  - name: 用js代码完成日小结后的git操作。
+    amount: 30
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: 时间改为ISO8601格式
+    amount: 30
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: 同步新日志到webDAV。使用新的共享外链。
+    amount: 90
+    status: pending
+    time_slices: []
+    history_drafts:
+      - 2025/20250810.02.md
+  - name: entry的科目归并
+    amount: 60
+    status: pending
+    time_slices: []
+    history_drafts:
+      - 2025/20250502.01.md
+  - name: 新版基础模型
+    amount: 90
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: 整理季度任务
+    amount: 60
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: 整理知识体系的层级定义
+    amount: 60
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: schema manifest code v0
+    amount: 60
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: ego as instance
+    amount: 90
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: 根据ego对外信息接口编写页面代码
+    amount: 90
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: 设计subtask与todo的关系，保持工作的持续连贯。
+    amount: 60
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: finish.devmaketomorowinfo(tomorrow);
+    amount: 90
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name: 生成waitinglist时，考虑多层todo。
+    amount: 30
     status: pending
     time_slices: []
     history_drafts: []

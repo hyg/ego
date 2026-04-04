@@ -63,6 +63,11 @@ module.exports = {
         }
 
 
+        if (!healthobj || !healthobj.wake || !healthobj.wake.time) {
+            log("health metadata incomplete, using default waketime 080000");
+            return 80000;
+        }
+
         let waketime = healthobj.wake.time;
 
         return waketime;
@@ -94,9 +99,19 @@ module.exports = {
     loaddayobjbydate: function (datestr) {
         let year = datestr.slice(0, 4);
         let dayfilename = config.daymetadatapath + "/" + year + "/" + util.parseTemplate(config.templates.dayMeta, { date: datestr });
-        let dayobj = yaml.load(fs.readFileSync(dayfilename, 'utf8', { schema: yaml.FAILSAFE_SCHEMA }));
-
-        return dayobj;
+        
+        if (!fs.existsSync(dayfilename)) {
+            log("day file not found:", dayfilename);
+            return null;
+        }
+        
+        try {
+            let dayobj = yaml.load(fs.readFileSync(dayfilename, 'utf8', { schema: yaml.FAILSAFE_SCHEMA }));
+            return dayobj;
+        } catch (e) {
+            log("yaml read error:" + e);
+            return null;
+        }
     },
     dumpdayobj: function (dayobj, diff = 0) {
         let dayfilename = this.dayfilename(diff);
@@ -210,14 +225,9 @@ module.exports = {
                         timeperiod.readme = todoObj.history_drafts.map(d => "read ../../draft/" + d);
                     }
                 } else {
-                    // fallback: 使用旧逻辑
-                    log("allocator returned null, using waitinglist fallback");
-                    timeperiod.subject = waitinglist[amount.toString()][0].task;
-                    timeperiod.title = waitinglist[amount.toString()][0].name;
-                    if (waitinglist[amount.toString()][0].readme != null) {
-                        timeperiod.readme = [...waitinglist[amount.toString()][0].readme];
-                    }
-                    todayTaskIds.push(timeperiod.subject);
+                    // 没有可用todo，跳过该时间片
+                    log("allocator returned null, no todo available for amount:", amount);
+                    continue;
                 }
                 //timeperiod.output = config.draftrepopath + date.slice(0, 4) + "/" + date.slice(4, 6) + "/" + begintime + ".md";
                 draftcnt++;
