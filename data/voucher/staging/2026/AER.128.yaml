@@ -2,30 +2,27 @@ date: '20260404'
 VoucherID: ''
 AccountingEntry:
   debit:
-    - AccountTitle: PSMD
+    - AccountTitle: ego
       asset: time
-      amount: 30
+      amount: 60
     - AccountTitle: raw
       asset: token
-      amount: 30
-    - AccountTitle: PSMD
+      amount: 60
+    - AccountTitle: ego
       asset: artifact.draft
       amount: 1
   credit:
     - AccountTitle: raw
       asset: time
-      amount: 30
-    - AccountTitle: PSMD
+      amount: 60
+    - AccountTitle: ego
       asset: token
-      amount: 30
-    - AccountTitle: PSMD
+      amount: 60
+    - AccountTitle: ego
       asset: time
-      amount: 30
+      amount: 60
 comment:
-  - type: work
-    task: PSMD
-    todo: 整理闫岸家政能力讨论
-    time: 30
-    token: 30
-    artifact: ../../draft/2026/20260404.01.md
+  - type: check
+    token: 60
+    artifact: ../../draft/2026/20260404.04.md
 sourceDate: ''
