@@ -180,6 +180,11 @@ module.exports = {
         let totalArtifacts = 0;
         
         for (const timeSlice of dayobj.time) {
+            // 跳过amount==0的时间片（未完成且无实际工作）
+            if (timeSlice.amount == 0) {
+                continue;
+            }
+            
             const result = this.parseTimeSlice(timeSlice, dayobj.date, dayobj.plan);
             results.push(result);
             totalToken += result.tokenAmount;

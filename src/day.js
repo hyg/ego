@@ -357,6 +357,11 @@ module.exports = {
 
         for (let i in dayobj.time) {
             let timeperiod = dayobj.time[i];
+            // 跳过amount==0的时间片
+            if (timeperiod.amount == 0) {
+                continue;
+            }
+            
             let begintime = util.str2time(timeperiod.begin);
             let endtime = new Date(begintime);
             if (timeperiod.amount > 0) {
@@ -521,6 +526,11 @@ module.exports = {
         let outputliststr = "";
         for (let t in dayobj.time) {
             let timeperiod = dayobj.time[t];
+            // 跳过amount==0的时间片
+            if (timeperiod.amount == 0) {
+                continue;
+            }
+            
             if (timeperiod.output != null) {
                 let begintime = util.str2time(timeperiod.begin);
                 let endtime = new Date(begintime);
