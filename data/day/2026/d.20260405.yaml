@@ -1,0 +1,68 @@
+date: '20260405'
+mode: '2'
+plan: 2b
+time:
+  - begin: '20260405062600'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20260405064100'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20260405074100'
+    amount: 45
+    type: food
+    name: 早餐
+  - begin: '20260405082600'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20260405091100'
+    amount: 18
+    type: free
+    name: 休整
+  - begin: '20260405093000'
+    amount: 90
+    type: work
+    name: 工作
+    task: PSMD
+    todo: 权利分配语法 & engine
+    readme:
+      - read ../../draft/2026/20260402.01.md
+      - read ../../draft/2026/20260403.01.md
+    output: ../../draft/2026/20260405.01.md
+    namelink: http://simp.ly/p/WZ077p
+  - begin: '20260405110000'
+    amount: 180
+    type: food
+    name: 备餐、午餐午休
+  - begin: '20260405140000'
+    amount: 90
+    type: work
+    name: 工作
+    task: ego
+    todo: 新版实时手稿
+    output: ../../draft/2026/20260405.02.md
+    namelink: http://simp.ly/p/lsBYG9
+  - begin: '20260405153000'
+    amount: 30
+    type: free
+    name: 休整
+  - begin: '20260405160000'
+    amount: 60
+    type: work
+    name: 工作
+    task: infra
+    todo: 设计静态数据（git库）和实时交互的分工。如何共同支撑PSMD和ego项目。
+    output: ../../draft/2026/20260405.03.md
+    namelink: http://simp.ly/p/MpcbHD
+  - begin: '20260405170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20260405190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
+    output: ../../draft/2026/20260405.04.md

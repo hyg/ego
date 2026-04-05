@@ -1,0 +1,31 @@
+date: '20260405'
+VoucherID: ''
+AccountingEntry:
+  debit:
+    - AccountTitle: infra
+      asset: time
+      amount: 60
+    - AccountTitle: raw
+      asset: token
+      amount: 120
+    - AccountTitle: infra
+      asset: artifact.draft
+      amount: 1
+  credit:
+    - AccountTitle: raw
+      asset: time
+      amount: 60
+    - AccountTitle: infra
+      asset: token
+      amount: 120
+    - AccountTitle: infra
+      asset: time
+      amount: 60
+comment:
+  - type: work
+    task: infra
+    todo: 设计静态数据（git库）和实时交互的分工。如何共同支撑PSMD和ego项目。
+    time: 60
+    token: 120
+    artifact: ../../draft/2026/20260405.03.md
+sourceDate: ''

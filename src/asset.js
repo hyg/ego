@@ -298,6 +298,11 @@ module.exports = {
                 let item = AER.AccountingEntry.credit[id];
                 Account = this.updatebalance(Account, item.AccountTitle, "credit", item.asset, item.amount);
             }
+            // debug
+            if (Account["总账"].balance.rmb != 0){
+                util.log("总账不平衡",Account["总账"].balance.rmb,file,AER);
+
+            }
         }
         
         // 收集所有资源类型

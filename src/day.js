@@ -570,11 +570,15 @@ module.exports = {
             // 使用allocator获取todo
             let time = seasonobj.dayplan[plan].time;
             dayinfostr = dayinfostr + "如果绑定模版" + plan + "可能安排以下任务：\n\n";
+            // 跟踪该模版已选择的task，避免同一模版内重复选择
+            let planTaskIds = [];
             for (let i in time) {
                 if (time[i].type == "work") {
-                    let selected = allocator.selectTodoForTimeSlice(time[i].amount, plan.charAt(0), []);
+                    let selected = allocator.selectTodoForTimeSlice(time[i].amount, plan.charAt(0), planTaskIds);
                     if (selected) {
                         dayinfostr = dayinfostr + "- " + time[i].beginhour.toString().padStart(2, '0') + ":" + time[i].beginminute.toString().padStart(2, '0') + "\t" + selected.todo_name + " -" + selected.task_id + "\n";
+                        // 记录已选择的task
+                        planTaskIds.push(selected.task_id);
                     } else {
                         log("no todo available. plan:%s time[%d] amount:%d", plan, i, time[i].amount);
                     }
