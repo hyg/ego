@@ -31,9 +31,15 @@ todos:
         template: 2b
         token_cost: 180
         draft: 2026/20260403.01.md
+      - date: '20260405'
+        amount: 270
+        template: 2b
+        token_cost: 540
+        draft: 2026/20260405.01.md
     history_drafts:
       - 2026/20260402.01.md
       - 2026/20260403.01.md
+      - 2026/20260405.01.md
   - name: 部署语法
     amount: 60
     status: pending
@@ -262,4 +268,4 @@ derivation:
   source: null
   type: null
   trigger: null
-token_balance: 4480
+token_balance: 4660

@@ -23,7 +23,8 @@ time:
     type: free
     name: 休整
   - begin: '20260405093000'
-    amount: 90
+    amount: 270
+    redo: 90
     type: work
     name: 工作
     task: PSMD
@@ -38,7 +39,8 @@ time:
     type: food
     name: 备餐、午餐午休
   - begin: '20260405140000'
-    amount: 90
+    amount: 0
+    redo: 90
     type: work
     name: 工作
     task: ego
@@ -50,7 +52,8 @@ time:
     type: free
     name: 休整
   - begin: '20260405160000'
-    amount: 60
+    amount: 0
+    redo: 60
     type: work
     name: 工作
     task: infra

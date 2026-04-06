@@ -3,7 +3,7 @@ name: infra
 type: contract
 parent: ego
 git_repo: ../../infra
-token_balance: 2880
+token_balance: 2940
 contract:
   partner: PSMD
   deadline: '2026-04-22'
@@ -13,10 +13,16 @@ todos:
   - name: 节点软件
     status: pending
   - name: 设计静态数据（git库）和实时交互的分工。如何共同支撑PSMD和ego项目。
-    amount: 60
+    amount: 30
     status: pending
-    time_slices: []
-    history_drafts: []
+    time_slices:
+      - date: '20260406'
+        amount: 60
+        template: 1d
+        token_cost: 60
+        draft: 2026/20260406.03.md
+    history_drafts:
+      - 2026/20260406.03.md
   - name: petri网工作流引擎设计
     amount: 195
     status: pending
