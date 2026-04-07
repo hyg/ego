@@ -1,0 +1,9 @@
+date: 2026-04-07 11:30:14
+title: 电子回执单号
+VoucherID: "2010000420260407000002180841"
+VoucherType: 电子回执单号
+amount: 29012.00
+summary: 房租
+comment:
+  - name: 报文识别号
+    value: 3012900000072026040700928971

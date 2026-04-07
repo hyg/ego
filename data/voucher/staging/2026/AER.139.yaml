@@ -1,0 +1,17 @@
+date: 2026-04-07
+VoucherID: 19260407102000041216520575073861
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: raw.food
+      asset: rmb
+      amount: 28.88
+  credit:
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 28.88
+comment:
+  - name: 番茄酱
+    amount: 1600
+    unit: g
+    asset: 28.88
