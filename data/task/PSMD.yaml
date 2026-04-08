@@ -9,7 +9,7 @@ resources:
   rmb: 0
 contract:
   partner: PSMD truster
-  deadline: '2026-04-08'
+  deadline: '2026-04-10'
   deliverables:
     - 权利分配语法
     - 部署语法
