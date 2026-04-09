@@ -1,0 +1,17 @@
+date: 2026-04-08
+VoucherID: 4200003108202604084745242536
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: raw.shell
+      asset: rmb
+      amount: 256.00
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 256.00
+comment:
+  - name: 龙牙二代隐腾
+    amount: 1
+    unit: 条
+    asset: 256.00
