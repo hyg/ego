@@ -1,0 +1,31 @@
+date: '20260411'
+VoucherID: ''
+AccountingEntry:
+  debit:
+    - AccountTitle: PSMD
+      asset: time
+      amount: 60
+    - AccountTitle: raw
+      asset: token
+      amount: 60
+    - AccountTitle: PSMD
+      asset: artifact.draft
+      amount: 1
+  credit:
+    - AccountTitle: raw
+      asset: time
+      amount: 60
+    - AccountTitle: PSMD
+      asset: token
+      amount: 60
+    - AccountTitle: PSMD
+      asset: time
+      amount: 60
+comment:
+  - type: work
+    task: PSMD
+    todo: 部署语法
+    time: 60
+    token: 60
+    artifact: ../../draft/2026/20260411.01.md
+sourceDate: ''
