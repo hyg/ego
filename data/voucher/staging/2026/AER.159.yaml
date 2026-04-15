@@ -1,0 +1,17 @@
+date: 2026-04-15
+VoucherID: 4500000137202604156630496636
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: raw.site.bj1
+      asset: rmb
+      amount: 0.10
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 0.10
+comment:
+  - name: pdd会员
+    amount: 3
+    unit: 月
+    asset: 0.10

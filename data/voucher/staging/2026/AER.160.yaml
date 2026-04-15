@@ -1,0 +1,17 @@
+date: 2026-04-15
+VoucherID: 4500000150202604153424664676
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: donation.parent
+      asset: rmb
+      amount: 305.00
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 305.00
+comment:
+  - name: 雪龙和牛
+    amount: 3000
+    unit: g
+    asset: 305.00
