@@ -1,0 +1,45 @@
+date: '20260416'
+mode: '1'
+plan: 1e
+time:
+  - begin: '20260416103300'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20260416104800'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20260416114800'
+    amount: 45
+    type: food
+    name: 午餐
+  - begin: '20260416123300'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20260416131800'
+    amount: 161
+    type: free
+    name: 休整
+  - begin: '20260416160000'
+    amount: 0
+    redo: 60
+    type: work
+    name: 静默工作
+    task: PSMD
+    todo: 部署语法
+    readme:
+      - read ../../draft/2026/20260403.03.md
+      - read ../../draft/2026/20260411.01.md
+    output: ../../draft/2026/20260416.01.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20260416170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20260416190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
+    output: ../../draft/2026/20260416.02.md
