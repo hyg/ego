@@ -1,0 +1,95 @@
+date: '20260417'
+mode: '1'
+plan: 1a
+time:
+  - begin: '20260417041200'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20260417042700'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20260417052700'
+    amount: 45
+    type: food
+    name: 早餐
+  - begin: '20260417061200'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20260417065700'
+    amount: 47
+    type: free
+    name: 休整
+  - begin: '20260417074500'
+    amount: 0
+    redo: 60
+    type: work
+    name: 静默工作
+    task: PSMD
+    todo: 部署语法
+    readme:
+      - read ../../draft/2026/20260403.03.md
+      - read ../../draft/2026/20260411.01.md
+    output: ../../draft/2026/20260417.01.md
+    namelink: http://simp.ly/p/xtgD4F
+  - begin: '20260417084500'
+    amount: 45
+    type: free
+    name: 休整
+  - begin: '20260417093000'
+    amount: 0
+    redo: 90
+    type: work
+    name: 静默工作
+    task: ego
+    todo: 新版实时手稿
+    output: ../../draft/2026/20260417.02.md
+    namelink: http://simp.ly/p/j1SspP
+  - begin: '20260417110000'
+    amount: 180
+    type: food
+    name: 备餐、午餐午休
+  - begin: '20260417140000'
+    amount: 0
+    redo: 30
+    type: work
+    name: 静默工作
+    task: infra
+    todo: 设计静态数据（git库）和实时交互的分工。如何共同支撑PSMD和ego项目。
+    readme:
+      - read ../../draft/2026/20260406.03.md
+    output: ../../draft/2026/20260417.03.md
+    namelink: http://simp.ly/p/8t3vlk
+  - begin: '20260417143000'
+    amount: 0
+    redo: 30
+    type: work
+    name: 静默工作
+    task: raw
+    todo: 复习五元庄第十二式
+    output: ../../draft/2026/20260417.04.md
+    namelink: http://simp.ly/p/5k9gJy
+  - begin: '20260417150000'
+    amount: 60
+    type: free
+    name: 休整
+  - begin: '20260417160000'
+    amount: 0
+    redo: 60
+    type: work
+    name: 静默工作
+    task: js
+    todo: The Node.js best practices list (July 2024)
+    output: ../../draft/2026/20260417.05.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20260417170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20260417190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
+    output: ../../draft/2026/20260417.06.md
