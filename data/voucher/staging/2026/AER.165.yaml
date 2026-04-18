@@ -1,0 +1,17 @@
+date: 2026-04-17
+VoucherID: 4200003025202604179465595429
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: raw.site.wz
+      asset: rmb
+      amount: 25.00
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 25.00
+comment:
+  - name: 打车
+    amount: 1
+    unit: 次
+    asset: 25.00

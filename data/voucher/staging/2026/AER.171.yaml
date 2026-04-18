@@ -1,0 +1,17 @@
+date: 2026-04-18
+VoucherID: 4500000150202604186085631903
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: donation.parent
+      asset: rmb
+      amount: 124.65
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 124.65
+comment:
+  - name: 奶粉
+    amount: 4000
+    unit: g
+    asset: 124.65
