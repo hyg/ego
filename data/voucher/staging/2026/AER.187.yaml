@@ -1,0 +1,17 @@
+date: 2026-04-21
+VoucherID: 4500000152202604212110455153
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: raw.supply
+      asset: rmb
+      amount: 2.45
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 2.45
+comment:
+  - name: 医用垫单
+    amount: 60
+    unit: 张
+    asset: 2.45

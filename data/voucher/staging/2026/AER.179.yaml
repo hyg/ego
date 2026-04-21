@@ -7,7 +7,7 @@ AccountingEntry:
       asset: rmb
       amount: 1.00
   credit:
-    - AccountTitle: 支付宝余额
+    - AccountTitle: 银行存款
       asset: rmb
       amount: 1.00
 comment:

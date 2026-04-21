@@ -1,0 +1,17 @@
+date: 2026-04-20
+VoucherID: 19260420112000041662576325000246
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: raw.food
+      asset: rmb
+      amount: 68.90
+  credit:
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 68.90
+comment:
+  - name: 超值神券
+    amount: 80
+    unit: rmb
+    asset: 68.90

@@ -1,0 +1,17 @@
+date: 2026-04-21
+VoucherID: 4200003013202604213635520303
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: raw.shell
+      asset: rmb
+      amount: 1.88
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 1.88
+comment:
+  - name: 夏季棒球帽
+    amount: 1
+    unit: 个
+    asset: 1.88

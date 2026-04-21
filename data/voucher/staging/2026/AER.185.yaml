@@ -1,0 +1,17 @@
+date: 2026-04-20
+VoucherID: 
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: 现金
+      asset: rmb
+      amount: 2890.00
+  credit:
+    - AccountTitle: donation.parent
+      asset: rmb
+      amount: 2890.00
+comment:
+  - name: 红包
+    amount: 2890
+    unit: rmb
+    asset: 2890.00

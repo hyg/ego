@@ -1,0 +1,17 @@
+date: 2026-04-21
+VoucherID: 4200003019202604212858485161
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: donation.parent
+      asset: rmb
+      amount: 17.90
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 17.90
+comment:
+  - name: 训练器
+    amount: 1
+    unit: 套
+    asset: 17.90
