@@ -1,0 +1,17 @@
+date: 2026-04-23
+VoucherID: 19260423042010041730194718021474
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: raw.food
+      asset: rmb
+      amount: 91.07
+  credit:
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 91.07
+comment:
+  - name: 复合维生素
+    amount: 400
+    unit: 片
+    asset: 91.07
