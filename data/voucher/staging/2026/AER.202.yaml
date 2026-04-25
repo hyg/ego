@@ -1,0 +1,20 @@
+date: 2026-04-25
+VoucherID: 4200003122202604251138362484
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: unknown
+      asset: rmb
+      amount: 2.98
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 0.68
+    - AccountTitle: 现金
+      asset: rmb
+      amount: 2.30
+comment:
+  - name: 快菜
+    amount: 500
+    unit: g
+    asset: 2.98
