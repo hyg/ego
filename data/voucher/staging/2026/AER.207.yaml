@@ -1,0 +1,17 @@
+date: 2026-04-27
+VoucherID: 2026042722001431991429631256
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: raw.med
+      asset: rmb
+      amount: 1.00
+  credit:
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 1.00
+comment:
+  - name: 公交
+    amount: 1
+    unit: 次
+    asset: 1.00

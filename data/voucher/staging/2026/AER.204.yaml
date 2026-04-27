@@ -1,0 +1,17 @@
+date: 2026-04-25
+VoucherID: 4500000128202604256336599831
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: donation.parent
+      asset: rmb
+      amount: 26.64
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 26.64
+comment:
+  - name: 隔热手套
+    amount: 1
+    unit: 双
+    asset: 26.64

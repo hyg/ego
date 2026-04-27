@@ -3,7 +3,7 @@ VoucherID: 4200003122202604251138362484
 AccountingSoftwareID: 
 AccountingEntry:
   debit:
-    - AccountTitle: unknown
+    - AccountTitle: raw.food
       asset: rmb
       amount: 2.98
   credit:
