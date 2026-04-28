@@ -1,0 +1,17 @@
+date: 2026-04-28
+VoucherID: 4500000131202604288133677752
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: donation.parent
+      asset: rmb
+      amount: 29.18
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 29.18
+comment:
+  - name: 脱敏糊剂
+    amount: 240
+    unit: g
+    asset: 29.18
