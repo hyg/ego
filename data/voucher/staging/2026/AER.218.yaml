@@ -1,0 +1,17 @@
+date: 2026-04-30
+VoucherID: 4500000139202604309401049749
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: donation.parent
+      asset: rmb
+      amount: 55.47
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 55.47
+comment:
+  - name: 康复新液
+    amount: 480
+    unit: ml
+    asset: 55.47
