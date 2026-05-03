@@ -1,0 +1,11 @@
+{
+  "mailboxes": {
+    "huangyg@ mails.dex": {
+      "api_key": "mk_4a35c53a757d4d53a08bebc7c0c282"
+    },
+    "psmd@mails.dex": {
+      "api_key": "mk_01e3c5ac7a5e440ea552f578f84c6c8f"
+    }
+  },
+  "active_mailbox": "huangyg@ mails.dex"
+}
