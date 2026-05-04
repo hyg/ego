@@ -1,0 +1,17 @@
+date: 2026-05-04
+VoucherID: 4200003088202605049594647588
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: raw.med
+      asset: rmb
+      amount: 34.68
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 34.68
+comment:
+  - name: 黄芪
+    amount: 500
+    unit: g
+    asset: 34.68
