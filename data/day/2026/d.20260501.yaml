@@ -57,7 +57,7 @@ time:
     type: work
     task: xuemen
     todo: 月初事务性工作
-    output: ../../draft/2026/20260501/a/md
+    output: ../../draft/2026/20260501.a.md
   - begin: '20260501160000'
     amount: 0
     redo: 60

@@ -3,7 +3,7 @@ name: xuemen
 type: contract
 parent: ego
 git_repo: ../../xuemen
-token_balance: 940
+token_balance: 820
 todos:
   - name: mail server
     amount: 90
