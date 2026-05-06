@@ -1,0 +1,72 @@
+date: '20260506'
+mode: '2'
+plan: 2c
+time:
+  - begin: '20260506073200'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20260506074700'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20260506084700'
+    amount: 45
+    type: food
+    name: 早餐
+  - begin: '20260506093200'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20260506101700'
+    amount: 42
+    type: free
+    name: 休整
+  - begin: '20260506110000'
+    amount: 180
+    type: food
+    name: 备餐、午餐午休
+  - begin: '20260506150000'
+    amount: 400
+    type: work
+    name: 工作
+    task: xuemen
+    todo: 购买和配置新服务器
+    output: ../../draft/2026/20260506.a.md
+  - begin: '20260506140000'
+    amount: 0
+    redo: 90
+    type: work
+    name: 工作
+    task: PSMD
+    todo: 权利分配语法 & engine
+    readme:
+      - read ../../draft/2026/20260402.01.md
+      - read ../../draft/2026/20260403.01.md
+      - read ../../draft/2026/20260405.01.md
+    output: ../../draft/2026/20260506.01.md
+    namelink: http://simp.ly/p/lsBYG9
+  - begin: '20260506153000'
+    amount: 30
+    type: free
+    name: 休整
+  - begin: '20260506160000'
+    amount: 0
+    redo: 60
+    type: work
+    name: 工作
+    task: ego
+    todo: JT的发行和回收
+    readme:
+      - read ../../draft/2026/20260402.02.md
+    output: ../../draft/2026/20260506.02.md
+    namelink: http://simp.ly/p/MpcbHD
+  - begin: '20260506170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20260506190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
+    output: ../../draft/2026/20260506.03.md

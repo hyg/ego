@@ -1,0 +1,31 @@
+date: '20260506'
+VoucherID: ''
+AccountingEntry:
+  debit:
+    - AccountTitle: xuemen
+      asset: time
+      amount: 400
+    - AccountTitle: raw
+      asset: token
+      amount: 800
+    - AccountTitle: xuemen
+      asset: artifact.draft
+      amount: 1
+  credit:
+    - AccountTitle: raw
+      asset: time
+      amount: 400
+    - AccountTitle: xuemen
+      asset: token
+      amount: 800
+    - AccountTitle: xuemen
+      asset: time
+      amount: 400
+comment:
+  - type: work
+    task: xuemen
+    todo: 购买和配置新服务器
+    time: 400
+    token: 800
+    artifact: ../../draft/2026/20260506.a.md
+sourceDate: ''
