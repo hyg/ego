@@ -1,0 +1,28 @@
+date: '20260508'
+VoucherID: ''
+AccountingEntry:
+  debit:
+    - AccountTitle: ego
+      asset: time
+      amount: 5
+    - AccountTitle: raw
+      asset: token
+      amount: 10
+    - AccountTitle: ego
+      asset: artifact.draft
+      amount: 1
+  credit:
+    - AccountTitle: raw
+      asset: time
+      amount: 5
+    - AccountTitle: ego
+      asset: token
+      amount: 10
+    - AccountTitle: ego
+      asset: time
+      amount: 5
+comment:
+  - type: check
+    token: 10
+    artifact: ../../draft/2026/20260508.03.md
+sourceDate: ''
