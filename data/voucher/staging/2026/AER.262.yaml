@@ -1,0 +1,17 @@
+date: 2026-05-10
+VoucherID: 4200003025202605109827910644
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: raw.med
+      asset: rmb
+      amount: 77.81
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 77.81
+comment:
+  - name: 维生素D3
+    amount: 600
+    unit: 片
+    asset: 77.81
