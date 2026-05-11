@@ -1,0 +1,27 @@
+date: 2026-05-11
+VoucherID: 
+  - 4500000148202605118963469996
+  - 2026051122001431991420502208
+  - 2026051122001431991421234925
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: raw.med
+      asset: rmb
+      amount: 362.00
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 360.00
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 2.00
+comment:
+  - name: 补牙
+    amount: 1
+    unit: 颗
+    asset: 360.00
+  - name: 公交
+    amount: 2
+    unit: 次
+    asset: 2.00
