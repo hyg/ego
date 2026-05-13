@@ -1,0 +1,80 @@
+date: '20260513'
+mode: '1'
+plan: 1d
+time:
+  - begin: '20260513100000'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20260513101500'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20260513111500'
+    amount: 45
+    type: food
+    name: 午餐
+  - begin: '20260513120000'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20260513124500'
+    amount: 74
+    type: free
+    name: 休整
+  - begin: '20260513140000'
+    amount: 0
+    redo: 30
+    type: work
+    name: 静默工作
+    task: PSMD
+    todo: 整理闫岸家政能力讨论
+    readme:
+      - read ../../draft/2024/10/20241011.03.md
+      - read ../../draft/2024/10/20241021.01.md
+      - read ../../draft/2024/10/20241023.01.md
+      - read ../../draft/2024/10/20241031.02.md
+      - read ../../draft/2024/11/20241108.01.md
+      - read ../../draft/2024/11/20241110.01.md
+    output: ../../draft/2026/20260513.01.md
+    namelink: http://simp.ly/p/8t3vlk
+  - begin: '20260513143000'
+    amount: 0
+    redo: 30
+    type: work
+    name: 静默工作
+    task: ego
+    todo: 微观与宏观衔接的几篇论文
+    readme:
+      - read ../../draft/2026/20260403.02.md
+    output: ../../draft/2026/20260513.02.md
+    namelink: http://simp.ly/p/5k9gJy
+  - begin: '20260513150000'
+    amount: 60
+    type: free
+    name: 休整
+  - begin: '20260513160000'
+    amount: 0
+    redo: 60
+    type: work
+    name: 静默工作
+    task: infra
+    todo: 范例--利用js模块组合实现合同条款的组合。
+    readme:
+      - read ../../draft/2024/10/20241004.05.md
+      - read ../../draft/2025/20250503.03.md
+      - read ../../draft/2025/20250505.03.md
+      - read ../../draft/2025/20250606.01.md
+      - read ../../draft/2025/20250610.03.md
+      - read ../../draft/2025/20250613.02.md
+    output: ../../draft/2026/20260513.03.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20260513170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20260513190000'
+    amount: 5
+    type: check
+    name: 讨论、整理提交
+    output: ../../draft/2026/20260513.04.md
