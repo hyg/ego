@@ -1,0 +1,17 @@
+date: 2026-05-16
+VoucherID: 19260516112010042487773139136663
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: raw.supply
+      asset: rmb
+      amount: 11.46
+  credit:
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 11.46
+comment:
+  - name: 洗洁精
+    amount: 1500
+    unit: g
+    asset: 11.46
