@@ -1,0 +1,17 @@
+date: 2026-05-18
+VoucherID: 4200003056202605184932882496
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: raw.supply
+      asset: rmb
+      amount: 5.80
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 5.80
+comment:
+  - name: 消毒泡腾片
+    amount: 100
+    unit: g
+    asset: 5.80
