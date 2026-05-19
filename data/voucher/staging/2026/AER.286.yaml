@@ -1,0 +1,41 @@
+date: 2026-05-19
+VoucherID: 4500000179202605191117106198
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: raw.food
+      asset: rmb
+      amount: 43.42
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 43.42
+comment:
+  - name: 猪前腿肉
+    amount: 400
+    unit: g
+    asset: 10.90
+  - name: 带鱼
+    amount: 400
+    unit: g
+    asset: 18.90
+  - name: 西兰花
+    amount: 550
+    unit: g
+    asset: 4.50
+  - name: 菠菜
+    amount: 350
+    unit: g
+    asset: 1.85
+  - name: 油菜
+    amount: 500
+    unit: g
+    asset: 1.59
+  - name: 小白菜
+    amount: 300
+    unit: g
+    asset: 2.25
+  - name: 姜
+    amount: 400
+    unit: g
+    asset: 43.42
