@@ -1,0 +1,25 @@
+date: 2026-05-22
+VoucherID: 
+  - 2026052222001431991414056382
+  - 2026052222001431991410574254
+  - 2026052222001431991414049830
+  - 2026052222001431991413324115
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: raw.fun
+      asset: rmb
+      amount: 14.00
+  credit:
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 14.00
+comment:
+  - name: 公交
+    amount: 2
+    unit: 次
+    asset: 2.00
+  - name: 地铁
+    amount: 2
+    unit: 次
+    asset: 12.00
