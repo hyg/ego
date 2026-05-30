@@ -1,0 +1,17 @@
+date: 2026-05-30
+VoucherID: 4500000184202605301030901469
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: raw.site.bj1
+      asset: rmb
+      amount: 7.83
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 7.83
+comment:
+  - name: 管道疏通剂
+    amount: 210
+    unit: g
+    asset: 7.83
