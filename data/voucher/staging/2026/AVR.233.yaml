@@ -1,0 +1,12 @@
+date: 2026-05-31 19:50:48
+title: 微信支付账单
+VoucherID: 4500000197202605311621363234
+VoucherType: 交易单号
+amount: 6.26
+summary: 西兰花、圆白菜
+comment:
+  - name: 商户单号
+    value: 5863192033260531
+  - name: 订单号
+    value: 1000447675420
+

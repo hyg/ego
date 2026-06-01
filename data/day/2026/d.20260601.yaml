@@ -1,0 +1,36 @@
+date: '20260601'
+mode: '1'
+plan: 1f
+time:
+  - begin: '20260601125100'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20260601130600'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20260601140600'
+    amount: 45
+    type: food
+    name: 晚餐
+  - begin: '20260601145100'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20260601153600'
+    amount: 60
+    type: free
+    name: 休整
+  - begin: '20260601180000'
+    amount: 45
+    type: work
+    name: 静默工作
+    task: xuemen
+    todo: 月初事务
+    output: ../../draft/2026/20260601.a.md
+  - begin: '20260601163600'
+    amount: 10
+    type: check
+    name: 讨论、整理提交
+    output: ../../draft/2026/20260601.01.md
