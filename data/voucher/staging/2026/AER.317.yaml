@@ -1,0 +1,17 @@
+date: 2026-06-02
+VoucherID: 4500000207202606028764056368
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: raw.med
+      asset: rmb
+      amount: 2.92
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 2.92
+comment:
+  - name: 双氧水
+    amount: 100
+    unit: ml
+    asset: 2.92
