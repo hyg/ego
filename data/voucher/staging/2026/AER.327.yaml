@@ -1,21 +1,21 @@
-date: 2026-06-04
-VoucherID: 4500000231202606042776838044
+date: 2026-06-06
+VoucherID: 4500000227202606064067218206
 AccountingSoftwareID: 
 AccountingEntry:
   debit:
-    - AccountTitle: donation.parent
+    - AccountTitle: raw.food
       asset: rmb
-      amount: 27.96
+      amount: 47.32
   credit:
     - AccountTitle: 微信零钱
       asset: rmb
-      amount: 27.96
+      amount: 47.32
 comment:
-  - name: 糖丸西瓜
+  - name: 水蜜桃
+    amount: 1000
+    unit: g
+    asset: 30.20
+  - name: 红瑶蜜薯
     amount: 2000
     unit: g
-    asset: 13.98
-  - name: 羊角蜜
-    amount: 800
-    unit: g
-    asset: 13.98
+    asset: 17.12
