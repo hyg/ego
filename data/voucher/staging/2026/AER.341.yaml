@@ -1,0 +1,44 @@
+date: 2026-06-09
+VoucherID: 4500000196202606094501269294
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: raw.food
+      asset: rmb
+      amount: 39.66
+    - AccountTitle: raw.supply
+      asset: rmb
+      amount: 2.50
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 42.16
+comment:
+  - name: 小苏打
+    amount: 200
+    unit: g
+    asset: 2.50
+  - name: 诸老大酱香黑猪肉粽
+    amount: 200
+    unit: g
+    asset: 10.90
+  - name: 象大厨栗子鲜肉粽
+    amount: 260
+    unit: g
+    asset: 7.90
+  - name: 鸡腿
+    amount: 400
+    unit: g
+    asset: 12.50
+  - name: 西兰花
+    amount: 550
+    unit: g
+    asset: 4.49
+  - name: 油菜
+    amount: 500
+    unit: g
+    asset: 1.59
+  - name: 小白菜
+    amount: 300
+    unit: g
+    asset: 2.28
