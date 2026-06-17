@@ -1,0 +1,25 @@
+date: 2026-06-17
+VoucherID: 4500000230202606176844117056
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: raw.food
+      asset: rmb
+      amount: 112.47
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 112.47
+comment:
+  - name: 崂山蜜杏
+    amount: 2000
+    unit: g
+    asset: 50.21
+  - name: 百香果
+    amount: 1500
+    unit: g
+    asset: 23.73
+  - name: 太安1号大米
+    amount: 2500
+    unit: g
+    asset: 38.53
