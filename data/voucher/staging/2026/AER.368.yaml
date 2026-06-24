@@ -1,0 +1,32 @@
+date: 2026-06-24
+VoucherID: 19260624002000043754425170116143
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: raw.food
+      asset: rmb
+      amount: 23.39
+    - AccountTitle: raw.supply
+      asset: rmb
+      amount: 84.91
+  credit:
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 108.30
+comment:
+  - name: 亚麻籽粉
+    amount: 750
+    unit: g
+    asset: 23.39
+  - name: 汉麻浴巾
+    amount: 1
+    unit: 张
+    asset: 68.36
+  - name: 剃须刀
+    amount: 1
+    unit: 套
+    asset: 9.91
+  - name: 剃须啫喱
+    amount: 210
+    unit: ml
+    asset: 6.64
