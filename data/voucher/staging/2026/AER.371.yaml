@@ -1,0 +1,16 @@
+date: '20260623'
+VoucherID: ''
+AccountingEntry:
+  debit:
+    - AccountTitle: raw.food
+      asset: rmb
+      amount: 200
+  credit:
+    - AccountTitle: 现金
+      asset: rmb
+      amount: 200
+comment:
+  - name: 纯净水
+    amount: 245
+    unit: rmb
+    asset: 200
