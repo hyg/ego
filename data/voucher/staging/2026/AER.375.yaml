@@ -1,0 +1,17 @@
+date: 2026-06-27
+VoucherID: 4500000192202606274100916235
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: raw.supply
+      asset: rmb
+      amount: 12.48
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 12.48
+comment:
+  - name: 沐浴液
+    amount: 500
+    unit: ml
+    asset: 12.48
