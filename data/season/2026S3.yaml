@@ -1,0 +1,585 @@
+year: 2026
+season: 3
+beginmonth: 7
+beginday: 1
+lastmonth: 9
+lastday: 30
+pricing:
+  template_1: 1
+  template_2: 2
+allocation_principles:
+  - 有完成期限的task优先
+  - 按JT余额分配
+  - 交叉进行，避免小项目长期轮不到
+timetype:
+  - name: work
+  - name: free
+  - name: discuss
+  - name: learn
+  - name: prepare
+  - name: sleep
+  - name: food
+  - name: check
+map:
+  '1':
+    1a:
+      start: 0
+      end: 45959
+    1b:
+      start: 50000
+      end: 64459
+    1c:
+      start: 64500
+      end: 71459
+    1d:
+      start: 71500
+      end: 101459
+    1e:
+      start: 101500
+      end: 121459
+    1f:
+      start: 121500
+      end: 191459
+  '2':
+    2a:
+      start: 0
+      end: 45959
+    2b:
+      start: 50000
+      end: 64459
+    2c:
+      start: 64500
+      end: 81459
+dayplan:
+  2a:
+    timeslice:
+      '60': 1
+      '90': 1
+      '195': 1
+    time:
+      - amount: 15
+        type: free
+        name: 休整
+      - amount: 60
+        type: prepare
+        name: 备餐、运动
+      - amount: 45
+        type: food
+        name: 早餐
+      - amount: 45
+        type: discuss
+        name: 会议、自习
+      - endhour: 7
+        endminute: 44
+        type: free
+        name: 休整
+      - beginhour: 7
+        beginminute: 45
+        amount: 195
+        type: work
+        name: 工作
+        namelink: http://simp.ly/p/3GXNTh
+      - beginhour: 11
+        beginminute: 0
+        amount: 180
+        type: food
+        name: 备餐、午餐午休
+      - beginhour: 14
+        beginminute: 0
+        amount: 90
+        type: work
+        name: 工作
+        namelink: http://simp.ly/p/lsBYG9
+      - beginhour: 15
+        beginminute: 30
+        amount: 30
+        type: free
+        name: 休整
+      - beginhour: 16
+        beginminute: 0
+        amount: 60
+        type: work
+        name: 工作
+        namelink: http://simp.ly/p/MpcbHD
+      - beginhour: 17
+        beginminute: 0
+        amount: 120
+        type: food
+        name: 晚餐
+      - beginhour: 19
+        beginminute: 0
+        amount: 60
+        type: check
+        name: 讨论、整理提交
+    readme: 工作的同时可以在线讨论。
+  2b:
+    timeslice:
+      '60': 1
+      '90': 2
+    time:
+      - amount: 15
+        type: free
+        name: 休整
+      - amount: 60
+        type: prepare
+        name: 备餐、运动
+      - amount: 45
+        type: food
+        name: 早餐
+      - amount: 45
+        type: discuss
+        name: 会议、自习
+      - endhour: 9
+        endminute: 29
+        type: free
+        name: 休整
+      - beginhour: 9
+        beginminute: 30
+        amount: 90
+        type: work
+        name: 工作
+        namelink: http://simp.ly/p/WZ077p
+      - beginhour: 11
+        beginminute: 0
+        amount: 180
+        type: food
+        name: 备餐、午餐午休
+      - beginhour: 14
+        beginminute: 0
+        amount: 90
+        type: work
+        name: 工作
+        namelink: http://simp.ly/p/lsBYG9
+      - beginhour: 15
+        beginminute: 30
+        amount: 30
+        type: free
+        name: 休整
+      - beginhour: 16
+        beginminute: 0
+        amount: 60
+        type: work
+        name: 工作
+        namelink: http://simp.ly/p/MpcbHD
+      - beginhour: 17
+        beginminute: 0
+        amount: 120
+        type: food
+        name: 晚餐
+      - beginhour: 19
+        beginminute: 0
+        amount: 60
+        type: check
+        name: 讨论、整理提交
+    readme: 工作的同时可以在线讨论。
+  2c:
+    timeslice:
+      '60': 1
+      '90': 1
+    time:
+      - amount: 15
+        type: free
+        name: 休整
+      - amount: 60
+        type: prepare
+        name: 备餐、运动
+      - amount: 45
+        type: food
+        name: 早餐
+      - amount: 45
+        type: discuss
+        name: 会议、自习
+      - endhour: 10
+        endminute: 59
+        type: free
+        name: 休整
+      - beginhour: 11
+        beginminute: 0
+        amount: 180
+        type: food
+        name: 备餐、午餐午休
+      - beginhour: 14
+        beginminute: 0
+        amount: 90
+        type: work
+        name: 工作
+        namelink: http://simp.ly/p/lsBYG9
+      - beginhour: 15
+        beginminute: 30
+        amount: 30
+        type: free
+        name: 休整
+      - beginhour: 16
+        beginminute: 0
+        amount: 60
+        type: work
+        name: 工作
+        namelink: http://simp.ly/p/MpcbHD
+      - beginhour: 17
+        beginminute: 0
+        amount: 120
+        type: food
+        name: 晚餐
+      - beginhour: 19
+        beginminute: 0
+        amount: 60
+        type: check
+        name: 讨论、整理提交
+    readme: 工作的同时可以在线讨论。
+  1a:
+    timeslice:
+      '30': 2
+      '60': 2
+      '90': 1
+    time:
+      - amount: 15
+        type: free
+        name: 休整
+      - amount: 60
+        type: prepare
+        name: 备餐、运动
+      - amount: 45
+        type: food
+        name: 早餐
+      - amount: 45
+        type: discuss
+        name: 会议、自习
+      - endhour: 7
+        endminute: 44
+        type: free
+        name: 休整
+      - beginhour: 7
+        beginminute: 45
+        amount: 60
+        type: work
+        name: 静默工作
+        namelink: http://simp.ly/p/xtgD4F
+      - beginhour: 8
+        beginminute: 45
+        amount: 45
+        type: free
+        name: 休整
+      - beginhour: 9
+        beginminute: 30
+        amount: 90
+        type: work
+        name: 静默工作
+        namelink: http://simp.ly/p/j1SspP
+      - beginhour: 11
+        beginminute: 0
+        amount: 180
+        type: food
+        name: 备餐、午餐午休
+      - beginhour: 14
+        beginminute: 0
+        amount: 30
+        type: work
+        name: 静默工作
+        namelink: http://simp.ly/p/8t3vlk
+      - beginhour: 14
+        beginminute: 30
+        amount: 30
+        type: work
+        name: 静默工作
+        namelink: http://simp.ly/p/5k9gJy
+      - beginhour: 15
+        beginminute: 0
+        amount: 60
+        type: free
+        name: 休整
+      - beginhour: 16
+        beginminute: 0
+        amount: 60
+        type: work
+        name: 静默工作
+        namelink: http://simp.ly/p/4QDThK
+      - beginhour: 17
+        beginminute: 0
+        amount: 120
+        type: food
+        name: 晚餐
+      - beginhour: 19
+        beginminute: 0
+        amount: 60
+        type: check
+        name: 讨论、整理提交
+    readme: 模版一采用静默工作方式。 希望讨论的提纲发到 [huangyg@mars22.com](mailto:huangyg@mars22.com)，通常安排在后面某天的早餐或会议自习时间。
+  1b:
+    timeslice:
+      '30': 2
+      '60': 1
+      '90': 1
+    time:
+      - amount: 15
+        type: free
+        name: 休整
+      - amount: 60
+        type: prepare
+        name: 备餐、运动
+      - amount: 45
+        type: food
+        name: 早餐
+      - amount: 45
+        type: discuss
+        name: 会议、自习
+      - endhour: 9
+        endminute: 29
+        type: free
+        name: 休整
+      - beginhour: 9
+        beginminute: 30
+        amount: 90
+        type: work
+        name: 静默工作
+        namelink: http://simp.ly/p/j1SspP
+      - beginhour: 11
+        beginminute: 0
+        amount: 180
+        type: food
+        name: 备餐、午餐午休
+      - beginhour: 14
+        beginminute: 0
+        amount: 30
+        type: work
+        name: 静默工作
+        namelink: http://simp.ly/p/8t3vlk
+      - beginhour: 14
+        beginminute: 30
+        amount: 30
+        type: work
+        name: 静默工作
+        namelink: http://simp.ly/p/5k9gJy
+      - beginhour: 15
+        beginminute: 0
+        amount: 60
+        type: free
+        name: 休整
+      - beginhour: 16
+        beginminute: 0
+        amount: 60
+        type: work
+        name: 静默工作
+        namelink: http://simp.ly/p/4QDThK
+      - beginhour: 17
+        beginminute: 0
+        amount: 120
+        type: food
+        name: 晚餐
+      - beginhour: 19
+        beginminute: 0
+        amount: 60
+        type: check
+        name: 讨论、整理提交
+    readme: 模版一采用静默工作方式。 希望讨论的提纲发到 [huangyg@mars22.com](mailto:huangyg@mars22.com)，通常安排在后面某天的早餐或会议自习时间。
+  1c:
+    timeslice:
+      '30': 2
+      '60': 1
+    time:
+      - amount: 15
+        type: free
+        name: 休整
+      - amount: 60
+        type: prepare
+        name: 备餐、运动
+      - amount: 45
+        type: food
+        name: 早餐
+      - amount: 45
+        type: discuss
+        name: 会议、自习
+      - endhour: 10
+        endminute: 59
+        type: free
+        name: 休整
+      - beginhour: 11
+        beginminute: 0
+        amount: 180
+        type: food
+        name: 备餐、午餐午休
+      - beginhour: 14
+        beginminute: 0
+        amount: 30
+        type: work
+        name: 静默工作
+        namelink: http://simp.ly/p/8t3vlk
+      - beginhour: 14
+        beginminute: 30
+        amount: 30
+        type: work
+        name: 静默工作
+        namelink: http://simp.ly/p/5k9gJy
+      - beginhour: 15
+        beginminute: 0
+        amount: 60
+        type: free
+        name: 休整
+      - beginhour: 16
+        beginminute: 0
+        amount: 60
+        type: work
+        name: 静默工作
+        namelink: http://simp.ly/p/4QDThK
+      - beginhour: 17
+        beginminute: 0
+        amount: 120
+        type: food
+        name: 晚餐
+      - beginhour: 19
+        beginminute: 0
+        amount: 60
+        type: check
+        name: 讨论、整理提交
+    readme: 模版一采用静默工作方式。 希望讨论的提纲发到 [huangyg@mars22.com](mailto:huangyg@mars22.com)，通常安排在后面某天的早餐或会议自习时间。
+  1d:
+    timeslice:
+      '30': 2
+      '60': 1
+    time:
+      - amount: 15
+        type: free
+        name: 休整
+      - amount: 60
+        type: prepare
+        name: 备餐、运动
+      - amount: 45
+        type: food
+        name: 午餐
+      - amount: 45
+        type: discuss
+        name: 会议、自习
+      - endhour: 13
+        endminute: 59
+        type: free
+        name: 休整
+      - beginhour: 14
+        beginminute: 0
+        amount: 30
+        type: work
+        name: 静默工作
+        namelink: http://simp.ly/p/8t3vlk
+      - beginhour: 14
+        beginminute: 30
+        amount: 30
+        type: work
+        name: 静默工作
+        namelink: http://simp.ly/p/5k9gJy
+      - beginhour: 15
+        beginminute: 0
+        amount: 60
+        type: free
+        name: 休整
+      - beginhour: 16
+        beginminute: 0
+        amount: 60
+        type: work
+        name: 静默工作
+        namelink: http://simp.ly/p/4QDThK
+      - beginhour: 17
+        beginminute: 0
+        amount: 120
+        type: food
+        name: 晚餐
+      - beginhour: 19
+        beginminute: 0
+        amount: 60
+        type: check
+        name: 讨论、整理提交
+    readme: 模版一采用静默工作方式。 希望讨论的提纲发到 [huangyg@mars22.com](mailto:huangyg@mars22.com)，通常安排在后面某天的早餐或会议自习时间。
+  1e:
+    timeslice:
+      '60': 1
+    time:
+      - amount: 15
+        type: free
+        name: 休整
+      - amount: 60
+        type: prepare
+        name: 备餐、运动
+      - amount: 45
+        type: food
+        name: 午餐
+      - amount: 45
+        type: discuss
+        name: 会议、自习
+      - endhour: 15
+        endminute: 59
+        type: free
+        name: 休整
+      - beginhour: 16
+        beginminute: 0
+        amount: 60
+        type: work
+        name: 静默工作
+        namelink: http://simp.ly/p/4QDThK
+      - beginhour: 17
+        beginminute: 0
+        amount: 120
+        type: food
+        name: 晚餐
+      - beginhour: 19
+        beginminute: 0
+        amount: 60
+        type: check
+        name: 讨论、整理提交
+    readme: 模版一采用静默工作方式。 希望讨论的提纲发到 [huangyg@mars22.com](mailto:huangyg@mars22.com)，通常安排在后面某天的早餐或会议自习时间。
+  1f:
+    time:
+      - amount: 15
+        type: free
+        name: 休整
+      - amount: 60
+        type: prepare
+        name: 备餐、运动
+      - amount: 45
+        type: food
+        name: 晚餐
+      - amount: 45
+        type: discuss
+        name: 会议、自习
+      - amount: 60
+        type: free
+        name: 休整
+      - amount: 60
+        type: check
+        name: 讨论、整理提交
+    readme: 模版一采用静默工作方式。 希望讨论的提纲发到 [huangyg@mars22.com](mailto:huangyg@mars22.com)，通常安排在后面某天的早餐或会议自习时间。
+time:
+  mode:
+    '1': 41
+    '2': 20
+  plan:
+    1a: 12
+    1b: 12
+    1c: 8
+    1d: 8
+    1e: 1
+    1f: 0
+    2a: 12
+    2b: 5
+    2c: 3
+  timeslice:
+    '30': 80
+    '60': 73
+    '90': 49
+    '195': 12
+  timesum: 13530
+  alloc:
+    PSMD: 4000
+    ego: 2530
+    infra: 2000
+    xuemen: 1000
+    raw: 1000
+    learn: 2000
+    js: 1000
+  sold: {}
+jt:
+  sum: 18040
+  alloc:
+    PSMD: 5500
+    ego: 4540
+    infra: 3000
+    xuemen: 1000
+    raw: 1000
+    learn: 2000
+    js: 1000

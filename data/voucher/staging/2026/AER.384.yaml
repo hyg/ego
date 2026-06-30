@@ -1,0 +1,17 @@
+date: 2026-06-30
+VoucherID: 4500000301202606306615216401
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: donation.parent
+      asset: rmb
+      amount: 31.84
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 31.84
+comment:
+  - name: 蒙阴桃子盲盒
+    amount: 2250
+    unit: g
+    asset: 31.84
