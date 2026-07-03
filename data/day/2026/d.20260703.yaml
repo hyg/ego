@@ -1,0 +1,29 @@
+date: '20260703'
+mode: '1'
+plan: 1f
+time:
+  - begin: '20260703155200'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20260703160700'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20260703170700'
+    amount: 45
+    type: food
+    name: 晚餐
+  - begin: '20260703175200'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20260703183700'
+    amount: 60
+    type: free
+    name: 休整
+  - begin: '20260703193700'
+    amount: 30
+    type: check
+    name: 讨论、整理提交
+    output: ../../draft/2026/20260703.01.md
