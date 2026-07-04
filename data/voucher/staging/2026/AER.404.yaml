@@ -1,0 +1,21 @@
+date: 2026-07-04
+VoucherID: 4500000273202607041150286554
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: donation.parent
+      asset: rmb
+      amount: 73.71
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 73.71
+comment:
+  - name: 麦胚芽
+    amount: 2400
+    unit: g
+    asset: 34.91
+  - name: 糯玉米碴子
+    amount: 2500
+    unit: g
+    asset: 38.8
