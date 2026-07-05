@@ -1,0 +1,19 @@
+date: 2026-07-04
+VoucherID: 
+  - 1000050001202607040525421023271
+  - 1000050001202607040522788624888
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: donation.parent
+      asset: rmb
+      amount: 90.00
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 90.00
+comment:
+  - name: 蜂糖李
+    amount: 1500
+    unit: g
+    asset: 90.00
