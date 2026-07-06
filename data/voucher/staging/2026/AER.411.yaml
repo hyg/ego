@@ -1,0 +1,17 @@
+date: 2026-07-06
+VoucherID: 4500000265202607061231910602
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: donation.parent
+      asset: rmb
+      amount: 43.90
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 43.90
+comment:
+  - name: 荷兰香蜜杏
+    amount: 2000
+    unit: g
+    asset: 43.90
