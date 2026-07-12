@@ -1,0 +1,17 @@
+date: 2026-07-12
+VoucherID: 4500000255202607129821067973
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: raw.site.bj1
+      asset: rmb
+      amount: 3.18
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 3.18
+comment:
+  - name: 吊顶吸盘
+    amount: 1
+    unit: 个
+    asset: 3.18

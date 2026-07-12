@@ -1,0 +1,23 @@
+date: 2026-07-12
+VoucherID: 
+  - 4500000307202607123920877806
+  - 4500000251202607129292804698
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: raw.site.bj1
+      asset: rmb
+      amount: 553.9
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 553.90
+comment:
+  - name: 百亿补贴升级券
+    amount: 68
+    unit: unknown
+    asset: 68.00
+  - name: 智能马桶盖
+    amount: 485.9
+    unit: unknown
+    asset: 485.90
