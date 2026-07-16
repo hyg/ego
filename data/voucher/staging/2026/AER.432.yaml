@@ -4,25 +4,25 @@ AccountingEntry:
   debit:
     - AccountTitle: ego
       asset: time
-      amount: 20
+      amount: 10
     - AccountTitle: raw
       asset: token
-      amount: 20
+      amount: 10
     - AccountTitle: ego
       asset: artifact.draft
       amount: 1
   credit:
     - AccountTitle: raw
       asset: time
-      amount: 20
+      amount: 10
     - AccountTitle: ego
       asset: token
-      amount: 20
+      amount: 10
     - AccountTitle: ego
       asset: time
-      amount: 20
+      amount: 10
 comment:
   - type: check
-    token: 20
-    artifact: ../../draft/2026/20260715.01.md
+    token: 10
+    artifact: ../../draft/2026/20260716.01.md
 sourceDate: ''
