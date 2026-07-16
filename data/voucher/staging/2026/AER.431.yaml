@@ -1,0 +1,17 @@
+date: 2026-07-15
+VoucherID: 2001022607150202407629329827
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: donation.parent
+      asset: rmb
+      amount: 147.00
+  credit:
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 147.00
+comment:
+  - name: 巨进二号
+    amount: 2500
+    unit: g
+    asset: 147.00

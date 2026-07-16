@@ -1,0 +1,21 @@
+date: 2026-07-15
+VoucherID: 4500000297202607159049473232
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: donation.parent
+      asset: rmb
+      amount: 65.54
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 65.54
+comment:
+  - name: 民勤蜜瓜
+    amount: 4000
+    unit: g
+    asset: 28.9
+  - name: 中油蟠7号
+    amount: 2250
+    unit: g
+    asset: 36.64
