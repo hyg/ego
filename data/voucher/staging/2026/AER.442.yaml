@@ -1,0 +1,17 @@
+date: 2026-07-20
+VoucherID: 4200003150202607204412097519
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: donation.parent
+      asset: rmb
+      amount: 49.65
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 49.65
+comment:
+  - name: 硒片
+    amount: 250
+    unit: 片
+    asset: 49.65
