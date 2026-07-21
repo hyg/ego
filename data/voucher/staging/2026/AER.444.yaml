@@ -1,0 +1,17 @@
+date: 2026-07-21
+VoucherID: 4200003140202607210196579578
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: donation.parent
+      asset: rmb
+      amount: 130.95
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 130.95
+comment:
+  - name: 复合维生素
+    amount: 400
+    unit: 片
+    asset: 130.95
