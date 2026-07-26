@@ -243,8 +243,19 @@ todos:
     status: pending
     time_slices: []
     history_drafts: []
+  - name: 在线游戏：《权力和信息.基于既成事实博弈》
+    status: pending
+    amount: 60
+    time_slices:
+      - date: '20260726'
+        amount: 30
+        template: 1f
+        token_cost: 30
+        draft: 2026/20260726.a.md
+    history_drafts:
+      - 2026/20260726.a.md
 derivation:
   source: null
   type: null
   trigger: null
-token_balance: 4360
+token_balance: 4330

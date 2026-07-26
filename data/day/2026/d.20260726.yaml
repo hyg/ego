@@ -1,0 +1,39 @@
+date: '20260726'
+mode: '1'
+plan: 1f
+time:
+  - begin: '20260726171000'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20260726172500'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20260726182500'
+    amount: 45
+    type: food
+    name: 晚餐
+  - begin: '20260726191000'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20260726195500'
+    amount: 60
+    type: free
+    name: 休整
+  - begin: '20260726220000'
+    amount: 30
+    redo: 60
+    type: work
+    name: 静默工作
+    task: PSMD
+    todo: 在线游戏：《权力和信息.基于既成事实博弈》
+    output: ../../draft/2026/20260726.a.md
+    readme:
+      - read ../../draft/2026/20260724.a.md
+  - begin: '20260726205500'
+    amount: 30
+    type: check
+    name: 讨论、整理提交
+    output: ../../draft/2026/20260726.01.md
