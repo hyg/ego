@@ -247,12 +247,18 @@ todos:
     status: pending
     amount: 60
     time_slices:
+      - date: '20260724'
+        amount: 60
+        template: 1f
+        token_cost: 60
+        draft: 2026/20260724.a.md
       - date: '20260726'
         amount: 30
         template: 1f
         token_cost: 30
         draft: 2026/20260726.a.md
     history_drafts:
+      - 2026/20260724.a.md
       - 2026/20260726.a.md
 derivation:
   source: null
