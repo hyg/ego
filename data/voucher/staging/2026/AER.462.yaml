@@ -1,0 +1,31 @@
+date: '20260728'
+VoucherID: ''
+AccountingEntry:
+  debit:
+    - AccountTitle: PSMD
+      asset: time
+      amount: 30
+    - AccountTitle: raw
+      asset: token
+      amount: 30
+    - AccountTitle: PSMD
+      asset: artifact.draft
+      amount: 1
+  credit:
+    - AccountTitle: raw
+      asset: time
+      amount: 30
+    - AccountTitle: PSMD
+      asset: token
+      amount: 30
+    - AccountTitle: PSMD
+      asset: time
+      amount: 30
+comment:
+  - type: work
+    task: PSMD
+    todo: 在线游戏：《权力和信息.基于既成事实博弈》
+    time: 30
+    token: 30
+    artifact: ../../draft/2026/20260728.a.md
+sourceDate: ''

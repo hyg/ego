@@ -257,11 +257,17 @@ todos:
         template: 1f
         token_cost: 30
         draft: 2026/20260726.a.md
+      - date: '20260728'
+        amount: 30
+        template: 1f
+        token_cost: 30
+        draft: 2026/20260728.a.md
     history_drafts:
       - 2026/20260724.a.md
       - 2026/20260726.a.md
+      - 2026/20260728.a.md
 derivation:
   source: null
   type: null
   trigger: null
-token_balance: 4330
+token_balance: 4300
