@@ -72,8 +72,14 @@ todos:
         template: 2a
         token_cost: 390
         draft: 2026/20260213.01.md
+      - date: '20260803'
+        amount: 195
+        template: 2a
+        token_cost: 390
+        draft: 2026/20260803.01.md
     history_drafts:
       - 2026/20260213.01.md
+      - 2026/20260803.01.md
   - name: 会话skill套装设计
     amount: 195
     status: pending
@@ -270,4 +276,4 @@ derivation:
   source: null
   type: null
   trigger: null
-token_balance: 4300
+token_balance: 3910
