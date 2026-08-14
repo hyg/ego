@@ -1,0 +1,17 @@
+date: 2026-08-14
+VoucherID: 4500000328202608148962418928
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: ego.it
+      asset: rmb
+      amount: 10.00
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 10.00
+comment:
+  - name: deepseek充值
+    amount: 10
+    unit: rmb
+    asset: 10.00
