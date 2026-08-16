@@ -19,7 +19,7 @@ children:
   - id: xuemen
   - id: learn
   - id: js
-token_balance: 3240
+token_balance: 2850
 todos:
   - name: JT的发行和回收
     amount: 60
@@ -201,6 +201,17 @@ todos:
     status: pending
     time_slices: []
     history_drafts: []
+  - name: 节点软件
+    status: pending
+    amount: 195
+    time_slices:
+      - date: '20260815'
+        amount: 195
+        template: 2a
+        token_cost: 390
+        draft: 2026/20260815.a.md
+    history_drafts:
+      - 2026/20260815.a.md
 derivation:
   source: null
   type: null

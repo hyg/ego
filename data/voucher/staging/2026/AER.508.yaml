@@ -1,0 +1,31 @@
+date: '20260815'
+VoucherID: ''
+AccountingEntry:
+  debit:
+    - AccountTitle: ego
+      asset: time
+      amount: 195
+    - AccountTitle: raw
+      asset: token
+      amount: 390
+    - AccountTitle: ego
+      asset: artifact.draft
+      amount: 1
+  credit:
+    - AccountTitle: raw
+      asset: time
+      amount: 195
+    - AccountTitle: ego
+      asset: token
+      amount: 390
+    - AccountTitle: ego
+      asset: time
+      amount: 195
+comment:
+  - type: work
+    task: ego
+    todo: 节点软件
+    time: 195
+    token: 390
+    artifact: ../../draft/2026/20260815.a.md
+sourceDate: ''

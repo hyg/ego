@@ -1,0 +1,17 @@
+date: 2026-08-16
+VoucherID: 4200003181202608162292816456
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: raw.med
+      asset: rmb
+      amount: 47.30
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 47.30
+comment:
+  - name: 硒片
+    amount: 250
+    unit: 片
+    asset: 47.30
