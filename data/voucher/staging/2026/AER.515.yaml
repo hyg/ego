@@ -2,30 +2,27 @@ date: '20260817'
 VoucherID: ''
 AccountingEntry:
   debit:
-    - AccountTitle: PSMD
+    - AccountTitle: ego
       asset: time
-      amount: 195
+      amount: 60
     - AccountTitle: raw
       asset: token
-      amount: 390
-    - AccountTitle: PSMD
+      amount: 120
+    - AccountTitle: ego
       asset: artifact.draft
       amount: 1
   credit:
     - AccountTitle: raw
       asset: time
-      amount: 195
-    - AccountTitle: PSMD
+      amount: 60
+    - AccountTitle: ego
       asset: token
-      amount: 390
-    - AccountTitle: PSMD
+      amount: 120
+    - AccountTitle: ego
       asset: time
-      amount: 195
+      amount: 60
 comment:
-  - type: work
-    task: PSMD
-    todo: term + COM matedata -> deploy metadata -> deploy view
-    time: 195
-    token: 390
-    artifact: ../../draft/2026/20260817.01.md
+  - type: check
+    token: 120
+    artifact: ../../draft/2026/20260817.04.md
 sourceDate: ''
