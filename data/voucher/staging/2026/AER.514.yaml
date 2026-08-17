@@ -1,0 +1,17 @@
+date: 2026-08-18
+VoucherID: 4500000343202608188326892534
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: raw.food
+      asset: rmb
+      amount: 0.10
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 0.10
+comment:
+  - name: 拼多多会员
+    amount: 3
+    unit: 月
+    asset: 0.10

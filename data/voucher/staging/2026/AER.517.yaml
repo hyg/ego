@@ -1,0 +1,31 @@
+date: '20260817'
+VoucherID: ''
+AccountingEntry:
+  debit:
+    - AccountTitle: infra
+      asset: time
+      amount: 60
+    - AccountTitle: raw
+      asset: token
+      amount: 120
+    - AccountTitle: infra
+      asset: artifact.draft
+      amount: 1
+  credit:
+    - AccountTitle: raw
+      asset: time
+      amount: 60
+    - AccountTitle: infra
+      asset: token
+      amount: 120
+    - AccountTitle: infra
+      asset: time
+      amount: 60
+comment:
+  - type: work
+    task: infra
+    todo: 范例--利用js模块组合实现合同条款的组合。
+    time: 60
+    token: 120
+    artifact: ../../draft/2026/20260817.03.md
+sourceDate: ''

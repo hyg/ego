@@ -63,11 +63,13 @@ module.exports = {
                         //log("file:",file);
                         let dayobj = yaml.load(fs.readFileSync(daymetadatapath + file, 'utf8', { schema: yaml.FAILSAFE_SCHEMA }));
                         for (let tid in dayobj.time) {
-                            if (dayobj.time[tid].subject != null) {
-                                if (sold[dayobj.time[tid].subject] != null) {
-                                    sold[dayobj.time[tid].subject] = sold[dayobj.time[tid].subject] + dayobj.time[tid].amount;
+                            // 支持新旧格式：新格式用task，旧格式用subject
+                            const subject = dayobj.time[tid].task || dayobj.time[tid].subject;
+                            if (subject != null) {
+                                if (sold[subject] != null) {
+                                    sold[subject] = sold[subject] + dayobj.time[tid].amount;
                                 } else {
-                                    sold[dayobj.time[tid].subject] = dayobj.time[tid].amount;
+                                    sold[subject] = dayobj.time[tid].amount;
                                 }
                             }
                         }

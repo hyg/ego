@@ -19,7 +19,7 @@ children:
   - id: xuemen
   - id: learn
   - id: js
-token_balance: 2850
+token_balance: 2670
 todos:
   - name: JT的发行和回收
     amount: 60

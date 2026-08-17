@@ -572,7 +572,10 @@ time:
     raw: 1000
     learn: 2000
     js: 1000
-  sold: {}
+  sold:
+    PSMD: 705
+    ego: 375
+    infra: 120
 jt:
   sum: 18040
   alloc:
