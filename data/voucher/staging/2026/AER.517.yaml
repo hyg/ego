@@ -1,0 +1,21 @@
+date: 2026-08-18
+VoucherID: 4500000343202608188326892534
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: donation.parent
+      asset: rmb
+      amount: 85.42
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 85.42
+comment:
+  - name: 菇娘
+    amount: 2250
+    unit: g
+    asset: 53.3
+  - name: 人参果
+    amount: 4000
+    unit: g
+    asset: 32.12

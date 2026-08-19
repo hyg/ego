@@ -573,9 +573,9 @@ time:
     learn: 2000
     js: 1000
   sold:
-    PSMD: 705
-    ego: 375
-    infra: 120
+    PSMD: 510
+    ego: 285
+    infra: 60
 jt:
   sum: 18040
   alloc:
