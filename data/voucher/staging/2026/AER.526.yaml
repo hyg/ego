@@ -1,0 +1,31 @@
+date: '20260822'
+VoucherID: ''
+AccountingEntry:
+  debit:
+    - AccountTitle: PSMD
+      asset: time
+      amount: 195
+    - AccountTitle: raw
+      asset: token
+      amount: 390
+    - AccountTitle: PSMD
+      asset: artifact.draft
+      amount: 1
+  credit:
+    - AccountTitle: raw
+      asset: time
+      amount: 195
+    - AccountTitle: PSMD
+      asset: token
+      amount: 390
+    - AccountTitle: PSMD
+      asset: time
+      amount: 195
+comment:
+  - type: work
+    task: PSMD
+    todo: 消费者自主健康管理平台创业召集通知
+    time: 195
+    token: 390
+    artifact: ../../draft/2026/20260822.a.md
+sourceDate: ''
