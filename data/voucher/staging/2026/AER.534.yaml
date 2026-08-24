@@ -1,0 +1,17 @@
+date: 2026-08-24
+VoucherID: 4500000379202608249231913380
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: donation.parent
+      asset: rmb
+      amount: 64.60
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 64.60
+comment:
+  - name: 小分子肽
+    amount: 90
+    unit: g
+    asset: 64.60

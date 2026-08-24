@@ -1,0 +1,17 @@
+date: 2026-08-24
+VoucherID: 2026082423001831991417119168
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: donation.parent
+      asset: rmb
+      amount: 76.00
+  credit:
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 76.00
+comment:
+  - name: 益生菌
+    amount: 16
+    unit: 盒
+    asset: 76.00
