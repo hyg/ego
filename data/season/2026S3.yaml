@@ -573,7 +573,7 @@ time:
     learn: 2000
     js: 1000
   sold:
-    PSMD: 705
+    PSMD: 795
     ego: 285
     infra: 60
 jt:
