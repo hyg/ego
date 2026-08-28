@@ -1,0 +1,38 @@
+date: 2026-08-28
+VoucherID: 
+  - 2026082823001431991433732010
+  - 2026082823001431991440141885
+  - 2026082823001431991433887627
+  - 2026082823001431991433887677
+  - 2026082823001431991440189250
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: raw.med
+      asset: rmb
+      amount: 17.60
+  credit:
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 17.60
+comment:
+  - name: 公交车
+    amount: 1
+    unit: 次
+    asset: 0.45
+  - name: 公交车
+    amount: 1
+    unit: 次
+    asset: 1.00
+  - name: 地铁
+    amount: 1
+    unit: 次
+    asset: 5.73
+  - name: 地铁
+    amount: 1
+    unit: 次
+    asset: 4.71
+  - name: 地铁
+    amount: 1
+    unit: 次
+    asset: 5.71

@@ -1,0 +1,11 @@
+date: 2026-08-28 14:16:27
+title: 微信支付账单
+VoucherID: 4200003237202608281397704440
+VoucherType: 交易单号
+amount: 43
+summary: 烧鹅叉烧饭
+comment:
+  - name: 商户单号
+    value: 可在支持的商户扫码退款
+  - name: 美团订单
+    value: 909700216494680964
