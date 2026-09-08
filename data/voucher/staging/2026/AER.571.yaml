@@ -1,0 +1,37 @@
+date: 2026-09-08
+VoucherID: 2026090823001131991415498202
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: raw.food
+      asset: rmb
+      amount: 11.66
+  credit:
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 11.66
+comment:
+  - name: 油菜
+    amount: 350
+    unit: g
+    asset: 0.84
+  - name: 小白菜
+    amount: 300
+    unit: g
+    asset: 0.62
+  - name: 快菜
+    amount: 350
+    unit: g
+    asset: 0.62
+  - name: 鸡蛋
+    amount: 520
+    unit: g
+    asset: 3.38
+  - name: 包装
+    amount: 1
+    unit: 个
+    asset: 1.2
+  - name: 运费
+    amount: 1
+    unit: 次
+    asset: 5.00
