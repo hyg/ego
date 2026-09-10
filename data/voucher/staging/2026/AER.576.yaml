@@ -1,0 +1,17 @@
+date: 2026-09-10
+VoucherID: 4500000364202609107253285765
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: raw.food
+      asset: rmb
+      amount: 109.90
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 109.90
+comment:
+  - name: 牛腿肉
+    amount: 2000
+    unit: g
+    asset: 109.90
