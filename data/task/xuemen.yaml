@@ -37,3 +37,47 @@ todos:
     status: pending
     time_slices: []
     history_drafts: []
+  - name: 季初事务
+    status: pending
+    amount: 0
+    time_slices:
+      - date: '20260413'
+        amount: 55
+        template: 1d
+        token_cost: 110
+        draft: 2026/20260413.a.md
+    history_drafts:
+      - 2026/20260413.a.md
+  - name: 月初事务性工作
+    status: pending
+    amount: 0
+    time_slices:
+      - date: '20260501'
+        amount: 30
+        template: 2b
+        token_cost: 60
+        draft: 2026/20260501.a.md
+    history_drafts:
+      - 2026/20260501.a.md
+  - name: 购买和配置新服务器
+    status: pending
+    amount: 0
+    time_slices:
+      - date: '20260506'
+        amount: 400
+        template: 2c
+        token_cost: 800
+        draft: 2026/20260506.a.md
+    history_drafts:
+      - 2026/20260506.a.md
+  - name: 月初事务
+    status: pending
+    amount: 0
+    time_slices:
+      - date: '20260601'
+        amount: 45
+        template: 1f
+        token_cost: 90
+        draft: 2026/20260601.a.md
+    history_drafts:
+      - 2026/20260601.a.md

@@ -188,6 +188,18 @@ module.exports = {
             });
         }
         
+        // amount=0时：仅更新 status/amount，不生成财务分录，不追加 time_slice/history_draft
+        if (actualTime == 0) {
+            result.actions.push({
+                type: 'writeback_todo',
+                task_id: taskId,
+                todo_name: todoName,
+                amount: redoEstimate || 0,
+                isCompleted: isCompleted,
+                actualTime: 0
+            });
+        }
+        
         return result;
     },
     
@@ -198,7 +210,13 @@ module.exports = {
         let totalArtifacts = 0;
         
         for (const timeSlice of dayobj.time) {
-            // 跳过amount==0的时间片（未完成且无实际工作）
+            // amount=0 的 work/check 时间片：仍需生成 writeback_todo action（更新 status）
+            if (timeSlice.amount == 0 && (timeSlice.type === 'work' || timeSlice.type === 'check')) {
+                const result = this.parseTimeSlice(timeSlice, dayobj.date, dayobj.plan);
+                results.push(result);
+                continue;
+            }
+            
             if (timeSlice.amount == 0) {
                 continue;
             }

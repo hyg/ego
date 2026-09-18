@@ -41,7 +41,12 @@ todos:
   - name: 范例--利用js模块组合实现合同条款的组合。
     amount: 60
     status: pending
-    time_slices: []
+    time_slices:
+      - date: '20260808'
+        amount: 60
+        template: 2a
+        token_cost: 120
+        draft: 2026/20260808.03.md
     history_drafts:
       - 2024/10/20241004.05.md
       - 2025/20250503.03.md
@@ -49,6 +54,7 @@ todos:
       - 2025/20250606.01.md
       - 2025/20250610.03.md
       - 2025/20250613.02.md
+      - 2026/20260808.03.md
   - name: 整理fsm、psm的split、joint操作。
     amount: 30
     status: pending
@@ -78,3 +84,8 @@ todos:
       - 2024/10/20241002.02.md
       - 2024/10/20241003.03.md
       - 2024/10/20241004.01.md
+  - name: 范例--利用js模块组合实现合同条款的组合逻辑
+    status: in_progress
+    amount: 60
+    time_slices: []
+    history_drafts: []

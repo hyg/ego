@@ -30,11 +30,24 @@ todos:
         template: 2c
         token_cost: 120
         draft: ../../draft/2026/20260402.02.md
+      - date: '20260402'
+        amount: 60
+        template: 2c
+        token_cost: 120
+        draft: 2026/20260402.02.md
     history_drafts:
       - 2026/20260402.02.md
   - name: 整理edgeone、cnb、gitee的发布通道
     amount: 60
     status: pending
+    time_slices:
+      - date: '20260401'
+        amount: 370
+        template: 1e
+        token_cost: 740
+        draft: 2026/20260401.a.md
+    history_drafts:
+      - 2026/20260401.a.md
   - name: task派生和分发
     amount: 60
     status: pending
@@ -60,7 +73,7 @@ todos:
       - 2025/20250613.a.md
   - name: 微观与宏观衔接的几篇论文
     amount: 30
-    status: pending
+    status: in_progress
     time_slices:
       - date: '20260403'
         amount: 45
@@ -72,8 +85,14 @@ todos:
   - name: 新版实时手稿
     amount: 90
     status: pending
-    time_slices: []
-    history_drafts: []
+    time_slices:
+      - date: '20260808'
+        amount: 90
+        template: 2a
+        token_cost: 180
+        draft: 2026/20260808.02.md
+    history_drafts:
+      - 2026/20260808.02.md
   - name: 新版本任务、子任务的数据结构
     amount: 90
     status: pending

@@ -2,6 +2,7 @@ const fs = require('fs');
 const yaml = require('js-yaml');
 const path = require('path');
 const journal = require('./journal.js');
+const taskModule = require('./task.js');
 
 const args = process.argv.slice(2);
 const task = args.find(a => a.startsWith('--task='))?.split('=')[1] || 'scan';
@@ -451,6 +452,121 @@ if (task === 'fix') {
     console.log(`  补录 aer 字段（从索引匹配）: ${matched} 个`);
     console.log(`  写入 aer: null: ${nullAer} 个`);
     console.log(`  生成新 AER: ${generated} 个`);
+    
+    console.log(`\n=== 执行完成 ===\n`);
+}
+
+// ========== fix-task 模式：补录 task 文件中缺失的 time_slices 和 history_drafts ==========
+if (task === 'fix-task') {
+    console.log(`\n=== fix.js 补录 task 元数据 (${year}) ===\n`);
+    
+    const taskDir = path.join(dataRoot, 'task');
+    const taskFiles = fs.readdirSync(taskDir).filter(f => f.endsWith('.yaml'));
+    
+    // 扫描所有 day 文件，建立 task/todo → time_slices 映射
+    const dayFiles = fs.readdirSync(dayDir).filter(f => f.startsWith('d.') && f.endsWith('.yaml'));
+    const taskTodoSlices = {};  // { taskName: { todoName: [{ date, amount, template, token_cost, draft }] } }
+    
+    for (const f of dayFiles) {
+        const dateStr = f.replace('d.', '').replace('.yaml', '');
+        const dayobj = loadDayFile(dateStr);
+        if (!dayobj || !dayobj.time) continue;
+        
+        for (const ts of dayobj.time) {
+            if (ts.amount > 0 && ts.task && ts.todo && ts.output) {
+                if (!taskTodoSlices[ts.task]) taskTodoSlices[ts.task] = {};
+                if (!taskTodoSlices[ts.task][ts.todo]) taskTodoSlices[ts.task][ts.todo] = [];
+                
+                // 规范化 draft 路径
+                let draftPath = ts.output;
+                if (draftPath.startsWith('../../draft/')) {
+                    draftPath = draftPath.substring('../../draft/'.length);
+                }
+                
+                taskTodoSlices[ts.task][ts.todo].push({
+                    date: dateStr,
+                    amount: ts.amount,
+                    template: dayobj.plan || '1d',
+                    token_cost: ts.amount * 2,  // 默认 template_2
+                    draft: draftPath
+                });
+            }
+        }
+    }
+    
+    // 扫描 task 文件，补录缺失的 time_slices 和 history_drafts
+    let fixedTasks = 0;
+    let fixedSlices = 0;
+    let fixedDrafts = 0;
+    let createdTodos = 0;
+    
+    for (const tf of taskFiles) {
+        const taskName = tf.replace('.yaml', '');
+        const taskData = taskModule.loadTask(taskName);
+        if (!taskData || !taskData.todos) continue;
+        
+        const slicesByTodo = taskTodoSlices[taskName] || {};
+        let taskChanged = false;
+        
+        for (const [todoName, expectedSlices] of Object.entries(slicesByTodo)) {
+            let todo = taskData.todos.find(t => t.name === todoName);
+            
+            // 如果 todo 不存在，创建新的
+            if (!todo) {
+                todo = {
+                    name: todoName,
+                    status: 'pending',
+                    amount: 0,
+                    time_slices: [],
+                    history_drafts: []
+                };
+                taskData.todos.push(todo);
+                createdTodos++;
+                taskChanged = true;
+                console.log(`创建 todo: ${taskName}.${todoName}`);
+            }
+            
+            if (!todo.time_slices) todo.time_slices = [];
+            if (!todo.history_drafts) todo.history_drafts = [];
+            
+            for (const expected of expectedSlices) {
+                // 检查 time_slice 是否已存在
+                const hasSlice = todo.time_slices.some(s => 
+                    s.date === expected.date && s.draft === expected.draft
+                );
+                
+                if (!hasSlice) {
+                    todo.time_slices.push({
+                        date: expected.date,
+                        amount: expected.amount,
+                        template: expected.template,
+                        token_cost: expected.token_cost,
+                        draft: expected.draft
+                    });
+                    fixedSlices++;
+                    taskChanged = true;
+                }
+                
+                // 检查 history_drafts 是否已存在
+                if (!todo.history_drafts.includes(expected.draft)) {
+                    todo.history_drafts.push(expected.draft);
+                    fixedDrafts++;
+                    taskChanged = true;
+                }
+            }
+        }
+        
+        if (taskChanged) {
+            taskModule.saveTask(taskData);
+            fixedTasks++;
+        }
+    }
+    
+    console.log(`\n修复完成:`);
+    console.log(`  修复 task 文件: ${fixedTasks} 个`);
+    console.log(`  补录 time_slices: ${fixedSlices} 条`);
+    console.log(`  补录 history_drafts: ${fixedDrafts} 条`);
+    console.log(`  新建 todo: ${createdTodos} 个`);
     
     console.log(`\n=== 执行完成 ===\n`);
 }

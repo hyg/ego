@@ -98,7 +98,7 @@ module.exports = {
     },
     loaddayobjbydate: function (datestr) {
         let year = datestr.slice(0, 4);
-        let dayfilename = config.daymetadatapath + "/" + year + "/" + util.parseTemplate(config.templates.dayMeta, { date: datestr });
+        let dayfilename = config.daymetadatapath + year + "/" + util.parseTemplate(config.templates.dayMeta, { date: datestr });
         
         if (!fs.existsSync(dayfilename)) {
             log("day file not found:", dayfilename);
