@@ -33,6 +33,7 @@ time:
     task: xuemen
     todo: 购买和配置新服务器
     output: ../../draft/2026/20260506.a.md
+    aer: AER.254
   - begin: '20260506140000'
     amount: 0
     redo: 90
@@ -46,6 +47,7 @@ time:
       - read ../../draft/2026/20260405.01.md
     output: ../../draft/2026/20260506.01.md
     namelink: http://simp.ly/p/lsBYG9
+    aer: null
   - begin: '20260506153000'
     amount: 30
     type: free
@@ -61,6 +63,7 @@ time:
       - read ../../draft/2026/20260402.02.md
     output: ../../draft/2026/20260506.02.md
     namelink: http://simp.ly/p/MpcbHD
+    aer: null
   - begin: '20260506170000'
     amount: 120
     type: food
@@ -70,3 +73,4 @@ time:
     type: check
     name: 讨论、整理提交
     output: ../../draft/2026/20260506.03.md
+    aer: AER.255

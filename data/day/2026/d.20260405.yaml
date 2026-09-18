@@ -34,6 +34,7 @@ time:
       - read ../../draft/2026/20260403.01.md
     output: ../../draft/2026/20260405.01.md
     namelink: http://simp.ly/p/WZ077p
+    aer: AER.608
   - begin: '20260405110000'
     amount: 180
     type: food
@@ -47,6 +48,7 @@ time:
     todo: 新版实时手稿
     output: ../../draft/2026/20260405.02.md
     namelink: http://simp.ly/p/lsBYG9
+    aer: null
   - begin: '20260405153000'
     amount: 30
     type: free
@@ -60,6 +62,7 @@ time:
     todo: 设计静态数据（git库）和实时交互的分工。如何共同支撑PSMD和ego项目。
     output: ../../draft/2026/20260405.03.md
     namelink: http://simp.ly/p/MpcbHD
+    aer: null
   - begin: '20260405170000'
     amount: 120
     type: food
@@ -69,3 +72,4 @@ time:
     type: check
     name: 讨论、整理提交
     output: ../../draft/2026/20260405.04.md
+    aer: AER.609

@@ -27,6 +27,7 @@ time:
     type: check
     name: 讨论、整理提交
     output: ../../draft/2026/20260728.01.md
+    aer: AER.461
   - begin: '20260728220000'
     amount: 30
     redo: 60
@@ -38,3 +39,4 @@ time:
     readme:
       - read ../../draft/2026/20260724.a.md
       - read ../../draft/2026/20260726.a.md
+    aer: AER.462

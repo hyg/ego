@@ -29,8 +29,10 @@ time:
     task: PSMD
     todo: 在线游戏：《权力和信息.基于既成事实博弈》
     output: ../../draft/2026/20260724.a.md
+    aer: AER.450
   - begin: '20260724204300'
     amount: 60
     type: check
     name: 讨论、整理提交
     output: ../../draft/2026/20260724.01.md
+    aer: AER.451

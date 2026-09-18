@@ -134,10 +134,17 @@ module.exports = {
     },
     
     // 创建凭证（写入staging目录）
-    createVoucher: function (type, entries, comment, externalVoucherId = null) {
+    // sourceDate: 时间片所在工作日的日期（标准格式 YYYY-MM-DD），用于幂等检查
+    createVoucher: function (type, entries, comment, externalVoucherId = null, sourceDate = null) {
         const date = new Date();
-        const dateStr = date.toISOString().slice(0, 10).replace(/-/g, '');
+        const dateStr = date.toISOString().slice(0, 10);  // 标准格式 YYYY-MM-DD
         const year = dateStr.substring(0, 4);
+        
+        // 将 sourceDate 转换为标准格式（如果是紧凑格式 YYYYMMDD）
+        let standardSourceDate = sourceDate || "";
+        if (/^\d{8}$/.test(standardSourceDate)) {
+            standardSourceDate = standardSourceDate.replace(/(\d{4})(\d{2})(\d{2})/, '$1-$2-$3');
+        }
         
         const existingAERs = this.loadAER(year);
         const existingIds = Object.keys(existingAERs)
@@ -151,7 +158,7 @@ module.exports = {
             VoucherID: externalVoucherId || "",
             AccountingEntry: { debit: [], credit: [] },
             comment: comment || [],
-            sourceDate: ""  // 结算日期，用于幂等检查
+            sourceDate: standardSourceDate  // 标准格式 YYYY-MM-DD
         };
         
         for (const entry of entries) {

@@ -27,3 +27,4 @@ time:
     type: check
     name: 讨论、整理提交
     output: ../../draft/2026/20260730.01.md
+    aer: AER.465

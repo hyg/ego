@@ -1,4 +1,4 @@
-date: '20260713'
+date: '2026-07-13'
 VoucherID: ''
 AccountingEntry:
   debit:
@@ -25,4 +25,4 @@ comment:
   - type: check
     token: 60
     artifact: ../../draft/2026/20260713.01.md
-sourceDate: ''
+sourceDate: '2026-07-13'

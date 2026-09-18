@@ -21,20 +21,60 @@ module.exports = {
         ROUND_ROBIN: 'round_robin'             // 交叉进行
     },
     
+    /**
+     * 判断todo的rely依赖是否满足
+     * @param {Object} todo - todo对象，含rely字段
+     * @param {Map} taskIndex - taskId → taskData 的索引
+     * @returns {boolean} 依赖满足返回true
+     *
+     * rely 无效项处理：
+     *   - task不存在 → 视为已完成，显示提示
+     *   - task存在但todo不存在 → 视为已完成，显示提示
+     */
+    isRelySatisfied: function (todo, taskIndex) {
+        if (!todo.rely || todo.rely.length === 0) return true;
+        for (const relyItem of todo.rely) {
+            const { taskId, todoName } = task.parseTitle(relyItem);
+            const reliedTask = taskIndex.get(taskId);
+            if (!reliedTask) {
+                log("rely: task not found, treat as completed:", taskId);
+                continue;
+            }
+            const reliedTodo = reliedTask.todos.find(t => t.name === todoName);
+            if (!reliedTodo) {
+                log("rely: todo not found, treat as completed:", relyItem);
+                continue;
+            }
+            if (reliedTodo.status !== 'completed') {
+                return false;
+            }
+        }
+        return true;
+    },
+    
     // 获取候选todo列表（按时间长度分组）
     getCandidateTodos: function (amount = null) {
         const allTasks = task.listTasks();
         const candidates = [];
         
+        // 构建task索引（用于rely依赖判断）
+        const taskIndex = new Map();
+        for (const taskId of allTasks) {
+            const taskData = task.loadTask(taskId);
+            if (taskData) taskIndex.set(taskId, taskData);
+        }
+        
         // 获取每个task最近一次获得时间片的时间
         const lastWorkDates = this.getLastWorkDates();
         
         for (const taskId of allTasks) {
-            const taskData = task.loadTask(taskId);
+            const taskData = taskIndex.get(taskId);
             if (!taskData || !taskData.todos) continue;
             
             for (const todo of taskData.todos) {
-                if (todo.status === 'pending' || todo.status === 'in_progress') {
+                // in_progress 直接入选；pending 需检查 rely 依赖
+                if (todo.status === 'in_progress' ||
+                    (todo.status === 'pending' && this.isRelySatisfied(todo, taskIndex))) {
                     // 如果指定了amount，只返回匹配的todo
                     if (amount !== null && todo.amount !== amount) continue;
                     

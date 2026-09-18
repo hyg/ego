@@ -26,6 +26,7 @@ time:
     task: ego
     todo: 整理edgeone、cnb、gitee的发布通道
     output: ../../draft/2026/20260401.a.md
+    aer: AER.599
   - begin: '20260401160000'
     amount: 0
     redo: 60
@@ -35,6 +36,7 @@ time:
     todo: 权利分配语法 & engine
     output: ../../draft/2026/20260401.01.md
     namelink: http://simp.ly/p/4QDThK
+    aer: null
   - begin: '20260401183700'
     amount: 120
     type: food
@@ -44,3 +46,4 @@ time:
     type: check
     name: 讨论、整理提交
     output: ../../draft/2026/20260401.02.md
+    aer: AER.600

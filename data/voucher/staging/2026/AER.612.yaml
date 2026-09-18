@@ -1,0 +1,32 @@
+date: '2026-08-08'
+VoucherID: ''
+AccountingEntry:
+  debit:
+    - AccountTitle: PSMD
+      asset: time
+      amount: 195
+    - AccountTitle: raw
+      asset: token
+      amount: 195
+    - AccountTitle: PSMD
+      asset: artifact.draft
+      amount: 1
+  credit:
+    - AccountTitle: raw
+      asset: time
+      amount: 195
+    - AccountTitle: PSMD
+      asset: token
+      amount: 195
+    - AccountTitle: PSMD
+      asset: time
+      amount: 195
+comment:
+  - type: work
+    task: PSMD
+    todo: term + COM matedata -> deploy metadata -> deploy view
+    time: 195
+    token: 195
+    artifact: ../../draft/2026/20260808.01.md
+sourceDate: '2026-08-08'
+AccountingSoftwareID: fix.js:createWorkAER

@@ -91,7 +91,23 @@ module.exports = {
         return result;
     },
     
-    // 解析work时间片
+    /**
+     * 解析work时间片
+     *
+     * 行为矩阵：
+     * | amount | redo | draft追加 | time_slice追加 | 财务记账 | status写回 | amount写回 |
+     * |--------|------|:---------:|:--------------:|:--------:|:----------:|:----------:|
+     * | >0     | 无   | ✅        | ✅             | ✅       | completed  | → 0        |
+     * | >0     | 有   | ✅        | ✅             | ✅       | in_progress| → redo     |
+     * | 0      | 无   | ❌        | ❌             | ❌       | completed  | → 0        |
+     * | 0      | 有   | ❌        | ❌             | ❌       | in_progress| → redo     |
+     *
+     * amount=0时：
+     *   - output文件已在cleardayobj中删除
+     *   - 不生成财务分录
+     *   - 不追加history_drafts和time_slices
+     *   - 但仍写回redo/status到task元数据
+     */
     parseWorkSlice: function (timeSlice, datestr, plan) {
         const taskId = timeSlice.task || timeSlice.subject;
         const todoName = timeSlice.todo || timeSlice.title;
@@ -152,13 +168,15 @@ module.exports = {
             result.artifactFile = timeSlice.output;
         }
         
-        // 未完成：写回task元数据
-        if (!isCompleted) {
+        // amount>0时始终生成writeback_todo action（含已完成和未完成）
+        if (actualTime > 0) {
             result.actions.push({
                 type: 'writeback_todo',
                 task_id: taskId,
                 todo_name: todoName,
-                amount: redoEstimate,
+                amount: redoEstimate || 0,
+                isCompleted: isCompleted,
+                actualTime: actualTime,
                 draft: timeSlice.output,
                 time_slice: {
                     date: datestr,
@@ -199,19 +217,26 @@ module.exports = {
     },
     
     // 检查当天是否已结算
+    // 优先通过 sourceDate 字段匹配（标准格式 YYYY-MM-DD）
+    // 兼容旧格式：检查 date 字段（紧凑格式 YYYYMMDD）
     isDaySettled: function (dateStr) {
         const year = dateStr.substring(0, 4);
         const existingAERs = asset.loadAER(year);
         
+        // 将紧凑格式转换为标准格式
+        const standardDate = dateStr.replace(/(\d{4})(\d{2})(\d{2})/, '$1-$2-$3');
+        
         for (const [filename, aer] of Object.entries(existingAERs)) {
-            // 优先检查sourceDate字段（新格式）
-            if (aer.sourceDate === dateStr) {
+            // 新格式：sourceDate 为标准格式
+            if (aer.sourceDate === standardDate) {
                 return { settled: true, filename: filename, voucher: aer };
             }
-            // 兼容旧格式：检查date字段
-            const aerDate = aer.date ? aer.date.toString().replace(/-/g, '').slice(0, 8) : '';
-            if (aerDate === dateStr) {
-                return { settled: true, filename: filename, voucher: aer };
+            // 旧格式兼容：sourceDate 为空字符串时，检查 date 字段
+            if (aer.sourceDate === '' || aer.sourceDate === undefined) {
+                const aerDate = aer.date ? aer.date.toString().replace(/-/g, '').slice(0, 8) : '';
+                if (aerDate === dateStr) {
+                    return { settled: true, filename: filename, voucher: aer };
+                }
             }
         }
         return { settled: false };
@@ -223,15 +248,12 @@ module.exports = {
         const existingAERs = asset.loadAER(year);
         const vouchersToRemove = [];
         
-        // 找到当天所有voucher（兼容新旧格式）
+        // 将紧凑格式转换为标准格式
+        const standardDate = dateStr.replace(/(\d{4})(\d{2})(\d{2})/, '$1-$2-$3');
+        
+        // 找到当天所有voucher
         for (const [filename, aer] of Object.entries(existingAERs)) {
-            if (aer.sourceDate === dateStr) {
-                vouchersToRemove.push({ filename: filename, voucher: aer });
-                continue;
-            }
-            // 兼容旧格式
-            const aerDate = aer.date ? aer.date.toString().replace(/-/g, '').slice(0, 8) : '';
-            if (aerDate === dateStr) {
+            if (aer.sourceDate === standardDate) {
                 vouchersToRemove.push({ filename: filename, voucher: aer });
             }
         }
@@ -343,7 +365,17 @@ module.exports = {
         };
     },
     
-    // 写回todo到task元数据
+    /**
+     * 写回todo到task元数据
+     *
+     * 行为矩阵：
+     * | amount | redo | history_drafts | time_slices | status   | amount字段 | output文件 |
+     * |--------|------|:-------------:|:-----------:|:--------:|:----------:|:----------:|
+     * | >0     | 无   | 追加          | 追加        | completed| → 0        | 保留       |
+     * | >0     | 有   | 追加          | 追加        | in_progress| → redo  | 保留       |
+     * | 0      | 无   | 不追加        | 不追加      | completed| → 0        | 确认删除   |
+     * | 0      | 有   | 不追加        | 不追加      | in_progress| → redo  | 确认删除   |
+     */
     writebackTodo: function (action) {
         const taskData = task.loadTask(action.task_id);
         if (!taskData) {
@@ -365,12 +397,17 @@ module.exports = {
         let todo = taskData.todos.find(t => t.name === action.todo_name);
         
         if (todo) {
-            // 更新现有todo
-            todo.status = 'pending';
-            todo.amount = action.amount;
+            // 更新status和amount
+            if (action.isCompleted) {
+                todo.status = 'completed';
+                todo.amount = 0;
+            } else {
+                todo.status = 'in_progress';
+                todo.amount = action.amount;
+            }
             
-            // 追加time_slice（使用规范化路径，需去重）
-            if (action.time_slice) {
+            // 追加time_slice（仅actualTime > 0时）
+            if (action.actualTime > 0 && action.time_slice) {
                 if (!todo.time_slices) {
                     todo.time_slices = [];
                 }
@@ -388,8 +425,8 @@ module.exports = {
                 }
             }
             
-            // 追加history_draft（使用规范化路径）
-            if (draftPath) {
+            // 追加history_draft（仅actualTime > 0时）
+            if (action.actualTime > 0 && draftPath) {
                 if (!todo.history_drafts) {
                     todo.history_drafts = [];
                 }
@@ -410,21 +447,34 @@ module.exports = {
         } else {
             // 创建新todo（规范化路径）
             let normalizedTimeSlice = null;
-            if (action.time_slice) {
+            if (action.actualTime > 0 && action.time_slice) {
                 normalizedTimeSlice = { ...action.time_slice };
                 if (normalizedTimeSlice.draft && normalizedTimeSlice.draft.startsWith('../../draft/')) {
                     normalizedTimeSlice.draft = normalizedTimeSlice.draft.substring('../../draft/'.length);
                 }
             }
-            let normalizedDraftPath = draftPath;
+            let normalizedDraftPath = (action.actualTime > 0 && draftPath) ? draftPath : null;
             
             taskData.todos.push({
                 name: action.todo_name,
-                status: 'pending',
-                amount: action.amount,
+                status: action.isCompleted ? 'completed' : 'in_progress',
+                amount: action.isCompleted ? 0 : action.amount,
                 time_slices: normalizedTimeSlice ? [normalizedTimeSlice] : [],
                 history_drafts: normalizedDraftPath ? [normalizedDraftPath] : []
             });
+        }
+        
+        // amount=0时，确保output文件已删除（cleardayobj可能未覆盖所有场景）
+        if (action.actualTime === 0 && action.draft) {
+            const draftFullPath = path.resolve(__dirname, '..', action.draft);
+            try {
+                if (fs.existsSync(draftFullPath)) {
+                    fs.unlinkSync(draftFullPath);
+                    log("deleted output file for amount=0:", action.draft);
+                }
+            } catch (e) {
+                log("delete output file failed:", action.draft, e.code);
+            }
         }
         
         task.saveTask(taskData);
@@ -468,11 +518,11 @@ module.exports = {
             if (result.type === 'work') {
                 output += `任务: ${result.taskId}: ${result.todoName}\n`;
                 output += `实际工作: ${result.actualTime} 分钟\n`;
-                if (result.redoEstimate) {
+                if (result.isCompleted) {
+                    output += `状态: 已完成\n`;
+                } else {
                     output += `预计还需: ${result.redoEstimate} 分钟\n`;
                     output += `状态: 未完成\n`;
-                } else {
-                    output += `状态: 已完成\n`;
                 }
                 output += `token消耗: ${result.tokenAmount} token\n`;
                 output += `产出: ${result.artifactCount}个artifact\n`;

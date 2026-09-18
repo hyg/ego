@@ -3,8 +3,8 @@ const assert = require('assert');
 const day = require('./day.js');
 const config = require('./config.js');
 
-const originalDebug = config.machine.debug;
-config.machine.debug = true;
+const originalDebug = day.debug;
+day.debug = true;
 
 /* test('get day metadata file name',(t)=>{
     assert.strictEqual(day.dayfilename(),"../data/day/2024/d.20240711.yaml");
@@ -48,4 +48,4 @@ test('init draft',(t)=>{
     assert.ok(day.makedayobj(2,-2));
 });
 
-config.machine.debug = originalDebug;
+day.debug = originalDebug;

@@ -35,6 +35,7 @@ time:
     todo: 权利分配语法 & engine
     output: ../../draft/2026/20260402.01.md
     namelink: http://simp.ly/p/lsBYG9
+    aer: AER.601
   - begin: '20260402153000'
     amount: 30
     type: free
@@ -48,6 +49,7 @@ time:
     todo: JT的发行和回收
     output: ../../draft/2026/20260402.02.md
     namelink: http://simp.ly/p/MpcbHD
+    aer: AER.602
   - begin: '20260402170000'
     amount: 120
     type: food
@@ -57,3 +59,4 @@ time:
     type: check
     name: 讨论、整理提交
     output: ../../draft/2026/20260402.03.md
+    aer: AER.603

@@ -1,5 +1,9 @@
 const assert = require('assert');
 const asset = require('./asset.js');
+const config = require('./config.js');
+
+const originalDebug = asset.debug;
+asset.debug = true;
 
 let passed = 0;
 let failed = 0;
@@ -60,3 +64,5 @@ console.log(`失败: ${failed}`);
 console.log(`总计: ${passed + failed}`);
 
 module.exports = { passed, failed };
+
+asset.debug = originalDebug;

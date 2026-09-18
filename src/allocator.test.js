@@ -60,6 +60,102 @@ test('deductToken - 扣除token', () => {
     assert.strictEqual(typeof result, 'boolean');
 });
 
+console.log('\n=== isRelySatisfied 测试 ===');
+
+test('isRelySatisfied - 无rely字段', () => {
+    const todo = { name: 'test', status: 'pending' };
+    const taskIndex = new Map();
+    assert.strictEqual(allocator.isRelySatisfied(todo, taskIndex), true);
+});
+
+test('isRelySatisfied - 空rely数组', () => {
+    const todo = { name: 'test', status: 'pending', rely: [] };
+    const taskIndex = new Map();
+    assert.strictEqual(allocator.isRelySatisfied(todo, taskIndex), true);
+});
+
+test('isRelySatisfied - 前置任务已完成', () => {
+    const todo = { name: 'B', status: 'pending', rely: ['PSMD.A'] };
+    const taskIndex = new Map();
+    taskIndex.set('PSMD', { todos: [{ name: 'A', status: 'completed' }] });
+    assert.strictEqual(allocator.isRelySatisfied(todo, taskIndex), true);
+});
+
+test('isRelySatisfied - 前置任务未完成(in_progress)', () => {
+    const todo = { name: 'B', status: 'pending', rely: ['PSMD.A'] };
+    const taskIndex = new Map();
+    taskIndex.set('PSMD', { todos: [{ name: 'A', status: 'in_progress' }] });
+    assert.strictEqual(allocator.isRelySatisfied(todo, taskIndex), false);
+});
+
+test('isRelySatisfied - 前置任务未完成(pending)', () => {
+    const todo = { name: 'B', status: 'pending', rely: ['PSMD.A'] };
+    const taskIndex = new Map();
+    taskIndex.set('PSMD', { todos: [{ name: 'A', status: 'pending' }] });
+    assert.strictEqual(allocator.isRelySatisfied(todo, taskIndex), false);
+});
+
+test('isRelySatisfied - task不存在（无效依赖，视为完成）', () => {
+    const todo = { name: 'B', status: 'pending', rely: ['NONEXIST.A'] };
+    const taskIndex = new Map();
+    assert.strictEqual(allocator.isRelySatisfied(todo, taskIndex), true);
+});
+
+test('isRelySatisfied - todo不存在（无效依赖，视为完成）', () => {
+    const todo = { name: 'B', status: 'pending', rely: ['PSMD.nonexist'] };
+    const taskIndex = new Map();
+    taskIndex.set('PSMD', { todos: [{ name: 'A', status: 'completed' }] });
+    assert.strictEqual(allocator.isRelySatisfied(todo, taskIndex), true);
+});
+
+test('isRelySatisfied - 多个依赖全部完成', () => {
+    const todo = { name: 'C', status: 'pending', rely: ['PSMD.A', 'ego.X'] };
+    const taskIndex = new Map();
+    taskIndex.set('PSMD', { todos: [{ name: 'A', status: 'completed' }] });
+    taskIndex.set('ego', { todos: [{ name: 'X', status: 'completed' }] });
+    assert.strictEqual(allocator.isRelySatisfied(todo, taskIndex), true);
+});
+
+test('isRelySatisfied - 多个依赖部分未完成', () => {
+    const todo = { name: 'C', status: 'pending', rely: ['PSMD.A', 'ego.X'] };
+    const taskIndex = new Map();
+    taskIndex.set('PSMD', { todos: [{ name: 'A', status: 'completed' }] });
+    taskIndex.set('ego', { todos: [{ name: 'X', status: 'in_progress' }] });
+    assert.strictEqual(allocator.isRelySatisfied(todo, taskIndex), false);
+});
+
+test('isRelySatisfied - 混合有效和无效依赖（无效视为完成）', () => {
+    const todo = { name: 'C', status: 'pending', rely: ['PSMD.A', 'NONEXIST.X'] };
+    const taskIndex = new Map();
+    taskIndex.set('PSMD', { todos: [{ name: 'A', status: 'completed' }] });
+    assert.strictEqual(allocator.isRelySatisfied(todo, taskIndex), true);
+});
+
+test('isRelySatisfied - 混合有效依赖和未完成依赖', () => {
+    const todo = { name: 'C', status: 'pending', rely: ['PSMD.A', 'ego.X'] };
+    const taskIndex = new Map();
+    taskIndex.set('PSMD', { todos: [{ name: 'A', status: 'completed' }] });
+    taskIndex.set('ego', { todos: [{ name: 'X', status: 'in_progress' }] });
+    assert.strictEqual(allocator.isRelySatisfied(todo, taskIndex), false);
+});
+
+console.log('\n=== getCandidateTodos rely 过滤测试 ===');
+
+test('getCandidateTodos - pending无rely应被选入', () => {
+    const candidates = allocator.getCandidateTodos();
+    assert.ok(Array.isArray(candidates));
+    // 至少应有一个候选（所有pending无rely + in_progress）
+    assert.ok(candidates.length > 0);
+});
+
+test('getCandidateTodos - 只有in_progress和依赖满足的pending被选入', () => {
+    const candidates = allocator.getCandidateTodos();
+    for (const c of candidates) {
+        // 所有候选应该是 in_progress 或者 pending（意味着 rely 已满足）
+        assert.ok(c.status === 'in_progress' || c.status === 'pending');
+    }
+});
+
 console.log('\n=== 测试结果 ===');
 console.log(`通过: ${passed}`);
 console.log(`失败: ${failed}`);

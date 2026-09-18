@@ -34,6 +34,7 @@ time:
       - read ../../draft/2026/20260411.01.md
     output: ../../draft/2026/20260518.01.md
     namelink: http://simp.ly/p/4QDThK
+    aer: null
   - begin: '20260518170000'
     amount: 120
     type: food
@@ -43,3 +44,4 @@ time:
     type: check
     name: 讨论、整理提交
     output: ../../draft/2026/20260518.02.md
+    aer: AER.285

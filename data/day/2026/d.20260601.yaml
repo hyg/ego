@@ -29,8 +29,10 @@ time:
     task: xuemen
     todo: 月初事务
     output: ../../draft/2026/20260601.a.md
+    aer: AER.315
   - begin: '20260601163600'
     amount: 10
     type: check
     name: 讨论、整理提交
     output: ../../draft/2026/20260601.01.md
+    aer: AER.316

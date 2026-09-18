@@ -4,7 +4,6 @@ const fs = require('fs');
 const path = require('path');
 const journal = require('./journal.js');
 const day = require('./day.js');
-const config = require('./config.js');
 
 let passed = 0;
 let failed = 0;
@@ -21,9 +20,7 @@ function test(name, fn) {
     }
 }
 
-// 保存原始debug值，设置为true
-const originalDebug = config.machine.debug;
-config.machine.debug = true;
+
 
 console.log('=== journal.js 测试 ===');
 
@@ -112,12 +109,169 @@ test('isDaySettled - 2026Q2之前的日期', () => {
     console.log('  20260331 status:', status);
 });
 
+console.log('\n=== parseWorkSlice 行为矩阵测试 ===');
+
+test('parseWorkSlice - amount>0 无redo: isCompleted=true, 生成action', () => {
+    journal.debug = true;
+    const slice = {
+        amount: 30, task: 'PSMD', todo: 'test_todo',
+        output: '../../draft/2026/20260909.01.md'
+    };
+    const result = journal.parseWorkSlice(slice, '20260909', '1d');
+    assert.strictEqual(result.isCompleted, true);
+    assert.strictEqual(result.actualTime, 30);
+    assert.strictEqual(result.actions.length, 1);
+    assert.strictEqual(result.actions[0].type, 'writeback_todo');
+    assert.strictEqual(result.actions[0].isCompleted, true);
+    assert.strictEqual(result.actions[0].actualTime, 30);
+    journal.debug = false;
+});
+
+test('parseWorkSlice - amount>0 有redo: isCompleted=false, 生成action', () => {
+    journal.debug = true;
+    const slice = {
+        amount: 0, redo: 30, task: 'PSMD', todo: 'test_todo',
+        output: '../../draft/2026/20260404.01.md'
+    };
+    const result = journal.parseWorkSlice(slice, '20260404', '1d');
+    assert.strictEqual(result.isCompleted, false);
+    assert.strictEqual(result.redoEstimate, 30);
+    journal.debug = false;
+});
+
+test('parseWorkSlice - amount=0 无redo: 不生成action, isCompleted=true', () => {
+    journal.debug = true;
+    const slice = { amount: 0, task: 'PSMD', todo: 'test_todo' };
+    const result = journal.parseWorkSlice(slice, '20260909', '1d');
+    assert.strictEqual(result.isCompleted, true);
+    assert.strictEqual(result.actions.length, 0);
+    assert.strictEqual(result.entries.length, 0);
+    assert.strictEqual(result.actualTime, 0);
+    journal.debug = false;
+});
+
+test('parseWorkSlice - amount=0 有redo: 不生成action, isCompleted=false', () => {
+    journal.debug = true;
+    const slice = { amount: 0, redo: 30, task: 'PSMD', todo: 'test_todo' };
+    const result = journal.parseWorkSlice(slice, '20260909', '1d');
+    assert.strictEqual(result.isCompleted, false);
+    assert.strictEqual(result.actions.length, 0);
+    assert.strictEqual(result.entries.length, 0);
+    assert.strictEqual(result.actualTime, 0);
+    assert.strictEqual(result.redoEstimate, 30);
+    journal.debug = false;
+});
+
+test('parseWorkSlice - amount=0 不生成财务分录', () => {
+    journal.debug = true;
+    const slice = { amount: 0, task: 'PSMD', todo: 'test_todo' };
+    const result = journal.parseWorkSlice(slice, '20260909', '1d');
+    assert.strictEqual(result.tokenAmount, 0);
+    assert.strictEqual(result.entries.length, 0);
+    assert.strictEqual(result.artifactCount, 0);
+    journal.debug = false;
+});
+
+test('parseWorkSlice - amount>0 生成财务分录', () => {
+    const savedDebug = journal.debug;
+    journal.debug = false;
+    const slice = {
+        amount: 30, task: 'PSMD', todo: 'test_todo',
+        output: '../../draft/2026/20260909.01.md'
+    };
+    const result = journal.parseWorkSlice(slice, '20260909', '1d');
+    assert.ok(result.entries.length > 0);
+    assert.ok(result.tokenAmount > 0);
+    assert.strictEqual(result.artifactCount, 1);
+    journal.debug = savedDebug;
+});
+
+test('parseWorkSlice - amount>0 无redo: action含draft和time_slice', () => {
+    journal.debug = true;
+    const slice = {
+        amount: 30, task: 'PSMD', todo: 'test_todo',
+        output: '../../draft/2026/20260909.01.md'
+    };
+    const result = journal.parseWorkSlice(slice, '20260909', '1d');
+    const action = result.actions[0];
+    assert.strictEqual(action.draft, '../../draft/2026/20260909.01.md');
+    assert.ok(action.time_slice);
+    assert.strictEqual(action.time_slice.amount, 30);
+    assert.strictEqual(action.time_slice.date, '20260909');
+    journal.debug = false;
+});
+
+test('parseWorkSlice - amount>0 有redo: action含redo信息', () => {
+    journal.debug = true;
+    const slice = {
+        amount: 10, redo: 20, task: 'PSMD', todo: 'test_todo',
+        output: '../../draft/2026/20260404.01.md'
+    };
+    const result = journal.parseWorkSlice(slice, '20260404', '1d');
+    const action = result.actions[0];
+    assert.strictEqual(action.isCompleted, false);
+    assert.strictEqual(action.amount, 20);
+    assert.strictEqual(action.actualTime, 10);
+    journal.debug = false;
+});
+
+test('parseWorkSlice - 无task字段: 跳过', () => {
+    const slice = { amount: 30, todo: 'test_todo' };
+    const result = journal.parseWorkSlice(slice, '20260909', '1d');
+    assert.strictEqual(result.description, '无特定task，跳过');
+    assert.strictEqual(result.actions.length, 0);
+    assert.strictEqual(result.entries.length, 0);
+});
+
+test('formatOutput - completed状态显示', () => {
+    const parsed = {
+        results: [{
+            type: 'work',
+            taskId: 'PSMD',
+            todoName: 'test',
+            actualTime: 30,
+            isCompleted: true,
+            redoEstimate: undefined,
+            tokenAmount: 30,
+            artifactCount: 1,
+            entries: [],
+            actions: []
+        }],
+        totalToken: 30,
+        totalArtifacts: 1
+    };
+    const output = journal.formatOutput(parsed);
+    assert.ok(output.includes('状态: 已完成'));
+    assert.ok(!output.includes('预计还需'));
+});
+
+test('formatOutput - 未完成状态显示', () => {
+    const parsed = {
+        results: [{
+            type: 'work',
+            taskId: 'PSMD',
+            todoName: 'test',
+            actualTime: 10,
+            isCompleted: false,
+            redoEstimate: 20,
+            tokenAmount: 10,
+            artifactCount: 1,
+            entries: [],
+            actions: []
+        }],
+        totalToken: 10,
+        totalArtifacts: 1
+    };
+    const output = journal.formatOutput(parsed);
+    assert.ok(output.includes('预计还需: 20 分钟'));
+    assert.ok(output.includes('状态: 未完成'));
+});
+
 console.log('\n=== 测试结果 ===');
 console.log(`通过: ${passed}`);
 console.log(`失败: ${failed}`);
 console.log(`总计: ${passed + failed}`);
 
-// 恢复原始debug值
-config.machine.debug = originalDebug;
+
 
 module.exports = { passed, failed };

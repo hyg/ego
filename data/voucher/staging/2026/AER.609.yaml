@@ -1,4 +1,4 @@
-date: '20260504'
+date: '2026-04-05'
 VoucherID: ''
 AccountingEntry:
   debit:
@@ -7,7 +7,7 @@ AccountingEntry:
       amount: 60
     - AccountTitle: raw
       asset: token
-      amount: 120
+      amount: 60
     - AccountTitle: ego
       asset: artifact.draft
       amount: 1
@@ -17,12 +17,13 @@ AccountingEntry:
       amount: 60
     - AccountTitle: ego
       asset: token
-      amount: 120
+      amount: 60
     - AccountTitle: ego
       asset: time
       amount: 60
 comment:
   - type: check
-    token: 120
-    artifact: ../../draft/2026/20260501.04.md
-sourceDate: ''
+    token: 60
+    artifact: ../../draft/2026/20260405.04.md
+sourceDate: '2026-04-05'
+AccountingSoftwareID: fix.js:createCheckAER

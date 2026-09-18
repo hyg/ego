@@ -3,8 +3,8 @@ const assert = require('assert');
 const season = require('./season.js');
 const config = require('./config.js');
 
-const originalDebug = config.machine.debug;
-config.machine.debug = true;
+const originalDebug = season.debug;
+season.debug = true;
 
 test('add a redo item into season',(t)=>{
     let seasonobj ;
@@ -89,4 +89,4 @@ test('make season stat table',(t)=>{
     assert.ok(season.makestattable(seasonobj));
 });
 
-config.machine.debug = originalDebug;
+season.debug = originalDebug;

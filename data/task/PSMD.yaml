@@ -272,8 +272,38 @@ todos:
       - 2026/20260724.a.md
       - 2026/20260726.a.md
       - 2026/20260728.a.md
+  - name:
+      - 考虑upgradeby的实现。
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name:
+      - 考虑upgradeby的实现。
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name:
+      - 考虑upgradeby的实现。
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name:
+      - 考虑upgradeby的实现。
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name:
+      - 考虑upgradeby的实现。
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name:
+      - 考虑upgradeby的实现。
+    status: pending
+    time_slices: []
+    history_drafts: []
 derivation:
   source: null
   type: null
   trigger: null
-token_balance: 3310
+token_balance: 3660

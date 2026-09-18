@@ -37,6 +37,7 @@ time:
       - read ../../draft/2024/11/20241110.01.md
     output: ../../draft/2026/20260909.01.md
     namelink: http://simp.ly/p/8t3vlk
+    aer: AER.573
   - begin: '20260909143000'
     amount: 0
     redo: 30
@@ -48,6 +49,7 @@ time:
       - read ../../draft/2026/20260403.02.md
     output: ../../draft/2026/20260909.02.md
     namelink: http://simp.ly/p/5k9gJy
+    aer: null
   - begin: '20260909150000'
     amount: 60
     type: free
@@ -68,6 +70,7 @@ time:
       - read ../../draft/2025/20250613.02.md
     output: ../../draft/2026/20260909.03.md
     namelink: http://simp.ly/p/4QDThK
+    aer: null
   - begin: '20260909170000'
     amount: 120
     type: food
@@ -77,3 +80,4 @@ time:
     type: check
     name: 讨论、整理提交
     output: ../../draft/2026/20260909.04.md
+    aer: AER.574
