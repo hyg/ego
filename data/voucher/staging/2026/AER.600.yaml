@@ -1,0 +1,32 @@
+date: '2026-04-01'
+VoucherID: ''
+AccountingEntry:
+  debit:
+    - AccountTitle: ego
+      asset: time
+      amount: 370
+    - AccountTitle: raw
+      asset: token
+      amount: 370
+    - AccountTitle: ego
+      asset: artifact.draft
+      amount: 1
+  credit:
+    - AccountTitle: raw
+      asset: time
+      amount: 370
+    - AccountTitle: ego
+      asset: token
+      amount: 370
+    - AccountTitle: ego
+      asset: time
+      amount: 370
+comment:
+  - type: work
+    task: ego
+    todo: 整理edgeone、cnb、gitee的发布通道
+    time: 370
+    token: 370
+    artifact: ../../draft/2026/20260401.a.md
+sourceDate: '2026-04-01'
+AccountingSoftwareID: fix.js:createWorkAER

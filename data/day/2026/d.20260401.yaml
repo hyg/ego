@@ -26,7 +26,7 @@ time:
     task: ego
     todo: 整理edgeone、cnb、gitee的发布通道
     output: ../../draft/2026/20260401.a.md
-    aer: AER.599
+    aer: AER.600
   - begin: '20260401160000'
     amount: 0
     redo: 60
@@ -46,4 +46,4 @@ time:
     type: check
     name: 讨论、整理提交
     output: ../../draft/2026/20260401.02.md
-    aer: AER.600
+    aer: AER.601

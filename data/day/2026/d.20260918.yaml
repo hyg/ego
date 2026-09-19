@@ -80,4 +80,4 @@ time:
     type: check
     name: 讨论、整理提纲
     output: ../../draft/2026/20260918.04.md
-    aer: 
+    aer: AER.599

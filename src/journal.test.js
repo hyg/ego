@@ -88,7 +88,7 @@ test('formatOutput - 格式化输出', () => {
 console.log('\n=== 幂等测试 ===');
 
 test('isDaySettled - 检查未结算日期', () => {
-    const status = journal.isDaySettled('20260404');
+    const status = journal.isDaySettled('20260919');
     assert.strictEqual(status.settled, false);
 });
 
@@ -139,23 +139,25 @@ test('parseWorkSlice - amount>0 有redo: isCompleted=false, 生成action', () =>
     journal.debug = false;
 });
 
-test('parseWorkSlice - amount=0 无redo: 不生成action, isCompleted=true', () => {
+test('parseWorkSlice - amount=0 无redo: 生成writeback action, isCompleted=true', () => {
     journal.debug = true;
     const slice = { amount: 0, task: 'PSMD', todo: 'test_todo' };
     const result = journal.parseWorkSlice(slice, '20260909', '1d');
     assert.strictEqual(result.isCompleted, true);
-    assert.strictEqual(result.actions.length, 0);
+    assert.strictEqual(result.actions.length, 1);
+    assert.strictEqual(result.actions[0].type, 'writeback_todo');
     assert.strictEqual(result.entries.length, 0);
     assert.strictEqual(result.actualTime, 0);
     journal.debug = false;
 });
 
-test('parseWorkSlice - amount=0 有redo: 不生成action, isCompleted=false', () => {
+test('parseWorkSlice - amount=0 有redo: 生成writeback action, isCompleted=false', () => {
     journal.debug = true;
     const slice = { amount: 0, redo: 30, task: 'PSMD', todo: 'test_todo' };
     const result = journal.parseWorkSlice(slice, '20260909', '1d');
     assert.strictEqual(result.isCompleted, false);
-    assert.strictEqual(result.actions.length, 0);
+    assert.strictEqual(result.actions.length, 1);
+    assert.strictEqual(result.actions[0].type, 'writeback_todo');
     assert.strictEqual(result.entries.length, 0);
     assert.strictEqual(result.actualTime, 0);
     assert.strictEqual(result.redoEstimate, 30);

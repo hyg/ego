@@ -48,7 +48,7 @@ todos:
       - 2026/20260825.01.md
   - name: 部署语法
     amount: 60
-    status: pending
+    status: in_progress
     time_slices:
       - date: '20260403'
         amount: 60
@@ -337,8 +337,23 @@ todos:
         draft: 2026/20260822.a.md
     history_drafts:
       - 2026/20260822.a.md
+  - name:
+      - 考虑upgradeby的实现。
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name:
+      - 考虑upgradeby的实现。
+    status: pending
+    time_slices: []
+    history_drafts: []
+  - name:
+      - 考虑upgradeby的实现。
+    status: pending
+    time_slices: []
+    history_drafts: []
 derivation:
   source: null
   type: null
   trigger: null
-token_balance: 3660
+token_balance: 3810
