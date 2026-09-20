@@ -261,7 +261,7 @@ todos:
     history_drafts: []
   - name: debug- D:\huangyg\git\PSMD\data\term.25c83dac.yaml interface字段混乱。
     amount: 30
-    status: pending
+    status: in_progress
     time_slices: []
     history_drafts: []
   - name: 重新思考term metadata种的upgradeby，是否需要显示内容和id两种。
