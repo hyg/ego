@@ -1,0 +1,21 @@
+date: 2026-09-21
+VoucherID: 4500000430202609214123617573
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: donation.parent
+      asset: rmb
+      amount: 215.21
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 215.21
+comment:
+  - name: 大豆肽
+    amount: 500
+    unit: g
+    asset: 87.21
+  - name: 鲣鱼心脏动脉球肽
+    amount: 500
+    unit: g
+    asset: 128.0
