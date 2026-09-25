@@ -1,0 +1,17 @@
+date: 2026-09-25
+VoucherID: 4500000479202609252696064204
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: unknown
+      asset: rmb
+      amount: 9.27
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 9.27
+comment:
+  - name: 氧净
+    amount: 9.27
+    unit: unknown
+    asset: 9.27

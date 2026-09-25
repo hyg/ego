@@ -1,0 +1,17 @@
+date: 2026-09-25
+VoucherID: 4500000428202609251532269970
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: unknown
+      asset: rmb
+      amount: 23.72
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 23.72
+comment:
+  - name: 菊粉
+    amount: 23.72
+    unit: unknown
+    asset: 23.72

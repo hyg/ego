@@ -23,7 +23,7 @@ token_balance: 2850
 todos:
   - name: JT的发行和回收
     amount: 60
-    status: pending
+    status: in_progress
     time_slices:
       - date: '20260402'
         amount: 60

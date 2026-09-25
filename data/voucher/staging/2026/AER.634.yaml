@@ -1,0 +1,17 @@
+date: 2026-09-25
+VoucherID: 4500000472202609257758223243
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: unknown
+      asset: rmb
+      amount: 16.30
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 16.30
+comment:
+  - name: 芋头
+    amount: 16.3
+    unit: unknown
+    asset: 16.30
