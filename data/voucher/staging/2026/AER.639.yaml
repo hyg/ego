@@ -1,17 +1,17 @@
-date: 2026-09-25
-VoucherID: 4500000479202609252696064204
+date: 2026-09-28
+VoucherID: 4500000494202609283463059221
 AccountingSoftwareID: 
 AccountingEntry:
   debit:
     - AccountTitle: raw.supply
       asset: rmb
-      amount: 9.27
+      amount: 28.20
   credit:
     - AccountTitle: 微信零钱
       asset: rmb
-      amount: 9.27
+      amount: 28.20
 comment:
-  - name: 氧净
-    amount: 1000
+  - name: 洗衣颗粒
+    amount: 4080
     unit: g
-    asset: 9.27
+    asset: 28.20

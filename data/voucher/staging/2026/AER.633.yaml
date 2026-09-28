@@ -3,7 +3,7 @@ VoucherID: 4500000428202609251532269970
 AccountingSoftwareID: 
 AccountingEntry:
   debit:
-    - AccountTitle: unknown
+    - AccountTitle: raw.med
       asset: rmb
       amount: 23.72
   credit:
@@ -12,6 +12,6 @@ AccountingEntry:
       amount: 23.72
 comment:
   - name: 菊粉
-    amount: 23.72
-    unit: unknown
+    amount: 1350
+    unit: g
     asset: 23.72
