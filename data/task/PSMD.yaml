@@ -47,8 +47,8 @@ todos:
       - 2026/20260405.01.md
       - 2026/20260825.01.md
   - name: 部署语法
-    amount: 60
-    status: in_progress
+    amount: 0
+    status: completed
     time_slices:
       - date: '20260403'
         amount: 60
@@ -65,10 +65,16 @@ todos:
         template: 1e
         token_cost: 120
         draft: 2026/20260510.01.md
+      - date: '20260929'
+        amount: 60
+        template: 1e
+        token_cost: 60
+        draft: 2026/20260929.01.md
     history_drafts:
       - 2026/20260403.03.md
       - 2026/20260411.01.md
       - 2026/20260510.01.md
+      - 2026/20260929.01.md
   - name: SOP engine
     amount: 60
     status: pending
@@ -356,4 +362,4 @@ derivation:
   source: null
   type: null
   trigger: null
-token_balance: 3810
+token_balance: 3750
