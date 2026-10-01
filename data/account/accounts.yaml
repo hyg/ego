@@ -18,6 +18,21 @@
   name: "微信零钱"
   ftitle: "现金"
 
+支付宝余额:
+  id: 2.2
+  name: "支付宝余额"
+  ftitle: "现金"
+
+应交税费:
+  id: 3
+  name: "应交税费"
+  ftitle: "总账"
+
+收入:
+  id: 4
+  name: "收入"
+  ftitle: "总账"
+
 raw:
   id: 10
   name: "raw"

@@ -1,0 +1,46 @@
+date: 2026-09-29
+VoucherID: 20260929200040011100280045558444
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: PSMD
+      asset: time
+      amount: 60
+    - AccountTitle: raw
+      asset: token
+      amount: 60
+
+    - AccountTitle: 支付宝余额
+      asset: rmb
+      amount: 6672.00
+
+    - AccountTitle: PSMD
+      asset: token
+      amount: 2400
+  credit:
+    - AccountTitle: PSMD
+      asset: token
+      amount: 60
+    - AccountTitle: raw
+      asset: time
+      amount: 60
+
+    - AccountTitle: 收入
+      asset: rmb
+      amount: 6604.29
+    - AccountTitle: 应交税费
+      asset: rmb
+      amount: 67.71
+
+    - AccountTitle: PSMD
+      asset: time
+      amount: 60
+    - AccountTitle: ego
+      asset: token
+      amount: 2400
+
+comment:
+  - name: PSMD非标委托
+    amount: 60
+    unit: 分钟
+    asset: 6672.00

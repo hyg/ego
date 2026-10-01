@@ -1,0 +1,17 @@
+date: 2026-10-02
+VoucherID: 1800007552302610021904464006
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: 应交税费
+      asset: rmb
+      amount: 67.71
+  credit:
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 67.71
+comment:
+  - name: 增值税及附加税费
+    amount: 67.71
+    unit: rmb
+    asset: 67.71
