@@ -77,7 +77,7 @@ todos:
       - 2026/20260929.01.md
   - name: SOP engine
     amount: 60
-    status: pending
+    status: in_progress
   - name: evaluate toolset
     amount: 60
     status: pending
