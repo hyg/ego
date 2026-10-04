@@ -1,0 +1,28 @@
+date: '2026-10-03'
+VoucherID: ''
+AccountingEntry:
+  debit:
+    - AccountTitle: ego
+      asset: time
+      amount: 360
+    - AccountTitle: raw
+      asset: token
+      amount: 360
+    - AccountTitle: ego
+      asset: artifact.draft
+      amount: 1
+  credit:
+    - AccountTitle: raw
+      asset: time
+      amount: 360
+    - AccountTitle: ego
+      asset: token
+      amount: 360
+    - AccountTitle: ego
+      asset: time
+      amount: 360
+comment:
+  - type: check
+    token: 360
+    artifact: ../../draft/2026/20261003.01.md
+sourceDate: '2026-10-03'
