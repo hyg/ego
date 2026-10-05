@@ -574,6 +574,8 @@ time:
     js: 1000
   sold:
     PSMD: 0
+    ego: 0
+    infra: 0
 jt:
   sum: 18040
   alloc:
