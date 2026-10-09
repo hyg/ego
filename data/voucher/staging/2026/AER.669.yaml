@@ -1,0 +1,26 @@
+date: 2026-10-09
+VoucherID: 
+  - 2026100923001431991433425541
+  - 2026100923001431991430203299
+  - 2026100923001431991440406529
+  - 2026100923001431991447065704
+  - 2026100923001431991440406610
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: raw.food
+      asset: rmb
+      amount: 18.00
+  credit:
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 18.00
+comment:
+  - name: 公交
+    amount: 2
+    unit: 次
+    asset: 2.00
+  - name: 地铁
+    amount: 3
+    unit: 次
+    asset: 16.00
