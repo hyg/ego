@@ -1,0 +1,17 @@
+date: 2026-10-12
+VoucherID: 4500000430202610128568179270
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: raw.supply
+      asset: rmb
+      amount: 8.00
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 8.00
+comment:
+  - name: 计生用品
+    amount: 40
+    unit: 个
+    asset: 8.00
