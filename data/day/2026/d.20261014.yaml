@@ -1,0 +1,42 @@
+date: '20261014'
+mode: '1'
+plan: 1e
+time:
+  - begin: '20261014112400'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20261014113900'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20261014123900'
+    amount: 45
+    type: food
+    name: 午餐
+  - begin: '20261014132400'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20261014140900'
+    amount: 110
+    type: free
+    name: 休整
+  - begin: '20261014160000'
+    amount: 0
+    redo: 60
+    type: work
+    name: 静默工作
+    task: PSMD
+    todo: SOP engine
+    output: ../../draft/2026/20261014.01.md
+    namelink: http://simp.ly/p/4QDThK
+  - begin: '20261014170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20261014190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
+    output: ../../draft/2026/20261014.02.md
