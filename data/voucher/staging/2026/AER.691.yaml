@@ -1,0 +1,17 @@
+date: 2025-01-01
+VoucherID: 1000050001202610170525038375393
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: raw.food
+      asset: rmb
+      amount: 30.00
+  credit:
+    - AccountTitle: 支付宝余额
+      asset: rmb
+      amount: 30.00
+comment:
+  - name: 云岫苹果
+    amount: 2250
+    unit: g
+    asset: 30.00
