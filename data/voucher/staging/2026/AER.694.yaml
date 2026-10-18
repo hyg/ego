@@ -1,0 +1,17 @@
+date: 2026-10-18
+VoucherID: 4500000515202610187379254027
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: raw.site.bj1
+      asset: rmb
+      amount: 200.00
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 200.00
+comment:
+  - name: 天然气
+    amount: 200
+    unit: rmb
+    asset: 200.00
