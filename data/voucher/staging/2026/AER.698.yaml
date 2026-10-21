@@ -1,0 +1,28 @@
+date: 2026-10-21
+VoucherID: 4500000518202610218247349405
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: raw.food
+      asset: rmb
+      amount: 19.90
+    - AccountTitle: raw.supply
+      asset: rmb
+      amount: 9.42
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 29.32
+comment:
+  - name: 沙棘原浆、毛毡鞋垫、毛巾
+    amount: 1000
+    unit: g
+    asset: 19.90
+  - name: 毛毡鞋垫
+    amount: 5
+    unit: 双
+    asset: 3.9
+  - name: 毛巾
+    amount: 1
+    unit: 条
+    asset: 5.52
