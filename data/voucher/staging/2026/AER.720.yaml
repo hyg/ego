@@ -1,0 +1,17 @@
+date: 2026-10-30
+VoucherID: 100003990126103000094331826499641471
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: donation.else
+      asset: rmb
+      amount: 18.88
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 18.88
+comment:
+  - name: 微信群罚款
+    amount: 18.88
+    unit: rmb
+    asset: 18.88
