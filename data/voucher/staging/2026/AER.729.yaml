@@ -1,0 +1,25 @@
+date: 2026-11-01
+VoucherID: 4500000580202611019542536396
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: donation.parent
+      asset: rmb
+      amount: 143.56
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 143.56
+comment:
+  - name: 黑皇葡萄
+    amount: 2000
+    unit: g
+    asset: 46.8
+  - name: 金秋红蜜桃
+    amount: 2250
+    unit: g
+    asset: 43.8
+  - name: 虾仁
+    amount: 600
+    unit: g
+    asset: 52.96

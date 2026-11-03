@@ -1,0 +1,9 @@
+date: 2026-11-02 19:11:05
+title: 微信支付账单
+VoucherID: 4500000548202611024125803371
+VoucherType: 交易单号
+amount: 23
+summary: 快递
+comment:
+  - name: 商户单号
+    value: 202611023970299378

@@ -576,6 +576,7 @@ time:
     PSMD: 0
     ego: 0
     infra: 0
+    xuemen: 150
 jt:
   sum: 18040
   alloc:
