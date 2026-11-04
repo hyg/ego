@@ -76,8 +76,16 @@ todos:
       - 2026/20260510.01.md
       - 2026/20260929.01.md
   - name: SOP engine
-    amount: 60
-    status: in_progress
+    amount: 0
+    status: completed
+    time_slices:
+      - date: '20261104'
+        amount: 60
+        template: 1e
+        token_cost: 60
+        draft: 2026/20261104.01.md
+    history_drafts:
+      - 2026/20261104.01.md
   - name: evaluate toolset
     amount: 60
     status: pending
@@ -362,4 +370,4 @@ derivation:
   source: null
   type: null
   trigger: null
-token_balance: 3750
+token_balance: 3690

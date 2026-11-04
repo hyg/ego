@@ -573,7 +573,7 @@ time:
     learn: 2000
     js: 1000
   sold:
-    PSMD: 0
+    PSMD: 60
     ego: 0
     infra: 0
     xuemen: 150
