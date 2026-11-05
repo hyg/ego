@@ -1,0 +1,31 @@
+date: 2026-11-05
+VoucherID: 
+  - 4200003146202611058684991208
+  - 2026110523001431991438079277
+  - 2026110523001431991438259737
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: xuemen
+      asset: rmb
+      amount: 32.20
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 27.20
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 5.00
+comment:
+  - name: 网约车
+    amount: 1
+    unit: 次
+    asset: 27.20
+  - name: 地铁
+    amount: 1
+    unit: 次
+    asset: 4.00
+  - name: 公交
+    amount: 1
+    unit: 次
+    asset: 1.00

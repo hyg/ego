@@ -1,0 +1,31 @@
+date: '2026-11-05'
+VoucherID: ''
+AccountingEntry:
+  debit:
+    - AccountTitle: xuemen
+      asset: time
+      amount: 180
+    - AccountTitle: raw
+      asset: token
+      amount: 360
+    - AccountTitle: xuemen
+      asset: artifact.draft
+      amount: 1
+  credit:
+    - AccountTitle: raw
+      asset: time
+      amount: 180
+    - AccountTitle: xuemen
+      asset: token
+      amount: 360
+    - AccountTitle: xuemen
+      asset: time
+      amount: 180
+comment:
+  - type: work
+    task: xuemen
+    todo: 章程备案
+    time: 180
+    token: 360
+    artifact: ../../draft/2026/20261105.a.md
+sourceDate: '2026-11-05'

@@ -3,7 +3,7 @@ name: xuemen
 type: contract
 parent: ego
 git_repo: ../../xuemen
-token_balance: -175
+token_balance: -535
 todos:
   - name: mail server
     amount: 90
@@ -92,3 +92,14 @@ todos:
         draft: 2026/20261102.a.md
     history_drafts:
       - 2026/20261102.a.md
+  - name: 章程备案
+    status: completed
+    amount: 0
+    time_slices:
+      - date: '20261105'
+        amount: 180
+        template: 2c
+        token_cost: 360
+        draft: 2026/20261105.a.md
+    history_drafts:
+      - 2026/20261105.a.md

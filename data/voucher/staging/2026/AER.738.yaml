@@ -1,0 +1,28 @@
+date: 2026-11-04
+VoucherID: 4500000516202611044006714884
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: raw.food
+      asset: rmb
+      amount: 68.92
+    - AccountTitle: raw.site.bj1
+      asset: rmb
+      amount: 9.88
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 78.80
+comment:
+  - name: 金艳猕猴桃
+    amount: 12
+    unit: 个
+    asset: 31.4
+  - name: 三文鱼腩
+    amount: 1000
+    unit: g
+    asset: 37.52
+  - name: 厨房骨锯
+    amount: 1
+    unit: 个
+    asset: 9.88
