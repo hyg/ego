@@ -1,0 +1,17 @@
+date: 2026-11-06
+VoucherID: 4500000562202611067506168234
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: raw.site.bj1
+      asset: rmb
+      amount: 28.70
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 28.70
+comment:
+  - name: 厨用锯
+    amount: 1
+    unit: 把
+    asset: 28.70
