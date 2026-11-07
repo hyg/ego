@@ -88,7 +88,7 @@ todos:
       - 2026/20261104.01.md
   - name: evaluate toolset
     amount: 60
-    status: pending
+    status: in_progress
   - name: term + COM matedata -> deploy metadata -> deploy view
     amount: 195
     status: pending

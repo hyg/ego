@@ -1,0 +1,21 @@
+date: 2026-11-07
+VoucherID: 4500000536202611076397146857
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: donation.parent
+      asset: rmb
+      amount: 100.80
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 100.80
+comment:
+  - name: 酱油鲭鱼
+    amount: 2000
+    unit: g
+    asset: 59
+  - name: 水浸沙丁鱼
+    amount: 742
+    unit: g
+    asset: 41.8
