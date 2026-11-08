@@ -1,0 +1,17 @@
+date: 2026-11-08
+VoucherID: 4500000582202611081013106253
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: raw.supply
+      asset: rmb
+      amount: 9.52
+  credit:
+    - AccountTitle: 微信零钱
+      asset: rmb
+      amount: 9.52
+comment:
+  - name: 牙膏
+    amount: 180
+    unit: g
+    asset: 9.52
