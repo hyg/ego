@@ -1,0 +1,17 @@
+date: 2026-11-11
+VoucherID: 2026111123001131991435088364
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: raw.med
+      asset: rmb
+      amount: 14.30
+  credit:
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 14.30
+comment:
+  - name: Y型牙线
+    amount: 108
+    unit: 根
+    asset: 14.30

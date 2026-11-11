@@ -1,0 +1,64 @@
+date: '20261111'
+mode: '2'
+plan: 2c
+time:
+  - begin: '20261111075100'
+    amount: 15
+    type: free
+    name: 休整
+  - begin: '20261111080600'
+    amount: 60
+    type: prepare
+    name: 备餐、运动
+  - begin: '20261111090600'
+    amount: 45
+    type: food
+    name: 早餐
+  - begin: '20261111095100'
+    amount: 45
+    type: discuss
+    name: 会议、自习
+  - begin: '20261111103600'
+    amount: 23
+    type: free
+    name: 休整
+  - begin: '20261111110000'
+    amount: 180
+    type: food
+    name: 备餐、午餐午休
+  - begin: '20261111140000'
+    amount: 90
+    type: work
+    name: 工作
+    task: PSMD
+    todo: 权利分配语法 & engine
+    readme:
+      - read ../../draft/2026/20260402.01.md
+      - read ../../draft/2026/20260403.01.md
+      - read ../../draft/2026/20260405.01.md
+      - read ../../draft/2026/20260825.01.md
+    output: ../../draft/2026/20261111.01.md
+    namelink: http://simp.ly/p/lsBYG9
+  - begin: '20261111153000'
+    amount: 30
+    type: free
+    name: 休整
+  - begin: '20261111160000'
+    amount: 60
+    type: work
+    name: 工作
+    task: ego
+    todo: JT的发行和回收
+    readme:
+      - read ../../draft/2026/20260402.02.md
+    output: ../../draft/2026/20261111.02.md
+    namelink: http://simp.ly/p/MpcbHD
+  - begin: '20261111170000'
+    amount: 120
+    type: food
+    name: 晚餐
+  - begin: '20261111190000'
+    amount: 60
+    type: check
+    name: 讨论、整理提交
+    output: ../../draft/2026/20261111.03.md

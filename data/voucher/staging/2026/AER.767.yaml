@@ -1,0 +1,17 @@
+date: 2026-11-11
+VoucherID: 2026111123001131991431104613
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: raw.supply
+      asset: rmb
+      amount: 10.87
+  credit:
+    - AccountTitle: 银行存款
+      asset: rmb
+      amount: 10.87
+comment:
+  - name: 食品袋
+    amount: 100
+    unit: 个
+    asset: 10.87

@@ -18,8 +18,8 @@ contract:
 children: []
 todos:
   - name: 权利分配语法 & engine
-    amount: 90
-    status: in_progress
+    amount: 0
+    status: completed
     time_slices:
       - date: '20260402'
         amount: 90
@@ -41,11 +41,17 @@ todos:
         template: 2b
         token_cost: 180
         draft: 2026/20260825.01.md
+      - date: '20261111'
+        amount: 90
+        template: 2c
+        token_cost: 180
+        draft: 2026/20261111.01.md
     history_drafts:
       - 2026/20260402.01.md
       - 2026/20260403.01.md
       - 2026/20260405.01.md
       - 2026/20260825.01.md
+      - 2026/20261111.01.md
   - name: 部署语法
     amount: 0
     status: completed
@@ -370,4 +376,4 @@ derivation:
   source: null
   type: null
   trigger: null
-token_balance: 3690
+token_balance: 3510

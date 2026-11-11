@@ -1,0 +1,17 @@
+date: 2026-11-11
+VoucherID: 2026111123001131991428222890
+AccountingSoftwareID: 
+AccountingEntry:
+  debit:
+    - AccountTitle: raw.supply
+      asset: rmb
+      amount: 69.60
+  credit:
+    - AccountTitle: 支付宝余额
+      asset: rmb
+      amount: 69.60
+comment:
+  - name: 毛巾
+    amount: 8
+    unit: 条
+    asset: 69.60

@@ -19,11 +19,11 @@ children:
   - id: xuemen
   - id: learn
   - id: js
-token_balance: 2850
+token_balance: 2730
 todos:
   - name: JT的发行和回收
-    amount: 60
-    status: in_progress
+    amount: 0
+    status: completed
     time_slices:
       - date: '20260402'
         amount: 60
@@ -35,8 +35,14 @@ todos:
         template: 2c
         token_cost: 120
         draft: 2026/20260402.02.md
+      - date: '20261111'
+        amount: 60
+        template: 2c
+        token_cost: 120
+        draft: 2026/20261111.02.md
     history_drafts:
       - 2026/20260402.02.md
+      - 2026/20261111.02.md
   - name: 整理edgeone、cnb、gitee的发布通道
     amount: 60
     status: pending
