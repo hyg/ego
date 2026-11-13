@@ -89,8 +89,8 @@ todos:
     history_drafts:
       - 2026/20260403.02.md
   - name: 新版实时手稿
-    amount: 90
-    status: in_progress
+    amount: 0
+    status: completed
     time_slices:
       - date: '20260808'
         amount: 90
