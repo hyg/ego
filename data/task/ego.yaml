@@ -45,7 +45,7 @@ todos:
       - 2026/20261111.02.md
   - name: 整理edgeone、cnb、gitee的发布通道
     amount: 60
-    status: pending
+    status: in_progress
     time_slices:
       - date: '20260401'
         amount: 370
