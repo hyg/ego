@@ -1,41 +1,29 @@
 date: '20261118'
 mode: '1'
-plan: 1e
+plan: 1f
 time:
-  - begin: '20261118115200'
+  - begin: '20261118122400'
     amount: 15
     type: free
     name: 休整
-  - begin: '20261118120700'
+  - begin: '20261118123900'
     amount: 60
     type: prepare
     name: 备餐、运动
-  - begin: '20261118130700'
+  - begin: '20261118133900'
     amount: 45
     type: food
-    name: 午餐
-  - begin: '20261118135200'
+    name: 晚餐
+  - begin: '20261118142400'
     amount: 45
     type: discuss
     name: 会议、自习
-  - begin: '20261118143700'
-    amount: 82
+  - begin: '20261118150900'
+    amount: 60
     type: free
     name: 休整
-  - begin: '20261118160000'
-    amount: 60
-    type: work
-    name: 静默工作
-    task: PSMD
-    todo: evaluate toolset
-    output: ../../draft/2026/20261118.01.md
-    namelink: http://simp.ly/p/4QDThK
-  - begin: '20261118170000'
-    amount: 120
-    type: food
-    name: 晚餐
-  - begin: '20261118190000'
+  - begin: '20261118160900'
     amount: 60
     type: check
     name: 讨论、整理提交
-    output: ../../draft/2026/20261118.02.md
+    output: ../../draft/2026/20261118.01.md
